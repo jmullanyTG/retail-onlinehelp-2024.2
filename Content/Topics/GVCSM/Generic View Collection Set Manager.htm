@@ -1,0 +1,157 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head>
+        <link href="../../Resources/TableStyles/standard.css" rel="stylesheet" MadCap:stylesheetType="table" />
+    </head>
+    <body>
+        <h1>Generic View Collection Set Overview</h1>
+        <p>The <span class="Emphasis">Generic View Collection Set Module</span> is a top-level dock for custom view collections and tabs which can be used as shortcuts to Views that are useful and frequently accessed.  This module provides a View Collection Set structure independent of other features so that the included views and widgets will only load when needed.    Technical Consultants may add new view collection sets to this dock as needed for custom functionality.</p>
+        <h2>Access rights</h2>
+        <p>The access right <span class="Emphasis">Access To Generic View Collection Set Configuration</span> is required.</p>
+        <h2>Case sensitivity</h2>
+        <p>If users wish to add a new View to an existing page or group, they must ensure that they enter the existing plugin, page, or group name exactly as is. Entering a plugin, page, or group name that does not exactly match case results in a new plugin, page, or group being created. </p>
+        <p class="Example">
+            <span class="Emphasis">Influence</span> and <span class="Emphasis">influence</span> would be two different tabs on the ribbon.</p>
+        <h2>Example</h2>
+        <p>The following shows the creation of a new plugin in the <span class="Emphasis">Generic View Collection Set Module</span>.</p>
+        <p>
+            <img src="../../Resources/Images/Generic View Collection Set/Plugins created.png" class="LargeImages" />
+        </p>
+        <p>The new plugin appears on the ribbon:</p>
+        <p>
+            <img src="../../Resources/Images/Generic View Collection Set/Plugins appearing on the ribbon.png" class="LargeImages" />
+        </p>
+        <h2>Creating a custom view</h2>
+        <p>To create a custom view:</p>
+        <ol>
+            <li>Navigate to <span class="Emphasis">Generic View Collection Set Module</span>.</li>
+            <li>Click <span class="Emphasis">Add</span> on the toolbar.</li>
+            <li>
+                <p>Complete the fields as required.</p>
+                <p class="BasicNote">To add a View to an existing group or tab, enter the existing group’s name in the <span class="Emphasis">Plugin Group Name</span> field.</p>
+            </li>
+            <li>In the <span class="Emphasis">Plugin Image</span> field, click the dropdown arrow and select an icon for the plugin.</li>
+            <li>Click the ellipsis in the <span class="Emphasis">View Collection Set</span> field and select a view from the <span class="Emphasis">Maintain View Collection Set</span> dialog.</li>
+            <li>Check the checkbox in the <span class="Emphasis">Enabled</span> field to display the plugin when the new plugin is saved.</li>
+            <li>
+                <p>Set the access level by clicking the dropdown arrow in the <span class="Emphasis">Plugin Access Level</span> field and choosing the appropriate option.</p>
+                <p>If the plugin access level is set to other than <span class="Emphasis">Shared</span>, then the <span class="Emphasis">Plugin Users</span> field is disabled.</p>
+            </li>
+            <li>
+                <p>Optionally, if the plugin access level was set to <span class="Emphasis">Shared</span>, then In the <span class="Emphasis">Plugin Users</span> field, click <span class="Emphasis">Change</span> to display the <span class="Emphasis">Maintain Users And Roles</span> dialog:</p>
+                <ol>
+                    <li>Set the Roles and Users as required.</li>
+                    <li>Click <span class="Emphasis">Ok</span> to close the dialog.</li>
+                </ol>
+            </li>
+            <li>Click <span class="Emphasis">Save</span>.</li>
+        </ol>
+        <h2>Field definitions</h2>
+        <table style="width: 100%;margin-left: auto;margin-right: auto;mc-table-style: url('../../Resources/TableStyles/standard.css');" class="TableStyle-standard" cellspacing="0">
+            <col class="TableStyle-standard-Column-Column1" />
+            <col class="TableStyle-standard-Column-Column2" />
+            <thead>
+                <tr class="TableStyle-standard-Head-Header1">
+                    <th class="TableStyle-standard-HeadE-Column1-Header1">Field</th>
+                    <th class="TableStyle-standard-HeadD-Column2-Header1">Description</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">
+                        <span class="Emphasis">Plugin Name</span>
+                    </td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">The plugin name as it displays in the Plugin Group in the ribbon.</td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">
+                        <span class="Emphasis">Plugin Description</span>
+                    </td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">The description that displays when a user hovers the mouse over the icon.</td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">
+                        <span class="Emphasis">Plugin Display Order</span>
+                    </td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">The position in which the plugin displays. The left most position is <span class="Emphasis">Plugin Display Order</span> 0 (zero).</td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">
+                        <span class="Emphasis">Plugin Group Name</span>
+                    </td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">
+                        The name of the group as it will appear when the module is selected. 
+                    </td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">
+                        <span class="Emphasis">Plugin Group Description</span>
+                    </td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">The plugin group description.</td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">
+                        <span class="Emphasis">Plugin Group Display Order</span>
+                    </td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">The position on the ribbon where the new plugin group will appear.</td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">
+                        <span class="Emphasis">Plugin Page Name</span>
+                    </td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">The name of the module as it will appear in the ribbon.</td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">
+                        <span class="Emphasis">Plugin Page Description</span>
+                    </td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">The plugin page description.</td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">
+                        <span class="Emphasis">Plugin Page Display Order</span>
+                    </td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">The position on the ribbon where the new plugin page will appear.</td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">
+                        <span class="Emphasis">Plugin Author</span>
+                    </td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">The user who created the plugin.</td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">
+                        <span class="Emphasis">Plugin Image</span>
+                    </td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">An image selected by the user.</td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">
+                        <span class="Emphasis">View Collection Set</span>
+                    </td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">The collection set to display.</td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">
+                        <span class="Emphasis">Enabled</span>
+                    </td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">
+                        Default is unchecked. If checked, then the new plugin displays when <span class="Emphasis">Save</span> is clicked.
+                    </td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">
+                        <span class="Emphasis">Plugin Access Level</span>
+                    </td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">Whether the plugin is private to the user who created it or shared with other users.</td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyB-Column1-Body1">
+                        <span class="Emphasis">Plugin Users</span>
+                    </td>
+                    <td class="TableStyle-standard-BodyA-Column2-Body1">The Roles and Users with access to the plugin. The Change button is enabled when <span class="Emphasis">Plugin Access Level</span> is set to <span class="Emphasis">Shared</span>.</td>
+                </tr>
+            </tbody>
+        </table>
+    </body>
+</html>

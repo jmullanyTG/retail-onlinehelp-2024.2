@@ -1,0 +1,47 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head>
+    </head>
+    <body>
+        <h1>Import/Export Service</h1>
+        <h2>Asynchronous end batch polling</h2>
+        <p>To resolve an issue where long running batch calls are getting cut short due to security timeouts, an end batch asynchronous call has been added which checks if the batching process has completed. </p>
+        <p>Unlike the existing end batch synchronous call, the asynchronous call does not keep the port open but immediately returns a status.</p>
+        <p class="BasicNote">The original End Batch functionality which returns a status only when the batching process completes remains unchanged and can be used if so desired. </p>
+        <p>For more information, ToolsGroup Professional Services can reference <a href="https://toolsgroup-dev.atlassian.net/wiki/spaces/DMQ/pages/34673459292/API+Polling+Mechanism">API Polling Mechanism</a>.</p>
+        <h3>End batch</h3>
+        <h4>New End Batch Asynchronous call</h4>
+        <p><code>{{ImportExportAPI URL}}/api/Import/EndBatchAsync</code>
+        </p>
+        <p>Returns immediately with call status and begins the end batch process in the back. At this point the batch has begun to process the request and the port can be closed, however,<span class="Emphasis"> the end batch process is not done</span>. Part of the return call will have the check status URL in the return header.</p>
+        <h4>New End Batch Status Call</h4>
+        <p><code>{{ImportExportAPI URL}}/api/Import/EndBatch/Status/{batchIdentifier}</code>
+        </p>
+        <p>Returned Status in JSON Payload</p>
+        <ul>
+            <li>
+                <p>Running</p>
+            </li>
+            <li>
+                <p>Not Started</p>
+            </li>
+            <li>
+                <p>Not Found (this is not a 200 status, but a 404)</p>
+            </li>
+            <li>
+                <p>Cancelled</p>
+            </li>
+            <li>
+                <p>Completed</p>
+            </li>
+            <li>
+                <p>Completed with warning</p>
+            </li>
+            <li>
+                <p>Completed with error</p>
+            </li>
+        </ul>
+        <p>There will be an estimated percent completed based off the instruction performed table.</p>
+        <p>The return call will not give the reason for the warning or error, please use the existing <cite>Concise Summary With Batch</cite> to get detailed information on the batch status.</p>
+    </body>
+</html>

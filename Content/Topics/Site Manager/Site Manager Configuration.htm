@@ -1,0 +1,35 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" xml:lang="en-us">
+    <head>
+        <title>
+        </title>
+    </head>
+    <body>
+        <h1>Site Manager configuration</h1>
+        <p>To add or remove views (blades) in  the <span class="Emphasis">Site Manager Document</span> screen, click the <span class="Emphasis">Configuration</span> button located at the top on the right side of the screen. Use this button to set up a variety of views.</p>
+        <h2>Adding or removing views</h2>
+        <p class="BasicNote">If a view is added or removed, the plugins must be refreshed or the application relaunched to see the changes. Each site detail blade is comprised of a view that can be set with individual user permissions to determine access. </p>
+        <p>To display or hide views:</p>
+        <ol>
+            <li>
+                <p>Within the <span class="Emphasis">Site Manager Document</span> screen, click <span class="Emphasis">Configuration</span>.</p>
+                <p>The <span class="Emphasis">Views Maintenance</span> screen displays.</p>
+                <p>
+                    <img src="../../Resources/Images/Site Manager/Views Maintenance dialog.png" class="LargeImages" />
+                </p>
+            </li>
+            <li>As required, check or uncheck views.</li>
+            <li>Click <span class="Emphasis">Ok</span>.</li>
+        </ol>
+        <h2>Site Modeling</h2>
+        <p>The hierarchy used to populate the product dimension on the Site Modeling tab is determined by the <span class="Emphasis">Site Modeling: Product Hierarchy</span> system policy.</p>
+        <h3>Sales History</h3>
+        <p>Site modeling creates entries in <span class="Emphasis">tbl_SalesHistoryByType</span> as supersession sales history. To process the site modeling data, <span class="Emphasis">usp_Site_Model_ProcessModelData</span> must be run. It is recommended to add this procedure as a task in the daily job, or as frequently as sales history is updated in ToolsGroup JustEnough. </p>
+        <h3>Site Opening Date</h3>
+        <p>The site opening date is read from <span class="Emphasis">tbl_Site_Status_Temporal</span>. It is the minimum of start dates where site status is <span class="Emphasis">1</span> (open).</p>
+        <h2>DC Source Priority</h2>
+        <p>The supply chain used to populate the widget is determined by the <span class="Emphasis">SiteManager: DC Source Priority Supply Chain</span> system policy.</p>
+        <h2>Site Source Priority </h2>
+        <p>The supply chain used to populate the widget is determined by the <span class="Emphasis">Site Manager: Site Source Priority Supply Chain</span>  system policy.</p>
+    </body>
+</html>

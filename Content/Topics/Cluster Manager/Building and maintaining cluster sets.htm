@@ -1,0 +1,51 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" xml:lang="en-us">
+    <head><title></title>
+    </head>
+    <body>
+        <h1>Configuring cluster sets</h1>
+        <ul>
+            <li><span class="Emphasis">Name</span> – The name used to identify the cluster set. </li>
+            <li><span class="Emphasis">Description</span> – A description of the cluster set.</li>
+            <li><span class="Emphasis">Group</span> – A folder style file structure for organizing cluster sets. Cluster sets groups are maintained using the <span class="Emphasis">Change</span> button.</li>
+            <li><span class="Emphasis">Security</span> – Allows specific users or roles to view or maintain the cluster set. <ul><li><span class="Emphasis">Public</span> – All users with access to the cluster manager can view and maintain the cluster set.</li><li><span class="Emphasis">Private</span> – Only the user responsible for creating the set can view and maintain it. </li><li><span class="Emphasis">Shared</span> – The cluster set can be shared with selected users. This is done by including or excluding individual users or roles using the <span class="Emphasis">Change</span> button.</li></ul></li>
+        </ul>
+        <ul>
+            <li><span class="Emphasis">Cluster Type</span> – Determines the clustering method used to build the cluster sets. <ul><li><span class="Emphasis">K-Means</span> – K-Means clustering groups the data points into logical clusters based on the nearest mean. The centroid is a point in the center of the cluster, regardless of where the data points are. </li><li><p><span class="Emphasis">K-Medoid</span> – K-Medoid clustering groups the data points into logical clusters while restricting the centroid to a data point. K-Medoid still uses the minimum mean distance to group the logical clusters. </p><p class="BasicNote">This is a more computationally intensive process than K-Means.</p></li><li><span class="Emphasis">K-Means Collection</span> – A template used to create similar K-Means sets in which a single parameter (partition filter by value) changes to create new K-Means cluster sets. </li><li><span class="Emphasis">K-Medoid Collection</span> – A template used to create similar K-Medoid sets in which a single parameter (partition filter by value) changes to create new K-Medoid cluster sets.</li></ul></li>
+        </ul>
+        <ul>
+            <li><span class="Emphasis">Entity Type</span> – The entity type determines the granularity of data which will be clustered. Setting the entity type at a higher level excludes lower level data.<ul><li><span class="Emphasis">Inventory</span> – An item and site combination. </li><li><span class="Emphasis">Item Master</span> – An item across all sites.</li><li><span class="Emphasis">Site</span> – A physical or virtual location capable of holding inventory records. </li><li><span class="Emphasis">Customer</span> – The party at the receiving end of the sales transactions.</li></ul></li>
+        </ul>
+        <ul>
+            <li><span class="Emphasis">Filter by Type</span> – The available filter types contained in or parented by the entity type. Sets the level of filters which appear in the filter by filter field.  </li>
+            <li><span class="Emphasis">Filter by Filter</span> – Allows users to restrict the cluster set data to a specific filter (most commonly an inventory filter). This can be thought of as a cross-section of the data with an intersecting filter.</li>
+            <li><span class="Emphasis">Group By</span> – The group that represents the actual data points displayed and grouped in the cluster. The available options in the group are based on the supplied entity type (e.g. site groups display if site is selected as the entity type).</li>
+            <li><span class="Emphasis">Partition Type</span> – Determines the mechanism by which cluster sets are segregated. <ul><li><span class="Emphasis">Filtering</span> – Uses standard filtering.</li><li><span class="Emphasis">Filtering Lite</span> – Limits the filtering to only a single criterion, and only the equals clause (i.e. the filter must be for distribution center site).</li></ul></li>
+        </ul>
+        <ul>
+            <li><span class="Emphasis">Partition Filter by Type</span> – Determines the type/level of filter used for partitioning.</li>
+            <li><span class="Emphasis">Partition Filter by Filter (if using traditional filtering)</span> – Determines which filter is used to segregate the cluster set. Selecting the <span class="Emphasis">Change</span> button displays a filter list.</li>
+            <li><span class="Emphasis">Partition Filter by Field (if using filtering lite)</span> – Allows users to choose the specific field which must be equal to the partition filter by value supplied. This is restricted to the available fields specified in the partition filter by type.</li>
+            <li><span class="Emphasis">Partition Filter by Value (if using filtering lite)</span> – The value which must equal the data to be included in the cluster set. </li>
+            <li><span class="Emphasis">Classification Items</span> – Classification items determine the actual data to be classified by the clustering engine.</li>
+            <li><span class="Emphasis">Classification Priority Order By</span> – The way in which the classifications are ranked. <ul><li><span class="Emphasis">Ascending</span> – Ranks each classification in ascending order using consecutive alphabetical letters to designate each cluster. </li><li><span class="Emphasis">Descending</span> – Ranks each classification in descending order using consecutive alphabetical letters to designate each cluster (suggested use). </li></ul></li>
+        </ul>
+        <ul>
+            <li><span class="Emphasis">Classification Settings</span> – Classification settings list the selected classification items and allows users to alter their priority. It is important to remember the priority order setting when determining the order. </li>
+            <li><span class="Emphasis">Attribute Items</span> – Attribute items are included in the classification engine as inputs.</li>
+            <li><span class="Emphasis">Attribute Priority Order By</span> – The way in which the attributes are ranked. <ul><li><span class="Emphasis">Ascending</span> – Ranks each classification in ascending order using consecutive alphabetical letters to designate each cluster. </li><li><span class="Emphasis">Descending</span> – Ranks each classification in descending order using consecutive alphabetical letters to designate each cluster (suggested use). </li></ul></li>
+        </ul>
+        <ul>
+            <li><span class="Emphasis">Attribute Settings</span> – Allows users to edit the priority, determine the aggregation function, and assign a weight to the attribute if desired. <ul><li><span class="Emphasis">Attribute</span> – The attribute name. </li><li><span class="Emphasis">Entity Type</span> – The associated entity type for the attribute (Site, Item Master, etc.)</li><li><span class="Emphasis">Priority</span> – The ranked priority determines how the clusters are built. This is affected by the attribute priority order by.</li><li><span class="Emphasis">Order By</span> – An override for the attribute order by which may be changed for a single attribute. </li><li><span class="Emphasis">Aggregate Function</span> – Determines the mathematical means by which the attribute values are aggregated. <ul><li>Average</li></ul><ul><li>Count</li></ul><ul><li>Maximum</li></ul><ul><li>Minimum</li></ul><ul><li>Summation</li></ul><ul><li>Statistical Standard Deviation</li></ul><ul><li>Statistical Standard Deviation for the Population</li></ul><ul><li>Statistical Variance</li></ul><ul><li>Statistical Variance for the Population</li></ul></li></ul><ul><li><span class="Emphasis">Weight</span> – A weight value for the attribute. Will be considered against all the other listed weight values. </li></ul></li>
+        </ul>
+        <ul>
+            <li><span class="Emphasis">Distance Function</span> – How the mean distances are calculated. <ul><li><span class="Emphasis">Euclidean Distance</span> – The distance as drawn on the Euclidean plane (straight lines).</li><li><span class="Emphasis">Manhattan Distance</span> – The distance as drawn on a plane while restricted to 90 degrees right and left turns (often referred to as the taxicab distance).</li></ul></li>
+        </ul>
+        <ul>
+            <li><span class="Emphasis">Allow Cluster Count to be Resized</span> – Lets the clustering engine resize the overall number of clusters.</li>
+            <li><span class="Emphasis">Compute Optimal Cluster Count</span> – Lets the clustering engine compute and optimize the number of logical clusters. </li>
+            <li><span class="Emphasis">Maximum Allowed Cluster Count</span> – A practical cap on the number of clusters. </li>
+            <li><span class="Emphasis">Number of Iterations</span> – For use with K-Medoid clustering, this caps the maximum number of computational iterations with which the clustering engine has to process exact fits for the centroids. Infinite if left NULL.</li>
+        </ul>
+    </body>
+</html>

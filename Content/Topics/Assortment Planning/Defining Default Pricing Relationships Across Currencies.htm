@@ -1,0 +1,83 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head>
+    </head>
+    <body>
+        <h1>Defining default pricing relationships across currencies</h1>
+        <p>Within Assortment Planning (AP), pricing decisions are important. Pricing might vary from one Cluster to another, and the complexities of various currencies and exchange rates also make pricing complex. AP provides support for planning in multiple currencies via a Price Matrix to manage pricing relationships across currencies.</p>
+        <MadCap:snippetBlock src="../../Resources/Snippets/Home AUT and Blended AUT.flsnp" />
+        <h3>Price Matrix functionality
+</h3>
+        <p>If a user enables Price Matrix conversions via system policy <span class="Emphasis">Price Conversion Method</span>, and sets a Price Matrix on a given placeholder, then the configured Price Matrix is used to convert the provided <span class="Emphasis">Home AUT</span> value to <span class="Emphasis">Blended AUT</span>.
+</p>
+        <p>The following is a worked example to demonstrate the usage and value of this functionality.</p>
+        <p>
+            <img src="../../Resources/Images/Assortment Planning/Multi-Currency Price Point Matrix Example.png" class="LargeImages">
+            </img>
+        </p>
+        <p>In the example, the Price Matrix configuration indicates that USD $67.99 is equivalent to PLN zł270.  The matrix is meant to encapsulate both currency conversions and elegant rounding, or the standard price endings based on currency and locale, like ending prices in 99 cents in USD.</p>
+        <p>The Price Matrix should be specified as a hierarchy default so that newly created placeholders can automatically inherit this property.  </p>
+        <p>Users can set default parameters for the <span class="Emphasis">Price Matrix</span> and <span class="Emphasis">Price Matrix Rounding</span> fields via two corresponding fields on the <span class="Emphasis">Assortment Plan Defaults</span> tab on the <span class="Emphasis">Manage Assortment Defaults</span> view. Setting default parameters saves having to manually set values each time. The defaults can still be changed later by users if needed.</p>
+        <p>&#160;</p>
+        <p>Then, when new placeholders are created with a given <span class="Emphasis">Home AUT</span>, a <span class="Emphasis">Blended AUT</span> value can automatically be created. Users can review Price Matrix conversions via the following two fields in the main planning view: <span class="Emphasis">Price Matrix</span> and <span class="Emphasis">Price Matrix Rounding</span>.</p>
+        <p>
+            <img src="../../Resources/Images/Assortment Planning/Price Matrix MPV UI.png" class="LargeImages" />
+        </p>
+        <p class="BasicNote">It is not necessary to set a Price Matrix Rounding rule.  If a Price Matrix is specified, but no Rounding rule is specified, then <span class="Emphasis">Nearest</span> is used.
+</p>
+        <p>The specific usage of the Price Matrix can also be viewed in the <span class="Emphasis">Multi-Currency Price View</span>.  Users can see how, for each period, the <span class="Emphasis">Home AUT</span> value converts into each specific currency's value. The <span class="Emphasis">Multi-Currency Price View</span> side view can be used to perform overrides to the established pricing rules.</p>
+        <p>
+            <img src="../../Resources/Images/Assortment Planning/Multi-Currency Price View.png" class="LargeImages">
+            </img>
+        </p>
+        <p>The <span class="Emphasis">Multi-Currency Price View</span> also indicates whether any value was missing from the indicated Price Matrix value, for example, if a site in the cluster had currency GBP but this currency was not included in the Price Matrix.
+Missing Price Matrix values are noted in the Health Check fields in the main planning view.
+</p>
+        <p>If a Price Matrix is set for a placeholder, then TG JE attempts to use the Price Matrix data to convert <span class="Emphasis">Home AUT</span> values. If any of the following components are missing, a Health Error, <span class="Emphasis">Missing Data in Price Matrix</span>, displays in the <span class="Emphasis">Health Error</span> field:</p>
+        <ul>
+            <li>
+                <p>an entry in the matrix for the home site's country / currency</p>
+            </li>
+            <li>
+                <p>an entry in the matrix for the selling sites' country / currencies</p>
+            </li>
+            <li>
+                <p>a row in the matrix for the starting <span class="Emphasis">Home AUT</span> value</p>
+            </li>
+            <li>
+                <p>currency conversion data for converting non-Home currency values back to the home currency</p>
+            </li>
+        </ul>
+        <p>After the AUT values are converted from <span class="Emphasis">Home AUT</span> values to currency-specific values using the Price Matrix, all AUT values are then converted back to Home currency using currency conversion rates, and a weighted average is used to calculate the cluster's combined <span class="Emphasis">Blended AUT</span> value.
+
+</p>
+        <p>Each period and cluster's <span class="Emphasis">Home AUT</span> values can be modified in the Sales Plan view, and <span class="Emphasis">Blended AUT</span> for each period and cluster can be viewed there as well.</p>
+        <p>
+            <img src="../../Resources/Images/Assortment Planning/Multi-Currency Sales Plan View Edit.png" class="LargeImages">
+            </img>
+        </p>
+        <h3>Choosing which price conversion method to use</h3>
+        <p>Choosing whether to use Price Exception or Price Matrix as the price conversion method when deriving currency-specific AUT values from the given home AUT value is done using system policy <span class="Emphasis">Price Conversion Method</span>. </p>
+        <h4>Price Translation</h4>
+        <p class="BasicNote">System policy <span class="Emphasis">Price Conversion Method</span> set to <span class="Emphasis">1</span>. This view reads information from the <span class="Emphasis">Currency Exchange Rates</span>, <span class="Emphasis"> Price Translation Management</span>, and <span class="Emphasis">Price Translation Hierarchy Assignment</span> views located in <span class="Emphasis">System Utilities &gt; Views &gt; Currency</span>. The values can be overridden to set local ticket prices in whatever way is most meaningful.</p>
+        <p>Default translation factors for all non-actualized periods for the product level of the selected placeholder (as defined in the <span class="Emphasis">Price Translation Management</span>, and <span class="Emphasis">Price Translation Hierarchy Assignment</span> views) can be restored by selecting <span class="Emphasis">Reset Default Factors</span> on the toolbar.</p>
+        <p>Restoring default factors causes the <span class="Emphasis">Local AUT</span> and <span class="Emphasis">Home AUT Equivalent</span> fields to recalculate accordingly. </p>
+        <p>
+            <img src="../../Resources/Images/Assortment Planning/Multi-Currency Price View Price Translation.PNG" class="LargeImages">
+            </img>
+        </p>
+        <p>System policy <span class="Emphasis">Line Visualization Allow Price Exceptions</span> sets whether this view is read-only or editable. If set to <span class="Emphasis">False</span>, the view displays but is read-only. To affect a change in this policy on an already open plan, the plan must be reopened through the <span class="Emphasis">Manage Assortment Plans</span> dialog.</p>
+        <h4>Price matrix</h4>
+        <p class="BasicNote">System policy <span class="Emphasis">Price Conversion Method</span> set to <span class="Emphasis">2</span>. The Price Matrix used is defined in the Price Matrix module.</p>
+        <h3>Using VAT rate conversion when deriving currency-specific AUT values</h3>
+        <p>System policy <span class="Emphasis">Enable VAT Conversion In AUT Calculation</span> determines whether to use VAT rate conversion steps when deriving currency-specific AUT values (<span class="Emphasis">Blended AUT</span>) from the given <span class="Emphasis">Home AUT</span> value. This system policy is referenced:</p>
+        <ul>
+            <li>when a placeholder has the AUT/AUR values recalculated from any numerical metric change (e.g. change a phase date, change total sales, change <span class="Emphasis">Home AUT</span>) </li>
+            <li>when a placeholder is created from a like style </li>
+            <li>when a placeholder is created from Smart Start </li>
+            <li>when the Home Site property is changed on an assortment plan </li>
+            <li>when daily maintenance runs, it only considers changed VAT rates if the feature is enabled </li>
+            <li>if a VAT rate is changed live in the UI, it only applies changes if VAT is enabled </li>
+        </ul>
+    </body>
+</html>

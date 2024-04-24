@@ -1,0 +1,232 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" xml:lang="en-us">
+    <head>
+        <link href="../../Resources/TableStyles/standard.css" rel="stylesheet" MadCap:stylesheetType="table" /><title></title>
+    </head>
+    <body>
+        <h1>Assortment Buy Sheet Report</h1>
+        <p>The <span class="Emphasis">Assortment Buy Sheet Report</span> provides the ability to view and evaluate planned items within an assortment for a defined time frame.&#160;The report contains key measures for placeholders/variants/collections related to what those entities are, where they are planned to sell, and when they are planned to sell.&#160; Additionally, users have visibility to sales, pricing, margin, and receipts and on order for all items contained within the report.&#160; </p>
+        <p>
+            <img src="../../Resources/Images/Assortment Planning/Assortment Buy Sheet Report.png" class="LargeImages" />
+        </p>
+        <p>Once the values have populated upon selecting <span class="Emphasis">Execute</span>, users can use this report to manipulate their assortment for a defined time frame. This view can be utilized to pass key information to users that do not have access to the system.&#160; For example, merchandise planners can export this report as a PDF or spreadsheet to share with merchants or buyers.&#160; </p>
+        <p>Additionally, this report is intended to provide insight to how an assortment is planned and how items fit into the assortment in terms of their selling behavior.&#160; For example, by using a product attribute filter, a denim planner could look at how skinny jeans that have a certain wash are planned and how much presence in the assortment these attributes will have as they are merchandised across the selling channels of the organization.</p>
+        <h2>Parameters</h2>
+        <p>The <span class="Emphasis">Assortment Buy Sheet Report</span> is controlled by five parameters:</p>
+        <p>
+            <img src="../../Resources/Images/Assortment Planning/Assortment Buy Sheet Report Parameters.png" class="LargeImages" />
+        </p>
+        <ul>
+            <li>
+                <p><span class="Emphasis">Product</span>: Selects a product filter for the current view</p>
+                <ul>
+                    <li>
+                        <img src="../../Resources/Images/Assortment Planning/View Parameters.png" class="IconInline" />&#160; Launches the Filter Conditions dialog, allowing the user to dynamically edit the criteria for the selected filter prior to executing it. The option also exists to create a new filter from the adjusted criteria dynamically.</li>
+                    <li>
+                        <img src="../../Resources/Images/Assortment Planning/View Parameters_1.png" class="IconInline" />&#160; Launches the Maintain Filter dialog, allowing the user to create or import a new filter, or update, delete, or export an existing filter.</li>
+                </ul>
+            </li>
+            <li><span class="Emphasis">Site Hierarchy</span>: Selects the levels of the current plan’s Site Hierarchy to include in the current view.</li>
+            <li>
+                <p><span class="Emphasis">Cluster Sets</span>:&#160;&#160; Selects the cluster sets to include in the current view. The cluster sets listed include all default and "additionally available" cluster sets for the product level selected in the Product parameter.</p>
+                <p class="BasicNote">While cluster sets are not explicitly part of the Site Hierarchy, they are directly related. Cluster sets in a given assortment plan must be contained within a single lowest level of that hierarchy. Therefore, the Cluster Set dropdown shows the cluster sets contained beneath the selected Site Hierarchy levels.</p>
+            </li>
+            <li>
+                <p><span class="Emphasis">Window of Time</span>: Selects the window of time to display in the current view. </p>
+                <p>Any placeholder whose life cycle intersects with any part of the selected Window of Time displays in the view. This allows users to view placeholders holistically as displaying subdivisions of their life cycle might alter the decisions made by users if they have forgotten or are unaware of the full length of time a placeholder is for sale.</p>
+                <p>The selected time frame must be a contiguous range of periods otherwise the system still uses the window of time defined by the first and last selected periods.</p>
+            </li>
+            <li><span class="Emphasis">Display Currency</span>: Sets the currency to display for all revenue based fields in the view. This defaults to the Home Currency for the active Assortment Plan.</li>
+        </ul>
+        <h2>Report fields</h2>
+        <p>Clicking <span class="Emphasis">Execute</span> returns the following columns in the <span class="Emphasis">Assortment Buy Sheet Report</span> once the parameters have been set:</p>
+        <table style="width: 100%;margin-left: auto;margin-right: auto;mc-table-style: url('../../Resources/TableStyles/standard.css');" class="TableStyle-standard" cellspacing="0">
+            <col class="TableStyle-standard-Column-Column1" />
+            <col class="TableStyle-standard-Column-Column2" />
+            <thead>
+                <tr class="TableStyle-standard-Head-Header1">
+                    <th class="TableStyle-standard-HeadE-Column1-Header1">Fields</th>
+                    <th class="TableStyle-standard-HeadD-Column2-Header1">Description</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1"><span class="Emphasis">Image</span>
+                    </td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">  Displays a thumbnail of the primary image for the placeholder or attached variant.</td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1"><span class="Emphasis">PH/PLM Code</span>
+                    </td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">Unique system generated code for the placeholder or if a variant is assigned in the main planning view, displays the PLM code associated with the assigned variant.</td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1"><span class="Emphasis">PH/PLM Description</span>
+                    </td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">Description for the placeholder or if a variant is assigned in the main planning view, displays the PLM description associated with the assigned variant.</td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1"><span class="Emphasis">Placeholder Status</span>
+                    </td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">Displays the placeholder status: Open, Created, Assigned, Committed, or Replen.</td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1"><span class="Emphasis">Home AUT</span>
+                    </td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">Average unit ticket (AUT) price in Home Site currency for the placeholder.</td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1"><span class="Emphasis">Blended AUT</span>
+                    </td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">Average unit ticket (AUT) price, blended from all sites’ currencies, for the placeholder.</td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1"><span class="Emphasis">AUR</span>
+                    </td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">Average unit retail  (AUR) price for the placeholder.</td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1"><span class="Emphasis">Receipt AUC</span>
+                    </td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">  Average unit cost  (AUC) price for the placeholder.</td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1"><span class="Emphasis">Margin %</span>
+                    </td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">Margin percentage for the placeholder. 
+						<p><span class="Emphasis">Calculation</span>: (AUR – AUC) / AUR<br /></p></td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1"><span class="Emphasis">Phase In</span>
+                    </td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">The phase in date for the placeholder, first period of planned sales.</td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1"><span class="Emphasis">Phase Out</span>
+                    </td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">The phase out date for the placeholder, last period of planned sales.</td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1"><span class="Emphasis">No. Periods</span>
+                    </td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">Total number of weeks the placeholder is on offer to the customer.</td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1"><span class="Emphasis">Approx ROS ($)</span>
+                    </td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">Average sales per site per period in revenue for the placeholder.</td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1"><span class="Emphasis">Approx ROS (U)</span>
+                    </td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">Average sales per site per period in units for the placeholder.</td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1"><span class="Emphasis">Ttl Sales ($)</span>
+                    </td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">Total sales revenue for the item from Phase in through Phase out.</td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1"><span class="Emphasis">Ttl Sales (U)</span>
+                    </td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">Total sales units for the item from Phase in through Phase out.</td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1"><span class="Emphasis">Promo</span>
+                    </td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">If checked, a promotion exists for the placeholder. If unchecked, no promotion exists.</td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1"><span class="Emphasis">No. Flows</span>
+                    </td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">Total number of periods that receipts are planned to deliver for a placeholder.</td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1"><span class="Emphasis">No. Flows In Date Selection</span>
+                    </td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">The number of receipts planned to deliver within the selected time frame.</td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1"><span class="Emphasis">Site Count</span>
+                    </td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">Total number of sites that a placeholder is assorted to.</td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1"><span class="Emphasis">Avg Order Units Per Site</span>
+                    </td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">Average amount of planned receipts per site.</td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1"><span class="Emphasis">Act Receipts (U)</span>
+                    </td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">The number of actualized receipt units.</td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1"><span class="Emphasis">% Commit</span>
+                    </td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">Percentage of total planned receipts that have been committed to for a placeholder.
+						<p><span class="Emphasis">Calculation</span>: (On Order U + prior actual receipts) / Planned Receipt U</p></td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1"><span class="Emphasis">Cluster Sets</span>
+                    </td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">Displays the cluster sets assigned to the placeholder.</td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1"><span class="Emphasis">Ttl Orders (U) </span>
+                    </td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">All order types and receipts.</td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1"><span class="Emphasis">Ttl Orders ($)</span>
+                    </td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">The sum of the Total Order Cost</td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1"><span class="Emphasis">Act Receipts ($)</span>
+                    </td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">Cost of actualized receipt units.</td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1"><span class="Emphasis">Planned Receipts (U)</span>
+                    </td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">Units of receipts in planned / future periods.</td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1"><span class="Emphasis">Planned Receipts ($)</span>
+                    </td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">Cost of receipts in planned / future periods.</td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1"><span class="Emphasis">Committed Orders (U)</span>
+                    </td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">Orders that are created in Order Manager that do not match external orders.</td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1"><span class="Emphasis">Committed Orders ($)</span> </td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">Cost of Committed Orders (U).</td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1"><span class="Emphasis">Confirmed Orders (U)</span>
+                    </td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">Orders in Order Manager with a matching UUID in external orders.</td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1"><span class="Emphasis">Confirmed Orders ($)</span>
+                    </td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">Cost of Confirmed Orders (U).</td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1"><span class="Emphasis">Unknown Orders (U)</span>
+                    </td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">External orders that do not match any order in Order Manager.</td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyB-Column1-Body1"><span class="Emphasis">Unknown Orders ($)</span>
+                    </td>
+                    <td class="TableStyle-standard-BodyA-Column2-Body1">Cost of Unknown Orders (U).</td>
+                </tr>
+            </tbody>
+        </table>
+    </body>
+</html>

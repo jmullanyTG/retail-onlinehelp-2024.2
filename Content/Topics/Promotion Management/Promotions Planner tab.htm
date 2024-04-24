@@ -1,0 +1,221 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head>
+        <link href="../../Resources/TableStyles/standard.css" rel="stylesheet" MadCap:stylesheetType="table" />
+    </head>
+    <body>
+        <h1>Planner tab</h1>
+        <p> Promotion plans are created and managed using the <span class="Emphasis">Planner</span> tab in the Promotion module. Promotion plans help determine what variants to promote based on the metrics provided within the filter meta data framework.</p>
+        <p>
+            <img src="../../Resources/Images/Promotion Management/Planner Tab.PNG" class="LargeImages" />
+        </p>
+        <p>Promotions created in the <span class="Emphasis">Planner</span> tab can be considered as pending until a plan is submitted. Until a plan is submitted, its promotions do not display in the <span class="Emphasis">List</span> tab. Once the plan is complete and all the variants are assigned to the promotions in the plan, then the plan is submitted. At this point promotions are created and display in the <span class="Emphasis">List</span> tab. </p>
+        <p class="BasicNote">Once a promotion plan is submitted it cannot be edited or deleted and no additional variants can be assigned.</p>
+        <p>The following promotion types are supported:</p>
+        <ul>
+            <li>Fixed </li>
+            <li>Amount Off</li>
+            <li>Multi Buy</li>
+        </ul>
+        <p>Most fields in the variants grid are read-only. However, a promotion can be selected in the <span class="Emphasis">Promotion</span> field and notes added in the <span class="Emphasis">Notes</span> field. </p>
+        <p>The <span class="Emphasis">Site Exclusions</span> tab displays all sites based on the Cluster Set assigned to the promotion plan. Site exclusions are by Promotion ID. Therefore, saving an exclusion on one variant excludes other variants that have the same promotion.</p>
+        <p class="BasicNote" MadCap:conditions="General.ScreenOnly">Additional data can be added to the Planner tab to assist in determining what items to promote. For more information, see <MadCap:xref href="../Views/Promotion Planner Custom View Collection Set.htm">Adding additional data to the Promotions module Planner tab</MadCap:xref>.</p>
+        <h2>Editing unsubmitted promotions and plans</h2>
+        <p>If there is a need to change an input for a saved promotion that has not yet been submitted, clearing the name of the promotion unlocks the input fields allowing users to change the existing values and re-save.</p>
+        <p>Variants assigned to an unsubmitted promotion can be edited. The modified variant will either be added to an existing promotion with the same input values or added to a new promotion.</p>
+        <p>The fields in the <span class="Emphasis">Manage Plans</span> window are read-only. To edit a promotion plan, click the <span class="Emphasis">Edit</span> button to display the <span class="Emphasis">Edit Plan</span> dialog.</p>
+        <p class="BasicNote">Click <span class="Emphasis">Refresh</span> to update the bottom pane. This displays when promotions have been created and have a Queue Status of <span class="Emphasis">Completed</span>.</p>
+        <h2>Promotion naming convention</h2>
+        <p>
+Promotion names are generated using the following elements separated by underscores:</p>
+        <ul>
+            <li>
+                <p>
+
+The Plan <i>Promotion Name</i></p>
+            </li>
+            <li>
+                <p>
+
+The selected <i>Strategy Name</i><![CDATA[
+]]></p>
+            </li>
+            <li>
+                <p>
+The input values</p>
+            </li>
+        </ul>
+        <p class="BasicNote">
+
+If system policy <span class="Emphasis">Allow promotions with duplicate names</span> (Module: Promotion) is set to <span class="Emphasis">True</span> and a generated promotion name is a duplicate of another promotion in the plan that has already been submitted, a new promotion with the same name is generated. If set to <span class="Emphasis">False</span>, a new promotion name with a numeric identifier appended is generated.</p>
+        <p>
+For example, a promotion name for any variants in <span class="Emphasis">Plan One</span>, assigned a <span class="Emphasis">Fixed Price</span> Strategy with a value of <span class="Emphasis">$10.00</span>.</p>
+        <p> The generated name would be <span class="Emphasis">Plan One_Fixed Price_10</span>.
+If submitted for another variant:
+</p>
+        <ul>
+            <li>
+                <p> before the promotion has been submitted, an additional record is added to the existing promotion.
+</p>
+            </li>
+            <li>
+                <p>
+after the existing promotion has been submitted, a new promotion is created for the variants under the same name (if  system policy <span class="Emphasis">Allow promotions with duplicate names</span> is set to <span class="Emphasis">True</span>) or using a numeric identifier added to the name, for example, <span class="Emphasis">Plan One_Fixed Price_10_1</span>.</p>
+            </li>
+        </ul>
+        <h2>Editing promotions before they are submitted</h2>
+        <ul>
+            <li>
+                <p>Promotion names can be edited in the <span class="Emphasis">Manage Plans</span> screen.</p>
+            </li>
+            <li>
+                <p>A promotion can be deleted prior to being submitted by selecting it and then clicking the <span class="Emphasis">Delete</span> button in the <span class="Emphasis">Manage Plans</span> screen.</p>
+            </li>
+            <li>
+                <p>Site exclusions can be set for a promotion by selecting a variant assigned to an unsubmitted promotion and checking the <span class="Emphasis">Exclude</span> checkbox for the sites to be excluded. Exclusions apply to the whole promotion, regardless of the variant that is selected.</p>
+            </li>
+        </ul>
+        <h2>Creating promotion plans</h2>
+        <p class="BasicNote">The promotions use the start and end dates of the promotion plan.</p>
+        <ol>
+            <li>Click the <span class="Emphasis">Manage Plans</span> button on the toolbar.
+				<p><img src="../../Resources/Images/Promotion Management/Manage Plans Promo Module.PNG" class="LargeImages" /></p></li>
+            <li>
+                <p>Click the <span class="Emphasis">Add</span> button on the toolbar.</p>
+                <p>The <span class="Emphasis">Create Plan</span> dialog displays.</p>
+                <p>
+                    <img src="../../Resources/Images/Promotion Management/Create a Promotion Plan.PNG" class="LargeImages" />
+                </p>
+            </li>
+            <li>In the <span class="Emphasis">Promo Name Prefix</span> field, enter a name that will be used as the base of the promotion name for any promotions generated for the plan.
+			<p class="BasicNote">If this field is left blank, then the default used is the plan name. This field can be completed when creating the plan or any time after. If modified after promotions have been submitted, then the new name is applied only to new promotions.</p></li>
+            <li>Complete the fields as required.
+			<p>The Cluster Set and Workflow must be common to all the items in the promotion. The <span class="Emphasis">Exclude Markdowns</span> checkbox is an instructional flag used for exports.</p></li>
+            <li>
+                <p>Click <span class="Emphasis">Ok</span>.</p>
+                <p>The <span class="Emphasis">Create Plan</span> dialog closes and the new plan displays in the <span class="Emphasis">Plans</span> grid.</p>
+                <p>The next stage is to add promotions to the plan.</p>
+            </li>
+        </ol>
+        <h2>Adding promotions to promotion plans</h2>
+        <ol>
+            <li>
+                <p>Click the <span class="Emphasis">Manage Plans</span> button on the toolbar.</p>
+            </li>
+            <li>Select a plan in the <span class="Emphasis">Plans</span> grid.</li>
+            <li>
+                <p>Click <span class="Emphasis">Ok</span>.</p>
+                <p>The <span class="Emphasis">Manage Plans</span> window closes. The selected plan’s name displays in the toolbar.</p>
+                <p>
+                    <img src="../../Resources/Images/Promotion Management/Plan Name in Planner Tab Screen.PNG" class="LargeImages" />
+                </p>
+                <p>The grid displays the variants and High and Low Prices and Costs. The default price and cost types are defined using promotion system policies.</p>
+            </li>
+            <li>
+                <p>Select one or more variants in the variants grid.</p>
+                <p class="BasicNote">A variant can only be assigned to one promotion within a plan.</p>
+            </li>
+            <li>Optionally, select sites to be excluded from the promotion in the&#160;grid on the <span class="Emphasis">Site Exclusions</span> tab.  </li>
+            <li>
+                <p>Select a strategy using the dropdown menu. </p>
+                <p class="BasicNote">The <span class="Emphasis">Strategy</span> field is a dropdown with promoted price types and promoted discounts. </p>
+            </li>
+            <li>
+                <p>Depending on the selected strategy, complete the strategy’s input fields.</p>
+                <p>The strategies do not all use the same input fields. To display the assigned values for each of the variants, click <span class="Emphasis">Choose</span> and select the relevant columns to display.</p>
+            </li>
+            <li>
+                <p>Click the <span class="Emphasis">Save</span> button on the toolbar.</p>
+                <p>Within the <span class="Emphasis">Manage Plans</span> window, selecting the plan displays the new promotion in the bottom grid.</p>
+            </li>
+        </ol>
+        <h2>Adding variants to an existing promotion within a plan</h2>
+        <p>Different variant-site filters can be used to select variants to add to the same promotion. Variants that have already been added to a promotion but do not display in subsequent selected filters may not be visible but are still part of the promotion plan.</p>
+        <ol>
+            <li>Open a promotion plan.</li>
+            <li>
+                <p>Select a variant-site filter using the <span class="Emphasis">Filter</span> field.</p>
+            </li>
+            <li>
+                <p>Click <span class="Emphasis">Execute</span>.</p>
+            </li>
+            <li>
+                <p>Select a variant.</p>
+            </li>
+            <li>
+                <p>In the variant’s <span class="Emphasis">Promotion</span> field, select an existing promotion using the dropdown menu.</p>
+                <p class="BasicNote">A selected promotion’s details can be edited in the promotion pane on the left. Update the values as required.</p>
+            </li>
+            <li>Optionally, select sites to be excluded from the promotion in the&#160;grid on the <span class="Emphasis">Site Exclusions</span> tab.  </li>
+            <li>Click the <span class="Emphasis">Show Plan</span> checkbox when finished selecting variants.</li>
+            <li>
+                <p>Click <span class="Emphasis">Execute</span>.</p>
+                <p>The filter is ignored and only the variants selected for the promotion display.</p>
+            </li>
+            <li>
+                <p>Click <span class="Emphasis">Submit</span>.</p>
+                <p class="BasicNote">Content and site exclusions can be further manipulated in the promotions module.</p>
+            </li>
+        </ol>
+        <h2>Toolbar functionality</h2>
+        <table style="width: 100%;margin-left: 0;margin-right: auto;mc-table-style: url('../../Resources/TableStyles/standard.css');" class="TableStyle-standard" cellspacing="0">
+            <col class="TableStyle-standard-Column-Column1" />
+            <col class="TableStyle-standard-Column-Column2" />
+            <thead>
+                <tr class="TableStyle-standard-Head-Header1">
+                    <th class="TableStyle-standard-HeadE-Column1-Header1">Functionality</th>
+                    <th class="TableStyle-standard-HeadD-Column2-Header1">Description</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1"><span class="Emphasis">Manage Plans</span>
+                    </td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">Displays the <span class="Emphasis">Manage Plans</span> window to add, edit, or delete promotion plans.</td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1"><span class="Emphasis">Execute</span>
+                    </td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">Refreshes the screen and displays a warning message regarding unsaved changes if required.</td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1"><span class="Emphasis">Save</span>
+                    </td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">Saves all unsaved changes to the promotion plan.</td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1"><span class="Emphasis">Submit</span>
+                    </td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">Sends the finalized promotion plan for creation within the Promotions module. </td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1"><span class="Emphasis">Filter</span>
+                    </td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">Plans can be created using multiple filters. </td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1"><span class="Emphasis">Show Plan</span>
+                    </td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">The filter is ignored and only the variants selected for the promotion display.</td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1"><span class="Emphasis">Currency</span>
+                    </td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">Sets the working currency in the Planner tab. Min and Max values are converted based on the site currency ID. All Min and Max Cost and Price values are aggregated based on the translated value of the Cost and Price of the variant across all sites in the lower grid. Any Price and Cost values in the lower grid display in the site’s native currency.</td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1"><span class="Emphasis">Choose</span>
+                    </td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">Additional metadata can be added that can be filtered on.</td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyB-Column1-Body1"><span class="Emphasis">Calculated</span>
+                    </td>
+                    <td class="TableStyle-standard-BodyA-Column2-Body1">
+                        <MadCap:snippetBlock src="../../Resources/Snippets/Calculated button functionality.flsnp" />
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </body>
+</html>

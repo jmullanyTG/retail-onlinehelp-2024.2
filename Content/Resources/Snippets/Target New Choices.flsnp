@@ -1,0 +1,34 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head>
+    </head>
+    <body>
+        <p>The <span class="Emphasis">Target New Choices</span> tab (editing and copying only) is comprised of a pivot grid displaying Placeholder level guidance for Sales and ROS within a scenario.</p>
+        <p>
+            <img src="../Images/Target Choice Count/Target Choice Count Target New Choices screen.PNG" class="LargeImages">
+            </img>
+        </p>
+        <p>Users can enter values in the metrics in the top left pane and review the different choice counts per target segment.</p>
+        <p>The above grid shows projected Sales, Sales Units, ROS, and ROS Units of the TY Act New metrics as defined in the Target Worksheet.  It shows how TY Act New Sales and Sales Units are broken out across each of the recommended placeholders in TY Act New Choices.  If the scenario is Smart Started, these are the placeholders that will be created, and these are how the initial sales plans will be seeded. </p>
+        <p> In the above, the segment <span class="Emphasis">Bags (W)</span> is shown. The first two visible choices will be assorted to three Clusters in three Cluster Sets for a total of nine assortments.</p>
+        <h2>Target New Choices metrics</h2>
+        <p>The following metrics are by placeholder:</p>
+        <ul>
+            <li>
+                <p><span class="Emphasis">Approx Stock Units (S/T %)</span>: TY Act New Sales Units / Target Sell Through %</p>
+            </li>
+            <li>
+                <p><span class="Emphasis">Approx Stock Units By Site (S/T %)</span>: Approx Stock Units (S/T%) / TY Plan Site Count</p>
+            </li>
+            <li>
+                <p><span class="Emphasis">Approx Stock Units (Min Pres)</span>: TY Act New Sales Units + (TY Plan Site Count * Min Pres)</p>
+            </li>
+            <li>
+                <p><span class="Emphasis">Approx Stock Units By Site (Min Pres)</span>: Approx Stock Units (Min Pres) / TY Plan Site Count</p>
+            </li>
+            <li>
+                <p><span class="Emphasis">Sales To Approx Stock Units (Min Pres)</span>: TY Act New Sales Units / Approx Stock Units (Min Pres)</p>
+            </li>
+        </ul>
+    </body>
+</html>

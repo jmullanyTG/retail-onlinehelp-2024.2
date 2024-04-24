@@ -1,0 +1,59 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" xml:lang="en-us">
+    <head>
+        <link href="../../Resources/TableStyles/standard.css" rel="stylesheet" MadCap:stylesheetType="table" /><title></title>
+    </head>
+    <body>
+        <h1>Viewing sales history and forecasted demand</h1>
+        <p>Clicking on the <span class="Emphasis">Graph</span> button in the Forecast viewer displays a graph. The graph contains various information series related to sales history, forecasted demand, etc in a graphical format. In the graph, certain series are displayed as a line while others may be displayed as a bar.</p>
+        <p>When hovering the mouse over the forecast graph, an informational box displays the values for the period in focus. </p>
+        <p>To decide what information to display in the graph, click the <span class="Emphasis">Visible</span> checkbox next to a data series in the grid to toggle displaying or hiding that data in the graph.</p>
+        <p class="BasicNote"> The ability to configure a series’ color requires user right <span class="Emphasis">Allow Series Configuration</span>.</p>
+        <p>
+            <img src="../../Resources/Images/Demand Forecasting/Data in Graph.png" class="LargeImages" />
+        </p>
+        <p>Within the graph viewer, the dot series representing the Manual Forecast can be manipulated to affect a manual forecast value. </p>
+        <p>
+            <img src="../../Resources/Images/Demand Forecasting/Manual Series Dot Forecast.png" class="LargeImages" />
+        </p>
+        <h2>Series</h2>
+        <p>The graphical representation of the different series related to the forecast can give insight into the meaning of the data.</p>
+        <p>
+            <img src="../../Resources/Images/Demand Forecasting/Series.png" class="LargeImages" />
+        </p>
+        <table style="width: 100%;margin-left: 0;margin-right: auto;mc-table-style: url('../../Resources/TableStyles/standard.css');" class="TableStyle-standard" cellspacing="0">
+            <col class="TableStyle-standard-Column-Column1" />
+            <col class="TableStyle-standard-Column-Column2" />
+            <thead>
+                <tr class="TableStyle-standard-Head-Header1">
+                    <th class="TableStyle-standard-HeadE-Column1-Header1">Series</th>
+                    <th class="TableStyle-standard-HeadD-Column2-Header1">Description</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1"><span class="Emphasis">Manual Forecast</span>
+                    </td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">Dark red if a forecast has been manually changed.</td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1"><span class="Emphasis">Effective Forecast</span>
+                    </td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">The values passed along to the replenishment engine via the Inventory Manager. Should align with the system forecast (blue series) before any changes are made.</td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1"><span class="Emphasis">System Forecast</span>
+                    </td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">
+                        The system generated forecast produced by the Forecasting engine. The values past the current date represent the values produced by the winning forecast model. Any series values preceding the current date may be viewed as the “model fit”, a combination of the simulation and backtrack. 
+                        <ul><li><span class="Emphasis">Backtrack</span> – The backtrack series is considered to be optimistic in that it corrects itself to be closer to the historical series for each history period.</li><li><span class="Emphasis">Simulation</span> – The simulation is considered to be pessimistic in that it will not correct itself in any way over the historical periods. </li></ul></td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyB-Column1-Body1"><span class="Emphasis">Original Forecast</span>
+                    </td>
+                    <td class="TableStyle-standard-BodyA-Column2-Body1">The yellow bars (not the yellow dotted line) represent the original system generated forecast. They remain for comparison as changes are made. </td>
+                </tr>
+            </tbody>
+        </table>
+    </body>
+</html>

@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd"
+      xml:lang="en-us"
+      MadCap:lastBlockDepth="5"
+      MadCap:lastHeight="1248"
+      MadCap:lastWidth="756">
+   <head>
+      <link href="../../Resources/TableStyles/standard.css"
+            rel="stylesheet"
+            MadCap:stylesheetType="table"/>
+      <title/>
+   </head>
+   <body>
+      <h1>Rate of Sale (ROS): Raw ROS and Adjusted ROS</h1>
+      <p>The Rate of Sale (ROS) scenarios developed in the <span class="Emphasis">Rate of Sale</span> module are used to generate rate of sale data. The ROS calculation uses this data to generate a raw ROS and an adjusted ROS. The adjusted ROS is the result of a data cleansing process to remove data points that would skew the scenario results. </p>
+      <p class="BasicNote">Users can select a percentile to look at both for raw and adjusted. For example, only those inventories with a ROS in the top 30% or higher. For more information, see <MadCap:xref href="Rate of Sale by Percentile.htm">Rate of Sale by Percentile</MadCap:xref>.</p>
+      <h2>Raw ROS </h2>
+      <p>The ROS calculation takes as its input raw sales data based on the scenario inputs. The calculation to arrive at the raw ROS is: </p>
+      <p>
+         <span class="Emphasis">Total Sales / (Total Weeks per Product x Number of Products)</span>.</p>
+      <p class="Important">If <span class="Emphasis">ROS Level</span> is set to <span class="Emphasis">Variant</span>, both raw and adjusted ROS will not be divided by product count.</p>
+      <table style="mc-table-style: url('../../Resources/TableStyles/standard.css');margin-left: 0;margin-right: auto;"
+             class="TableStyle-standard"
+             cellspacing="0">
+         <col class="TableStyle-standard-Column-Column1" style="width: 250px;"/>
+         <col class="TableStyle-standard-Column-Column2" style="width: 250px;"/>
+         <col class="TableStyle-standard-Column-Column1" style="width: 250px;"/>
+         <thead>
+            <tr class="TableStyle-standard-Head-Header1">
+               <th class="TableStyle-standard-HeadE-Column1-Header1">Product</th>
+               <th class="TableStyle-standard-HeadE-Column2-Header1">Total sale quantity</th>
+               <th class="TableStyle-standard-HeadD-Column1-Header1">No. of weeks sold</th>
+            </tr>
+         </thead>
+         <tbody>
+            <tr class="TableStyle-standard-Body-Body1">
+               <td class="TableStyle-standard-BodyE-Column1-Body1">1</td>
+               <td class="TableStyle-standard-BodyE-Column2-Body1">10</td>
+               <td class="TableStyle-standard-BodyD-Column1-Body1">10</td>
+            </tr>
+            <tr class="TableStyle-standard-Body-Body1">
+               <td class="TableStyle-standard-BodyE-Column1-Body1">2</td>
+               <td class="TableStyle-standard-BodyE-Column2-Body1">4</td>
+               <td class="TableStyle-standard-BodyD-Column1-Body1">10</td>
+            </tr>
+            <tr class="TableStyle-standard-Body-Body1">
+               <td class="TableStyle-standard-BodyE-Column1-Body1">3</td>
+               <td class="TableStyle-standard-BodyE-Column2-Body1">1</td>
+               <td class="TableStyle-standard-BodyD-Column1-Body1">10</td>
+            </tr>
+            <tr class="TableStyle-standard-Body-Body1">
+               <td class="TableStyle-standard-BodyB-Column1-Body1">TOTAL</td>
+               <td class="TableStyle-standard-BodyB-Column2-Body1">15</td>
+               <td class="TableStyle-standard-BodyA-Column1-Body1">30</td>
+            </tr>
+         </tbody>
+      </table>
+      <p> Therefore, the raw ROS is 15/30 = 0.5.</p>
+      <h2>Adjusted ROS </h2>
+      <p>Once the raw ROS has been calculated, an adjusted ROS is calculated. Firstly, any data points that violate the specified price or sales volume are disqualified to remove any data points that are not indicative of a variant’s normal sales potential. The upper and lower parameters for a scenario are set in the ROS scenario grid.</p>
+      <p>For information on the ROS parameters, see <MadCap:xref href="Creating a Rate of Sale scenario.htm">Creating a Rate of Sale (ROS) scenario</MadCap:xref>.</p>
+      <p>The following parameters influence the adjusted ROS.</p>
+      <h4>Phase dates</h4>
+      <p>The phase dates, which define the life cycle for a product, can be configured in the Inventory Manager module. However, many products don’t have phase dates defined. If a product has no defined phase dates, then the ROS calculation uses the first and last weeks of sale.</p>
+      <h4>First and last weeks of sale</h4>
+      <p>If phase dates are not defined for a product, then the system considers the first and last weeks of sale. The first and last weeks of sale are the first and last non-zero in the specified time frame. </p>
+      <h4>Days From Phase In</h4>
+      <p>The boundary weeks are the phase dates if defined otherwise the first and last weeks of sale. This is further limited by <span class="Emphasis">Days From Phase In</span> if specified. <span class="Emphasis">Days From Phase In</span> represents the time frame to be considered from the first week of sale. </p>
+      <p>For more information on how an adjusted ROS is calculated, see <MadCap:xref href="Adjusted ROS sample scenario.htm">Adjusted ROS sample scenario</MadCap:xref>.</p>
+   </body>
+</html>

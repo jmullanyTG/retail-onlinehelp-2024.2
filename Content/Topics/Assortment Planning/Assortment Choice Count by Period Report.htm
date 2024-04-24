@@ -1,0 +1,290 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" xml:lang="en-us">
+    <head>
+        <link href="../../Resources/TableStyles/standard.css" rel="stylesheet" MadCap:stylesheetType="table" />
+        <title>
+        </title>
+    </head>
+    <body>
+        <h1>Assortment Choice Count by Period Report</h1>
+        <p>The <span class="Emphasis">Assortment Choice Count by Period Report</span> provides the ability to review planned number of choices and productivity of the planned choices of an assortment for a defined time period.&#160;The report contains key measures at an aggregate level of the product hierarchy or product filter related to the choices planned for an assortment separating the choice counts by sales type.&#160;The report displays how many choices for a given period are regular price, on promotion, or designated as markdown.&#160; </p>
+        <p>Additionally, choice counts can be measured against the same period last year to determine the balance of assortment as it relates to sales by type (reg. price, promotion, and markdown).&#160;Other key measures that are contained within this report are related to Total Sales, Total Cost of Sales, and Total Margin.</p>
+        <p>
+            <img src="../../Resources/Images/Assortment Planning/Assortment Choice Count by Period Report.png" class="LargeImages" />
+        </p>
+        <p>Once the values have populated, users can use this report to manipulate their assortment in reviewing choice counts for a defined time period.&#160;This view can be utilized to pass key information to users that do not have access to the system.&#160; For example, merchandise planners can export this report to a PDF or Excel to share with merchants, buyers or visual merchandisers.&#160; </p>
+        <p>Additionally, this report is intended to provide insight to how an assortment is planned and how balanced an assortment looks in comparing regular price, promotional and markdown choices into the assortment over time. For example, a denim planner can illustrate the balance of fit types planned for a period and how many of each fit type are planned to be regular price, on promotion, or on markdown.&#160; </p>
+        <p>This report makes it very easy to draw comparisons to last year in total sales, COGS, margin, or productivity. By using the graph functionality with this report, users can easily see movement in all choice types as a season progresses to see if they remain in line with overall strategies for the business. These insights may invoke discussion in the organization as to what the trends of the business are and if the trends are covered in reviewing future period plans.</p>
+        <h2>Parameters</h2>
+        <p>The <span class="Emphasis">Assortment Choice Count by Period Report</span> is controlled by seven parameters:</p>
+        <p>
+            <img src="../../Resources/Images/Assortment Planning/Assortment Choice Count by Period Report Parameters.png" class="LargeImages" />
+        </p>
+        <ul>
+            <li>
+                <p>
+                    <span class="Emphasis">Product</span>: Selects a product filter for the current view.</p>
+                <ul>
+                    <li>
+                        <img src="../../Resources/Images/Assortment Planning/View Parameters.png" class="IconInline" />&#160; Launches the <span class="Emphasis">Filter Conditions</span> dialog allowing the user to edit the criteria for the selected filter prior to executing it. Users can also create a new filter from the adjusted criteria.</li>
+                    <li>
+                        <img src="../../Resources/Images/Assortment Planning/View Parameters_1.png" class="IconInline" />&#160; Launches the <span class="Emphasis">Maintain Filter</span> dialog allowing the user to create, import, and work with filters.</li>
+                </ul>
+            </li>
+            <li>
+                <span class="Emphasis">Site Hierarchy</span>: Selects the levels of the current plan’s Site Hierarchy to include in the current view.</li>
+            <li>
+                <p>
+                    <span class="Emphasis">Cluster Sets</span>:&#160;Selects the cluster sets to include in the current view. The cluster sets listed include all default and additionally available cluster sets for the product level selected in the Product parameter.</p>
+                <p>While cluster sets are not explicitly part of the Site Hierarchy, they are directly related in that cluster sets in a given assortment plan must be contained within a single lowest level of that hierarchy. Therefore, the <span class="Emphasis">Cluster Set</span> dropdown populates with the cluster sets contained beneath the selected Site Hierarchy levels.</p>
+            </li>
+            <li>
+                <p>
+                    <span class="Emphasis">Window of Time</span>: Selects the window of time to display in the current view.</p>
+                <p>The selected time frame must be a contiguous range of periods otherwise the system still uses the window of time defined by the first and last selected periods.</p>
+            </li>
+            <li>
+                <p>
+                    <span class="Emphasis">Attribute Family</span>:&#160;Each attribute family contains attributes that pertain to that family and can be imported from host systems if available.&#160; </p>
+                <p class="Example"> Attribute Family = Fabric Type, and a value belonging to this family could be cotton.&#160; This selection defines the values within a family or group of families that will be available for selection and viewing in the sixth parameter.</p>
+            </li>
+            <li>
+                <p>
+                    <span class="Emphasis">Attribute Values</span>:&#160;This selection returns the values associated with the attribute families selected in the fifth parameter.</p>
+                <p> It is not necessary to select Attribute Family or Attribute Values in the parameters selections as it is possible to review choice counts and productivity through the utilization of a product filter, Site Hierarchy, Cluster Sets for a defined window of time.</p>
+                <li>
+                    <span class="Emphasis">Display Currency</span>: Sets the currency to display for all revenue based fields in the view. This field defaults to the Home Currency for the active Assortment Plan.</li>
+            </li>
+        </ul>
+        <h2>Fields</h2>
+        <p>This report is a Pivot Grid and elements contained within the grid may be pivoted. Clicking <span class="Emphasis">Execute</span> returns the following rows once the parameters are set:</p>
+        <table style="width: 100%;margin-left: auto;margin-right: auto;mc-table-style: url('../../Resources/TableStyles/standard.css');" class="TableStyle-standard" cellspacing="0">
+            <col class="TableStyle-standard-Column-Column1" />
+            <col class="TableStyle-standard-Column-Column2" />
+            <thead>
+                <tr class="TableStyle-standard-Head-Header1">
+                    <th class="TableStyle-standard-HeadE-Column1-Header1">Field</th>
+                    <th class="TableStyle-standard-HeadD-Column2-Header1">Description</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">
+                        <span class="Emphasis">Reg Choices</span>
+                    </td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">Number of regular price variants/placeholders planned to sell in the assortment by period.</td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">
+                        <span class="Emphasis">Reg Choices LY</span>
+                    </td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">  Last year number of regular price variants/placeholders selling in the assortment by period.</td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">
+                        <span class="Emphasis">Reg Choices % +/- LY</span>
+                    </td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">Percentage increase or decrease versus last year for regular price choices in the assortment.</td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">
+                        <span class="Emphasis">Promo Choices</span>
+                    </td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">  Number of variants/placeholders planned to sell on promotion in the assortment by period.</td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">
+                        <span class="Emphasis">Promo Choices LY</span>
+                    </td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">  Last year number of variants/placeholders selling on promotion in the assortment by period.</td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">
+                        <span class="Emphasis">Promo Choices % +/- LY</span>
+                    </td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1"> Percentage increase or decrease versus last year for promotional choices in the assortment.</td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">
+                        <span class="Emphasis">Mkdn Choices</span>
+                    </td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">Number of variants/placeholders planned to sell on markdown in the assortment by period.</td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">
+                        <span class="Emphasis">Mkdn Choices LY</span>
+                    </td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">  Last year number of variants/placeholders selling on markdown in the assortment by period.</td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">
+                        <span class="Emphasis">Mkdn Choices % +/- LY</span>
+                    </td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1"> Percentage increase or decrease versus last year for markdown choices in the assortment.</td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">
+                        <span class="Emphasis">Ttl Choices</span>
+                    </td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">  The sum of Reg choices + Promo choices + Mkdn choices planned to sell in the assortment by period.</td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">
+                        <span class="Emphasis">Ttl Choices LY</span>
+                    </td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">  Last year sum of Reg choices + promo choices + Mkdn choices selling in the assortment by period.</td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">
+                        <span class="Emphasis">Ttl Choices % +/- LY</span>
+                    </td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1"> Percentage increase or decrease versus last year for the total number of choices in the assortment.</td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">
+                        <span class="Emphasis">Sales $</span>
+                    </td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1"> Total sales revenue planned or actual for a given period.</td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">
+                        <span class="Emphasis">Sales $ LY</span>
+                    </td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">  Last year total sales revenue for a given period.</td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">
+                        <span class="Emphasis">Sales $ % +/- LY</span>
+                    </td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">Percentage increase or decrease versus last year in sales revenue for a given period.</td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">
+                        <span class="Emphasis">Sales U</span>
+                    </td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">  Total sales units planned or actual for a given period.</td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">
+                        <span class="Emphasis">Sales U LY</span>
+                    </td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">  Last year total sales units for a given period.</td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">
+                        <span class="Emphasis">Sales U % +/- LY</span>
+                    </td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">Percentage increase or decrease versus last year in sales units for a given period.</td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">
+                        <span class="Emphasis">Productivity $</span>
+                    </td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1"> Average sales revenue per choice per location per period.</td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">
+                        <span class="Emphasis">Productivity $ LY</span>
+                    </td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">  Last year average sales revenue per choice per location per period.</td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">
+                        <span class="Emphasis">Productivity $ % +/- LY</span>
+                    </td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">Percentage increase or decrease versus last year for productivity sales.</td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">
+                        <span class="Emphasis">Productivity U</span>
+                    </td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">  Average sales units per choice per location per period.</td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">
+                        <span class="Emphasis">Productivity U LY</span>
+                    </td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">  Last year average sales units per choice per location per period.</td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">
+                        <span class="Emphasis">Productivity U % +/- LY</span>
+                    </td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1"> Percentage increase or decrease versus last year for productivity units.</td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">
+                        <span class="Emphasis">COGS</span>
+                    </td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">  Cost of goods sold for a given period.</td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">
+                        <span class="Emphasis">COGS LY</span>
+                    </td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">  Last year cost of goods sold for a given period.</td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">
+                        <span class="Emphasis">COGS % +/- LY</span>
+                    </td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">Percentage increase or decrease versus last year for cost of goods sold.</td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">
+                        <span class="Emphasis">Margin $</span>
+                    </td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1"> Profit margin expressed in value for a given period.</td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">
+                        <span class="Emphasis">Margin $ LY</span>
+                    </td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">  Last year profit margin expressed in value for a given period.</td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">
+                        <span class="Emphasis">Margin $ % +/- LY</span>
+                    </td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">Percentage increase or decrease versus last year of profit margin. </td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">
+                        <span class="Emphasis">Margin %</span>
+                    </td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1"> Profit margin % for a given period.</td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">
+                        <span class="Emphasis">Margin % LY</span>
+                    </td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">  Last year profit margin % for a given period.</td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyB-Column1-Body1">
+                        <span class="Emphasis">Margin % % +/- LY</span>
+                    </td>
+                    <td class="TableStyle-standard-BodyA-Column2-Body1">  Profit margin % rate change versus last year.</td>
+                </tr>
+            </tbody>
+        </table>
+        <h3>Deriving Choice Counts</h3>
+        <ul>
+            <li>
+                <span class="Emphasis">Historical Periods</span> - choice counts for each type (Regular, Promo, Mkdn) are derived from the presence of sales of the corresponding type for a given variant.</li>
+            <li>
+                <p>
+                    <span class="Emphasis">Planned (future) Periods</span>
+                </p>
+                <ul>
+                    <li>
+                        <span class="Emphasis">Regular Choices</span> - sales are planned for the period but no promotion is in effect and any markdown date has not yet been reached.</li>
+                    <li>
+                        <span class="Emphasis">Promo Choices</span> - sales are planned for the period a promotion is in effect and any markdown date has not yet been reached.</li>
+                    <li>
+                        <span class="Emphasis">Mkdn Choices</span> – sales are planned for the period and the period is the same as or past the period set as the markdown date.</li>
+                </ul>
+            </li>
+        </ul>
+    </body>
+</html>

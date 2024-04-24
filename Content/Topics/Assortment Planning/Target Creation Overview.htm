@@ -1,0 +1,94 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" xml:lang="en-us">
+    <head>
+        <link href="../../Resources/TableStyles/standard.css" rel="stylesheet" MadCap:stylesheetType="table" /><title></title>
+    </head>
+    <body>
+        <h1>Target creation</h1>
+        <p>Target Creation is the establishing of plan targets for specific areas of a business and the determining of the number of items required to meet those plan targets.
+Assortment Planning has the ability to segment hierarchy levels by a wide array of product attributes, both qualitative and quantitative, and then further subdivide and define plan targets and desired new choice counts all the way down to a cluster level.</p>
+        <p>Traditional assortment planning tools are typically rigid in that planning is by product and site hierarchy only. This has led to many retailers attempting to gain detail by further extending their hierarchies, but this approach still does not offer true flexibility to adjust strategy as often as desired based on the changing needs of the business.  </p>
+        <p>Target Creation can:</p>
+        <ul>
+            <li> create scenarios in as simple or complex as manner as desired.</li>
+            <li>link scenarios to existing merchandise financial plans or base plan targets on specified historical period.</li>
+            <li>define business segments by product hierarchy or based on a wide array of variables defined through product filters.</li>
+            <li>model new areas of business, adjust percent contributions and plan targets at aggregate or more granular levels through the Pivot Grid functionality, and calculate recommended new choice counts based on targets through Rationalization (a marginal return curve calculation that suggests optimal assortment breadth and depth based on cleansed historical data).</li>
+        </ul>
+        <p>Scenarios can be used to create a foundation for assortment plans through a process called Smart Start. For more information, see <MadCap:xref href="Smart Start.htm">Smart Start </MadCap:xref>.</p>
+        <h2>Parameters</h2>
+        <p>Use the following parameters to filter the displayed Targets:</p>
+        <table style="width: 100%;margin-left: auto;margin-right: auto;mc-table-style: url('../../Resources/TableStyles/standard.css');" class="TableStyle-standard" cellspacing="0">
+            <col class="TableStyle-standard-Column-Column1" />
+            <col class="TableStyle-standard-Column-Column2" />
+            <thead>
+                <tr class="TableStyle-standard-Head-Header1">
+                    <th class="TableStyle-standard-HeadE-Column1-Header1">Parameter</th>
+                    <th class="TableStyle-standard-HeadD-Column2-Header1">Description</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">Product Hierarchy</td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">The product hierarchy levels a Target Creation scenario must contain to be shown in the Target Creation Scenarios section. Selectable levels are based on the intersection of the product hierarchy assigned to the current assortment plan and the product hierarchy permissions of the active user.</td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">Site Hierarchy</td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">The site hierarchy levels a Target Creation scenario must contain to be shown in the Target Creation Scenarios section. Selectable levels are based on the intersection of the site hierarchy assigned to the current assortment plan and the site hierarchy permissions of the active user.</td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">Window of Time</td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">
+                        The window of time a scenario must intersect with to be shown in the Target Creation Scenarios section. Selectable periods are based on those configured in the system down to the Period set for the current assortment plan. 
+                        <MadCap:snippetBlock src="../../Resources/Snippets/Floor Set Update More Information.flsnp" /><p class="BasicNote">For more information, see <MadCap:xref href="Target Floor Set Updates AP.htm">Creating floor set updates for varying time frames</MadCap:xref>.</p></td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyB-Column1-Body1">Display Currency</td>
+                    <td class="TableStyle-standard-BodyA-Column2-Body1">The currency to display for all revenue based fields in the view. Defaults to the Home Currency for the active Assortment Plan.</td>
+                </tr>
+            </tbody>
+        </table>
+        <h2>Toolbar buttons</h2>
+        <ul>
+            <li><span class="Emphasis">New</span>: Launches the <span class="Emphasis">Target Creation (New)</span> window to create a new scenario.</li>
+            <li>
+                <p><span class="Emphasis">Copy</span>: Launches the <span class="Emphasis">Target Creation</span> window populating the <span class="Emphasis">Target Data Selection</span>, <span class="Emphasis">Target Segment Definitions</span>, and <span class="Emphasis">Target Worksheet</span> (segment cluster details) section using the selected scenario in the Target Creation Scenarios section.</p>
+                <ul>
+                    <li>
+                        <p>All fields in the <span class="Emphasis">Target Data Selection</span> and <span class="Emphasis">Target Segment Definitions</span> sections are editable in copied scenarios.</p>
+                        <p class="BasicNote">To unlock target segment definitions and cluster details for editing, copied scenarios must first be saved. To do this without changing the scenario’s core data structure, change the scenario name to a unique name then click <span class="Emphasis">Save</span>.</p>
+                    </li>
+                </ul>
+            </li>
+            <li>
+                <p><span class="Emphasis">Edit</span>: Launches the <span class="Emphasis">Target Creation</span> window, populated with all data from the selected scenario in the Target Creation Scenarios section.</p>
+                <ul>
+                    <li>All parameters are editable in scenarios of status Created, Calculated, or Rationalized.</li>
+                    <li>For scenarios of status Smart Started, fields in the <span class="Emphasis">Target Segment Definitions</span> and <span class="Emphasis">Target Worksheet sections</span> can be edited, but doing so requires recalculation, re-rationalization, and re-Smart Starting for changes to take effect in the active assortment plan.</li>
+                </ul>
+            </li>
+            <li><span class="Emphasis">Delete</span>: Deletes the selected Target Creation scenario.</li>
+            <li>
+                <p><span class="Emphasis">Compare</span>: Launches the <span class="Emphasis">Target Comparison</span> window in which users can compare two scenarios.</p>
+                <p>
+                    <img src="../../Resources/Images/Assortment Planning/Comparison screen.png" class="LargeImages">
+                    </img>
+                </p>
+                <ul>
+                    <li>Standard  Pivot Grid functionality, including ability to graph selected data elements and Export or Open analysis in a variety of popular formats, including Microsoft Excel and Adobe PDF.</li>
+                    <li>Only prerequisite for scenario comparison is that scenarios be in <span class="Emphasis">Calculated</span>, <span class="Emphasis">Rationalized</span>, or <span class="Emphasis">Smart Started</span> status.</li>
+                    <li>
+                        <p>Site count is a SUM across cluster sets and clusters, but an AVERAGE across segments and scenarios.</p>
+                    </li>
+                    <li>Comparisons of scenarios representing disparate parts of the product/site hierarchies and/or windows of time are possible - they are just of limited usefulness.</li>
+                </ul>
+            </li>
+            <li><span class="Emphasis">Smart Start</span>: Initiates the Smart Start process for the selected scenario, generating the number of placeholder items required, and seeding with beginning sales plan data elements.</li>
+            <li><span class="Emphasis">Cluster Config</span>:  Launches the Target Configuration screen allowing users to determine which clusters should always have more choices than others. For more information, see <MadCap:xref href="Cluster Configuration.htm">Cluster Configuration</MadCap:xref>.</li>
+            <li>
+                <p><span class="Emphasis">Fields</span>: Launches the customization dialog.</p>
+            </li>
+        </ul>
+        <MadCap:miniTocProxy style="mc-toc-depth: 1;" />
+    </body>
+</html>

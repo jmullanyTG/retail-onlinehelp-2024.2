@@ -1,0 +1,63 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" xml:lang="en-us">
+    <head><title></title>
+    </head>
+    <body>
+        <h1>Product sets</h1>
+        <p>The Product Set process defines the collection of variants to be allocated. They are similar to the products used to model the demand or choice count models, or altogether unrelated. </p>
+        <p>The <span class="Emphasis">Product Set</span> screen contains a listing of product sets and their associated details which will populate once they are created. </p>
+        <p>
+            <img src="../../Resources/Images/Adaptive Allocations/Product Set screen.png" class="LargeImages" />
+        </p>
+        <h2>Product Set section</h2>
+        <ul>
+            <li><span class="Emphasis">Product Set Name</span> – The unique name for the product set. Used to find product sets within the scenario plan configuration screen.</li>
+            <li><span class="Emphasis">Product Set Description</span> – Optional description for the product set. </li>
+            <li><span class="Emphasis">Variant Selection</span> – A filter of variants which have been selected for potential inclusion in the product set. </li>
+            <li><span class="Emphasis">Included Attribute Families</span> – The attribute families which should be considered when assessing the product set. </li>
+            <li><span class="Emphasis">Opt-In</span> – Default behavior for variant selection on creation and update of the product set. </li>
+            <li><span class="Emphasis">Attribute Weighting Time Frame</span> – Time frame used to define the attribute weighting period. </li>
+            <li><span class="Emphasis">Attribute Weighting Supplementary Filter</span> – Provides users with an opportunity to specify the sample set of products to use when determining attribute weighting. </li>
+            <li><span class="Emphasis">Access Level</span> – Used to define user access to the product set. This controls its visibility in this screen as well as restricts its selection for use within a scenario plan. <ul><li><span class="Emphasis">Public</span> – Available to all users within the application. </li><li><span class="Emphasis">Private</span> – Available only to the creator.</li><li><span class="Emphasis">Shared</span> – Available to only specific users. </li></ul></li>
+            <li><span class="Emphasis">User Select</span> – If set to a shared access level, the list of shared users. </li>
+        </ul>
+        <h2>Variant Details section</h2>
+        <p>The <span class="Emphasis">Variant Details</span> section allows users to determine the sub-set of variants within the filter which should be included in the product set. Upon creation or alteration of a product set, the variant details views refresh based on the supplied parameters. </p>
+        <p class="BasicNote">If <span class="Emphasis">Opt-In</span> is selected, then on any change to the product set, the entire list of variants within the <span class="Emphasis">Variant Details</span> view is selected (even if they were previously un-selected).</p>
+        <ul>
+            <li><span class="Emphasis">Selected</span> – Checked if the variant is selected to be included in the product set. The default behavior is determined by the <span class="Emphasis">Opt-In</span> checkbox in the product set configuration grid. If an update is made to the product set while <span class="Emphasis">Opt-In</span> is checked, then all variants are selected when <span class="Emphasis">Save</span> is clicked.</li>
+            <li><span class="Emphasis">Variant Code</span> – The unique code describing the variant. </li>
+            <li><span class="Emphasis">Variant Description</span> – The optional description for the variant. </li>
+            <li><span class="Emphasis">Total On Hand Units</span> – Total in-network on-hand for the variant. Includes on-order, pending, and supersession stock. </li>
+            <li><span class="Emphasis">Total On Hand Value</span> – The value in base currency of the total on-hand units. </li>
+            <li><span class="Emphasis">Store On Hand Units</span> – Total on-hand for stores. </li>
+            <li><span class="Emphasis">Store On Hand Value</span> - The value in base currency of the store on-hand units.</li>
+            <li><span class="Emphasis">DC On Hand</span> – Total on-hand for all DCs. </li>
+            <li><span class="Emphasis">DC On Hand Values</span> - The value in base currency of the DC on-hand units.</li>
+            <li><span class="Emphasis">On Order Quantity Units</span> – Total quantity on order. </li>
+            <li><span class="Emphasis">On Order Quantity Value</span> - The value in base currency of the on-order units.</li>
+            <li><span class="Emphasis">Size Fulfilment</span> – A percentage representation of ownership across the size range. While not representative of specific size quantities, it provides a quick reference for variants with exceptionally broken size runs. </li>
+        </ul>
+        <p>The details related to the highlighted variant:</p>
+        <ul>
+            <li><span class="Emphasis">Attribute</span> – The attribute families included in the product selection set. </li>
+            <li><span class="Emphasis">Attribute Value</span> – The assigned value for the highlighted variant. </li>
+        </ul>
+        <p>
+            <img src="../../Resources/Images/Adaptive Allocations/Variant Site Details Grid.png" class="LargeImages" />
+        </p>
+        <p>Displays on-hand and on-order quantities for the highlighted variant at all sites. </p>
+        <h2>Attribute Details section</h2>
+        <p>
+            <img src="../../Resources/Images/Adaptive Allocations/Attribute Details Grid.png" class="LargeImages" />
+        </p>
+        <p>The <span class="Emphasis">Attribute Details</span> section allows users to select which of the initially included attribute families should be considered as when determining allocation quantities. </p>
+        <p>Attribute families may be weighted against one another to provide more or less influence on their affinity within the draft process. All attribute families default to 100% as the default weighting factor (even weight). </p>
+        <ul>
+            <li><span class="Emphasis">Include in Weighting</span> – If selected, the attribute family is considered as part of the draft process. </li>
+            <li><span class="Emphasis">Attribute Name</span> – The name of the attribute family. </li>
+            <li><span class="Emphasis">Attribute Description</span> – The optional description for the attribute family. </li>
+            <li><span class="Emphasis">Weighting Factor</span> – A factor by which attributes will be weighted against one another. Defaults to 100% (even weighting for all included attributes). </li>
+        </ul>
+    </body>
+</html>

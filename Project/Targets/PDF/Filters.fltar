@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<CatapultTarget
+  Version="2"
+  Comment="New Target"
+  Type="PDF"
+  Destinations=""
+  ConditionTagExpression="include[General.PrintOnly]exclude[&quot;General.ScreenOnly&quot; or General.DoNotPublish]"
+  MasterToc="/Project/TOCs/Filters.fltoc"
+  PatchHeadingLevels="true"
+  InjectBookHeadings="true"
+  RemoveImagesFromHeadings="true"
+  DisableAutoSync="true">
+  <PrintedOutput
+    CollapseMargins="true"
+    GenerateTOCProxy="true"
+    GenerateIndexProxy="false"
+    GenerateGlossaryProxy="false" />
+  <Destinations>
+    <Destination
+      Link="/Project/Destinations/PDF Output.fldes"
+      Publish="true" />
+  </Destinations>
+  <Variables> <Variable
+      Name="Variables/BookVersion">2024.2</Variable> <Variable
+      Name="Variables/BookSubTitle">User Guide</Variable> <Variable
+      Name="Variables/BookTitle">Filters</Variable></Variables>
+  <PDF
+    Tagged="true"
+    PageMode="UseNone"
+    PageLayout="OneColumn"
+    CollapsedBookmarks="true"
+    ConvertBookmarks="true" />
+  <Glossaries></Glossaries>
+  <DocumentProperties
+    Author="" />
+</CatapultTarget>

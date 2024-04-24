@@ -1,0 +1,390 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" xml:lang="en-us">
+    <head>
+        <link href="../../Resources/TableStyles/standard.css" rel="stylesheet" MadCap:stylesheetType="table" /><title></title>
+    </head>
+    <body>
+        <h1>Configuring standard promotion strategies</h1>
+        <p>Users with the relevant User Rights, can click the <span class="Emphasis">Configuration</span> button and use the following table to configure the standard promotion strategies.</p>
+        <p class="BasicNote">The promotion strategy configuration may vary from these defaults due to implementation requirements.</p>
+        <table class="TableStyle-standard" cellspacing="0" style="mc-table-style: url('../../Resources/TableStyles/standard.css');">
+            <thead>
+                <tr class="TableStyle-standard-Head-Header1">
+                    <th class="TableStyle-standard-HeadE-Column1-Header1">
+                        Promotion Strategy 
+                    </th>
+                    <th class="TableStyle-standard-HeadE-Column2-Header1">
+                         Detail 
+                    </th>
+                    <th class="TableStyle-standard-HeadD-Column1-Header1">
+                        Field Requirements 
+                    </th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">
+                        <p>EDLP</p>
+                    </td>
+                    <td class="TableStyle-standard-BodyE-Column2-Body1">
+                        <ul>
+                            <li>Strategy Type – Promoted Price</li>
+                            <li>Calculation Set – EDLP</li>
+                            <li>Validation Set – EDLP</li>
+                            <li>Price Output Set – EDLP</li>
+                            <li>Price View Collection Set – Price Detail – EDLP/Regular Retail</li>
+                            <li>Analysis View Collection Set – Analysis</li>
+                            <li>Is Group Synced – No</li>
+                        </ul>
+                    </td>
+                    <td class="TableStyle-standard-BodyD-Column1-Body1">
+                        <ul>
+                            <li>RetailLow – Is Get, Is Visible </li>
+                            <li>RetailHigh – Is Get, Is Visible</li>
+                        </ul>
+                    </td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">
+                        <p>Fixed</p>
+                    </td>
+                    <td class="TableStyle-standard-BodyE-Column2-Body1">
+                        <ul>
+                            <li>Strategy Type – Promoted Price</li>
+                            <li>Calculation Set – Fixed</li>
+                            <li>Validation Set – Fixed</li>
+                            <li>Price Output Set – Fixed</li>
+                            <li>Price View Collection Set – Price Detail – Fixed</li>
+                            <li>Analysis View Collection Set – Analysis</li>
+                            <li>Is Group Synced – No</li>
+                        </ul>
+                    </td>
+                    <td class="TableStyle-standard-BodyD-Column1-Body1">
+                        <ul>
+                            <li>PromotionPrice – Is Get, Is Visible, Is Mandatory</li>
+                            <li>RetailLow – Is Get, Is Visible </li>
+                            <li>RetailHigh – Is Get, Is Visible</li>
+                        </ul>
+                    </td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">
+                        <p>Amount Off</p>
+                    </td>
+                    <td class="TableStyle-standard-BodyE-Column2-Body1">
+                        <ul>
+                            <li>Strategy Type – Promoted Discount</li>
+                            <li>Calculation Set – Amount Off</li>
+                            <li>Validation Set – Amount Off</li>
+                            <li>Price Output Set – Amount Off</li>
+                            <li>Price View Collection Set – Price Detail – Amount Off</li>
+                            <li>Analysis View Collection Set – Analysis</li>
+                            <li>Is Group Synced – No</li>
+                        </ul>
+                    </td>
+                    <td class="TableStyle-standard-BodyD-Column1-Body1">
+                        <ul>
+                            <li>DollarDiscount – Is Get, Is Visible, Is Mandatory</li>
+                            <li>RetailLow – Is Get, Is Visible </li>
+                            <li>RetailHigh – Is Get, Is Visible</li>
+                        </ul>
+                    </td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">
+                        <p>Percent Off</p>
+                    </td>
+                    <td class="TableStyle-standard-BodyE-Column2-Body1">
+                        <ul>
+                            <li>Strategy Type – Promoted Discount</li>
+                            <li>Calculation Set – Percent Off</li>
+                            <li>Validation Set – Percent Off</li>
+                            <li>Price Output Set – Percent Off</li>
+                            <li>Price View Collection Set – Price Detail – Percent Off</li>
+                            <li>Analysis View Collection Set – Analysis</li>
+                            <li>Is Group Synced – No</li>
+                        </ul>
+                    </td>
+                    <td class="TableStyle-standard-BodyD-Column1-Body1">
+                        <ul>
+                            <li>PercentDiscount – Is Get, Is Visible, Is Mandatory</li>
+                            <li>RetailLow – Is Get, Is Visible </li>
+                            <li>RetailHigh – Is Get, Is Visible</li>
+                        </ul>
+                    </td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">
+                        <p>Multi Buy</p>
+                    </td>
+                    <td class="TableStyle-standard-BodyE-Column2-Body1">
+                        <ul>
+                            <li>Strategy Type – Promoted Price</li>
+                            <li>Calculation Set – Multi Buy</li>
+                            <li>Validation Set – Multi Buy</li>
+                            <li>Price Output Set – Multi Buy</li>
+                            <li>Price View Collection Set – Price Detail – Multi Buy</li>
+                            <li>Analysis View Collection Set – Analysis</li>
+                            <li>Is Group Synced – No</li>
+                        </ul>
+                    </td>
+                    <td class="TableStyle-standard-BodyD-Column1-Body1">
+                        <ul>
+                            <li>MultiBuyQuantity – Is Get, Is Visible, Is Mandatory</li>
+                            <li>TotalPromotionPrice – Is Get, Is Visible, Is Mandatory</li>
+                            <li>PromoLow – Is Get, Is Visible </li>
+                            <li>PromoHigh – Is Get, Is Visible</li>
+                            <li>RetailLow – Is Get, Is Visible </li>
+                            <li>RetailHigh – Is Get, Is Visible</li>
+                        </ul>
+                    </td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">
+                        <p>BOGO AA Free</p>
+                    </td>
+                    <td class="TableStyle-standard-BodyE-Column2-Body1">
+                        <ul>
+                            <li>Strategy Type – Buy Get</li>
+                            <li>Calculation Set – BOGO AA Free</li>
+                            <li>Price Output Set – BOGO AA Free</li>
+                            <li>Price View Collection Set – Price Detail – EDLP/Regular Retail</li>
+                            <li>Analysis View Collection Set – Analysis</li>
+                            <li>Is Group Synced – Yes</li>
+                        </ul>
+                    </td>
+                    <td class="TableStyle-standard-BodyD-Column1-Body1">
+                        <ul>
+                            <li>Buy Quantity – Is Buy, Is Get, Is Visible, Is Mandatory</li>
+                            <li>Get Quantity – Is Buy, Is Get, Is Visible, Is Mandatory</li>
+                        </ul>
+                    </td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">
+                        <p>BOGO AB Free</p>
+                    </td>
+                    <td class="TableStyle-standard-BodyE-Column2-Body1">
+                        <ul>
+                            <li>Strategy Type – Buy Get</li>
+                            <li>Calculation Set – BOGO AB Free</li>
+                            <li>Price Output Set – BOGO AB Free</li>
+                            <li>Price View Collection Set – Price Detail – EDLP/Regular Retail</li>
+                            <li>Analysis View Collection Set – Analysis</li>
+                            <li>Is Group Synced – No</li>
+                        </ul>
+                    </td>
+                    <td class="TableStyle-standard-BodyD-Column1-Body1">
+                        <ul>
+                            <li>Buy Quantity – Is Buy, Is Visible, Is Mandatory</li>
+                            <li>Get Quantity – Is Get, Is Visible, Is Mandatory</li>
+                        </ul>
+                    </td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">
+                        <p>BOGO AA Amount Off</p>
+                    </td>
+                    <td class="TableStyle-standard-BodyE-Column2-Body1">
+                        <ul>
+                            <li>Strategy Type – Buy Get</li>
+                            <li>Calculation Set – BOGO AA Amount Off</li>
+                            <li>Price Output Set – BOGO AA Amount Off</li>
+                            <li>Price View Collection Set – Price Detail – Amount Off</li>
+                            <li>Analysis View Collection Set – Analysis</li>
+                            <li>Is Group Synced – Yes</li>
+                        </ul>
+                    </td>
+                    <td class="TableStyle-standard-BodyD-Column1-Body1">
+                        <ul>
+                            <li>Buy Quantity – Is Buy, Is Get, Is Visible, Is Mandatory</li>
+                            <li>Get Quantity – Is Buy, Is Get, Is Visible, Is Mandatory</li>
+                            <li>BogoDollarDiscount – Is Buy, Is Get, Is Visible, Is Mandatory</li>
+                        </ul>
+                    </td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">
+                        <p>BOGO AB Amount Off</p>
+                    </td>
+                    <td class="TableStyle-standard-BodyE-Column2-Body1">
+                        <ul>
+                            <li>Strategy Type – Buy Get</li>
+                            <li>Calculation Set – BOGO AB Amount Off</li>
+                            <li>Price Output Set – BOGO AB Amount Off</li>
+                            <li>Price View Collection Set – Price Detail – Amount Off</li>
+                            <li>Analysis View Collection Set – Analysis</li>
+                            <li>Is Group Synced – No</li>
+                        </ul>
+                    </td>
+                    <td class="TableStyle-standard-BodyD-Column1-Body1">
+                        <ul>
+                            <li>Buy Quantity – Is Buy, Is Visible, Is Mandatory</li>
+                            <li>Get Quantity – Is Get, Is Visible, Is Mandatory</li>
+                            <li>BogoDollarDiscount – Is Get, Is Visible, Is Mandatory</li>
+                        </ul>
+                    </td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">
+                        <p>BOGO AA Percent Off</p>
+                    </td>
+                    <td class="TableStyle-standard-BodyE-Column2-Body1">
+                        <ul>
+                            <li>Strategy Type – Buy Get</li>
+                            <li>Calculation Set – BOGO AA Percent Off</li>
+                            <li>Price Output Set – BOGO AA Percent Off</li>
+                            <li>Price View Collection Set – Price Detail – Percent Off</li>
+                            <li>Analysis View Collection Set – Analysis</li>
+                            <li>Is Group Synced – Yes</li>
+                        </ul>
+                    </td>
+                    <td class="TableStyle-standard-BodyD-Column1-Body1">
+                        <ul>
+                            <li>Buy Quantity – Is Buy, Is Get, Is Visible, Is Mandatory</li>
+                            <li>Get Quantity – Is Buy, Is Get, Is Visible, Is Mandatory</li>
+                            <li>BogoPercentDiscount – Is Buy, Is Get, Is Visible, Is Mandatory</li>
+                        </ul>
+                    </td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">
+                        <p>BOGO AB Percent Off</p>
+                    </td>
+                    <td class="TableStyle-standard-BodyE-Column2-Body1">
+                        <ul>
+                            <li>Strategy Type – Buy Get</li>
+                            <li>Calculation Set – BOGO AB Percent Off</li>
+                            <li>Price Output Set – BOGO AB Percent Off</li>
+                            <li>Price View Collection Set – Price Detail – Percent Off</li>
+                            <li>Analysis View Collection Set – Analysis</li>
+                            <li>Is Group Synced – No</li>
+                        </ul>
+                    </td>
+                    <td class="TableStyle-standard-BodyD-Column1-Body1">
+                        <ul>
+                            <li>Buy Quantity – Is Buy, Is Visible, Is Mandatory</li>
+                            <li>Get Quantity – Is Get, Is Visible, Is Mandatory</li>
+                            <li>BogoPercentDiscount – Is Get, Is Visible, Is Mandatory</li>
+                        </ul>
+                    </td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">
+                        <p>Spend X Get Amount Discount</p>
+                    </td>
+                    <td class="TableStyle-standard-BodyE-Column2-Body1">
+                        <ul>
+                            <li>Strategy Type – Promoted Discount</li>
+                            <li>Calculation Set – Spend X Get Amount Discount</li>
+                            <li>Price Output Set – Spend X Get Amount Discount</li>
+                            <li>Price View Collection Set – Price Detail – EDLP/Regular Retail</li>
+                            <li>Analysis View Collection Set – Analysis</li>
+                            <li>Is Group Synced – No</li>
+                        </ul>
+                    </td>
+                    <td class="TableStyle-standard-BodyD-Column1-Body1">
+                        <ul>
+                            <li>SpendAmount – Is Get, Is Visible, Is Mandatory</li>
+                            <li>SpendDollarDiscount – Is Get, Is Visible, Is Mandatory</li>
+                            <li>RetailLow – Is Get, Is Visible </li>
+                            <li>RetailHigh – Is Get, Is Visible</li>
+                        </ul>
+                    </td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">
+                        <p>Spend X Get Percent Discount</p>
+                    </td>
+                    <td class="TableStyle-standard-BodyE-Column2-Body1">
+                        <ul>
+                            <li>Strategy Type – Promoted Discount</li>
+                            <li>Calculation Set – Spend X Get Percent Discount</li>
+                            <li>Price Output Set – Spend X Get Percent Discount</li>
+                            <li>Price View Collection Set – Price Detail – EDLP/Regular Retail</li>
+                            <li>Analysis View Collection Set – Analysis</li>
+                            <li>Is Group Synced – No</li>
+                        </ul>
+                    </td>
+                    <td class="TableStyle-standard-BodyD-Column1-Body1">
+                        <ul>
+                            <li>SpendAmount – Is Get, Is Visible, Is Mandatory</li>
+                            <li>SpendPercentDiscount – Is Get, Is Visible, Is Mandatory</li>
+                            <li>RetailLow – Is Get, Is Visible </li>
+                            <li>RetailHigh – Is Get, Is Visible</li>
+                        </ul>
+                    </td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">
+                        <p>Spend X Get Multi Points</p>
+                    </td>
+                    <td class="TableStyle-standard-BodyE-Column2-Body1">
+                        <ul>
+                            <li>Strategy Type – Promoted Price</li>
+                            <li>Calculation Set – Spend X Get Multiply Points</li>
+                            <li>Price Output Set – Spend X Get Multiply Points</li>
+                            <li>Price View Collection Set – Price Detail – EDLP/Regular Retail</li>
+                            <li>Analysis View Collection Set – Analysis</li>
+                            <li>Is Group Synced – No</li>
+                        </ul>
+                    </td>
+                    <td class="TableStyle-standard-BodyD-Column1-Body1">
+                        <ul>
+                            <li>SpendAmount – Is Get, Is Visible, Is Mandatory</li>
+                            <li>GetMultiplyPoints – Is Get, Is Visible, Is Mandatory</li>
+                            <li>RetailLow – Is Get, Is Visible </li>
+                            <li>RetailHigh – Is Get, Is Visible</li>
+                        </ul>
+                    </td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">
+                        <p>Spend X Get Points</p>
+                    </td>
+                    <td class="TableStyle-standard-BodyE-Column2-Body1">
+                        <ul>
+                            <li>Strategy Type – Promoted Price</li>
+                            <li>Calculation Set – Spend X Get Points</li>
+                            <li>Price Output Set – Spend X Get Points</li>
+                            <li>Price View Collection Set – Price Detail – EDLP/Regular Retail</li>
+                            <li>Analysis View Collection Set – Analysis</li>
+                            <li>Is Group Synced – No</li>
+                        </ul>
+                    </td>
+                    <td class="TableStyle-standard-BodyD-Column1-Body1">
+                        <ul>
+                            <li>SpendAmount – Is Get, Is Visible, Is Mandatory</li>
+                            <li>GetAddPoints – Is Get, Is Visible, Is Mandatory</li>
+                            <li>RetailLow – Is Get, Is Visible </li>
+                            <li>RetailHigh – Is Get, Is Visible</li>
+                        </ul>
+                    </td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyB-Column1-Body1">
+                        <p>Spend X Get Gift Card</p>
+                    </td>
+                    <td class="TableStyle-standard-BodyB-Column2-Body1">
+                        <ul>
+                            <li>Strategy Type – Promoted Price</li>
+                            <li>Calculation Set – Spend X Get Gift Card</li>
+                            <li>Price Output Set – Spend X Get Gift Card</li>
+                            <li>Price View Collection Set – Price Detail – EDLP/Regular Retail</li>
+                            <li>Analysis View Collection Set – Analysis</li>
+                            <li>Is Group Synced – No</li>
+                        </ul>
+                    </td>
+                    <td class="TableStyle-standard-BodyA-Column1-Body1">
+                        <ul>
+                            <li>SpendAmount – Is Get, Is Visible, Is Mandatory</li>
+                            <li>GiftCardAmount – Is Get, Is Visible, Is Mandatory</li>
+                            <li>RetailLow – Is Get, Is Visible </li>
+                            <li>RetailHigh – Is Get, Is Visible</li>
+                        </ul>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </body>
+</html>

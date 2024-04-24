@@ -1,0 +1,59 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" xml:lang="en-us">
+    <head>
+        <title>
+        </title>
+    </head>
+    <body>
+        <h1>Creating classification tasks</h1>
+        <p>Classification tasks work in conjunction with policy tasks to set appropriate ordering policies for inventory. New classification tasks can be created or existing tasks cloned.</p>
+        <p> Use the industry best practice settings to set up the base task which can then be cloned and modified or disabled if another task replaces it. </p>
+        <h2>Base tasks and default tasks</h2>
+        <p>A base task is the initial task that must be set up as a part of creating classification tasks, while a default task is set manually by the user to default to a specific task that may or may not be the base task. Base tasks are usually the default tasks, but there can be exceptions depending on how the user wants to set up their classification tasks and which tasks they want to run as a default.</p>
+        <h2>To create a task</h2>
+        <ol>
+            <li>
+                <p>Click <span class="Emphasis">New</span>. </p>
+                <p>The <span class="Emphasis">Add Classification Task</span> screen displays.</p>
+                <p>
+                    <img src="../../Resources/Images/Classification/Add Classification Task.png" class="LargeImages" />
+                </p>
+            </li>
+            <li>On the <span class="Emphasis">General</span> tab, enter a unique name, description, and filter.</li>
+            <li>Select the <span class="Emphasis">Default Task</span> checkbox.</li>
+            <li>
+                <p>Click the <span class="Emphasis">Default Priority</span> tab. </p>
+                <p>
+                    <img src="../../Resources/Images/Classification/Default Task.png" class="LargeImages" />
+                </p>
+            </li>
+            <li>
+                <p>Select the <span class="Emphasis">Calculate Priority Based On Input Values</span> radio button, and:</p>
+                <ul>
+                    <li>enter the number of days in the <span class="Emphasis">Prioritize Based On</span> field.</li>
+                    <li>from the first dropdown menu, select a level.</li>
+                    <li>complete the remaining dropdown fields as required.</li>
+                </ul>
+            </li>
+            <li>In the <span class="Emphasis">Percentage %</span> column, select the appropriate percentages for each priority.
+			<p class="BasicNote">The total must equal 100%.</p></li>
+            <li>
+                <p>Click the <span class="Emphasis">Relative Deviation1</span> tab.</p>
+            </li>
+            <li>
+                <p>Select the <span class="Emphasis">Calculate Relative Deviation Based On Input Values</span> radio button.</p>
+            </li>
+            <li>
+                <p>Add the number of days to the <span class="Emphasis">Determine Relative Deviation Based On</span> field.</p>
+            </li>
+            <li>
+                <p>Select a demand type in the dropdown field. </p>
+            </li>
+            <li>Complete the <span class="Emphasis">Upper Range Value</span> and <span class="Emphasis">Lower Range Value</span> columns as required.
+			<p><img src="../../Resources/Images/Classification/Relative Deviation 1.png" class="LargeImages" /></p></li>
+            <li>
+                <p>Click <span class="Emphasis">Ok</span>. </p>
+            </li>
+        </ol>
+    </body>
+</html>

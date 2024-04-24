@@ -1,0 +1,35 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head />
+    <body>
+        <h1>Distribution center stock splits</h1>
+        <p>Units owned by distribution centers (DC) are rolled into the last actualized period of an active plan and are considered part of total inventory ownership by product/channel hierarchy level. Within each product hierarchy level, available DC stock is split among all relevant site hierarchy levels based either on the plan's supply chain if valid or a generic split.</p>
+        <p>For more information on validating supply chains, see <MadCap:xref href="Validating a Supply Chain.htm">Validating a Supply Chain</MadCap:xref>.</p>
+        <h2>Splits by supply chain</h2>
+        <p>Within each product hierarchy level, available DC stock is split among all relevant site hierarchy levels based on the plan's supply chain, which defines which DCs are sources for which sites. (All sites in the supply chain must have a DC as their primary source. Supply chain overrides are permitted as long as the overriding source is also a DC.)</p>
+        <p> By analyzing the supply chain, the system can  apportion units to each DC according to the anticipated need of the sites they source.  If a plan does not have a valid supply chain, stock is split  among all DCs instead.</p>
+        <h2>Generic stock splits</h2>
+        <p>If a master plan's supply chain is missing or invalid, the stock is split generically among DCs according to the <span class="Emphasis">DC Stock Splits future number of periods</span> system policy. This policy sets the number of periods forward used to calculate the ideal splitting of available inventory among relevant site hierarchy levels. The default setting is 8.</p>
+        <p>The system calculates the relative need of each site hierarchy level by comparing the planned sales units for the number of periods specified in this policy against the planned receipt units for the same number of periods plus the last actualized period’s EOP Units. The available inventory is then split among the relevant site hierarchy levels and the split quantities added to the EOP Units of the last actualized period for each. The split quantities are carried forward into the BOP Units for the following period.</p>
+        <h2>Notes</h2>
+        <ul>
+            <li>For DC stock splitting to occur, the DCs containing the stock to split must be included in the master plan.</li>
+            <li>Stock in DCs that are part of enabled channel levels of the plan will show as part of the stock on hand for those channels. This is recommended for cases where there is a 1-1 mapping between channels and DCs and stock from a single DC will not be shared among multiple channels.</li>
+            <li>
+                <p>DC stock split quantities are displayed in the fields Actual EOP Units Cluster (if the <span class="Emphasis">Inventory Is Shared</span> system policy is set to <span class="Emphasis">False</span>) and <span class="Emphasis">Actual EOP Units DC Split</span>.</p>
+                <p class="BasicNote">The <span class="Emphasis">Inventory Is Shared</span> system policy is used only for legacy cost-based plans and is not used in Hybrid based plans.
+            </p>
+            </li>
+        </ul>
+        <ul>
+            <li>DC stock is stored against the master plan and split from there, ensuring that stock is not double-counted in branch plans beneath.</li>
+            <li>DC stock splits are recalculated dynamically, either when daily maintenance procedures run, or when changes to Sales Units or Receipt Units are saved in any periods specified by the system policy.</li>
+            <li>
+                <p>Because it is possible for multiple versions of branch plans for the same product/channel levels to exist (upside, downside, and flat scenario plans, for example), if all channels sharing the DC stock for a given product level are not present in a branch, the system will use the planned values from the channels present in the branch and the master plan values for the same periods for the channels not present in the branch to determine DC stock splits in each branch. This is because, if multiple branch versions exist, it is not possible for the system to determine which one to use in the calculation of relative need by channel.</p>
+                <p class="BasicNote">Where multiple branch plans exist for the same product level but different channel levels, it is possible that DC stock splits for those branches will recalculate when branches are merged into the master plan, necessitating review of the receipt plans in each branch.
+            </p>
+                <p>In this scenario, it is recommended to have a “master branch” containing all product and channel levels so that branches can be merged into it and reviewed/adjusted at aggregate levels prior to merging into the master plan.</p>
+            </li>
+        </ul>
+    </body>
+</html>

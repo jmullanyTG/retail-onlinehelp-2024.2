@@ -1,0 +1,47 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head><title></title>
+    </head>
+    <body>
+        <h1>Forecasting Overview</h1>
+        <p>Inventory forecasting is the driving force behind inventory planning. It uncovers the true amounts that must be replenished while taking into account holidays, seasons, promotions and all those things that make it impossible to just order a flat quantity of products each month.</p>
+        <p>Poor forecasting outcomes like overstocks, product obsolescence and lost sales can be avoided with smarter forecasts that represent true demand.</p>
+        <h2>Forecast features</h2>
+        <p> Demand forecasts can account for trends and seasonality, lost sales, promotions, and more to help provide the most accurate forecasting possible.</p>
+        <h3>Trends and seasonality</h3>
+        <p>Demand forecasting logic separates trends from seasonality to provide a clear picture of the selling curve for a specific period of time, product, and location.</p>
+        <p>Seasonality is identified by uncovering year-over-year recurring patterns in demand history that are visible in either weekly or monthly periods. This helps  correctly forecast future demand for products depending on whether they are in or out of season. This also makes it easy to phase inventory in and out for holidays or seasons without losing substantial margins.</p>
+        <p>After these seasonal variations are accounted for, they are removed to uncover actual demand trends. This prevents misinterpreting seasonal increases or decreases as growth or decay.</p>
+        <h3>Lost sales</h3>
+        <p>True demand history as well as sales history is needed for the most effective demand forecasting. True demand history includes periods of insufficient stock, which are then used to calculate lost sales. This gives the full picture of what sales might have been and if there would have been enough of the products in stock.</p>
+        <h3>Promotions</h3>
+        <p>Historical periods where promotions occurred can be flagged. The lift impact caused by the promotion is calculated and  the forecast for those future periods automatically adjusted where it is planned to run the promotion again.</p>
+        <h3>Manual adjustments</h3>
+        <p>There are occasions where manual adjustments need to be made  to forecasts, such as an upcoming price change or a future business expansion. Manual history and forecast adjustments can be made for situations like this. Information can also be overridden. </p>
+        <h3>Shape Forecasting</h3>
+        <p>With shape forecasting, select a pre-selected curve to apply to an item's moving-average sales history. The forecasting engine then generates a moving-average based, seasonal demand forecast for that item. For more information, see <MadCap:xref href="Shape Forecasting.htm">Defining the curve used for shape forecasting</MadCap:xref>.</p>
+        <h2>Forecast methodology</h2>
+        <p>Sophisticated and proprietary modeling algorithms generate forecasts based on true demand history. A Tournament of Best Fit decides which forecasting algorithm is the most accurate.</p>
+        <p>In the forecast tournament, 14 world-class forecasting methods compete against each other to determine which method must be used for a particular product. Each model is back-casted and compared against actual demand, which is computed by the Forecast Method Fit – a measure of forecast accuracy using Mean Absolute Percent Error (MAPE). The model with the best method fit wins and is used to forecast.</p>
+        <h2>Forecast levels</h2>
+        <p>There are different levels at which to generate a demand forecast.</p>
+        <h3>Inventory level forecasting</h3>
+        <p>An inventory forecast creates a demand forecast at the inventory level (item at site, or SKU/location).</p>
+        <h3>Level forecasting</h3>
+        <p>A level forecast creates a demand forecast for a specified level in the product or location hierarchy.</p>
+        <h3>Aggregate level forecasting</h3>
+        <p>Aggregate level forecasts creates a demand forecast across all sites in the company. There are many advantages for aggregate level forecasting of certain items. Aggregate forecasts can be used to give a better forecast for items with intermittent sales, or gain a more holistic view of the item’s impact across the entirety of the organization.</p>
+        <p>To generate an appropriate replenishment quantity at the inventory level, the aggregate forecast is pushed down to the inventory level based on specific split factors. These split factors are produced based on the inventory level forecast quantities or in certain situations custom specified split factors.</p>
+        <h3>Group forecasting</h3>
+        <p>With group forecasting, groups of hierarchically-related items can be built  and demand forecasts created for those groups.</p>
+        <h2>Automated and ad-hoc forecasting</h2>
+        <p>Demand forecasts are updated  automatically as part of scheduled tasks, so inventory planning is always up-to-date with the latest forecasts. For convenience, forecasts can be generated and updated manually from within the application.</p>
+        <h2>Forecast visibility</h2>
+        <p>Because they play such a large role in a company’s success, it is important to ensure demand forecasts are visible to all parts of the organization. Forecasts are visible from multiple locations within the application, including:</p>
+        <ul>
+            <li><span class="Emphasis">Forecasts and Group Forecast</span>: create, view, and edit forecasts here.</li>
+            <li><span class="Emphasis">Inventory Manager</span>: view an item’s demand forecast alongside other relevant parameters.</li>
+            <li><span class="Emphasis">Order Manager</span>:  view the demand forecast that drove a specific order.</li>
+        </ul>
+    </body>
+</html>

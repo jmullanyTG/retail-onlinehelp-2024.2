@@ -1,0 +1,361 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" xml:lang="en-us">
+    <head>
+        <link href="../../Resources/TableStyles/standard.css" rel="stylesheet" MadCap:stylesheetType="table" /><title></title>
+    </head>
+    <body>
+        <h1>Working with order documents </h1>
+        <p>The majority of work in Order Manager occurs in the Order Document viewing area to the right of the Navigation pane. This area is usually blank when initially accessing Order Manager. The exceptions being:</p>
+        <ul>
+            <li>
+                <p> an order was opened after it was created using the <span class="Emphasis">Create Commitments</span> option in the <span class="Emphasis">Receipt Plan</span> view, or</p>
+            </li>
+            <li>
+                <p> the user clicked a link to a specific order in the <span class="Emphasis">Assortment Upcoming Commitments Dashboard</span>.</p>
+            </li>
+        </ul>
+        <p>Double-clicking an order line in the order document displays the same information found in Inventory Manager.</p>
+        <p class="BasicNote">User Rights control access to Order Manager and all the functionality within Order Manager. For a listing of the Order Manager User Rights, <MadCap:conditionalText MadCap:conditions="General.ScreenOnly">see <MadCap:xref href="../Users/Order Manager User Rights.htm">Order Manager User Rights</MadCap:xref>.</MadCap:conditionalText><MadCap:conditionalText MadCap:conditions="General.PrintOnly">refer to the online help.</MadCap:conditionalText></p>
+        <h2>Viewing an order document</h2>
+        <p>Double click an order document in the Navigation pane to display the order document as a separate tab. </p>
+        <p>
+            <img src="../../Resources/Images/Order Manager/View Order Document.png" class="LargeImages" />
+        </p>
+        <h2>Displaying or hiding the Column View name in a document’s caption
+
+</h2>
+        <p>A system policy labeled<span class="Emphasis"> Remove Column View Name from Document Caption</span> lets users stop the Column View name from being appended to the document name in the document’s caption. As the Column View name is important, the name is shown as a Tooltip when the system policy is set to <span class="Emphasis">True</span>.</p>
+        <h2>Limiting the total number of columns in order documents</h2>
+        <p>Order documents have a configured default column count. In addition to the default number of columns, users can add additional columns to their order documents. However, documents may become unusable if there are too many columns. To prevent this, system policy <span class="Emphasis">Column Max</span> allows for limiting the total number of columns  that can be included in an order document. </p>
+        <p>For example, if <span class="Emphasis">Column Max</span> is set to 100 (the default), then users can have a maximum of 100 columns beyond the default column count.</p>
+        <p>If using the <span class="Emphasis">Choose Fields</span> dialog to add columns to a document results:</p>
+        <ul>
+            <li>
+                <p>in a total of 100 or fewer columns then there is no change in existing behavior and all columns display.</p>
+            </li>
+            <li>
+                <p>in more than 100 columns then the following message is generated. (The number in the bracket is the total number of columns that can be included in the order document.)</p>
+                <p>
+                    <img src="../../Resources/Images/Order Manager/Columns Exceeded Warning Message.JPG" class="LargeImages" />
+                </p>
+                <p>Clicking <span class="Emphasis">OK</span> cancels the operation and no extra columns are added. Users can retry and choose fewer additional columns.</p>
+            </li>
+        </ul>
+        <table style="mc-table-style: url('../../Resources/TableStyles/standard.css');margin-left: 0;margin-right: auto;" class="TableStyle-standard" cellspacing="0">
+            <col class="TableStyle-standard-Column-Column1" style="width: 20%;" />
+            <col class="TableStyle-standard-Column-Column2" style="width: 80%;" />
+            <thead>
+                <tr class="TableStyle-standard-Head-Header1">
+                    <th class="TableStyle-standard-HeadE-Column1-Header1">System Policy</th>
+                    <th class="TableStyle-standard-HeadD-Column2-Header1">Description</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyB-Column1-Body1">Column Max</td>
+                    <td class="TableStyle-standard-BodyA-Column2-Body1">(Default 100) This policy limits the number of additional columns in an Order Manager document. Only applies for the number of columns beyond the configured default column count. This prevents the document becoming unusable through having too many default  columns.                        </td>
+                </tr>
+            </tbody>
+        </table>
+        <h2>Order header functionality</h2>
+        <h3>Edit</h3>
+        <p>Launches the <span class="Emphasis">Update Order Header</span> dialog in which users can change the workflow (given sufficient permissions), name, description, and security settings for an order document.</p>
+        <p>
+            <img src="../../Resources/Images/Order Manager/Update Order Header dialog.png" class="LargeImages" />
+        </p>
+        <h3>Delete</h3>
+        <p>Launches a dialog asking the user for confirmation to delete the active order document.</p>
+        <p>
+            <img src="../../Resources/Images/Order Manager/Delete Dialog.png" class="LargeImages" />
+        </p>
+        <h3>Narrative</h3>
+        <p>Launches the <span class="Emphasis">Narrative</span> dialog displaying the history of document status changes for the order document. The User ID of the user who adds a note displays in the <span class="Emphasis">Modified User</span> field.</p>
+        <p class="BasicNote">The user right <span class="Emphasis">Allow user visibility of order manager document when participating in order narrative stack</span> is required to view order manager documents within the narrative.</p>
+        <p>
+            <img src="../../Resources/Images/Order Manager/Narrative dialog.png" class="LargeImages" />
+            <p>Selecting the <span class="Emphasis">Redacted</span> checkbox allows the user who added the note to hide it from viewing for other users. </p>
+            <ul>
+                <li><span class="Emphasis">Order</span>: Indicates the order in which the status changes in the narrative occurred.</li>
+                <li>status fields: The date the order document moved to the status indicated, status description, and the user ID of the user owning the document after the status change occurred.</li>
+            </ul>
+        </p>
+        <h3>Add Note</h3>
+        <p>Launches the <span class="Emphasis">Add Order Note</span> dialog, allowing users to add standalone note entries to the order document narrative.</p>
+        <p>
+            <img src="../../Resources/Images/Order Manager/Add Order Note.png" class="LargeImages" />
+        </p>
+        <p class="BasicNote">Sets the text for the note to include in the narrative entry.</p>
+        <h3>Pre-Authorize</h3>
+        <p>Launches the <span class="Emphasis">Pre-Authorize Order</span> dialog if allowed by the workflow permissions assigned to the order document. Otherwise, disabled or hidden. Authorizes the order only within the context of ToolsGroup JustEnough, it does not forward the order on to the host system or system of record. </p>
+        <p>Therefore, it logically partitions the stock separated out as if it has been already authorized but it does not trigger the communication to actually action the order. This communication only happens when the order is actually authorized.</p>
+        <p>Users can pre-authorize an order and then return later and decide whether to continue with the order or not.</p>
+        <p>
+            <img src="../../Resources/Images/Order Manager/Pre-Authorize Order.png" class="LargeImages" />
+        </p>
+        <p>Selecting <span class="Emphasis">Ok</span> updates the document status to Pre-Authorized, locking it for editing, and adds a corresponding entry to the order document narrative.</p>
+        <h3>Authorize</h3>
+        <p>Launches the <span class="Emphasis">Authorize Order</span> dialog if allowed by the workflow permissions assigned to the order document. Otherwise, disabled or hidden. Same as the <span class="Emphasis">Pre-Authorize</span> dialog, except clicking <span class="Emphasis">Ok</span> updates the document status to Authorized. </p>
+        <p>
+            <img src="../../Resources/Images/Order Manager/Authorize Order.png" class="LargeImages" />
+        </p>
+        <p class="BasicNote">Authorized orders are uploaded to external systems per the upload schedule defined during software implementation.</p>
+        <h3>Forward</h3>
+        <p>Launches the <span class="Emphasis">Forward Order</span> dialog. Relates to structured workflows where an approval from other parties is required. The other parties can forward the order.</p>
+        <p>
+            <img src="../../Resources/Images/Order Manager/Forward Order.PNG" class="LargeImages" />
+        </p>
+        <ul>
+            <li><span class="Emphasis">Forward To</span>: Selects the User ID of the person to whom the order document will be forwarded.
+            </li>
+            <li><span class="Emphasis">Cancel</span>: Closes the dialog without forwarding the order document.</li>
+            <li><span class="Emphasis">Ok</span>: Updates the document status to Forwarded, and adds a corresponding entry to the order document narrative.</li>
+        </ul>
+        <h3>Retract</h3>
+        <p>Launches the <span class="Emphasis">Retract Order</span> dialog if allowed by the workflow permissions assigned to the order document. Otherwise, disabled or hidden. Allows users to bring back an order they forwarded and either edit or delete the order. However,  the original user cannot retract the order if the order has been forwarded on by the next party.</p>
+        <p>
+            <img src="../../Resources/Images/Order Manager/Retract Order.png" class="LargeImages" />
+        </p>
+        <p>Clicking <span class="Emphasis">Ok</span> updates the document status to what it was prior to being forwarded and adds a corresponding entry to the order document narrative.</p>
+        <h3>Reject</h3>
+        <p>Launches the <span class="Emphasis">Reject Order</span> dialog if allowed by the workflow permissions assigned to the order document. Otherwise, disabled or hidden. This allows a user to reject an order document that has been forwarded to them with a note explaining why. </p>
+        <p>
+            <img src="../../Resources/Images/Order Manager/Reject Order.png" class="LargeImages" />
+        </p>
+        <p>Clicking <span class="Emphasis">Ok</span> updates the document status to what it was prior to being forwarded and adds a corresponding entry to the order document narrative.</p>
+        <h3>Status &gt; Edit (Assortment Plan Commitment order type only)</h3>
+        <p>Launches the <span class="Emphasis">Commitment Status</span> dialog. Users can change the current order status using the available options as defined in the workflow assigned to the order document.</p>
+        <p>
+            <img src="../../Resources/Images/Order Manager/Commitment Status.png" class="LargeImages" />
+        </p>
+        <h2>Grid button</h2>
+        <p>Shows (default) or hides the Grid view (order lines view) in the order document viewing area.</p>
+        <p class="BasicNote">Grid view is locked to show unless the Details view is also showing, in which case it can be hidden.</p>
+        <h2>Details button</h2>
+        <p>Shows or hides (default) the Details view in the order document viewing area. The Details view displays the same information found in Inventory Manager.</p>
+        <h3>Orders generated in Assortment Planning</h3>
+        <p>For orders generated in Assortment Planning, the Details view contains the Break By Size and Prepack views.</p>
+        <p>
+            <img src="../../Resources/Images/Order Manager/Details button.png" class="LargeImages" />
+        </p>
+        <p>
+            <MadCap:conditionalText MadCap:conditions="General.PrintOnly">For more information, refer to the Assortment Planning User Guide.</MadCap:conditionalText>
+        </p>
+        <p MadCap:conditions="General.ScreenOnly">For more information, see:</p>
+        <ul MadCap:conditions="General.ScreenOnly">
+            <li>
+                <MadCap:xref href="../Assortment Planning/Order Document Details Break By Size.htm">Order Document Details – Break By Size </MadCap:xref>
+            </li>
+            <li>
+                <MadCap:xref href="../Assortment Planning/Order Document Details Prepack.htm">Order Document Details – Prepack </MadCap:xref>
+            </li>
+        </ul>
+        <h2>Refresh button</h2>
+        <p>Refreshes the order document Grid view.</p>
+        <h2>Grid parameters</h2>
+        <p><span class="Emphasis">Name</span>: The order document name.</p>
+        <p><span class="Emphasis">Description</span>: The order document description.</p>
+        <ul>
+            <li>
+                <img src="../../Resources/Images/Order Manager/Description Present Icon.png" class="IconInline" /> Indicates there is a description present for the order document</li>
+            <li>
+                <img src="../../Resources/Images/Order Manager/Description Not Present.png" class="IconInline" /> Indicates no description is present for the order document</li>
+        </ul>
+        <p><span class="Emphasis">Workflow</span>: The workflow currently assigned to the order document.</p>
+        <p><span class="Emphasis">Status</span>: The current workflow status for the order document.</p>
+        <p><span class="Emphasis">Source</span>: The order document type (always <span class="Emphasis">Assortment Plan Commitment</span> for order documents created from assortment plans).</p>
+        <p><span class="Emphasis">Owner</span>: The User ID of the user who created the order document.</p>
+        <p><span class="Emphasis">Security</span>: The security setting for the order document.</p>
+        <h2>Grid functionality</h2>
+        <p><span class="Emphasis">Save</span>: Saves changes made to the order document in the Grid view since the last time it was saved.</p>
+        <p><span class="Emphasis">Undo</span>: Reverses any changes made to the order document in Grid view since the last time it was saved.</p>
+        <h3>Columns</h3>
+        <p><span class="Emphasis">Choose</span>: Launches the <span class="Emphasis">Choose Fields</span> dialog in which users can select and include additional columns to provide more information on the items in a given order.</p>
+        <p><span class="Emphasis">Calculated</span>: Launches the <span class="Emphasis">Create Calculated Column</span> dialog.</p>
+        <p>
+            <img src="../../Resources/Images/Order Manager/Create Calculated Column.png" class="LargeImages" />
+        </p>
+        <ul>
+            <li><span class="Emphasis">Column Name</span>: Sets a name for the new calculated column</li>
+            <li><span class="Emphasis">Column Type</span>: Selects the data type for the new calculated column<ul><li><span class="Emphasis">Integer</span>: use for data that will consist only of whole numbers</li><li><span class="Emphasis">Decimal</span>: use for data that requires decimal precision</li><li><span class="Emphasis">DateTime</span>: use for data that specifies, dates, times, or both</li><li><span class="Emphasis">String</span>: use for data that will be formatted and treated as text only</li><li><span class="Emphasis">Boolean</span>: use for binary (true/false) data</li></ul></li>
+            <li>
+                <p><span class="Emphasis">Format String</span>: Specifies the way data in the new calculated field is to be formatted. </p>
+                <p class="Example">Entering #,###.00 yields numeric values with commas every three places to the left of the decimal and rounds to a static two decimal places to the right of the decimal. <span class="Emphasis">1000.9</span> would be formatted <span class="Emphasis">1,000.90</span> and <span class="Emphasis">10.891</span> would be formatted <span class="Emphasis">10.89</span>. A format string of 0,000.00 instead yields <span class="Emphasis">0010.89</span>. </p>
+                <p>Entering mm/dd/yyyy yields date values with two digits for month and day and four digits for year, with month, day, and year separated by slashes (11/19/2021 for example).</p>
+                <p>
+                    <img src="../../Resources/Images/Order Manager/Expression Editor.png" class="LargeImages" />
+                </p>
+            </li>
+        </ul>
+        <p>The <span class="Emphasis">Expression Editor</span> is used to write custom expressions with which to populate new calculated columns. </p>
+        <h3>Order line</h3>
+        <p class="BasicNote">To select multiple order lines, use <span class="Emphasis">CTRL + Click</span> or <span class="Emphasis">Shift + Click</span>. </p>
+        <h3>Add (Not applicable to the Assortment Plan Commitment order type) </h3>
+        <p>Adds order lines based on an inventory filter (Item code by site code). </p>
+        <p>Order lines are returned even if they have zero orders as long as they are contained within the filter. Once order lines with zero orders are returned, then users can put in an order quantity. This can be useful if a user wants to structure the document to include what’s necessary based on the requirements of a vendor, an ERP, or a WHMS. </p>
+        <h3>Copy</h3>
+        <p>Launches the <span class="Emphasis">Copy</span> dialog allowing users to copy selected order lines to another order document in the same workflow. Only highlighted order lines are copied. Copied order lines are not deleted from the original document. Therefore, the order lines will be in the system twice. In this case, there is the possibility that both lines will be approved and transmitted. </p>
+        <p>Users can create a brand new order document as the target order document using the <span class="Emphasis">Copy</span> dialog. </p>
+        <p>
+            <img src="../../Resources/Images/Order Manager/Copy dialog.png" class="LargeImages" />
+        </p>
+        <h2>To create a new order:</h2>
+        <ol>
+            <li>
+                <p>Leave <span class="Emphasis">&lt;Create New Order&gt;</span> as the selection in the <span class="Emphasis">Copy To</span> field. The <span class="Emphasis">Add Ad Hoc Order</span> dialog displays.</p>
+            </li>
+            <li>Complete the fields as required.</li>
+            <li>
+                <p>Click <span class="Emphasis">Ok</span>. The new order document is added to the user’s workspace in the <span class="Emphasis">Navigation</span> pane and also displays as a separate tab.</p>
+            </li>
+        </ol>
+        <h3>Move</h3>
+        <p>Launches the <span class="Emphasis">Move</span> dialog allowing users to move selected order lines from the current order document to another order document. This function is essentially the same as cutting and pasting the order lines. The order lines are removed from the original order document and added to another document.</p>
+        <p>
+            <img src="../../Resources/Images/Order Manager/Move dialog.png" class="LargeImages" />
+        </p>
+        <p>The workflow for creating a new order document is the same for both <span class="Emphasis">Copy</span> and <span class="Emphasis">Move</span>. </p>
+        <p class="Important">If a user plans on executing an order, then they should only use the <span class="Emphasis">Move</span> function. Otherwise, there is the risk of running some lines twice.</p>
+        <p class="p"><span class="Emphasis">Copy + Authorize</span> and <span class="Emphasis">Move + Authorize</span></p>
+        <p class="p">These are single actions that accomplish repetitive actions. Highlighted selections are automatically copied or moved and then authorized. </p>
+        <h3>Delete</h3>
+        <p>Deletes the selected order lines. This removes the order line from the order document. However, the order line still exists in the recommendation and can be refreshed, it just is not in the context of the order document anymore. The order line can be re-added using the filter. </p>
+        <p class="Important">The system does not ask for confirmation prior to deleting the order lines. However, this action can be reversed with the <span class="Emphasis">Undo</span> button.</p>
+        <h3>Merge, Unmerge: (Assortment Plan Commitment order type only.) </h3>
+        <p>Merges two or more order lines that share the same variant into a single line. Merged lines can be unmerged.</p>
+        <h3>CheckBox Mode</h3>
+        <p>Toggles between displaying or hiding a checkbox. This mode requires the user to check individual order lines. Only selected lines are actioned.</p>
+        <h3>Grid right-click menu options</h3>
+        <p>The grid right-click menu options include:</p>
+        <p><span class="Emphasis">Export</span>: Exports grid data to a file in the selected format.</p>
+        <p><span class="Emphasis">Export Options</span>: Sets text export options (Value or Display Text).</p>
+        <p><span class="Emphasis">Import Excel Data</span>: Allows users to import data directly from MS&#160;Excel spreadsheets. A confirmation dialog indicates how many rows were updated. For more information, see <MadCap:xref href="Importing data.htm">Importing data from spreadsheets</MadCap:xref>.</p>
+        <h2>Grid fields</h2>
+        <p>The columns and labels that appear depends on the order document type selected. The columns that display or can be added are a subset of all the fields available in the Inventory metadata (fields can be added or removed using the <span class="Emphasis">Choose</span> function). </p>
+        <h3>Fields prefixed with user and fields prefixed with Recommended</h3>
+        <p>The grid will contain two similar groups of fields: one group with a prefix of <span class="Emphasis">User</span> and one group with a prefix of <span class="Emphasis">Recommended</span>.</p>
+        <p>Fields prefixed with <span class="Emphasis">Recommended</span> are system generated and read-only. Fields prefixed with <span class="Emphasis">User</span> are editable and over-write the system generated equivalent (these fields are read-only for pre-authorized and authorized order documents).</p>
+        <p>For example, <span class="Emphasis">Recommended Source Site</span> and <span class="Emphasis">User Source Site</span>. The <span class="Emphasis">Recommended Source Site</span> field is populated with <span class="Emphasis">DC - US East</span>. Users can choose a different source site by entering it in the <span class="Emphasis">User Source Site</span> field.</p>
+        <h3>Constraints</h3>
+        <p>If constraints have been added, users can run an order constraint macro that will enforce the constraint. </p>
+        <p>
+            <img src="../../Resources/Images/Order Manager/Order Manager Constraint Macro.PNG" class="LargeImages" />
+        </p>
+        <p>For example, a user’s budget is $15,000 and the sum of the <span class="Emphasis">User Order Cost Value</span> is $16,000. In this case, the user can run a pre-configured constraint macro to reduce the cost value and stay under $15,000.</p>
+        <p>
+            <MadCap:conditionalText MadCap:conditions="General.ScreenOnly">For more information, see <MadCap:xref href="../Ordering Constraints/Ordering Constraints Overview.htm">Ordering Constraints Overview</MadCap:xref>.</MadCap:conditionalText>
+            <MadCap:conditionalText MadCap:conditions="General.PrintOnly">For more information, refer to the Ordering Constraints User Guide.</MadCap:conditionalText>
+        </p>
+        <h4>Reviewing whether inventory orders meet constraints</h4>
+        <p>The <span class="Emphasis">Constrained Status</span> metric identifies those orders that did not meet a constraint. There are three possible statuses based on applied constraints:</p>
+        <ul>
+            <li>Failure</li>
+            <li>No Constraint</li>
+            <li>Success</li>
+        </ul>
+        <h3>Field descriptions</h3>
+        <p>For information on particular fields, see:</p>
+        <ul>
+            <li>
+                <MadCap:xref href="../Views/Analyzing Anomalous Sales.htm">Analyzing Irregular Sales History</MadCap:xref>
+            </li>
+            <li>
+                <MadCap:xref href="../Inventory Forecasts/Forecast Exceptions Overview.htm">Forecast Exceptions Overview</MadCap:xref>
+            </li>
+            <li>
+                <MadCap:xref href="../Inventory Manager/Inventory Manager Fields.htm">Inventory Manager Fields Reference</MadCap:xref>
+            </li>
+            <li>
+                <MadCap:xref href="../Inventory Manager/Level Forecast Exceptions Metrics.htm">Level Forecast Exceptions Metrics</MadCap:xref>
+            </li>
+            <li>
+                <MadCap:xref href="../Site Manager/Assigning Schedules to Sites.htm">Shipping and Receiving Schedules</MadCap:xref>
+            </li>
+        </ul>
+        <ul MadCap:conditions="General.DoNotPublish">
+            <li>
+                <p><span class="Emphasis">Code</span>, <span class="Emphasis">Description</span>: The code and description for the order line. The label is prefixed with: </p>
+                <ul>
+                    <li>Variant for Assortment Plan Commitment order types</li>
+                    <li>Item for inventory order types</li>
+                </ul>
+            </li>
+            <li><span class="Emphasis">Color Code</span>: The color code for the variant.</li>
+            <li><span class="Emphasis">Color Description</span>: The color description for the variant.</li>
+            <li><span class="Emphasis">Cluster Name</span>: The cluster name the order line was generated for. Only applicable for commitment orders generated from Receipt Plan view in Assortment Planning.</li>
+            <li><span class="Emphasis">Cluster Description</span>: The cluster description the order line was generated for. Only applicable for commitment orders generated from Receipt Plan view in Assortment Planning.</li>
+            <li><span class="Emphasis">Cluster Set Name</span>: The Cluster Set Name.</li>
+            <li><span class="Emphasis">Cluster Name</span>: The Cluster Name.</li>
+            <li><span class="Emphasis">Grouping Identifier</span>: Allows the user to enter text to create ad hoc pre-pack groups for variants contained in order lines allowing for prepacks that span more than one variant to be created. Used only in the Prepack tab of the Details view.</li>
+            <li><span class="Emphasis">User Order Date</span>: The order date for the line. Defaults to the date the order was generated.</li>
+            <li><span class="Emphasis">User Ship Date</span>: Allows user to manually enter shipping dates communicated from suppliers if systemic transfer of shipping dates is not possible. Defaults to the User Order Date.</li>
+            <li><span class="Emphasis">User Delivery Date</span>: The target receipt date for the order line. Defaults to the Sunday of the receipt period defined in Assortment Planning.</li>
+            <li>
+                <p><span class="Emphasis">User Order Quantity</span>: The total order quantity in units for the order line. Defaults to the receipt units quantity for the corresponding receipt period in Assortment Planning.</p>
+                <p class="BasicNote">Orders generated from Receipt Plan view have order lines by Cluster in which case the order quantities are specific to the corresponding receipt units quantity for the cluster specified by the order line. Orders generated from within Order Manager are consolidated by variant by default but can be unmerged into their cluster/order line counterparts.</p>
+            </li>
+            <li>
+                <p><span class="Emphasis">User Cost Price</span>: The cost price per unit for the order line. Defaults to the receipt AUC for the corresponding receipt quantity and period in Assortment Planning. </p>
+                <p class="BasicNote">Orders generated from within Order Manager that represent multiple cluster level orders with differing AUC values display a weighted average in this field.</p>
+            </li>
+            <li><span class="Emphasis">User Order Cost Value</span>: The total cost for the order line (calculated as User Order Quantity * User Cost Price).</li>
+            <li><span class="Emphasis">Effective Order Date</span>: The date the order is confirmed received by external systems or the User Order Date if no confirmation has been received.</li>
+            <li><span class="Emphasis">Effective Ship Date</span>: The most current ship date information sent by external systems.</li>
+            <li><span class="Emphasis">Effective Delivery Date</span>: The most current delivery date information sent by external systems.</li>
+            <li><span class="Emphasis">Effective Order Quantity</span>: The most current order quantity information sent by external systems.</li>
+            <li><span class="Emphasis">Effective Cost Price</span>: The most current order cost per unit information sent by external systems.</li>
+            <li><span class="Emphasis">Effective Order Cost Value</span>: The most current total cost for the order line (calculated as Effective Order Quantity * Effective Cost Price).</li>
+        </ul>
+        <h2>Viewing roll-ups and grand totals using a pivot grid</h2>
+        <p>
+            <p>Click the <span class="Emphasis">Pivot</span> button to replace the grid view with a pivot grid. The pivot grid allows users to viewing roll-ups and grand totals. If viewing the pivot grid, then click the <span class="Emphasis">Pivot</span> button to see the grid view.</p>
+            <p>
+                <img src="../../Resources/Images/Order Manager/Pivot Grid view.png" class="LargeImages" />
+            </p>
+        </p>
+        <h2>Grouping order lines by metadata</h2>
+        <p>Click and drag columns to the area above the column headers to group by any column in the order document grid view.</p>
+        <p>
+            <img src="../../Resources/Images/Order Manager/Grouping by columns.png" class="LargeImages" />
+        </p>
+        <p>When grouping by columns, the order lines below are arranged into expandable sections for easier viewing:</p>
+        <p>
+            <img src="../../Resources/Images/Order Manager/Grouped columns arranged.png" class="LargeImages" />
+        </p>
+        <h2>Adding or removing columns</h2>
+        <p>To add or remove columns from the grid, right click on any column header and select <span class="Emphasis">Column Chooser</span> from the context menu.</p>
+        <p>
+            <img src="../../Resources/Images/Order Manager/Adding or removing columns.png" class="LargeImages" />
+        </p>
+        <p>This launches the <span class="Emphasis">Customization</span> dialog.</p>
+        <p>
+            <img src="../../Resources/Images/Order Manager/Customization.png" class="LargeImages" />
+        </p>
+        <p>Drag and drop the column headers from the dialog to the desired locations in the grid to add them to the view.</p>
+        <p>
+            <img src="../../Resources/Images/Order Manager/Drag and drop columns.png" class="LargeImages" />
+        </p>
+        <p>To remove columns, drag the column headers to the <span class="Emphasis">Customization</span> dialog or right-click the column header and select <span class="Emphasis">Hide Column</span>.</p>
+        <p>Columns can also be reordered within the grid by dragging them to the desired location</p>
+        <h2>Closing and floating tabs</h2>
+        <p>The following right-click options are available on tabs:</p>
+        <ul>
+            <li><span class="Emphasis">Close</span>: Closes the order document</li>
+            <li><span class="Emphasis">Close All But This</span>: Closes all open order documents except the one right-clicked (only available when multiple documents are open)</li>
+            <li><span class="Emphasis">Float</span>: Converts the document tab to a window that can be sized and positioned on the screen (or other screens, in multiple monitor configurations)</li>
+            <li><span class="Emphasis">Viewing Order Documents</span>
+            </li>
+        </ul>
+        <p class="BasicNote">Floating can also be achieved by clicking and dragging the document header without right-clicking and selecting <span class="Emphasis">Float</span>. After floating, click the document header and drag the document to the desired location. Right click the document header and click <span class="Emphasis">Dock as Tabbed Document</span> to return the document to its tabbed position. Hover over the directional buttons of the positioning reticle that appears while dragging to see possible docked locations for the floated window.</p>
+        <p>
+            <img src="../../Resources/Images/Order Manager/Float Tab.png" class="LargeImages" />
+        </p>
+        <p><span class="Emphasis">New Vertical Tab Group</span>: Configures all documents currently being viewed vertically side by side. After clicking this option, right click the document header again and select Move to Previous Tab Group to return to the last screen configuration.</p>
+        <p>
+            <img src="../../Resources/Images/Order Manager/New Vertical Tab Group.png" class="LargeImages" />
+        </p>
+        <p><span class="Emphasis">New Horizontal Tab Group</span>: Configures all documents currently being viewed horizontally stacked. After clicking this option, right click the document header again and select Move to Previous Tab Group to return to the last screen configuration.</p>
+        <p>
+            <img src="../../Resources/Images/Order Manager/New Horizontal Tab Group.png" class="LargeImages" />
+        </p>
+    </body>
+</html>

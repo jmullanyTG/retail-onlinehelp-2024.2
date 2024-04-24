@@ -1,0 +1,31 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head>
+    </head>
+    <body>
+        <h1>Configuring sub-clusters</h1>
+        <MadCap:snippetBlock src="../../Resources/Snippets/Sub-Clusters.flsnp" />
+        <p>
+            <img src="../../Resources/Images/Cluster Site Manager/Update Cluster Set with Sub Cluster.png" class="LargeImages" />
+        </p>
+        <p>After configuring the Cluster Set or editing an existing Cluster to add a Sub-Cluster, click <span class="Emphasis">Calculate</span> on the <span class="Emphasis">Cluster Set</span> toolbar to display the Sub-Cluster details in the grid.</p>
+        <p>
+            <img src="../../Resources/Images/Cluster Site Manager/Sub Clusters.png" class="LargeImages">
+            </img>
+        </p>
+        <p>The Sub-Cluster comes into effect when a snapshot is created. If an attempt is made to create a snapshot but Sites within the Sub-Cluster have no attribute setting, an error displays requesting classifications for each site. </p>
+        <p>
+            <img src="../../Resources/Images/Cluster Site Manager/Sub Cluster with Snapshot.PNG" class="LargeImages" />
+        </p>
+        <h2>Adding Sub-Clusters to Cluster Sets already in use in AP</h2>
+        <p> It is possible to have regular Cluster Sets in the Plan as well, but these will appear as overlapping Cluster Sets. Users cannot assign a Placeholder to both the Cluster AND the specific Sub-Clusters.</p>
+        <p class="Important">However, there is a very important provision. USERS MUST NOT ADD A SUB-CLUSTER TO A CLUSTER SET ALREADY IN USE IN AP.</p>
+        <p>  When the Cluster Set is recalculated with new Clusters (the Sub-Clusters being considered new clusters), and the new Clusters are snapshotted, then AP can no longer reference the old assortments to the non-attribute-based Clusters.  The old assortments disappear from view, and there is no way of surfacing sales plans made to old Clusters.  Data will not migrate from old Clusters to new.</p>
+        <p>To use Sub-Clusters after AP plans are already established, configure a new Cluster Set with the attribute-based Sub-Clusters and snapshot it. In the <span class="Emphasis">Cluster Details</span> screen, unassort from the old cluster set and clusters and assort to the new cluster set and clusters.</p>
+        <p class="BasicNote">Sales plans between old and new Cluster Sets will not be preserved.  A custom script will need to be written to migrate and split sales plans from the old cluster set / clusters to new.</p>
+        <h2>Assigning Sub-Clusters in AP</h2>
+        <p>Within Assortment Planning, the Sub-Clusters are selected in the <span class="Emphasis">Manage Assortment Defaults</span> screen by clicking in the <span class="Emphasis">Additional Allowed Cluster Sets</span> field and selecting them. The <span class="Emphasis">Cluster Details</span> side pane allows users to manage the assortment of placeholders and collections to Clusters and Sub-Clusters.</p>
+        <p MadCap:conditions="General.ScreenOnly">For information on using Sub-Clusters in AP, see <MadCap:xref href="../Assortment Planning/Using Sub-clusters Adjust Phase Periods.htm">Using Sub-clusters to adjust Phase Periods based on site attributes</MadCap:xref>.</p>
+        <p MadCap:conditions="General.PrintOnly">For information on using Sub-Clusters in AP, refer to the Assortment Planning User Guide.</p>
+    </body>
+</html>

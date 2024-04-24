@@ -1,0 +1,290 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head>
+        <link href="../../Resources/TableStyles/standard.css" rel="stylesheet" MadCap:stylesheetType="table" />
+    </head>
+    <body>
+        <h1>Ship from Store (SFS) example</h1>
+        <p>For 3 cluster set / clusters: E-Com, Retail A, and Retail B.  </p>
+        <p>E-Com will have some of its sales be fulfilled by the other 2 clusters. Therefore, some of the demand needs to be reassigned to those 2 clusters so that:</p>
+        <ul>
+            <li>
+                <p> the receipt quantities are sufficiently high, and </p>
+            </li>
+            <li>
+                <p>E-Com's demand is reduced so that it does not over-order stock.</p>
+            </li>
+        </ul>
+        <table style="mc-table-style: url('../../Resources/TableStyles/standard.css');margin-left: 0;margin-right: auto;" class="TableStyle-standard" cellspacing="0">
+            <col class="TableStyle-standard-Column-Column1" style="width: 16%;" />
+            <col class="TableStyle-standard-Column-Column2" style="width: 10%;" />
+            <col class="TableStyle-standard-Column-Column1" style="width: 28%;" />
+            <col class="TableStyle-standard-Column-Column2" style="width: 10%;" />
+            <col class="TableStyle-standard-Column-Column1" style="width: 10%;" />
+            <col class="TableStyle-standard-Column-Column2" style="width: 10%;" />
+            <thead>
+                <tr class="TableStyle-standard-Head-Header1">
+                    <td class="TableStyle-standard-HeadE-Column1-Header1">Cluster Set</td>
+                    <td class="TableStyle-standard-HeadE-Column2-Header1">Cluster</td>
+                    <td class="TableStyle-standard-HeadE-Column1-Header1">Metric</td>
+                    <td class="TableStyle-standard-HeadE-Column2-Header1">wk10</td>
+                    <td class="TableStyle-standard-HeadE-Column1-Header1">wk11</td>
+                    <td class="TableStyle-standard-HeadD-Column2-Header1">wk12</td>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">E-Com</td>
+                    <td class="TableStyle-standard-BodyE-Column2-Body1">E-Com</td>
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">Sales Units</td>
+                    <td class="TableStyle-standard-BodyE-Column2-Body1">1250</td>
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">1140</td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">1140</td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">Retail</td>
+                    <td class="TableStyle-standard-BodyE-Column2-Body1">A</td>
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">Sales Units</td>
+                    <td class="TableStyle-standard-BodyE-Column2-Body1">570</td>
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">610</td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">650</td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyB-Column1-Body1">Retail</td>
+                    <td class="TableStyle-standard-BodyB-Column2-Body1">B</td>
+                    <td class="TableStyle-standard-BodyB-Column1-Body1">Sales Units</td>
+                    <td class="TableStyle-standard-BodyB-Column2-Body1">480</td>
+                    <td class="TableStyle-standard-BodyB-Column1-Body1">440</td>
+                    <td class="TableStyle-standard-BodyA-Column2-Body1">470</td>
+                </tr>
+            </tbody>
+        </table>
+        <p>E-Com is assigned a <span class="Emphasis">Ship From Store %</span> value for each period:</p>
+        <p class="BasicNote">The <span class="Emphasis">Ship From Store</span> metrics are calculated as
+		(SFS% * Sales Units) and the Fulfillment metrics are calculated (Sales Units - SFS Units).</p>
+        <table style="mc-table-style: url('../../Resources/TableStyles/standard.css');margin-left: 0;margin-right: auto;" class="TableStyle-standard" cellspacing="0">
+            <col class="TableStyle-standard-Column-Column1" style="width: 16%;" />
+            <col class="TableStyle-standard-Column-Column2" style="width: 10%;" />
+            <col class="TableStyle-standard-Column-Column1" style="width: 28%;" />
+            <col class="TableStyle-standard-Column-Column2" style="width: 10%;" />
+            <col class="TableStyle-standard-Column-Column1" style="width: 10%;" />
+            <col class="TableStyle-standard-Column-Column2" style="width: 10%;" />
+            <thead>
+                <tr class="TableStyle-standard-Head-Header1">
+                    <td class="TableStyle-standard-HeadE-Column1-Header1">Cluster Set</td>
+                    <td class="TableStyle-standard-HeadE-Column2-Header1">Cluster</td>
+                    <td class="TableStyle-standard-HeadE-Column1-Header1">Metric</td>
+                    <td class="TableStyle-standard-HeadE-Column2-Header1">wk10</td>
+                    <td class="TableStyle-standard-HeadE-Column1-Header1">wk11</td>
+                    <td class="TableStyle-standard-HeadD-Column2-Header1">wk12</td>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">E-Com</td>
+                    <td class="TableStyle-standard-BodyE-Column2-Body1">E-Com</td>
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">Sales Units</td>
+                    <td class="TableStyle-standard-BodyE-Column2-Body1">1250</td>
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">1140</td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">1140</td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">E-Com</td>
+                    <td class="TableStyle-standard-BodyE-Column2-Body1">E-Com</td>
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">Ship From Store %</td>
+                    <td class="TableStyle-standard-BodyE-Column2-Body1">20%</td>
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">30%</td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">40%</td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">E-Com</td>
+                    <td class="TableStyle-standard-BodyE-Column2-Body1">E-Com</td>
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">Ship From Store Units</td>
+                    <td class="TableStyle-standard-BodyE-Column2-Body1">250</td>
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">342</td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">456</td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyB-Column1-Body1">E-Com</td>
+                    <td class="TableStyle-standard-BodyB-Column2-Body1">E-Com</td>
+                    <td class="TableStyle-standard-BodyB-Column1-Body1">Fulfillment Units</td>
+                    <td class="TableStyle-standard-BodyB-Column2-Body1">1000</td>
+                    <td class="TableStyle-standard-BodyB-Column1-Body1">798</td>
+                    <td class="TableStyle-standard-BodyA-Column2-Body1">684</td>
+                </tr>
+            </tbody>
+        </table>
+        <p>The <span class="Emphasis">Ship From Store</span> demand is transferred to the other 2 clusters using a percentage split of their existing sales plans:
+</p>
+        <table style="mc-table-style: url('../../Resources/TableStyles/standard.css');margin-left: 0;margin-right: auto;" class="TableStyle-standard" cellspacing="0">
+            <col class="TableStyle-standard-Column-Column1" style="width: 16%;" />
+            <col class="TableStyle-standard-Column-Column2" style="width: 10%;" />
+            <col class="TableStyle-standard-Column-Column1" style="width: 28%;" />
+            <col class="TableStyle-standard-Column-Column2" style="width: 10%;" />
+            <col class="TableStyle-standard-Column-Column1" style="width: 10%;" />
+            <col class="TableStyle-standard-Column-Column2" style="width: 10%;" />
+            <thead>
+                <tr class="TableStyle-standard-Head-Header1">
+                    <td class="TableStyle-standard-HeadE-Column1-Header1">Cluster Set</td>
+                    <td class="TableStyle-standard-HeadE-Column2-Header1">Cluster</td>
+                    <td class="TableStyle-standard-HeadE-Column1-Header1">Metric</td>
+                    <td class="TableStyle-standard-HeadE-Column2-Header1">wk10</td>
+                    <td class="TableStyle-standard-HeadE-Column1-Header1">wk11</td>
+                    <td class="TableStyle-standard-HeadD-Column2-Header1">wk12</td>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">Retail</td>
+                    <td class="TableStyle-standard-BodyE-Column2-Body1">A</td>
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">Sales Units</td>
+                    <td class="TableStyle-standard-BodyE-Column2-Body1">570</td>
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">610</td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">650</td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">Retail</td>
+                    <td class="TableStyle-standard-BodyE-Column2-Body1">A</td>
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">Ship From Store Units</td>
+                    <td class="TableStyle-standard-BodyE-Column2-Body1">136</td>
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">199</td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">265</td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">Retail</td>
+                    <td class="TableStyle-standard-BodyE-Column2-Body1">B</td>
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">Sales Units</td>
+                    <td class="TableStyle-standard-BodyE-Column2-Body1">480</td>
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">440</td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">470</td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyB-Column1-Body1">Retail</td>
+                    <td class="TableStyle-standard-BodyB-Column2-Body1">B</td>
+                    <td class="TableStyle-standard-BodyB-Column1-Body1">Ship From Store Units</td>
+                    <td class="TableStyle-standard-BodyB-Column2-Body1">114</td>
+                    <td class="TableStyle-standard-BodyB-Column1-Body1">143</td>
+                    <td class="TableStyle-standard-BodyA-Column2-Body1">191</td>
+                </tr>
+            </tbody>
+        </table>
+        <p>The Fulfillment metrics are calculated (Sales Units + SFS Units) and <span class="Emphasis">Ship from Store %</span> remains unchanged:</p>
+        <table style="mc-table-style: url('../../Resources/TableStyles/standard.css');margin-left: 0;margin-right: auto;" class="TableStyle-standard" cellspacing="0">
+            <col class="TableStyle-standard-Column-Column1" style="width: 16%;" />
+            <col class="TableStyle-standard-Column-Column2" style="width: 10%;" />
+            <col class="TableStyle-standard-Column-Column1" style="width: 28%;" />
+            <col class="TableStyle-standard-Column-Column2" style="width: 10%;" />
+            <col class="TableStyle-standard-Column-Column1" style="width: 10%;" />
+            <col class="TableStyle-standard-Column-Column2" style="width: 10%;" />
+            <thead>
+                <tr class="TableStyle-standard-Head-Header1">
+                    <td class="TableStyle-standard-HeadE-Column1-Header1">Cluster Set</td>
+                    <td class="TableStyle-standard-HeadE-Column2-Header1">Cluster</td>
+                    <td class="TableStyle-standard-HeadE-Column1-Header1">Metric</td>
+                    <td class="TableStyle-standard-HeadE-Column2-Header1">wk10</td>
+                    <td class="TableStyle-standard-HeadE-Column1-Header1">wk11</td>
+                    <td class="TableStyle-standard-HeadD-Column2-Header1">wk12</td>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">E-Com</td>
+                    <td class="TableStyle-standard-BodyE-Column2-Body1">E-Com</td>
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">Sales Units</td>
+                    <td class="TableStyle-standard-BodyE-Column2-Body1">1250</td>
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">1140</td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">1140</td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">E-Com</td>
+                    <td class="TableStyle-standard-BodyE-Column2-Body1">E-Com</td>
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">Ship From Store %</td>
+                    <td class="TableStyle-standard-BodyE-Column2-Body1">20%</td>
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">30%</td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">40%</td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">E-Com</td>
+                    <td class="TableStyle-standard-BodyE-Column2-Body1">E-Com</td>
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">Ship From Store Units</td>
+                    <td class="TableStyle-standard-BodyE-Column2-Body1">250</td>
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">342</td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">456</td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">E-Com</td>
+                    <td class="TableStyle-standard-BodyE-Column2-Body1">E-Com</td>
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">Fulfillment Units</td>
+                    <td class="TableStyle-standard-BodyE-Column2-Body1">1000</td>
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">798</td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">684</td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">Retail</td>
+                    <td class="TableStyle-standard-BodyE-Column2-Body1">A</td>
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">Sales Units</td>
+                    <td class="TableStyle-standard-BodyE-Column2-Body1">570</td>
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">610</td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">650</td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">Retail</td>
+                    <td class="TableStyle-standard-BodyE-Column2-Body1">A</td>
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">Ship From Store %</td>
+                    <td class="TableStyle-standard-BodyE-Column2-Body1">0%</td>
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">0%</td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">0%</td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">Retail</td>
+                    <td class="TableStyle-standard-BodyE-Column2-Body1">A</td>
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">Ship From Store Units</td>
+                    <td class="TableStyle-standard-BodyE-Column2-Body1">136</td>
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">199</td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">265</td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">Retail</td>
+                    <td class="TableStyle-standard-BodyE-Column2-Body1">A</td>
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">Fulfillment Units</td>
+                    <td class="TableStyle-standard-BodyE-Column2-Body1">706</td>
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">809</td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">915</td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">Retail</td>
+                    <td class="TableStyle-standard-BodyE-Column2-Body1">B</td>
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">Sales Units</td>
+                    <td class="TableStyle-standard-BodyE-Column2-Body1">480</td>
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">440</td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">470</td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">Retail</td>
+                    <td class="TableStyle-standard-BodyE-Column2-Body1">B</td>
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">Ship From Store %</td>
+                    <td class="TableStyle-standard-BodyE-Column2-Body1">0%</td>
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">0%</td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">0%</td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">Retail</td>
+                    <td class="TableStyle-standard-BodyE-Column2-Body1">B</td>
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">Ship From Store Units</td>
+                    <td class="TableStyle-standard-BodyE-Column2-Body1">114</td>
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">143</td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">191</td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyB-Column1-Body1">Retail</td>
+                    <td class="TableStyle-standard-BodyB-Column2-Body1">B</td>
+                    <td class="TableStyle-standard-BodyB-Column1-Body1">Fulfillment Units</td>
+                    <td class="TableStyle-standard-BodyB-Column2-Body1">594</td>
+                    <td class="TableStyle-standard-BodyB-Column1-Body1">583</td>
+                    <td class="TableStyle-standard-BodyA-Column2-Body1">661</td>
+                </tr>
+            </tbody>
+        </table>
+        <p class="BasicNote">When Receipt Plans are calculated for the clusters, the Fulfillment data series is used as the demand signal so that E-Com shows a reduced order quantity and Retail A and B show an increased order quantity.</p>
+    </body>
+</html>

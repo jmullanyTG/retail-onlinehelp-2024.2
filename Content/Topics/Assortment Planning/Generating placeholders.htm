@@ -1,0 +1,235 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head />
+    <body>
+        <h1>Generating placeholders</h1>
+        <p>Placeholders are added to collections to help  plan items before the details of these items are officially known, such as color and style. With placeholders, the financial target can be planned and the sales projection built.</p>
+        <p class="BasicNote">To create a new collection, see <MadCap:xref href="Creating Collections.htm">Creating a new collection</MadCap:xref>.</p>
+        <h2>To add placeholders to collections</h2>
+        <ol>
+            <li>
+                <p>Navigate to the Placeholder view or <span class="Emphasis">Variants</span> supporting view in the Collection view.</p>
+                <p>
+                    <img src="../../Resources/Images/Assortment Planning/Collection mode Variants view.PNG" class="LargeImages" />
+                </p>
+            </li>
+            <li>
+                <p>Click <span class="Emphasis">New</span> to display the <span class="Emphasis">Add Placeholders</span> window.</p>
+                <p>
+                    <img src="../../Resources/Images/Assortment Planning/Add Placeholders.png" class="LargeImages" />
+                </p>
+            </li>
+            <li>Enter the number of new placeholders in the <span class="Emphasis"># of Placeholders</span> field.</li>
+            <li>
+                <p>Configure the <span class="Emphasis">Mirror Options</span> as required. </p>
+            </li>
+            <li>Ensure <span class="Emphasis">Current Collection</span> is checked.
+			<p class="BasicNote">Uncheck <span class="Emphasis">Current Collection</span> to select different or create new collections.</p></li>
+            <li>Click <span class="Emphasis">Generate</span>.</li>
+        </ol>
+        <h2>To manually select an existing collection when creating a placeholder</h2>
+        <ol>
+            <li>In the <span class="Emphasis">Add Placeholders</span> window, ensure that <span class="Emphasis">Current Collection</span> is unchecked.</li>
+            <li>Click in the <span class="Emphasis">Coll Code</span> column to display a collection selector.</li>
+            <li>
+                <p>From the dropdown list, double click a collection to select it, or enter the collection name in the <span class="Emphasis">Coll Desc</span> column.</p>
+            </li>
+        </ol>
+        <h2>To create a new collection when creating a placeholder</h2>
+        <p>For information, see <MadCap:xref href="Creating Collections.htm">Creating new collections</MadCap:xref>.</p>
+        <h2>Parameter descriptions</h2>
+        <ul>
+            <li><span class="Emphasis"># of Placeholders</span>: The number of new placeholder lines to add when <span class="Emphasis">Generate</span> is clicked.</li>
+            <li>
+                <p><span class="Emphasis">Mirror Options</span>: When checked, copies the selections made for the topmost placeholder line to any beneath it. It is not necessary to uncheck this option to deviate from the selections made in the topmost placeholder line. Editing unchecks the box automatically.</p>
+            </li>
+            <li>
+                <p><span class="Emphasis">Current Collection</span>: When checked, automatically sets <span class="Emphasis">Coll Code</span> and <span class="Emphasis">Coll Desc</span> to the values for the collection of the placeholder that was selected when the <span class="Emphasis">Add Placeholders</span> dialog was launched. </p>
+            </li>
+            <li>
+                <p><span class="Emphasis">Generate</span>: Creates the number of new placeholder lines specified in <span class="Emphasis"># of Placeholders</span>. If the number of placeholders is omitted or zero, then the following displays:</p>
+                <p>
+                    <img src="../../Resources/Images/Assortment Planning/No Entries Created Warning.png" class="LargeImages" />
+                </p>
+            </li>
+        </ul>
+        <h2>Viewing product codes and/or product descriptions in a product hierarchy dropdown</h2>
+        <p>The product selection dropdown in Placeholder and Collection views can be configured to display:</p>
+        <ul>
+            <li>
+                <p> product description</p>
+            </li>
+            <li>
+                <p>product code</p>
+            </li>
+            <li>
+                <p>product code and description</p>
+            </li>
+        </ul>
+        <p class="BasicNote"> Which fields to display is set using system policy <span class="Emphasis">Product Level Display</span> (Module: Assortment).</p>
+        <h2>Wholesale related metrics</h2>
+        <p>The following wholesale related metrics are available in the main planning view and the Cluster Sets, Sales Plan, Receipt Plan, and Top Down Core Plan views:</p>
+        <table style="width: 100%;">
+            <col />
+            <col />
+            <tbody>
+                <tr>
+                    <td>
+                        <ul>
+                            <li>
+                                <p>Discount %</p>
+                            </li>
+                            <li>
+                                <p>At Once ($)</p>
+                            </li>
+                            <li>
+                                <p>At Once (U)</p>
+                            </li>
+                            <li>
+                                <p>Cancel %</p>
+                            </li>
+                            <li>
+                                <p>Bookings Cancelled ($)</p>
+                            </li>
+                            <li>
+                                <p>Bookings Cancelled (U)</p>
+                            </li>
+                            <li>
+                                <p>Bookings Placed ($)</p>
+                            </li>
+                            <li>
+                                <p>Bookings Placed (U)</p>
+                            </li>
+                        </ul>
+                    </td>
+                    <td>
+                        <ul>
+                            <li>
+                                <p>Bookings Shipped ($)</p>
+                            </li>
+                            <li>
+                                <p>Bookings Shipped (U)</p>
+                            </li>
+                            <li>
+                                <p>Sell Out ($)</p>
+                            </li>
+                            <li>
+                                <p>Sell Out (U)</p>
+                            </li>
+                            <li>
+                                <p>Bookings Shipped/Sell Out Var</p>
+                            </li>
+                            <li>
+                                <p>Bookings Shipped/Sell Out Var %</p>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <p>
+            <img src="../../Resources/Images/Assortment Planning/Wholesale Metrics MPV.png" class="LargeImages">
+            </img>
+        </p>
+        <h3>Metric notes</h3>
+        <p>For plans with:</p>
+        <ul>
+            <li>
+                <p>wholesale lines - Sales, Sls and AUR renamed to Bookings, BK and ASP.</p>
+                <p>
+                    <img src="../../Resources/Images/Assortment Planning/Wholesale Lines Only Naming.png" class="LargeImages" />
+                </p>
+            </li>
+            <li>
+                <p>mixed wholesale and retail - Sales, Sls and AUT renamed to Sales/Bookings, Sls/Bk and AUR/ASP.</p>
+                <p>
+                    <img src="../../Resources/Images/Assortment Planning/Wholesale Lines Metric Renaming.png" class="LargeImages" />
+                </p>
+            </li>
+        </ul>
+        <h3>Editability</h3>
+        <ul>
+            <li>
+                <p>Discount %, At Once $/U, Cancel %, Cancelled $/U are all editable when the line is a wholesale line or have an underlying Cluster Set that is wholesale.</p>
+            </li>
+            <li>
+                <p>All the wholesale fields are non-editable if the line does not have any Wholesale Cluster Sets.</p>
+            </li>
+            <li>
+                <p>Cancel %, Cancelled $/U are non-editable after actualization begins.</p>
+            </li>
+        </ul>
+        <p>The <span class="Emphasis">Wholesale</span> check box is purely informational and indicates a line is wholesale.</p>
+        <h3>Calculations</h3>
+        <p>Amending:</p>
+        <ul>
+            <li>
+                <p>At Once $ recalculates At Once U and vice versa.</p>
+            </li>
+            <li>
+                <p>Cancel % recalculates Cancelled $ and Cancelled U</p>
+            </li>
+            <li>
+                <p>Cancelled $ recalculates Cancelled U and Cancelled %</p>
+            </li>
+            <li>
+                <p>Cancelled U recalculates Cancelled $ and Cancelled %</p>
+            </li>
+            <li>
+                <p>AUT recalculates Cancelled $</p>
+            </li>
+        </ul>
+        <p>Any amendment that affects Sales Units and/or Total Bookings recalculates Cancelled U and Cancelled %.</p>
+        <h2>Grid columns</h2>
+        <ul>
+            <li><span class="Emphasis">Coll Code</span>: The collection code to which the placeholder line is assigned.</li>
+            <li><span class="Emphasis">Coll Desc</span>: The corresponding description for Coll Code for the placeholder line.</li>
+            <li><span class="Emphasis">PH Code</span>: A unique system generated code for the placeholder line.</li>
+            <li><span class="Emphasis">PH Desc</span>: The description for the placeholder line.</li>
+            <li><span class="Emphasis">Product Hierarchy</span>: The product hierarchy level to which the placeholder line will be assigned. This defaults to the lowest common product hierarchy level present in the Product filter in the data selection parameters for the Placeholder view.</li>
+            <li><span class="Emphasis">Cluster Sets</span>: The cluster sets to which the placeholder line will be assigned. Defaults to any cluster sets assigned to the Product Hierarchy level in Assortment Plan Defaults.
+			<p class="BasicNote">New placeholders are assorted to all clusters within the assigned cluster sets by default.</p></li>
+            <li><span class="Emphasis">Phase In:</span> The phase in date for the placeholder. Selections are limited to periods prior to Phase Out, if set. Defaults to the earliest non-actualized period within the Window of Time in the data selection parameters.</li>
+            <li>
+                <p><span class="Emphasis">Markdown:</span> The markdown date for the placeholder/collection.</p>
+                <p>For information regarding extending markdown dates, see <MadCap:xref href="Extending markdown date in Placeholders.htm">Extending the markdown date in Placeholders</MadCap:xref>.</p>
+            </li>
+            <li><span class="Emphasis">Phase Out</span>: The phase out date for the placeholder.
+			<p class="BasicNote">Defaults to the last period within the Window of Time in the data selection parameters.</p></li>
+            <li><span class="Emphasis">Mkdn No Periods</span>: The time frame for the markdown date to phase out date.
+<MadCap:snippetBlock src="../../Resources/Snippets/Number of Markdown Periods.flsnp" /></li>
+            <li><span class="Emphasis">Markdown Offset Locked</span>: Links the markdown and phase out dates to each other, so they work dependently on each other. 
+				<p><MadCap:snippetBlock src="../../Resources/Snippets/Markdown Offset Lock.flsnp" /> </p></li>
+            <li>
+                <p><span class="Emphasis">Add to Promos?</span>: If checked, new placeholders are automatically included in all applicable existing promotions. </p>
+                <p class="BasicNote">Whether the checkbox is checked by default is determined by the system policy <span class="Emphasis">New Placeholders Added to Promotions Default</span>.</p>
+            </li>
+            <li><span class="Emphasis">Home AUT</span>: The home currency average unit ticket (AUT) for the placeholder line.</li>
+            <li><span class="Emphasis">Map From Variant</span>: (Optional) Another placeholder item to use as a Like Style from which the system can seed a sales plan. The pop-up only displays placeholders that do not have a variant assigned. Populates with placeholder items that exist within the selected Product Hierarchy for the line. Type in the relevant field to filter the results.
+				<p class="BasicNote">If set, this copies the original placeholder's Size Option, Curve Mode, and Seasonality Curve. Home AUT (unless specified in Home AUT) can calculate a sales plan based on sales present for the selected Like PH between the Comp Start and End dates specified<br /><img src="../../Resources/Images/Assortment Planning/Map From Variant.png" class="LargeImages" /><br />				The read-only <span class="Emphasis">Variant</span> checkbox indicates which placeholders have a variant assigned.	
+					
+					</p></li>
+            <li><span class="Emphasis">Attrib Copy</span>: Only valid if <span class="Emphasis">Map From</span> is set. Defines whether any product attributes assigned to the Like PH are copied to the new placeholder line or if any defined attribute defaults for the Product Hierarchy level are assigned instead. <MadCap:conditionalText MadCap:conditions="General.ScreenOnly">For more information, see <MadCap:xref href="Assortment Planning Overview.htm">Assortment Planning Overview.</MadCap:xref></MadCap:conditionalText><MadCap:conditionalText MadCap:conditions="General.PrintOnly">For more information, refer to the Attribute Management User Guide.</MadCap:conditionalText></li>
+            <li><span class="Emphasis">Mod Factor</span>: Defaults to 1.0. Only valid if <span class="Emphasis">Map From</span> is set. Defines a factor to multiply the sales history of the <span class="Emphasis">Map From</span> by.</li>
+            <li>
+                <p><span class="Emphasis">Comp Start</span>: Only valid if <span class="Emphasis">Map From</span> is set. Defines the start date for the desired window of time from which to capture sales for the Like PH.</p>
+                <ul>
+                    <li>Selections are limited to periods prior to Comp End, if set</li>
+                    <li>Defaults to the Phase In of the <span class="Emphasis">Map From</span></li>
+                </ul>
+            </li>
+            <li>
+                <p><span class="Emphasis">Comp End</span>: Only valid if <span class="Emphasis">Map From</span> is set. Defines the end date for the desired window of time from which to capture sales for the Like PH.</p>
+                <ul>
+                    <li>Selections are limited to periods after Comp Start, if set</li>
+                    <li>Defaults to the Phase Out of the <span class="Emphasis">Map From</span>.</li>
+                </ul>
+            </li>
+        </ul>
+        <h2>Toolbar functionality</h2>
+        <ul>
+            <li><span class="Emphasis">New</span>: Adds a single placeholder line.</li>
+            <li><span class="Emphasis">Delete</span>: Deletes the selected placeholder line.</li>
+        </ul>
+    </body>
+</html>

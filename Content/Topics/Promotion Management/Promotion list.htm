@@ -1,0 +1,157 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" xml:lang="en-us">
+    <head>
+        <link href="../../Resources/TableStyles/standard.css" rel="stylesheet" MadCap:stylesheetType="table" /><title></title>
+    </head>
+    <body>
+        <h1>List tab</h1>
+        <p>The <span class="Emphasis">List</span> tab provides a filtered list of promotions. Depending on assigned permissions users can view, edit, and create new promotions. In the grid, the first checkbox column allows for selecting multiple promotions for deletion. </p>
+        <p class="BasicNote"> Promotions marked as Private to other users do not display. The promotions that do display are those marked <span class="Emphasis">Public</span> and those promotions shared with the logged-in user or the roles that the logged-in user belongs to.</p>
+        <p>
+            <img src="../../Resources/Images/Promotion Management/Promotions Home Screen.png" class="LargeImages" />
+        </p>
+        <h2>Filtering promotions</h2>
+        <p>To filter the list of promotions, click <span class="Emphasis">Filter</span>. Click the dropdown arrow to select an existing filter or click on the black hammer icon to create a custom filter.</p>
+        <p>
+            <img src="../../Resources/Images/Promotion Management/Promotion Filter.png" class="LargeImages" />
+        </p>
+        <h2>Opening Promotions</h2>
+        <p>Double-clicking a promotion in the grid displays the promotion as a separate tab.</p>
+        <p>
+            <img src="../../Resources/Images/Promotion Management/Promotion Details screen.png" class="LargeImages" />
+        </p>
+        <p>The available strategies displayed are filtered based on the promotion strategy’s restricted user and role access. </p>
+        <p class="BasicNote"> If a previously selected promotion strategy is no longer valid, then the now restricted strategy is retained. However, once the user selects a different promotion strategy the retained promotion strategy is no longer available.</p>
+        <p>On the promotion details screen, there are several buttons and icons available.</p>
+        <p>
+            <img src="../../Resources/Images/Promotion Management/Icons and buttons.png" class="LargeImages" />
+        </p>
+        <h2>List grid field descriptions</h2>
+        <p>Columns include:</p>
+        <table style="width: 100%;margin-left: 0;margin-right: auto;mc-table-style: url('../../Resources/TableStyles/standard.css');" class="TableStyle-standard" cellspacing="0">
+            <col class="TableStyle-standard-Column-Column1" />
+            <col class="TableStyle-standard-Column-Column2" />
+            <thead>
+                <tr class="TableStyle-standard-Head-Header1">
+                    <th class="TableStyle-standard-HeadE-Column1-Header1">Column</th>
+                    <th class="TableStyle-standard-HeadD-Column2-Header1">Description</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">Lifecycle</td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">
+                        Indicates if the promotion occurred in the past, future, or is currently being executed. The field displays: 
+                        <ul><li>PAST - The current system date is after the sale end date time.</li><li>LIVE - The current system date is between the sale start date time and the sale end date time.</li><li>FUTURE - The current system date is before the sale start date time.</li></ul><p class="BasicNote"> This column does not display if system policy <span class="Emphasis">Allow Multiple Dates</span> is set to <span class="Emphasis">True</span>.</p></td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">Price Cluster Set Name</td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">The Site Cluster Set Name that was used during creation. Modification of the Price Clusters and Cluster Sites after creation does not modify this value.</td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyB-Column1-Body1">Price Cluster Set ID</td>
+                    <td class="TableStyle-standard-BodyA-Column2-Body1">The Site Cluster Set ID that was used during creation. This is the actual Site Cluster Set, not its Snapshot ID.</td>
+                </tr>
+            </tbody>
+        </table>
+        <h2>Toolbar functionality</h2>
+        <table class="TableStyle-standard" cellspacing="0" style="mc-table-style: url('../../Resources/TableStyles/standard.css');">
+            <col style="width: 214px;" class="TableStyle-standard-Column-Column1" />
+            <col class="TableStyle-standard-Column-Column2" />
+            <thead>
+                <tr class="TableStyle-standard-Head-Header1">
+                    <th class="TableStyle-standard-HeadE-Column1-Header1">Action</th>
+                    <th class="TableStyle-standard-HeadD-Column2-Header1">Description</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">
+                      Save
+                    </td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">
+                       Saves the current promotion.
+                    </td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">Save As</td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1" rowspan="2">&#160;See, <MadCap:xref href="Creating promotions based on existing promotions.htm">Creating promotions based on existing promotions</MadCap:xref>.
+                    </td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">
+                       Clone
+                    </td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">
+                       Recalculate
+                    </td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">
+                        (Available if changes have been made to the promotion) Refreshes all promotion calculations for all Site Clusters.
+                    </td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">
+                        Content
+                    </td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">
+                        Ability to update promotion content copy text and images.
+                    </td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">
+                        Change Status
+                    </td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">Modify a promotion’s Workflow Status or multiple Promotion Statuses at once. Multiple promotions can be changed simultaneously avoiding having to open and change the status for each and every promotion. The options are:
+                        <ul><li>Change Status</li><li>Change Multiple Statuses</li></ul><p><img src="../../Resources/Images/Promotion Management/Change Statuses menu option.png" class="LargeImages" /></p></td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">
+                        Price Clusters
+                    </td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">
+                       Manages the Promotion Site Clusters.
+                    </td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">
+                        Sites
+                    </td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">
+                        Manages the sites in the selected Promotion Site Cluster. The total number of sites where the promotion applies displays next to the <span class="Emphasis">Details</span> button.
+                    </td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">Sync</td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">Displays the <span class="Emphasis">Sync Promotion</span> dialog to enter the override life value as a percentage. A right-click menu option allows multiple rows to be updated simultaneously.
+                        <p>For more information, see <MadCap:xref href="Sync Promotion screen.htm">Sync Promotion screen</MadCap:xref>.</p></td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">
+                       Details
+                    </td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">
+                      Displays detailed editable promotion information. 
+                    </td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">
+                        Date Range
+                    </td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">
+                        The promotion’s start and end dates.
+                    </td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyB-Column1-Body1">
+                       Status
+                    </td>
+                    <td class="TableStyle-standard-BodyA-Column2-Body1">
+                        The icon is green if there is a message available for the promotion at the current workflow status.
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </body>
+</html>

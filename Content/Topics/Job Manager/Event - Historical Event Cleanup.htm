@@ -1,0 +1,119 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head>
+        <link href="../../Resources/TableStyles/standard.css" rel="stylesheet" MadCap:stylesheetType="table" />
+    </head>
+    <body>
+        <h1>Event - Historical Event Cleanup</h1>
+        <p>Customers generate large amounts of event-related data that must be deleted to maintain database size. The Event Purge process deletes Event information marked as <span class="Emphasis">Deleted</span> from the user interface (UI) (i.e. <span class="Emphasis">tbl_Event.DeleteFlag=1</span>). </p>
+        <p>It is highly recommended to test the purge process with a low number of Events and ramp up as hardware allows. Running the Events purge process, with a high number of Events, will result in a large number of rows being deleted which will require a large time frame to complete.</p>
+        <p class="BasicNote"> Only ‘soft’ deleted (DeleteFlag=1) Events are purged.</p>
+        <h2>Task parameters</h2>
+        <table style="width: 100%;margin-left: auto;margin-right: auto;mc-table-style: url('../../Resources/TableStyles/standard.css');" class="TableStyle-standard" cellspacing="0">
+            <col class="TableStyle-standard-Column-Column1" />
+            <col class="TableStyle-standard-Column-Column2" />
+            <thead>
+                <tr class="TableStyle-standard-Head-Header1">
+                    <th class="TableStyle-standard-HeadE-Column1-Header1">Parameter</th>
+                    <th class="TableStyle-standard-HeadD-Column2-Header1">Description</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">Task Type</td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">SQL Stored Procedure Task</td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">Name</td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">Event - Historical Event Cleanup</td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">Description</td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">This task deletes Events information marked as <span class="Emphasis">Deleted </span>from the UI.</td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">Progress Type</td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">Report error and continue</td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">Time Out (Seconds)</td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">43,200 seconds</td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">Retry Count</td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">0</td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">Retry Interval (ms)</td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">10,000</td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">Task Enabled</td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">De-selected</td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">Transaction Mode</td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">Non-transactional</td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">SQL Connection Type</td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">Operations database</td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyB-Column1-Body1">Method</td>
+                    <td class="TableStyle-standard-BodyA-Column2-Body1" style="padding: 0px;">
+                        <table style="width: 100%;margin-left: auto;margin-right: auto;mc-table-style: url('../../Resources/TableStyles/standard.css');" class="TableStyle-standard" cellspacing="0">
+                            <col class="TableStyle-standard-Column-Column1" />
+                            <col class="TableStyle-standard-Column-Column2" />
+                            <tbody>
+                                <tr class="TableStyle-standard-Body-Body1">
+                                    <td class="TableStyle-standard-BodyE-Column1-Body1">@iUserID = 1 (Default)</td>
+                                    <td class="TableStyle-standard-BodyD-Column2-Body1">The user ID executing the purge. This value must be set to 1, unless a maintenance user ID has been created with the appropriate database permissions. </td>
+                                </tr>
+                                <tr class="TableStyle-standard-Body-Body1">
+                                    <td class="TableStyle-standard-BodyE-Column1-Body1">@EventsLimit
+(Optional)
+</td>
+                                    <td class="TableStyle-standard-BodyD-Column2-Body1">The number of Events, marked as <span class="Emphasis">Deleted</span>, to be permanently removed from the database. Refer to the <span class="Emphasis">Events Purge User Guide</span> for guidance overriding this value. The utility adheres to the System Policy maximum, which can be raised at will. </td>
+                                </tr>
+                                <tr class="TableStyle-standard-Body-Body1">
+                                    <td class="TableStyle-standard-BodyE-Column1-Body1">@RunDurationLimitMinutes
+(Optional)
+</td>
+                                    <td class="TableStyle-standard-BodyD-Column2-Body1">Refer to the <span class="Emphasis">Events Purge User Guide</span> for detailed information on this and the succeeding parameter.</td>
+                                </tr>
+                                <tr class="TableStyle-standard-Body-Body1">
+                                    <td class="TableStyle-standard-BodyE-Column1-Body1">@RunCessationDateTime
+(Optional)
+</td>
+                                    <td class="TableStyle-standard-BodyD-Column2-Body1">See immediately above.</td>
+                                </tr>
+                                <tr class="TableStyle-standard-Body-Body1">
+                                    <td class="TableStyle-standard-BodyB-Column1-Body1">@bDebug (Optional)</td>
+                                    <td class="TableStyle-standard-BodyA-Column2-Body1">Refer to the <span class="Emphasis">Events Purge User Guide</span>.
+Under normal circumstances, NULL this parameter, it is optional.
+</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <h2>Task schedule</h2>
+        <p>The task must run:</p>
+        <ul>
+            <li>
+                <p>after the Historical Sales History by Type Cleanup</p>
+            </li>
+            <li>as part of the weekly maintenance</li>
+        </ul>
+        <p>Normally, the task runs outside the user's regular work hours, but is designed such that it will not interfere with regular operations should the need arise to elongate the duration, especially for the initial set of Events to purge, which could be high in number.</p>
+        <p>Any Event-oriented Table Triggers MUST reference CONTEXT_INFO to ensure the logic does not fire – the utility sets the CONTEXT_INFO explicitly to render trigger logic inoperative.</p>
+        <h2>Data elements to be purged</h2>
+        <p>Data elements to be purged must include, but is not limited to:</p>
+        <ul>
+            <li>Events<ul><li>Slot Sets</li><li>Content</li><li>Message Log</li><li><p>Output </p></li><li>Change Logs</li><li>Validation Logs</li><li>etc. (e.g. any table with an EventID field)</li></ul></li>
+        </ul>
+    </body>
+</html>

@@ -1,0 +1,36 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" xml:lang="en-us">
+    <head><title></title>
+    </head>
+    <body>
+        <h1>Forecast Overview</h1>
+        <p>The <span class="Emphasis">Forecast</span> module (System Utilities) holds the rules by which the forecasting tool operates.  </p>
+        <p>Users can create new forecast method sets, which can be selected in the <span class="Emphasis">Forecast Task</span> pop-up window in the Inventory Forecast and Group Forecast modules. Selecting one of the method sets populates the methods and their parameters.</p>
+        <MadCap:snippetBlock src="../../Resources/Snippets/Access To Forecast Method Sets User Right.flsnp" />
+        <p>There are five major components which define a specific forecasting method: </p>
+        <ul>
+            <li>the base</li>
+            <li>any processors</li>
+            <li>any surveys</li>
+            <li>series rules</li>
+            <li>step rules</li>
+        </ul>
+        <p>Some or all of these can be manipulated to define a forecasting method. </p>
+        <p>The forecasting engine follows a structured order of operations which is essential to understand to properly manipulate the engine and return a practical result. </p>
+        <p>As manipulating the forecast definitions can cause a significant disruption if done improperly, it is highly recommended to restrict access to this module to consultants and end users with both a strong background in statistical forecasting and administrative level rights. </p>
+        <p>The forecasting engine runs a tournament to determine the best result and will display that result along with any other methods which did not fail. </p>
+        <p>Forecast Level Optimization is a tool designed to help users optimize the accuracy of their forecasts. This is valuable for demand planners who have highly intermittent, short life cycle sales patterns. The purpose of this tool is to generate and automatically test a variety of leveling schemes, and to select the one that produces the most accurate inventory-level forecasts. Forecasting such series manually can be very inaccurate and difficult. </p>
+        <p>To combat this problem, level optimization groups inventories into levels based on a hierarchy. These levels ideally have consistent sale behavior and therefore, can be forecasted accurately. Level forecasts are then split down to inventory.</p>
+        <p>There are certain requirements needed in order to successfully run the forecast level optimization. Users should work with their ToolsGroup representative to properly configure their database instances, and ensure the correct inputs are set up for accurate results.</p>
+        <p>For more information on forecasts, see:</p>
+        <ul>
+            <li>
+                <MadCap:xref href="../Group Forecasts/Group Forecasts Overview.htm">Group forecasts overview</MadCap:xref>
+            </li>
+            <li>
+                <MadCap:xref href="../Inventory Forecasts/Inventory Forecasting Overview.htm">Inventory Forecasting Overview</MadCap:xref>
+            </li>
+        </ul>
+        <MadCap:miniTocProxy style="mc-toc-depth: 1;" />
+    </body>
+</html>

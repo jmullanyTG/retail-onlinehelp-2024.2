@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head />
+    <body>
+        <h1>Adding sites to existing pricing plan clusters</h1>
+        <p>Sites can be added to existing Pricing Plan Clusters. </p>
+        <p>
+            <img src="../../Resources/Images/Price Planning/Add a cluster to a Pricing Plan.png" class="LargeImages" />
+        </p>
+        <p>To add an existing site to a pricing plan:</p>
+        <ol>
+            <li>Select <span class="Emphasis">Add Site</span> in the toolbar of the <span class="Emphasis">Sites</span> grid.</li>
+            <li>In the <span class="Emphasis">Add a Site to an Existing Pricing Site Cluster</span> dialog, click the dropdown arrow in the Site Filter field to choose a set of Sites.</li>
+            <li>Optionally, to return a subset of Sites from the Site filter select the checkbox labeled <span class="Emphasis">Select only some items from the current filter</span>.<ol><li><p>On the <span class="Emphasis">Site Selection</span> dialog, select the checkboxes for the Sites to be added to the new Site Cluster.</p><p class="BasicNote"> Only those Sites meeting the filter criteria and not already associated to the Pricing Plan’s pre-configured Site Clusters display.</p></li><li><p>Click <span class="Emphasis">Ok</span>.</p><p>If the newly added Site does not share the same currency the Site Cluster name is re-used by currency. For example, EMEA(GBP) and EMEA(EUR).</p></li></ol></li>
+            <li>Click <span class="Emphasis">Ok</span> on the <span class="Emphasis">Add a Site to an Existing Pricing Site Cluster</span> dialog.</li>
+            <li>
+                <p>Click <span class="Emphasis">Ok</span> on the confirmation pop-up window.</p>
+            </li>
+            <li>
+                <p>If the <span class="Emphasis">Activate the New Site(s) to Existing Action(s)</span> window displays, then select the Price Actions, not already exported, to include the new Site.</p>
+                <p> The <span class="Emphasis">Activate the New Site Cluster(s) to Existing Action(s)</span> window does not display if:</p>
+                <ul>
+                    <li>there are no future Price Actions</li>
+                    <li>
+                        <p>all future Price Actions are in a core status</p>
+                        <p>A core status is a Status that is not user configurable. Core statuses do not display in Workflow. The following are core statuses:</p>
+                        <ul>
+                            <li>Preparing Data for Export</li>
+                            <li>Ready For Export</li>
+                            <li>Exported</li>
+                            <li>Export Confirmed</li>
+                            <li>Exported With Errors</li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+            <li>
+                <p>If required, click <span class="Emphasis">Save</span> on the <span class="Emphasis">Activate the New Site Cluster(s) to Existing Action(s)</span> window.</p>
+                <p>Upon clicking <span class="Emphasis">Save</span>, the Site is added to the Site Cluster and associated Sites are added to Price Actions as Included and the Pricing Strategy Variable default values are applied to the new Site and pushed down to Variants\Sites. Also, the following are marked as Calculation Required:</p>
+                <ul>
+                    <li>
+                        <p>Site Cluster Variant Sites</p>
+                    </li>
+                    <li>
+                        <p>Site Cluster Variants </p>
+                    </li>
+                    <li>
+                        <p>Price Action</p>
+                    </li>
+                    <li>Price Action's Plan</li>
+                </ul>
+                <p>If a Price Action has gone into a calculating state, the Site Cluster and associated Sites are added as Excluded and a dialog displays indicating that not all Price Actions were updated.</p>
+                <p>If a Price Action exists where the Site Cluster is Excluded, then the new Site is included as Excluded to the excluded Site Cluster.</p>
+            </li>
+        </ol>
+    </body>
+</html>

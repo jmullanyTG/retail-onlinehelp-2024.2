@@ -1,0 +1,46 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head>
+        <link href="../../Resources/TableStyles/standard.css" rel="stylesheet" MadCap:stylesheetType="table" />
+    </head>
+    <body>
+        <h1>Planning discount/promotion rates that update the AUR</h1>
+        <p>Users can plan an AUT Discount percentage (rate). This discount rate can be planned on its own, or in conjunction with specific planned promotions within AP. This allows users to manage item-level AURs without using the Promotions view in AP. </p>
+        <p>The plannable metric, <span class="Emphasis">AUT Discount %</span> allows a user to plan a discount percentage which is not otherwise defined through specific promotions. The reduction from <span class="Emphasis">Blended AUT</span> is then automatically applied against the <span class="Emphasis">Blended AUT</span> and used to update the planned AUR. This eliminates the need to plan the AUR.</p>
+        <p class="BasicNote"><span class="Emphasis">Blended AUT</span> (average unit ticket) is the ticket price, averaged from all currencies in the cluster, and AUR (average unit retail) is the retail price paid by the customer.</p>
+        <p>For example, if the <span class="Emphasis">Blended AUT</span> is $100, and various promos, etc., cause that variant to go out the door at an average AUR of $80, a user might plan a discount or promotion rate of 20%, and that would update the planned AUR.</p>
+        <table style="width: 100%;mc-table-style: url('../../Resources/TableStyles/standard.css');" class="TableStyle-standard" cellspacing="0">
+            <col class="TableStyle-standard-Column-Column1" style="width: 10%;" />
+            <col class="TableStyle-standard-Column-Column2" />
+            <thead>
+                <tr class="TableStyle-standard-Head-Header1">
+                    <th class="TableStyle-standard-HeadE-Column1-Header1">Name</th>
+                    <th class="TableStyle-standard-HeadD-Column2-Header1">Description</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">AUT Discount %</td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">
+                         Impacts how AUR is derived from Blended AUT. The percent discount is taken first, and then the rest of the calculations proceed from there, namely applying VAT rates, price exceptions, and promotions. This metric averages across time and is editable in future periods. 
+                        <p class="Important">It is important to note that <span class="Emphasis">AUT Discount %</span> is applied and then any planned promotions are also applied. <span class="Emphasis">AUT Discount %</span> is NOT inclusive of explicitly planned promotions.
+                        </p></td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyB-Column1-Body1">AUT/AUR Var %</td>
+                    <td class="TableStyle-standard-BodyA-Column2-Body1">An actualized metric showing the actualized difference between Blended AUT and AUR. This metric is agnostic of the discount source - be it the planned <span class="Emphasis">AUT Discount %</span> or specific promotions themselves. Users may plan future periods by using specific promotions to plan the discount, or use the <span class="Emphasis">AUT Discount %</span>, or both - but be aware that the <span class="Emphasis">Blended AUT +/- % AUR</span> metric is reflective of all of these discount sources, combined.</td>
+                </tr>
+            </tbody>
+        </table>
+        <p><span class="Emphasis">AUT Discount %</span> can be configured as a hierarchy default in the <span class="Emphasis">Assortment Plan Defaults</span> blade.</p>
+        <p>
+            <img src="../../Resources/Images/Assortment Planning/AUT Discount Percent.PNG" class="LargeImages" />
+        </p>
+        <p>This allows users to plan different default <span class="Emphasis">Blended AUT</span> discount rates for various products. The default value can be overridden within the Sales Plan view or TDCP view.</p>
+        <p><span class="Emphasis">AUT Discount %</span> can also be defaulted by period, alongside <span class="Emphasis">Minimum Presentation</span> allowing users to plan for expected variances in discount due to seasonality such as a higher discount rate during peak holiday periods.</p>
+        <p>
+            <img src="../../Resources/Images/Assortment Planning/AUT Discount Percent Time.PNG" class="LargeImages" />
+        </p>
+        <p>The defaults apply to new placeholders and/or new periods for placeholders whenever they are created.</p>
+    </body>
+</html>

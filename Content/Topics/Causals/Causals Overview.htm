@@ -1,0 +1,28 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" xml:lang="en-us">
+    <head>
+        <title>
+        </title>
+    </head>
+    <body>
+        <h1>Causal Manager Overview</h1>
+        <p>Causal Manager mirrors a lot of the <span class="Emphasis">Inventory Manager</span> functionality for both flexibility and consistency. </p>
+        <p>
+            <img src="../../Resources/Images/Causals/Causal Management Document view.PNG" class="LargeImages" />
+        </p>
+        <p>To view causals, select them from the dropdown menu near the top of the screen, or select individually using the navigation arrows in the upper right side of the screen.</p>
+        <p class="BasicNote">Select the <span class="Emphasis">Configuration</span> button to display the historical and future periods (buckets), which are visible in the Series Value viewer.</p>
+        <h2>Causals</h2>
+        <p>Causals indicate when specific periods of increased demand for items should not be used to forecast normal demand. Typically, demand increases when a promotion is run on an item. However, if the  forecasting engine is not configured to indicate that a promotion ran during the period of increased demand, the increase is treated as an increase in normal demand and higher future demand is forecast for the item accordingly. </p>
+        <p>Causals prevent this from happening by indicating that the increased demand was caused by a promotion. Consequently, the increased demand is not treated as a regular increase when the forecast is created for that item.</p>
+        <p> There are four types of causals:</p>
+        <ul>
+            <li>(Normal)&#160;Causal</li>
+            <li>Event</li>
+            <li>Information Causal</li>
+            <li>Manual Causal</li>
+        </ul>
+        <p>For descriptions of each causal type, see <MadCap:xref href="Causal Manager Details section.htm">Causals screen fields and descriptions.</MadCap:xref></p>
+        <p class="BasicNote" MadCap:conditions="General.DoNotPublish">Causal information is stored in the database in the tbl_Causal namespace.</p>
+    </body>
+</html>

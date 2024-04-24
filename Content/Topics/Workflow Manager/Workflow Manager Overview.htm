@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" xml:lang="en-us">
+    <head><title></title>
+    </head>
+    <body>
+        <h1>Workflow manager Overview</h1>
+        <p>Workflows define processes related to specific objects. At each step in a workflow, which users or roles have access to what actions and what actions the system performs can be controlled. Workflows can be used to:</p>
+        <ul>
+            <li> set up approval processes for quality control.</li>
+            <li>promote safe cross-team collaboration.</li>
+            <li>ensure required steps and operations are always executed.</li>
+            <li>automatically enforce corporate standards and policies.</li>
+        </ul>
+        <p> Workflows can be created for the following:</p>
+        <ul>
+            <li>Events</li>
+            <li>Promotions</li>
+            <li>Price Actions</li>
+            <li>Order Headers</li>
+        </ul>
+        <h2>Accessing Workflow manager</h2>
+        <p>Users require the <span class="Emphasis">Access to Workflow</span> User Right found under the Workflow Manager right group in the <span class="Emphasis">Users</span> module to create, edit, and delete workflows.</p>
+        <h2>Workflows</h2>
+        <p>Workflows have two main components: statuses and transitions. A status is a specific step in the workflow. A transition moves the object from its current status to its next status. Statuses and transitions are illustrated in the following workflow example:</p>
+        <p>
+            <img src="../../Resources/Images/Workflow Manager/WF example.png" class="LargeImages" />
+        </p>
+        <p>This workflow has 4 statuses: <span class="Emphasis">Planning</span>, <span class="Emphasis">Ready for Approval</span>, <span class="Emphasis">Changes Needed</span>, and <span class="Emphasis">Approved / Confirmed for Export</span>. The transition arrows that connect the statuses indicate what status can come next. For example, the <span class="Emphasis">Ready for Approval</span> status can transition to either <span class="Emphasis">Changes Needed</span> or <span class="Emphasis">Approved / Confirmed for Export</span>. </p>
+        <p>When designing a workflow, define the conditions in which a status can move from one status to the next. In some cases, a specific person or role may need to decide (for example, a reviewer must determine whether an object in the <span class="Emphasis">Ready for Approval</span> status moves to <span class="Emphasis">Approved</span> or <span class="Emphasis">Changes Needed</span>). In other cases, the transition can occur automatically on a specific date. </p>
+        <h2>Related topics</h2>
+        <ul>
+            <li>
+                <MadCap:xref href="Workflow Manager Screen.htm">Workflow Manager Screen</MadCap:xref>
+            </li>
+            <li>
+                <MadCap:xref href="Adding a Status to a Workflow.htm">Adding a Status to a Workflow</MadCap:xref>
+            </li>
+            <li>
+                <MadCap:xref href="Adding a Transition to a Workflow.htm">Adding a Transition to a Workflow</MadCap:xref>
+            </li>
+        </ul>
+    </body>
+</html>

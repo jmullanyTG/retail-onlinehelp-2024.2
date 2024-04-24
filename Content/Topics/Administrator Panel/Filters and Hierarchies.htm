@@ -1,0 +1,45 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" xml:lang="en-us">
+    <head><title></title>
+    </head>
+    <body>
+        <h1>Filters and hierarchies</h1>
+        <p>The <span class="Emphasis">Hierarchy Filtering</span> view is  accessible from the <span class="Emphasis">Views</span> solution on the <span class="Emphasis">System Utilities</span> tab and is used in the configuration process during an implementation. </p>
+        <p>
+            <img src="../../Resources/Images/Administrator Panel/Hierarchy_Filtering_view.png" class="LargeImages" />
+        </p>
+        <h3>Parameter </h3>
+        <ul>
+            <li><span class="Emphasis">Entity Type</span>: The hierarchy type</li>
+        </ul>
+        <h3>Hierarchy Configuration view:&#160;editable fields </h3>
+        <ul>
+            <li><span class="Emphasis">Active</span>: Checked by default after the hierarchy is created. When unchecked and applied, the hierarchy is no longer accessible from the front end. </li>
+            <li><span class="Emphasis">Available for AP</span>: Check this field if the hierarchy must be available to select in Assortment Planning.</li>
+            <li><span class="Emphasis">Is used in active AP Plan</span>: This field is checked if the hierarchy is used in an active assortment plan.</li>
+        </ul>
+        <h3>Hierarchy Configuration II view:&#160;editable fields </h3>
+        <ul>
+            <li><span class="Emphasis">Order Number</span>: The lowest number represents the highest level of the hierarchy.</li>
+            <li><span class="Emphasis">Enabled</span>: By default, after the hierarchy is created this is unchecked. If checked, then a group is part of the current hierarchy being configured.</li>
+        </ul>
+        <p>Variant and Site entity types must be configured in Assortment Planning (AP) and must be created prior to creating any assortment plan. The combination of the lowest levels of both hierarchies make the lowest level of the assortment plan and the level at which placeholders are created.</p>
+        <h3>Site hierarchy</h3>
+        <p>A full description of the location hierarchy must be entered. Using the Site Groups available (Friendly Names are maintained from the <span class="Emphasis">Setup Table Definition Friendly Names</span> view) as well as the explicit channel attribute, configure the site hierarchy to have levels of commonality between Merchandise Financial Planning and Allocation Planning. </p>
+        <h3>Item Master hierarchy</h3>
+        <p>Item master hierarchies are the hierarchies of the product dimension. They are used throughout ToolsGroup JustEnough to define hierarchical relationships and levels for both aggregation and dissemination of information. </p>
+        <p>Item master hierarchies are built out of:</p>
+        <ul>
+            <li> item master groups</li>
+            <li>the variant entity</li>
+            <li>the explicit style,&#160; and </li>
+            <li>size attributes (where applicable).</li>
+        </ul>
+        <h3>Variant hierarchy</h3>
+        <p>Assortment Planning uses a variant entity hierarchy for its product hierarchy. This hierarchy is used for all rollups and reporting in Assortment Planning. </p>
+        <p>The variant hierarchy must be structured to extend to one level above the variant (equivalent to placeholder in Assortment Planning,  referred to as style-color), unless a level for style (referred to as a collection in Assortment Planning, a group of variants – often a single design in multiple colors) exists, then the variant hierarchy must extend to one level above that.</p>
+        <p class="BasicNote"> When using the <span class="Emphasis">Segment By Hierarchy</span> function of <span class="Emphasis">Target Creation within Assortment Planning</span>, the lowest level of this hierarchy is the level at which target segments will be created.</p>
+        <p>To use targets from a merchandise financial plan in a given assortment plan, the product and site hierarchies assigned to both plans must share common levels from the top down to the lowest level of the merchandise financial plan hierarchies (assortment plan hierarchies generally extend to at least one level lower). The plans must also share common time structures, such as calendar and period type.  </p>
+        <p>Cluster sets to be used in assortment plans must be contained in a single leaf level of the site hierarchy assigned to those plans.</p>
+    </body>
+</html>

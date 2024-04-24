@@ -1,0 +1,26 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" xml:lang="en-us">
+    <head>
+        <link href="../../Resources/TableStyles/standard.css" rel="stylesheet" MadCap:stylesheetType="table" /><title></title>
+    </head>
+    <body>
+        <h1>Policy Information</h1>
+        <p>The <span class="Emphasis">Policy Information</span> tab displays identical information to that which is found in the Policy module.  The policy settings for a specific inventory can be adjusted overriding any higher level settings for the inventory. </p>
+        <p>For more information, <MadCap:conditionalText MadCap:conditions="General.ScreenOnly">see <MadCap:xref href="../Policy/Policy Overview.htm">Policys Overview</MadCap:xref>.</MadCap:conditionalText><MadCap:conditionalText MadCap:conditions="General.PrintOnly"> refer to the Policy User Guide.</MadCap:conditionalText></p>
+        <p class="BasicNote"> The <span class="Emphasis">Policy Information</span> and <span class="Emphasis">Effective Policy Information</span> tabs are blank for items managed by the Allocations module.</p>
+        <p>
+            <img src="../../Resources/Images/Inventory Manager/Policy Information.JPG" class="LargeImages" />
+        </p>
+        <h2>Changing Policy Types</h2>
+        <p>Use the <span class="Emphasis">Type</span> column in the top grid in Inventory Manager to update the Order Policy Type for multiple items. However, the <span class="Emphasis">Allow Item's Replenishment Strategy To Be User Controlled</span> checkbox on the <span class="Emphasis">Policy Information</span> blade must be selected if changing the <span class="Emphasis">Type</span>. Otherwise, a message displays and updates are prevented.</p>
+        <p>If the <span class="Emphasis">Allow Item's Replenishment Strategy To Be User Controlled</span> checkbox is checked and the <span class="Emphasis">Type</span> is changed to <span class="Emphasis">Bin [B]</span> or <span class="Emphasis">Showroom [S]</span>, then default Bin Min and Bin Max values are set, and a Demand Transference Method added.</p>
+        <h3>Defaults</h3>
+        <p>If Bin Max has a value that is less than Bin Min, it will be set to be equal to Bin Min. By default, Bin Min = 0.</p>
+        <p>The Showroom Demand Transference Method default is Split Factor.</p>
+        <h3>Target Service Level</h3>
+        <p>A dynamic quantity based on a service level target. It is a percentage of the items that are fulfilled in a location out of the maximum demand.</p>
+        <p class="BasicNote">The <span class="Emphasis">Target Service Level</span> field is configured to prevent values below 50%. This is intended to avoid a scenario where values below 50% generate negative safety stock levels. Upon clicking <span class="Emphasis">Save</span>, any values below 50% are converted to 50%.</p>
+        <h3><a name="Target"></a>Optimized Target Service Level using a Stock to Service (STS) calculation</h3>
+        <MadCap:snippetBlock src="../../Resources/Snippets/Stock To Service.flsnp" />
+    </body>
+</html>

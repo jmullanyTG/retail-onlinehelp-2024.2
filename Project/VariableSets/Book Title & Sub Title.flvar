@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<CatapultVariableSet>
+	<Variable
+		Name="BookTitle"
+		Comment=""
+	EvaluatedDefinition="SET IN TARGET">SET IN TARGET</Variable>
+  <Variable
+    Name="BookSubTitle"
+    Comment=""
+    EvaluatedDefinition="SET IN TARGET">SET IN TARGET</Variable>
+ 
+ 
+</CatapultVariableSet>

@@ -1,0 +1,89 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" xml:lang="en-us">
+    <head>
+        <link href="../../Resources/TableStyles/standard.css" rel="stylesheet" MadCap:stylesheetType="table" /><title></title>
+    </head>
+    <body>
+        <h1>Workload Queue configuration </h1>
+        <p>Changing the workload queue configuration is restricted to Professional Services and Support. This ensures the integrity of corporate strategies and guiding policies that enforce standards before  exported data is sent to downstream systems. </p>
+        <p>The following are integrated with Workload Queue:</p>
+        <ul>
+            <li>Allocations</li>
+            <li>Assortment (Receipt) Plan</li>
+            <li>Assortment (with Order Management) Prepack</li>
+            <li>Inventory Forecast</li>
+            <li>Inventory Replenishment (with Order Manager)</li>
+            <li>Group Forecast</li>
+            <li>Price Management</li>
+        </ul>
+        <p>While Workload Queue comes with an out-of-the-box configuration, some tuning may be required depending on the available hardware resources.</p>
+        <h2>Workload Queue Configuration window</h2>
+        <p>The <span class="Emphasis">Workload Queue Configuration</span> window makes it easier to fine-tune workload thresholds for supported process types. </p>
+        <p>For each supported process type (Allocations, Assortment Prepack, etc.), the default and customized threshold ranges for each priority level (Immediate, ASAP, Low Priority, Night, or Weekend) can be reviewed. </p>
+        <h3>To access the Workload Queue Configuration window</h3>
+        <ol>
+            <li>
+                <p>From the Maintenance tab, click <span class="Emphasis">Workload Queue</span>. </p>
+                <p>The Workload Queue screen displays.</p>
+            </li>
+            <li>
+                <p>Click <span class="Emphasis">Configuration</span> on the right side at the top of the screen. </p>
+                <p>The <span class="Emphasis">Workload Queue Configuration</span> window displays.</p>
+                <p>
+                    <img src="../../Resources/Images/Workload Queue Manager/Workload Queue Configuration_1.png" class="LargeImages" />
+                </p>
+            </li>
+        </ol>
+        <h3>Field descriptions</h3>
+        <table class="TableStyle-standard" cellspacing="0" style="mc-table-style: url('../../Resources/TableStyles/standard.css');">
+            <thead>
+                <tr class="TableStyle-standard-Head-Header1">
+                    <th class="TableStyle-standard-HeadE-Column1-Header1">Column</th>
+                    <th class="TableStyle-standard-HeadD-Column2-Header1">Description</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">
+                        Priority 
+                    </td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">
+                         The supported process types  in alphabetical order and the set of priority levels for that process type. These levels are listed from most to least urgent: <span class="Emphasis">Immediate</span>, <span class="Emphasis">ASAP</span>, <span class="Emphasis">Low Priority</span>, <span class="Emphasis">Night</span>, and <span class="Emphasis">Weekend</span>. 
+                    </td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">
+                        Current Threshold 
+                    </td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">
+                        The default minimum and maximum value range for a priority level. These values do not change. 
+                    </td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">
+                    Override Min 
+                    </td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">
+                       The customizable minimum value for a priority level.&#160;This field is blank if the default thresholds are  used. 
+                    </td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">
+                Override Max 
+                    </td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">
+                       The customizable maximum value for a priority level.&#160;This field is blank if the default thresholds are  used. 
+                    </td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyB-Column1-Body1">
+                       Reset 
+                    </td>
+                    <td class="TableStyle-standard-BodyA-Column2-Body1">
+                        Click to delete the customized values in the <span class="Emphasis">Override Min</span> and <span class="Emphasis">Override Max</span> columns and return to the default values displayed in the <span class="Emphasis">Current Threshold</span> column. 
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </body>
+</html>

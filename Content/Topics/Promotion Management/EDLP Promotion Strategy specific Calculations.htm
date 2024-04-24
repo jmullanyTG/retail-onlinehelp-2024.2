@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd"
+      xml:lang="en-us">
+   <head>
+      <link href="../../Resources/TableStyles/standard.css"
+            rel="stylesheet"
+            MadCap:stylesheetType="table"/>
+      <title/>
+   </head>
+   <body>
+      <h1>EDLP promotion strategy specific calculations</h1>
+      <table class="TableStyle-standard"
+             cellspacing="0"
+             style="mc-table-style: url('../../Resources/TableStyles/standard.css');">
+         <thead>
+            <tr class="TableStyle-standard-Head-Header1">
+               <th class="TableStyle-standard-HeadE-Column1-Header1">Calculation Name</th>
+               <th class="TableStyle-standard-HeadD-Column2-Header1">Configuration</th>
+            </tr>
+         </thead>
+         <tbody>
+            <tr class="TableStyle-standard-Body-Body1">
+               <td class="TableStyle-standard-BodyE-Column1-Body1">
+                  <p>EDLP – Promo Low -  Item</p>
+               </td>
+               <td class="TableStyle-standard-BodyD-Column2-Body1">
+                  <p>Set the LowestPromotionPrice field at the Item level to the LowestRetailPrice.</p>
+                  <ul>
+                     <li>Calculation Level – Item Level</li>
+                     <li>Group Type – Buy Get Group</li>
+                     <li>Calculation Field – LowestPromotionPrice</li>
+                     <li>Formula – LowestPromotionPrice = LowestRetailPrice</li>
+                  </ul>
+               </td>
+            </tr>
+            <tr class="TableStyle-standard-Body-Body1">
+               <td class="TableStyle-standard-BodyB-Column1-Body1">
+                  <p>EDLP – Promo High -  Item</p>
+               </td>
+               <td class="TableStyle-standard-BodyA-Column2-Body1">
+                  <p>Set the HighestPromotionPrice field at the Item level to the HighestRetailPrice.</p>
+                  <ul>
+                     <li>Calculation Level – Item Level</li>
+                     <li>Group Type – Buy Get Group</li>
+                     <li>Calculation Field – HighestPromotionPrice</li>
+                     <li>Formula – HighestPromotionPrice = HighestRetailPrice</li>
+                  </ul>
+               </td>
+            </tr>
+         </tbody>
+      </table>
+   </body>
+</html>

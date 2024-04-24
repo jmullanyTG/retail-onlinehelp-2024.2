@@ -1,0 +1,74 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head>
+        <link href="../../Resources/TableStyles/standard.css" rel="stylesheet" MadCap:stylesheetType="table" />
+    </head>
+    <body>
+        <h1>Price matrixes</h1>
+        <p> For Pricing Plans and Price Actions that are assigned Price Matrixes, set the decimal precision that values are rounded to and default Price Matrixes using the <span class="Emphasis">Price Matrix</span> tab in the <span class="Emphasis">Price Manager Configuration</span> views.</p>
+        <p>
+            <img src="../../Resources/Images/Price Planning/Price Matrixes.PNG" class="LargeImages" />
+        </p>
+        <h2>Price point matrix rounding</h2>
+        <p>Use the <span class="Emphasis">Price Point Matrix Rounding</span> tab to set, based on channel, country and currency, the decimal precision that a value is rounded to before it is sent into the Price Matrix.</p>
+        <h2>Default price matrix configuration</h2>
+        <p>Set the default price matrix being used in the <span class="Emphasis">Default Price Matrix Config</span> tab. Based on the selected channel, feature (the source operation that is creating the Price Action) and Price Method, the Price Action is assigned the Price Matrix as a default. </p>
+        <p class="BasicNote">The default can be overridden after the Price Action is created.</p>
+        <p class="p">Selections available in the <span class="Emphasis">Feature</span> field include:</p>
+        <table style="width: 100%;margin-left: 0;margin-right: auto;mc-table-style: url('../../Resources/TableStyles/standard.css');" class="TableStyle-standard" cellspacing="0">
+            <col class="TableStyle-standard-Column-Column1" />
+            <col class="TableStyle-standard-Column-Column2" />
+            <thead>
+                <tr class="TableStyle-standard-Head-Header1">
+                    <th class="TableStyle-standard-HeadE-Column1-Header1">Feature </th>
+                    <th class="TableStyle-standard-HeadD-Column2-Header1">Description</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">Auto Price</td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">Auto Generated Price Action for Automated Pricing</td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyB-Column1-Body1">Price Reversion</td>
+                    <td class="TableStyle-standard-BodyA-Column2-Body1">Auto Generated Price Action for Price Reversion</td>
+                </tr>
+            </tbody>
+        </table>
+        <h2>Price matrix strategy configuration</h2>
+        <p>The <span class="Emphasis">Price Matrix Strategy Configuration</span> tab supports the configuration of Price Strategies and the needed properties for resolving computed prices through the Price Matrix.</p>
+        <table style="width: 100%; mc-table-style: url('../../Resources/TableStyles/standard.css'); margin-left: 0; margin-right: auto;" class="TableStyle-standard" cellspacing="0">
+            <col class="TableStyle-standard-Column-Column1" />
+            <col class="TableStyle-standard-Column-Column2" />
+            <thead>
+                <tr class="TableStyle-standard-Head-Header1">
+                    <th class="TableStyle-standard-HeadE-Column1-Header1">Field</th>
+                    <th class="TableStyle-standard-HeadD-Column2-Header1">Description</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">Strategy</td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">A dropdown list with the available Price Strategies.</td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">Method</td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">The method name assigned to the selected Price Strategy.</td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">Current Price</td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">A dropdown list of variables. Selected variables are used as the source of the Current Price for the Price Matrix calculation.</td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">Base Price</td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">A dropdown list of variables. Selected variables are used as the source of the Base Price for the Price Matrix calculation.</td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyB-Column1-Body1">Validate Full Price</td>
+                    <td class="TableStyle-standard-BodyA-Column2-Body1">If checked, the Price Matrix calculation for the strategy evaluates the <span class="Emphasis">Allow Full Price</span> field.</td>
+                </tr>
+            </tbody>
+        </table>
+        <p>&#160;</p>
+    </body>
+</html>

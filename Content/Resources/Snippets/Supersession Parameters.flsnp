@@ -1,0 +1,56 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head>
+        <link href="../TableStyles/standard.css" rel="stylesheet" MadCap:stylesheetType="table" />
+    </head>
+    <body>
+        <table style="mc-table-style: url('../TableStyles/standard.css');" class="TableStyle-standard" cellspacing="0">
+            <col class="TableStyle-standard-Column-Column1" />
+            <col class="TableStyle-standard-Column-Column2" />
+            <thead>
+                <tr class="TableStyle-standard-Head-Header1">
+                    <th class="TableStyle-standard-HeadE-Column1-Header1">Parameter</th>
+                    <th class="TableStyle-standard-HeadD-Column2-Header1">Description</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">Old Item Replenishment Strategy</td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">The replenishment status for the existing (superseded) item. The status displays in the <span class="Emphasis">Old Item Type</span> field on the Supersession Grid: 
+                        <ul><li><b>Redundant:</b> the item remains in stock, but no replenishment orders for the existing item will be generated. The new (superseding) item is ordered instead to replenish the existing item's Stock on Hand.</li><li><b>Non-Stocked:</b> the item no longer remains in stock (not on the shelf) and is not replenished. The new (superseding) item is ordered instead.</li><li><b>No Change:</b> the existing item remains in stock and replenishment orders for the existing item continue to be placed.</li></ul></td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">Supersession Type</td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">Whether the supersession is  created for forecasting purposes, replenishment purposes, or both. Select:
+                        <ul><li><b>Superseded for Forecasting</b>: if the existing item continues to be replenished or will not be replaced by the new item. The existing sales history for the existing item is used to generate a demand forecast for the new item, but replenishment orders for the existing item are still generated.</li><li><b>Superseded Replenishment</b>: use the new item to replenish the stock of the existing item. The new item replaces the existing item in replenishment orders. The value of stock on hand of the existing item is copied to the new item to calculate when new items need to be ordered.</li><li><b>Both</b>: both <span class="BodyWord">Superseded for Forecasting</span> and <span class="BodyWord">Superseded for Replenishment</span> options to generate a demand forecast and replenishment strategy for the new item based on the existing item's sales history and stock on hand. The existing item is replenished with the new item based on the new demand forecast. The  value of the stock on hand of the existing item is copied to the new item to calculate when new items need to be ordered.</li></ul></td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">Sales History Start Date</td>
+                    <td rowspan="2" class="TableStyle-standard-BodyD-Column2-Body1">The  sales history of the existing item is used to calculate a demand forecast for the new item. If this field is blank,  the entire sales history of the old item is used to generate a demand forecast. To only use a particular sales date range to calculate demand, enter the start and/or end dates in these fields.</td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">Sales History End Date</td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">Supersession Start Date</td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">When the supersession becomes active. This field must be set to one lead time before the new item is expected to start selling. For example, if the lead time for the new item is 30 days and the item is to start selling on October 1, set the Supersession start date to September 1. After the supersession starts and is active, the sales history and/or stock on hand is copied to the new item.</td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">Supersession End Date</td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">When the supersession becomes inactive. In most cases, leave this field blank. If an end date is selected,  the supersession becomes inactive and is deleted along with the copied sales history and/or stock on hand when the end date is reached. </td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">Note</td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">An optional area to enter notes about the supersession. Populated with  the user's ID and a time stamp.</td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyB-Column1-Body1">Supersession Ratios</td>
+                    <td class="TableStyle-standard-BodyA-Column2-Body1">
+                        Corrects the existing item's stock on hand (replenishment ratio) and historical units sold (forecast ratio) by the specified ratio. For example, a replenishment value of 2 gives a 2:1 ratio (new item to old item) for stock on hand. If the old item's stock on hand is 100, this is converted to 200 when copied to the new item. Likewise, the value .5 in the forecast ratio decreases the old item's month-for-month sales history quantities by 50% when they are copied to the new item. 
+                        <ul><li><b>Replenishment Ratio:</b>  increases or decreases the stock on hand value copied to the new item. This is needed when an item is repackaged and the pack size is increased or decreased. </li><li><b>Forecast Ratio:</b>  increases or decreases the month-to-month sales history quantities copied to the new item.
+                            </li></ul></td>
+                </tr>
+            </tbody>
+        </table>
+    </body>
+</html>

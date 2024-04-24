@@ -1,0 +1,95 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" xml:lang="en-us">
+    <head>
+        <link href="../../Resources/TableStyles/standard.css" rel="stylesheet" MadCap:stylesheetType="table" /><title></title>
+    </head>
+    <body>
+        <h1>Monte Carlo Re-Trend Overview</h1>
+        <p>The re-trending of forecasts is an important step to correctly manage the continued allocation of products as they transition from a pre-season plan to in-season. As products begin to sell, their sales patterns inevitably trend away from the initial plan (sometimes in the positive, sometimes in the negative). The included re-trend mechanisms in ToolsGroup JustEnough account for the trends in sales and form an amended go-forward sales plan against which continued allocations may be structured. </p>
+        <p>With the initial launch of the Allocations solution, a PID mechanism was included to provide a reactive result set based on potentially limited data. With the introduction of the Monte Carlo simulation re-trend mechanism, organizations now have additional tools at their disposal to provide flexibility when dealing with irregular sales patterns. </p>
+        <p>Using historical demand for an item, a distribution for the observed demand values can be calculated  using Monte Carlo simulation.&#160; Then a dynamic confidence level is calculated based on the variability of the item’s demand and the number of observations available. </p>
+        <p>Using the confidence level and the demand distribution, a total demand value is calculated and compared to the total forecast over the same time frame.</p>
+        <p>A re-trend factor is then calculated based on a desired demand satisfaction percentage.</p>
+        <h2>Model inputs</h2>
+        <p>There are seven inputs into the model:</p>
+        <table style="mc-table-style: url('../../Resources/TableStyles/standard.css');" class="TableStyle-standard" cellspacing="0">
+            <col class="TableStyle-standard-Column-Column1" />
+            <col class="TableStyle-standard-Column-Column2" />
+            <thead>
+                <tr class="TableStyle-standard-Head-Header1">
+                    <th class="TableStyle-standard-HeadE-Column1-Header1">Input</th>
+                    <th class="TableStyle-standard-HeadD-Column2-Header1">Description</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">
+						Min multiplication factor (min mf) 
+					</td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">
+						Lower bound for re-trend factor  
+					</td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">
+						Max multiplication factor (max mf) 
+					</td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">
+						Upper bound for re-trend factor 
+					</td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">
+						Evaluation window 
+					</td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">
+						The max number of historic demand periods that will be used to calculate historic demand statistics 
+					</td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">
+						Forecast Period 
+					</td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">
+						The number of forecast periods used to calculate total forecast value. If value &lt; 0 past forecast periods are used. If value &gt; 0 future forecast periods are used (relative to the current date). It’s recommended to keep value greater than 0 with a suggested default of 12 weeks/periods. 
+					</td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">
+						Min observations 
+					</td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">
+						Items where total observations are less than minimum observations are penalized when calculating a final confidence level. 
+					<p>Needs to be greater than <span class="Emphasis">Evaluation window</span>.</p><p>Values between 4 and 12 weeks are preferable. The recommended default is 6 weeks.</p></td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">
+						Number of Simulations 
+					</td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">
+						The number of Monte Carlo simulations that will be run to generate a demand distribution. More simulationsgive a more continuous distribution but increase calculation time.  
+					<p>The recommended default value is 100 simulations (in testing 100 simulations have been sufficient for producing consistent results).</p></td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyB-Column1-Body1">
+						Desired demand satisfaction percentage 
+					</td>
+                    <td class="TableStyle-standard-BodyA-Column2-Body1">
+						The percentage of total demand that needs to be satisfied. For example, if total demand = 40, and Desired demand satisfaction percentage = 95% then total forecast needs to be equal to at least 40*0.95=38. 
+					<p>Higher values (90% and upwards) are recommended for more consistent results.</p><p>The recommended default value is 100%.</p></td>
+                </tr>
+            </tbody>
+        </table>
+        <h2>System policies</h2>
+        <p>There are several system policies specific to PID. There are also re-trend system policies that are used for both re-trend methods, which can be found below:</p>
+        <ul>
+            <li>Forecast Model - Maximum Forward Horizon Days</li>
+            <li>Sales Day For Selling Item</li>
+            <li>Allocations Minimum Retrend Multiplicative Factor</li>
+            <li>Allocations Maximum Retrend Multiplicative Factor</li>
+            <li>PID - Evaluation Window Size</li>
+        </ul>
+        <p>Although Monte Carlo and PID are different re-trend methods, they both share system policies that help frame where to operate and what bounds to set. There are PID specific parameters (Kp, Ki and Kd) which are not used by Monte Carlo.</p>
+        <p>Monte Carlo receives its inputs from the Allocation Strategy as well as through system policies.</p>
+    </body>
+</html>

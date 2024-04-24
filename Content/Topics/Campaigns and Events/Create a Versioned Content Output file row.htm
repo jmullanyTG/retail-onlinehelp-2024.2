@@ -1,0 +1,75 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" xml:lang="en-us">
+    <head>
+        <link href="../../Resources/TableStyles/standard.css" rel="stylesheet" MadCap:stylesheetType="table" /><title></title>
+    </head>
+    <body>
+        <h1>Create a versioned content output file row</h1>
+        <p>To add a row to the Configuration, click on <span class="Emphasis">New</span>, fill in the required columns, and click on <span class="Emphasis">Save</span>.</p>
+        <table style="mc-table-style: url('../../Resources/TableStyles/standard.css');" class="TableStyle-standard" cellspacing="0">
+            <thead>
+                <tr class="TableStyle-standard-Head-Header1">
+                    <th class="TableStyle-standard-HeadE-Column1-Header1">Field</th>
+                    <th class="TableStyle-standard-HeadD-Column2-Header1">Description</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">
+                       Output Column</td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">
+                        An optional column containing the data for the desktop publishing software plugin in the appropriate format. This can be the same as the <span class="Emphasis">Source Column</span> or different if the <span class="Emphasis">Source Column</span> needs to be reformatted before it can be output to desktop publishing software. If <span class="Emphasis">Output Column</span> is left blank, it is given the same name as <span class="Emphasis">Source Column</span>. A new column is created in the database if one does not already exist.
+                    </td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">
+                        Data Type </td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">
+                        (read-only) Displays the Output Column data type.
+                    </td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">
+                        Export</td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">
+Select if the field should be included in the output file. Deselect this column if a field should no longer be included in the file.
+                    </td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">
+                        Source Column </td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">
+                        Select the associated column where the necessary data is stored.
+                    </td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">
+                        Source Type</td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">
+                        Select from the following source types. The selection determines what columns populate the <span class="Emphasis">Source Column</span>.
+                        <ul><li>System ( this option should not be selected after initial configuration)</li><li>Content</li><li>Price Output</li><li>Price Output Column</li><li>Repository</li><li>Promotion Attribute</li><li>Event Info</li><li>Promotion Info</li></ul></td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">
+                        Order </td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">
+                        An optional order number for this field in the file. Unless specified otherwise, the new field is appended to the file.
+                    </td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">
+                        Friendly Name</td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">
+                        A unique user-friendly name that appears in the file header. This is required for the desktop publishing software plugin to work successfully. </td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyB-Column1-Body1">
+                        Comments</td>
+                    <td class="TableStyle-standard-BodyA-Column2-Body1">
+                       An optional description of the purpose of this field in the output file.
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </body>
+</html>

@@ -1,0 +1,146 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head>
+        <link href="../../Resources/TableStyles/standard.css" rel="stylesheet" MadCap:stylesheetType="table" />
+    </head>
+    <body>
+        <h1>Order document creation </h1>
+        <p>The Order Document Creation task automatically generates order documents as part of a scheduled job. The task uses the same parameters as for manually creating an order document in Order Manager. As many Inventory Order Document Generation tasks as is needed can be created and scheduled. </p>
+        <p>
+            <img src="../../Resources/Images/Job Manager/Inventory Order Document Generation Task Type.png" class="LargeImages" />
+        </p>
+        <h2>Task type</h2>
+        <p>Inventory Order Document Generation Task</p>
+        <h2>Task parameters</h2>
+        <p>Parameters listed in <i>italics</i> are dependent on the value selected in the <span class="Emphasis">Source</span> parameter.</p>
+        <table style="mc-table-style: url('../../Resources/TableStyles/standard.css');" class="TableStyle-standard" cellspacing="0">
+            <col class="TableStyle-standard-Column-Column1" />
+            <col class="TableStyle-standard-Column-Column2" />
+            <thead>
+                <tr class="TableStyle-standard-Head-Header1">
+                    <th class="TableStyle-standard-HeadE-Column1-Header1">Parameter</th>
+                    <th class="TableStyle-standard-HeadD-Column2-Header1">Description</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1"><span class="Emphasis">Name</span>
+                    </td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">The task name.</td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1"><span class="Emphasis">Description</span>
+                    </td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">The task description.</td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1"><span class="Emphasis">Progress Type</span>
+                    </td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">
+                         What to do if an error occurs when processing this task: 
+                        <ul><li><span class="Emphasis">Report Error And Continue</span></li><li><span class="Emphasis">Report Error And Halt</span></li></ul></td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1"><span class="Emphasis">Time Out (Seconds)</span>
+                    </td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">The timeout period.</td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1"><span class="Emphasis">Retry Count</span>
+                    </td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">The number of retry attempts to make if a timeout occurs.</td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1"><span class="Emphasis">Retry Interval</span>
+                    </td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">The time to wait in between retry attempts.</td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1"><span class="Emphasis">Task Enabled</span>
+                    </td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">
+                         Whether this task is active or disabled.  
+                        <ul><li>When selected, the task is enabled and runs if manually executed or part of a scheduled job.</li><li>When not selected, this task is disabled and will not run even if manually executed or part of a scheduled job.</li></ul></td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1"><span class="Emphasis">Source</span>
+                    </td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">
+                         The source for the order: 
+                        <ul><li>Direct Supplier</li><li>Supplier</li><li>Distribution</li><li>From Strategy Allocation</li><li>From Scenario Allocation</li></ul></td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1"><span class="Emphasis">Workflow</span>
+                    </td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">The workflow to follow for orders generated by this task.</td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1"><span class="Emphasis">Owner</span>
+                    </td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">The owner of orders generated by this task.</td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1"><span class="Emphasis">Security</span>
+                    </td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">
+                         Whether this task is public, private, or shared with select others. 
+                        <ul><li><span class="Emphasis">Private</span>: the task is only visible to the logged-in user.</li><li><span class="Emphasis">Public</span>: the task is visible to all users.</li><li><span class="Emphasis">Shared</span>: the task is visible only to selected roles and users.</li></ul></td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1"><span class="Emphasis">Filter</span>
+                    </td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1"> The item filter to use for orders generated by this task. (Direct Supplier, Supplier, and Distribution-sourced orders only.)</td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1"><span class="Emphasis">Item Filter</span>
+                    </td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">The item filter to use for orders generated by this task. (From Strategy Allocation sourced orders only.)</td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1"><span class="Emphasis">Site Filter</span>
+                    </td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">The item filter to use for orders generated by this task. (From Strategy Allocation sourced orders only.)</td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1"><span class="Emphasis">Scenario Plan</span>
+                    </td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">The scenario plan to use for orders generated by this task. (From Scenario Allocation sourced orders only.)</td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1"><span class="Emphasis">Supply Chain</span>
+                    </td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">The supply chain to use for orders generated by this task. (Not used by From Scenario Allocation sources orders.)</td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1"><span class="Emphasis">Today's Orders  This Week's Orders  Future Recommended Orders</span>
+                        <br />
+                    </td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">The order horizon to use for orders generated by this task.</td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1"><span class="Emphasis">Include Zero Orders</span>
+                    </td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">Select to enable this option for orders generated by this task.</td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1"><span class="Emphasis">Exclude Uploaded Orders</span>
+                    </td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">Select to enable this option for orders generated by this task.</td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1"><span class="Emphasis">Allow Macro Execution</span>
+                    </td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">Select to run a macro for orders generated by this task.</td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyB-Column1-Body1"><span class="Emphasis">Allow Inventory Partition Function</span>
+                    </td>
+                    <td class="TableStyle-standard-BodyA-Column2-Body1">
+                        Select to split orders generated by this task into separate documents according to the values of a specified field. 
+                        <p>When selected, choose the field to split orders by in the <span class="Emphasis">Partition By Field</span> parameter. </p><p class="Example">To split the order by supplier, partition by the Supplier Name field. The system then creates a separate order document for each supplier in the generated orders.</p></td>
+                </tr>
+            </tbody>
+        </table>
+        <p>&#160;</p>
+    </body>
+</html>

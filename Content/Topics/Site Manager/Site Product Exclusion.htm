@@ -1,0 +1,128 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" xml:lang="en-us">
+    <head>
+        <link href="../../Resources/TableStyles/standard.css" rel="stylesheet" MadCap:stylesheetType="table" /><title></title>
+    </head>
+    <body>
+        <h1>Creating  restrictions for site products</h1>
+        <p>Site product exclusion  helps manage inventory restrictions at a site level. To create restrictions, add item master filters to the exclusion list or select segment of the product hierarchy. </p>
+        <p>Only one product exclusion can be set per site at a time. Users must either create an  item master filter to fulfill the requirements or set the exclusion at an applicable level of the hierarchy. </p>
+        <p class="BasicNote">The ItemMaster Hierarchy, ItemMaster Filter Master, and Site.Capacity:Product Hierarchy filters were created as placeholder examples. Filters and system policy filters must set up  before applying restrictions for a site product. The product hierarchy used by the site product exclusion is determined by the system policy settings. </p>
+        <h2>Product exclusion sets</h2>
+        <p>Using the <span class="Emphasis">Site Product Exclusion</span> tab, users can create reusable product exclusion sets based on combinations of item filters and product hierarchy levels. After creation, product exclusion sets can be quickly assigned to any site in the grid.</p>
+        <p>
+            <img src="../../Resources/Images/Site Manager/Product Exclusion Sets.png" class="LargeImages" />
+        </p>
+        <p class="BasicNote">The hierarchy used to populate the product dimension on the <span class="Emphasis">Site Product Exclusion Set</span> tab is determined by the <span class="Emphasis">Site ItemMaster Exclude Filter ItemMaster HierarchyID</span> system policy.</p>
+        <h2>Creating product exclusion sets</h2>
+        <ol>
+            <li>
+                <p>Navigate to the <span class="Emphasis">Site Product Exclusion</span> tab and click <span class="Emphasis">New</span>. </p>
+                <p>An empty row displays.</p>
+            </li>
+            <li>Enter the name and description for the product exclusion set.</li>
+            <li>Click <span class="Emphasis">Save</span>.</li>
+            <li>In the <span class="Emphasis">Levels</span> section, click the ellipsis in the <span class="Emphasis">Levels</span> column and choose a level.</li>
+            <li>Click <span class="Emphasis">Save</span>.</li>
+            <li>In the <span class="Emphasis">Filters</span> section, click <span class="Emphasis">New</span>.</li>
+            <li>In the <span class="Emphasis">Filter</span> column, click the ellipsis to open the <span class="Emphasis">Items</span> window.</li>
+            <li>From the Filter dropdown menu, select a filter and click <span class="Emphasis">Ok</span>.</li>
+            <li>Click <span class="Emphasis">Save</span>.</li>
+        </ol>
+        <h2>Applying product exclusion sets to sites</h2>
+        <ol>
+            <li>
+                <p>Click <span class="Emphasis">Choose</span> on the Site Manager Document toolbar and include the <span class="Emphasis">Site Exclusion</span> group.</p>
+            </li>
+            <li>
+                <p>Click <span class="Emphasis">Ok</span>. </p>
+                <p>The Site Manager Document displays the <span class="Emphasis">Product Exclusion Set</span> and <span class="Emphasis">Product Exclusion Exists</span> columns. </p>
+                <table style="width: 100%;margin-left: 0;margin-right: auto;mc-table-style: url('../../Resources/TableStyles/standard.css');" class="TableStyle-standard" cellspacing="0">
+                    <col class="TableStyle-standard-Column-Column1" />
+                    <col class="TableStyle-standard-Column-Column2" />
+                    <thead>
+                        <tr class="TableStyle-standard-Head-Header1">
+                            <th class="TableStyle-standard-HeadE-Column1-Header1">Column</th>
+                            <th class="TableStyle-standard-HeadD-Column2-Header1">Description</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr class="TableStyle-standard-Body-Body1">
+                            <td class="TableStyle-standard-BodyE-Column1-Body1"><span class="Emphasis">Product Exclusion Exists</span>
+                            </td>
+                            <td class="TableStyle-standard-BodyD-Column2-Body1">If a product exclusion set has been applied to the selected site.</td>
+                        </tr>
+                        <tr class="TableStyle-standard-Body-Body1">
+                            <td class="TableStyle-standard-BodyB-Column1-Body1"><span class="Emphasis">Product Exclusion Set</span>
+                            </td>
+                            <td class="TableStyle-standard-BodyA-Column2-Body1">Specifies the product exclusion set applied to the site.</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </li>
+            <li>
+                <p>Click in the <span class="Emphasis">Product Exclusion Set</span> field.</p>
+            </li>
+            <li>
+                <p>Click the dropdown arrow and select a product exclusion set from the list.</p>
+            </li>
+            <li>
+                <p>Click <span class="Emphasis">Save</span> on the toolbar.</p>
+                <p> The Site Manager Document refreshes and the checkbox in the <span class="Emphasis">Product Exclusion Exists</span> field is checked.</p>
+            </li>
+        </ol>
+        <h2>ItemMaster Hierarchy Level </h2>
+        <p> Selecting <span class="Emphasis">ItemMaster Hierarchy Level</span> from the Exclude Filter Type displays  a tree wizard with  the selected hierarchy as set by the system policy. Levels to be excluded must be selected.</p>
+        <h2>ItemMaster FilterMaster</h2>
+        <p>If <span class="Emphasis">ItemMaster Filter Master</span> is selected from the Exclude Filter Type, then select a filter from the filter chooser to be applied.</p>
+        <p>
+            <img src="../../Resources/Images/Site Manager/Exclude Filter Type.png" class="LargeImages" />
+        </p>
+        <h2>Field descriptions</h2>
+        <table style="mc-table-style: url('../../Resources/TableStyles/standard.css');margin-left: 0;margin-right: auto;" class="TableStyle-standard" cellspacing="0">
+            <col class="TableStyle-standard-Column-Column1" style="width: 20%;" />
+            <col class="TableStyle-standard-Column-Column2" style="width: 80%;" />
+            <thead>
+                <tr class="TableStyle-standard-Head-Header1">
+                    <th class="TableStyle-standard-HeadE-Column1-Header1">Field</th>
+                    <th class="TableStyle-standard-HeadD-Column2-Header1">Description</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">Site Code
+                    </td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">
+                         The numeric site code of the selected site. 
+                    </td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">Site Description
+                    </td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">Description of the selected site. </td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">Exclude Filter Type
+                    </td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">
+                         Determines the method for product exclusion. The eligibility does not overlap. 
+                        <ul><li>ItemMaster Hierarchy Level: if selected, the Exclude Levels field becomes active letting users select segments of the product hierarchy for exclusion. </li><li>ItemMaster Filter Master: if selected, the Filter Master ID field becomes active letting users select products for exclusion based on an item master filter. </li></ul></td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">Field Master ID
+                    </td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">
+                         If selected, select products for exclusion based on an item master filter. 
+                    </td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyB-Column1-Body1">Exclude Levels
+                    </td>
+                    <td class="TableStyle-standard-BodyA-Column2-Body1">
+                         If selected, select segments of the product hierarchy for exclusion. 
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </body>
+</html>

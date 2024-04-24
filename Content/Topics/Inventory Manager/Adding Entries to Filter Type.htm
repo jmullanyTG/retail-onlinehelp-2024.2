@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" xml:lang="en-us">
+    <head><title></title>
+    </head>
+    <body>
+        <h1>Adding entries to filter type</h1>
+        <p>After views are created (or data tables have been populated), entries must be made to <span class="Emphasis">tbl_FilterType</span>. This determines how the data contained within the view is organized and accessed within the user interface and by the filtering machinery. </p>
+        <ul>
+            <li><span class="Emphasis">FilterTypeID</span> – Unique identifier. Will be referenced as the primary key by <span class="Emphasis">tbl_Common_Filter_MetaViewData</span>.</li>
+            <li><span class="Emphasis">FilterTypeDescription</span> – The grouping for the filter data. </li>
+            <li><span class="Emphasis">FilterViewName</span> – Name of the view (or table) which has been created and contains the reference data. </li>
+            <li><span class="Emphasis">MetaDataViewName</span> – The reference table containing the metadata. Best practice – set this value to <span class="Emphasis">tbl_Common_Filter_MetaViewData</span>.</li>
+            <li><span class="Emphasis">PrimaryKeyFieldName</span> – The primary key referenced within the view. </li>
+            <li><span class="Emphasis">DuplicateFlag</span> – not used.</li>
+            <li><span class="Emphasis">DefaultFlag</span> – If set to <span class="Emphasis">1</span>, data from this view is returned within the grid at launch of all document types for the filter entity. </li>
+            <li><span class="Emphasis">FilterEntityTypeID</span> – The ID of the filter entity type.<ul><li><span class="Emphasis">0</span> – Inventory</li><li><span class="Emphasis">1</span> – ItemMaster</li><li><span class="Emphasis">2</span> – Site </li><li><span class="Emphasis">3</span> – Supplier</li><li><span class="Emphasis">4</span> – Customer</li><li><span class="Emphasis">5</span> – Promotion</li><li><span class="Emphasis">6</span> – KeyItem </li><li><span class="Emphasis">7</span> – Event</li><li><span class="Emphasis">8</span> – KeyItemVariant</li><li><span class="Emphasis">9</span> – File </li><li><span class="Emphasis">10</span> – ItemMasterGroup</li><li><span class="Emphasis">11</span> – CustomerInventory</li><li><span class="Emphasis">12</span> – Variant</li><li><span class="Emphasis">13</span> – VariantGroup</li></ul></li>
+        </ul>
+    </body>
+</html>

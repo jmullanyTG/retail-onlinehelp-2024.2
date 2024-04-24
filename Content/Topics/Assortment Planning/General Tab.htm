@@ -1,0 +1,90 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" xml:lang="en-us">
+    <head>
+        <link href="../../Resources/TableStyles/standard.css" rel="stylesheet" MadCap:stylesheetType="table" />
+        <title>
+        </title>
+    </head>
+    <body>
+        <h1>General tab </h1>
+        <p>Displays settings for the plan selected in the top section of the <span class="Emphasis">Manage Assortment Plans</span> dialog. </p>
+        <p>
+            <img src="../../Resources/Images/Assortment Planning/General tab.png" class="LargeImages" />
+        </p>
+        <h2>Editing assortment plans</h2>
+        <ul>
+            <li>Click <span class="Emphasis">Edit</span> on the toolbar and edit the plan in the <span class="Emphasis">Update Assortment</span> dialog.</li>
+        </ul>
+        <h2>Update Assortment dialog buttons</h2>
+        <p>
+            <span class="Emphasis">Cancel</span>: Closes the <span class="Emphasis">Add Assortment</span> dialog without saving the new plan.</p>
+        <p>
+            <span class="Emphasis">Save and Close</span>: Saves the assortment plan and closes the dialog once all required parameters are set.</p>
+        <p>The following message displays if the required parameters are not set:</p>
+        <p>
+            <img src="../../Resources/Images/Assortment Planning/Required_Parameters_error.png" style="width: 616px;height: 238px;" />
+        </p>
+        <h2>General tab field descriptions</h2>
+        <p>
+            <span class="Emphasis">Name</span>: The name for the assortment plan.</p>
+        <p>
+            <span class="Emphasis">Description</span>: A description for the assortment plan.</p>
+        <p>
+            <span class="Emphasis">Calendar</span>: The calendar for the assortment plan. Set the calendar at the lowest level period to be planned in the assortment plan.</p>
+        <p>
+            <span class="Emphasis">Period</span>: The lowest level period to be planned in the assortment plan.</p>
+        <p>
+            <span class="Emphasis">Product Hierarchy</span>: The product hierarchy for the assortment plan.</p>
+        <p>
+            <span class="Emphasis">Level Contribution</span>: The product hierarchy level at which location % contribution tables are calculated.</p>
+        <p>
+            <span class="Emphasis">Site Hierarchy</span>: The location hierarchy for the assortment plan. </p>
+        <p class="Important">Cluster sets to be used within an assortment plan must be contained within a single leaf level of the assigned Site Hierarchy. </p>
+        <p>For example, if a hierarchy is assigned that goes down to Country level and contains the leaves North America, Canada, and UK, then cluster sets within the assortment plan cannot have sites that exist in more than one country.</p>
+        <p>
+            <span class="Emphasis">Linked Financial Plan</span>: An optional merchandise financial plan to which the assortment plan is linked.</p>
+        <p>
+            <span class="Emphasis">Default Currency</span>: The base currency to be used for all revenue metrics in the assortment plan.</p>
+        <p>
+            <span class="Emphasis">Home Site</span>: A site to use for determining the home currency VAT % to apply when calculating AUT/AUR within the assortment plan. This field populates from sites within the selected site hierarchy that have an assigned currency matching the selected default currency: </p>
+        <table style="width: 100%;margin-left: auto;margin-right: auto;mc-table-style: url('../../Resources/TableStyles/standard.css');" class="TableStyle-standard" cellspacing="0">
+            <col class="TableStyle-standard-Column-Column1" />
+            <thead>
+                <tr class="TableStyle-standard-Head-Header1">
+                    <th class="TableStyle-standard-HeadD-Column1-Header1">Notes</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyD-Column1-Body1">As VAT rates can fluctuate throughout the planning season, this value is linked to a site rather than using an explicit rate so that the Home VAT % can change dynamically as needed.</td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyD-Column1-Body1">To accommodate cases where the site chosen as the Home Site closes or becomes otherwise inactive, this parameter remains editable even after the user begins making changes within the assortment plan.</td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyD-Column1-Body1">System policy <span class="Emphasis">Allow DCs as Home Site</span> determines whether sites of type DC appear for selection as the Home Site. This is to accommodate scenarios where planning occurs in a currency and/or country where there are no non-DC sites present.</td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyD-Column1-Body1">Changing the home site in an existing plan initiates a recalculation of all VAT dependent metrics within such as AUT/AUR, etc.</td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyA-Column1-Body1">The site selected for the Home Site should mirror the currency and VAT % to be used as a basis for planning activities.</td>
+                </tr>
+            </tbody>
+        </table>
+        <p>
+            <span class="Emphasis">Sales Types</span>: The sales types used in the location % contribution calculations for the assortment plan.</p>
+        <p>
+            <span class="Emphasis">DC Split Factor Type</span>: The default is <span class="Emphasis">Legacy AP</span>. Custom stock splitting preferences for DCs that are servicing multiple Cluster Set Clusters can be uploaded. Custom split factors display in the dropdown menu.</p>
+        <p>
+            <span class="Emphasis">Period Horizon</span>: The rolling number of weeks into the future that the assortment plan will extend</p>
+        <p>
+            <span class="Emphasis">Actualized AUC Cost Type</span>: The cost type to use to actualize Stock On Hand Cost.</p>
+        <p>
+            <span class="Emphasis">Created By</span>: The name of the user who created the assortment plan.</p>
+        <p>
+            <span class="Emphasis">Created Date</span>: The date the assortment plan was created on.</p>
+        <p>
+            <span class="Emphasis">Last Initialized</span>: The date the Seed process was last completed for the assortment plan.</p>
+    </body>
+</html>

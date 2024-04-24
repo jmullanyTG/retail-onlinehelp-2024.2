@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" xml:lang="en-us">
+    <head><title></title>
+    </head>
+    <body>
+        <h1>Split modes</h1>
+        <p>Higher level forecast types have multiple selectable split methods which can be applied by type through system polices. </p>
+        <ul>
+            <li>Aggregate Item Sales – Aggregated inventory sales history (this may be set by inventory history or sales history by type, selectable through a system policy).</li>
+            <li>Aggregate Site Sales (Applies to Aggregate Forecasting only) – Aggregated Sales at all sites.</li>
+            <li>Temporal Forecast – Split using the forecast that varies by time period.</li>
+            <li>Custom – Custom aggregate factors provided by end users or through a custom procedure.</li>
+        </ul>
+        <p>A default split type for all forecast types will be set as a system policy, and each forecast type may be assigned a specific split type beyond the default. </p>
+        <p>Aggregate Item Sales and Aggregate Site Sales are cached  (usp_Forecast_Split_Calculate)  whenever possible. In Group Forecasting, because a group forecast can vary depending upon which sales types a model uses, the factors are calculated real time.&#160; </p>
+        <p>For Level, Aggregate, and Profile forecasts, the system expects cached entries. If no cached entries are found, a temporal forecast is used to fill in missing factors.</p>
+    </body>
+</html>

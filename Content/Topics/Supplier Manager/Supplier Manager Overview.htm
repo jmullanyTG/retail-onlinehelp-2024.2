@@ -1,0 +1,35 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" xml:lang="en-us">
+    <head><title></title>
+    </head>
+    <body>
+        <h1>Supplier Manager Overview</h1>
+        <p>The <span class="Emphasis">Supplier Manager</span> module is used to view imported supplier information, maintain supplier schedules, and manage supplier specific data. </p>
+        <p>Supplier Manager documents follow many of the same conventions and mechanisms as management documents within Inventory Manager, Site Manager, and Variant Manager. Once created, reporting documents can be un-docked, managed through tabs, or moved to support custom layouts. </p>
+        <p>Supplier ordering and receiving schedules are managed by clicking <span class="Emphasis">Choose</span> and selecting the <span class="Emphasis">Supplier Schedules</span> group.</p>
+        <p class="BasicNote">&#160;As ToolsGroup JustEnough has no control or exposure related to how long the internal lead-time is for a supplier between the date on which they receive an order and the date on which they ship it, the concept of shipping schedules does not exist within the application.</p>
+        <p>
+            <img src="../../Resources/Images/Supplier/Supplier Schedules Columns.png" class="LargeImages" />
+        </p>
+        <p>With the columns displaying in the grid, receiving schedules and ordering schedules are selected using the dropdown menu of available schedule sets as configured within the Schedules module. </p>
+        <p>
+            <img src="../../Resources/Images/Supplier/Supplier Manager Grid.png" class="LargeImages" />
+        </p>
+        <p>Two separate schedule sets can be applied to a supplier for the purposes of controlling ordering behavior: <span class="Emphasis">Ordering Schedule</span> and <span class="Emphasis">Receiving Schedule</span>. </p>
+        <ul>
+            <li><span class="Emphasis">Ordering Schedule</span> – The dates on which an order can be placed with a supplier. </li>
+            <li><span class="Emphasis">Receiving Schedule</span> – The dates on which a supplier is allowed to deliver to any site. </li>
+        </ul>
+        <p class="BasicNote">An effective shipping schedule can be created through a combination of lead-time (supplier processing) factors and ordering schedules if desired, but it is important to understand the distinction between the two available schedule types and a specific shipping schedule. </p>
+        <h2>Reviewing suppliers associated with Attributes</h2>
+        <p>Within the Supplier Manager module, selecting a supplier in the top grid refreshes the <span class="Emphasis">Supplier Capacity Report</span> blade to display the Attributes associated with the supplier. Users define the production capacity (what the supplier can make and how much they can make) for each Attribute for a time period. Construction type is an Attribute of the supplier and is also an Attribute of items. Construction type is not a level of the hierarchy.</p>
+        <p class="BasicNote">The supplier and the construction types that the supplier can provide are visible in a blade within Order Manager labeled <span class="Emphasis">Supplier Capacity Report</span>. </p>
+        <h2>Specifying capacities in time periods</h2>
+        <p>The <span class="Emphasis">Supplier Construction Type Capacity</span> blade (Supplier Manager module) shows a cross product of time buckets and construction type of the selected supplier. Users should use this blade to define the production capacity of a supplier for the given time bucket.  If a time frame is left unedited, it is assumed the supplier has an unlimited capacity for the given time frame for that construction type.</p>
+        <p class="BasicNote">System policy <span class="Emphasis">Supplier Constraint: Bucket Type</span> (Module: Order Manager) defines the time period to use for the supplier constraint. The bucket range is based on today and the value for existing system policy <span class="Emphasis">Future Days</span> (Engine: Forecasts).</p>
+        <p>
+            <img src="../../Resources/Images/Supplier/Supplier Construction Type Capacity Widget.png" class="LargeImages" />
+        </p>
+        <p>Only the <span class="Emphasis">Total Supplier Quantity</span> field is editable with all other columns being read-only. Planners can multi-select cells in the <span class="Emphasis">Total Supplier Quantity</span> field to specify the capacity in that bucket.</p>
+    </body>
+</html>

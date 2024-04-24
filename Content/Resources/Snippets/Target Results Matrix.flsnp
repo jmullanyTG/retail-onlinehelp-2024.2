@@ -1,0 +1,67 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head>
+    </head>
+    <body>
+        <p>The <span class="Emphasis">Results Matrix</span> view displays the output of Rationalization which is the marginal return matrices generated for all segments, cluster sets, and clusters.</p>
+        <p>
+            <img src="../Images/Target Choice Count/Results Matrix.png" class="LargeImages">
+            </img>
+        </p>
+        <p class="BasicNote">To condense the view as above, right-click in the data grid and select the <span class="Emphasis">Best Fit Columns</span> menu option.
+</p>
+        <p>Whereas the <span class="Emphasis">TY Constrained Recommended New Choices</span> field might show a recommendation of 32 for Cluster A, the <span class="Emphasis">Results Matrix</span> view breaks this down allowing users to see that the actual recommendation is:</p>
+        <ul>
+            <li>
+                <p>1 style in 4 colors</p>
+            </li>
+            <li>
+                <p>3 styles each in 3 colors</p>
+            </li>
+            <li>
+                <p>7 styles each in 2 colors</p>
+            </li>
+            <li>
+                <p>5 styles with their own color</p>
+            </li>
+        </ul>
+        <h3>Results Matrix grid formatting</h3>
+        <p>The formatting is as follows:
+</p>
+        <ul>
+            <li>
+                <p>Green background, black text: choices as recommended by the Rationalization process; the count of these cells is consistent with the same-formatted <span class="Emphasis">TY Recommended New Choices</span> field in Target Worksheet.
+
+</p>
+            </li>
+            <li>
+                <p>Green background, blue text: additional choices as recommended by the Constraint configuration; the count of these cells is consistent with the same formatted <span class="Emphasis">TY Constrained Recommended New Choices</span> field in Target Worksheet.
+
+</p>
+            </li>
+            <li>
+                <p>Blue background, blue text: additional choices as specified by the user; the count of these cells is consistent with the same formatted <span class="Emphasis">TY Act New Choices</span> field in Target Worksheet.
+
+</p>
+            </li>
+            <li>
+                <p>Gray background, red text: choices that were recommended by Rationalization and/or Constraint processes, but were removed due to a lower value entered in <span class="Emphasis">TY Act New Choices</span>. </p>
+            </li>
+        </ul>
+        <h3>Actual marginal return matrix values</h3>
+        <p>
+
+By default, the matrix shows the numerical ranking of matrix values. To view the actual marginal return matrix values, add the field using the <span class="Emphasis">Fields</span> menu.  The matrix values are used to split the Target value across choices.  For example, if this is the matrix for the first style:</p>
+        <p>By default, the matrix shows the <span class="Emphasis">Ranking</span> field with its numerical ranking of matrix values. To view the actual marginal return matrix values, add the <span class="Emphasis">Curve Value</span> field using the <span class="Emphasis">Fields</span> menu. The matrix values are used to split the Target value across choices. For example, if this is the matrix for the first style:</p>
+        <p>
+            <img src="../Images/Target Choice Count/Results Matrix Ratio.png" class="LargeImages">
+            </img>
+        </p>
+        <p>The ratio between matrix values is held in the ratio of TY sales values in the <span class="Emphasis">Target New Choices</span> tab:</p>
+        <p>
+            <img src="../Images/Target Choice Count/Results Matrix Ratio New Choices Tab.png" class="LargeImages">
+            </img>
+        </p>
+        <p>For example, the second color in the collection will have 62.3% of the sales of the first color. In the <span class="Emphasis">Target New Choices</span> tab, the ratio between the second choice and first choice is 3,966 / 6,368 = 62.5%.</p>
+    </body>
+</html>

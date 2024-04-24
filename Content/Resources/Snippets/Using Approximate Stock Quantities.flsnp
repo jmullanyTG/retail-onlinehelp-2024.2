@@ -1,0 +1,44 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head>
+    </head>
+    <body>
+        <p>Within the <span class="Emphasis">Target Worksheet</span> and <span class="Emphasis">Target New Choices</span> grids, recommended placeholders include Sales $ and Sales U targets. The stock needed to meet those Sales targets is not included in the Target Creation results due to Receipts being calculated later in the Assortment Planning process when other metrics such as Receipt eligible weeks, Presentation Minimums, Allow Receipts after Markdown, etc. are considered.</p>
+        <p>However, visibility to an approximate receipt or stock plan greatly helps planners decide whether to proceed with a choice recommendation. For example, planners may have an idea of the number of sizes needed per placeholder as a setup quantity. Depending on the store count within a Cluster Set/Cluster and the number of sizes needed for a presentation, the recommended Sales might not justify buying that choice, because the stock needed to setup is much greater than the Sales potential.</p>
+        <p>The target segment configuration section and the Target Worksheet include the following two user editable metrics:</p>
+        <ul>
+            <li>
+                <p><span class="Emphasis">Target S/T %</span>: Target Sales to Total Target Stock</p>
+            </li>
+            <li>
+                <p><span class="Emphasis">Min Pres</span>:  The initial value is seeded from Hierarchy Defaults in AP mode. In standalone mode, the values do not seed.  Only Hierarchy Defaults are used. Hierarchy Defaults by Cluster and Hierarchy Defaults by Time are not used.  </p>
+            </li>
+        </ul>
+        <p><span class="Emphasis">Target S/T %</span> and <span class="Emphasis">Min Pres</span> can be defaulted at the segment level in the segment definitions widget, and both values can be overwritten at the cluster set / cluster level in the Target Worksheet.</p>
+        <p>Five read-only Approximate Stock Unit metrics are available in the Target Worksheet and Target New Choices grids. The metrics in the Target Worksheet are an aggregate for all new styles while in the <span class="Emphasis">Target New Choices</span> grid, the metrics show values per choice.</p>
+        <p>To support differing strategic approaches to target stock levels at different organizations or product levels, there are two sets of metrics that show approximate stock levels at stores at regular prices for new choices.</p>
+        <p>Firstly, approximate stock levels are calculated based solely on sell-through (ST%) targets without concern for maintaining minimum presentation throughout regular price selling periods. In this scenario, saleable stock is gradually depleted by sales throughout the regular price selling period, which may not be an issue where shoppers have lots of choices and are willing to substitute one choice for another. This approach helps avoid having excess inventory at the end of the regular price selling period for all styles. The metrics supporting this logic are:</p>
+        <ul>
+            <li>
+                <p><span class="Emphasis">Approx Stock Units (S/T %)</span>: TY Act New Sales Units / Target Sell Through %</p>
+            </li>
+            <li>
+                <p><span class="Emphasis">Approx Stock Units By Site (S/T %)</span>: Approx Stock Units (S/T%) / TY Plan Site Count</p>
+            </li>
+        </ul>
+        <p>Secondly, approximate stock levels are calculated with the requirements to have enough stock to meet sales and maintain a full minimum presentation throughout the regular price selling period. The metrics supporting this logic are:</p>
+        <ul>
+            <li>
+                <p><span class="Emphasis">Approx Stock Units (Min Pres)</span>: TY Act New Sales Units + (TY Plan Site Count * Min Pres)</p>
+            </li>
+            <li>
+                <p><span class="Emphasis">Approx Stock Units By Site (Min Pres)</span>: Approx Stock Units (Min Pres) / TY Plan Site Count</p>
+            </li>
+            <li>
+                <p><span class="Emphasis">Sales To Approx Stock Units (Min Pres)</span>: TY Act New Sales Units / Approx Stock Units (Min Pres)</p>
+            </li>
+        </ul>
+        <p>An approximate stock target based on Sales plus Min Pres does not respond to a defined ST% target. The <span class="Emphasis">Sales To Approx Stock Units (Min Pres)</span> metric is an Approximate ST% allowing for a comparison of the result of the (Min Pres) calculations to an ST%.</p>
+        <p class="BasicNote">All 5 metrics are available for use as needed. If some of these metrics are not useful based on the strategy in place, those metrics can be hidden using the <span class="Emphasis">Fields</span> selector.</p>
+    </body>
+</html>

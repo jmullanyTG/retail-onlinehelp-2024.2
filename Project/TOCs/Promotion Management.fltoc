@@ -1,0 +1,324 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<CatapultToc
+  Version="1">
+  <TocEntry
+    Title="[%=System.LinkedTitle%]"
+    Link="/Content/Resources/Global/PrintCover.htm" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd"
+    conditions="General.PrintOnly"
+    StartSection="false"
+    BreakType="chapter"
+    PageNumberReset="reset"
+    PageNumber="1"
+    PageLayout="/Content/Resources/PageLayouts/FrontMatter.flpgl"
+    PageType="title"></TocEntry>
+  <TocEntry
+    Title="[%=System.LinkedTitle%]"
+    Link="/Content/Resources/Global/copyright.htm" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd"
+    conditions="General.PrintOnly"
+    StartSection="false"
+    BreakType="pageLayout"
+    PageNumberReset="continue" />
+  <TocEntry
+    Title="[%=System.LinkedTitle%]"
+    Link="/Content/Resources/Global/Table of Contents.htm" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd"
+    conditions="General.PrintOnly"
+    StartSection="false"></TocEntry>
+  <TocEntry
+    Title="[%=System.LinkedTitle%]"
+    Link="/Content/Topics/Promotion Management/Promotion Management Overview.htm"
+    BreakType="pageLayout"
+    AutoEndOnLeftPage="disabled"
+    StartSection="false"
+    PageLayout="/Content/Resources/PageLayouts/Default.flpgl">
+    <TocEntry
+      Title="[%=System.LinkedTitle%]"
+      Link="/Content/Topics/Promotion Management/Promotion list.htm"></TocEntry>
+    <TocEntry
+      Title="[%=System.LinkedTitle%]"
+      Link="/Content/Topics/Promotion Management/Promotions Planner tab.htm" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+      <TocEntry
+        Title="[%=System.LinkedTitle%]"
+        Link="/Content/Topics/Views/Promotion Planner Custom View Collection Set.htm" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" />
+      <TocEntry
+        Title="[%=System.LinkedTitle%]"
+        Link="/Content/Topics/Views/Price Planner Template.htm" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" />
+    </TocEntry>
+    <TocEntry
+      Title="[%=System.LinkedTitle%]"
+      Link="/Content/Topics/Promotion Management/Promotion Calendars.htm"></TocEntry>
+    <TocEntry
+      Title="[%=System.LinkedTitle%]"
+      Link="/Content/Topics/Promotion Management/Create a Promotion Wizard.htm">
+      <TocEntry
+        Title="[%=System.LinkedTitle%]"
+        Link="/Content/Topics/Promotion Management/Adding products promoted price or promoted discount type.htm" />
+      <TocEntry
+        Title="[%=System.LinkedTitle%]"
+        Link="/Content/Topics/Promotion Management/Adding products buy get type Promotion Strategies.htm" />
+    </TocEntry>
+    <TocEntry
+      Title="[%=System.LinkedTitle%]"
+      Link="/Content/Topics/Promotion Management/Creating promotions based on existing promotions.htm" />
+    <TocEntry
+      Title="[%=System.LinkedTitle%]"
+      Link="/Content/Topics/Promotion Management/Modify a Promotion.htm">
+      <TocEntry
+        Title="[%=System.LinkedTitle%]"
+        Link="/Content/Topics/Promotion Management/Messages.htm" />
+      <TocEntry
+        Title="[%=System.LinkedTitle%]"
+        Link="/Content/Topics/Promotion Management/Promotion Content.htm">
+        <TocEntry
+          Title="[%=System.LinkedTitle%]"
+          Link="/Content/Topics/Promotion Management/Text.htm" />
+        <TocEntry
+          Title="[%=System.LinkedTitle%]"
+          Link="/Content/Topics/Promotion Management/Images.htm" />
+        <TocEntry
+          Title="[%=System.LinkedTitle%]"
+          Link="/Content/Topics/Promotion Management/Content Update window.htm" />
+      </TocEntry>
+      <TocEntry
+        Title="[%=System.LinkedTitle%]"
+        Link="/Content/Topics/Promotion Management/Change Promotion Status.htm" />
+      <TocEntry
+        Title="[%=System.LinkedTitle%]"
+        Link="/Content/Topics/Promotion Management/Promotion Site Clusters.htm"></TocEntry>
+      <TocEntry
+        Title="[%=System.LinkedTitle%]"
+        Link="/Content/Topics/Promotion Management/Site cluster validation statuses.htm" />
+      <TocEntry
+        Title="[%=System.LinkedTitle%]"
+        Link="/Content/Topics/Promotion Management/Site cluster inventory.htm" />
+      <TocEntry
+        Title="[%=System.LinkedTitle%]"
+        Link="/Content/Topics/Promotion Management/Promotion Site Cluster Sites.htm" />
+      <TocEntry
+        Title="[%=System.LinkedTitle%]"
+        Link="/Content/Topics/Promotion Management/Adding Sites Removing Sites From Site Clusters.htm" />
+      <TocEntry
+        Title="[%=System.LinkedTitle%]"
+        Link="/Content/Topics/Promotion Management/Price Cluster Items.htm">
+        <TocEntry
+          Title="[%=System.LinkedTitle%]"
+          Link="/Content/Topics/Promotion Management/Remove products from a Site Cluster.htm" />
+      </TocEntry>
+      <TocEntry
+        Title="[%=System.LinkedTitle%]"
+        Link="/Content/Topics/Promotion Management/Price Details.htm">
+        <TocEntry
+          Title="[%=System.LinkedTitle%]"
+          Link="/Content/Topics/Promotion Management/Price Detail Promotion Strategy.htm" />
+        <TocEntry
+          Title="[%=System.LinkedTitle%]"
+          Link="/Content/Topics/Promotion Management/Price Detail display positions slots.htm" />
+      </TocEntry>
+      <TocEntry
+        Title="[%=System.LinkedTitle%]"
+        Link="/Content/Topics/Promotion Management/Bids.htm" />
+      <TocEntry
+        Title="[%=System.LinkedTitle%]"
+        Link="/Content/Topics/Promotion Management/Companion items.htm" />
+      <TocEntry
+        Title="[%=System.LinkedTitle%]"
+        Link="/Content/Topics/Promotion Management/Analysis.htm" />
+    </TocEntry>
+    <TocEntry
+      Title="[%=System.LinkedTitle%]"
+      Link="/Content/Topics/Promotion Management/Sync Promotion screen.htm" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" />
+    <TocEntry
+      Title="[%=System.LinkedTitle%]"
+      Link="/Content/Topics/Promotion Management/Delete a Promotion.htm" />
+    <TocEntry
+      Title="[%=System.LinkedTitle%]"
+      Link="/Content/Topics/Promotion Management/Promotion Management Configuration.htm">
+      <TocEntry
+        Title="[%=System.LinkedTitle%]"
+        Link="/Content/Topics/Promotion Management/Promotion Manager Global Policies.htm" />
+      <TocEntry
+        Title="[%=System.LinkedTitle%]"
+        Link="/Content/Topics/Promotion Management/Promotion Manager User Rights.htm" />
+      <TocEntry
+        Title="[%=System.LinkedTitle%]"
+        Link="/Content/Topics/Promotion Management/Rounding Rules (Promotions).htm" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" />
+      <TocEntry
+        Title="[%=System.LinkedTitle%]"
+        Link="/Content/Topics/Promotion Management/Calculations Tab.htm">
+        <TocEntry
+          Title="[%=System.LinkedTitle%]"
+          Link="/Content/Topics/Promotion Management/Calculation sets.htm" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" />
+        <TocEntry
+          Title="[%=System.LinkedTitle%]"
+          Link="/Content/Topics/Promotion Management/Calculations assigned to a Calculation Set.htm"></TocEntry>
+        <TocEntry
+          Title="Promotion calculations examples"
+          Link="/Content/Topics/Promotion Management/Promotion Calculations Examples.htm">
+          <TocEntry
+            Title="Calculations examples "
+            Link="/Content/Topics/Promotion Management/Calculations Examples.htm">
+            <TocEntry
+              Title="[%=System.LinkedTitle%]"
+              Link="/Content/Topics/Promotion Management/EDLP Promotion Strategy specific Calculations.htm" />
+            <TocEntry
+              Title="[%=System.LinkedTitle%]"
+              Link="/Content/Topics/Promotion Management/Fixed Promotion Strategy specific Calculations.htm" />
+            <TocEntry
+              Title="[%=System.LinkedTitle%]"
+              Link="/Content/Topics/Promotion Management/Amount off Promotion Strategy specific Calculations.htm" />
+            <TocEntry
+              Title="[%=System.LinkedTitle%]"
+              Link="/Content/Topics/Promotion Management/Percent off Promotion Strategy specific Calculations.htm" />
+            <TocEntry
+              Title="[%=System.LinkedTitle%]"
+              Link="/Content/Topics/Promotion Management/Multi buy Promotion Strategy specific Calculations.htm" />
+            <TocEntry
+              Title="[%=System.LinkedTitle%]"
+              Link="/Content/Topics/Promotion Management/BOGO AA Free Promotion Strategy specific Calculations.htm" />
+            <TocEntry
+              Title="[%=System.LinkedTitle%]"
+              Link="/Content/Topics/Promotion Management/BOGO AB Free Promotion Strategy specific Calculations.htm" />
+            <TocEntry
+              Title="[%=System.LinkedTitle%]"
+              Link="/Content/Topics/Promotion Management/BOGO AA Amount Off Promotion Strategy specific Calculations.htm" />
+            <TocEntry
+              Title="[%=System.LinkedTitle%]"
+              Link="/Content/Topics/Promotion Management/BOGO AB Amount Off Promotion Strategy specific Calculations.htm" />
+            <TocEntry
+              Title="[%=System.LinkedTitle%]"
+              Link="/Content/Topics/Promotion Management/BOGO AA Percent Off Promotion Strategy specific Calculations.htm" />
+            <TocEntry
+              Title="[%=System.LinkedTitle%]"
+              Link="/Content/Topics/Promotion Management/BOGO AB Percent Off Promotion Strategy specific Calculations.htm" />
+            <TocEntry
+              Title="[%=System.LinkedTitle%]"
+              Link="/Content/Topics/Promotion Management/Multi Buy Amount Off Promotion Strategy Specific Calculations.htm" />
+            <TocEntry
+              Title="[%=System.LinkedTitle%]"
+              Link="/Content/Topics/Promotion Management/Multi Buy Percent Off Promotion Strategy Specific Calculations.htm" />
+            <TocEntry
+              Title="[%=System.LinkedTitle%]"
+              Link="/Content/Topics/Promotion Management/BOGO AA Promo Price Promotion Strategy specific Calculations.htm" />
+            <TocEntry
+              Title="[%=System.LinkedTitle%]"
+              Link="/Content/Topics/Promotion Management/BOGO AB Promo Price Promotion Strategy specific Calculations.htm" />
+            <TocEntry
+              Title="[%=System.LinkedTitle%]"
+              Link="/Content/Topics/Promotion Management/Spend X Get Amount Discount Promotion Strategy specific Calculations.htm" />
+            <TocEntry
+              Title="[%=System.LinkedTitle%]"
+              Link="/Content/Topics/Promotion Management/Spend X Get Percent Discount Promotion Strategy specific.htm" />
+            <TocEntry
+              Title="[%=System.LinkedTitle%]"
+              Link="/Content/Topics/Promotion Management/Spend X Get Multiply Points Promotion Strategy specific Calculations.htm" />
+            <TocEntry
+              Title="[%=System.LinkedTitle%]"
+              Link="/Content/Topics/Promotion Management/Spend X Get Points Promotion Strategy specific Calculations.htm" />
+            <TocEntry
+              Title="[%=System.LinkedTitle%]"
+              Link="/Content/Topics/Promotion Management/Spend X Get Gift Card Promotion Strategy specific Calculations.htm" />
+            <TocEntry
+              Title="[%=System.LinkedTitle%]"
+              Link="/Content/Topics/Promotion Management/Standard aggregation Calculations.htm" />
+          </TocEntry>
+          <TocEntry
+            Title="[%=System.LinkedTitle%]"
+            Link="/Content/Topics/Promotion Management/Calculation Sets Examples.htm">
+            <TocEntry
+              Title="[%=System.LinkedTitle%]"
+              Link="/Content/Topics/Promotion Management/EDLP Promotion Strategy Calculation Set.htm" />
+            <TocEntry
+              Title="[%=System.LinkedTitle%]"
+              Link="/Content/Topics/Promotion Management/Fixed Promotion Strategy Calculation Set.htm" />
+            <TocEntry
+              Title="[%=System.LinkedTitle%]"
+              Link="/Content/Topics/Promotion Management/Amount off Promotion Strategy Calculation Set.htm" />
+            <TocEntry
+              Title="[%=System.LinkedTitle%]"
+              Link="/Content/Topics/Promotion Management/Percent off Promotion Strategy Calculation Set.htm" />
+            <TocEntry
+              Title="[%=System.LinkedTitle%]"
+              Link="/Content/Topics/Promotion Management/Multi buy Promotion Strategy Calculation Set.htm" />
+            <TocEntry
+              Title="[%=System.LinkedTitle%]"
+              Link="/Content/Topics/Promotion Management/BOGO AA Free Promotion Strategy Calculation Set.htm" />
+            <TocEntry
+              Title="[%=System.LinkedTitle%]"
+              Link="/Content/Topics/Promotion Management/BOGO AB Free Promotion Strategy Calculation Set.htm" />
+            <TocEntry
+              Title="[%=System.LinkedTitle%]"
+              Link="/Content/Topics/Promotion Management/BOGO AA Amount Off Promotion Strategy Calculation Set.htm" />
+            <TocEntry
+              Title="[%=System.LinkedTitle%]"
+              Link="/Content/Topics/Promotion Management/BOGO AB Amount Off Promotion Strategy Calculation Set.htm" />
+            <TocEntry
+              Title="[%=System.LinkedTitle%]"
+              Link="/Content/Topics/Promotion Management/BOGO AA Percent Off Promotion Strategy Calculation Set.htm" />
+            <TocEntry
+              Title="[%=System.LinkedTitle%]"
+              Link="/Content/Topics/Promotion Management/BOGO AB Percent Off Promotion Strategy Calculation Set.htm" />
+            <TocEntry
+              Title="[%=System.LinkedTitle%]"
+              Link="/Content/Topics/Promotion Management/Multi Buy Amount Off Promotion Strategy Calculation Set.htm" />
+            <TocEntry
+              Title="[%=System.LinkedTitle%]"
+              Link="/Content/Topics/Promotion Management/Multi Buy Percent Off Promotion Strategy Calculation Set.htm" />
+            <TocEntry
+              Title="[%=System.LinkedTitle%]"
+              Link="/Content/Topics/Promotion Management/BOGO AA Promotion Price Promotion Strategy Calculation Set.htm" />
+            <TocEntry
+              Title="[%=System.LinkedTitle%]"
+              Link="/Content/Topics/Promotion Management/BOGO AB Promotion Price Promotion Strategy Calculation Set.htm" />
+            <TocEntry
+              Title="[%=System.LinkedTitle%]"
+              Link="/Content/Topics/Promotion Management/Spend X Get Amount Discount Promotion Strategy Calculation.htm" />
+            <TocEntry
+              Title="[%=System.LinkedTitle%]"
+              Link="/Content/Topics/Promotion Management/Spend X Get Percent Discount Promotion Strategy Calculation.htm" />
+            <TocEntry
+              Title="[%=System.LinkedTitle%]"
+              Link="/Content/Topics/Promotion Management/Spend X Get Multiply Points Promotion Strategy Calculation.htm" />
+            <TocEntry
+              Title="[%=System.LinkedTitle%]"
+              Link="/Content/Topics/Promotion Management/Spend X Get Points Promotion Strategy Calculation Set.htm" />
+            <TocEntry
+              Title="[%=System.LinkedTitle%]"
+              Link="/Content/Topics/Promotion Management/Spend X Get Gift Card Promotion Strategy Calculation Set.htm" />
+          </TocEntry>
+        </TocEntry>
+      </TocEntry>
+      <TocEntry
+        Title="[%=System.LinkedTitle%]"
+        Link="/Content/Topics/Promotion Management/Validations Tab.htm">
+        <TocEntry
+          Title="[%=System.LinkedTitle%]"
+          Link="/Content/Topics/Promotion Management/Validations Repository.htm"></TocEntry>
+      </TocEntry>
+      <TocEntry
+        Title="[%=System.LinkedTitle%]"
+        Link="/Content/Topics/Promotion Management/Price Output Sets.htm">
+        <TocEntry
+          Title="[%=System.LinkedTitle%]"
+          Link="/Content/Topics/Promotion Management/Promotion Pricing Details.htm" />
+      </TocEntry>
+      <TocEntry
+        Title="[%=System.LinkedTitle%]"
+        Link="/Content/Topics/Promotion Management/Promotion Fields.htm" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" />
+      <TocEntry
+        Title="[%=System.LinkedTitle%]"
+        Link="/Content/Topics/Promotion Management/Promotion Strategies.htm">
+        <TocEntry
+          Title="[%=System.LinkedTitle%]"
+          Link="/Content/Topics/Promotion Management/Create a Promotion Strategy.htm"></TocEntry>
+        <TocEntry
+          Title="[%=System.LinkedTitle%]"
+          Link="/Content/Topics/Promotion Management/Configuring standard promotion strategies.htm" />
+      </TocEntry>
+    </TocEntry>
+    <TocEntry
+      Title="[%=System.LinkedTitle%]"
+      Link="/Content/Topics/Promotion Management/Promotion Validation Statuses.htm" />
+    <TocEntry
+      Title="[%=System.LinkedTitle%]"
+      Link="/Content/Topics/Promotion Management/Promotion Help.htm" />
+  </TocEntry>
+</CatapultToc>

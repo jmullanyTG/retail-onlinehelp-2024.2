@@ -1,0 +1,85 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head>
+        <link href="../TableStyles/standard.css" rel="stylesheet" MadCap:stylesheetType="table" />
+    </head>
+    <body>
+        <p>Users can use a  widget labeled <span class="Emphasis">Segment Floor Set Updates</span> on the right of the <span class="Emphasis">Edit Target Scenario</span> view (whether creating a new or copying an existing scenario) to define multiple floor set updates with their own windows of time within the selected overall  period of time of a Target Scenario. 
+
+</p>
+        <p>
+            <img src="../Images/Target Choice Count/Segment Floor Set Updates.png" class="LargeImages">
+            </img>
+        </p>
+        <p>An example of this is a scenario with a 6-month window of time representing the Spring assortment, but further broken down into four floor set update periods corresponding to floor sets/product updates. The result being choice recommendations for each of those update periods.
+
+</p>
+        <p>To support the continuation of a choice selling across update periods, choices can be merged across update periods. For example, a choice recommendation from update period one, can be connected to a choice recommendation from update period two. This signifies that a single choice carries across periods of time, and one of the recommended choices is fulfilled in each update window.</p>
+        <p>As floor set updates are segment-specific, segments must be created first. Therefore, users must click on segments for which updates are to be created and then use the <span class="Emphasis">Segment Floor Set Updates</span> widget to configure the updates. Users have the option to assign the same update to all segments by selecting all segments or configure different updates by segment by clicking on one segment or smaller subsets of segments at a time.</p>
+        <p>Fields include:</p>
+        <table style="width: 100%;mc-table-style: url('../TableStyles/standard.css');" class="TableStyle-standard" cellspacing="0">
+            <col class="TableStyle-standard-Column-Column1">
+            </col>
+            <col class="TableStyle-standard-Column-Column2">
+            </col>
+            <thead>
+                <tr class="TableStyle-standard-Head-Header1">
+                    <th class="TableStyle-standard-HeadE-Column1-Header1">Field</th>
+                    <th class="TableStyle-standard-HeadD-Column2-Header1">Description</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">Update Num</td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">Automatically generated and ordered by update period</td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">Update Name</td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">(Optional) Provided for quick reference for major update initiatives such as Back to School or Christmas</td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">Update Period</td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">
+                        (Required) Users can select any period within a scenario’s Window of Time.  If the first update does NOT start at the beginning of the Window of Time, an update labeled <span class="Emphasis">Initial Set</span> is automatically created.  If that update is deleted, the following warning displays: 
+                        <p><span class="Emphasis">The first Floor Set Update does not include the first period(s) in the scenario Window of Time.  These periods will not be represented in target setting</span>.</p></td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">Comparison Period</td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">
+                       (Optional) If not populated, then the chosen update period’s LY period automatically populates upon save.
+                        <p>The dropdown allows for selecting any LY period for the scenario’s Window of Time, as well as any periods included in segments' Comparison Period selections.</p></td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyB-Column1-Body1">Period Count, Comparison Period Count</td>
+                    <td class="TableStyle-standard-BodyA-Column2-Body1">
+                        Automatically populates on save. The logic is that an update continues on until the next configured update. The last update goes to the end of the scenario’s Window of Time. 
+                        <p>Therefore, if the Window of Time is wk1 through wk10, and 2 updates are configured for wk1 and wk5, then:</p><ul><li><p> the first update goes from wk1 to wk4 for 4 periods, and </p></li><li><p>the second update goes from wk5 to wk10 for 6 periods.</p></li></ul></td>
+                </tr>
+            </tbody>
+        </table>
+        <p>Two other fields, <span class="Emphasis">Selected Segment Count</span> and <span class="Emphasis">Included Segment Count</span>, give visualization to how many of the total selected segments fall into each particular update configuration.</p>
+        <p>
+            <img src="../Images/Target Choice Count/Floor Set Update Segment Count.png" class="LargeImages">
+            </img>
+        </p>
+        <h3>Modifying updates or the Window of Time parameter</h3>
+        <ul>
+            <li>
+                <p>Changes to an update requires full recalculation and re-rationalization of the scenario.  Data is cleared from the <span class="Emphasis">Target Worksheet</span>, <span class="Emphasis">Target New Choices</span>, and <span class="Emphasis">Results Matrix</span> grids.</p>
+            </li>
+            <li>
+                <p>Modifying a scenario’s Window of Time deletes all data AND update configurations.  The following message displays with the option for users to proceed or cancel the change:</p>
+                <p><span class="Emphasis">Changing the Window of Time will delete the target spread data and segment update configurations.  Proceed?</span>
+                </p>
+            </li>
+        </ul>
+        <h3>Viewing floor set update results
+</h3>
+        <p>The <span class="Emphasis">Update</span> field in each of the lower tabs in the <span class="Emphasis">Edit Target Scenario</span> view (Target Worksheet, Target New Choices, and Results Matrix) provides details for scenarios with updates created . For example,</p>
+        <p>
+            <img src="../Images/Target Choice Count/Target Worksheet Update Field.png" class="LargeImages">
+            </img>
+        </p>
+        <p>Additionally, the <span class="Emphasis">Target Scenario List</span> grid has a field labeled <span class="Emphasis">Updates</span> which lists any configured update periods. </p>
+    </body>
+</html>

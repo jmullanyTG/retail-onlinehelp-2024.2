@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head>
+    </head>
+    <body>
+        <p>The <span class="Emphasis">General</span> tab holds header level information about the widget.</p>
+        <ul>
+            <li><span class="Emphasis">Name</span> – The unique name for the widget. </li>
+            <li><span class="Emphasis">Description</span> – An optional description for the widget. Very useful for disambiguation (especially when exporting widgets).</li>
+            <li><span class="Emphasis">Read Only</span> – The widget can be made read-only to prevent manipulation of the presented data. </li>
+        </ul>
+    </body>
+</html>

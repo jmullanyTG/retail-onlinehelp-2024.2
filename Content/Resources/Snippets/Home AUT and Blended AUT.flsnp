@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head>
+    </head>
+    <body>
+        <h3>Home AUT and Blended AUT</h3>
+        <p>AP distinguishes between two different types of AUT (or Average Unit Ticket, for example, the ticket price intended to be printed on merchandise tags). The first of these is <span class="Emphasis">Home AUT</span>. This is meant to represent the AUT value for the country and currency of the defined Home Site (set in the <span class="Emphasis">Manage Assortment Plans</span> screen for AP). This is the starting point for planning AUT, as this value is user-editable. <span class="Emphasis">Home AUT</span> is only editable - and only has a value - in future periods. From this, <span class="Emphasis">Blended AUT</span> is derived. </p>
+        <p><span class="Emphasis">Blended AUT</span> is considered to be a true representation of the expected earnings for a given item.  <span class="Emphasis">Blended AUT</span> incorporates several components, each of which is enabled by system policy:</p>
+        <ul>
+            <li>
+                <p>VAT rate changes between the Home Site and sites within each cluster</p>
+            </li>
+            <li>
+                <p>Price Exception Factors</p>
+            </li>
+            <li>
+                <p>Price Matrix conversions</p>
+            </li>
+        </ul>
+        <p class="BasicNote">Only Price Exceptions OR Price Matrix conversion can be enabled at once (but both can be disabled altogether if desired).  VAT Rate changes cannot be enabled if Price Matrix conversions are enabled.</p>
+        <p><span class="Emphasis">Blended AUT</span> is derived in future periods from <span class="Emphasis">Home AUT</span>.  In past periods, as <span class="Emphasis">Home AUT</span> has no values, <span class="Emphasis">Blended AUT</span> is derived from provided sales history.</p>
+    </body>
+</html>

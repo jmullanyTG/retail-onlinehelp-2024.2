@@ -1,0 +1,73 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head>
+        <link href="../../Resources/TableStyles/standard.css" rel="stylesheet" MadCap:stylesheetType="table" />
+    </head>
+    <body>
+        <h1>Inventory supply chain resolution task</h1>
+        <p>The <span class="Emphasis">Inventory Supply Chain Resolution</span> task reprocesses supply chains when added to nightly or weekly jobs.</p>
+        <p>Because supply chain overrides are filter dependent, run this task in Job Manager:</p>
+        <ul>
+            <li> after imports and filter-rebuild tasks, and </li>
+            <li>before replenish and order tasks.</li>
+        </ul>
+        <p>
+            <img src="../../Resources/Images/Job Manager/Inventory Supply Chain Resoution Task Type.png" class="LargeImages" />
+        </p>
+        <h2>Task parameters</h2>
+        <table class="TableStyle-standard" cellspacing="0" style="mc-table-style: url('../../Resources/TableStyles/standard.css');">
+            <col class="TableStyle-standard-Column-Column1" />
+            <col class="TableStyle-standard-Column-Column2" />
+            <thead>
+                <tr class="TableStyle-standard-Head-Header1">
+                    <th class="TableStyle-standard-HeadE-Column1-Header1">Parameter</th>
+                    <th class="TableStyle-standard-HeadD-Column2-Header1">Description</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">Name</td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">The task name.</td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">Description</td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">The task description.</td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">Progress Type</td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">
+                        What to do if an error occurs when processing this task: 
+                        <ul><li style="font-weight: bold;">Report Error And Continue</li><li style="font-weight: bold;">Report Error And Halt</li></ul></td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">Time Out (Seconds)</td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">The timeout period.</td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">Retry Count</td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">The number of retry attempts to make if a timeout occurs.</td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">Retry Interval</td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">The time to wait in between retry attempts.</td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">Task Enabled</td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">
+                        Whether this task is active or disabled. If: 
+                        <ul><li>selected, the task is enabled and runs if manually executed or part of a scheduled job.</li><li>not selected, this task is disabled and does not run even if manually executed or part of a scheduled job.</li></ul></td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">Work Item Filter Type</td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">
+                       The type of supply chains this task processes: 
+                        <ul><li><span class="Emphasis">All supply chains</span></li><li><span class="Emphasis">Only supply chains with exceptions</span></li><li><span class="Emphasis">Specified supply chains</span></li></ul></td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyB-Column1-Body1">Supply Chain(s)</td>
+                    <td class="TableStyle-standard-BodyA-Column2-Body1">Visible only when <span class="Emphasis">Specified Supply Chains</span> is selected as the Work Item Filter Type value. Lists all applicable supply chains. Selected supply chains are processed by this task.</td>
+                </tr>
+            </tbody>
+        </table>
+    </body>
+</html>

@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<CatapultTarget
+  Version="2"
+  Comment="New Target"
+  Type="PDF"
+  Destinations=""
+  GlossaryTermConversion="marked"
+  ConditionTagExpression="include[General.PrintOnly]exclude[&quot;General.ScreenOnly&quot; or General.DoNotPublish]"
+  MasterToc="/Project/TOCs/Supersessions.fltoc"
+  DisableAutoSync="true"
+  OutputFolder="C:\Users\JMullany\OneDrive - ToolsGroup\Desktop\PublishedPDFs">
+  <PrintedOutput
+    CollapseMargins="true"
+    GenerateTOCProxy="true"
+    GenerateIndexProxy="false"
+    GenerateGlossaryProxy="false"
+    OutputFormat="docx" />
+  <Variables> <Variable
+      Name="Variables/BookVersion">2024.2</Variable> <Variable
+      Name="Variables/BookSubTitle">User Guide</Variable> <Variable
+      Name="Variables/BookTitle">Supersessions</Variable></Variables>
+  <PDF
+    Tagged="true"
+    PageMode="UseNone"
+    PageLayout="OneColumn"
+    CollapsedBookmarks="true"
+    ConvertBookmarks="true" />
+  <Destinations>
+    <Destination
+      Link="/Project/Destinations/PDF Output.fldes"
+      Publish="true" />
+  </Destinations>
+  <DocumentProperties
+    Author="" />
+</CatapultTarget>

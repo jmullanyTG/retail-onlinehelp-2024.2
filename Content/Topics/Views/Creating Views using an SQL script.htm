@@ -1,0 +1,64 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" xml:lang="en-us">
+    <head><title></title>
+    </head>
+    <body>
+        <h1>Creating views using an SQL script</h1>
+        <p>Views can be created with a SQL script. The following example is for Merchandise Financial Planning.</p>
+        <p class="BasicNote" MadCap:conditions="General.DoNotPublish">The following example was verified as valid and correct JULY&#160;2022. DMDEV-82353.</p>
+        <h2>Creating a View</h2>
+        <MadCap:codeSnippet>
+            <MadCap:codeSnippetCopyButton />
+            <MadCap:codeSnippetBody MadCap:useLineNumbers="False" MadCap:lineNumberStart="1" MadCap:continue="False" xml:space="preserve">IF NOT EXISTS ( SELECT 1
+FROM dbo.tbl_VW_View
+WHERE ViewName = 'Merchandise Financial Planning' )
+BEGIN
+DECLARE @iViewID INT
+INSERT INTO dbo.tbl_VW_View
+( ViewName
+, ViewDescription
+, ViewTypeID
+, HideParameters
+, AutoRefreshOnParameterChange
+, AutoRefreshOnWidgetParameterChange
+, AllowUpdateMethodParameterValue
+, AllowUseAndSaveUserViewParameterValue
+, ViewLayoutXml
+&#160;&#160;&#160; )
+VALUES
+( N'Merchandise Financial Planning'
+, N'Merchandise Financial Planning widgets.'
+, 2
+, 0
+, 0
+, 1
+, 1
+, 1
+, NULL
+&#160;&#160;&#160; )
+SET @iViewID = SCOPE_IDENTITY()
+END
+ELSE
+BEGIN
+SET @iViewID = ( SELECT ViewID FROM dbo.tbl_VW_View WHERE ViewName = 'Merchandise Financial Planning' )
+END
+</MadCap:codeSnippetBody>
+        </MadCap:codeSnippet>
+        <h2>Linking Views and View Groups</h2>
+        <p>Views must also be linked to a view group.</p>
+        <MadCap:codeSnippet>
+            <MadCap:codeSnippetCopyButton />
+            <MadCap:codeSnippetBody MadCap:useLineNumbers="False" MadCap:lineNumberStart="1" MadCap:continue="False" xml:space="preserve">IF @iViewGroupID IS NOT NULL
+AND @iViewID IS NOT NULL
+AND NOT EXISTS ( SELECT 1
+FROM dbo.tbl_VW_ViewRelationshipToViewGroup
+WHERE ViewGroupID = @iViewGroupID
+AND ViewID = @iViewID )
+BEGIN
+INSERT INTO dbo.tbl_VW_ViewRelationshipToViewGroup
+( ViewID, ViewGroupID )
+VALUES ( @iViewID, @iViewGroupID )
+END</MadCap:codeSnippetBody>
+        </MadCap:codeSnippet>
+    </body>
+</html>

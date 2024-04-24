@@ -1,0 +1,30 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" xml:lang="en-us">
+    <head><title></title>
+    </head>
+    <body>
+        <h1>Forecast tables</h1>
+        <p>The forecast series values are stored in <span class="Emphasis">tbl_Forecast</span> as <span class="Emphasis">ForecastQty</span>. These quantities do not specifically represent the effective forecast, but instead the series values associated with the adjacent type described by the manual forecast flag. ManualForecastFlag is much less of a flag and more of a type as it is of type <span class="Emphasis">tinyint</span>. The types are as follows:</p>
+        <p>0 = System</p>
+        <p>1 = No longer used</p>
+        <p>2 = Forecast Manual Causal</p>
+        <p>3 = Sales Planning</p>
+        <p>4 = Forecast Manual</p>
+        <p>5 = Group</p>
+        <p>6 = BOM Forecast</p>
+        <p>7 = Profile</p>
+        <p>There may be several values for an inventory item within the same bucket, differentiated by the manual forecast flag type. The effective forecast (red line series in the forecast viewer) is the highest priority out of all the concurrent manual forecast flag types. Priority is as follows:</p>
+        <ol>
+            <li>Type 2 – Forecast Manual Causal</li>
+            <li>Type 4 – Forecast Manual (manual forecast)</li>
+            <li>Type 7 – Profile</li>
+            <li>Type 5 – Group (pushed down group forecast value)</li>
+            <li>Type 0 – System (system generated forecast)</li>
+        </ol>
+        <p>Types 1 and 3 are not used in this prioritization. Type 6 – BOM forecast is not listed in the prioritization because it is returned to the forecast viewer as a separate data series. </p>
+        <p>Total sales (not including lost sales) will be the value per period (bucket) as read in <span class="Emphasis">tbl_InventoryHistory</span> for SalesHistoryQuantity plus SupercessionHistoryQuantity. This summation is done in the standard procedure usp_Forecast_Select_ForecastViewerInventory</p>
+        <p>Lost sales quantity is stored in <span class="Emphasis">tbl_InventoryHistory</span> in the LostSalesQuantity column.</p>
+        <h2>SQL tables and procedures</h2>
+        <p>Forecast information is derived from several tables in ToolsGroup JustEnough. </p>
+    </body>
+</html>

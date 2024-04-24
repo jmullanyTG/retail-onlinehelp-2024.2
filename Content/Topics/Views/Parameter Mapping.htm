@@ -1,0 +1,49 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" xml:lang="en-us">
+    <head><title></title>
+    </head>
+    <body>
+        <h1>Parameter mapping</h1>
+        <p>The <span class="Emphasis">Parameter Mapping</span> blade lets users build-in parameters to the URL, such as user name and passwords. </p>
+        <p>Browser parameters can be configured using code similar to this example:</p>
+        <MadCap:codeSnippet>
+            <MadCap:codeSnippetCopyButton />
+            <MadCap:codeSnippetBody MadCap:useLineNumbers="False" MadCap:lineNumberStart="1" MadCap:continue="False" xml:space="preserve">IF EXISTS(SELECT TOP 1 * FROM sysobjects WHERE name='cusp_Browser_SelectURLParameters')
+DROP PROCEDURE cusp_Browser_SelectURLParameters
+GO
+&#160;
+CREATE PROCEDURE cusp_Browser_SelectURLParameters
+(
+@iUserID INTEGER = NULL,
+@iInputID INTEGER = NULL
+)
+&#160;
+AS 
+BEGIN
+&#160;
+CREATE TABLE #URLParameters (Color NVARCHAR(10), Size NVARCHAR(5), Code INTEGER)
+IF @iInputID = 1
+BEGIN
+INSERT INTO #URLParameters (Color, Size, Code)
+VALUES ('Red', 'L', 101)
+END
+ELSE IF @iInputID = 2
+BEGIN
+INSERT INTO #URLParameters (Color, Size, Code)
+VALUES ('Green', 'XL', 102)
+END
+ELSE
+BEGIN
+INSERT INTO #URLParameters (Color, Size, Code)
+VALUES ('Blue', 'M', 103)
+END
+&#160;
+SELECT * FROM #URLParameters
+END
+GO
+&#160;
+EXEC usp_Common_AddUpdate_StoredProcedureLookup 'Browser_SelectURLParameters','cusp_Browser_SelectURLParameters','Select URL Parameters for Browser Widget'
+GO</MadCap:codeSnippetBody>
+        </MadCap:codeSnippet>
+    </body>
+</html>

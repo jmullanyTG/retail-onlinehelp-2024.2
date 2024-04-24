@@ -1,0 +1,39 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" xml:lang="en-us">
+    <head>
+        <title>
+        </title>
+    </head>
+    <body>
+        <h1>Workload Queue statuses</h1>
+        <h2>Active list</h2>
+        <ul>
+            <li>
+                <span class="Emphasis">Unknown</span>: The system includes a default status type that is only used if the system is experiencing an issue. Contact ToolsGroup JustEnough Support in this case.</li>
+            <li>
+                <span class="Emphasis">Preparing (a.k.a. Batching)</span>: The system is evaluating the items in the submitted batch and estimated workload.</li>
+            <li>
+                <span class="Emphasis">Coalescing</span>: The system is marking items in the submitted batch to reduce processing time by removing duplicate items. Last batch submission, with like items, are processed first. Prior batches complete the non-coalesced items and then place them into a status of <span class="Emphasis">Purgatory </span>until the last batch, with like items, has been completed.</li>
+            <li>
+                <span class="Emphasis">Ready</span>: The system has completed preparation and coalescing the batch to make it ready to be executed by the Workload Queue Marshall.</li>
+            <li>
+                <span class="Emphasis">Executing</span>: The system is executing the submitted batch.</li>
+            <li>
+                <span class="Emphasis">Purgatory</span>: The batch is waiting for a following batch, with like Items, to be completed.</li>
+        </ul>
+        <h2>History list</h2>
+        <p>For all the following statuses, the batch will be removed from the Active Workload Queue and can be referenced in the history logs.</p>
+        <ul>
+            <li>
+                <span class="Emphasis">Completed</span>: The batch has completed execution without error.</li>
+            <li>
+                <span class="Emphasis">Completed With Errors</span>: The batch has completed execution with error.</li>
+            <li>
+                <span class="Emphasis">Failed</span>: The batch could not be processed by the Workload Queue.</li>
+            <li>
+                <span class="Emphasis">Expired</span>: The batch expired before execution could begin.</li>
+            <li>
+                <span class="Emphasis">Removed</span>: The batch was removed.</li>
+        </ul>
+    </body>
+</html>

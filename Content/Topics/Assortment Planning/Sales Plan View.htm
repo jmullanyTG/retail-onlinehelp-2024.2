@@ -1,0 +1,802 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" xml:lang="en-us">
+    <head>
+        <link href="../../Resources/TableStyles/standard.css" rel="stylesheet" MadCap:stylesheetType="table" /><title></title>
+    </head>
+    <body>
+        <h1>Sales Plan view </h1>
+        <p>Period level edits to sales plans of selected placeholders or collections can be made using the <span class="Emphasis">Sales Plan</span> view. Edits can be either in total or by average store and compared to the high level plan created in the main planning view of the Placeholder or Collection views. Inventory can be tracked and shrink and adjustments planned for more detailed control both pre and in-season.</p>
+        <p>
+            <img src="../../Resources/Images/Assortment Planning/Sales Plan View.png" class="LargeImages" />
+        </p>
+        <h2>Making changes to plans in the Sales Plan view</h2>
+        <MadCap:snippetBlock src="../../Resources/Snippets/Read Write Access To Sales Plans Overrides.flsnp" />
+        <h2>Matching Sales Plans with Life Cycle and Seasonality Curves</h2>
+        <p>Where the periods between a Sales Plan and a Life Cycle or Seasonality Curve do not exactly match, configure the system to either match up the periods of the Sales Plan with the periods of the Life Cycle or Seasonality Curve or stretch or shrink the curve to match the size of the sales plan. </p>
+        <p class="BasicNote">Which behavior is used is determined by system policies <span class="Emphasis">Algorithm To Match Seasonality Curve to Sales Plan</span> and <span class="Emphasis">Algorithm To Match Lifecycle Curve to Sales Plan</span>. For more information, on setting these system policies, see <MadCap:xref href="Assortment Planning related System Policies.htm">Assortment planning related system policies</MadCap:xref>.</p>
+        <h2>Viewing actualized internal stock movement metrics</h2>
+        <p>Four metrics provide further visibility to internal stock movements (also known as Inter-Branch Transfers or IBT) between locations for historical periods. These metrics are only populated for actualized periods with future periods always being zero or null.</p>
+        <p>These metrics are included in the calculation to provide the current period’s BOP value with all stock being considered regardless of where it is.</p>
+        <p>The metrics are:</p>
+        <ul>
+            <li>
+                <p>Actual Stock Units In Transit Cluster</p>
+            </li>
+            <li>
+                <p>Actual Stock Units In Transit DC&#160;Split</p>
+            </li>
+            <li>
+                <p>Actual Stock Cost In Transit Cluster</p>
+            </li>
+            <li>
+                <p>Actual Stock Cost In Transit DC Split</p>
+            </li>
+        </ul>
+        <MadCap:snippetBlock src="../../Resources/Snippets/EOP BOP metrics include IBT.flsnp" />
+        <h2>Toolbar buttons</h2>
+        <table style="width: 100%;margin-left: 0;margin-right: auto;mc-table-style: url('../../Resources/TableStyles/standard.css');" class="TableStyle-standard" cellspacing="0">
+            <col class="TableStyle-standard-Column-Column1" />
+            <col class="TableStyle-standard-Column-Column2" />
+            <thead>
+                <tr class="TableStyle-standard-Head-Header1">
+                    <th class="TableStyle-standard-HeadE-Column1-Header1">Button</th>
+                    <th class="TableStyle-standard-HeadD-Column2-Header1">Description</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1"><span class="Emphasis">Clear Sales Plan Overrides</span>
+                    </td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">
+                         Reverts all user metrics back to the values of their system counterparts. This also reinstates all periods as valid Selling Periods (see Selling Period description below). 
+                        <p class="BasicNote">Metrics without system counterparts such as the Shrink and Adjustments metrics cannot be reverted using this function. To revert a single cell to the value of its system counterpart, select the desired cell, press the <span class="Emphasis">Delete</span> key, then click <span class="Emphasis">Save</span>.</p></td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1"><span class="Emphasis">Parameters</span>
+                    </td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">Shows or hides the parameters pane at the top of the view.</td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1"><span class="Emphasis">Execute</span>
+                    </td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">
+                        Refreshes the view.
+                        <p class="BasicNote">This is not typically necessary, as the view refreshes on its own when a new placeholder/collection is selected in the main planning view, when changes are applied, and when the Comparison Snapshot or View Mode are changed</p></td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1"><span class="Emphasis">Save</span>
+                    </td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1"> Saves all changes made since the last save.</td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1"><span class="Emphasis">Cancel</span>
+                    </td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">Cancels all changes and reverts them to their previously saved values.</td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1"><span class="Emphasis">Export</span>
+                    </td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">Exports and saves the Pivot Grid in many common formats including Microsoft Excel and Adobe PDF.</td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1"><span class="Emphasis">Open</span>
+                    </td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">Opens the Pivot Grid in many common formats including Microsoft Excel and Adobe PDF. Does not require save prior to viewing in the desired format.</td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1"><span class="Emphasis">Graph</span>
+                    </td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1"> Graphs the selected data in the view.</td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyB-Column1-Body1"><span class="Emphasis">Fields</span>
+                    </td>
+                    <td class="TableStyle-standard-BodyA-Column2-Body1">Allows users to customize the field layout for the view. Custom layouts can be saved and restored by right-clicking in the Pivot Grid and selecting <span class="Emphasis">Save Layout</span> or <span class="Emphasis">Restore Layout</span>, respectively.</td>
+                </tr>
+            </tbody>
+        </table>
+        <h2>Parameters</h2>
+        <table style="width: 100%;margin-left: 0;margin-right: auto;mc-table-style: url('../../Resources/TableStyles/standard.css');" class="TableStyle-standard" cellspacing="0">
+            <col class="TableStyle-standard-Column-Column1" />
+            <col class="TableStyle-standard-Column-Column2" />
+            <thead>
+                <tr class="TableStyle-standard-Head-Header1">
+                    <th class="TableStyle-standard-HeadE-Column1-Header1">Field</th>
+                    <th class="TableStyle-standard-HeadD-Column2-Header1">Description</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1"><span class="Emphasis">Comparison Snapshot</span>
+                    </td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">A snapshot of all saved snapshots within the current plan that are relevant to the current Product and Site Hierarchy selections in the main planning view parameters</td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyB-Column1-Body1"><span class="Emphasis">View Mode</span>
+                    </td>
+                    <td class="TableStyle-standard-BodyA-Column2-Body1">
+                        The view mode for sales plan view: Total Company or Average Store.
+                        <ul><li><span class="Emphasis">Total Company</span>: view and plan revenue and unit metrics as total company values – meaning the total volume for all sites contained in whatever level the Pivot Grid is aggregated to.</li><li><span class="Emphasis">Average Store</span>: view and plan revenue and unit metrics as average store values – meaning the per site volume for the number of sites contained in whatever level the Pivot Grid is aggregated to.</li></ul></td>
+                </tr>
+            </tbody>
+        </table>
+        <h2>Metric naming convention</h2>
+        <ul>
+            <li>
+                <p><span class="Emphasis">% +/-</span>: Percent difference between the relevant metrics.</p>
+            </li>
+            <li>
+                <p><span class="Emphasis">+/-</span>: Additive or subtractive variance between the relevant metrics.</p>
+            </li>
+            <li>
+                <p><span class="Emphasis">Calculations</span>: Calculations in <span class="Emphasis">Sales Plan</span> view all work based on one-directional locking calculations, depending on the metrics changed. </p>
+                <p class="SeeAlso">For more information on the calculation model used in this view, see the supplemental <span class="Emphasis">Microsoft Excel file Assortment Planning – Sales Plan View</span>.</p>
+            </li>
+            <li><span class="Emphasis">Comparison metrics</span>: Denoted by purple row coloration and <span class="Emphasis">(Comparison)</span> appended to the end of the metric. For example, Sales (Comparison). These metrics are direct data reads from the selected Comparison Snapshot and default to zero if no snapshot is selected or no data is present in the snapshot.</li>
+            <li><span class="Emphasis">Editable metrics</span>: Denoted by light blue row coloration. These are the only metrics that are editable by the user in <span class="Emphasis">Sales Plan</span> view. All others are calculations or reads from other sources:
+							<ul><li>* System, ex VAT, and Comparison metrics are never editable in Sales Plan view</li><p class="BasicNote">With the exception of <span class="Emphasis">Selling Period</span>, edits made in <span class="Emphasis">Sales Plan</span> view DO NOT change the plan values in the main planning view and Cluster Sets view. This is by design to allow for comparison of original plans with period level changes. However, the Sales Plan view <span class="Emphasis">Sls $</span> and <span class="Emphasis">Sls U</span> metrics can be brought into the main planning view to view these edits at the placeholder or collection or cluster set/cluster level.</p></ul></li>
+            <li>
+                <p><span class="Emphasis">Ex VAT metrics</span>: Denoted by <span class="Emphasis">ex VAT</span> appended to the end of the metric name (for example, <span class="Emphasis">System Sales ex VAT</span>). Where VAT (value added tax) is in play, <span class="Emphasis">ex VAT</span> metrics provide accurate profit calculations (margin) after taxes have been removed.</p>
+                <p>Where VAT is not in play, no customization of calculations is necessary. Navigate to <span class="Emphasis">System Utilities &gt; Views &gt; Maintenance &gt; Planning VAT Rate</span> and set the VAT rates for all levels of the product hierarchy assigned to the assortment plan to 0. This sets the <span class="Emphasis">ex VAT</span> metrics equal to the non ex VAT metrics.</p>
+            </li>
+            <li>
+                <p><span class="Emphasis">Past Due</span>: Orders that were expected to be receipted in the recent past</p>
+            </li>
+            <li>
+                <p><span class="Emphasis">Plan Horizon vs. Receipt Planning Engine Horizon</span>: If the Plan Horizon, set at the time of plan creation, extends beyond the receipt planning engine horizon for a given item, data that extends past the receipt engine horizon appears in blue italics with zero values (for example, $0.00). </p>
+                <p>See example in Plan Horizon vs. Replen Forecast Horizon below.
+			</p>
+            </li>
+            <li><span class="Emphasis">Plan Horizon vs. Replen Forecast Horizon</span>: If the Plan Horizon, set at the time of plan creation, extends beyond the replenishment forecast horizon for a given item, the values for the periods that go beyond the replenishment forecast are formatted in blue and italicized. These periods also display zeros for the metrics being read from replenishment data, as no forecast exists:
+				<p><img src="../../Resources/Images/Assortment Planning/Sales Plan View_1.png" class="LargeImages" /></p></li>
+            <li>
+                <p><span class="Emphasis">Replen Placeholders/Collections</span>: When a placeholder/collection is of status <span class="Emphasis">Replen</span>, all relevant data is pulled in from the Forecasts module to form its sales plan.</p>
+                <p>Users should be aware of the following differences in this view when dealing with Replen items:
+			
+				<span class="Emphasis">Read Only</span>: all normally editable metrics in Sales Plan view become read only, being populated directly from aggregated replenishment forecast data, with the exception of all Shrink and Inventory Adjustments related metrics, which remain editable and can still be planned normally.
+					</p>
+            </li>
+            <li><span class="Emphasis">Retrend metrics</span>: The fields for Retrend metrics populate only after a user selects the <span class="Emphasis">Retrend</span> option in the <span class="Emphasis">Process Queue</span> section of the main planning view toolbar.</li>
+            <li><span class="Emphasis">Supersession metrics</span>: The mapped metrics are: Stock On Hand (EOP -&gt; BOP) and Actualized Sales Units. Actualized metrics display in the Sales Plan View. EOP&#160;values populate new item BOP&#160;values. Additionally,<ul><li><p>Supersession date ranges are respected, even if they coincide oddly with phase dates. Specifically, supersession dates are used to narrow phase dates, but if no dates are set on the supersession, then phase dates are used.</p></li><li><p>If supersessions are set up for only some of the Inventories that make up a variant, then planned values are split using size curve and historical site contribution data.</p></li></ul></li>
+            <li><span class="Emphasis">System</span>: Denoted by the word <span class="Emphasis">System</span> at the beginning (for example: System Sales) and green row coloration. System metrics are those based on the values shown in the main planning and <span class="Emphasis">Cluster Sets</span> views.</li>
+            <li><span class="Emphasis">User</span>: User metrics default to the system metrics of like name, but these are based on edits made in the <span class="Emphasis">Sales Plan</span> view to the editable metrics. Thus, the user plan can diverge from the system plan in <span class="Emphasis">Sales Plan</span> view. </li>
+        </ul>
+        <h2>LY metrics</h2>
+        <p>LY metrics are only visible in the <span class="Emphasis">Receipt Plan</span> view. LY metrics are not visible in the <span class="Emphasis">Sales Plan</span> view.</p>
+        <h2>Ship from Store (SFS) metric notes</h2>
+        <p>Although Ship from Store values (Retail, Cost, Units) are reductions or negatives to e-commerce stock, it's more intuitive to plan SFS as a positive percentage. This is then used as a stock reduction through subtraction, rather than requiring a negative SFS percentage value.</p>
+        <p class="BasicNote">There are no Product Hierarchy Defaults for the Ship from Store (SFS) metrics. Therefore, there will be no default SFS percent value which can be assigned to a higher product level. The SFS percent is managed at the Item level.</p>
+        <p>The metrics for Total Sales are not changed by the Ship from Store metrics as they display the Total Sales originating from that cluster set/cluster, regardless of fulfillment location. For example, e-commerce Total Sales will include all sales originating from e-commerce, including those fulfilled from stores. Retail Total Sales will consist of sales originating from Retail, NOT including SFS sales.</p>
+        <p>Also, ROS metrics are not changed. The ROS for the channel represents the ROS for Sales originating from that cluster set/cluster, regardless of fulfillment location.</p>
+        <h2>Selling Period checkbox</h2>
+        <p>Users can select the <span class="Emphasis">Selling Period</span> checkbox to specify periods where sales are not planned for a selected placeholder or collection but is still in phase. If unchecked, then zeros out System Sales, System Sales Units, Sales, and Sales Units for the period. Thus, metrics in the main planning view and Cluster Set view are updated by this change. Users cannot enter sales for unchecked periods. When unchecked:</p>
+        <ul>
+            <li>inventory (BOP, EOP) still calculates normally for the period</li>
+            <li>receipts can still be realized for the period</li>
+            <li>all Inventory Adjustments metrics (see below) can still be planned normally</li>
+        </ul>
+        <p class="BasicNote">Common uses for this feature might be items that repeat seasonally, such as holiday themed goods, where inventory is retained between selling periods.</p>
+        <h2>Wholesale related metrics</h2>
+        <p>The following wholesale related metrics are available in the main planning view and the Cluster Sets, Sales Plan, Receipt Plan, and Top Down Core Plan views:</p>
+        <table style="width: 100%;">
+            <col />
+            <col />
+            <tbody>
+                <tr>
+                    <td>
+                        <ul>
+                            <li>
+                                <p>Discount %</p>
+                            </li>
+                            <li>
+                                <p>At Once ($)</p>
+                            </li>
+                            <li>
+                                <p>At Once (U)</p>
+                            </li>
+                            <li>
+                                <p>Cancel %</p>
+                            </li>
+                            <li>
+                                <p>Bookings Cancelled ($)</p>
+                            </li>
+                            <li>
+                                <p>Bookings Cancelled (U)</p>
+                            </li>
+                            <li>
+                                <p>Bookings Placed ($)</p>
+                            </li>
+                            <li>
+                                <p>Bookings Placed (U)</p>
+                            </li>
+                        </ul>
+                    </td>
+                    <td>
+                        <ul>
+                            <li>
+                                <p>Bookings Shipped ($)</p>
+                            </li>
+                            <li>
+                                <p>Bookings Shipped (U)</p>
+                            </li>
+                            <li>
+                                <p>Sell Out ($)</p>
+                            </li>
+                            <li>
+                                <p>Sell Out (U)</p>
+                            </li>
+                            <li>
+                                <p>Bookings Shipped/Sell Out Var</p>
+                            </li>
+                            <li>
+                                <p>Bookings Shipped/Sell Out Var %</p>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <p MadCap:conditions="General.ScreenOnly">For more information relating to wholesale planning, see <MadCap:xref href="../Wholesale Planning/Wholesale Planning Overview.htm">Wholesale Planning Overview</MadCap:xref>.</p>
+        <h2>Metric definitions</h2>
+        <h3>SALES</h3>
+        <table style="width: 100%;margin-left: auto;margin-right: auto;mc-table-style: url('../../Resources/TableStyles/standard.css');" class="TableStyle-standard" cellspacing="0">
+            <col class="TableStyle-standard-Column-Column1" style="width: 166px;" />
+            <col class="TableStyle-standard-Column-Column2" />
+            <thead>
+                <tr class="TableStyle-standard-Head-Header1">
+                    <th class="TableStyle-standard-HeadE-Column1-Header1">Field</th>
+                    <th class="TableStyle-standard-HeadD-Column2-Header1">Description</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1"><span class="Emphasis">Actual Supersession Sales Units</span>
+                    </td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1"> Actualized sales from the superseded style.</td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1"><span class="Emphasis">AUR</span> </td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">
+                        
+						Average unit retail price for the period.
+                         <p> <span class="Emphasis">Calculation</span>: Sales / Sales Units</p></td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1"><span class="Emphasis">Home AUT</span> </td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">Weighted average (excludes zeros) unit ticket price for the period in Home Site currency.
+                         <p> <span class="Emphasis">Calculation</span>: N/A</p></td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1"><span class="Emphasis">Blended AUT</span>
+                    </td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">
+                        Weighted average (excludes zeros) unit ticket price for the period, blended from the currencies included in the cluster.  
+                        <p><span class="Emphasis">Calculation</span>: N/A</p></td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1"><span class="Emphasis">Projected Sales Units (Comparison)</span> </td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">The unconstrained demand for the selected Comparison Snapshot.</td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1"><span class="Emphasis">Projected Sales Units</span> </td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">
+                         Unconstrained demand from replenishment tables. 
+                        <p>The metric <span class="Emphasis">Projected Sales Units</span> is configurable in the <span class="Emphasis">Manage Import Config</span> view.  Depending on how this metric is configured, the <span class="Emphasis">Projected Sales Units</span> line in the <span class="Emphasis">Sales Plan</span> view populates from either Replen or External.</p></td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1"><span class="Emphasis">Sales Build Ratio</span> </td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">Ratio indicating the relationship of Sales of the current period to the previous period.</td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1"><span class="Emphasis">Sales Units Build Ratio</span>
+                    </td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">
+                     Ratio indicating the relationship of Sales Units of the current period to the previous period.
+	 
+                        <p><span class="Emphasis">Calculation</span>: (Sales Units / Previous Period Sales Units)</p></td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1"><span class="Emphasis">Sales Units</span> </td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">
+                        Planned/actual sales units for the period.  
+                        <p><span class="Emphasis">Calculation</span>: Sales / AUR</p></td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1"><span class="Emphasis">Sales</span> </td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">
+                        Planned/actual sales revenue for the period.
+			 
+                        <p><span class="Emphasis">Calculation</span>: AUR x Sales Units</p></td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1"><span class="Emphasis">Sellthrough</span> </td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">Sales/BOP&#160;as a percentage.	</td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1"><span class="Emphasis">Ship from Store %</span>
+                    </td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">
+                   
+                        User editable in non-actualized periods. A percentage of Cluster set sales which will be fulfilled from stock of another Cluster Set. Entered as a positive percentage.  
+                         The units are distributed proportionately to the other active Clusters within the Cluster Set. Inactive Clusters are excluded.
+                       
+                        <p class="Example">For 100 sales units, a value of 90 in the <span class="Emphasis">Ship from Store %</span> field indicates that 90 units needs to be shipped from stock of another Cluster Set.</p><p>The calculation for actualized periods is: 
+(Fulfillment Sales Units - Sales Units) / Sales Units.</p><p>For an in-depth example, see <MadCap:xref href="Ship from Store.htm">Ship from Store (SFS) example</MadCap:xref>.</p></td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1"><span class="Emphasis">Ship from Store Retail</span>
+                    </td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1"><span class="Emphasis">Calculation</span>: Sales * Ship From Store %</td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1"><span class="Emphasis">Ship from Store Units</span>
+                    </td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1"><span class="Emphasis">Calculation</span>: Sales Units * Ship From Store %</td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1"><span class="Emphasis">Ship from Store Cost</span>
+                    </td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1"><span class="Emphasis">Calculation</span>: COGS * Ship From Store %</td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyD-Column1-Body1" colspan="2">
+                        <p colspan="2">The Fulfillment metrics are used across Cluster Sets. A positive value in a Cluster Set/Cluster results in:</p>
+                        <ul>
+                            <li>
+                                <p colspan="2">positive values in the Ship from Store metric set in that Cluster Set/Cluster.</p>
+                            </li>
+                            <li>
+                                <p>fulfillment sales being Total Sales minus Ship from Store Sales for the Cluster with a value in the <span class="Emphasis">Ship from Store</span> % field.</p>
+                            </li>
+                            <li>
+                                <p>fulfillment sales being Total Sales plus Ship from Store Sales for the Cluster with no value in the <span class="Emphasis">Ship from Store</span> % field.</p>
+                            </li>
+                        </ul>
+                        <p class="BasicNote">Fulfillment Sales metrics should either be blank or equal to Sales.</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1"><span class="Emphasis">Fulfillment Sales Retail</span><![CDATA[
+
+]]></td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">
+                        Sales (Retail) planned to be fulfilled by its own Cluster.  
+                        <p><span class="Emphasis">Calculation</span>: Sales +/- Ship From Store Retail</p></td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1"><span class="Emphasis">Fulfillment Sales Units</span><![CDATA[
+
+]]></td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">
+                        Sales (Units) planned to be fulfilled by its own Cluster.  
+                        <p><span class="Emphasis">Calculation</span>: Sales Units +/- Ship From Store Retail</p></td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1"><span class="Emphasis">Fulfillment Sales Cost</span><![CDATA[
+
+]]></td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">
+                        Sales (Cost) planned to be fulfilled by its own Cluster. 
+                        <p><span class="Emphasis">Calculation</span>: COGS +/- Ship From Store Cost</p></td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyB-Column1-Body1"><span class="Emphasis">Total Original Retail</span>
+                    </td>
+                    <td class="TableStyle-standard-BodyA-Column2-Body1">
+                       The total revenue that would be earned for units on sale prior to any discount, markdown, or other price reduction. This is in contrast to the metric Sales, which is inclusive of discounts and price reductions.<![CDATA[ 
+                        ]]><p><span class="Emphasis">Calculation</span>: Blended AUT * Sales Units</p></td>
+                </tr>
+            </tbody>
+        </table>
+        <h3>Seasonality</h3>
+        <table style="width: 100%;margin-left: auto;margin-right: auto;mc-table-style: url('../../Resources/TableStyles/standard.css');" class="TableStyle-standard" cellspacing="0">
+            <col class="TableStyle-standard-Column-Column1" style="width: 166px;" />
+            <col class="TableStyle-standard-Column-Column2" />
+            <thead>
+                <tr class="TableStyle-standard-Head-Header1">
+                    <th class="TableStyle-standard-HeadE-Column1-Header1">Field</th>
+                    <th class="TableStyle-standard-HeadD-Column2-Header1">Description</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1"><span class="Emphasis">Lifecycle Index</span>
+                    </td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">The index specified by the chosen life cycle curve.</td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1"><span class="Emphasis">Combined Index</span>
+                    </td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">The index that is created by combining the Seasonality Index and Lifecycle Index values with the designated weighting factor.</td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1"><span class="Emphasis">Effective Index</span>
+                    </td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">The index actually in use by the sales plan.  For actualized periods, this is the index derived from actualized values.  For future periods, it is the combined index in conjunction with any promotional effects.</td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1"><span class="Emphasis">System Bifurcated Index</span>
+                    </td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">The Effective Index normalized according to Markdown Date.  If Markdown Date exists, then the Effective Index for the Regular/Promo period is normalized, and the Effective Index for the Markdown period is normalized, and the two are displayed sequentially.  If there is no Markdown Date, then this field is the same as the Effective Index field.</td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1"><span class="Emphasis">Bifurcated Index</span>
+                    </td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">This index uses the same logic as the System Bifurcated Index, but incorporates user overrides into its metrics.</td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1"><span class="Emphasis">Is Markdown?</span>
+                    </td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">Whether the period shown is a markdown period.</td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1"><span class="Emphasis">Active Site Count</span>
+                    </td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">Total Site Count, less any sites marked as excluded in the <span class="Emphasis">Manage Locations</span> screen.</td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1"><span class="Emphasis">Total Site Count</span>
+                    </td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">The number of sites for the placeholder / cluster set / cluster / period, as defined by cluster set snapshots and site status information (e.g. open/close dates).</td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyB-Column1-Body1"><span class="Emphasis">Sales History Site Count</span>
+                    </td>
+                    <td class="TableStyle-standard-BodyA-Column2-Body1">
+                       How many stores had sales of a Variant in each period. This metric only displays values for past periods with sales. Future periods display zeroes as long as they are not actualized. As periods actualize, the actualized periods update to reflect the number of sites with sales greater than zero.
+                        <p class="BasicNote">The <span class="Emphasis">Sales History Site Count</span> metric depends on the value set in system policy <span class="Emphasis">Assortment days history to actualize</span>. If the number of days to actualize does not reach as far back as the Phase In date, then a <span class="Emphasis">Sales History Site Count</span> may not be displayed for those periods between Phase In and the first actualized date.</p></td>
+                </tr>
+            </tbody>
+        </table>
+        <h3>COST OF SALES</h3>
+        <table style="width: 100%;margin-left: auto;margin-right: auto;mc-table-style: url('../../Resources/TableStyles/standard.css');" class="TableStyle-standard" cellspacing="0">
+            <col class="TableStyle-standard-Column-Column1" style="width: 166px;" />
+            <col class="TableStyle-standard-Column-Column2" />
+            <thead>
+                <tr class="TableStyle-standard-Head-Header1">
+                    <th class="TableStyle-standard-HeadE-Column1-Header1">Field</th>
+                    <th class="TableStyle-standard-HeadD-Column2-Header1">Description</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1"><span class="Emphasis">COGS</span> </td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">
+                      Cost of goods sold for the period. 
+                        <p><span class="Emphasis">Calculation</span>: (Sales Units * AUC)</p></td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyB-Column1-Body1"><span class="Emphasis">AUC</span>
+                    </td>
+                    <td class="TableStyle-standard-BodyA-Column2-Body1">
+                   Average unit cost price for the period. 
+                        <p><span class="Emphasis">Calculation</span>: (Avg BOP Unit Cost)</p></td>
+                </tr>
+            </tbody>
+        </table>
+        <h3>MARGIN METRICS</h3>
+        <table style="width: 100%;margin-left: auto;margin-right: auto;mc-table-style: url('../../Resources/TableStyles/standard.css');" class="TableStyle-standard" cellspacing="0">
+            <col class="TableStyle-standard-Column-Column1" style="width: 166px;" />
+            <col class="TableStyle-standard-Column-Column2" />
+            <thead>
+                <tr class="TableStyle-standard-Head-Header1">
+                    <th class="TableStyle-standard-HeadE-Column1-Header1">Field</th>
+                    <th class="TableStyle-standard-HeadD-Column2-Header1">Description</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1"><span class="Emphasis">Margin</span>
+                    </td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">
+                      Planned/actual margin revenue (profit) for the period. 
+                        <p><span class="Emphasis">Calculation</span>: (Sales ex VAT - COGS)</p></td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyB-Column1-Body1"><span class="Emphasis">Margin %</span> </td>
+                    <td class="TableStyle-standard-BodyA-Column2-Body1">
+                       Planned/actual margin percentage for the period.  
+                        <p><span class="Emphasis">Calculation</span>: (Margin / Sales ex VAT)</p></td>
+                </tr>
+            </tbody>
+        </table>
+        <h3>BOP INVENTORY</h3>
+        <table style="width: 100%;margin-left: auto;margin-right: auto;mc-table-style: url('../../Resources/TableStyles/standard.css');" class="TableStyle-standard" cellspacing="0">
+            <col class="TableStyle-standard-Column-Column1" style="width: 166px;" />
+            <col class="TableStyle-standard-Column-Column2" />
+            <thead>
+                <tr class="TableStyle-standard-Head-Header1">
+                    <th class="TableStyle-standard-HeadE-Column1-Header1">Field</th>
+                    <th class="TableStyle-standard-HeadD-Column2-Header1">Description</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1"><span class="Emphasis">BOP Units</span>
+                    </td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">
+                   Planned/actual beginning of period inventory units.  
+                        <p><span class="Emphasis">Calculation</span>: (Previous Period EOP)</p></td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1"><span class="Emphasis">BOP Cost</span>
+                    </td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">
+              Currency ($100). Planned/actual beginning of period inventory cost. 
+                        <p> <span class="Emphasis">Calculation</span>: (Previous Period EOP Cost)</p></td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyB-Column1-Body1"><span class="Emphasis">Avg BOP Unit Cost</span>
+                    </td>
+                    <td class="TableStyle-standard-BodyA-Column2-Body1">
+                     Currency ($1.01). Average beginning of period cost per inventory unit.  
+                        <p><span class="Emphasis">Calculation</span>: (BOP Cost / BOP Units)</p></td>
+                </tr>
+            </tbody>
+        </table>
+        <h3>RECEIPTS</h3>
+        <p class="BasicNote">Receipt metrics are not editable in Sales Plan view because they are managed in greater detail in <span class="Emphasis">Receipt Plan</span> view.</p>
+        <table style="width: 100%;margin-left: auto;margin-right: auto;mc-table-style: url('../../Resources/TableStyles/standard.css');" class="TableStyle-standard" cellspacing="0">
+            <col class="TableStyle-standard-Column-Column1" style="width: 166px;" />
+            <col class="TableStyle-standard-Column-Column2" />
+            <thead>
+                <tr class="TableStyle-standard-Head-Header1">
+                    <th class="TableStyle-standard-HeadE-Column1-Header1">Field</th>
+                    <th class="TableStyle-standard-HeadD-Column2-Header1">Description</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1"><span class="Emphasis">Receipt Units</span>
+                    </td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">
+                          Integer. Planned/actual receipt units for the period.  
+                        <p><span class="Emphasis">Calculation</span>: From Receipt Plan</p></td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1"><span class="Emphasis">Receipt AUC</span>
+                    </td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">
+                          Currency ($1.01). Average cost per unit for receipts in the period.  
+                        <p><span class="Emphasis">Calculation</span>: From Receipt Plan</p></td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1"><span class="Emphasis">Receipt Cost</span>
+                    </td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">
+                      Currency ($100). Planned/actual cost of receipts for the period.  
+                        <p><span class="Emphasis">Calculation</span>: (Receipt Units * Receipt AUC)</p></td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyB-Column1-Body1"><span class="Emphasis">Minimum Presentation</span>
+                    </td>
+                    <td class="TableStyle-standard-BodyA-Column2-Body1">
+                      Integer. Minimum units required to maintain floor presentation for each site selling the item.  
+                        <p><span class="Emphasis">Calculation</span>: From Receipt Plan</p></td>
+                </tr>
+            </tbody>
+        </table>
+        <h3>ON ORDER</h3>
+        <p class="BasicNote">For more information regarding On Order metrics, see <MadCap:xref href="Receipt Plan View.htm#Metrics">Metrics that account for stock that is in transit </MadCap:xref>.</p>
+        <table style="width: 100%;margin-left: auto;margin-right: auto;mc-table-style: url('../../Resources/TableStyles/standard.css');" class="TableStyle-standard" cellspacing="0">
+            <col class="TableStyle-standard-Column-Column1" style="width: 166px;" />
+            <col class="TableStyle-standard-Column-Column2" />
+            <thead>
+                <tr class="TableStyle-standard-Head-Header1">
+                    <th class="TableStyle-standard-HeadE-Column1-Header1">Field</th>
+                    <th class="TableStyle-standard-HeadD-Column2-Header1">Description</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1"><span class="Emphasis">On Order Units</span> </td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">
+                         Integer. Confirmed units on order for the period.  
+                        <p><span class="Emphasis">Calculation</span>: (purchase order units not yet received but scheduled for the period)</p></td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1"><span class="Emphasis">On Order Units var to Receipt Units</span>
+                    </td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">
+                    Integer. Difference of On Order Units to the planned/actual Receipt Units.  
+                        <p><span class="Emphasis">Calculation</span>: (On Order Units – Receipt Units)</p></td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1"><span class="Emphasis">On Order AUC</span> </td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">
+                       Currency ($1.01). Average cost per unit of inbound orders for the period.  
+                        <p><span class="Emphasis">Calculation</span>: (On Order Cost / On Order Units)</p></td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1"><span class="Emphasis">On Order Cost</span>
+                    </td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">
+                       Currency ($100). Cost of inbound orders for the period. 
+                        <p><span class="Emphasis">Calculation</span>: N/A</p></td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1"><span class="Emphasis">On Order Cost % +/- Receipt Cost</span>
+                    </td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">
+                          Percentage (1.01%). Percentage of On Order Cost to planned/actual Receipt Cost.  
+                        <p><span class="Emphasis">Calculation</span>: (On Order Cost / Receipt Cost)</p></td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1"><span class="Emphasis">Stock In-Transit </span>
+                    </td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1" rowspan="4">
+                        <p rowspan="4">In AP, Total Order metrics are inclusive of inbound supplier orders and internal stock movements (also known as Inter-Branch Transfers or IBT). These 4 metrics differentiate between inbound supplier orders and IBT orders providing better visibility to these components.</p>
+                        <p rowspan="4">Stock In-Transit is defined as goods in-transit between sites within the retailer’s own network.</p>
+                        <p rowspan="4">Supplier Orders are the result of the following calculation: Total Orders - IBT Orders.</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1"><span class="Emphasis">Stock In-Transit Cost</span>
+                    </td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1"><span class="Emphasis">Supplier Order Units</span>
+                    </td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyB-Column1-Body1"><span class="Emphasis">Supplier Order Cost</span>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <h3>STOCK TO SALES</h3>
+        <table style="width: 100%;margin-left: auto;margin-right: auto;mc-table-style: url('../../Resources/TableStyles/standard.css');" class="TableStyle-standard" cellspacing="0">
+            <col class="TableStyle-standard-Column-Column1" style="width: 166px;" />
+            <col class="TableStyle-standard-Column-Column2" />
+            <thead>
+                <tr class="TableStyle-standard-Head-Header1">
+                    <th class="TableStyle-standard-HeadE-Column1-Header1">Field</th>
+                    <th class="TableStyle-standard-HeadD-Column2-Header1">Description</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1"><span class="Emphasis">Stock Cost to COGS</span> </td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">
+                        Ratio expressing the relationship of BOP Cost to COGS.
+          
+                        <p><span class="Emphasis">Calculation</span>: (BOP Cost / COGS)</p></td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyB-Column1-Body1"><span class="Emphasis">Stock Units to Sales Units</span> </td>
+                    <td class="TableStyle-standard-BodyA-Column2-Body1">
+                         Ratio expressing the relationship of BOP Units to Sales Units.  
+                        <p><span class="Emphasis">Calculation</span>: (BOP Units / Sales Units)</p></td>
+                </tr>
+            </tbody>
+        </table>
+        <h3>INVENTORY ADJUSTMENTS</h3>
+        <table style="width: 100%;margin-left: auto;margin-right: auto;mc-table-style: url('../../Resources/TableStyles/standard.css');" class="TableStyle-standard" cellspacing="0">
+            <col class="TableStyle-standard-Column-Column1" style="width: 166px;" />
+            <col class="TableStyle-standard-Column-Column2" />
+            <thead>
+                <tr class="TableStyle-standard-Head-Header1">
+                    <th class="TableStyle-standard-HeadE-Column1-Header1">Field</th>
+                    <th class="TableStyle-standard-HeadD-Column2-Header1">Description</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1"><span class="Emphasis">Shrink Units</span>
+                    </td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">
+                         Integer. Planned/actual shrink units for the period.  
+                        <p><span class="Emphasis">Calculation</span>: (Shrink Units % of Sales Units * Sales Units)</p></td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1"><span class="Emphasis">Shrink Units % of Sales Units</span>
+                    </td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">
+                         Percentage of sales units represented by shrink units for the period.  
+                        <p><span class="Emphasis">Calculation</span>: (Shrink Units / Sales Units)</p></td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1"><span class="Emphasis">Shrink Cost</span> </td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">
+                        Currency ($100). Cost value of planned/actual shrink units for the period.  
+                        <p><span class="Emphasis">Calculation</span>: (Shrink Cost % of COGS * COGS)</p></td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1"><span class="Emphasis">Shrink Cost % of COGS</span> </td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">
+                         Percentage of COGS represented by Shrink Cost for the period.  
+                        <p><span class="Emphasis">Calculation</span>: (Shrink Cost / COGS)</p></td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1"><span class="Emphasis">Inventory Adjustment Units</span>
+                    </td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">
+                      Integer; planned/actual inventory adjustment units for the period. 
+                        <p><span class="Emphasis">Calculation</span>: N/A</p></td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyB-Column1-Body1"><span class="Emphasis">Inventory Adjustment Cost</span> </td>
+                    <td class="TableStyle-standard-BodyA-Column2-Body1">
+                        Currency. Planned/actual cost of inventory adjustments for the period.  
+                        <p><span class="Emphasis">Calculation</span>: N/A</p></td>
+                </tr>
+            </tbody>
+        </table>
+        <h3>EOP INVENTORY</h3>
+        <table style="width: 100%;margin-left: auto;margin-right: auto;mc-table-style: url('../../Resources/TableStyles/standard.css');" class="TableStyle-standard" cellspacing="0">
+            <col class="TableStyle-standard-Column-Column1" style="width: 166px;" />
+            <col class="TableStyle-standard-Column-Column2" />
+            <thead>
+                <tr class="TableStyle-standard-Head-Header1">
+                    <th class="TableStyle-standard-HeadE-Column1-Header1">Field</th>
+                    <th class="TableStyle-standard-HeadD-Column2-Header1">Description</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1"><span class="Emphasis">EOP Units</span> </td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">
+                        Planned/actual end of period inventory units. 
+                        <p><span class="Emphasis">Calculation</span>: (BOP Units – Sales Units + Receipt Units – Shrink Units + Inventory Adjustment Units)</p></td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1"><span class="Emphasis">EOP Cost</span> </td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">
+                         Planned/actual end of period inventory cost.  
+                        <p><span class="Emphasis">Calculation</span>: (BOP Cost – Sales Cost + Receipt Cost – Shrink Cost + Inventory Adjustment Cost)</p></td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1"><span class="Emphasis">Avg EOP Unit Cost</span>
+                    </td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">
+                        Average end of period cost per inventory unit. 
+                        <p><span class="Emphasis">Calculation</span>: (EOP Cost / EOP Units)</p></td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1"><span class="Emphasis">Supersession Stock Cost</span> </td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">The residual stock cost anticipated from the superseding style. This is relative to future dated Supersessions. </td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1"><span class="Emphasis">Supersession Stock Units</span>
+                    </td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">The residual stock units anticipated from the superseding style. This is relative to future dated Supersessions. </td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1"><span class="Emphasis">Actual Supersession EOP Units Cluster</span>
+                    </td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1"> Stock that belongs to the sites that are part of the cluster</td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyB-Column1-Body1"><span class="Emphasis">Actual Supersession EOP Units DC Split</span> </td>
+                    <td class="TableStyle-standard-BodyA-Column2-Body1">Stock that belongs to the DCs&#160;that are not part of the cluster.</td>
+                </tr>
+            </tbody>
+        </table>
+        <h3>VAT</h3>
+        <table style="width: 100%;margin-left: auto;margin-right: auto;mc-table-style: url('../../Resources/TableStyles/standard.css');" class="TableStyle-standard" cellspacing="0">
+            <col class="TableStyle-standard-Column-Column1" style="width: 166px;" />
+            <col class="TableStyle-standard-Column-Column2" />
+            <thead>
+                <tr class="TableStyle-standard-Head-Header1">
+                    <th class="TableStyle-standard-HeadE-Column1-Header1">Field</th>
+                    <th class="TableStyle-standard-HeadD-Column2-Header1">Description</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1"><span class="Emphasis">VAT</span> </td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">
+                       Value added tax value of planned/actual Sales for the period.  
+                        <p><span class="Emphasis">Calculation</span>: (Sales - (Sales / (1 + VAT %))</p></td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyB-Column1-Body1"><span class="Emphasis">VAT %</span>
+                    </td>
+                    <td class="TableStyle-standard-BodyA-Column2-Body1">
+                      Value added tax rate of the planned/actual Sales for the period.  
+                        <p><span class="Emphasis">Calculation</span>: (VAT / Sales ex VAT)</p></td>
+                </tr>
+            </tbody>
+        </table>
+    </body>
+</html>

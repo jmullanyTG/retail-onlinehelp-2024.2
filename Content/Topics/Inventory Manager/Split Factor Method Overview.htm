@@ -1,0 +1,539 @@
+<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" xml:lang="en-us">
+    <head>
+        <link href="../../Resources/TableStyles/standard.css" rel="stylesheet" MadCap:stylesheetType="table" /><title></title>
+    </head>
+    <body style="text-align: left;">
+        <h1>Split factors</h1>
+        <p>Split factors are a way of calculating fulfillment demand.</p>
+        <p>A split factor is the percentage of a location’s historical sales that were fulfilled at a given location. For example, if Store A fulfilled 100% of its past sales (meaning all items bought from Store A were fulfilled by Store A), the split factor for Store A sales would be Store A = 100%.</p>
+        <p>If Store A only fulfilled 90% of its past sales and the remaining 10% of sales was fulfilled at Store B, the split factors for Store A's sales would be: Store A = 90%,  Store B = 10%.</p>
+        <p>Split factors must be calculated for all locations in which an item is sold. This gives the application a complete history of where sales at each location were fulfilled. Captured as split factors, this fulfillment history can then be applied to each location's sales forecasts. The result is a forecast for future fulfillment demand at each location.</p>
+        <p>In Store A's case, if 10% of its sales are expected to be fulfilled by Store B, then replenishment orders for both stores need to be modified accordingly. Otherwise, Store A may end up being overstocked while Store B may experience unexpected stock outs after fulfilling demand from its own sales as well as demand transferred from Store A sales. </p>
+        <h2>Calculating split factors</h2>
+        <p>The calculation used to determine a split factor is:</p>
+        <p><span class="Emphasis"># of Units sold at [Sales Location] that were fulfilled at [Fulfillment Location] / # of Units sold at [Sales Location]</span>
+        </p>
+        <h3>Example: Buy Online, Pickup In Store (BOPIS)</h3>
+        <p>An e-commerce site gives customers the choice of picking up items from their local store or having the item shipped to their home. </p>
+        <p>In such a scenario, all sales are credited to the e-commerce site, but fulfillment of sales is split among multiple locations based on customer choices. If a customer chooses to pick up the item in a store, fulfillment is transferred to the pickup store. If they choose to ship it to their home, fulfilment stays at the e-commerce location. </p>
+        <p>In the following example, 100 sales of Mens Canvas High Tops (Black / Size 10) are credited to the e-commerce location during Period 1. </p>
+        <table style="margin-left: 0;margin-right: auto;mc-table-style: url('../../Resources/TableStyles/standard.css');" class="TableStyle-standard" cellspacing="0">
+            <col class="TableStyle-standard-Column-Column1" />
+            <col class="TableStyle-standard-Column-Column2" />
+            <thead>
+                <tr class="TableStyle-standard-Head-Header1">
+                    <th class="TableStyle-standard-HeadD-Column1-Header1" colspan="2" style="text-align: center;">Location: e-commerce</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">Product</td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">Mens Canvas High Tops (Black / Size 10)</td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">Period</td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">1</td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyB-Column1-Body1" style="font-weight: bold;">Total Sales (Units)</td>
+                    <td class="TableStyle-standard-BodyA-Column2-Body1">100</td>
+                </tr>
+            </tbody>
+        </table>
+        <p>Of these 100 sales, 75 were fulfilled from the e-commerce site (ship to home) and 25 were fulfilled at stores.
+</p>
+        <table style="margin-left: 0;margin-right: auto;mc-table-style: url('../../Resources/TableStyles/standard.css');" class="TableStyle-standard" cellspacing="0">
+            <col class="TableStyle-standard-Column-Column1" style="width: 25%;" />
+            <col class="TableStyle-standard-Column-Column2" style="width: 25%;" />
+            <col class="TableStyle-standard-Column-Column1" style="width: 25%;" />
+            <col class="TableStyle-standard-Column-Column2" style="width: 25%;" />
+            <thead>
+                <tr class="TableStyle-standard-Head-Header1">
+                    <th class="TableStyle-standard-HeadE-Column1-Header1" style="text-align: center;">
+                        <p>Customer Fulfillment Choice</p>
+                    </th>
+                    <th class="TableStyle-standard-HeadE-Column2-Header1" style="text-align: center;">
+                        <p>Units</p>
+                    </th>
+                    <th class="TableStyle-standard-HeadE-Column1-Header1" style="text-align: center;">
+                        <p>Split Factor  </p>
+                    </th>
+                    <th class="TableStyle-standard-HeadD-Column2-Header1" style="text-align: center;">Split Factor Calculation</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">
+                        Ship to Home 
+                    </td>
+                    <td class="TableStyle-standard-BodyE-Column2-Body1" style="text-align: center;">
+                         75 
+                    </td>
+                    <td class="TableStyle-standard-BodyE-Column1-Body1" style="text-align: center;">
+                       75% 
+                    </td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1" style="text-align: center;">((75/100) * 100)</td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">
+                         Pick up in Store 73 
+                    </td>
+                    <td class="TableStyle-standard-BodyE-Column2-Body1" style="text-align: center;">
+                         10 
+                    </td>
+                    <td class="TableStyle-standard-BodyE-Column1-Body1" style="text-align: center;">
+                         10% 
+                    </td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1" style="text-align: center;"> ((10/100) * 100)</td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">
+                         Pick up in Store 241 
+                    </td>
+                    <td class="TableStyle-standard-BodyE-Column2-Body1" style="text-align: center;">
+                         6 
+                    </td>
+                    <td class="TableStyle-standard-BodyE-Column1-Body1" style="text-align: center;">
+                         6% 
+                    </td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1" style="text-align: center;">((6/100) * 100)</td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">
+                         Pickup in Store 405 
+                    </td>
+                    <td class="TableStyle-standard-BodyE-Column2-Body1" style="text-align: center;">
+                         9 
+                    </td>
+                    <td class="TableStyle-standard-BodyE-Column1-Body1" style="text-align: center;">
+                         9% 
+                    </td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1" style="text-align: center;">((9/100) * 100)</td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyB-Column1-Body1" style="font-weight: bold;">
+                         Total 
+                    </td>
+                    <td class="TableStyle-standard-BodyB-Column2-Body1" style="text-align: center;">
+                        100  
+                    </td>
+                    <td class="TableStyle-standard-BodyB-Column1-Body1" style="text-align: center;">
+                         100% 
+                    </td>
+                    <td class="TableStyle-standard-BodyA-Column2-Body1" style="text-align: center;">-</td>
+                </tr>
+            </tbody>
+        </table>
+        <p>In the Split Factor column, the split factor for each location is the percentage of items sold on e-commerce that were fulfilled at that location.&#160; For example, Store 73 fulfilled 10 of the 100 e-commerce orders made for Mens Canvas High Tops (Black / Size 10) in Period 1, so its split factor is 10%.</p>
+        <h3>Example: Buy In Store, Ship From Store (BISSFS)</h3>
+        <p>Sales of Mens Canvas High Tops (Black / Size 10) during that same period but at a different location (Store 73). </p>
+        <table style="margin-left: 0;margin-right: auto;mc-table-style: url('../../Resources/TableStyles/standard.css');" class="TableStyle-standard" cellspacing="0">
+            <col class="TableStyle-standard-Column-Column1" />
+            <col class="TableStyle-standard-Column-Column2" />
+            <thead>
+                <tr class="TableStyle-standard-Head-Header1">
+                    <th class="TableStyle-standard-HeadD-Column1-Header1" colspan="2" style="text-align: center;">Location: Store 73</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">Product</td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">Mens Canvas High Tops (Black / Size 10)</td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">Period</td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">1</td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyB-Column1-Body1" style="font-weight: bold;">Total Sales (Units)</td>
+                    <td class="TableStyle-standard-BodyA-Column2-Body1">20</td>
+                </tr>
+            </tbody>
+        </table>
+        <p>In this example, most items sold at Store 73 were fulfilled at Store 73. However, some customers chose to pick up their items at a different store (Store 405). One customer bought an item in the store and chose to have it shipped to their home. Although the item was bought at Store 73, the Order Management system determined the item should be shipped from Store 241.</p>
+        <table style="margin-left: 0;margin-right: auto;mc-table-style: url('../../Resources/TableStyles/standard.css');" class="TableStyle-standard" cellspacing="0">
+            <col class="TableStyle-standard-Column-Column1" style="width: 25%;" />
+            <col class="TableStyle-standard-Column-Column2" style="width: 25%;" />
+            <col class="TableStyle-standard-Column-Column1" style="width: 25%;" />
+            <col class="TableStyle-standard-Column-Column2" style="width: 25%;" />
+            <thead>
+                <tr class="TableStyle-standard-Head-Header1">
+                    <th class="TableStyle-standard-HeadE-Column1-Header1" style="text-align: left;">
+                        <p>Customer Fulfillment Choice</p>
+                    </th>
+                    <th class="TableStyle-standard-HeadE-Column2-Header1" style="text-align: center;">
+                        <p style="text-align: center;">Units</p>
+                    </th>
+                    <th class="TableStyle-standard-HeadE-Column1-Header1" style="text-align: center;">
+                        <p>Split Factor</p>
+                    </th>
+                    <th class="TableStyle-standard-HeadD-Column2-Header1" style="text-align: center;">Split Factor Calculation</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1" style="font-weight: bold;text-align: left;">
+                         Pickup in Store 73 
+                    </td>
+                    <td class="TableStyle-standard-BodyE-Column2-Body1" style="text-align: center;">
+                         17 
+                    </td>
+                    <td class="TableStyle-standard-BodyE-Column1-Body1" style="text-align: center;">
+                         85% 
+                    </td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1" style="text-align: center;">((17/20) * 100)</td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1" style="font-weight: bold;text-align: left;">
+                        Ship to Home From Store 241 
+                    </td>
+                    <td class="TableStyle-standard-BodyE-Column2-Body1" style="text-align: center;">
+                         1 
+                    </td>
+                    <td class="TableStyle-standard-BodyE-Column1-Body1" style="text-align: center;">
+                         5% 
+                    </td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1" style="text-align: center;"> ((1/20) * 100)</td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1" style="font-weight: bold;text-align: left;">
+                         Pickup in Store 405 
+                    </td>
+                    <td class="TableStyle-standard-BodyE-Column2-Body1" style="text-align: center;">
+                         2 
+                    </td>
+                    <td class="TableStyle-standard-BodyE-Column1-Body1" style="text-align: center;">
+                        10% 
+                    </td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1" style="text-align: center;">((2/20) * 100)</td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyB-Column1-Body1" style="font-weight: bold;text-align: left;">
+                        Total 
+                    </td>
+                    <td class="TableStyle-standard-BodyB-Column2-Body1" style="text-align: center;">
+                         20 
+                    </td>
+                    <td class="TableStyle-standard-BodyB-Column1-Body1" style="text-align: center;">
+                         100% 
+                    </td>
+                    <td class="TableStyle-standard-BodyA-Column2-Body1" style="text-align: center;">-</td>
+                </tr>
+            </tbody>
+        </table>
+        <p>In this manner, split factors can be calculated for all locations. </p>
+        <p>Once split factors have been calculated from sales at all locations (e-commerce, Store 73, Store 241, Store 405), they are used to forecast fulfillment demand for each location.</p>
+        <h2>Applying split factors</h2>
+        <p>To calculate how much stock on hand is needed to handle a location’s anticipated demand, the system applies the split factors calculated from each location’s sales history to each location’s sales demand forecast. </p>
+        <p>For example, a sales forecast is created for the next 90 days (Period 2) based on sales from the previous 90 days (Period 1). </p>
+        <p>To then calculate anticipated fulfillment demand at each location, the system:</p>
+        <ul>
+            <li>calculates split factors for each location based on Period 1 fulfillment splits (see Calculating split factors).</li>
+            <li>applies the Period 1 split factors to the Period 2 sales forecasts (see examples below).</li>
+            <li>sums up the split factor results for each location from across all locations (see examples below).</li>
+        </ul>
+        <h3>Examples</h3>
+        <h4>e-commerce</h4>
+        <p>In the following example, the system forecasts that the e-commerce location will sell 120 Mens Canvas High Tops (Black / Size 10) in period 2.</p>
+        <table style="margin-left: 0;margin-right: auto;mc-table-style: url('../../Resources/TableStyles/standard.css');" class="TableStyle-standard" cellspacing="0">
+            <col class="TableStyle-standard-Column-Column1" />
+            <col class="TableStyle-standard-Column-Column2" />
+            <thead>
+                <tr class="TableStyle-standard-Head-Header1">
+                    <th class="TableStyle-standard-HeadD-Column1-Header1" colspan="2">Location: e-commerce</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">Product</td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">Mens Canvas High Tops (Black / Size 10)</td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">Period</td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">2</td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyB-Column1-Body1" style="font-weight: bold;">Forecasted Sales </td>
+                    <td class="TableStyle-standard-BodyA-Column2-Body1"><span style="color: #0000ff;">120</span>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <p> It then applies the split factors calculated for each fulfillment location from Period 1 (see  example above) to find out where the demand for those 120 sales is expected to be fulfilled.&#160; 
+</p>
+        <table style="margin-left: 0;margin-right: auto;mc-table-style: url('../../Resources/TableStyles/standard.css');" class="TableStyle-standard" cellspacing="0">
+            <col class="TableStyle-standard-Column-Column1" style="width: 25%;" />
+            <col class="TableStyle-standard-Column-Column2" style="width: 25%;" />
+            <col class="TableStyle-standard-Column-Column1" style="width: 25%;" />
+            <col class="TableStyle-standard-Column-Column2" style="width: 25%;" />
+            <thead>
+                <tr class="TableStyle-standard-Head-Header1">
+                    <th class="TableStyle-standard-HeadE-Column1-Header1">
+                        <p>Fulfillment Location</p>
+                    </th>
+                    <th class="TableStyle-standard-HeadE-Column2-Header1" style="text-align: center;">
+                        <p>Split Factor  </p>
+                    </th>
+                    <th class="TableStyle-standard-HeadE-Column1-Header1" style="text-align: center;">Calculation</th>
+                    <th class="TableStyle-standard-HeadD-Column2-Header1" style="text-align: center;">
+                        <p>Period 2 Fulfillment Forecast </p>
+                    </th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">
+                         e-commerce 
+                    </td>
+                    <td class="TableStyle-standard-BodyE-Column2-Body1" style="text-align: center;">
+                         75% 
+                    </td>
+                    <td class="TableStyle-standard-BodyE-Column1-Body1" style="text-align: center;">
+                        (<span style="color: #0000ff;">120 </span>* .75) 
+                    </td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1" style="font-weight: bold;text-align: center;">
+                         90  
+                    </td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">
+                        Store 73 
+                    </td>
+                    <td class="TableStyle-standard-BodyE-Column2-Body1" style="text-align: center;">
+                         10% 
+                    </td>
+                    <td class="TableStyle-standard-BodyE-Column1-Body1" style="text-align: center;">
+                         (<span style="color: #0000ff;">120 </span>* .10) 
+                    </td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1" style="font-weight: bold;text-align: center;"><a name="12"></a>12  
+                    </td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">
+                        Store 241 
+                    </td>
+                    <td class="TableStyle-standard-BodyE-Column2-Body1" style="text-align: center;">
+                         6% 
+                    </td>
+                    <td class="TableStyle-standard-BodyE-Column1-Body1" style="text-align: center;"> (<span style="color: #0000ff;">120 </span>*.06)</td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1" style="font-weight: bold;text-align: center;">
+                         7.2 
+                    </td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">
+                         Store 405 
+                    </td>
+                    <td class="TableStyle-standard-BodyE-Column2-Body1" style="text-align: center;">
+                         9% 
+                    </td>
+                    <td class="TableStyle-standard-BodyE-Column1-Body1" style="text-align: center;"> (<span style="color: #0000ff;">120 </span>* .09)</td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1" style="font-weight: bold;text-align: center;">
+                         10.8 
+                    </td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyB-Column1-Body1" style="font-weight: bold;">
+                         Total 
+                    </td>
+                    <td class="TableStyle-standard-BodyB-Column2-Body1" style="text-align: center;">
+                        100% 
+                    </td>
+                    <td class="TableStyle-standard-BodyB-Column1-Body1" style="text-align: center;">-</td>
+                    <td class="TableStyle-standard-BodyA-Column2-Body1" style="font-weight: bold;text-align: center;">
+                         120.00 
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <p>In this example, the split factor for Store 73 is 10%, meaning that 10% of all sales from the e-commerce site during Period 2 is anticipated to be fulfilled at Store 73. </p>
+        <p>Since 120 sales are forecasted from the e-commerce site for period 2, this means that Store 73 should anticipate demand for 12 additional pairs of Mens Canvas High Tops (Black / Size 10) coming from e-commerce sales during period 2.</p>
+        <h4>Store 73</h4>
+        <p>For the Period 2 sales forecast for Store 73. </p>
+        <p>If the sales forecast for Mens Canvas High Tops (Black / Size 10) says Store 73 will sell 22 units during period 2, then based on the split factors calculated from period 1 sales at Store 73 (see example above), most of these sales are fulfilled at Store 73. </p>
+        <table style="margin-left: 0;margin-right: auto;mc-table-style: url('../../Resources/TableStyles/standard.css');" class="TableStyle-standard" cellspacing="0">
+            <col class="TableStyle-standard-Column-Column1" />
+            <col class="TableStyle-standard-Column-Column2" />
+            <thead>
+                <tr class="TableStyle-standard-Head-Header1">
+                    <th class="TableStyle-standard-HeadD-Column1-Header1" colspan="2" style="text-align: left;">Location: Store 73</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1" style="font-weight: bold;text-align: left;">Product</td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1" style="text-align: left;">Men’s Canvas High Tops (Black / Size 10)</td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1" style="font-weight: bold;text-align: left;">Period</td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1" style="text-align: left;">2</td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyB-Column1-Body1" style="font-weight: bold;text-align: left;">Forecasted Sales </td>
+                    <td class="TableStyle-standard-BodyA-Column2-Body1" style="text-align: left;"><span style="color: #0000ff;">22</span>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <p>By applying the split factors calculated from all period 1 sales at Store 73, we can see how fulfillment of Store 73 sales during period 2 breaks out across locations.</p>
+        <table style="margin-left: 0;margin-right: auto;mc-table-style: url('../../Resources/TableStyles/standard.css');" class="TableStyle-standard" cellspacing="0">
+            <col class="TableStyle-standard-Column-Column1" style="width: 25%;" />
+            <col class="TableStyle-standard-Column-Column2" style="width: 25%;" />
+            <col class="TableStyle-standard-Column-Column1" style="width: 25%;" />
+            <col class="TableStyle-standard-Column-Column2" style="width: 25%;" />
+            <thead>
+                <tr class="TableStyle-standard-Head-Header1">
+                    <th class="TableStyle-standard-HeadE-Column1-Header1" style="text-align: left;">
+                        <p style="text-align: center;">Fulfillment Location</p>
+                    </th>
+                    <th class="TableStyle-standard-HeadE-Column2-Header1" style="text-align: center;">
+                        <p>Split Factor </p>
+                    </th>
+                    <th class="TableStyle-standard-HeadE-Column1-Header1" style="text-align: center;">Calculation</th>
+                    <th class="TableStyle-standard-HeadD-Column2-Header1" style="text-align: center;">
+                        <p>Period 2 Fulfillment Forecast </p>
+                    </th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">
+                         e-commerce 
+                    </td>
+                    <td class="TableStyle-standard-BodyE-Column2-Body1" style="text-align: center;">
+                         0% 
+                    </td>
+                    <td class="TableStyle-standard-BodyE-Column1-Body1" style="text-align: center;">(<span style="color: #0000ff;">22 </span>* 0)</td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1" style="font-weight: bold;text-align: center;">0</td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">
+                        Store 73 
+                    </td>
+                    <td class="TableStyle-standard-BodyE-Column2-Body1" style="text-align: center;">
+                         85% 
+                    </td>
+                    <td class="TableStyle-standard-BodyE-Column1-Body1" style="text-align: center;">(<span style="color: #0000ff;">22 </span>* .85)</td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1" style="font-weight: bold;text-align: center;"><a name="15.4"></a>18.7</td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">
+                         Store 241 
+                    </td>
+                    <td class="TableStyle-standard-BodyE-Column2-Body1" style="text-align: center;">
+                         10% 
+                    </td>
+                    <td class="TableStyle-standard-BodyE-Column1-Body1" style="text-align: center;">(<span style="color: #0000ff;">22 </span>* .1)</td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1" style="font-weight: bold;text-align: center;">2.2</td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">
+                         Store 405 
+                    </td>
+                    <td class="TableStyle-standard-BodyE-Column2-Body1" style="text-align: center;">
+                         5% 
+                    </td>
+                    <td class="TableStyle-standard-BodyE-Column1-Body1" style="text-align: center;"><span style="color: #0000ff;">(22 </span>*.05)</td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1" style="font-weight: bold;text-align: center;">1.1</td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyB-Column1-Body1" style="font-weight: bold;">
+                        Total 
+                    </td>
+                    <td class="TableStyle-standard-BodyB-Column2-Body1" style="text-align: center;">
+                         100% 
+                    </td>
+                    <td class="TableStyle-standard-BodyB-Column1-Body1" style="text-align: center;">--</td>
+                    <td class="TableStyle-standard-BodyA-Column2-Body1" style="font-weight: bold;text-align: center;">
+                         22.0 
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <p>If split factors were calculated for the remaining stores (Store 241 and Store 405), then the total forecasted fulfillment demand for each location during period 2 is:</p>
+        <table style="margin-left: 0;margin-right: auto;mc-table-style: url('../../Resources/TableStyles/standard.css');" class="TableStyle-standard" cellspacing="0">
+            <col class="TableStyle-standard-Column-Column1" />
+            <col class="TableStyle-standard-Column-Column2" />
+            <thead>
+                <tr class="TableStyle-standard-Head-Header1">
+                    <th class="TableStyle-standard-HeadD-Column1-Header1" colspan="2" style="text-align: left;">Location: Store 73</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1" style="font-weight: bold;text-align: left;">Product</td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1" style="text-align: left;">Mens Canvas High Tops (Black / Size 10)</td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1" style="font-weight: bold;text-align: left;">Period</td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1" style="text-align: left;">2</td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyB-Column1-Body1" style="font-weight: bold;text-align: left;">Forecasted Fulfillments</td>
+                    <td class="TableStyle-standard-BodyA-Column2-Body1" style="text-align: left;"><span style="color: #483d8b; font-weight: bold;">31</span>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <p> The fulfillment forecast for Store 73 is shown below.</p>
+        <table style="margin-left: 0;margin-right: auto;mc-table-style: url('../../Resources/TableStyles/standard.css');" class="TableStyle-standard" cellspacing="0">
+            <col class="TableStyle-standard-Column-Column1" style="width: 25%;" />
+            <col class="TableStyle-standard-Column-Column2" style="width: 25%;" />
+            <thead>
+                <tr class="TableStyle-standard-Head-Header1">
+                    <th class="TableStyle-standard-HeadE-Column1-Header1" style="text-align: center;">
+                        <p>Sold From</p>
+                    </th>
+                    <th class="TableStyle-standard-HeadD-Column2-Header1" style="text-align: center;">
+                        <p>Fulfillment Forecast </p>
+                    </th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1" style="font-weight: bold;text-align: center;">
+                         e-commerce 
+                    </td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1" style="text-align: center;"><a href="#12">12</a>
+                    </td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1" style="font-weight: bold;text-align: center;">
+                         Store 73 
+                    </td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1" style="text-align: center;"><a href="#15.4">18.7</a>
+                    </td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1" style="font-weight: bold;text-align: center;">
+                         Store 241 
+                    </td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1" style="text-align: center;">
+                         0 
+                    </td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1" style="font-weight: bold;text-align: center;">
+                         Store 405 
+                    </td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1" style="text-align: center;">
+                         0.3 
+                    </td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyB-Column1-Body1" style="font-weight: bold;text-align: center;">
+                         Total 
+                    </td>
+                    <td class="TableStyle-standard-BodyA-Column2-Body1" style="text-align: center;"><span style="color: #483d8b; font-weight: bold;">31</span>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <p>The forecasted demand for Mens Canvas High Tops (Black / Size 10) at Store 73 includes fulfillment of sales from 2 other locations (e-commerce and Store 405) in addition to sales occurring at Store 73 itself. (The e-commerce fulfillments were split to Store 73 as can be seen in the e-commerce sales forecast example above.)</p>
+        <p>The total forecasted sales at Store 73 was 22 units compared to its forecasted demand of 31 units. </p>
+        <p class="BasicNote">Relying on sales demand alone to calculate replenishment needs would result in Store 73 being potentially understocked by 9 units during period 2.</p>
+        <h2>Enabling split factors in replenishment strategies</h2>
+        <p>Split factors can be enabled when calculating an item’s replenishment strategy. For more information, see <MadCap:xref href="Setting the Consider Demand.htm">Setting the Consider Demand Transference option for an item</MadCap:xref>.</p>
+    </body>
+</html>

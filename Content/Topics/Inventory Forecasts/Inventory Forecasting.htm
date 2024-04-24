@@ -1,0 +1,148 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" xml:lang="en-us">
+    <head>
+        <link href="../../Resources/TableStyles/standard.css" rel="stylesheet" MadCap:stylesheetType="table" /><title></title>
+    </head>
+    <body>
+        <h1>Inventory forecasting</h1>
+        <p>At its core, statistical forecasting is a process that displays a result containing some degree of error. Mitigating these errors and producing highly accurate forecasts is the main focus of the Tournament forecasting system. Understanding that there is always some degree of error in any projection gives users a realistic expectation for extracting useful information from the inventory forecasts. </p>
+        <p>Users create, view, and manage forecasts using the Inventory Forecast module.</p>
+        <p>
+            <img src="../../Resources/Images/Demand Forecasting/Inventory View screen.PNG" class="LargeImages" />
+        </p>
+        <h1>Filters in the Forecast view</h1>
+        <p>An inventory forecast generates the forecast engine at the inventory level (item at site, or SKU/location). After  specific items are selected,   the Forecast view displays all of the inventories for the selected filter. </p>
+        <p>A static set of items can be viewed based on certain item or site assigned filters (or any others), or dynamic exception filters used to identify exceptions which may require attention. These filters must be built using the <span class="Emphasis">Filters</span> module. </p>
+        <p>In the <span class="Emphasis">Item</span> field above the toolbar, the entire filter displays as a sequence of items (e.g. Item 1 of 100) and is navigated by clicking the dropdown arrow or sequentially using the navigation arrows to the right.</p>
+        <h2>Grid view</h2>
+        <p>The grid displays the actual data values for the forecast, demand and other series displayed in the graph. As such, the descriptions of the series are identical to those for the graph. </p>
+        <p>Use the grid view to work with the forecast series using specific values. Manual forecast values can be entered for the current period and any future periods. These changes affect the graph.</p>
+        <p>Clicking on the values in the grid highlights the associated series in the graph. Any series represented by a line becomes thicker and the bar graph series show additional shading. </p>
+        <p>The data displayed on the graph view is color coded to match the corresponding data series in the grid view.&#160; The individual data series can be selected to be displayed on the graph by checking the <span class="Emphasis">Visible</span> checkbox for the specific data series on the grid view.</p>
+        <table class="TableStyle-standard" cellspacing="0" style="mc-table-style: url('../../Resources/TableStyles/standard.css');">
+            <col class="TableStyle-standard-Column-Column1" />
+            <col class="TableStyle-standard-Column-Column2" />
+            <thead>
+                <tr class="TableStyle-standard-Head-Header1">
+                    <th class="TableStyle-standard-HeadE-Column1-Header1">Series</th>
+                    <th class="TableStyle-standard-HeadD-Column2-Header1">Description</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyD-Column1-Body1" colspan="2"><span class="Emphasis">Core</span>
+                    </td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">Total Sales</td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">Historical demand from sales history. Matches the imported history totals of sales for the inventory item.</td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">Total&#160;Lost Sales</td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">When selecting forecast methods, lost sales totals are represented by the purple bar if users elect to include lost sales in their calculations.</td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">Effective Total</td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">The effective total for demand history. Determines the input to the forecasting engine when determining historical demand. The Effective Total series usually runs along the top of the total sales bar graph and total lost sales bar graph (if lost sales have been included).</td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">Manual Forecast</td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">
+                         The manual forecast series is represented as a red or burgundy dot.  
+                        <p>The manual forecast series overlaps the effective forecast series and only diverges upon manual manipulation of the series. </p><p>Manipulation is by either by dragging the dot in the graph or the addition of a value to the manual forecast row in the grid. Once changes are made, the dot changes to burgundy to differentiate the series from the effective forecast which was displayed upon entering the viewer.</p></td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">Manual Level Forecast</td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">The Manual Level Forecast is represented by red dotted lines. The Manual Level Forecast functions the same as Manual Forecasts and is used to manually override Level Forecasts. 
+This series is usually un-editable in inventory forecasts and is only used in Level Forecasts.</td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">Effective Forecast</td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">The approved forecast which will be referenced throughout other parts of the application. The effective forecast series changes  once <span class="Emphasis">Save</span> has been clicked if manual adjustments are made. </td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyD-Column1-Body1" colspan="2"><span class="Emphasis">Sales</span>
+                    </td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">Sales</td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">The sales history for the period.</td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">Lost Sales</td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">The lost sales calculated for the period.</td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">LY Total Sales</td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">The total sales for this period last year.</td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1" MadCap:conditions="General.DoNotPublish">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">Sales Planning</td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">&#160;</td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">Supersession Lost Sales</td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">The lost sales for any superseded item.</td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">Supersession Sales</td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">The sales history for the period for a superseded item.</td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyD-Column1-Body1" colspan="2"><span class="Emphasis">Forecast</span>
+                    </td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">Original Forecast</td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">When selecting between different forecast models, the yellow bar graph shows the resultant winner of the forecast tournament. This can be a useful comparison tool when choosing a forecast method.</td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">System Forecast</td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">The system forecast series represents the output from the forecasting engine.</td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1" MadCap:conditions="">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">Level Forecast</td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">The level forecast represents forecasting engine output for a forecast level. This would be 0 for inventory forecasts and is only used in Level Forecasts.</td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1" MadCap:conditions="">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">Profile Forecast</td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">The profile forecasts shows the applied profile for the forecast if a profile is applied. This field would be hidden otherwise.</td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1" MadCap:conditions="">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">Allocate Forecast</td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">&#160;</td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1" MadCap:conditions="">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">Retrend Forecast</td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">Calculated for strategy lines whose <span class="Emphasis">Use Re-Trend</span> column is
+checked.</td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyD-Column1-Body1" colspan="2"><span class="Emphasis">Level/Inventory Causals</span>
+                    </td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1"><i>Causal Name</i>
+                    </td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">The name of each linked causal appears as a data series.</td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1"><span class="Emphasis">Additional</span>
+                    </td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">&#160;</td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">Forecast Cost</td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1"><![CDATA[
+
+]]><span class="Emphasis">Calculation</span>: Forecasted units * cost of the unit in the system currency</td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyB-Column1-Body1">Forecast Retail </td>
+                    <td class="TableStyle-standard-BodyA-Column2-Body1"><span class="Emphasis">Calculation</span>: Forecasted units * retail of the unit in the system currency</td>
+                </tr>
+            </tbody>
+        </table>
+        <p class="BasicNote">For more information on Forecast Cost and Forecast Retail, see <MadCap:xref href="Forecasting Cost and Retail Ticket Price.htm">Forecasting cost and retail ticket price .</MadCap:xref></p>
+    </body>
+</html>

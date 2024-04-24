@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head>
+    </head>
+    <body>
+        <p>These data values are unaffected by the AP linking or pushing process, and are wholly maintained in Allocation.
+
+</p>
+        <ul>
+            <li>
+                <p>Allocation Product Model
+</p>
+            </li>
+            <li>
+                <p>
+AP Receipt planning constraints (with the exception of Minimum Presentation as Safety Stock)
+
+</p>
+            </li>
+            <li>
+                <p>AP Seasonality curves</p>
+            </li>
+        </ul>
+    </body>
+</html>

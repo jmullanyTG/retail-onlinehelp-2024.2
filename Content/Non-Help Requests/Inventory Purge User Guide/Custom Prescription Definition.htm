@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head>
+    </head>
+    <body>
+        <h1>Custom Prescription Definition</h1>
+        <h2>Optionality</h2>
+        <p>If the Inventory Solution is used <span class="EmphasisItalic">out of the box</span>, there will be no need for any custom prescription because there will be no custom Inventory artifacts to act upon.</p>
+        <h2>Core Prescription Retrieval Query</h2>
+        <p>It is strongly recommended that the following query be executed, the results studied, and the capabilities for reuse of ID Lists noted.  The <span class="Emphasis">StepObjective</span> clearly states what each step will do, and the artifacts concerned, with the sole exception of the Procedural Delete, where the tables involved are too numerous, typically, to enumerate.</p>
+        <MadCap:codeSnippet>
+            <MadCap:codeSnippetCopyButton />
+            <MadCap:codeSnippetBody MadCap:useLineNumbers="False" MadCap:lineNumberStart="1" MadCap:continue="False" xml:space="preserve">SELECT *
+  FROM inventory.PurgeStep ps
+ ORDER BY ps.SequenceNumber;</MadCap:codeSnippetBody>
+        </MadCap:codeSnippet>
+    </body>
+</html>

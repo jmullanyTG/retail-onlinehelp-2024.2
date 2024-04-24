@@ -1,0 +1,1572 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head>
+        <link href="../TableStyles/standard.css" rel="stylesheet" MadCap:stylesheetType="table" />
+    </head>
+    <body>
+        <p style="background-color: #DDEBF7;">Setup - Marginal Return Matrix and Recommendation Count Per Cluster</p>
+        <table style="width: 100%;border-left-style: solid;border-left-width: 0px;margin-left: auto;margin-right: auto;">
+            <col />
+            <col />
+            <col />
+            <col />
+            <col />
+            <tbody>
+                <tr>
+                    <td><span class="Emphasis">Retail - A</span>
+                        <p>Recommended Choices = 5</p>
+                        <table>
+                            <tbody>
+                                <tr>
+                                    <td style="background-color: #EDEDED;" rowspan="2">Style</td>
+                                    <td style="background-color: #E2EFDA;" colspan="4">Color</td>
+                                </tr>
+                                <tr>
+                                    <td style="background-color: #C6E0B4;">1</td>
+                                    <td style="background-color: #C6E0B4;">2</td>
+                                    <td style="background-color: #C6E0B4;">3</td>
+                                    <td style="background-color: #C6E0B4;">4</td>
+                                </tr>
+                                <tr>
+                                    <td style="background-color: #DBDBDB;">1</td>
+                                    <td style="background-color: #9BC2E6;">
+                        
+                       1.00 
+                    </td>
+                                    <td style="background-color: #9BC2E6;">
+                       
+                        0.92
+                    </td>
+                                    <td style="background-color: #9BC2E6;">
+                        
+                        0.87
+                    </td>
+                                    <td style="background-color: #9BC2E6;">
+                       
+                        0.64
+                    </td>
+                                </tr>
+                                <tr>
+                                    <td style="background-color: #DBDBDB;">2</td>
+                                    <td style="background-color: #9BC2E6;">0.72</td>
+                                    <td>0.54</td>
+                                    <td>0.37</td>
+                                    <td>0.29</td>
+                                </tr>
+                                <tr>
+                                    <td style="background-color: #DBDBDB;">3</td>
+                                    <td>0.41</td>
+                                    <td>0.39</td>
+                                    <td>0.32</td>
+                                    <td>0.18</td>
+                                </tr>
+                                <tr>
+                                    <td style="background-color: #DBDBDB;">4</td>
+                                    <td>0.33</td>
+                                    <td>0.25</td>
+                                    <td>0.24</td>
+                                    <td>0.09</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </td>
+                    <td><span class="Emphasis">Retail - B</span>
+                        <p>Recommended Choices = 4</p>
+                        <table>
+                            <tbody>
+                                <tr>
+                                    <td style="background-color: #EDEDED;" rowspan="2">Style</td>
+                                    <td style="background-color: #E2EFDA;" colspan="4">Color</td>
+                                </tr>
+                                <tr>
+                                    <td style="background-color: #C6E0B4;">1</td>
+                                    <td style="background-color: #C6E0B4;">2</td>
+                                    <td style="background-color: #C6E0B4;">3</td>
+                                    <td style="background-color: #C6E0B4;">4</td>
+                                </tr>
+                                <tr>
+                                    <td style="background-color: #DBDBDB;">1</td>
+                                    <td style="background-color: #9BC2E6;">
+                        
+                       1.00 
+                    </td>
+                                    <td style="background-color: #9BC2E6;">
+                       
+                        0.89
+                    </td>
+                                    <td>
+                        
+                        0.63</td>
+                                    <td>
+                       
+                        0.43</td>
+                                </tr>
+                                <tr>
+                                    <td style="background-color: #DBDBDB;">2</td>
+                                    <td style="background-color: #9BC2E6;">0.84</td>
+                                    <td style="background-color: #9BC2E6;">0.79</td>
+                                    <td>0.59</td>
+                                    <td>0.39</td>
+                                </tr>
+                                <tr>
+                                    <td style="background-color: #DBDBDB;">3</td>
+                                    <td>0.65</td>
+                                    <td>0.64</td>
+                                    <td>0.41</td>
+                                    <td>0.28</td>
+                                </tr>
+                                <tr>
+                                    <td style="background-color: #DBDBDB;">4</td>
+                                    <td>0.52</td>
+                                    <td>0.49</td>
+                                    <td>0.33</td>
+                                    <td>0.16</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </td>
+                    <td><span class="Emphasis">Retail - C</span>
+                        <p>Recommended Choices = 3</p>
+                        <table>
+                            <tbody>
+                                <tr>
+                                    <td style="background-color: #EDEDED;" rowspan="2">Style</td>
+                                    <td style="background-color: #E2EFDA;" colspan="4">Color</td>
+                                </tr>
+                                <tr>
+                                    <td style="background-color: #C6E0B4;">1</td>
+                                    <td style="background-color: #C6E0B4;">2</td>
+                                    <td style="background-color: #C6E0B4;">3</td>
+                                    <td style="background-color: #C6E0B4;">4</td>
+                                </tr>
+                                <tr>
+                                    <td style="background-color: #DBDBDB;">1</td>
+                                    <td style="background-color: #9BC2E6;">
+                        
+										1.00 
+									</td>
+                                    <td>
+                       
+										0.48</td>
+                                    <td>
+                        
+									0.38</td>
+                                    <td>
+                       
+									0.31</td>
+                                </tr>
+                                <tr>
+                                    <td style="background-color: #DBDBDB;">2</td>
+                                    <td style="background-color: #9BC2E6;">0.82</td>
+                                    <td>0.47</td>
+                                    <td>0.34</td>
+                                    <td>0.22</td>
+                                </tr>
+                                <tr>
+                                    <td style="background-color: #DBDBDB;">3</td>
+                                    <td style="background-color: #9BC2E6;">0.65</td>
+                                    <td>0.32</td>
+                                    <td>0.25</td>
+                                    <td>0.13</td>
+                                </tr>
+                                <tr>
+                                    <td style="background-color: #DBDBDB;">4</td>
+                                    <td>0.33</td>
+                                    <td>0.29</td>
+                                    <td>0.19</td>
+                                    <td>0.07</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <p>&#160;</p>
+        <table style="width: 100%;margin-left: auto;margin-right: auto;">
+            <col />
+            <col />
+            <col />
+            <col />
+            <col />
+            <tbody>
+                <tr>
+                    <td><span class="Emphasis">Outlet - A</span>
+                        <p>Recommended Choices = 4</p>
+                        <table>
+                            <col />
+                            <col />
+                            <col />
+                            <col />
+                            <col />
+                            <tbody>
+                                <tr>
+                                    <td style="background-color: #EDEDED;" rowspan="2">Style</td>
+                                    <td style="background-color: #E2EFDA;" colspan="4">Color</td>
+                                </tr>
+                                <tr>
+                                    <td style="background-color: #C6E0B4;">1</td>
+                                    <td style="background-color: #C6E0B4;">2</td>
+                                    <td style="background-color: #C6E0B4;">3</td>
+                                    <td style="background-color: #C6E0B4;">4</td>
+                                </tr>
+                                <tr>
+                                    <td style="background-color: #DBDBDB;">1</td>
+                                    <td style="background-color: #9BC2E6;">
+                        
+                       1.00 
+                    </td>
+                                    <td style="background-color: #9BC2E6;">
+                       
+                        0.85
+                    </td>
+                                    <td style="background-color: #9BC2E6;">
+                        
+                        0.58
+                    </td>
+                                    <td style="background-color: #9BC2E6;">
+                       
+                        0.54
+                    </td>
+                                </tr>
+                                <tr>
+                                    <td style="background-color: #DBDBDB;">2</td>
+                                    <td style="background-color: #9BC2E6;">0.88</td>
+                                    <td>0.70</td>
+                                    <td>0.38</td>
+                                    <td>0.21</td>
+                                </tr>
+                                <tr>
+                                    <td style="background-color: #DBDBDB;">3</td>
+                                    <td>0.86</td>
+                                    <td>0.53</td>
+                                    <td>0.34</td>
+                                    <td>0.19</td>
+                                </tr>
+                                <tr>
+                                    <td style="background-color: #DBDBDB;">4</td>
+                                    <td>0.60</td>
+                                    <td>0.46</td>
+                                    <td>0.28</td>
+                                    <td>0.18</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </td>
+                    <td><span class="Emphasis">Outlet - B</span>
+                        <p>Recommended Choices = 2</p>
+                        <table>
+                            <tbody>
+                                <tr>
+                                    <td style="background-color: #EDEDED;" rowspan="2">Style</td>
+                                    <td style="background-color: #E2EFDA;" colspan="4">Color</td>
+                                </tr>
+                                <tr>
+                                    <td style="background-color: #C6E0B4;">1</td>
+                                    <td style="background-color: #C6E0B4;">2</td>
+                                    <td style="background-color: #C6E0B4;">3</td>
+                                    <td style="background-color: #C6E0B4;">4</td>
+                                </tr>
+                                <tr>
+                                    <td style="background-color: #DBDBDB;">1</td>
+                                    <td style="background-color: #9BC2E6;">
+                        
+                       1.00 
+                    </td>
+                                    <td style="background-color: #9BC2E6;">
+                       
+                        0.93
+                    </td>
+                                    <td style="background-color: #9BC2E6;">
+                        
+                        0.86</td>
+                                    <td style="background-color: #9BC2E6;">
+                       
+                        0.83</td>
+                                </tr>
+                                <tr>
+                                    <td style="background-color: #DBDBDB;">2</td>
+                                    <td style="background-color: #9BC2E6;">0.85</td>
+                                    <td>0.82</td>
+                                    <td>0.63</td>
+                                    <td>0.41</td>
+                                </tr>
+                                <tr>
+                                    <td style="background-color: #DBDBDB;">3</td>
+                                    <td>0.48</td>
+                                    <td>0.31</td>
+                                    <td>0.30</td>
+                                    <td>0.29</td>
+                                </tr>
+                                <tr>
+                                    <td style="background-color: #DBDBDB;">4</td>
+                                    <td>0.39</td>
+                                    <td>0.19</td>
+                                    <td>0.15</td>
+                                    <td>0.06</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </td>
+                    <td><span class="Emphasis">Outlet - C</span>
+                        <p>Recommended Choices = 3</p>
+                        <table>
+                            <tbody>
+                                <tr>
+                                    <td style="background-color: #EDEDED;" rowspan="2">Style</td>
+                                    <td style="background-color: #E2EFDA;" colspan="4">Color</td>
+                                </tr>
+                                <tr>
+                                    <td style="background-color: #C6E0B4;">1</td>
+                                    <td style="background-color: #C6E0B4;">2</td>
+                                    <td style="background-color: #C6E0B4;">3</td>
+                                    <td style="background-color: #C6E0B4;">4</td>
+                                </tr>
+                                <tr>
+                                    <td style="background-color: #DBDBDB;">1</td>
+                                    <td style="background-color: #9BC2E6;">
+                        
+										1.00 
+									</td>
+                                    <td style="background-color: #9BC2E6;">
+                       
+										0.95
+									</td>
+                                    <td style="background-color: #9BC2E6;">
+                        
+									0.64</td>
+                                    <td style="background-color: #9BC2E6;">
+                       
+									0.42</td>
+                                </tr>
+                                <tr>
+                                    <td style="background-color: #DBDBDB;">2</td>
+                                    <td style="background-color: #9BC2E6;">0.94</td>
+                                    <td>0.91</td>
+                                    <td>0.41</td>
+                                    <td>0.33</td>
+                                </tr>
+                                <tr>
+                                    <td style="background-color: #DBDBDB;">3</td>
+                                    <td>0.66</td>
+                                    <td>0.63</td>
+                                    <td>0.28</td>
+                                    <td>0.15</td>
+                                </tr>
+                                <tr>
+                                    <td style="background-color: #DBDBDB;">4</td>
+                                    <td>0.65</td>
+                                    <td>0.58</td>
+                                    <td>0.24</td>
+                                    <td>0.04</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <p style="background-color: #595959;">&#160;</p>
+        <p style="background-color: #DDEBF7;">Example 1 - Cluster Configuration Only</p>
+        <table style="mc-table-style: url('../TableStyles/standard.css');margin-left: auto;margin-right: auto;" class="TableStyle-standard" cellspacing="0">
+            <col class="TableStyle-standard-Column-Column1" style="width: 241px;" />
+            <col class="TableStyle-standard-Column-Column2" style="width: 191px;" />
+            <thead>
+                <tr class="TableStyle-standard-Head-Header1">
+                    <th class="TableStyle-standard-HeadE-Column1-Header1" style="text-align: center;">Parent
+ Cluster</th>
+                    <th class="TableStyle-standard-HeadD-Column2-Header1" style="text-align: center;">Child
+ Cluster</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1" style="text-align: center;">A</td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1" style="text-align: center;">B</td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyB-Column1-Body1" style="text-align: center;">B</td>
+                    <td class="TableStyle-standard-BodyA-Column2-Body1" style="text-align: center;">C</td>
+                </tr>
+            </tbody>
+        </table>
+        <p style="background-color: #DDEBF7;">Example 1 - Step 1 - Start with last cluster in line</p>
+        <p><cite>Consider the counts of choices per style for all C clusters</cite>
+        </p>
+        <table style="width: 35%;">
+            <col style="width: 90px;" />
+            <col />
+            <col />
+            <col />
+            <col />
+            <tbody>
+                <tr>
+                    <td colspan="5" style="text-align: left;"><span class="Emphasis">C Style Matrix</span>
+                    </td>
+                </tr>
+                <tr>
+                    <td style="background-color: #EDEDED;text-align: left;" rowspan="2">Style</td>
+                    <td style="background-color: #E2EFDA;text-align: left;" colspan="4">Color</td>
+                </tr>
+                <tr>
+                    <td style="background-color: #C6E0B4;text-align: left;">1</td>
+                    <td style="background-color: #C6E0B4;text-align: left;">2</td>
+                    <td style="background-color: #C6E0B4;text-align: left;">3</td>
+                    <td style="background-color: #C6E0B4;text-align: left;">4</td>
+                </tr>
+                <tr>
+                    <td style="background-color: #DBDBDB;text-align: left;">1</td>
+                    <td style="background-color: #FFE699;text-align: left;">X</td>
+                    <td style="background-color: #FFE699;text-align: left;">X</td>
+                    <td style="text-align: left;">&#160;&#160;&#160;&#160;</td>
+                    <td style="text-align: left;">&#160;&#160;&#160;&#160;</td>
+                </tr>
+                <tr>
+                    <td style="background-color: #DBDBDB;text-align: left;">2</td>
+                    <td style="background-color: #FFE699;text-align: left;">X</td>
+                    <td style="text-align: left;">&#160;</td>
+                    <td style="text-align: left;">&#160;</td>
+                    <td style="text-align: left;">&#160;</td>
+                </tr>
+                <tr>
+                    <td style="background-color: #DBDBDB;text-align: left;">3</td>
+                    <td style="background-color: #FFE699;text-align: left;">X</td>
+                    <td style="text-align: left;">&#160;</td>
+                    <td style="text-align: left;">&#160;</td>
+                    <td style="text-align: left;">&#160;</td>
+                </tr>
+                <tr>
+                    <td style="background-color: #DBDBDB;text-align: left;">4</td>
+                    <td style="text-align: left;">&#160;</td>
+                    <td style="text-align: left;">&#160;</td>
+                    <td style="text-align: left;">&#160;</td>
+                    <td style="text-align: left;">&#160;</td>
+                </tr>
+            </tbody>
+        </table>
+        <p style="background-color: #DDEBF7;">Example 1 - Step 2 - Look at parent clusters' choices</p>
+        <p><cite>Consider the choices per style for all B clusters; layer on choices from C clusters</cite>
+        </p>
+        <table style="width: 100%;margin-left: auto;margin-right: auto;   ">
+            <col style="width: 7%;" />
+            <col style="width: 7%;" />
+            <col style="width: 7%;" />
+            <col style="width: 7%;" />
+            <col style="width: 7%;" />
+            <col style="width: 9%;" />
+            <col style="width: 7%;" />
+            <col style="width: 7%;" />
+            <col style="width: 7%;" />
+            <col style="width: 7%;" />
+            <col style="width: 7%;" />
+            <tbody>
+                <tr>
+                    <td colspan="5"><span class="Emphasis">B Style Matrix</span>
+                    </td>
+                    <td>&#160;</td>
+                    <td colspan="5"><span class="Emphasis">B Style Matrix with C choices layered on</span>
+                    </td>
+                </tr>
+                <tr>
+                    <td style="background-color: #EDEDED;" rowspan="2">Style</td>
+                    <td style="background-color: #E2EFDA;" colspan="4">Color</td>
+                    <td>&#160;</td>
+                    <td style="background-color: #EDEDED;" rowspan="2">Style</td>
+                    <td style="background-color: #E2EFDA;" colspan="4">Color</td>
+                </tr>
+                <tr>
+                    <td style="background-color: #C6E0B4;">1</td>
+                    <td style="background-color: #C6E0B4;">2</td>
+                    <td style="background-color: #C6E0B4;">3</td>
+                    <td style="background-color: #C6E0B4;">4</td>
+                    <td>&#160;</td>
+                    <td style="background-color: #C6E0B4;">1</td>
+                    <td style="background-color: #C6E0B4;">2</td>
+                    <td style="background-color: #C6E0B4;">3</td>
+                    <td style="background-color: #C6E0B4;">4</td>
+                </tr>
+                <tr>
+                    <td style="background-color: #DBDBDB;">1</td>
+                    <td>X</td>
+                    <td>X</td>
+                    <td>&#160;</td>
+                    <td>&#160;</td>
+                    <td style="text-align: center;">becomes</td>
+                    <td style="background-color: #DBDBDB;">1</td>
+                    <td style="background-color: #F8CBAD">X</td>
+                    <td style="background-color: #F8CBAD">X</td>
+                    <td>&#160;</td>
+                    <td>&#160;</td>
+                </tr>
+                <tr>
+                    <td style="background-color: #DBDBDB;">2</td>
+                    <td>X</td>
+                    <td>X</td>
+                    <td>&#160;</td>
+                    <td>&#160;</td>
+                    <td>&#160;</td>
+                    <td style="background-color: #DBDBDB;">2</td>
+                    <td style="background-color: #F8CBAD">X</td>
+                    <td style="background-color: #F8CBAD">X</td>
+                    <td>&#160;</td>
+                    <td>&#160;</td>
+                </tr>
+                <tr>
+                    <td style="background-color: #DBDBDB;">3</td>
+                    <td>&#160;</td>
+                    <td>&#160;</td>
+                    <td>&#160;</td>
+                    <td>&#160;</td>
+                    <td>&#160;</td>
+                    <td style="background-color: #DBDBDB;">3</td>
+                    <td style="background-color: #FFE699;">X</td>
+                    <td>&#160;</td>
+                    <td>&#160;</td>
+                    <td>&#160;</td>
+                </tr>
+                <tr>
+                    <td style="background-color: #DBDBDB;">4</td>
+                    <td>&#160;</td>
+                    <td>&#160;</td>
+                    <td>&#160;</td>
+                    <td>&#160;</td>
+                    <td>&#160;</td>
+                    <td style="background-color: #DBDBDB;">4</td>
+                    <td>&#160;</td>
+                    <td>&#160;</td>
+                    <td>&#160;</td>
+                    <td>&#160;</td>
+                </tr>
+            </tbody>
+        </table>
+        <p style="background-color: #DDEBF7;">Example 1 - Step 3 - Recalculate recommendation counts</p>
+        <p><cite>Using the layered matrices for each cluster, determine the new style / color shape for each</cite>
+        </p>
+        <table style="width: 100%;margin-left: auto;margin-right: auto;">
+            <col />
+            <col />
+            <col />
+            <col />
+            <col />
+            <col />
+            <col />
+            <col />
+            <col />
+            <col />
+            <col />
+            <col />
+            <col />
+            <col />
+            <col />
+            <col />
+            <col />
+            <tbody>
+                <tr>
+                    <td colspan="5"><span class="Emphasis">Retail - A (with B &amp; C layered on)</span>
+                    </td>
+                    <td>&#160;</td>
+                    <td colspan="5"><span class="Emphasis">Retail - B (with C layered on)</span>
+                    </td>
+                    <td>&#160;</td>
+                    <td colspan="5"><span class="Emphasis">Retail - C</span>
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="5">
+                        <p style="color: #C00000;">Constrained Rec. Choices = 7</p>
+                    </td>
+                    <td>&#160;</td>
+                    <td colspan="5">
+                        <p style="color: #C00000;">Constrained Rec. Choices = 5</p>
+                    </td>
+                    <td>&#160;</td>
+                    <td colspan="5">
+                        <p>Constrained Rec. Choices = 3</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td style="background-color: #EDEDED;" rowspan="2">Style</td>
+                    <td style="background-color: #E2EFDA;" colspan="4">Color</td>
+                    <td>&#160;</td>
+                    <td style="background-color: #EDEDED;" rowspan="2">Style</td>
+                    <td style="background-color: #E2EFDA;" colspan="4">Color</td>
+                    <td>&#160;</td>
+                    <td style="background-color: #EDEDED;" rowspan="2">Style</td>
+                    <td style="background-color: #E2EFDA;" colspan="4">Color</td>
+                </tr>
+                <tr>
+                    <td style="background-color: #C6E0B4;">1</td>
+                    <td style="background-color: #C6E0B4;">2</td>
+                    <td style="background-color: #C6E0B4;">3</td>
+                    <td style="background-color: #C6E0B4;">4</td>
+                    <td>&#160;</td>
+                    <td style="background-color: #C6E0B4;">1</td>
+                    <td style="background-color: #C6E0B4;">2</td>
+                    <td style="background-color: #C6E0B4;">3</td>
+                    <td style="background-color: #C6E0B4;">4</td>
+                    <td>&#160;</td>
+                    <td style="background-color: #C6E0B4;">1</td>
+                    <td style="background-color: #C6E0B4;">2</td>
+                    <td style="background-color: #C6E0B4;">3</td>
+                    <td style="background-color: #C6E0B4;">4</td>
+                </tr>
+                <tr>
+                    <td style="background-color: #DBDBDB;">1</td>
+                    <td style="background-color: #9BC2E6;">1.00</td>
+                    <td style="background-color: #9BC2E6;">0.92</td>
+                    <td style="background-color: #9BC2E6;">0.87</td>
+                    <td style="background-color: #9BC2E6;">0.64</td>
+                    <td>&#160;</td>
+                    <td style="background-color: #DBDBDB;">1</td>
+                    <td style="background-color: #9BC2E6;">1.00</td>
+                    <td style="background-color: #9BC2E6;">0.89</td>
+                    <td>0.63</td>
+                    <td>0.43</td>
+                    <td>&#160;</td>
+                    <td style="background-color: #DBDBDB;">1</td>
+                    <td style="background-color: #9BC2E6;">1.00</td>
+                    <td>0.48</td>
+                    <td>0.38</td>
+                    <td>0.31</td>
+                </tr>
+                <tr>
+                    <td style="background-color: #DBDBDB;">2</td>
+                    <td style="background-color: #9BC2E6;">0.72</td>
+                    <td style="background-color: #F8CBAD">0.54</td>
+                    <td>0.37</td>
+                    <td>0.29</td>
+                    <td>&#160;</td>
+                    <td style="background-color: #DBDBDB;">2</td>
+                    <td style="background-color: #9BC2E6;">0.84</td>
+                    <td style="background-color: #9BC2E6;">0.79</td>
+                    <td>0.59</td>
+                    <td>0.39</td>
+                    <td>&#160;</td>
+                    <td style="background-color: #DBDBDB;">2</td>
+                    <td style="background-color: #9BC2E6;">0.82</td>
+                    <td>0.47</td>
+                    <td>0.34</td>
+                    <td>0.22</td>
+                </tr>
+                <tr>
+                    <td style="background-color: #DBDBDB;">3</td>
+                    <td style="background-color: #FFE699;">0.41</td>
+                    <td>0.39</td>
+                    <td>0.32</td>
+                    <td>0.18</td>
+                    <td>&#160;</td>
+                    <td style="background-color: #DBDBDB;">3</td>
+                    <td style="background-color: #FFE699;">0.65</td>
+                    <td>0.64</td>
+                    <td>0.41</td>
+                    <td>0.28</td>
+                    <td>&#160;</td>
+                    <td style="background-color: #DBDBDB;">3</td>
+                    <td style="background-color: #9BC2E6;">0.65</td>
+                    <td>0.32</td>
+                    <td>0.25</td>
+                    <td>0.13</td>
+                </tr>
+                <tr>
+                    <td style="background-color: #DBDBDB;">4</td>
+                    <td>0.33</td>
+                    <td>0.25</td>
+                    <td>0.24</td>
+                    <td>0.09</td>
+                    <td>&#160;</td>
+                    <td style="background-color: #DBDBDB;">4</td>
+                    <td>0.52</td>
+                    <td>0.49</td>
+                    <td>0.33</td>
+                    <td>0.16</td>
+                    <td>&#160;</td>
+                    <td style="background-color: #DBDBDB;">4</td>
+                    <td>0.33</td>
+                    <td>0.29</td>
+                    <td>0.19</td>
+                    <td>0.07</td>
+                </tr>
+            </tbody>
+        </table>
+        <p>&#160;</p>
+        <table style="width: 100%;margin-left: auto;margin-right: auto;">
+            <col />
+            <col />
+            <col />
+            <col />
+            <col />
+            <col />
+            <col />
+            <col />
+            <col />
+            <col />
+            <col />
+            <col />
+            <col />
+            <col />
+            <col />
+            <col />
+            <col />
+            <tbody>
+                <tr>
+                    <td colspan="5"><span class="Emphasis">Outlet - A (with B &amp; C layered on)</span>
+                    </td>
+                    <td>&#160;</td>
+                    <td colspan="5"><span class="Emphasis">Outlet - B (with C layered on)</span>
+                    </td>
+                    <td>&#160;</td>
+                    <td colspan="5"><span class="Emphasis">Outlet - C</span>
+                    </td>
+                </tr>
+                <tr>
+                    <td style="color: #C00000;" colspan="5">
+                        <p>Constrained Rec. Choices = 5</p>
+                    </td>
+                    <td>&#160;</td>
+                    <td style="color: #C00000;" colspan="5">
+                        <p>Constrained Rec. Choices = 4</p>
+                    </td>
+                    <td>&#160;</td>
+                    <td colspan="5">
+                        <p>Constrained Rec. Choices = 3</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td style="background-color: #EDEDED;" rowspan="2">Style</td>
+                    <td style="background-color: #E2EFDA;" colspan="4">Color</td>
+                    <td>&#160;</td>
+                    <td style="background-color: #EDEDED;" rowspan="2">Style</td>
+                    <td style="background-color: #E2EFDA;" colspan="4">Color</td>
+                    <td>&#160;</td>
+                    <td style="background-color: #EDEDED;" rowspan="2">Style</td>
+                    <td style="background-color: #E2EFDA;" colspan="4">Color</td>
+                </tr>
+                <tr>
+                    <td style="background-color: #C6E0B4;">1</td>
+                    <td style="background-color: #C6E0B4;">2</td>
+                    <td style="background-color: #C6E0B4;">3</td>
+                    <td style="background-color: #C6E0B4;">4</td>
+                    <td>&#160;</td>
+                    <td style="background-color: #C6E0B4;">1</td>
+                    <td style="background-color: #C6E0B4;">2</td>
+                    <td style="background-color: #C6E0B4;">3</td>
+                    <td style="background-color: #C6E0B4;">4</td>
+                    <td>&#160;</td>
+                    <td style="background-color: #C6E0B4;">1</td>
+                    <td style="background-color: #C6E0B4;">2</td>
+                    <td style="background-color: #C6E0B4;">3</td>
+                    <td style="background-color: #C6E0B4;">4</td>
+                </tr>
+                <tr>
+                    <td style="background-color: #DBDBDB;">1</td>
+                    <td style="background-color: #9BC2E6;">1.00</td>
+                    <td style="background-color: #9BC2E6;">0.85</td>
+                    <td>0.58</td>
+                    <td>0.54</td>
+                    <td>&#160;</td>
+                    <td style="background-color: #DBDBDB;">1</td>
+                    <td style="background-color: #9BC2E6;">1.00</td>
+                    <td style="background-color: #9BC2E6;">0.93</td>
+                    <td>0.86</td>
+                    <td>0.83</td>
+                    <td>&#160;</td>
+                    <td style="background-color: #DBDBDB;">1</td>
+                    <td style="background-color: #9BC2E6;">1.00</td>
+                    <td style="background-color: #9BC2E6;">0.95</td>
+                    <td>0.64</td>
+                    <td>0.42</td>
+                </tr>
+                <tr>
+                    <td style="background-color: #DBDBDB;">2</td>
+                    <td style="background-color: #9BC2E6;">0.88</td>
+                    <td style="background-color: #F8CBAD">0.70</td>
+                    <td>0.38</td>
+                    <td>0.21</td>
+                    <td>&#160;</td>
+                    <td style="background-color: #DBDBDB;">2</td>
+                    <td style="background-color: #FFE699;">0.85</td>
+                    <td>0.82</td>
+                    <td>0.63</td>
+                    <td>0.41</td>
+                    <td>&#160;</td>
+                    <td style="background-color: #DBDBDB;">2</td>
+                    <td style="background-color: #9BC2E6;">0.94</td>
+                    <td>0.91</td>
+                    <td>0.41</td>
+                    <td>0.33</td>
+                </tr>
+                <tr>
+                    <td style="background-color: #DBDBDB;">3</td>
+                    <td style="background-color: #9BC2E6;">0.86</td>
+                    <td>0.53</td>
+                    <td>0.34</td>
+                    <td>0.19</td>
+                    <td>&#160;</td>
+                    <td style="background-color: #DBDBDB;">3</td>
+                    <td style="background-color: #FFE699;">0.48</td>
+                    <td>0.31</td>
+                    <td>0.30</td>
+                    <td>0.29</td>
+                    <td>&#160;</td>
+                    <td style="background-color: #DBDBDB;">3</td>
+                    <td>0.66</td>
+                    <td>0.63</td>
+                    <td>0.28</td>
+                    <td>0.15</td>
+                </tr>
+                <tr>
+                    <td style="background-color: #DBDBDB;">4</td>
+                    <td>0.60</td>
+                    <td>0.46</td>
+                    <td>0.28</td>
+                    <td>0.18</td>
+                    <td>&#160;</td>
+                    <td style="background-color: #DBDBDB;">4</td>
+                    <td>0.39</td>
+                    <td>0.19</td>
+                    <td>0.15</td>
+                    <td>0.06</td>
+                    <td>&#160;</td>
+                    <td style="background-color: #DBDBDB;">4</td>
+                    <td>0.65</td>
+                    <td>0.58</td>
+                    <td>0.24</td>
+                    <td>0.04</td>
+                </tr>
+            </tbody>
+        </table>
+        <p style="background-color: #595959;">&#160;</p>
+        <p style="background-color: #DDEBF7;">Example 2 - Cluster Set Configuration Only</p>
+        <table style="mc-table-style: url('../TableStyles/standard.css');margin-left: auto;margin-right: auto;" class="TableStyle-standard" cellspacing="0">
+            <col class="TableStyle-standard-Column-Column1" style="width: 241px;" />
+            <col class="TableStyle-standard-Column-Column2" style="width: 191px;" />
+            <thead>
+                <tr class="TableStyle-standard-Head-Header1">
+                    <th class="TableStyle-standard-HeadE-Column1-Header1" style="text-align: center;">Parent
+ Cluster Set</th>
+                    <th class="TableStyle-standard-HeadD-Column2-Header1" style="text-align: center;">Child
+ Cluster Set</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyB-Column1-Body1" style="text-align: center;">Retail</td>
+                    <td class="TableStyle-standard-BodyA-Column2-Body1" style="text-align: center;">Outlet</td>
+                </tr>
+            </tbody>
+        </table>
+        <p style="background-color: #DDEBF7;">Example 2 - Step 1 - Start with last cluster set in line</p>
+        <p><cite>Consider the counts of choices per style for all Outlet clusters</cite>
+        </p>
+        <table style="width: 29%;">
+            <col style="width: 90px;" />
+            <col />
+            <col />
+            <col />
+            <col />
+            <tbody>
+                <tr>
+                    <td colspan="5" style="text-align: left;"><span class="Emphasis">Outlet Style Matrix</span>
+                    </td>
+                </tr>
+                <tr>
+                    <td style="background-color: #EDEDED;text-align: left;" rowspan="2">Style</td>
+                    <td style="background-color: #E2EFDA;text-align: left;" colspan="4">Color</td>
+                </tr>
+                <tr>
+                    <td style="background-color: #C6E0B4;text-align: left;">1</td>
+                    <td style="background-color: #C6E0B4;text-align: left;">2</td>
+                    <td style="background-color: #C6E0B4;text-align: left;">3</td>
+                    <td style="background-color: #C6E0B4;text-align: left;">4</td>
+                </tr>
+                <tr>
+                    <td style="background-color: #DBDBDB;text-align: left;">1</td>
+                    <td style="background-color: #FFE699;text-align: left;">X</td>
+                    <td style="background-color: #FFE699;text-align: left;">X</td>
+                    <td style="text-align: left;">&#160;&#160;&#160;&#160;</td>
+                    <td style="text-align: left;">&#160;&#160;&#160;&#160;</td>
+                </tr>
+                <tr>
+                    <td style="background-color: #DBDBDB;text-align: left;">2</td>
+                    <td style="background-color: #FFE699;text-align: left;">X</td>
+                    <td style="text-align: left;">&#160;</td>
+                    <td style="text-align: left;">&#160;</td>
+                    <td style="text-align: left;">&#160;</td>
+                </tr>
+                <tr>
+                    <td style="background-color: #DBDBDB;text-align: left;">3</td>
+                    <td style="background-color: #FFE699;text-align: left;">X</td>
+                    <td style="text-align: left;">&#160;</td>
+                    <td style="text-align: left;">&#160;</td>
+                    <td style="text-align: left;">&#160;</td>
+                </tr>
+                <tr>
+                    <td style="background-color: #DBDBDB;text-align: left;">4</td>
+                    <td style="text-align: left;">&#160;</td>
+                    <td style="text-align: left;">&#160;</td>
+                    <td style="text-align: left;">&#160;</td>
+                    <td style="text-align: left;">&#160;</td>
+                </tr>
+            </tbody>
+        </table>
+        <p style="background-color: #DDEBF7;">Example 2 - Step 2 - Recalculate recommendation counts</p>
+        <p><cite>Using the layered matrices for each cluster, determine the new style / color shape for each</cite>
+        </p>
+        <table style="width: 100%;margin-left: auto;margin-right: auto;">
+            <col />
+            <col />
+            <col />
+            <col />
+            <col />
+            <col />
+            <col />
+            <col />
+            <col />
+            <col />
+            <col />
+            <col />
+            <col />
+            <col />
+            <col />
+            <col />
+            <col />
+            <tbody>
+                <tr>
+                    <td colspan="5"><span class="Emphasis">Retail - A (with Outlet layered on)</span>
+                    </td>
+                    <td>&#160;</td>
+                    <td colspan="5"><span class="Emphasis">Retail - B (with Outlet layered on)</span>
+                    </td>
+                    <td>&#160;</td>
+                    <td colspan="5"><span class="Emphasis">Retail - C (with Outlet layered on)</span>
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="5">
+                        <p style="color: #C00000;">Constrained Rec. Choices = 6</p>
+                    </td>
+                    <td>&#160;</td>
+                    <td colspan="5">
+                        <p style="color: #C00000;">Constrained Rec. Choices = 5</p>
+                    </td>
+                    <td>&#160;</td>
+                    <td colspan="5">
+                        <p style="color: #C00000;">Constrained Rec. Choices = 4</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td style="background-color: #EDEDED;" rowspan="2">Style</td>
+                    <td style="background-color: #E2EFDA;" colspan="4">Color</td>
+                    <td>&#160;</td>
+                    <td style="background-color: #EDEDED;" rowspan="2">Style</td>
+                    <td style="background-color: #E2EFDA;" colspan="4">Color</td>
+                    <td>&#160;</td>
+                    <td style="background-color: #EDEDED;" rowspan="2">Style</td>
+                    <td style="background-color: #E2EFDA;" colspan="4">Color</td>
+                </tr>
+                <tr>
+                    <td style="background-color: #C6E0B4;">1</td>
+                    <td style="background-color: #C6E0B4;">2</td>
+                    <td style="background-color: #C6E0B4;">3</td>
+                    <td style="background-color: #C6E0B4;">4</td>
+                    <td>&#160;</td>
+                    <td style="background-color: #C6E0B4;">1</td>
+                    <td style="background-color: #C6E0B4;">2</td>
+                    <td style="background-color: #C6E0B4;">3</td>
+                    <td style="background-color: #C6E0B4;">4</td>
+                    <td>&#160;</td>
+                    <td style="background-color: #C6E0B4;">1</td>
+                    <td style="background-color: #C6E0B4;">2</td>
+                    <td style="background-color: #C6E0B4;">3</td>
+                    <td style="background-color: #C6E0B4;">4</td>
+                </tr>
+                <tr>
+                    <td style="background-color: #DBDBDB;">1</td>
+                    <td style="background-color: #9BC2E6;">1.00</td>
+                    <td style="background-color: #9BC2E6;">0.92</td>
+                    <td style="background-color: #9BC2E6;">0.87</td>
+                    <td style="background-color: #9BC2E6;">0.64</td>
+                    <td>&#160;</td>
+                    <td style="background-color: #DBDBDB;">1</td>
+                    <td style="background-color: #9BC2E6;">1.00</td>
+                    <td style="background-color: #9BC2E6;">0.89</td>
+                    <td>0.63</td>
+                    <td>0.43</td>
+                    <td>&#160;</td>
+                    <td style="background-color: #DBDBDB;">1</td>
+                    <td style="background-color: #9BC2E6;">1.00</td>
+                    <td style="background-color: #FFE699;">0.48</td>
+                    <td>0.38</td>
+                    <td>0.31</td>
+                </tr>
+                <tr>
+                    <td style="background-color: #DBDBDB;">2</td>
+                    <td style="background-color: #9BC2E6;">0.72</td>
+                    <td>0.54</td>
+                    <td>0.37</td>
+                    <td>0.29</td>
+                    <td>&#160;</td>
+                    <td style="background-color: #DBDBDB;">2</td>
+                    <td style="background-color: #9BC2E6;">0.84</td>
+                    <td style="background-color: #9BC2E6;">0.79</td>
+                    <td>0.59</td>
+                    <td>0.39</td>
+                    <td>&#160;</td>
+                    <td style="background-color: #DBDBDB;">2</td>
+                    <td style="background-color: #9BC2E6;">0.82</td>
+                    <td>0.47</td>
+                    <td>0.34</td>
+                    <td>0.22</td>
+                </tr>
+                <tr>
+                    <td style="background-color: #DBDBDB;">3</td>
+                    <td style="background-color: #FFE699;">0.41</td>
+                    <td>0.39</td>
+                    <td>0.32</td>
+                    <td>0.18</td>
+                    <td>&#160;</td>
+                    <td style="background-color: #DBDBDB;">3</td>
+                    <td style="background-color: #FFE699;">0.65</td>
+                    <td>0.64</td>
+                    <td>0.41</td>
+                    <td>0.28</td>
+                    <td>&#160;</td>
+                    <td style="background-color: #DBDBDB;">3</td>
+                    <td style="background-color: #9BC2E6;">0.65</td>
+                    <td>0.32</td>
+                    <td>0.25</td>
+                    <td>0.13</td>
+                </tr>
+                <tr>
+                    <td style="background-color: #DBDBDB;">4</td>
+                    <td>0.33</td>
+                    <td>0.25</td>
+                    <td>0.24</td>
+                    <td>0.09</td>
+                    <td>&#160;</td>
+                    <td style="background-color: #DBDBDB;">4</td>
+                    <td>0.52</td>
+                    <td>0.49</td>
+                    <td>0.33</td>
+                    <td>0.16</td>
+                    <td>&#160;</td>
+                    <td style="background-color: #DBDBDB;">4</td>
+                    <td>0.33</td>
+                    <td>0.29</td>
+                    <td>0.19</td>
+                    <td>0.07</td>
+                </tr>
+            </tbody>
+        </table>
+        <p>&#160;</p>
+        <table style="width: 100%;margin-left: auto;margin-right: auto;">
+            <col />
+            <col />
+            <col />
+            <col />
+            <col />
+            <col />
+            <col />
+            <col />
+            <col />
+            <col />
+            <col />
+            <col />
+            <col />
+            <col />
+            <col />
+            <col />
+            <col />
+            <tbody>
+                <tr>
+                    <td colspan="5"><span class="Emphasis">Outlet - A</span>
+                    </td>
+                    <td>&#160;</td>
+                    <td colspan="5"><span class="Emphasis">Outlet - B</span>
+                    </td>
+                    <td>&#160;</td>
+                    <td colspan="5"><span class="Emphasis">Outlet - C</span>
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="5">
+                        <p>Constrained Rec. Choices = 4</p>
+                    </td>
+                    <td>&#160;</td>
+                    <td colspan="5">
+                        <p>Constrained Rec. Choices = 2</p>
+                    </td>
+                    <td>&#160;</td>
+                    <td colspan="5">
+                        <p>Constrained Rec. Choices = 3</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td style="background-color: #EDEDED;" rowspan="2">Style</td>
+                    <td style="background-color: #E2EFDA;" colspan="4">Color</td>
+                    <td>&#160;</td>
+                    <td style="background-color: #EDEDED;" rowspan="2">Style</td>
+                    <td style="background-color: #E2EFDA;" colspan="4">Color</td>
+                    <td>&#160;</td>
+                    <td style="background-color: #EDEDED;" rowspan="2">Style</td>
+                    <td style="background-color: #E2EFDA;" colspan="4">Color</td>
+                </tr>
+                <tr>
+                    <td style="background-color: #C6E0B4;">1</td>
+                    <td style="background-color: #C6E0B4;">2</td>
+                    <td style="background-color: #C6E0B4;">3</td>
+                    <td style="background-color: #C6E0B4;">4</td>
+                    <td>&#160;</td>
+                    <td style="background-color: #C6E0B4;">1</td>
+                    <td style="background-color: #C6E0B4;">2</td>
+                    <td style="background-color: #C6E0B4;">3</td>
+                    <td style="background-color: #C6E0B4;">4</td>
+                    <td>&#160;</td>
+                    <td style="background-color: #C6E0B4;">1</td>
+                    <td style="background-color: #C6E0B4;">2</td>
+                    <td style="background-color: #C6E0B4;">3</td>
+                    <td style="background-color: #C6E0B4;">4</td>
+                </tr>
+                <tr>
+                    <td style="background-color: #DBDBDB;">1</td>
+                    <td style="background-color: #9BC2E6;">1.00</td>
+                    <td style="background-color: #9BC2E6;">0.85</td>
+                    <td>0.58</td>
+                    <td>0.54</td>
+                    <td>&#160;</td>
+                    <td style="background-color: #DBDBDB;">1</td>
+                    <td style="background-color: #9BC2E6;">1.00</td>
+                    <td style="background-color: #9BC2E6;">0.93</td>
+                    <td>0.86</td>
+                    <td>0.83</td>
+                    <td>&#160;</td>
+                    <td style="background-color: #DBDBDB;">1</td>
+                    <td style="background-color: #9BC2E6;">1.00</td>
+                    <td style="background-color: #9BC2E6;">0.95</td>
+                    <td>0.64</td>
+                    <td>0.42</td>
+                </tr>
+                <tr>
+                    <td style="background-color: #DBDBDB;">2</td>
+                    <td style="background-color: #9BC2E6;">0.88</td>
+                    <td>0.70</td>
+                    <td>0.38</td>
+                    <td>0.21</td>
+                    <td>&#160;</td>
+                    <td style="background-color: #DBDBDB;">2</td>
+                    <td>0.85</td>
+                    <td>0.82</td>
+                    <td>0.63</td>
+                    <td>0.41</td>
+                    <td>&#160;</td>
+                    <td style="background-color: #DBDBDB;">2</td>
+                    <td style="background-color: #9BC2E6;">0.94</td>
+                    <td>0.91</td>
+                    <td>0.41</td>
+                    <td>0.33</td>
+                </tr>
+                <tr>
+                    <td style="background-color: #DBDBDB;">3</td>
+                    <td style="background-color: #9BC2E6;">0.86</td>
+                    <td>0.53</td>
+                    <td>0.34</td>
+                    <td>0.19</td>
+                    <td>&#160;</td>
+                    <td style="background-color: #DBDBDB;">3</td>
+                    <td>0.48</td>
+                    <td>0.31</td>
+                    <td>0.30</td>
+                    <td>0.29</td>
+                    <td>&#160;</td>
+                    <td style="background-color: #DBDBDB;">3</td>
+                    <td>0.66</td>
+                    <td>0.63</td>
+                    <td>0.28</td>
+                    <td>0.15</td>
+                </tr>
+                <tr>
+                    <td style="background-color: #DBDBDB;">4</td>
+                    <td>0.60</td>
+                    <td>0.46</td>
+                    <td>0.28</td>
+                    <td>0.18</td>
+                    <td>&#160;</td>
+                    <td style="background-color: #DBDBDB;">4</td>
+                    <td>0.39</td>
+                    <td>0.19</td>
+                    <td>0.15</td>
+                    <td>0.06</td>
+                    <td>&#160;</td>
+                    <td style="background-color: #DBDBDB;">4</td>
+                    <td>0.65</td>
+                    <td>0.58</td>
+                    <td>0.24</td>
+                    <td>0.04</td>
+                </tr>
+            </tbody>
+        </table>
+        <p style="background-color: #595959;">&#160;</p>
+        <p>Example 3 - Cluster Set and Cluster Configuration</p>
+        <table style="width: 100%;margin-left: auto;margin-right: auto;">
+            <col />
+            <col />
+            <tbody>
+                <tr>
+                    <td>
+                        <table style="width: 100%;margin-left: auto;margin-right: auto;mc-table-style: url('../TableStyles/standard.css');" class="TableStyle-standard" cellspacing="0">
+                            <col class="TableStyle-standard-Column-Column1" style="width: 50%;" />
+                            <col class="TableStyle-standard-Column-Column2" style="width: 50%;" />
+                            <thead>
+                                <tr class="TableStyle-standard-Head-Header1">
+                                    <th class="TableStyle-standard-HeadE-Column1-Header1">Parent Cluster</th>
+                                    <th class="TableStyle-standard-HeadD-Column2-Header1">Child Cluster</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr class="TableStyle-standard-Body-Body1">
+                                    <td class="TableStyle-standard-BodyE-Column1-Body1" style="text-align: center;">A</td>
+                                    <td class="TableStyle-standard-BodyD-Column2-Body1" style="text-align: center;">B</td>
+                                </tr>
+                                <tr class="TableStyle-standard-Body-Body1">
+                                    <td class="TableStyle-standard-BodyB-Column1-Body1" style="text-align: center;">B</td>
+                                    <td class="TableStyle-standard-BodyA-Column2-Body1" style="text-align: center;">C</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </td>
+                    <td>&#160;</td>
+                    <td>
+                        <table style="width: 100%;margin-left: auto;margin-right: auto;mc-table-style: url('../TableStyles/standard.css');" class="TableStyle-standard" cellspacing="0">
+                            <col class="TableStyle-standard-Column-Column1" style="width: 50%;" />
+                            <col class="TableStyle-standard-Column-Column2" style="width: 50%;" />
+                            <thead>
+                                <tr class="TableStyle-standard-Head-Header1">
+                                    <th class="TableStyle-standard-HeadE-Column1-Header1">Parent Cluster Set</th>
+                                    <th class="TableStyle-standard-HeadD-Column2-Header1">Child Cluster Set</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr class="TableStyle-standard-Body-Body1">
+                                    <td class="TableStyle-standard-BodyB-Column1-Body1" style="text-align: center;">Retail</td>
+                                    <td class="TableStyle-standard-BodyA-Column2-Body1" style="text-align: center;">Outlet</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <p style="background-color: #DDEBF7;">Example 3 - Step 1 - Start with last clusters in line</p>
+        <p><cite>Consider the counts of choices per style for the C clusters; reconcile across cluster sets</cite>
+        </p>
+        <table style="width: 100%;margin-left: auto;margin-right: auto;">
+            <col />
+            <col />
+            <col />
+            <col />
+            <col />
+            <col />
+            <col />
+            <col />
+            <col />
+            <col />
+            <col />
+            <tbody>
+                <tr>
+                    <td colspan="5"><span class="Emphasis">Outlet - C</span>
+                    </td>
+                    <td>&#160;</td>
+                    <td colspan="5"><span class="Emphasis">Retail - C</span>
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="5">
+                        <p>Constrained Rec. Choices = 3</p>
+                    </td>
+                    <td>&#160;</td>
+                    <td colspan="5">
+                        <p style="color: #C00000;">Constrained Rec. Choices = 4</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td style="background-color: #EDEDED;" rowspan="2">Style</td>
+                    <td style="background-color: #E2EFDA;" colspan="4">Color</td>
+                    <td>&#160;</td>
+                    <td style="background-color: #EDEDED;" rowspan="2">Style</td>
+                    <td style="background-color: #E2EFDA;" colspan="4">Color</td>
+                </tr>
+                <tr>
+                    <td style="background-color: #C6E0B4;">1</td>
+                    <td style="background-color: #C6E0B4;">2</td>
+                    <td style="background-color: #C6E0B4;">3</td>
+                    <td style="background-color: #C6E0B4;">4</td>
+                    <td>&#160;</td>
+                    <td style="background-color: #C6E0B4;">1</td>
+                    <td style="background-color: #C6E0B4;">2</td>
+                    <td style="background-color: #C6E0B4;">3</td>
+                    <td style="background-color: #C6E0B4;">4</td>
+                </tr>
+                <tr>
+                    <td style="background-color: #DBDBDB;">1</td>
+                    <td style="background-color: #FFE699;">1.00</td>
+                    <td style="background-color: #FFE699;">0.95</td>
+                    <td>0.64</td>
+                    <td>0.42</td>
+                    <td>&#160;</td>
+                    <td style="background-color: #DBDBDB;">1</td>
+                    <td style="background-color: #F8CBAD;">1.00</td>
+                    <td style="background-color: #FFE699;">0.48</td>
+                    <td>0.38</td>
+                    <td>0.31</td>
+                </tr>
+                <tr>
+                    <td style="background-color: #DBDBDB;">2</td>
+                    <td style="background-color: #FFE699;">0.94</td>
+                    <td>0.91</td>
+                    <td>0.41</td>
+                    <td>0.33</td>
+                    <td>&#160;</td>
+                    <td style="background-color: #DBDBDB;">2</td>
+                    <td style="background-color: #F8CBAD;">0.82</td>
+                    <td>0.47</td>
+                    <td>0.34</td>
+                    <td>0.22</td>
+                </tr>
+                <tr>
+                    <td style="background-color: #DBDBDB;">3</td>
+                    <td>0.66</td>
+                    <td>0.63</td>
+                    <td>0.28</td>
+                    <td>0.15</td>
+                    <td>&#160;</td>
+                    <td style="background-color: #DBDBDB;">3</td>
+                    <td style="background-color: #F8CBAD;">0.65</td>
+                    <td>0.32</td>
+                    <td>0.25</td>
+                    <td>0.13</td>
+                </tr>
+                <tr>
+                    <td style="background-color: #DBDBDB;">4</td>
+                    <td>0.65</td>
+                    <td>0.58</td>
+                    <td>0.24</td>
+                    <td>0.04</td>
+                    <td>&#160;</td>
+                    <td style="background-color: #DBDBDB;">4</td>
+                    <td>0.33</td>
+                    <td>0.29</td>
+                    <td>0.19</td>
+                    <td>0.07</td>
+                </tr>
+            </tbody>
+        </table>
+        <p style="background-color: #DDEBF7;">Example 3 - Step 2 - Look at parent clusters' choices</p>
+        <p><cite>Consider the choices per style for each B cluster; layer on choices from C clusters by cluster set</cite>
+        </p>
+        <table style="width: 100%;margin-left: auto;margin-right: auto;">
+            <col />
+            <col />
+            <col />
+            <col />
+            <col />
+            <col />
+            <col />
+            <col />
+            <col />
+            <col />
+            <col />
+            <tbody>
+                <tr>
+                    <td colspan="5"><span class="Emphasis">Outlet - B (with Outlet C layered on)</span>
+                    </td>
+                    <td>&#160;</td>
+                    <td colspan="5"><span class="Emphasis">Retail - B (with Retail C layered on)</span>
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="5">
+                        <p style="color: #C00000;">Constrained Rec. Choices = 3</p>
+                    </td>
+                    <td>&#160;</td>
+                    <td colspan="5">
+                        <p style="color: #C00000;">Constrained Rec. Choices = 5</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td style="background-color: #EDEDED;" rowspan="2">Style</td>
+                    <td style="background-color: #E2EFDA;" colspan="4">Color</td>
+                    <td>&#160;</td>
+                    <td style="background-color: #EDEDED;" rowspan="2">Style</td>
+                    <td style="background-color: #E2EFDA;" colspan="4">Color</td>
+                </tr>
+                <tr>
+                    <td style="background-color: #C6E0B4;">1</td>
+                    <td style="background-color: #C6E0B4;">2</td>
+                    <td style="background-color: #C6E0B4;">3</td>
+                    <td style="background-color: #C6E0B4;">4</td>
+                    <td>&#160;</td>
+                    <td style="background-color: #C6E0B4;">1</td>
+                    <td style="background-color: #C6E0B4;">2</td>
+                    <td style="background-color: #C6E0B4;">3</td>
+                    <td style="background-color: #C6E0B4;">4</td>
+                </tr>
+                <tr>
+                    <td style="background-color: #DBDBDB;">1</td>
+                    <td style="background-color: #9BC2E6;">1.00</td>
+                    <td style="background-color: #9BC2E6;">0.93</td>
+                    <td>0.86</td>
+                    <td>0.83</td>
+                    <td>&#160;</td>
+                    <td style="background-color: #DBDBDB;">1</td>
+                    <td style="background-color: #C65911;">1.00</td>
+                    <td style="background-color: #C65911;">0.89</td>
+                    <td>0.63</td>
+                    <td>0.43</td>
+                </tr>
+                <tr>
+                    <td style="background-color: #DBDBDB;">2</td>
+                    <td style="background-color: #FFE699;">0.85</td>
+                    <td>0.82</td>
+                    <td>0.63</td>
+                    <td>0.41</td>
+                    <td>&#160;</td>
+                    <td style="background-color: #DBDBDB;">2</td>
+                    <td style="background-color: #C65911;">0.84</td>
+                    <td style="background-color: #C65911;">0.79</td>
+                    <td>0.59</td>
+                    <td>0.39</td>
+                </tr>
+                <tr>
+                    <td style="background-color: #DBDBDB;">3</td>
+                    <td>0.48</td>
+                    <td>0.31</td>
+                    <td>0.30</td>
+                    <td>0.29</td>
+                    <td>&#160;</td>
+                    <td style="background-color: #DBDBDB;">3</td>
+                    <td style="background-color: #F8CBAD;">0.65</td>
+                    <td>0.64</td>
+                    <td>0.41</td>
+                    <td>0.28</td>
+                </tr>
+                <tr>
+                    <td style="background-color: #DBDBDB;">4</td>
+                    <td>0.39</td>
+                    <td>0.19</td>
+                    <td>0.15</td>
+                    <td>0.06</td>
+                    <td>&#160;</td>
+                    <td style="background-color: #DBDBDB;">4</td>
+                    <td>0.52</td>
+                    <td>0.49</td>
+                    <td>0.33</td>
+                    <td>0.16</td>
+                </tr>
+            </tbody>
+        </table>
+        <p style="background-color: #DDEBF7;">Example 3 - Step 3 - Look at parent clusters' choices</p>
+        <p><cite>Consider the choices per style for each A cluster; layer on choices from B and C clusters by cluster set</cite>
+        </p>
+        <table style="width: 100%;margin-left: auto;margin-right: auto;">
+            <col />
+            <col />
+            <col />
+            <col />
+            <col />
+            <col />
+            <col />
+            <col />
+            <col />
+            <col />
+            <col />
+            <tbody>
+                <tr>
+                    <td colspan="5"><span class="Emphasis">Outlet - A (with Outlet B &amp; C layered on)</span>
+                    </td>
+                    <td>&#160;</td>
+                    <td colspan="5"><span class="Emphasis">Retail - A (with Retail B &amp; C layered on)</span>
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="5">
+                        <p>Constrained Rec. Choices = 4</p>
+                    </td>
+                    <td>&#160;</td>
+                    <td colspan="5">
+                        <p style="color: #C00000;">Constrained Rec. Choices = 7</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td style="background-color: #EDEDED;" rowspan="2">Style</td>
+                    <td style="background-color: #E2EFDA;" colspan="4">Color</td>
+                    <td>&#160;</td>
+                    <td style="background-color: #EDEDED;" rowspan="2">Style</td>
+                    <td style="background-color: #E2EFDA;" colspan="4">Color</td>
+                </tr>
+                <tr>
+                    <td style="background-color: #C6E0B4;">1</td>
+                    <td style="background-color: #C6E0B4;">2</td>
+                    <td style="background-color: #C6E0B4;">3</td>
+                    <td style="background-color: #C6E0B4;">4</td>
+                    <td>&#160;</td>
+                    <td style="background-color: #C6E0B4;">1</td>
+                    <td style="background-color: #C6E0B4;">2</td>
+                    <td style="background-color: #C6E0B4;">3</td>
+                    <td style="background-color: #C6E0B4;">4</td>
+                </tr>
+                <tr>
+                    <td style="background-color: #DBDBDB;">1</td>
+                    <td style="background-color: #9BC2E6;">1.00</td>
+                    <td style="background-color: #9BC2E6;">0.85</td>
+                    <td>0.58</td>
+                    <td>0.54</td>
+                    <td>&#160;</td>
+                    <td style="background-color: #DBDBDB;">1</td>
+                    <td style="background-color: #9BC2E6;">1.00</td>
+                    <td style="background-color: #9BC2E6;">0.92</td>
+                    <td style="background-color: #9BC2E6;">0.87</td>
+                    <td style="background-color: #9BC2E6;">0.64</td>
+                </tr>
+                <tr>
+                    <td style="background-color: #DBDBDB;">2</td>
+                    <td style="background-color: #9BC2E6;">0.88</td>
+                    <td>0.70</td>
+                    <td>0.38</td>
+                    <td>0.21</td>
+                    <td>&#160;</td>
+                    <td style="background-color: #DBDBDB;">2</td>
+                    <td style="background-color: #9BC2E6;">0.72</td>
+                    <td style="background-color: #C65911;">0.54</td>
+                    <td>0.37</td>
+                    <td>0.29</td>
+                </tr>
+                <tr>
+                    <td style="background-color: #DBDBDB;">3</td>
+                    <td style="background-color: #9BC2E6;">0.86</td>
+                    <td>0.53</td>
+                    <td>0.34</td>
+                    <td>0.19</td>
+                    <td>&#160;</td>
+                    <td style="background-color: #DBDBDB;">3</td>
+                    <td style="background-color: #F8CBAD;">0.41</td>
+                    <td>0.39</td>
+                    <td>0.32</td>
+                    <td>0.18</td>
+                </tr>
+                <tr>
+                    <td style="background-color: #DBDBDB;">4</td>
+                    <td>0.60</td>
+                    <td>0.46</td>
+                    <td>0.28</td>
+                    <td>0.18</td>
+                    <td>&#160;</td>
+                    <td style="background-color: #DBDBDB;">4</td>
+                    <td>0.33</td>
+                    <td>0.25</td>
+                    <td>0.24</td>
+                    <td>0.09</td>
+                </tr>
+            </tbody>
+        </table>
+    </body>
+</html>

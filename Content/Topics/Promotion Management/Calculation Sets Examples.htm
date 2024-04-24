@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd"
+      xml:lang="en-us">
+   <head>
+      <title/>
+   </head>
+   <body>
+      <h1>Calculation sets examples</h1>
+      <p>Best practices require that Calculations are assigned to Calculation Sets in the following order:</p>
+      <ol>
+         <li>Fill down keyed values from the Promotion to all levels, if necessary.</li>
+         <li>
+            <p>If the Promotion Strategy includes a promoted discount, set the Item level promoted discount low and high values to the keyed promoted discount. Then perform all lowest and highest promoted discount Promotion Strategy specific calculations starting from the Item level and working up to the Promotion Aggregate level.</p>
+         </li>
+         <li>Set the Item level Promotion Price low and high values using Promotion Strategy specific calculations.</li>
+         <li>Perform all standard aggregation Promoted Price calculations starting from the Variant level (if applicable) and working up to the Promotion Aggregate level.</li>
+      </ol>
+      <p class="BasicNote"> The Calculation Sets may vary from these examples due to implementation requirements.</p>
+      <p>For more information on calculation examples, see <a href="Calculations Examples.htm">Examples: calculations</a>.</p>
+   </body>
+</html>

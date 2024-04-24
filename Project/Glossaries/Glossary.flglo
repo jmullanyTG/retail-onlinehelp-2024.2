@@ -1,0 +1,102 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<CatapultGlossary>
+  <GlossaryEntry
+    glossTerm="Glossary.Term16"
+    TermClass="Popup"
+    conditions="General.ScreenOnly"
+    Stem=""
+    IgnoreCase="true">
+    <Terms>
+      <Term>Accounting Method</Term>
+    </Terms>
+    <Definition
+      Link="">The accounting method (cost or retail) that serves as the basis for how inventory is valued in a financial plan and for calculating certain metrics, such as MMU (Maintained Markup).
+Both cost and retail inventory metrics are available regardless of which accounting method is selected for a plan. There are simply differences in the way some of them are calculated.</Definition>
+  </GlossaryEntry>
+  <GlossaryEntry
+    glossTerm="Glossary.Term17">
+    <Terms>
+      <Term>carrying cost</Term>
+    </Terms>
+    <Definition>The marginal cost per period for holding one unit of inventory, typically a year (Hill, 59). Inventory carrying cost, also known as inventory holding cost, is the cost associated with holding inventory or stock in storage or a warehouse, in order to fulfill sales orders.
+
+Carrying Cost = Avg. inventory investment X Carrying Charge
+
+EXAMPLE: If Annual carrying charge = 25% and avg. inventory = $100,000, then the carrying cost is $25,000 per year</Definition>
+  </GlossaryEntry>
+  <GlossaryEntry
+    glossTerm="Glossary.Term18"
+    TermClass="Popup"
+    Stem=""
+    IgnoreCase="false">
+    <Terms>
+      <Term>Flow Cadence</Term>
+    </Terms>
+    <Definition
+      Link="">The time it takes to clear out inventory in the warehouse to take in new inventory in the next truck delivery.</Definition>
+  </GlossaryEntry>
+  <GlossaryEntry
+    glossTerm="Glossary.Term19">
+    <Terms>
+      <Term>Lost Sales</Term>
+    </Terms>
+    <Definition>The sales that have been lost as a result of insufficient stock. This causes demand to not be fulfilled for a period of time.
+
+Lost Sales = Demand - Constrained Demand - Stock on Hand (Demand = Unfiltered demand set by allocation strategy Demand Type field)</Definition>
+  </GlossaryEntry>
+  <GlossaryEntry
+    glossTerm="Glossary.Term0"
+    TermClass="Popup"
+    Stem=""
+    IgnoreCase="false">
+    <Terms>
+      <Term>Mean Absolute Percent Error (MAPE)</Term>
+    </Terms>
+    <Definition
+      Link="">The measure of prediction accuracy of a forecasting method (trend estimation). It is a commonly used (but flawed) measure of forecast accuracy that is the average of absolute percent errors for each period.</Definition>
+  </GlossaryEntry>
+  <GlossaryEntry
+    glossTerm="Glossary.Term1"
+    Stem=""
+    IgnoreCase="false">
+    <Terms>
+      <Term>Offset Start Days</Term>
+    </Terms>
+    <Definition
+      Link="">The period ahead at which to view the forecast series. This is a useful setting for planners as they can set the offset days to several months ahead to align with their planning schedule.</Definition>
+  </GlossaryEntry>
+  <GlossaryEntry
+    glossTerm="Glossary.Term20">
+    <Terms>
+      <Term>Monte Carlo Re-trend</Term>
+    </Terms>
+    <Definition>The mechanism that provides flexibility when dealing with irregular sales patterns. The re-trending of forecasts is an important step to correctly manage the continued allocation of products as they transition from a pre-season plan to in-season. The allocations Monte Carlo Re-trend mechanism self-corrects the demand signal through the use of repeated random sampling and statistical analysis of the sample results. These simulated scenarios continue to evolve and adjust as sales data comes in and the life cycle of the product progresses, bringing a whole new element to demand signal management for the allocation of products.</Definition>
+  </GlossaryEntry>
+  <GlossaryEntry
+    glossTerm="Glossary.Term21">
+    <Terms>
+      <Term>AUR</Term>
+    </Terms>
+    <Definition>Average Unit Retail (AUR)
+
+The average dollar amount spent for a particular type of item, calculated by dividing the total sales in dollars by the number of items sold. Retailers use this metric to compare sales across different departments or categories. It is very important for suppliers to know an item’s AUR for the different retailers carrying their item. Retailers do the same comparison. 
+
+AUR = Total revenue (or net sales) / Number of units sold</Definition>
+  </GlossaryEntry>
+  <GlossaryEntry
+    glossTerm="Glossary.Term22">
+    <Terms>
+      <Term>Supersessions</Term>
+    </Terms>
+    <Definition>The models based on existing items that are often used for a new item that replaces an existing item. Supersessions mimic the demand pattern of the existing item and use it until the new item has enough actual historic demand or sales of its own.
+
+A supersession is a sequential relationship of products that can replace each other. For example, product A is replaced by product B due to changes in design, form, or function.</Definition>
+  </GlossaryEntry>
+  <GlossaryEntry
+    glossTerm="Glossary.Term23">
+    <Terms>
+      <Term>window of time</Term>
+    </Terms>
+    <Definition>A contiguous range of periods used to define the data returned in a view or an analysis.</Definition>
+  </GlossaryEntry>
+</CatapultGlossary>

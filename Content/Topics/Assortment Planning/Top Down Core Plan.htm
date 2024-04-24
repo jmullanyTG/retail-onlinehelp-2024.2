@@ -1,0 +1,240 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head>
+        <link href="../../Resources/TableStyles/standard.css" rel="stylesheet" MadCap:stylesheetType="table" />
+    </head>
+    <body>
+        <h1>Top down core planning</h1>
+        <p>Planners can view and manage sales and receipts in aggregate using the <span class="Emphasis">Top Down Core Plan</span> view. The <span class="Emphasis">Top Down Core Plan</span> view allows for simultaneously managing all placeholders for multiple collections instead of one collection or one placeholder at a time. Planners avoid the onerous and time consuming task of manually editing numerous individual collections or placeholders making sales and receipt planning much more efficient.</p>
+        <p>For example, planners can use the <span class="Emphasis">Multiple Changes</span> right-click menu option to enter receipt quantities that are the same across multiple collections saving a great deal of clicking and saving.
+</p>
+        <p>Updates at lower levels aggregate up to higher levels while updates at higher levels split down proportionately to lower levels. </p>
+        <h2>Comparison options</h2>
+        <p>The comparison options are selected as a parameter. </p>
+        <p>
+            <img src="../../Resources/Images/Assortment Planning/Top Down Core Plan.PNG" class="LargeImages" />
+        </p>
+        <h2>Impact of making changes to plans in the Top Down Core Plan view</h2>
+        <p>Changes made in the <span class="Emphasis">Top Down Core Plan</span> view are seen as overrides in the main planning view and <span class="Emphasis">Sales Plan</span> view.</p>
+        <h2>Making changes to sales plans in the Top Down Core Plan view</h2>
+        <MadCap:snippetBlock src="../../Resources/Snippets/Read Write Access To Sales Plans Overrides.flsnp" />
+        <h2>Recalculating modified placeholders</h2>
+        <p>There are editable Receipt metrics in the TDCP view. Any placeholders that have been modified have a status of <span class="Emphasis">Dirty</span> and are flagged for Recalculation.</p>
+        <p>To recalculate modified placeholders, click the <span class="Emphasis">Recalculate Receipts</span> button. Clicking this button initiates the same logic as the <span class="Emphasis">Recalculate Receipts</span> button in the main planning view. This button uses the parameters defined within TDCP to calculate which placeholders to recalculate.</p>
+        <p>It is possible that multiple users might be affecting the same placeholders through different views (Receipt Plan view and TDCP), and also possible that these users might recalculate at similar times. To efficiently address this possibility, queue logic skips placeholders which are no longer dirty though the first recalculation. The recalculation does not auto-run the parameters as users could be working at the time.</p>
+        <p>Notifications are sent to users to indicate the status of the run. Clicking on the Notification takes users back to the TDCP. </p>
+        <p class="BasicNote">Receipt Constraints are still managed exclusively through the Receipt Plan view, which supports multi-editing.</p>
+        <h2>Recalculating receipt plans</h2>
+        <p>Placeholders that have been modified have a receipt status of <span class="Emphasis">Dirty</span> and are flagged for recalculation. To recalculate modified placeholders, click the <span class="Emphasis">Recalculate Receipts</span> button.  <span class="Emphasis">Recalculate Receipts</span> uses the parameters defined within TDCP to determine which placeholders to recalculate.</p>
+        <p class="BasicNote">The <span class="Emphasis">Recalculate Receipts</span> functionality initiates the same logic as the <span class="Emphasis">Recalculate Receipts</span> button in the main planning view.</p>
+        <p>It is possible that multiple users might be affecting the same placeholders through different views (Receipt Plan view and TDCP), and also possible that these users might recalculate at similar times. To efficiently address this possibility, queue logic skips placeholders which are no longer dirty though the first recalculation. The recalculation does not auto-run the parameters as users could be working at the time.</p>
+        <p>Notifications are sent to users to indicate the status of the run. Clicking on the Notification takes users back to the TDCP. </p>
+        <p class="BasicNote">Receipt Constraints are managed exclusively through the Receipt Plan view, which supports multi-editing.</p>
+        <h2>Snapshot data in the Comparison View</h2>
+        <p>All snapshot data, including actualized and on order data, is included in the comparison. If a snapshot is compared to the plan immediately after creation, results are identical. If a snapshot is used for comparison some time after it has been taken, then the actualized periods as of the snapshot date are shown, and the future-planned periods as of the snapshot date are shown.</p>
+        <h2>Cell locking</h2>
+        <p>Locking is done at individual cell level. Only editable cells can be locked.</p>
+        <p>When a lock is in place, the entire row is colored to indicate lock status overriding any other formatting in place. When the lock is removed, the original formatting returns. Locks in the <span class="Emphasis">Top Down Core Plan</span> view do not carry over into other views. Locking a Sales metric does not lock a Receipt metric and vice versa.</p>
+        <h3>Differences between MFP and AP cell locking</h3>
+        <MadCap:snippetBlock src="../../Resources/Snippets/Lock And Spread MFP &amp; AP Differences.flsnp" />
+        <h2>Grid color scheme</h2>
+        <p>The cells in the grid follow the color scheme indicated below:</p>
+        <table style="width: 100%;margin-left: auto;margin-right: auto;mc-table-style: url('../../Resources/TableStyles/standard.css');" class="TableStyle-standard" cellspacing="0">
+            <col class="TableStyle-standard-Column-Column1" />
+            <col class="TableStyle-standard-Column-Column2" />
+            <thead>
+                <tr class="TableStyle-standard-Head-Header1">
+                    <th class="TableStyle-standard-HeadE-Column1-Header1">Color</th>
+                    <th class="TableStyle-standard-HeadD-Column2-Header1">Description</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">Red text</td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">The STS value is lower than the lower threshold or greater than the upper threshold</td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">Red</td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">Locked cell</td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">Orange</td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">Partially locked cell, shown only on the aggregate level</td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">Yellow</td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">Markdown sales</td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">Green</td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">Promotion sales</td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyB-Column1-Body1">Blue</td>
+                    <td class="TableStyle-standard-BodyA-Column2-Body1">Regular sales</td>
+                </tr>
+            </tbody>
+        </table>
+        <h3>Example of the grid color scheme</h3>
+        <p>
+            <img src="../../Resources/Images/Assortment Planning/Top Down Core Plan grid color scheme.PNG" class="LargeImages" />
+        </p>
+        <h2>Parameters</h2>
+        <p>The following parameters are available:</p>
+        <table style="width: 100%;margin-left: 0;margin-right: auto;mc-table-style: url('../../Resources/TableStyles/standard.css');" class="TableStyle-standard" cellspacing="0">
+            <col class="TableStyle-standard-Column-Column1" />
+            <col class="TableStyle-standard-Column-Column2" />
+            <thead>
+                <tr class="TableStyle-standard-Head-Header1">
+                    <th class="TableStyle-standard-HeadE-Column1-Header1">Parameter </th>
+                    <th class="TableStyle-standard-HeadD-Column2-Header1">Description</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1"><span class="Emphasis">Product</span>
+                    </td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">Selects a product filter for the current view.</td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1"><span class="Emphasis">Site Hierarchy</span>
+                    </td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">Selects the levels of the current Plan’s Site Hierarchy to include in the current view.</td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1"><span class="Emphasis">Cluster Sets</span>
+                    </td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">Selects the cluster sets to include in the current view. The cluster sets listed include all default and "additionally available" cluster sets for the product level selected in the Product parameter. </td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1"><span class="Emphasis">Window of Time</span>
+                    </td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">
+                        Returns the entire range between the minimum and maximum date selection and not just specified values. This is due to the BOP and STS rolling logic.  
+                        <p>For example, if week 3 of August, weeks 2 and 3 of September, and all of November are selected, then August to November is returned in its entirety. </p><p>Otherwise, the values for August and September on the totals level would be different than the values for the selected weeks and may cause confusion. </p></td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1"><span class="Emphasis">Display Currency</span>
+                    </td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">Sets the currency to display for all revenue based fields in the view. Defaults to the Home Currency for the active Assortment Plan.</td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1"><span class="Emphasis">Comparison Type</span>
+                    </td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">
+                         The following options are available: 
+                        <ul><li>None</li><li>System Data</li><li>User Data</li><li>Snapshot options</li></ul></td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyB-Column1-Body1"><span class="Emphasis">Comparison Time</span>
+                    </td>
+                    <td class="TableStyle-standard-BodyA-Column2-Body1">
+                        Comparison types <span class="Emphasis">None</span>, <span class="Emphasis">System Data</span>, and <span class="Emphasis">User Data</span> have the full set of dates mirroring the <span class="Emphasis">Window of Time</span> parameter.  
+                        <p>Snapshots have the dates specified within the snapshot only. This option behaves like the <span class="Emphasis">Window of Time</span> parameter where selecting a few weeks may bring back extra rows because of the BOP and STS rolling logic. </p></td>
+                </tr>
+            </tbody>
+        </table>
+        <p>For additional information, refer to <MadCap:xref href="View Parameters.htm">Placeholder and collection view parameters</MadCap:xref>.</p>
+        <h2>Metrics notes</h2>
+        <p class="BasicNote">EOP and BOP values include Inter-Branch Transfers (IBT) for sites-in-cluster. Therefore, EOP and BOP values in all views and reports which use these metrics (such as the Sales Plan view and the Receipt Plan view) reflect values inclusive of IBT.</p>
+        <table style="width: 100%;margin-left: auto;margin-right: auto;mc-table-style: url('../../Resources/TableStyles/standard.css');" class="TableStyle-standard" cellspacing="0">
+            <col class="TableStyle-standard-Column-Column1" />
+            <col class="TableStyle-standard-Column-Column2" />
+            <thead>
+                <tr class="TableStyle-standard-Head-Header1">
+                    <th class="TableStyle-standard-HeadE-Column1-Header1">Field</th>
+                    <th class="TableStyle-standard-HeadD-Column2-Header1">Description</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">Average Sales Units</td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">Average sales calculated by dividing <span class="Emphasis">Sales Units</span> by <span class="Emphasis">Site Count</span>.</td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">
+                        AUR
+                        </td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">
+                        
+                        Always locked and shaded gray to indicate it's read-only.
+                        <p class="BasicNote">The AUR grand total is a total for all months or across the time parameters selected. The calculation is: Grand Total AUR = Grand Total Sales / Grand Total Sales Units</p></td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">Home AUT</td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">
+                         Weighted average (excludes zeros) unit ticket price for the period in Home Site currency.
+                        <p class="BasicNote"><span class="Emphasis">Home AUT</span> is editable in the main view and follows the same coloring rules as the other editable fields (<span class="Emphasis">Sales</span> and <span class="Emphasis">Sales Units</span>). <span class="Emphasis">Home AUT</span> in the <span class="Emphasis">Comparison</span> view is read-only.</p></td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">Blended AUT</td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">Weighted average (excludes zeros) unit ticket price for the period, blended for all currencies present in the cluster. <span class="Emphasis">Blended AUT</span> is derived from <span class="Emphasis">Home AUT</span>, and like <span class="Emphasis">AUR</span> is read-only.</td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">AUT Discount %</td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">Impacts how AUR is derived from <span class="Emphasis">Blended AUT</span>. The percent discount is taken first, and then the rest of the calculations proceed from there, namely applying VAT rates, price exceptions, and promotions. This metric averages across time and is editable in future periods.
+                        <p class="Important">It is important to note that <span class="Emphasis">AUT Discount %</span> is applied and then any planned promotions are also applied. <span class="Emphasis">AUT Discount %</span> is NOT inclusive of explicitly planned promotions.</p></td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">BOP Units</td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">Beginning of Period (BOP) inventory units aggregated to the levels of the product and site hierarchies defined in assortment planning and merchandise financial planning.</td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1"> Last Receipt Run</td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">The last date when a placeholder was processed through the Engine to calculate Receipts. A similar metric appears in the main planning view.</td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">Receipt AUC</td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">Sets the average cost per unit for receipts in the period.</td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">Receipt Cost</td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1"> Planned or actual cost of receipts for the period. The
+
+calculation is Receipt Units * Receipt AUC.</td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">Receipt Period</td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">An editable checkbox in the current pane and read-only in the <span class="Emphasis">Comparison View</span> pane. Changes to the checkbox in the current pane are fed through to the <span class="Emphasis">Receipt Plan</span> view.</td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">Receipt Status</td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">The calculation status of the receipt plan for the placeholder/collection (<span class="Emphasis">Clean</span> or <span class="Emphasis">Dirty</span>)</td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">Receipt Units</td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">
+                         
+                        Editable. Sets the periods in which receipts can occur. Updates at lower levels aggregate up to higher levels while updates at higher levels split down proportionately to lower levels. 
+                        <p>When System Data is selected as the Comparison Type, actualized receipts display in historical time periods and system receipt units in future time periods.</p><p>When a version of the plan is selected as the Comparison Type, the Receipt Units display that were in the plan for that specific snapshot</p><p>Changes override system Sales Units and Receipt Units and flow through to the following:</p><ul><li><p> Assortment Rollup report</p></li><li><p>Reconciliation report</p></li><li><p>both Placeholder &amp; Collection Receipt Plan views</p><p class="BasicNote">Changes made to the Sales Units and Receipt Units metric in these views flow through to the TDCP, read-only reports, and MFP Comparison</p></li><li><p>MFP comparison metric for Receipt Units: AP Primary Plan</p></li></ul></td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">Sales, Sales Units</td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">
+                         When <span class="Emphasis">Sales</span> changes <span class="Emphasis">Sales Units</span> updates and vice versa.
+                        <p class="BasicNote">When changes to <span class="Emphasis">Sales</span> or <span class="Emphasis">Sales Units</span> are made to subtotals, totals, and grand totals, then data is spread proportionately and applicable PH sales <span class="Emphasis">Sales</span> and <span class="Emphasis">Sales Units</span> adjust.</p></td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">Supplier Order (AUC, Cost, Units)</td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">
+                         Read-only. Sums at higher aggregations. 
+                        <p><span class="Emphasis">Calculation</span>: Committed + Confirmed + Unknown Units On Order (Total Orders - Inter-Branch Transfers)</p></td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">Supplier Order Plus Receipt (AUC, Cost, Units)</td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">
+                        Read-only. Sums at higher aggregations. 
+                        <p><span class="Emphasis">Calculation</span>: Committed + Confirmed + Unknown + Receipt Units</p></td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">Site Count</td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">A placeholder's active site count over time, based on  the cluster set / clusters selected.</td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyB-Column1-Body1">Stock To Sales</td>
+                    <td class="TableStyle-standard-BodyA-Column2-Body1">This field updates in relation to sales changes and is flagged when above or below default thresholds.</td>
+                </tr>
+            </tbody>
+        </table>
+    </body>
+</html>

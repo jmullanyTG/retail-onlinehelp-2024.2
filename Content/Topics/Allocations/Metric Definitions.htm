@@ -1,0 +1,131 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" xml:lang="en-us">
+    <head>
+        <link href="../../Resources/TableStyles/standard.css" rel="stylesheet" MadCap:stylesheetType="table" /><title></title>
+    </head>
+    <body>
+        <h1>Allocation rollup metric definitions </h1>
+        <table style="margin-left: 0;margin-right: auto;mc-table-style: url('../../Resources/TableStyles/standard.css');" class="TableStyle-standard" cellspacing="0">
+            <col class="TableStyle-standard-Column-Column1" style="width: 77px;" />
+            <col class="TableStyle-standard-Column-Column2" style="width: 380px;" />
+            <col class="TableStyle-standard-Column-Column1" style="width: 537px;" />
+            <thead>
+                <tr class="TableStyle-standard-Head-Header1">
+                    <th class="TableStyle-standard-HeadE-Column1-Header1">Metric </th>
+                    <th class="TableStyle-standard-HeadE-Column2-Header1">Definition</th>
+                    <th class="TableStyle-standard-HeadD-Column1-Header1">Business Value</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">
+                        Lost Sales
+                    </td>
+                    <td class="TableStyle-standard-BodyE-Column2-Body1">
+                        Calculated missed sales opportunities based on potential out of stocks
+                    </td>
+                    <td class="TableStyle-standard-BodyD-Column1-Body1">Allocators have visibility to missed sales opportunities as a result of potential out of stock situations. This is the system’s best estimate of foregone and missed sales.
+                    </td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">
+                        Optimal Allocation
+                    </td>
+                    <td class="TableStyle-standard-BodyE-Column2-Body1">
+                        Total Recommended Allocation - constrained by available inventory and any/all user specified constraints – includes recommended safety stock if there any.
+                    </td>
+                    <td class="TableStyle-standard-BodyD-Column1-Body1">
+                        Based on all user-specified constraints, the system recommends an optimal allocation value to allocators.
+                    </td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">
+                        Receipts
+                    </td>
+                    <td class="TableStyle-standard-BodyE-Column2-Body1">
+                        Actual Orders received in stores
+                    </td>
+                    <td class="TableStyle-standard-BodyD-Column1-Body1">
+                        Users can see how much stock stores have received.
+                    </td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">
+                        Recommended Safety Stock
+                    </td>
+                    <td class="TableStyle-standard-BodyE-Column2-Body1">
+                        Safety Stock Rollup (Safety Stock Units or WOC by store – sum of the greater of the two by size/store). The value may change each week as it represents the portion of the allocation that covers safety stock.
+                    </td>
+                    <td class="TableStyle-standard-BodyD-Column1-Body1">
+                        Based on the calculation, this value is the recommended value for safety stock as part of the allocation.
+                    </td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">
+                        Reserved Stock
+                    </td>
+                    <td class="TableStyle-standard-BodyE-Column2-Body1">
+                        Any stock which has been reserved and is not available for allocation
+                    </td>
+                    <td class="TableStyle-standard-BodyD-Column1-Body1">
+                        Reserved stock (whether for specific events or purposes, new stores or items, etc.) and not available to allocate.
+                    </td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">
+                        Site Count
+                    </td>
+                    <td class="TableStyle-standard-BodyE-Column2-Body1">
+                        Total store count in Location Strategy (DC not Included)
+                    </td>
+                    <td class="TableStyle-standard-BodyD-Column1-Body1">
+                        Based on the configured location strategy, allocators can see how many sites are included within the allocation roll-up.
+                    </td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">
+                        Stock On Hand
+                    </td>
+                    <td class="TableStyle-standard-BodyE-Column2-Body1">
+                        Beginning of Week SOH – actual for past and current weeks, projected OH for future weeks
+                    </td>
+                    <td class="TableStyle-standard-BodyD-Column1-Body1">Allocators will know what the stock on hand at each site is.
+                    </td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">
+                        Supplier Orders
+                    </td>
+                    <td class="TableStyle-standard-BodyE-Column2-Body1">
+                        Total Orders (Receipts + In Transit)
+                    </td>
+                    <td class="TableStyle-standard-BodyD-Column1-Body1">
+                        Allocators can know what stock will be received from supplier orders giving them a good idea of incoming orders at the source-site level.
+                    </td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">
+                        Total Actionable Stock
+                    </td>
+                    <td class="TableStyle-standard-BodyE-Column2-Body1">
+                        Displays for both Stores and DCs but is more meaningful for DCs. Reflects the available to Allocate in the beginning of the current week. For stores, this number matches the <span class="Emphasis">Stock On Hand</span> field. For DCs, this number may differ from stock on hand if there is pending stock (i.e. an allocation has been created against the DC inventory).
+                    </td>
+                    <td class="TableStyle-standard-BodyD-Column1-Body1">
+                        Total Actionable is the maximum value that Available to Allocate should be and is exclusive of constraints. This gives allocators a good idea of how much stock they will be able to allocate.
+                    </td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyB-Column1-Body1">
+                        Unit Sales (actual)
+                    </td>
+                    <td class="TableStyle-standard-BodyB-Column2-Body1">
+                        Actual Sales Quantity by week – will display historically
+                    </td>
+                    <td class="TableStyle-standard-BodyA-Column1-Body1">
+                        Allocators will be able to see their actual historic sales.
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </body>
+</html>

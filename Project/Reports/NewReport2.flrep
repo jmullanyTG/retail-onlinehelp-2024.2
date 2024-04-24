@@ -1,0 +1,3 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<CatapultReportFile Tables="broken-snippet-links,files-with-snippets,snippet-suggestions,unused-snippets,used-snippets,files-with-multimedia,unused-multimedia,used-multimedia,files-with-images,unused-images,used-images" Comment="This template includes all reports in the Images, Multimedia and Snippets groups. Once the new report file is created, you can enable or disable any report from any group.">
+</CatapultReportFile>

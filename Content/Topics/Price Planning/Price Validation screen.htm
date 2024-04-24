@@ -1,0 +1,70 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" xml:lang="en-us">
+    <head>
+        <link href="../../Resources/TableStyles/standard.css" rel="stylesheet" MadCap:stylesheetType="table" /><title></title>
+    </head>
+    <body>
+        <h1>Price validations</h1>
+        <p>Corporate pricing validations are configured via formula expressions along with validation error messages using the <span class="Emphasis">Price Validations</span> screen. The grid on the right is used to copy and paste formula values to the <span class="Emphasis">Formula</span> field to reduce manual entry error. The grid also provides insight into which variables are being used in the formula.</p>
+        <p>
+            <img src="../../Resources/Images/Price Planning/Strategy Validation Rules.png" class="LargeImages" />
+        </p>
+        <h1>Creating and maintaining validations</h1>
+        <p>Within the <span class="Emphasis">Price Validations</span> screen, click <span class="Emphasis">New</span> to create a new Calculation or Calculation Rule, enter the required fields and click <span class="Emphasis">Save</span>. Modifications are made directly to the grid. </p>
+        <p class="BasicNote">Validations cannot be deleted if associated to a Price Strategy and once deleted cannot be restored. </p>
+        <h2>Validation fields and descriptions</h2>
+        <table class="TableStyle-standard" cellspacing="0" style="mc-table-style: url('../../Resources/TableStyles/standard.css');">
+            <thead>
+                <tr class="TableStyle-standard-Head-Header1">
+                    <th class="TableStyle-standard-HeadE-Column1-Header1">Field</th>
+                    <th class="TableStyle-standard-HeadD-Column2-Header1">Description</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">Name                     </td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">A descriptive label to summarize the purpose of the Calculation or Rule.
+                    </td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">Description
+                    </td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">An optional summary of the Calculation or Rule.
+                    </td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">
+                     Method (Optional)
+                    </td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">A list of preconfigured database stored procedures for more complex mathematical formulas or validations. Selection in the <span class="Emphasis">Method</span> field overrides any entry in the <span class="Emphasis">Formula</span> field.
+                    </td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">Formula (Required/Optional)
+                    </td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">
+                       The mathematical expression for the system to evaluate. Configured variables can be found in the right panel.
+Validation examples include: 
+                        <h3>If Cost1 is NULL, $0.00 or $0.01                     </h3><ul><li>ISNULL([Variable1],Replacement Value)&lt;.02 </li></ul><ul><li>Variable1 = Cost1</li><li>Variable1 is being wrapped by the ISNULL function to replace any NULL values, in Cost1, with a value of zero</li></ul><ul><li>ISNULL([Cost1],0)&lt;.02</li></ul><p>If [Cost1] is less than .02, the response is the configured severity level in the Pricing Strategy which can also be viewed in the Validation Log. The Price Action does not continue validation and calculation if the severity level is configured as <span class="Emphasis">Error</span>.</p><p>If [Cost1] is greater than .02, the validation is marked as passed and continues calculation and evaluation. </p><h3>If Retail Sales Price is lower than MSRP</h3><ul><li>Variable1 &lt; Variable4</li></ul><ul><li>Variable1 = [RSP]</li><li>Variable4 = [MSRP]</li></ul><ul><li>[RSP]&gt;[MSRP]</li></ul><p>If [RSP] is greater than [MSRP], the response is the configured severity level in the Pricing Strategy which can also be viewed in the Validation Log. The Price Action does not continue validation and calculation if the severity level is configured as <span class="Emphasis">Error</span>.</p><p>If [RSP] is less than [MSRP], the validation is marked as passed and continues calculation and evaluation. </p></td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">
+                      System Error Message                     </td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">A message to be included in the validation log for validation failures. Error messages cannot be configured for calculation types.
+                    </td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">Active (Optional)
+                    </td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">
+                    Unchecking the checkbox removes the ability to configure the calculation in any new price strategies.
+                    </td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyB-Column1-Body1">Validated</td>
+                    <td class="TableStyle-standard-BodyA-Column2-Body1">If checked, a validation is run against the formula. Only calculations that have been validated are executed during the calculation process.</td>
+                </tr>
+            </tbody>
+        </table>
+    </body>
+</html>

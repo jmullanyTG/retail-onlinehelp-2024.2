@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" xml:lang="en-us">
+    <head><title></title>
+    </head>
+    <body>
+        <h1>Allocation strategies </h1>
+        <p>The <span class="Emphasis">Allocation Strategy</span> screen is the main workflow screen in the Allocations module, which requires inputs (default or user selected) from the other key components of the Allocation module (i.e. Product Model, Location Strategy, Size Model Selection) to define strategies.</p>
+        <p>The default is one strategy acting in an omni-channel fashion that covers every single channel (for example, Retail and e-commerce) with the particular set of items defined once with different sets of sites. </p>
+        <p class="BasicNote">System policy <span class="Emphasis">Generate Omni Channel Strategies</span> defines whether new strategies are created as omni-channel or not. If set to <span class="Emphasis">True</span>, then a strategy is generated with multiple channels. If set to <span class="Emphasis">False</span>, then one strategy per channel variant is generated. Changing the setting does not change affect existing strategies.</p>
+        <p>Alternatively, one strategy per channel (for example, if there are 5 channels then 5 strategies are created) can be configured. This better reflects how businesses operate, offers much greater flexibility, and eliminates having to customize workarounds to achieve the same effect. </p>
+        <p class="Important">It is important to note that there is only one stock-on-hand for the multiple channels sharing the same Variant. Therefore, it is recommended to first run the strategy with the most important channel and verify the order. Once satisfied, repeat the process with the other strategies to avoid over allocation.</p>
+        <p>
+            <img src="../../Resources/Images/Allocations/Allocation_Strategy_screen.png" class="LargeImages" />
+        </p>
+        <p>Allocation strategies must have associated dates. These dates include phase in, phase out, and markdown dates. The phase in and out dates make up the life cycle of the product, where phase in is when the item is introduced, and phase out is when the item is no longer available. A	markdown date is not required. Markdown dates are the date at which a product begins to have its price lowered to clear out stock on hand. </p>
+        <p>Markdown dates are typically closer to the phase out date.</p>
+        <p>The allocations engine calculates projected demand and generates allocation orders from distribution centers (DC) to stores to support the projected demand.&#160; The output of allocation strategies can be viewed on the <span class="Emphasis">Allocation Rollup</span>  screen,  and uploaded to the Ordering screens in Order Manager. </p>
+        <p>Allocation strategies can be executed through pre-built or user-defined filters (static and/or dynamic) that return items to the <span class="Emphasis">Allocation Strategy</span> view, as well as manage exceptions which can be present for any products which have been assigned an allocation strategy.</p>
+        <p class="BasicNote">This view is populated from an inventory level (item-site combination) cache of data referred to as the inventory cache. The inventory cache is created by combining the products defined by the variant and their constituent sizes (or total ownership in instances where a size range has not been associated) and the sites contained within the location strategy. This produces a collection of inventories which build into the inventory cache.</p>
+        <h2>Creation and generation of strategy lines</h2>
+        <p class="p">There is no <span class="Emphasis">New</span> button on the <span class="Emphasis">Allocation Strategy</span> tab. There are two ways strategy lines can be created. &#160;The most common method is using nightly processes. Much less common is creating a Product Group on the <span class="Emphasis">Product Groups</span> tab which automatically creates a new empty strategy line. However, it does not display until strategies are associated with the new Product Group.</p>
+    </body>
+</html>

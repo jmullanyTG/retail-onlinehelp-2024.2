@@ -1,0 +1,89 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" xml:lang="en-us">
+    <head><title></title>
+    </head>
+    <body>
+        <h1>Crafting a logical assortment planning process</h1>
+        <p>Taking time to consider the structure of the business and objectives before crafting a logical process to facilitate them improves efficiency.</p>
+        <h2>Configuring screen layouts and work spaces</h2>
+        <p>The Assortment Planning interface allows users a great deal of flexibility in configuring screen layouts and work spaces. To maximize efficiency, take some time to set up custom layouts and work spaces that are geared toward specific tasks. Some examples are:</p>
+        <ul>
+            <li><span class="Emphasis">Cluster Assorting</span> – within Placeholder view, it can be useful to create a workspace with the Style Bank and the Cluster Details panes docked to see how many clusters a given placeholder is assorted to as variants are assigned. </li>
+            <li><span class="Emphasis">Cluster and Rate of Sale</span> – creating a workspace in either view that includes the Rate of Sale Calculator docked at the bottom and Cluster Set View docked at the right gives excellent visibility to how a plan changes as rate of sale scenarios are applied.</li>
+            <li><span class="Emphasis">Seasonality or Promotions and Sales Plan (multi-screen)</span> – for a multi-monitor setup, docking the Seasonality Curve Generator at the bottom of screen one then breaking out and maximizing Sales Plan view on a second screen gives visibility to changes at both placeholder/collection level and by period for the selected item as seasonality curves are applied. In this configuration, it is easy to tab to Promotions view in the docked bottom pane and see changes to promo applications at a period level.</li>
+            <li><span class="Emphasis">Dual Screen Planning with Image View</span> – use a second monitor to break out and maximize Image view while the main screen remains dedicated to the main planning view. Watch the assortment change as variants are assigned, change phase in and out dates, and assort them to clusters.</li>
+        </ul>
+        <h2>Smart starting versus manual placeholder creation</h2>
+        <p>While it is completely fine to bypass Target Creation and start creating placeholders manually, doing so is potentially a lot more work to get a plan going. Conversely, while Smart Starting a well thought-out scenario can get a plan 90% of the way done in a very short time, it may not provide the precision required in all cases. </p>
+        <p>Consider the following example, in which a hybrid approach is used to good effect:</p>
+        <h3>Example</h3>
+        <p>A Mens Tops planner for a menswear business with several definable segments of the business that aren’t part of the product hierarchy:</p>
+        <ul>
+            <li> Humor</li>
+            <li>Comic, and </li>
+            <li>Allover Print. </li>
+        </ul>
+        <p>A Target Creation scenario can be modeled based on these three business segments to arrive at what seems to be a reasonable number of choices by cluster to achieve financial targets for each area. However, within Comic Tees there are a few staple looks that repeat every season with new styles that are slightly different. They always exhibit similar selling performance and there is confidence in modeling the new versions after the sales history of their predecessors.</p>
+        <p>The planner could just Smart Start the scenario and assign new tees to the placeholders that look the closest in performance. The planner could even model rates of sale for each in the Rate of Sale Calculator to more closely mirror last season’s trends, but that seems like a lot of extra work for 2 style-colors. </p>
+        <p>Instead, the planner can create two new placeholders in the main planning view, selecting last season’s versions of the styles as the Like Styles and add a Mod Factor of 1.05 to each. The Mod Factor accounts for an anticipated 5% sales growth. </p>
+        <p>The new variants aren't available to assign yet but they’re coming. So, the necessary values are assigned to the Comic Character Attribute Family via the Attributes side view and change both placeholders to Created status.</p>
+        <p>Next, the planner goes back into the Target Creation scenario, refreshes the Target Filter for the Comic Tees segment, and recalculates the scenario. </p>
+        <p>Assortment Planning recognizes the two placeholders just created and backs their sales volume out of the TY New Item Sales for that segment. Rationalizing again shows the recommended choice counts have decreased to accommodate the new placeholders. </p>
+        <p>Now, the scenario can be Smart Started. The remaining placeholders are created around those created manually giving a solid foundation for the unknown styles in each segment. The placeholders created with more specific knowledge remain intact.</p>
+        <h2>Collections versus placeholders</h2>
+        <p>A soft goods business may think about assortment in terms of styles (collections) and style-colors (placeholders). If so, working in Collection view probably suits very well. Then again, perhaps the business model deals more with unique items that only come in a single color or maybe color has no bearing on the business at all, and Placeholder view works better.</p>
+        <p>If working with collections makes the most sense, it’s probably best to start in Collection view and define sales plans at that level first then move down to Placeholder level. Changes made in Collection view push down proportionately based on the percent contribution of the placeholders beneath, meaning style-colors can be assigned when ready. The Collection % Contribution of each placeholder can be easily adjusted.</p>
+        <p>Perhaps collections do have meaning, but individual style-colors rank high in the overall assortment. If this is the case,  it is more useful to start in Placeholder view, tier the assortment based on the strength of individual style-colors, then use Collection view as more of a double-check for assortment breadth and continuity. </p>
+        <p class="BasicNote">While there is no restriction within Assortment Planning that requires collections to only consist of multiple colors of the same style that is the most common paradigm for their use.</p>
+        <h2>Working with clusters</h2>
+        <p>Working with clusters in Assortment Planning is an essential part of the process to truly take advantage of the opportunity that may exist in different areas of the site hierarchy. Much of this can be realized through the Target Creation process. At some point, it may be desirable to fine tune plans at the cluster level. Working in Cluster Set view most logically comes after plans are configured at the placeholder and collection levels.</p>
+        <p>Though the main planning view was designed with the idea of always allowing visibility to the overall plan, digging in to cluster level too early may cause a lot of back and forth making changes at different levels. While users do have access to Cluster Set view in Collection view as well, this view should be used with caution as it means making changes across all placeholders in a collection but a single cluster set/cluster at a time. It may be difficult to work at this unique level before first working with the placeholders and clusters beneath it.</p>
+        <h2>Assorting in the Cluster Details view</h2>
+        <p>Different assorting scenarios of items among the clusters in a plan can be tried using the <span class="Emphasis">Cluster Details</span> view. Check or uncheck placeholders and collections in the cluster grid, save, and watch plan metrics change accordingly. Previous plan values of clusters are automatically saved making it easy to revert and try a different approach. For more information, see <MadCap:xref href="Cluster Details Side Pane.htm">Cluster Details side pane</MadCap:xref>.</p>
+        <p>What the system cannot do is create sales plans from nothing for clusters that did not have them previously. Placeholders and collections can be expanded to clusters that they weren’t assigned to when they were generated. However, doing so requires giving those clusters a sales plan whether by using the ROS Calculator or manually keying in ROS, Ttl Sls, or Ttl Buy, and then assigning a curve, either via the Seasonality Curve Generator or by choosing one manually from the in-line Seasonality Curve dropdown. Once these things are done, the expanded clusters have sales plans and they can be worked on in the grid normally.</p>
+        <p class="BasicNote">No error message displays if these steps are not followed. The result is simply placeholders assorted to clusters but with no sales against them. Also, if no seasonality curve is assigned, the system assumes a flat curve and assigns indices of 1.0 to all periods.</p>
+        <h2>Handling variants for organizations with different management or supplier requirements for the same variant</h2>
+        <p>This is a special case for organizations with different management or supplier requirements for the same variant (actual item) across different cluster sets. </p>
+        <p>Rules written into Assortment Planning stipulate that the same variant cannot be assigned to different placeholders that are assorted to overlapping cluster sets during the same time periods. However, the same variant can be assigned to as many placeholders as desired as long as the assorted cluster sets don’t overlap.</p>
+        <p>The following example shows how this can be achieved:</p>
+        <p>A black V-neck t-shirt sells for over a year in US stores. Now it is to be sold as a new item in UK stores. While there is sales history in the US stores to drive an effective replenishment forecast and manage reordering needs the ordering of the t-shirt for UK stores can be managed more directly through Assortment Planning. </p>
+        <p>The cluster set for the UK stores cannot simply be assorted  to the existing placeholder because placeholder Status (i.e. Control via the Forecasts module) is set at the placeholder level – not at the cluster set level.</p>
+        <p>To manage reordering for the UK stores, create a new placeholder, assort it to only the UK cluster set, and then assign the variant for the black V-neck t-shirt. This manages the ordering of the item for the UK stores separately without changing how stock for US stores is managed. </p>
+        <p>To use the historical sales data from US stores to help forecast the needs for the UK stores, either use the Hindsight tool to create the new placeholder and assign the existing item as a Like Style, using a Mod Factor to adjust the results up or down, or create the new placeholder separately then use the ROS Calculator to create a more finely tuned data scenario then apply the resultant ROS to the UK cluster set.</p>
+        <h2>Receipt planning and optimization</h2>
+        <p>In the Receipt Plan view, users have the ability to specify a number of constraints that are directly tied to how much inventory needs to be carried at any given time to fulfill them – Minimum Presentation, Periods of Supply, Min Stk to Sales, and Shrink % of Sales. While all of these constraints can be set concurrently, it’s important to understand how they interact. </p>
+        <p class="BasicNote">The following example is for illustrative purposes only as it is not possible to fully recreate the logic of the Receipt Engine in a simple spreadsheet model.</p>
+        <p>The required units to fulfill Periods of Supply, Min Stk to Sales and Sales plus Min Pres and Shrink are calculated separately by period. The MAX of the constraint needs in each period defines the Ideal EOP each period should end on to satisfy all constraints for the period. </p>
+        <p>
+            <img src="../../Resources/Images/Assortment Planning/Receipt Planning Optimization.png" class="WithBorder" />
+        </p>
+        <p>The system can only suggest receipts in weeks 1 and 4. The placeholder is marked down in Wk 7, thereby releasing the engine from further fulfilling constraints. In Wk 6, just prior to markdown, the Ideal EOP is driven by the Min Stk to Sales constraint, which requires 600 units for the period.</p>
+        <p> Even though this leaves more units left at the end of Wk 8 than are technically necessary to fulfill sales and shrink, the system must bring in all the units required to fulfill the Wk 6 constraint in Wk 4 – the last available receipt date.</p>
+        <h2>Sales Plan view in pre-season planning</h2>
+        <p>The real pre-season benefit of the <span class="Emphasis">Sales Plan</span> view is in using it in tandem with the <span class="Emphasis">Seasonality Curve</span> supporting view and Promotions to fine tune changes to the sales plan by period after there is confidence in everything from collection down to cluster.</p>
+        <p> Making changes at this level any sooner quickly becomes overwhelming. It’s important to understand that changes at this level may not even be required for much of the plan. </p>
+        <h3>The following example demonstrates use of this view pre-season</h3>
+        <p>A promotion is being applied to a T-shirt to capitalize on the release of a movie midway through the season. After the promotion is applied, going into Sales Plan view for the T-shirt to check on the promotional effects over the application period reveals a sales spike is much higher than anticipated. </p>
+        <p>After reviewing the seasonality curve, it appears to already have a significant lift during the same period. In the Curves module, the criteria is examined on which the curve was built, and includes promotional sales and was based on a filter created to isolate Comic Tees. </p>
+        <p>There may be over-accounting for promotional sales with the newly applied promotion which is based on very similar data. A seasonality curve is applied without promotional sales used in its calculation and the applied promotion is allowed to stand. This adjusts the sales lift for the promotional period to more realistic levels.</p>
+        <p class="BasicNote">The term Optimization with regard to Receipt Engine outputs means the system finds the optimal receipt strategy given the constraints specified by the user.</p>
+        <h2>Receipt planning and optimization</h2>
+        <p>In Receipt Plan view, specific constraints can be applied that are directly tied to how much inventory needs to be carried at any given time to fulfill them:</p>
+        <ul>
+            <li>Minimum Presentation</li>
+            <li>Periods of Supply</li>
+            <li>Min Stk to Sales</li>
+            <li>Shrink % of Sales </li>
+        </ul>
+        <p>While these constraints can be set concurrently, it’s important to understand how they interact. </p>
+        <h2>Snapshots, actualization, and in-season planning</h2>
+        <p>Once in-season and the assortment has begun selling, sales and other metrics actualize as each period closes. Though certain aspects of the plan are locked for editing, all of the views within the main planning view can be used to respond to variances in the plan. </p>
+        <h3>Maintaining reference to the original planned values</h3>
+        <p>Snapshots of the plan prior to the start of the season maintains reference back to originally planned values as sales begin to actualize. For more information, see <MadCap:xref href="Snapshot Tab.htm">Snapshot Tab </MadCap:xref>.</p>
+        <p>Changes in the Sales Plan view are not overwritten by changes made in the main planning view. However, use the Grand Total column in Sales Plan view to set total sales to the desired level while still keeping the structure of changes and each period’s percent contribution intact.</p>
+        <h3> Causing the total sales plan to drop beneath the value of actualized sales</h3>
+        <p>Plan adjustments can be made but keep the same basic tiering of placeholders in a collection, clusters assigned to a placeholder, or periods across an item’s life. The main planning view is used to affect these changes. However, do not make adjustments that would cause the total sales plan to drop beneath the value of sales that have already actualized. </p>
+        <h2>Balancing in Receipt Plan view</h2>
+        <p>A by-product of sales actualizing is the ability to track them against the receipt plan and use the Receipt Engine to help get back on track. This requires the ability to push/pull/cancel receipts or order more stock in time to accommodate the shifts in demand. The system can assist in understanding what is required to prepare for any shortfall or excess that may occur.</p>
+    </body>
+</html>

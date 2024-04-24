@@ -1,0 +1,41 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head>
+    </head>
+    <body>
+        <h1>Including Wholesale in a Channel hierarchy</h1>
+        <p>Rather than creating separate MFP plans for Wholesale and Retail, the TG JE structure supports wholesale as a channel within the total company plan. This allows users to include sites with a site type of <span class="Emphasis">Account</span>. The channel name will be whatever name is included in the Site Group 1 - 20 metadata.</p>
+        <p>The wholesale channel can be included in a hierarchy, along with sub-channel hierarchies beneath the wholesale channel, for use in individual plans by account.</p>
+        <p>If the desired functionality is to include wholesale accounts in MFP but not plan them individually, then all that is necessary to do is include the Channel group in the MFP hierarchy configuration (or whichever Site Group indicates which sites are Retail and which are Accounts). Then the wholesale channel will be available when hierarchies are generated.</p>
+        <p>To include wholesale in the Channel Hierarchy:</p>
+        <ol>
+            <li>
+                <p>One of the Site Groups 1 - 20 should be used to represent each wholesale account.  For example, <span class="Emphasis">Site Group 7</span> is given a friendly name such as <span class="Emphasis">Wholesale Account</span>.</p>
+                <p>
+                    <img src="../../Resources/Images/Wholesale Planning/Site Group Representing Wholesale Account.PNG" class="LargeImages" />
+                </p>
+            </li>
+            <li>
+                <p>Import Site Group values that exactly match each Account, and assign that SiteGroupID value to each wholesale account site.</p>
+                <p class="BasicNote">All Retail sites / DCs / other sites will have value of 0, No SiteGroup.</p>
+            </li>
+            <li>
+                <p>Include the Site Group level in the Global Groups configuration in MFP:</p>
+                <p>
+                    <img src="../../Resources/Images/Wholesale Planning/Site Group Level Global Groups Configuration.PNG" class="LargeImages" />
+                </p>
+            </li>
+        </ol>
+        <p>Users can then view individual wholesale accounts in the MFP hierarchy:</p>
+        <p>
+            <img src="../../Resources/Images/Wholesale Planning/View Wholesale Accounts Maintain Financial Plan.PNG" class="LargeImages" />
+        </p>
+        <p class="BasicNote">For information on the metrics that support a wholesale channel, see <MadCap:xref href="Merchandise Financial Planning Metrics List.htm">Merchandise financial planning metrics list</MadCap:xref>.</p>
+        <h3>Sites and customer accounts</h3>
+        <p>Retail Sites and Customer Accounts cannot co-mingle in MFP.  Data for wholesale accounts can exist in their own hierarchy levels alongside retail hierarchy levels, but at the leaf level, they cannot intersect.  For example, if the brand is <span class="Emphasis">ToolsGroup Tees</span>, the Toolsgroup Tees-owned retail site Irvine and the Customer Account called <span class="Emphasis">Irvine Sport Shop</span> that resells ToolsGroup Tees branded items cannot both exist in the <span class="Emphasis">Total Company &gt; USA &gt; Southwest</span> channel. </p>
+        <p>The hierarchy must be further divided to separate sites and accounts, or hierarchy levels with mixtures must be excluded. If a mixed hierarchy level is included, the following message displays:</p>
+        <p>
+            <img src="../../Resources/Images/Wholesale Planning/Sites and Customer Accounts Mixed.png" class="LargeImages" />
+        </p>
+    </body>
+</html>

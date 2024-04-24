@@ -1,0 +1,39 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<CatapultTarget
+  Version="2"
+  Comment="New Target"
+  Type="PDF"
+  Destinations=""
+  ShowMadCapBacklink="true"
+  GlossaryTermConversion="marked"
+  MasterToc="/Project/TOCs/Diamond Chart 2019x - 2020x.fltoc"
+  ExcludeUnreferencedContent="true"
+  ConditionTagExpression="exclude[General.DoNotPublish]"
+  DisableAutoSync="true">
+  <PrintedOutput
+    CollapseMargins="true"
+    GenerateTOCProxy="false"
+    GenerateIndexProxy="false"
+    GenerateGlossaryProxy="false"
+    OutputFormat="docx" />
+  <Glossaries />
+  <DocumentProperties
+    Author=" " />
+  <Variables>
+    <Variable
+      Name="Variables/BookTitle">ToolsGroup JustEnough Functionality Comparison Chart </Variable>
+    <Variable
+      Name="Variables/BookVersion">2019.x - 2021.x</Variable>
+    <Variable
+      Name="Variables/BookSubTitle">New and Improved Functionality by Version</Variable>
+  </Variables>
+  <PDF
+    ShowUsedBookmarks="false"
+    PageMode="UseNone" />
+  <Destinations>
+    <Destination
+      Link="/Project/Destinations/PDF Output.fldes"
+      Publish="true"
+      IsResource="false" />
+  </Destinations>
+</CatapultTarget>

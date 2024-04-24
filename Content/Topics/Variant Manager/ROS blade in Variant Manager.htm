@@ -1,0 +1,126 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head>
+        <link href="../../Resources/TableStyles/standard.css" rel="stylesheet" MadCap:stylesheetType="table" />
+    </head>
+    <body>
+        <h1>Maintaining Rates of Sale (ROS) in Variant Manager</h1>
+        <p>After creating a Variant Manager document, select one or more variants from the filter and edit their details in the <span class="Emphasis">Rate of Sale</span> blade located at the bottom of the Variant Manager screen. </p>
+        <h2>ROS&#160;blade layout</h2>
+        <p>Within the <span class="Emphasis">Rate of Sale</span> blade, there are several columns that can be edited and updated, such as phase dates, Rate of Sale override values, curves and product models, and more. Variant-level phase in and out and ROS values can be applied to and passed down to the inventory level.</p>
+        <p class="BasicNote">Changes in Variant Manager only impact at the Variant level and inventory forecasting. Changes do not impact level forecasting. </p>
+        <p>
+            <img src="../../Resources/Images/Variant Manager/ROS tab in Variant Manager.PNG" class="LargeImages" />
+        </p>
+        <p>Multiple Variants can be selected in the top grid with the lower grid displaying information for the selections.</p>
+        <h2>Updating multiple Variants simultaneously</h2>
+        <p>To update multiple Variants simultaneously, select a Variant in the bottom grid and click the <span class="Emphasis">Bulk Copy</span> button. This displays the <span class="Emphasis">Rate Of Sale Bulk Copy</span> screen. Select the appropriate checkboxes to apply values to the selected Variants. Unchecking a checkbox clears values from Variants.</p>
+        <p>For example, the Bulk Copy functionality can be used if everything within the same Variant is to have the same Phase In and Phase Out dates because they are all part of the same campaign. This saves a lot of time if everything is part of the same Variant.</p>
+        <p>
+            <img src="../../Resources/Images/Variant Manager/Bulk Copy in ROS tab.PNG" class="LargeImages" />
+        </p>
+        <h2>Reviewing inventory for specific items</h2>
+        <p>Selecting an item and clicking the <span class="Emphasis">Inventory Manager</span> button displays the selected item’s inventory in Inventory Manager. The <span class="Emphasis">Rate of Sale</span> field in the Inventory Manager Document displays the updated ROS for the specific item and site combination. </p>
+        <p class="BasicNote">If the Rate of Sale field is hidden, click <span class="Emphasis">Choose</span> and select the field from the <span class="Emphasis">Inventory Rate of Sale</span> group.</p>
+        <p>Within Inventory Manager’s <span class="Emphasis">Forecast Viewer</span> blade, click <span class="Emphasis">Forecast</span> to display the <span class="Emphasis">Forecast Task</span> dialog. The <span class="Emphasis">Forecast Task</span> dialog shows which method sets are being used. The method sets being used are highlighted in bold with a check mark. </p>
+        <p>Method sets can be updated if there are no links or locks. The linked method set can be run with items that have links on them. Filters can be mixed and matched with different method sets on different linked items and the different method sets can be run across all the items.</p>
+        <h2>Field definitions</h2>
+        <p>Most fields are read-only. Field definitions include:</p>
+        <table style="width: 100%;margin-left: auto;margin-right: auto;mc-table-style: url('../../Resources/TableStyles/standard.css');" class="TableStyle-standard" cellspacing="0">
+            <col class="TableStyle-standard-Column-Column1" />
+            <col class="TableStyle-standard-Column-Column2" />
+            <thead>
+                <tr class="TableStyle-standard-Head-Header1">
+                    <th class="TableStyle-standard-HeadE-Column1-Header1">Field</th>
+                    <th class="TableStyle-standard-HeadD-Column2-Header1">Definition</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">Variant Code</td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">A unique variant code provided by the system.</td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">Variant Description</td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">A description of the variant. The description often contains the variant’s name.</td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">Min, Max Inventory Phase In Date</td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">The Phase In Date pushed down to Inventory level. The Min and Max Inventory Phase In Dates represent the range of phase in dates for the item across all sites (provided in the Site Count column).</td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">Min, Max Inventory Phase Out Date</td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1"> The Phase Out Date pushed down to Inventory level. The Min and Max Inventory Phase Out Dates represent the range of phase out dates for the item across all sites (provided in the Site Count column).</td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">
+                     Phase In Date 
+                        </td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">The date in which the variant is first available for selling.</td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">Phase Out Date</td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">The date in which the variant is last available for selling.</td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">Apply Phase Dates To Inventory</td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">
+                       When this field is checked, the Variant Phase dates are pushed down to the Inventory level. For example, 
+                        <p><img src="../../Resources/Images/Variant Manager/Apply Phase Dates Before.PNG" class="LargeImages" /></p><p>Select the checkbox and click <span class="Emphasis">Save</span>.</p><p><img src="../../Resources/Images/Variant Manager/Apply Phase Dates After.PNG" class="LargeImages" /></p></td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">Rate Of Sale</td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">Read-only. The Rate of Sale value as selected from the ROS Calculator module.</td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">Rate Of Sale Override</td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">The user override value for the Rate of &#160;Sale.</td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">Actual Rate Of Sale</td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">
+                     Actualized rate of sale based on sales history, at an inventory level aggregated up to variant.
+                     
+                    </td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">Store Count</td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">The number of stores that variant is planning on being sold at. This gives users valuable information with regards to the unique number of sites active for a particular variant.</td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">
+                       Min Forecast Review Date 
+                        </td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">The date when the forecast was first reviewed.</td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">Max Forecast Review Date</td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">The date when the forecast was last reviewed.</td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">Method Set</td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">Based on configured method sets, users can select specific ones to view their forecasts.<p class="BasicNote">The method sets are configured in System Utilities &gt; Forecast &gt;&#160;Method Sets.</p></td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">Curve Type</td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">
+                       Either <span class="Emphasis">AI Curve</span> or <span class="Emphasis">Manual</span>. The chosen type determines whether a Curve can be selected in the <span class="Emphasis">Curve</span> field. 
+                        <p>If <span class="Emphasis">AI Curve</span> is selected, then the <span class="Emphasis">Curve</span> field is disabled as a Curve is already assigned by the system.</p><p>For more information, <MadCap:conditionalText MadCap:conditions="General.ScreenOnly">see <MadCap:xref href="../Curves/Curves Overview.htm">Curves overview</MadCap:xref>.</MadCap:conditionalText><MadCap:conditionalText MadCap:conditions="General.PrintOnly"> refer to the Curves User Guide.</MadCap:conditionalText></p></td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">Curve</td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">
+                  
+                      Based on the Curve Type selected, users can select a specific curve to use for their variant.  Click the ellipsis to display the <span class="Emphasis">Curve Selection</span> screen.
+ 
+                        <p><img src="../../Resources/Images/Variant Manager/Curve Screen in ROS Blade.PNG" class="LargeImages" /></p></td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyB-Column1-Body1">Product Models</td>
+                    <td class="TableStyle-standard-BodyA-Column2-Body1">
+                        A list of Product Models. A blade at the right of the grid allows users to adjust their product model weights if needed.<p>For more information, <MadCap:conditionalText MadCap:conditions="General.ScreenOnly">see <MadCap:xref href="../Allocations/Allocate Strategy Product Model Link tab.htm">Product models and respective weightings</MadCap:xref>.</MadCap:conditionalText><MadCap:conditionalText MadCap:conditions="General.PrintOnly"> refer to the <span class="Emphasis">Allocations User Guide</span>.</MadCap:conditionalText></p></td>
+                </tr>
+            </tbody>
+        </table>
+    </body>
+</html>

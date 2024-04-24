@@ -1,0 +1,277 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<MsWordImport
+  ImportFolder="Standard Database Server Setup"
+  PreserveMappedStyles="true"
+  LastImport="2024-02-06T09:40:07.2335835-05:00">
+  <Files>
+    <Url
+      Source="../../../../Users/JMullany/Downloads/Demand Management Standard Database Server Setup (Windows).doc.docx"
+      AbsoluteSource="file:///C:/Users/JMullany/Downloads/Demand Management Standard Database Server Setup (Windows).doc.docx" />
+  </Files>
+  <ExcludedFiles />
+  <CollectedSourceFiles />
+  <SkippedSourceFiles />
+  <GeneratedFiles>
+    <Url
+      Source="../../Content/Standard Database Server Setup/Demand Management Standard.htm"
+      TimeStamp="2024-02-06 9:39:45 AM" />
+    <Url
+      Source="../../Content/Standard Database Server Setup/Deploy and Setup in GCP.htm"
+      TimeStamp="2024-02-06 9:39:45 AM" />
+    <Url
+      Source="../../Content/Resources/Images/Demand Management Standard Database Server Setup (Windows).doc/Deploy and Setup in Azure.png"
+      TimeStamp="2024-02-06 9:39:29 AM" />
+    <Url
+      Source="../../Content/Standard Database Server Setup/Deploy and Setup in Azure.htm"
+      TimeStamp="2024-02-06 9:39:45 AM" />
+    <Url
+      Source="../../Content/Resources/Images/Demand Management Standard Database Server Setup (Windows).doc/Setup and Configuration in.png"
+      TimeStamp="2024-02-06 9:39:29 AM" />
+    <Url
+      Source="../../Content/Resources/Images/Demand Management Standard Database Server Setup (Windows).doc/Setup and Configuration in_1.png"
+      TimeStamp="2024-02-06 9:39:29 AM" />
+    <Url
+      Source="../../Content/Resources/Images/Demand Management Standard Database Server Setup (Windows).doc/Setup and Configuration in_2.png"
+      TimeStamp="2024-02-06 9:39:29 AM" />
+    <Url
+      Source="../../Content/Resources/Images/Demand Management Standard Database Server Setup (Windows).doc/Setup and Configuration in_3.png"
+      TimeStamp="2024-02-06 9:39:29 AM" />
+    <Url
+      Source="../../Content/Resources/Images/Demand Management Standard Database Server Setup (Windows).doc/Setup and Configuration in_4.png"
+      TimeStamp="2024-02-06 9:39:29 AM" />
+    <Url
+      Source="../../Content/Resources/Images/Demand Management Standard Database Server Setup (Windows).doc/Setup and Configuration in_5.png"
+      TimeStamp="2024-02-06 9:39:29 AM" />
+    <Url
+      Source="../../Content/Resources/Images/Demand Management Standard Database Server Setup (Windows).doc/Setup and Configuration in_6.png"
+      TimeStamp="2024-02-06 9:39:29 AM" />
+    <Url
+      Source="../../Content/Resources/Images/Demand Management Standard Database Server Setup (Windows).doc/Setup and Configuration in_7.png"
+      TimeStamp="2024-02-06 9:39:29 AM" />
+    <Url
+      Source="../../Content/Resources/Images/Demand Management Standard Database Server Setup (Windows).doc/Setup and Configuration in_8.png"
+      TimeStamp="2024-02-06 9:39:29 AM" />
+    <Url
+      Source="../../Content/Resources/Images/Demand Management Standard Database Server Setup (Windows).doc/Setup and Configuration in_9.png"
+      TimeStamp="2024-02-06 9:39:29 AM" />
+    <Url
+      Source="../../Content/Resources/Images/Demand Management Standard Database Server Setup (Windows).doc/Setup and Configuration in_10.png"
+      TimeStamp="2024-02-06 9:39:29 AM" />
+    <Url
+      Source="../../Content/Resources/Images/Demand Management Standard Database Server Setup (Windows).doc/Setup and Configuration in_11.png"
+      TimeStamp="2024-02-06 9:39:29 AM" />
+    <Url
+      Source="../../Content/Resources/Images/Demand Management Standard Database Server Setup (Windows).doc/Setup and Configuration in_12.png"
+      TimeStamp="2024-02-06 9:39:29 AM" />
+    <Url
+      Source="../../Content/Resources/Images/Demand Management Standard Database Server Setup (Windows).doc/Setup and Configuration in_13.png"
+      TimeStamp="2024-02-06 9:39:29 AM" />
+    <Url
+      Source="../../Content/Resources/Images/Demand Management Standard Database Server Setup (Windows).doc/Setup and Configuration in_14.png"
+      TimeStamp="2024-02-06 9:39:29 AM" />
+    <Url
+      Source="../../Content/Resources/Images/Demand Management Standard Database Server Setup (Windows).doc/Setup and Configuration in_15.png"
+      TimeStamp="2024-02-06 9:39:29 AM" />
+    <Url
+      Source="../../Content/Resources/Images/Demand Management Standard Database Server Setup (Windows).doc/Setup and Configuration in_16.png"
+      TimeStamp="2024-02-06 9:39:29 AM" />
+    <Url
+      Source="../../Content/Resources/Images/Demand Management Standard Database Server Setup (Windows).doc/Setup and Configuration in_17.png"
+      TimeStamp="2024-02-06 9:39:29 AM" />
+    <Url
+      Source="../../Content/Resources/Images/Demand Management Standard Database Server Setup (Windows).doc/Setup and Configuration in_18.png"
+      TimeStamp="2024-02-06 9:39:29 AM" />
+    <Url
+      Source="../../Content/Resources/Images/Demand Management Standard Database Server Setup (Windows).doc/Setup and Configuration in_19.png"
+      TimeStamp="2024-02-06 9:39:29 AM" />
+    <Url
+      Source="../../Content/Resources/Images/Demand Management Standard Database Server Setup (Windows).doc/Setup and Configuration in_20.png"
+      TimeStamp="2024-02-06 9:39:29 AM" />
+    <Url
+      Source="../../Content/Resources/Images/Demand Management Standard Database Server Setup (Windows).doc/Setup and Configuration in_21.png"
+      TimeStamp="2024-02-06 9:39:29 AM" />
+    <Url
+      Source="../../Content/Resources/Images/Demand Management Standard Database Server Setup (Windows).doc/Setup and Configuration in_22.png"
+      TimeStamp="2024-02-06 9:39:29 AM" />
+    <Url
+      Source="../../Content/Resources/Images/Demand Management Standard Database Server Setup (Windows).doc/Setup and Configuration in_23.png"
+      TimeStamp="2024-02-06 9:39:29 AM" />
+    <Url
+      Source="../../Content/Resources/Images/Demand Management Standard Database Server Setup (Windows).doc/Setup and Configuration in_24.png"
+      TimeStamp="2024-02-06 9:39:29 AM" />
+    <Url
+      Source="../../Content/Resources/Images/Demand Management Standard Database Server Setup (Windows).doc/Setup and Configuration in_25.png"
+      TimeStamp="2024-02-06 9:39:29 AM" />
+    <Url
+      Source="../../Content/Resources/Images/Demand Management Standard Database Server Setup (Windows).doc/Setup and Configuration in_26.png"
+      TimeStamp="2024-02-06 9:39:29 AM" />
+    <Url
+      Source="../../Content/Resources/Images/Demand Management Standard Database Server Setup (Windows).doc/Setup and Configuration in_27.png"
+      TimeStamp="2024-02-06 9:39:29 AM" />
+    <Url
+      Source="../../Content/Resources/Images/Demand Management Standard Database Server Setup (Windows).doc/Setup and Configuration in_28.png"
+      TimeStamp="2024-02-06 9:39:29 AM" />
+    <Url
+      Source="../../Content/Resources/Images/Demand Management Standard Database Server Setup (Windows).doc/Setup and Configuration in_29.png"
+      TimeStamp="2024-02-06 9:39:29 AM" />
+    <Url
+      Source="../../Content/Standard Database Server Setup/Setup and Configuration in.htm"
+      TimeStamp="2024-02-06 9:39:45 AM" />
+    <Url
+      Source="../../Content/Resources/Images/Demand Management Standard Database Server Setup (Windows).doc/Setup and Configuration for.png"
+      TimeStamp="2024-02-06 9:39:29 AM" />
+    <Url
+      Source="../../Content/Resources/Images/Demand Management Standard Database Server Setup (Windows).doc/Setup and Configuration for_1.png"
+      TimeStamp="2024-02-06 9:39:29 AM" />
+    <Url
+      Source="../../Content/Resources/Images/Demand Management Standard Database Server Setup (Windows).doc/Setup and Configuration for_2.png"
+      TimeStamp="2024-02-06 9:39:29 AM" />
+    <Url
+      Source="../../Content/Resources/Images/Demand Management Standard Database Server Setup (Windows).doc/Setup and Configuration for_3.png"
+      TimeStamp="2024-02-06 9:39:29 AM" />
+    <Url
+      Source="../../Content/Resources/Images/Demand Management Standard Database Server Setup (Windows).doc/Setup and Configuration for_4.png"
+      TimeStamp="2024-02-06 9:39:29 AM" />
+    <Url
+      Source="../../Content/Resources/Images/Demand Management Standard Database Server Setup (Windows).doc/Setup and Configuration for_5.png"
+      TimeStamp="2024-02-06 9:39:29 AM" />
+    <Url
+      Source="../../Content/Resources/Images/Demand Management Standard Database Server Setup (Windows).doc/Setup and Configuration for_6.png"
+      TimeStamp="2024-02-06 9:39:29 AM" />
+    <Url
+      Source="../../Content/Resources/Images/Demand Management Standard Database Server Setup (Windows).doc/Setup and Configuration for_7.png"
+      TimeStamp="2024-02-06 9:39:29 AM" />
+    <Url
+      Source="../../Content/Resources/Images/Demand Management Standard Database Server Setup (Windows).doc/Setup and Configuration for_8.png"
+      TimeStamp="2024-02-06 9:39:29 AM" />
+    <Url
+      Source="../../Content/Resources/Images/Demand Management Standard Database Server Setup (Windows).doc/Setup and Configuration for_9.png"
+      TimeStamp="2024-02-06 9:39:29 AM" />
+    <Url
+      Source="../../Content/Resources/Images/Demand Management Standard Database Server Setup (Windows).doc/Setup and Configuration for_10.png"
+      TimeStamp="2024-02-06 9:39:29 AM" />
+    <Url
+      Source="../../Content/Resources/Images/Demand Management Standard Database Server Setup (Windows).doc/Setup and Configuration for_11.png"
+      TimeStamp="2024-02-06 9:39:29 AM" />
+    <Url
+      Source="../../Content/Resources/Images/Demand Management Standard Database Server Setup (Windows).doc/Setup and Configuration for_12.png"
+      TimeStamp="2024-02-06 9:39:29 AM" />
+    <Url
+      Source="../../Content/Resources/Images/Demand Management Standard Database Server Setup (Windows).doc/Setup and Configuration for_13.png"
+      TimeStamp="2024-02-06 9:39:29 AM" />
+    <Url
+      Source="../../Content/Resources/Images/Demand Management Standard Database Server Setup (Windows).doc/Setup and Configuration for_14.png"
+      TimeStamp="2024-02-06 9:39:29 AM" />
+    <Url
+      Source="../../Content/Resources/Images/Demand Management Standard Database Server Setup (Windows).doc/Setup and Configuration for_15.png"
+      TimeStamp="2024-02-06 9:39:29 AM" />
+    <Url
+      Source="../../Content/Resources/Images/Demand Management Standard Database Server Setup (Windows).doc/Setup and Configuration for_16.png"
+      TimeStamp="2024-02-06 9:39:29 AM" />
+    <Url
+      Source="../../Content/Resources/Images/Demand Management Standard Database Server Setup (Windows).doc/Setup and Configuration for_17.png"
+      TimeStamp="2024-02-06 9:39:29 AM" />
+    <Url
+      Source="../../Content/Resources/Images/Demand Management Standard Database Server Setup (Windows).doc/Setup and Configuration for_18.png"
+      TimeStamp="2024-02-06 9:39:29 AM" />
+    <Url
+      Source="../../Content/Resources/Images/Demand Management Standard Database Server Setup (Windows).doc/Setup and Configuration for_19.png"
+      TimeStamp="2024-02-06 9:39:29 AM" />
+    <Url
+      Source="../../Content/Resources/Images/Demand Management Standard Database Server Setup (Windows).doc/Setup and Configuration for_20.png"
+      TimeStamp="2024-02-06 9:39:29 AM" />
+    <Url
+      Source="../../Content/Resources/Images/Demand Management Standard Database Server Setup (Windows).doc/Setup and Configuration for_21.png"
+      TimeStamp="2024-02-06 9:39:29 AM" />
+    <Url
+      Source="../../Content/Resources/Images/Demand Management Standard Database Server Setup (Windows).doc/Setup and Configuration for_22.png"
+      TimeStamp="2024-02-06 9:39:30 AM" />
+    <Url
+      Source="../../Content/Resources/Images/Demand Management Standard Database Server Setup (Windows).doc/Setup and Configuration for_23.png"
+      TimeStamp="2024-02-06 9:39:37 AM" />
+    <Url
+      Source="../../Content/Resources/Images/Demand Management Standard Database Server Setup (Windows).doc/Setup and Configuration for_24.png"
+      TimeStamp="2024-02-06 9:39:37 AM" />
+    <Url
+      Source="../../Content/Resources/Images/Demand Management Standard Database Server Setup (Windows).doc/Setup and Configuration for_25.png"
+      TimeStamp="2024-02-06 9:39:37 AM" />
+    <Url
+      Source="../../Content/Resources/Images/Demand Management Standard Database Server Setup (Windows).doc/Setup and Configuration for_26.png"
+      TimeStamp="2024-02-06 9:39:37 AM" />
+    <Url
+      Source="../../Content/Resources/Images/Demand Management Standard Database Server Setup (Windows).doc/Setup and Configuration for_27.png"
+      TimeStamp="2024-02-06 9:39:37 AM" />
+    <Url
+      Source="../../Content/Resources/Images/Demand Management Standard Database Server Setup (Windows).doc/Setup and Configuration for_28.png"
+      TimeStamp="2024-02-06 9:39:37 AM" />
+    <Url
+      Source="../../Content/Standard Database Server Setup/Setup and Configuration for.htm"
+      TimeStamp="2024-02-06 9:39:45 AM" />
+    <Url
+      Source="../../Content/Resources/Images/Demand Management Standard Database Server Setup (Windows).doc/Final Configuration Steps.png"
+      TimeStamp="2024-02-06 9:39:41 AM" />
+    <Url
+      Source="../../Content/Resources/Images/Demand Management Standard Database Server Setup (Windows).doc/Final Configuration Steps_1.png"
+      TimeStamp="2024-02-06 9:39:41 AM" />
+    <Url
+      Source="../../Content/Resources/Images/Demand Management Standard Database Server Setup (Windows).doc/Final Configuration Steps_2.png"
+      TimeStamp="2024-02-06 9:39:41 AM" />
+    <Url
+      Source="../../Content/Resources/Images/Demand Management Standard Database Server Setup (Windows).doc/Final Configuration Steps_3.png"
+      TimeStamp="2024-02-06 9:39:41 AM" />
+    <Url
+      Source="../../Content/Resources/Images/Demand Management Standard Database Server Setup (Windows).doc/Final Configuration Steps_4.png"
+      TimeStamp="2024-02-06 9:39:41 AM" />
+    <Url
+      Source="../../Content/Resources/Images/Demand Management Standard Database Server Setup (Windows).doc/Final Configuration Steps_5.png"
+      TimeStamp="2024-02-06 9:39:41 AM" />
+    <Url
+      Source="../../Content/Resources/Images/Demand Management Standard Database Server Setup (Windows).doc/Final Configuration Steps_6.png"
+      TimeStamp="2024-02-06 9:39:43 AM" />
+    <Url
+      Source="../../Content/Standard Database Server Setup/Final Configuration Steps.htm"
+      TimeStamp="2024-02-06 9:39:45 AM" />
+    <Url
+      Source="../TOCs/Demand Management Standard Database Server Setup (Windows).doc.fltoc"
+      TimeStamp="2024-02-06 9:39:45 AM" />
+    <Url
+      Source="../../Content/Resources/Stylesheets/Demand Management Standard Database Server Setup (Windows).doc.css"
+      TimeStamp="2024-02-06 9:39:45 AM" />
+  </GeneratedFiles>
+  <ParagraphStyles>
+    <Map
+      From="Heading 1"
+      To="h1.Heading1"
+      Style="Word" />
+    <Map
+      From="Heading 2"
+      To="h2.Heading2"
+      Style="Word" />
+    <Map
+      From="Heading 3"
+      To="h3.Heading3"
+      Style="Word" />
+    <Map
+      From="Heading 4"
+      To="h4.Heading4"
+      Style="Word" />
+    <Map
+      From="media-group"
+      To="p.media-group"
+      Style="Word" />
+  </ParagraphStyles>
+  <CharacterStyles>
+    <Map
+      From="Emphasis"
+      To="span.Emphasis"
+      Style="Word" />
+    <Map
+      From="Strong"
+      To="span.Strong"
+      Style="Word" />
+  </CharacterStyles>
+  <NewTopicStyles>
+    <StyleName
+      Name="Heading 1" />
+  </NewTopicStyles>
+</MsWordImport>

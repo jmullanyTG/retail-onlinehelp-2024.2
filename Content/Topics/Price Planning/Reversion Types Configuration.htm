@@ -1,0 +1,54 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head>
+        <link href="../../Resources/TableStyles/standard.css" rel="stylesheet" MadCap:stylesheetType="table" />
+    </head>
+    <body>
+        <h1>Price reversion types </h1>
+        <p>System Administrators can use the <span class="Emphasis">Reversion Types</span> tab to configure Reversion Type profiles. These profiles are then used to create Price Actions that revert prices to a previous state. Selecting the type during the Price Reversion process determines the Price Strategy, Workflow, and the Price Type used to populate the System Input variable in the Reversion Price Action.</p>
+        <p class="BasicNote">The Price Types are limited by system policy <span class="Emphasis">Price Reversion Allowed Price Types</span>.</p>
+        <p>
+            <img src="../../Resources/Images/Price Planning/Price Reversion Types.PNG" class="LargeImages" />
+        </p>
+        <h2>Creating Reversion Types</h2>
+        <p>Within the <span class="Emphasis">Reversion Types</span> tab, users can:</p>
+        <ul>
+            <li>click <span class="Emphasis">New</span> to create a Reversion Type directly in the grid</li>
+            <li> select Reversion Types and delete them. </li>
+        </ul>
+        <h2>Reversion Types tab: fields and descriptions</h2>
+        <p>The following fields are all required.</p>
+        <table style="width: 100%;margin-left: 0;margin-right: auto;mc-table-style: url('../../Resources/TableStyles/standard.css');" class="TableStyle-standard" cellspacing="0">
+            <col class="TableStyle-standard-Column-Column1" />
+            <col class="TableStyle-standard-Column-Column2" />
+            <thead>
+                <tr class="TableStyle-standard-Head-Header1">
+                    <th class="TableStyle-standard-HeadE-Column1-Header1">Field</th>
+                    <th class="TableStyle-standard-HeadD-Column2-Header1">Description</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">Reversion Name</td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">A unique name for the Reversion Price Action.</td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">Reversion Description</td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">A description of the Reversion Price Action.</td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">Source Price Type</td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">Price Type from which the previous value will be derived.</td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">Price Method</td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">Price Strategy to be used for the reversion.</td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyB-Column1-Body1">Workflow</td>
+                    <td class="TableStyle-standard-BodyA-Column2-Body1">The Workflow to be used to create the Reversion Price Action.</td>
+                </tr>
+            </tbody>
+        </table>
+    </body>
+</html>

@@ -1,0 +1,49 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head>
+    </head>
+    <body>
+        <h1> Setting attribute properties for Variant and VariantPlaceholder entity types</h1>
+        <p>The <span class="Emphasis">Attribute Defaults</span> view is used to set and clear default attribute values. </p>
+        <p>
+            <img src="../../Resources/Images/Assortment Planning/Attribute Defaults Supporting View.PNG" class="LargeImages" />
+        </p>
+        <p class="BasicNote">Use <span class="Emphasis">Configuration &gt;&#160;View Maintenance</span> to add the <span class="Emphasis">Attribute Defaults</span> view to the <span class="Emphasis">View Selection</span> dropdown menu.</p>
+        <p>The following can be defined:</p>
+        <ul>
+            <li>
+                <p>
+                    <span class="Emphasis">Lead Time Days</span> (in days). Provides an updated Order By Date for all orders, not only the first. This is for reference only and does not actually move the order date.</p>
+                <p>The currently defined lead time displays in the <span class="Emphasis">Default Lead Days</span> field in the Assortment Planning main planning view. Once an additional lead time is set, the <span class="Emphasis">Assortment Upcoming Commitments Dashboard Report</span> shows an updated Order Date, Due Date, and Is Past Due? date. The <span class="Emphasis">Receipt Plan</span> view displays an updated Order By Date.</p>
+                <p>Where there is a lead time for a product hierarchy (for example 7, 10, or 14 days) there may be products such as Promotions within that hierarchy that require additional lead times. These exceptions may need to arrive earlier so instead of 7 days they should arrive 10 days earlier. Additional lead times are defined using the <span class="Emphasis">Attribute Defaults</span> view.</p>
+                <p>The system first looks for an attribute-set default lead time, then a hierarchy set lead time, then the system policy.</p>
+            </li>
+            <li>
+                <p>
+                    <span class="Emphasis">Periods Before Phase In</span> (by periods). For the first order only, affects the first delivery and moves the order date forward in the receipt plan. </p>
+                <p>Periods Before Phase In is editable within the <span class="Emphasis">Assortment Receipt Plan Constraints</span> section within the <span class="Emphasis">Receipt Plan</span> view,<span class="Emphasis"> Assortment Plan Defaults By Cluster</span> view, and <span class="Emphasis">Assortment Plan Defaults</span> view.</p>
+                <p>The last-in value between a user override from the <span class="Emphasis">Assortment Receipt Plan Constraints</span> section and  a user change in the Attribute Default view takes priority. The new attribute default will only show the updated Periods Before Phase In value after receipt recalculation, and only updates placeholders that have not phased in yet.</p>
+                <p>The system first looks for an attribute-set default (Variant), then an attribute-set default (Placeholder), then a hierarchy cluster default, then a hierarchy default, and then the system policy.</p>
+            </li>
+        </ul>
+        <p>Both <span class="Emphasis">Lead Time Days</span> and <span class="Emphasis">Periods before Phase In</span> can be set at both the Variant and VariantPlaceholder levels. This allows the same attribute to have different times assigned depending if a Placeholder is in Placeholder status or Variant status.
+
+If the same lead time is desired for both, then define against both entity types in the dropdown in the <span class="Emphasis">Attribute Defaults</span> view.
+</p>
+        <p>
+It is important to be aware which entity type has been selected when using the <span class="Emphasis">Attribute Defaults</span> view.</p>
+        <p>As an additional lead time and Periods Before Phase In can be defined for any attribute, the attribute to be updated needs to be identified. This is done by noting the Attribute ID in the <span class="Emphasis">Attribute ID</span> field and setting the system policy <span class="Emphasis">AttributeID to determine which default values to apply</span> with that Attribute ID.</p>
+        <p class="BasicNote">The attributes are maintained using the <span class="Emphasis">Attributes Management</span> view. <MadCap:conditionalText MadCap:conditions="General.ScreenOnly">For more information, refer to <MadCap:xref href="../Attribute Management/Attribute Management Overview.htm">Attribute management and assignment overview</MadCap:xref>.</MadCap:conditionalText><MadCap:conditionalText MadCap:conditions="General.PrintOnly"> Refer to the Attribute Management User Guide. </MadCap:conditionalText></p>
+        <h2>Setting a default value for an attribute</h2>
+        <ol>
+            <li>Select the plan in the <span class="Emphasis">Assortment Plan</span> field.</li>
+            <li>Choose the entity type in the <span class="Emphasis">Entity Type</span> field.</li>
+            <li>Select an attribute and click <span class="Emphasis">New</span>.</li>
+            <li>Click the dropdown arrow in the <span class="Emphasis">Lookup&#160;Value</span> field and select a value.</li>
+            <li>Enter a value in the <span class="Emphasis">Lead Time Days</span> or <span class="Emphasis">Periods before Phase In</span> field as required.</li>
+            <li>Click <span class="Emphasis">Save</span>.</li>
+            <li>Note the Attribute ID in the <span class="Emphasis">Attribute ID</span> field.</li>
+            <li>Set the system policy <span class="Emphasis">AttributeID to determine which default values to apply</span> with that Attribute ID.</li>
+        </ol>
+    </body>
+</html>

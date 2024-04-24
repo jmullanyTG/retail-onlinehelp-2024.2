@@ -1,0 +1,157 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" xml:lang="en-us">
+    <head>
+        <link href="../../Resources/TableStyles/standard.css" rel="stylesheet" MadCap:stylesheetType="table" /><title></title>
+    </head>
+    <body>
+        <h1>Planning VAT rates</h1>
+        <p>Some countries include a sales tax in the actual ticket prices of products sold. Others calculate it as a percent of the selling price during sales transactions. This tax is known as value added tax (VAT). In this view, VAT rates are managed at any level of any defined product hierarchy and for Site Groups 1-20, as defined during implementation.</p>
+        <p class="BasicNote">All home ticket prices (Home AUT) within Assortment Planning are assumed to be inclusive of the Home Site’s VAT, and all blended ticket prices (Blended AUT) are assumed to be inclusive of the VAT of each site in the cluster, unless otherwise noted by an ex VAT descriptor in the metric name.</p>
+        <p class="Important">Even if VAT does not apply, a VAT rate of zero must be assigned to the highest level of all product hierarchies to be used in assortment plans. Because Site Groups are not explicitly tied to site hierarchies, this zero rate may need to be entered for more than the highest level Site Group, depending on how the groups are defined.</p>
+        <p>This screen can be accessed by navigating to <span class="Emphasis">System Utilities &gt; Views &gt; Maintenance &gt; Planning VAT Rate</span>.</p>
+        <p>
+            <img src="../../Resources/Images/Currency and VAT Management/Planning VAT Rates.png" class="LargeImages" />
+        </p>
+        <h2>Parameters</h2>
+        <table style="width: 100%;margin-left: auto;margin-right: auto;mc-table-style: url('../../Resources/TableStyles/standard.css');" class="TableStyle-standard" cellspacing="0">
+            <col class="TableStyle-standard-Column-Column1" />
+            <col class="TableStyle-standard-Column-Column2" />
+            <thead>
+                <tr class="TableStyle-standard-Head-Header1">
+                    <th class="TableStyle-standard-HeadE-Column1-Header1">Field</th>
+                    <th class="TableStyle-standard-HeadD-Column2-Header1">Description</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1"><span class="Emphasis">Product Hierarchy</span>
+                    </td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">The product hierarchy for which VAT rates will be managed.</td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1"><span class="Emphasis">Hierarchy Level</span>
+                    </td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">
+                         The specific level of the selected Product Hierarchy for which VAT rates will be managed.
+                        <p class="BasicNote">Changes entered for higher levels of the product hierarchy push down to the levels beneath.</p><p class="BasicNote">For higher hierarchy levels with multiple VAT rates assigned to the levels beneath, VAT rate displays a straight average of the rates for those levels. Bold italic formatting as shown below is applied to make cases where this is true easily identifiable to users.</p></td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1"><span class="Emphasis">Site Group</span>
+                    </td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">
+                         The Site Group level (1-20) for which to display and work with VAT rates in the view.
+                        <p class="BasicNote">Changes entered for site groups corresponding to higher levels of the site hierarchy will be pushed down to lower level site groups.</p><p class="BasicNote">For higher level site groups with multiple VAT Rates assigned to the levels beneath, VAT Rate displays a straight average of the rates for those levels. Bold italic formatting is used to indicate this. </p></td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1"><span class="Emphasis">Start Date</span>
+                    </td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">The start of the time frame for which to display VAT rates in the view.</td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyB-Column1-Body1"><span class="Emphasis">End Date</span>
+                    </td>
+                    <td class="TableStyle-standard-BodyA-Column2-Body1">The end of the time frame for which to display VAT rates in the view.</td>
+                </tr>
+            </tbody>
+        </table>
+        <h2>Toolbar buttons</h2>
+        <table style="width: 100%;margin-left: auto;margin-right: auto;mc-table-style: url('../../Resources/TableStyles/standard.css');" class="TableStyle-standard" cellspacing="0">
+            <col class="TableStyle-standard-Column-Column1" />
+            <col class="TableStyle-standard-Column-Column2" />
+            <thead>
+                <tr class="TableStyle-standard-Head-Header1">
+                    <th class="TableStyle-standard-HeadE-Column1-Header1">Button</th>
+                    <th class="TableStyle-standard-HeadD-Column2-Header1">Description</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1"><span class="Emphasis">Parameters</span>
+                    </td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">Toggles between displaying and hiding the <span class="Emphasis">Parameters</span> area of the view</td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyB-Column1-Body1"><span class="Emphasis">Execute</span>
+                    </td>
+                    <td class="TableStyle-standard-BodyA-Column2-Body1">
+                       Updates the view with all defined VAT rate entries for the intersection of the selected Hierarchy Level, Site Group, and time frame.
+                        <p class="BasicNote">All entries overlapping any portion of the time frame specified by the start- and end dates display in the view.</p></td>
+                </tr>
+            </tbody>
+        </table>
+        <h2>Planning VAT Rates tab</h2>
+        <h3>Saving or restoring custom layouts</h3>
+        <p>Custom layouts can be saved or restored by right-clicking in the Pivot Grid and selecting Save Layout or Restore Layout, respectively.</p>
+        <h3>Start dates and end dates</h3>
+        <p>The latest line for a given product level’s VAT rate always defaults to the end of the system time line (currently Dec 31, 2999) to always provide an active VAT rate for system calculations. When adding a new VAT&#160;rate line and setting a new VAT rate, the previous line changes its End Date automatically to just before the new line’s time frame begins.</p>
+        <p class="Example">The End Date for a line is currently Dec. 31, 2999. A new line has a start date of June 1, 2023 and an end date of Dec 31, 2023. The previous line’s End Date changes from Dec. 31, 2999 to May 31, 2023. The new line begins on June 1, 2023 as entered but its End Date changes to Dec 31, 2999 to provide VAT rates through the future.</p>
+        <h3>Site group columns</h3>
+        <p>The columns shown depends on the levels that exist within the selected Site Group.</p>
+        <table style="width: 100%;margin-left: auto;margin-right: auto;mc-table-style: url('../../Resources/TableStyles/standard.css');" class="TableStyle-standard" cellspacing="0">
+            <col class="TableStyle-standard-Column-Column1" />
+            <col class="TableStyle-standard-Column-Column2" />
+            <thead>
+                <tr class="TableStyle-standard-Head-Header1">
+                    <th class="TableStyle-standard-HeadE-Column1-Header1">Column</th>
+                    <th class="TableStyle-standard-HeadD-Column2-Header1">Description</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1"><span class="Emphasis">VAT Rate</span>
+                    </td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">User editable decimal (0.0001) (non-editable for saved lines). Sets the VAT rate for the specified product level and time frame.</td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyB-Column1-Body1"><span class="Emphasis">Site Count</span>
+                    </td>
+                    <td class="TableStyle-standard-BodyA-Column2-Body1">
+                        <p>(read-only). Displays the number of sites to which the VAT rate is applied. Updates after <span class="Emphasis">Save</span> is clicked for new lines.</p>
+                        <p>VAT rates cannot be set for newly entered lines until they have first been saved. </p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <h3>Toolbar buttons</h3>
+        <table style="width: 100%;margin-left: auto;margin-right: auto;mc-table-style: url('../../Resources/TableStyles/standard.css');" class="TableStyle-standard" cellspacing="0">
+            <col class="TableStyle-standard-Column-Column1" />
+            <col class="TableStyle-standard-Column-Column2" />
+            <thead>
+                <tr class="TableStyle-standard-Head-Header1">
+                    <th class="TableStyle-standard-HeadE-Column1-Header1">Button</th>
+                    <th class="TableStyle-standard-HeadD-Column2-Header1">Description</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1"><span class="Emphasis">New</span>
+                    </td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">Adds a new VAT rate line to the current view.</td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1"><span class="Emphasis">Delete</span>
+                    </td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">
+                        <p>Removes the selected VAT rate lines from the current view.</p>
+                        <p class="Caution">There is no pop-up message requesting confirmation of deletion of VAT Rate lines.</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1"><span class="Emphasis">Fields</span>
+                    </td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">Opens the <span class="Emphasis">Customization</span> dialog in which users can drag fields to or from the tab’s header area and the dialog to customize the view.</td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1"><span class="Emphasis">Save</span>
+                    </td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">Saves all new VAT Rate lines and deletions of existing VAT rate lines.</td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyB-Column1-Body1"><span class="Emphasis">Cancel</span>
+                    </td>
+                    <td class="TableStyle-standard-BodyA-Column2-Body1">Removes all new VAT Rate lines and undoes the deletion of existing VAT rate lines.</td>
+                </tr>
+            </tbody>
+        </table>
+    </body>
+</html>

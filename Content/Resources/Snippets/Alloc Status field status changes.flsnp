@@ -1,0 +1,38 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head>
+    </head>
+    <body>
+        <p>The <span class="Emphasis">Alloc Status</span> field in AP cycles through <span class="Emphasis">Clean</span>, <span class="Emphasis">Dirty</span>, <span class="Emphasis">Queued</span>, and <span class="Emphasis">Processing</span>, to indicate whether changes to the AP plan need to be pushed to allocation strategies.  The following actions cause the Status to become <span class="Emphasis">Dirty</span>:</p>
+        <ul>
+            <li>
+                <p>Setting the placeholder Status to Allocation
+</p>
+            </li>
+            <li>
+                <p>
+Changing phase dates or markdown date
+
+</p>
+            </li>
+            <li>
+                <p>Changing Total Sales or ROS
+</p>
+            </li>
+            <li>
+                <p>
+Changing Min Pres
+</p>
+            </li>
+            <li>
+                <p>
+Changing site exclusions
+</p>
+            </li>
+            <li>
+                <p>
+Changing cluster set / cluster assortments</p>
+            </li>
+        </ul>
+    </body>
+</html>

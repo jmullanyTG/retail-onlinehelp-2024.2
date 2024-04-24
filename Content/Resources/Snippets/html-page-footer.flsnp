@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head>
+        <!--The social media links in the footer use Font Awesome. The script on line 7 calls the Font Awesome script. The <i> tags in the list items call the Font Awesome characters at page load time.-->
+    </head>
+    <body>
+        <script src="https://use.fontawesome.com/6fd8c5ba33.js">
+        </script>
+        <div class="fusion-footer">
+            <p>© Copyright <MadCap:variable name="Variables.Current_Year" /> ToolsGroup | All Rights Reserved</p>
+            <ul>
+                <li><a href="https://twitter.com/toolsgroup" target="_blank" title="Twitter" alt="Twitter"><i class="fa fa-twitter" aria-hidden="true"></i></a>
+                </li>
+                <li><a href="https://www.linkedin.com/company/toolsgroup" target="_blank" title="LinkedIn" alt="LinkedIn"><i class="fa fa-linkedin" aria-hidden="true"></i></a>
+                </li>
+            </ul>
+        </div>
+    </body>
+</html>

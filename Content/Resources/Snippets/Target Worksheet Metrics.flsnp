@@ -1,0 +1,474 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head>
+        <link href="../TableStyles/standard.css" rel="stylesheet" MadCap:stylesheetType="table" />
+    </head>
+    <body>
+        <h2>Pivot fields</h2>
+        <ul>
+            <li><span class="Emphasis">Segment</span>: The corresponding segment Name; one section per segment defined in Target Segment Definitions. </li>
+            <li><span class="Emphasis">Location descriptions</span>: The columns returned depend on the system policy for Site Aggregation Level. <ul><li>If the policy is set to Cluster, or the scenario is being viewed within Assortment Planning:<ul><li><span class="Emphasis">Cluster Set</span>: The corresponding Cluster Set name</li><li><span class="Emphasis">Cluster</span>: One row per Cluster contained within each Cluster Set assigned to each Segment</li></ul></li><li>If the policy is set to Level<ul><li><span class="Emphasis">Site Level Code</span>: The hierarchy code associated with the site level</li><li><span class="Emphasis">Site Level Description</span>: The hierarchy description associated with the site level</li></ul></li><li>If the policy is set to Site<ul><li><span class="Emphasis">Site Code</span>: The code associated with the site</li><li><span class="Emphasis">Site Name</span>: The name of the site</li></ul></li></ul></li>
+        </ul>
+        <h2>Metrics</h2>
+        <p>The following describes the metrics available in the Target Worksheet, how they are populated, and how they aggregate when manipulating the grid, and other information about them.</p>
+        <h3>Metric Group Definitions</h3>
+        <p>Data metrics in Target Worksheet belong to groups.  For example, the metric “Comparison Active Sales U” belongs to the group “Comparison Active,” and the metric “TY C/O Promo AUR” belongs to the group “TY C/O Promo.”  The following describes the source of the data for each metric group:</p>
+        <ul>
+            <li>
+                <p><span class="Emphasis">Comparison</span> - these are metrics related to historical data as defined by: the segment’s Target Filter (or hierarchy definition, if the segment was created with the Segment By Hierarchy action), location selection, and Comparison Time Frame (which defaults to LY of the Scenario Window of Time)</p>
+                <ul>
+                    <li>
+                        <p><span class="Emphasis">Comparison Reg</span> - this is the subset of Comparison historical sales data comprised of the Regular and Supersession Regular sales types.  This field will be 0 if these sales types are not included in the scenario definition.</p>
+                    </li>
+                    <li>
+                        <p><span class="Emphasis">Comparison Promo</span> - this is the subset of Comparison historical sales data comprised of the Promo and Supersession Promo sales types.  This field will be 0 if these sales types are not included in the scenario definition.</p>
+                    </li>
+                    <li>
+                        <p><span class="Emphasis">Comparison Markdown</span> - this is the subset of Comparison historical sales data comprised of the Markdown and Supersession Markdown sales types.  This field will be 0 if these sales types are not included in the scenario definition.</p>
+                    </li>
+                    <li>
+                        <p><span class="Emphasis">Comparison Other</span> - this is the subset of Comparison historical sales data comprised of sales types that are not a part of the standard sales types of Regular, Supersession Regular, Markdown, Supersession Markdown, Promotion, or Supersession Promotion. This means that disaster-modeled sales types are included in Other, as well as any custom sales types.” This field is 0 if these sales types are not included in the scenario definition.</p>
+                    </li>
+                </ul>
+            </li>
+            <li>
+                <p><span class="Emphasis">Comparison Active</span> - these are metrics that are calculated through the data cleansing process.  Comparison data is the starting point, and then deseasonalization and cleansing occurs.  The sales that pass all validations are considered Active.</p>
+            </li>
+        </ul>
+        <p class="BasicNote">Through the following definitions, the abbreviation <span class="Emphasis">TY</span> stands for the phrase “this year,” but it more accurately is summarized as representing the period of time chosen in the Scenario Window of Time.</p>
+        <ul>
+            <li><span class="Emphasis">TY Plan</span> - these values serve as a starting point estimation for creating target values.  Sales $/U are calculated as the Scenario Target value multiplied by the Target % Contribution value.  The value is inclusive of Carryover.</li>
+            <li><span class="Emphasis">TY C/O</span> - if viewing a scenario in Assortment Planning, then Carryover represents ongoing data already planned in non-Open-status placeholders for the selected Target Filter, cluster selection, and Window of Time.  If the scenario is viewed in the standalone Target Choice Counts module, then these are values from forecasts for the selected Target Filter, location selection, and Window of Time.<ul><li><p><span class="Emphasis">TY C/O Reg</span> - this value is only accessible in Assortment Planning scenarios - these values show data for ongoing carryover items that are not on markdown or on promotion</p></li><li><p><span class="Emphasis">TY C/O Promo</span> - this value is only accessible in Assortment Planning scenarios - these values show data for ongoing carryover items that are on promotion but not on markdown</p></li><li><p><span class="Emphasis">TY C/O Markdown</span> - this value is only accessible in Assortment Planning scenarios - these values show data for ongoing carryover items that are on markdown</p></li></ul></li>
+            <li>
+                <p><span class="Emphasis">TY New Item</span> - these values show the difference between TY Plan and TY C/O.  THey are directly comparable to the TY Act New metrics.</p>
+            </li>
+            <li>
+                <p><span class="Emphasis">TY Recommended New</span> - these values show the output of the Rationalization process.</p>
+            </li>
+            <li>
+                <p><span class="Emphasis">TY Act New</span> - these values default to the same as TY New Item upon calculation, but they can be modified in the application.  These values do not need to tie back to 100% of the Scenario Target or TY Plan Sales values.  The TY Act New Choices metric defaults to TY Recommended New Choices upon completion of Rationalization, but the value can be changed.  The values shown in TY Act New is broken down in the Target New Choices data grid, using the TY Act New Choices value to determine how many rows there are, and the Sales values are broken down across the choices.</p>
+            </li>
+        </ul>
+        <h2>Constrained Recommended Choice Count</h2>
+        <p>The <span class="Emphasis">TY Constrained Recommended New Choices</span> field shows the recommended choice count after it has been through cluster constraining as configured in the <span class="Emphasis">Target Item Master Group Cluster Configuration</span> screen.  If the constrained choice count differs from the recommended choice count, the text is formatted blue. </p>
+        <p>
+            <img src="../Images/Target Choice Count/Constrained Recommended Choice Count.png" class="LargeImages" />
+        </p>
+        <p>If a user changes the choices further, the text is formatted blue if the value is increased and red if the value is decreased.</p>
+        <p>User-entered override choice count values are not included by the constrained logic. Cluster constraints are applied against system recommended choice counts. If using user-overrides, all clusters must be revised by the user as desired.</p>
+        <p class="BasicNote">For more information on constraining Clusters and Cluster Sets, see <MadCap:xref href="../../Topics/Target Choice Count/Target Choice Count Cluster Configuration.htm">Target Choice Count Cluster Configuration</MadCap:xref>.</p>
+        <h2>Metric calculations and behaviors</h2>
+        <p>The following grid describes the calculations for the various metrics represented in each group.</p>
+        <table style="mc-table-style: url('../TableStyles/standard.css');margin-left: auto;margin-right: auto;width: 99%;" class="TableStyle-standard" cellspacing="0">
+            <col class="TableStyle-standard-Column-Column1" style="width: 10%;" />
+            <col class="TableStyle-standard-Column-Column2" style="width: 50%;" />
+            <col class="TableStyle-standard-Column-Column1" style="width: 40%;" />
+            <thead>
+                <tr class="TableStyle-standard-Head-Header1">
+                    <th class="TableStyle-standard-HeadE-Column1-Header1">Metric</th>
+                    <th class="TableStyle-standard-HeadE-Column2-Header1">Description</th>
+                    <th class="TableStyle-standard-HeadD-Column1-Header1">Aggregation</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">
+                        Sales U
+                    </td>
+                    <td class="TableStyle-standard-BodyE-Column2-Body1">
+                        Sales units for the metric group
+                    </td>
+                    <td class="TableStyle-standard-BodyD-Column1-Body1">
+                        SUM
+                    </td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">
+                        Sales $
+                    </td>
+                    <td class="TableStyle-standard-BodyE-Column2-Body1">
+                        Sales revenue for the metric group
+                    </td>
+                    <td class="TableStyle-standard-BodyD-Column1-Body1">
+                        SUM
+                    </td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">
+                        AUR
+                    </td>
+                    <td class="TableStyle-standard-BodyE-Column2-Body1">
+                        Sales $ / Sales U
+                    </td>
+                    <td class="TableStyle-standard-BodyD-Column1-Body1">
+                        SUM(Sales $) / SUM(Sales U)
+                    </td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">
+                        Choices
+                    </td>
+                    <td class="TableStyle-standard-BodyE-Column2-Body1">
+                        Number of variants or placeholders selling in the group
+                    </td>
+                    <td class="TableStyle-standard-BodyD-Column1-Body1">
+                        SUM across segments, AVERAGE across locations
+                    </td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">
+                        Productivity
+                    </td>
+                    <td class="TableStyle-standard-BodyE-Column2-Body1">
+                        Sales $ / Choices
+                    </td>
+                    <td class="TableStyle-standard-BodyD-Column1-Body1">
+                        SUM(Sales $) / AGG(Choices)
+                    </td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">
+                        ROS U
+                    </td>
+                    <td class="TableStyle-standard-BodyE-Column2-Body1">
+                        Sales U / Choices / Period Count / Site Count
+                    </td>
+                    <td class="TableStyle-standard-BodyD-Column1-Body1">
+                        SUM(Sales U) / AGG(Choices) / Period Count / AGG(Site Count)
+                    </td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">
+                        ROS $
+                    </td>
+                    <td class="TableStyle-standard-BodyE-Column2-Body1">
+                        Sales $ / Choices / Period Count / Site Count
+                    </td>
+                    <td class="TableStyle-standard-BodyD-Column1-Body1">
+                        SUM(Sales $) / AGG(Choices) / Period Count / AGG(Site Count)
+                    </td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">
+                        Receipt Cost $
+                    </td>
+                    <td class="TableStyle-standard-BodyE-Column2-Body1">
+                        Comparison Receipt AUC * Sales U
+                    </td>
+                    <td class="TableStyle-standard-BodyD-Column1-Body1">
+                        SUM
+                    </td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">
+                        Margin $
+                    </td>
+                    <td class="TableStyle-standard-BodyE-Column2-Body1">
+                        AUR - Comparison Receipt AUC
+                    </td>
+                    <td class="TableStyle-standard-BodyD-Column1-Body1">
+                        SUM
+                    </td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">
+                        Margin %
+                    </td>
+                    <td class="TableStyle-standard-BodyE-Column2-Body1">
+                        (AUR - Comparison Receipt AUC) / AUR
+                    </td>
+                    <td class="TableStyle-standard-BodyD-Column1-Body1">
+                        SUM(Margin $) / AGG(AUR)
+                    </td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">
+                        Period Count
+                    </td>
+                    <td class="TableStyle-standard-BodyE-Column2-Body1">
+                         Comparison Period Count = number of periods specified by the segment’s Comparison Period selection 
+                        <p>TY Plan Period Count = number of periods specified by the scenario’s Window of Time selection</p></td>
+                    <td class="TableStyle-standard-BodyD-Column1-Body1">
+                        MAX
+                    </td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyB-Column1-Body1">
+                        Site Count
+                    </td>
+                    <td class="TableStyle-standard-BodyB-Column2-Body1">
+                         In using the “Site” setting for the Site Aggregation Level system policy setting, the value will always be 1. 
+                        <p>If using the “Level” setting, the value will be the count of sites in the site hierarchy level.</p><p> If using the “Cluster” setting in standalone Target Choice Counts, the value will be the count of sites in the cluster set snapshot active at time of calculation.</p><p>If using an Assortment Planning scenario, the two site count metrics will be different.&#160; The Comparison Site Count will be the average of snapshots from the comparison time period (regardless of the somewhat related Use Comparison Cluster Set Snapshots for Comparison Data system policy setting).&#160; TY Plan Site Count is the average of snapshots per period during the scenario Window of Time.</p></td>
+                    <td class="TableStyle-standard-BodyA-Column1-Body1">
+                        SUM across locations, AVERAGE across segments
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <ul>
+            <li><span class="Emphasis">Target S/T %</span>: (Sales + Min Pres) / Stock</li>
+            <li>
+                <p><span class="Emphasis">Min Pres</span>: The initial value for Min Pres is seeded from Hierarchy Defaults in AP mode. In standalone mode, the values do not seed.  Only the hierarchy default is used and not the one by cluster or time.</p>
+                <p>The editability of <span class="Emphasis">Min Pres</span> within the Target Worksheet supports setting various targets by Cluster Set/Cluster. For example,</p>
+                <ul>
+                    <li>
+                        <p>Min Pres for Retail A should be 12, and </p>
+                    </li>
+                    <li>
+                        <p>Min Pres for Retail B should be 10.</p>
+                    </li>
+                </ul>
+            </li>
+        </ul>
+        <p>The following read-only metrics are an aggregate for all new styles:</p>
+        <ul>
+            <li>
+                <p><span class="Emphasis">Approx Stock Units (S/T %)</span>: TY Act New Sales Units / Target Sell Through %</p>
+            </li>
+            <li>
+                <p><span class="Emphasis">Approx Stock Units By Site (S/T %)</span>: Approx Stock Units (S/T%) / TY Plan Site Count</p>
+            </li>
+            <li>
+                <p><span class="Emphasis">Avg Approx Stock Units By Choice By Site (S/T %)</span>: Approx Stock Units (S/T%) / TY Plan Site Count / TY Act New Choices</p>
+            </li>
+            <li>
+                <p><span class="Emphasis">Approx Stock Units (Min Pres)</span>: TY Act New Sales Units + (TY Plan Site Count * Min Pres)</p>
+            </li>
+            <li>
+                <p><span class="Emphasis">Approx Stock Units By Site (Min Pres)</span>: Approx Stock Units (Min Pres) / TY Plan Site Count</p>
+            </li>
+            <li>
+                <p><span class="Emphasis">Sales To Approx Stock Units (Min Pres)</span>: TY Act New Sales Units / Approx Stock Units (Min Pres)</p>
+            </li>
+            <li>
+                <p><span class="Emphasis">Avg Approx Stock Units By Choice By Site (Min Pres)</span>: Approx Stock Units (Min Pres) / TY Plan Site Count / TY Act New Choices</p>
+            </li>
+        </ul>
+        <p>The following grid describes the calculations for the metrics that only appear once in the Target Worksheet.</p>
+        <table style="mc-table-style: url('../TableStyles/standard.css');margin-left: auto;margin-right: auto;width: 99%;" class="TableStyle-standard" cellspacing="0">
+            <col class="TableStyle-standard-Column-Column1" style="width: 10%;" />
+            <col class="TableStyle-standard-Column-Column2" style="width: 50%;" />
+            <col class="TableStyle-standard-Column-Column1" style="width: 40%;" />
+            <thead>
+                <tr class="TableStyle-standard-Head-Header1">
+                    <th class="TableStyle-standard-HeadE-Column1-Header1">Metric</th>
+                    <th class="TableStyle-standard-HeadE-Column2-Header1">Description</th>
+                    <th class="TableStyle-standard-HeadD-Column1-Header1">Aggregation</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">
+                        Target % Contribution
+                    </td>
+                    <td class="TableStyle-standard-BodyE-Column2-Body1">
+                         This metric is plannable.&#160; The default values are calculated as: 
+                        <p>If Plan Basis is NOT set and/or segments are manually created: Comparison Active Sales ($ or U depending on Sales Basis) / total scenario Comparison Active Sales ($ or U).</p><p>If Plan Basis is set and segments are NOT manually created: [Comparison Active Sales ($ or U) / total Comparison Active Sales ($ or U) for the segment and site hierarchy level] * [MFP Sales Target ($ or U) for the product and site hierarchy levels / total scenario MFP Sales Target ($ or U)]</p><p>Note: The sum of the values in this column do not have to equal 100%.</p></td>
+                    <td class="TableStyle-standard-BodyD-Column1-Body1">
+                        SUM
+                    </td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">
+                        Comparison Receipt AUC $
+                    </td>
+                    <td class="TableStyle-standard-BodyE-Column2-Body1">
+                        Average Receipt AUC for the Comparison period of time.&#160; In Assortment Planning scenarios, this value is the default for new placeholders’ Receipt AUC value upon Smart Start generation.
+                    </td>
+                    <td class="TableStyle-standard-BodyD-Column1-Body1">
+                        SUM(Comparison Receipt Cost) / SUM(Comparison Sales U)
+                    </td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">
+                        Comparison % Active Choice Sales
+                    </td>
+                    <td class="TableStyle-standard-BodyE-Column2-Body1">
+                        Comparison Active Sales $ / Comparison Sales $
+                    </td>
+                    <td class="TableStyle-standard-BodyD-Column1-Body1">
+                        SUM(Comparison Active Sales $) / SUM(Comparison Sales $)
+                    </td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">
+                        Comparison % Active Choices
+                    </td>
+                    <td class="TableStyle-standard-BodyE-Column2-Body1">
+                        Comparison Active Choices / Comparison Total Choices
+                    </td>
+                    <td class="TableStyle-standard-BodyD-Column1-Body1">
+                        AGG(Comparison Active Choices) / AGG(Comparison Total Choices)
+                    </td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">
+                        Average Active Periods Per Variant
+                    </td>
+                    <td class="TableStyle-standard-BodyE-Column2-Body1">
+                        The average number of selling periods per active choice in Comparison Active data
+                    </td>
+                    <td class="TableStyle-standard-BodyD-Column1-Body1">
+                        SUM
+                    </td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">
+                        Variant to Budget
+                    </td>
+                    <td class="TableStyle-standard-BodyE-Column2-Body1">
+                        TY Act New Sales $ - TY New Sales $
+                    </td>
+                    <td class="TableStyle-standard-BodyD-Column1-Body1">
+                        SUM
+                    </td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">
+                        TY Act New Sales Var to Comparison $/U
+                    </td>
+                    <td class="TableStyle-standard-BodyE-Column2-Body1">
+                        TY Act New Sales $/U - Comparison Sales $/U
+                    </td>
+                    <td class="TableStyle-standard-BodyD-Column1-Body1">
+                        SUM
+                    </td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">
+                        TY Act New Sales Var to Comparison Active $/U
+                    </td>
+                    <td class="TableStyle-standard-BodyE-Column2-Body1">
+                        TY Act New Sales $/U - Comparison Active Sales $/U
+                    </td>
+                    <td class="TableStyle-standard-BodyD-Column1-Body1">
+                        SUM
+                    </td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">
+                        TY Act New Sales $/U % +/- Comparison
+                    </td>
+                    <td class="TableStyle-standard-BodyE-Column2-Body1">
+                        (TY Act New Sales $/U - Comparison Sales $/U) / (Comparison Sales $/U)
+                    </td>
+                    <td class="TableStyle-standard-BodyD-Column1-Body1">
+                        SUM(Numerator) / SUM(Denominator)
+                    </td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">
+                        TY Act New Sales $/U % +/- Comparison Active
+                    </td>
+                    <td class="TableStyle-standard-BodyE-Column2-Body1">
+                        (TY Act New Sales $/U - Comparison Active Sales $/U) / (Comparison Active Sales $/U)
+                    </td>
+                    <td class="TableStyle-standard-BodyD-Column1-Body1">
+                        SUM(Numerator) / SUM(Denominator)
+                    </td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">
+                        TY Act New Productivity % +/- Comparison
+                    </td>
+                    <td class="TableStyle-standard-BodyE-Column2-Body1">
+                        (TY Act New Productivity - Comparison Productivity) / (Comparison Productivity)
+                    </td>
+                    <td class="TableStyle-standard-BodyD-Column1-Body1">
+                        SUM(Numerator) / SUM(Denominator)
+                    </td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">
+                        TY Act New Productivity % +/- Comparison Active
+                    </td>
+                    <td class="TableStyle-standard-BodyE-Column2-Body1">
+                        (TY Act New Productivity - Comparison Active Productivity) / (Comparison Active Productivity)
+                    </td>
+                    <td class="TableStyle-standard-BodyD-Column1-Body1">
+                        SUM(Numerator) / SUM(Denominator)
+                    </td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">
+                        TY Act New Choices % +/- Comparison
+                    </td>
+                    <td class="TableStyle-standard-BodyE-Column2-Body1">
+                        (TY Act New Choices - Comparison Choices) / (Comparison Choices)
+                    </td>
+                    <td class="TableStyle-standard-BodyD-Column1-Body1">
+                        SUM(Numerator) / SUM(Denominator)
+                    </td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">
+                        TY Act New Choices % +/- Comparison Active
+                    </td>
+                    <td class="TableStyle-standard-BodyE-Column2-Body1">
+                        (TY Act New Choices - Comparison Active Choices) / (Comparison Active Choices)
+                    </td>
+                    <td class="TableStyle-standard-BodyD-Column1-Body1">
+                        SUM(Numerator) / SUM(Denominator)
+                    </td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">
+                        TY Act New Sales $/U Per Site
+                    </td>
+                    <td class="TableStyle-standard-BodyE-Column2-Body1">
+                        (TY Act New Sales $/U) / (TY Plan Site Count)
+                    </td>
+                    <td class="TableStyle-standard-BodyD-Column1-Body1">
+                        SUM(Numerator) / SUM(Denominator)
+                    </td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyB-Column1-Body1">
+                        TY Act New Productivity Per Site
+                    </td>
+                    <td class="TableStyle-standard-BodyB-Column2-Body1">
+                        (TY Act New Productivity) / (TY Plan Site Count)
+                    </td>
+                    <td class="TableStyle-standard-BodyA-Column1-Body1">
+                        SUM(Numerator) / SUM(Denominator)
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <h2>Planning against +/- Comparison and +/- Comparison Active</h2>
+        <p>The following 4 metrics are editable and can be selected as visible with the <span class="Emphasis">Field</span> chooser, users can include 1 or more of these metrics within the Target Worksheet while not including the others.</p>
+        <p>The metrics are:</p>
+        <ul>
+            <li>
+                <p>TY Act New Sales $ % +/- Comparison</p>
+            </li>
+            <li>
+                <p>TY Act New Sales U % +/- Comparison</p>
+            </li>
+        </ul>
+        <p>Planning against <span class="Emphasis">+/- Comparison</span> supports use cases where the target should be planned against the entire product hierarchy within the Comparison or set the +/- to LY actualized Sales within the cluster set cluster. For example, planning Jeans to LY actualized Sales +20%.</p>
+        <ul>
+            <li>
+                <p>TY Act New Sales $ % +/- Comparison Active</p>
+            </li>
+            <li>
+                <p>TY Act New Sales U % +/- Comparison Active</p>
+            </li>
+        </ul>
+        <p>Planning against <span class="Emphasis">+/- Comparison Active</span> supports use cases where the target should be planned against only the Comparison Styles selected for inclusion in Comparison Active or set the +/- to LY actualized Sales for the styles designated for inclusion. For example, planning Core Jeans Styles +20%, rather than the entire hierarchy.</p>
+        <p>If one of the <span class="Emphasis">% +/- Comparison Active</span> metrics is edited at the aggregate Cluster Set level, then all <span class="Emphasis">% +/- Comparison Active</span> metrics for Clusters within that Cluster Set will change while holding the relationship between the those Cluster Set/Clusters. A likely more appropriate way to make this change would be at the Cluster Set/Cluster level. This would target specific areas, rather than move the entire Cluster Set. However, changes at the aggregate level are supported and the Cluster relationships will hold.</p>
+        <h3>Maintaining AUR</h3>
+        <p>Existing logic that AUR is always held is maintained. For example, modifying <span class="Emphasis">TY Act New Sales $ % +/- Comparison Active</span>:</p>
+        <ul>
+            <li>
+                <p>drives a new TY Act New Sales $ value</p>
+            </li>
+            <li>
+                <p>updates TY Act New Sales U, and</p>
+            </li>
+            <li>
+                <p>locks TY Act New AUR.</p>
+            </li>
+        </ul>
+    </body>
+</html>

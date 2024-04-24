@@ -1,0 +1,73 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head>
+    </head>
+    <body>
+        <h1>Introduction</h1>
+        <p>Inventory Purge (InvP) is a T-SQL utility that, under System Policy governance, removes Inventory and associated related data from the database.  It has several configurable options, and supports the addition, on behalf of or by a Customer, of instructions to remove related custom table rows as part of the purge process.  The default policy configuration is suited to the majority of Customer implementations – the Purge Activity data-retention policy is the principle policy that may need customer-specific configuration.</p>
+        <h2>An Immutable Database Schema Rule
+</h2>
+        <p>Non-technical readers may skip this section.
+
+</p>
+        <p><span class="Emphasis">Absolutely NO enabled Foreign Key may exist, ever, between a Custom Table and ANY Core table, especially dbo.tbl_Inventory.</span>  Failure to comply with this rule will cause the Purge Utility to FAIL.  There are <span class="EmphasisItalic">no exceptions or accommodations</span> unless a quasi-custom table has been created by ToolsGroup, e.g., ordermanager_C.Order_Line_Inventory.  In the latter case, explicit ON DELETE CASCADE declarative referential integrity is in place such that this table is not specified in the <span class="EmphasisItalic">conceptual presciption</span> (see below), <i>only the parent table is present</i>.</p>
+        <h2>Permanency of Purged Data</h2>
+        <p>
+It is vital to understand that purging data is a one-way, permanent deletion, operation.  InvP has no functionality to recover any purged data.  Should any data restoration be required, use a Database Restore and effect data restoration manually.
+
+</p>
+        <h2>Data Retention Policy</h2>
+        <p>
+The retention of Inventory data, albeit in an <span class="EmphasisItalic">inactive</span> state within the database, is at the discretion of the Customer.   
+</p>
+        <p>
+Eligibility is straightforward: any Inventory <span class="Emphasis">inactive</span> with reference to the ActiveFlag state is eligible.
+
+</p>
+        <p>Once Inventory data have been purged from the tables, the log of activities carried out to effect the purge is kept in the database.  The Customer must state the retention period for purge activity data that may be needed in order to comply with any legal or analytical requirements.  Removal, carried out by <span class="EmphasisItalic">garbage collection</span> processes, is governed by a system policy setting, the value of which is stated by the Customer.  The default retention period is thirty days.
+</p>
+        <h2>Operational Considerations</h2>
+        <p>Using the Scheduler Service, up to four concurrent explicitly-named, single-thread, queues may actively remove data for up to 4,500 Inventories per queue.  </p>
+        <p class="BasicNote">Over 100 million rows per purge run may be deleted--hence each run is strictly limited to a maximum of 20 batches of 4,500 Inventories.</p>
+        <p>Although the count can be reduced either by policy or by Job Task configuration, there is likely no need to change the enforced 20-batch maximum.</p>
+        <p>The Purge utility is designed to run in the background, with no supervision, with built-in measures to minimize interference with any regular Inventory Solution activities, including User Interface interactions with the database.  With the anticipated deletion volume exceeding 100 million for a typical run, it should be unsurprising that the projected elapsed time on moderate hardware is around six hours per 90K Inventories.  With the aforementioned measures to reduce or eliminate contention, the utility requires no special scheduling requirement apart from wisely running it <span class="Emphasis">after</span> the Defrag Manager utility, in case index rebuilds may cause SQL delays (blocking).</p>
+        <h2>Safeguards</h2>
+        <p>
+The utility can be time-limited in two ways:</p>
+        <ol>
+            <li>
+                <p>
+
+When started, a duration in minutes can be stated.  As soon as any facet of the purge logic detects the expiration of that time-span, the utility immediately terminates.
+
+</p>
+                <p>Governed by the optional <code>@RunDurationLimitMinutes</code> parameter.
+
+</p>
+            </li>
+            <li>
+                <p>When started, an explicit <span class="EmphasisItalic">stop at</span> date and time can be stated.  Again, immediately upon detection of the passing of that time, the utility terminates all activity.
+
+</p>
+                <p>Governed by the optional <code>@RunCessationDateTime</code> parameter.
+</p>
+            </li>
+        </ol>
+        <p>In addition to start-time run limitation, the utility can be instructed, via a process that can be run at any time using Job Manager, to<span class="EmphasisItalic"> stop now</span>.
+
+</p>
+        <p>Whenever the utility is prematurely terminated, it logs the termination and closes down.  In doing so, it ensures that the database is in a consistent state, with any work performed being retained intact.  The internal artifacts used by the purge utility are preserved so that it can be restarted at will.
+</p>
+        <p>If desired, the utility can be quantity-constrained at run time to purge fewer than the System Policy setting for the number of Inventory to purge per run.  This is governed by the optional <code>@BatchLimit</code> parameter. already mentioned, above</p>
+        <p>All activity for an execution is logged under a <span class="Emphasis">Run</span>.  Only one active batch is permitted at any time, enforced by rules within the database.
+
+</p>
+        <p>In the unlikely event that an unrecoverable error, such as when purge utility artifacts for a batch are lost, a batch can be <span class="EmphasisItalic">abandoned</span>.  All activity to that point is preserved.  Recovery from such a failure will require manual intervention, and may involve the inclusion of Support personnel.
+</p>
+        <p>Any related table’s Table Triggers MUST reference <code>CONTEXT_INFO</code> to ensure the logic does not fire -- the utility sets the <code>CONTEXT_INFO</code> explicitly to render trigger logic inoperative.</p>
+        <h2>
+
+Known Limitations</h2>
+        <p>If the <span class="EmphasisItalic">abandon batch</span> scenario arises, there is no automation that will enable completion of outstanding work for partially completed Inventory purges.  The maximum quantity of Inventory Batches affected would be 4.  Specifically, what are called ID-Lists within the utility would have had to have been prematurely expunged from the database for this kind of situation to arise.  Recovery may involve restoring a series of database backup files to a temporary database, to enable restoration of any of these missing artifacts.  Abandonment can be avoided!  It takes time and effort, and it is recommended that abandonment is a very last resort.  For data recovery to occur, the Database must be in at least BULK_LOGGED recovery mode, and frequent Log backups are being taken.  There is no guarantee that such a RESTORE would include the temp schema tables needed for a given Inventory Batch.  However, it makes possible restoration of data such that all tables associated with the Inventory hold the data that enables the list(s) to be rebuilt by clearing Step-level progress column values and rerunning the Purge, which will detect what remains to be purged and run just those Steps.</p>
+    </body>
+</html>

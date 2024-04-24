@@ -1,0 +1,175 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" xml:lang="en-us">
+    <head />
+    <body>
+        <h1>Item Site plans: Advanced product exclusions</h1>
+        <p>Products can be excluded at the Variant, Item Master, and Inventory levels using the <span class="Emphasis">Advanced Product Exclusions</span> dialog. Multiple selections at a product parent level displays the summary of children at the lower levels for modification.</p>
+        <p class="BasicNote">The <span class="Emphasis">Advanced Exclusion</span> menu option in the <span class="Emphasis">Details</span> grid is only available when the Pricing Plan has a Product Price Level of Item Site Plan. To confirm the Product Price Level, navigate to the Plan’s <span class="Emphasis">Information</span> tab.</p>
+        <h2>Excluding a variant across all clusters at the price action level</h2>
+        <p>A Variant can be excluded across all clusters at the Price Action level to avoid having to replicate modifications for each Cluster within the Price Action.</p>
+        <p>To display the <span class="Emphasis">Advanced Product Exclusions</span> dialog, click the <span class="Emphasis">Advanced Exclusions</span> button.</p>
+        <p>
+            <img src="../../Resources/Images/Price Planning/Advanced Product Exclusion.png" class="LargeImages" />
+        </p>
+        <p class="BasicNote"> The <span class="Emphasis">Variant</span> grid and <span class="Emphasis">Item</span> grid display by default. Click <span class="Emphasis">View Location</span> to display the <span class="Emphasis">Item Location</span> grid which lists all Price Action inventories associated to the selected Site Cluster. Select <span class="Emphasis">View Items</span> to hide or display the <span class="Emphasis">Items</span> grid.</p>
+        <h3>Excluding variants</h3>
+        <ol>
+            <li>
+                <p>Open the <span class="Emphasis">Advanced Product Exclusions</span> dialog.</p>
+            </li>
+            <li>
+                <p>In the <span class="Emphasis">Variant</span> grid, select Variants to be excluded.</p>
+                <p>The <span class="Emphasis">Exclude</span> button is enabled.</p>
+            </li>
+            <li>
+                <p>Click the <span class="Emphasis">Exclude</span> button.</p>
+                <p>The screen automatically refreshes and the names of excluded Variants are denoted by a strikethrough. </p>
+                <p>
+                    <img src="../../Resources/Images/Price Planning/Variants excluded strikethrough.png" class="LargeImages" />
+                </p>
+                <p>Also, the system saves excluded Variants, associated Item Masters, and Inventory records.</p>
+                <p class="BasicNote"> The system will not exclude all Variants. Therefore, the following message displays if there is an attempt to exclude all Variants:</p>
+                <p>
+                    <img src="../../Resources/Images/Price Planning/Cannot Exclude All Variants message.png" class="LargeImages" />
+                </p>
+            </li>
+            <li>
+                <p>Click <span class="Emphasis">Ok</span>.</p>
+            </li>
+        </ol>
+        <h3>Re-including variants</h3>
+        <ol>
+            <li>Open the <span class="Emphasis">Advanced Product Exclusions</span> dialog.</li>
+            <li>
+                <p>In the <span class="Emphasis">Variant</span> grid, select excluded Variants to be re-included.</p>
+                <p>The <span class="Emphasis">Include</span> button is enabled.</p>
+            </li>
+            <li>
+                <p>Click the <span class="Emphasis">Include</span> button.</p>
+                <p>The screen automatically refreshes and the names of re-included Variants are no longer denoted by a strikethrough. </p>
+            </li>
+            <li>
+                <p>Click <span class="Emphasis">Ok</span>.</p>
+            </li>
+        </ol>
+        <p>When a Variant is re-included back to the Price Action it needs to be calculated, which also means:</p>
+        <ul>
+            <li>
+                The Variant's lower levels need to be calculated (Item Master and Inventory)
+            </li>
+            <li>The Site Cluster needs to display the worst-case State, of its associated Variants, which is now Calculation Required</li>
+            <li>The Price Action needs to display the worst-case State, of its associated Site Clusters, which is now Calculation Required</li>
+            <li>The Pricing Plan needs to display the worst-case State, of its associated Price Actions, which is now Calculation Required</li>
+        </ul>
+        <h3>Excluding item masters </h3>
+        <ol>
+            <li>
+                <p>Open the <span class="Emphasis">Advanced Product Exclusions</span> dialog.</p>
+            </li>
+            <li>
+                <p>In the Items grid, select the Item Master to be excluded.</p>
+                <p>The <span class="Emphasis">Exclude</span> button is enabled.</p>
+            </li>
+            <li>
+                <p>Click the <span class="Emphasis">Exclude</span> button.</p>
+                <p>The screen automatically refreshes and the names of excluded Item Masters are denoted by a strikethrough. </p>
+                <p>
+                    <img src="../../Resources/Images/Price Planning/Item Masters excluded strikethrough.png" class="LargeImages" />
+                </p>
+                <p>Also, the system saves excluded Item Masters.</p>
+                <p class="BasicNote"> The system will not exclude all Item Masters associated with a Variant. Therefore, the following message displays if there is an attempt to exclude all Item Masters associated with a Variant:</p>
+                <p>
+                    <img src="../../Resources/Images/Price Planning/Cannot Exclude All Items message.png" class="LargeImages" />
+                </p>
+            </li>
+            <li>
+                <p>Click <span class="Emphasis">Ok</span>.</p>
+            </li>
+        </ol>
+        <h3>Re-including item masters</h3>
+        <ol>
+            <li>Open the <span class="Emphasis">Advanced Product Exclusions</span> dialog.</li>
+            <li>
+                <p>In the <span class="Emphasis">Items</span> grid, select excluded Item Masters to be re-included.</p>
+                <p>The <span class="Emphasis">Include</span> button is enabled.</p>
+            </li>
+            <li>
+                <p>Click the <span class="Emphasis">Include</span> button.</p>
+                <p>The screen automatically refreshes and the names of re-included Item Masters are no longer denoted by a strikethrough. </p>
+            </li>
+            <li>
+                <p>Click <span class="Emphasis">Ok</span>.</p>
+            </li>
+        </ol>
+        <p>When an Item Master is re-included back to the Price Action it needs to be calculated, which also means:</p>
+        <ul>
+            <li>
+                The Item Master's lower level need to be calculated (Inventory)
+            </li>
+            <li>The Variant needs to display the worst-case State, of its associated Item Masters, which is now Calculation Required</li>
+            <li>The Site Cluster needs to display the worst-case State, of its associated Variants, which is now Calculation Required</li>
+            <li>The Price Action needs to display the worst-case State, of its associated Site Clusters, which is now Calculation Required</li>
+            <li>The Pricing Plan needs to display the worst-case State, of its associated Price Actions, which is now Calculation Required</li>
+        </ul>
+        <h3>Excluding inventory</h3>
+        <ol>
+            <li>
+                <p>Open the <span class="Emphasis">Advanced Product Exclusions</span> dialog.</p>
+            </li>
+            <li>
+                <p>In the <span class="Emphasis">Items</span> grid, click the <span class="Emphasis">View Locations</span> button to display the <span class="Emphasis">Item Locations</span> grid.</p>
+            </li>
+            <li>
+                <p>Select the inventory to be excluded.</p>
+                <p>The <span class="Emphasis">Exclude</span> button is enabled.</p>
+            </li>
+            <li>
+                <p>Click the <span class="Emphasis">Exclude</span> button.</p>
+                <p>The screen automatically refreshes and the names of excluded inventory is denoted by a strikethrough. </p>
+                <p>
+                    <img src="../../Resources/Images/Price Planning/Inventory excluded strikethrough.png" class="LargeImages" />
+                </p>
+                <p>Also, the system saves excluded Inventory.</p>
+                <p class="BasicNote"> The system will not exclude all inventory per Item Master. Therefore, the following message displays if there is an attempt to exclude all inventory associated with an Item Master:</p>
+                <p>
+                    <img src="../../Resources/Images/Price Planning/Cannot Exclude All Inventory message.png" class="LargeImages" />
+                </p>
+            </li>
+            <li>
+                <p>Click <span class="Emphasis">Ok</span>.</p>
+            </li>
+        </ol>
+        <h3>Re-including inventory</h3>
+        <ol>
+            <li>Open the <span class="Emphasis">Advanced Product Exclusions</span> dialog.</li>
+            <li>
+                <p>In the <span class="Emphasis">Items</span> grid, click the <span class="Emphasis">View Locations</span> button to display the <span class="Emphasis">Item Locations</span> grid.</p>
+            </li>
+            <li>
+                <p>Select the inventory to be re-included.</p>
+                <p>The <span class="Emphasis">Include</span> button is enabled.</p>
+            </li>
+            <li>
+                <p>In the <span class="Emphasis">Items</span> grid, select excluded inventory to be re-included.</p>
+                <p>The <span class="Emphasis">Include</span> button is enabled.</p>
+            </li>
+            <li>
+                <p>Click the <span class="Emphasis">Include</span> button.</p>
+                <p>The screen automatically refreshes and the names of re-included Inventory are no longer denoted by a strikethrough. </p>
+            </li>
+            <li>
+                <p>Click <span class="Emphasis">Ok</span>.</p>
+            </li>
+        </ol>
+        <p>The Price Action needs to be calculated when inventory is re-included:</p>
+        <ul>
+            <li>
+                The Item Master needs to display the worst-case State, of its associated Inventory, which is now Calculation Required
+            </li>
+            <li>The Variant needs to display the worst-case State, of its associated Item Masters, which is now Calculation Required</li>
+            <li>The Site Cluster needs to display the worst-case State, of its associated Variants, which is now Calculation Required</li>
+            <li>The Price Action needs to display the worst-case State, of its associated Site Clusters, which is now Calculation Required</li>
+            <li>The Pricing Plan needs to display the worst-case State, of its associated Price Actions, which is now Calculation Required</li>
+        </ul>
+    </body>
+</html>

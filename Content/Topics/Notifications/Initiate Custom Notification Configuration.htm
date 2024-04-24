@@ -1,0 +1,71 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" xml:lang="en-us">
+    <head>
+        <title>
+        </title>
+    </head>
+    <body>
+        <h1>Initiate custom notification configuration</h1>
+        <p> In a scheduled job’s task or in the CUSP, the token parameters must be configured to initiate a custom notification. </p>
+        <p>For more information on creating jobs, associated tasks and schedules, <MadCap:conditionalText MadCap:conditions="General.ScreenOnly">see <a href="../Job Manager/Job Manager Overview.htm">Job Manager</a>.</MadCap:conditionalText><MadCap:conditionalText MadCap:conditions="General.PrintOnly">refer to the Job Manager User Guide.</MadCap:conditionalText></p>
+        <table class="TableStyle-standard" cellspacing="0" style="mc-table-style: url('../../Resources/TableStyles/standard.css');">
+            <thead>
+                <tr class="TableStyle-standard-Head-Header1">
+                    <th class="TableStyle-standard-HeadE-Column1-Header1">Field</th>
+                    <th class="TableStyle-standard-HeadD-Column2-Header1">Description</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">
+                       iMessageUUID (Required)
+                    </td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">
+                        Enter the system generated UUID for a specific custom notification.
+                    </td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">
+                       iSenderUserID (Required)
+                    </td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">This parameter must always be set to a value of one (i.e. IOAdmin).
+                    </td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">
+                       nRecipientUserIDList (Required)
+                    </td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">
+                       Enter the user or role that will receive the custom notification. If multiple users or roles will receive the notification, enclose the user ID list in single quotes.
+                    </td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">
+                        nMessageToken (Optional)
+                    </td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">
+                        The message tokens will be passed into the notification call as a single string for the system to parse appropriately into the notification message. 
+                        <p>For correct configuration, refer to <MadCap:xref href="Custom Notification Implementation Examples.htm">Custom notification implementation examples</MadCap:xref>.</p></td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">
+                       cTokenIdentifier (Optional)
+                    </td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">
+                    
+                        If a value is entered, the system attempts to retrieve tokens from the table notification <span class="Emphasis">.TokenStore</span>. This table stores tokens for the queue so that the XML does not have to be perpetuated throughout the process.  
+                        <p>If both @nMessageToken and @cTokenIdentifier are supplied, @nMessageToken Tokens  overrides tokens present in [notification].[TokenStore], but union tokens that do not exist in both.
+                    </p></td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyB-Column1-Body1">
+                        bDebug (Optional)
+                    </td>
+                    <td class="TableStyle-standard-BodyA-Column2-Body1">
+                       This must always be set to a value of zero unless ToolsGroup JustEnough Professional Services or Support are investigating an issue.
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </body>
+</html>

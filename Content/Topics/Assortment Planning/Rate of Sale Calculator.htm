@@ -1,0 +1,95 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" xml:lang="en-us">
+    <head>
+        <link href="../../Resources/TableStyles/standard.css" rel="stylesheet" MadCap:stylesheetType="table" /><title></title>
+    </head>
+    <body>
+        <h1>Rate of Sale Calculator view</h1>
+        <p>The <span class="Emphasis">Rate of Sale Calculator</span> is used to model scenarios to determine how much, in units or revenue, a particular placeholder/collection might sell per site in a given week. All of the functionality essential to Assortment Planning is available in this docked version. </p>
+        <p>The full version of the <span class="Emphasis">Rate of Sale Calculator</span> which can also create scenarios for use in Allocation Strategies is accessed via <span class="Emphasis">Execute &gt; Rate of Sale</span>.</p>
+        <p>
+            <img src="../../Resources/Images/Assortment Planning/Rate of Sale Calculator.png" class="LargeImages" />
+        </p>
+        <p>There are three main options in determining a rate of sale for a placeholder or collection in planning demand with assortment planning:</p>
+        <ul>
+            <li><span class="Emphasis">Smart Start</span>: Leverages a marginal return curve to determine rates of sale for each placeholder required to fulfill a target set in <span class="Emphasis">Target Creation</span>.</li>
+            <li><span class="Emphasis">Like Style Modeling</span>: Manually create placeholders and collections and model those choices after historical like items.</li>
+            <li>
+                <p><span class="Emphasis">Rate of Sale Calculator</span>: Select after smart starting an assortment or manually creating a placeholder or collection. Assortment plans can be refined by using historical data to determine an appropriate rate of sale to apply to placeholders or collections within them. </p>
+                <p>Modeling in the Rate of Sale Calculator is extremely flexible in terms of the product, cluster set, and time dimensions that can be selected to model demand with confidence.</p>
+            </li>
+        </ul>
+        <p>The Rate of Sale Calculator is divided into three main components.</p>
+        <ol>
+            <li>ROS Scenario Creation</li>
+            <li>ROS Calculation</li>
+            <li>ROS Application</li>
+        </ol>
+        <h2>Rate of Sale calculation logic</h2>
+        <table style="margin-left: 0;margin-right: auto;mc-table-style: url('../../Resources/TableStyles/standard.css');" class="TableStyle-standard" cellspacing="0">
+            <col class="TableStyle-standard-Column-Column1" style="width: 358px;" />
+            <col class="TableStyle-standard-Column-Column2" style="width: 357px;" />
+            <col class="TableStyle-standard-Column-Column1" />
+            <thead>
+                <tr class="TableStyle-standard-Head-Header1">
+                    <th class="TableStyle-standard-HeadE-Column1-Header1">Action</th>
+                    <th class="TableStyle-standard-HeadE-Column2-Header1">Effect on Regular Sales Plan</th>
+                    <th class="TableStyle-standard-HeadD-Column1-Header1">Effect on Markdown Sales Plan</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">Remove a markdown date</td>
+                    <td class="TableStyle-standard-BodyE-Column2-Body1">Same ROS, new sales total</td>
+                    <td class="TableStyle-standard-BodyD-Column1-Body1">Zeroed</td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">Move a markdown date around</td>
+                    <td class="TableStyle-standard-BodyE-Column2-Body1">Same sales total, new ROS</td>
+                    <td class="TableStyle-standard-BodyD-Column1-Body1">Same sales total, new ROS</td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">Add a markdown date</td>
+                    <td class="TableStyle-standard-BodyE-Column2-Body1">Same ROS, new sales total</td>
+                    <td class="TableStyle-standard-BodyD-Column1-Body1">ROS seeded from default</td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">Change phase in forward</td>
+                    <td class="TableStyle-standard-BodyE-Column2-Body1">Same ROS, new sales total</td>
+                    <td class="TableStyle-standard-BodyD-Column1-Body1">Same</td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">Change phase in back</td>
+                    <td class="TableStyle-standard-BodyE-Column2-Body1">Same ROS, new sales total</td>
+                    <td class="TableStyle-standard-BodyD-Column1-Body1">Same</td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">Change phase out forward</td>
+                    <td class="TableStyle-standard-BodyE-Column2-Body1">Same</td>
+                    <td class="TableStyle-standard-BodyD-Column1-Body1">Same ROS, new sales total</td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">Change phase out back</td>
+                    <td class="TableStyle-standard-BodyE-Column2-Body1">Same</td>
+                    <td class="TableStyle-standard-BodyD-Column1-Body1">Same ROS, new sales total</td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">Remove markdown and phase change</td>
+                    <td class="TableStyle-standard-BodyE-Column2-Body1">Same ROS, new sales total</td>
+                    <td class="TableStyle-standard-BodyD-Column1-Body1">Zeroed</td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">Move markdown and phase change</td>
+                    <td class="TableStyle-standard-BodyE-Column2-Body1">Same ROS, new sales total</td>
+                    <td class="TableStyle-standard-BodyD-Column1-Body1">Same ROS, new sales total</td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyB-Column1-Body1">Add markdown and phase change</td>
+                    <td class="TableStyle-standard-BodyB-Column2-Body1">Same ROS, new sales total</td>
+                    <td class="TableStyle-standard-BodyA-Column1-Body1">ROS seeded from default</td>
+                </tr>
+            </tbody>
+        </table>
+        <MadCap:miniTocProxy style="mc-toc-depth: 1;" />
+    </body>
+</html>

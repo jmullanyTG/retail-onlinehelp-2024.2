@@ -1,0 +1,198 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" xml:lang="en-us">
+    <head>
+        <link href="../../Resources/TableStyles/standard.css" rel="stylesheet" MadCap:stylesheetType="table" /><title></title>
+        <link href="../../Resources/Stylesheets/Demand Management Standard Database Server Setup (Windows).doc.css" rel="stylesheet" />
+    </head>
+    <body>
+        <h1 class="Heading1">Final Configuration Steps</h1>
+        <h2 class="Heading2">Accelerated Database Recovery (SQL v2019+ ONLY)</h2>
+        <p>From MSFT:<br />”<span class="Emphasis">Accelerated Database Recovery (ADR)</span> <i>is a SQL Server database engine feature that greatly improves database availability, especially in the presence of long running transactions, by redesigning the SQL Server database engine recovery process.</i>”</p>
+        <p>For more info: <a href="https://learn.microsoft.com/en-us/azure/azure-sql/accelerated-database-recovery?view=azuresql&amp;viewFallbackFrom=azuresql-vm">Accelerated Database Recovery in Azure SQL</a> </p>
+        <p>It has 3 benefits:</p>
+        <ul class="ul_3">
+            <li>
+                <p>Fast and consistent database recovery</p>
+            </li>
+            <li>
+                <p>Instantaneous transaction rollback</p>
+            </li>
+            <li>
+                <p>Aggressive log truncation</p>
+            </li>
+        </ul>
+        <p>ADR is a database-level configuration. To enable this feature for the JE App Database, login to SSMS and execute the following command. We have 2 options to enable it. Option #1 is preferred. Option #2 is there if the first option doesn’t work:</p>
+        <h3>Option #1</h3>
+        <MadCap:codeSnippet>
+            <MadCap:codeSnippetCopyButton />
+            <MadCap:codeSnippetBody MadCap:useLineNumbers="False" MadCap:lineNumberStart="1" MadCap:continue="False" xml:space="preserve">USE master;
+GO
+ALTER DATABASE &lt;Database, sysname, YourDatabase&gt; SET NEW_BROKER WITH ROLLBACK IMMEDIATE;
+GO
+ALTER DATABASE &lt;Database, sysname, YourDatabase&gt; SET ACCELERATED_DATABASE_RECOVERY = ON;
+GO</MadCap:codeSnippetBody>
+        </MadCap:codeSnippet>
+        <h3>Option #2</h3>
+        <MadCap:codeSnippet>
+            <MadCap:codeSnippetCopyButton />
+            <MadCap:codeSnippetBody MadCap:useLineNumbers="False" MadCap:lineNumberStart="1" MadCap:continue="False" xml:space="preserve">USE master;
+GO
+ALTER DATABASE &lt;Database, sysname, YourDatabase&gt;
+SET SINGLE_USER WITH ROLLBACK IMMEDIATE;
+GO
+ALTER DATABASE &lt;Database, sysname, YourDatabase&gt; SET ACCELERATED_DATABASE_RECOVERY = ON;
+GO
+ALTER DATABASE &lt;Database, sysname, YourDatabase&gt;
+SET MULTI_USER;
+GO</MadCap:codeSnippetBody>
+        </MadCap:codeSnippet>
+        <h2 class="Heading2">Enable Lock Pages in Memory Configuration for SQL Server Instance</h2>
+        <p>Please see <a href="../../../../../Users/JMullany/Downloads/Demand Management Standard Database Server Setup (Windows).doc.docx#Create-Service-Accounts"><MadCap:xref href="Setup and Configuration in.htm#Create">Create Service Accounts</MadCap:xref></a>. If that step is already completed, skip to the next section.</p>
+        <p>Open the Windows local group policy window and navigate to: Local Policies &gt; User Rights Assignment.</p>
+        <p>Look for the policy called “Lock pages in memory”</p>
+        <p>
+            <img src="../../Resources/Images/Demand Management Standard Database Server Setup (Windows).doc/Lock Pages In Memory.png" class="LargeImages" />
+        </p>
+        <p>Right-click on the policy and add the SQL Service user to the Security Setting:</p>
+        <p>
+            <img src="../../Resources/Images/Demand Management Standard Database Server Setup (Windows).doc/Add SQL Service User.png" class="LargeImages" />
+        </p>
+        <h2 class="Heading2">Ensure that Database Instant File Initialization is Enabled</h2>
+        <p>If you followed the installation instruction above correctly, the Instant File Initialization should already be enabled for the SQL Server instance. Double check that this policy is enabled. </p>
+        <p>While you are still in the Local Security Policy window, ensure that the SQL Service user is added in the security policy called Perform volume maintenance tasks:</p>
+        <p>
+            <img src="../../Resources/Images/Demand Management Standard Database Server Setup (Windows).doc/Perform Volume Maintenance Tasks.png" class="LargeImages" />
+        </p>
+        <p>Add the SQL Service user account if it’s not already there.</p>
+        <h2 class="Heading2">Windows Power Option for SQL Server</h2>
+        <p>Select High Performance power plan on the Windows Power Option</p>
+        <p>
+            <img src="../../Resources/Images/Demand Management Standard Database Server Setup (Windows).doc/High Performance Power Plan.png" class="LargeImages" />
+        </p>
+        <h2 class="Heading2">MAXDOP Configuration Guide</h2>
+        <p>This section is open for discussion. </p>
+        <p>Please take note that the table below shows a general guide only; and decision for MAXDOP configuration should be based on the specific needs of the SQL Server.</p>
+        <table class="TableStyle-standard" style="margin-left: auto;margin-right: auto;mc-table-style: url('../../Resources/TableStyles/standard.css');" cellspacing="0">
+            <col class="TableStyle-standard-Column-Column1" style="width: 30%;" />
+            <col class="TableStyle-standard-Column-Column2" style="width: 30%;" />
+            <col class="TableStyle-standard-Column-Column1" style="width: 30%;" />
+            <thead>
+                <tr class="TableStyle-standard-Head-Header1">
+                    <th class="TableStyle-standard-HeadE-Column1-Header1">NUMA Nodes</th>
+                    <th class="TableStyle-standard-HeadE-Column2-Header1">Logical Processors</th>
+                    <th class="TableStyle-standard-HeadD-Column1-Header1">MAXDOP Value</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">
+                        <p>Single</p>
+                    </td>
+                    <td class="TableStyle-standard-BodyE-Column2-Body1">
+                        <p>≤ 8</p>
+                    </td>
+                    <td class="TableStyle-standard-BodyD-Column1-Body1">
+                        <p>4,2, or number of cores (for one or two cores)</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">
+                        <p>Single</p>
+                    </td>
+                    <td class="TableStyle-standard-BodyE-Column2-Body1">
+                        <p>&gt; 8</p>
+                    </td>
+                    <td class="TableStyle-standard-BodyD-Column1-Body1">
+                        <p>8,4, or 2</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">
+                        <p>Multiple</p>
+                    </td>
+                    <td class="TableStyle-standard-BodyE-Column2-Body1">
+                        <p>≤ 16</p>
+                    </td>
+                    <td class="TableStyle-standard-BodyD-Column1-Body1">
+                        <p>4</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyB-Column1-Body1">
+                        <p>Multiple</p>
+                    </td>
+                    <td class="TableStyle-standard-BodyB-Column2-Body1">
+                        <p>&gt; 16</p>
+                    </td>
+                    <td class="TableStyle-standard-BodyA-Column1-Body1">
+                        <p>16,8,4, or 2</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <p>Source - "Set MAXDOP for best performance": <a href="https://docs.aws.amazon.com/prescriptive-guidance/latest/sql-server-ec2-best-practices/maxdop.html">Set MAXDOP for best performance</a> </p>
+        <p>The following is a TSQL Script to run a recommendation for MAXDOP value (just a recommendation): <span class="Emphasis">Recommend_MAXDOP_Setting.sql</span></p>
+        <h2 class="Heading2">SQL Server Backup to Azure Blob Storage</h2>
+        <p>NOTE: When all of the SQL Instances are moved to Azure, all of the SQL backups of these instances will be set in Azure Managed Backups. See instruction after this section.</p>
+        <p>The JE SQL Servers are no longer saving SQL Server backups to local disk. These backups are directly saved in the server’s Azure Blog Storage Container.</p>
+        <p>The general steps are:</p>
+        <ol>
+            <li>
+                <p>Create Shared Access Signature key in Azure</p>
+            </li>
+            <li>
+                <p>Register that Credential in SQL Server</p>
+            </li>
+            <li>
+                <p>Create the Backup jobs</p>
+            </li>
+        </ol>
+        <p>For detailed step-by-step, contact Support and follow these instructions: <span class="Emphasis">Azure Storage Account Backup job setup.docx</span></p>
+        <h3 class="Heading3">SQL Templates Needed for Setting Up Azure Blob Backups:</h3>
+        <p>Job DatabaseBackup - USER_DATABASES - LOG.sql</p>
+        <p>Job DatabaseBackup - USER_DATABASES - DIFF.sql</p>
+        <p>Job DatabaseBackup - ALL_DATABASES - FULL.sql</p>
+        <p>Setup - Create Credential.sql</p>
+        <p>MaintenanceSolution-2022-01-02.sql</p>
+        <h2 class="Heading2">Azure Managed Backups</h2>
+        <p>In Azure portal, navigate to <span class="Emphasis">Subscription</span> &gt; <span class="Emphasis">Resource Groups</span> &gt; <span class="Emphasis">SQL Virtual Machine</span>. In this example EA - <span class="Emphasis">SaaS Converse</span> &gt; <span class="Emphasis">convus-stg</span> &gt; <span class="Emphasis">convus-db-stg</span>.</p>
+        <p>In the left-hand panel, select <span class="Emphasis">Backups</span>.</p>
+        <p>
+            <img src="../../Resources/Images/Demand Management Standard Database Server Setup (Windows).doc/Backups.png" class="LargeImages" />
+        </p>
+        <p>Set the following properties:</p>
+        <p>Automatic Backup: Enable</p>
+        <p>Retention Period (Days): 15</p>
+        <p>Storage Account: &lt;Select the Storage Account for the resource&gt;</p>
+        <p>Encryption: Disable</p>
+        <p>Backup System Databases: Enable</p>
+        <p>Configure Backup Schedule: Manual</p>
+        <p>Backup Frequency: Daily</p>
+        <p>Backup Start Time (Local VM Time): &lt;It depends on the environment&gt;</p>
+        <p>Full Backup Time Window (Hours): 4</p>
+        <p>Log Backup Frequency (Minutes): 15</p>
+        <p>
+            <img src="../../Resources/Images/Demand Management Standard Database Server Setup (Windows).doc/Automated Backup.png" class="LargeImages" />
+        </p>
+        <h2 class="Heading2">Windows Update Management</h2>
+        <p>The Microsoft Monitoring Agent is the service daemon that allows Azure the ability to automatically and remotely patch designated Windows systems with relevant critical, security or other OS updates.</p>
+        <p>Login to the target machine via RDP that intends to use Windows Updates Management</p>
+        <p>Unzip the contents of Microsoft Monitoring Agent into C:\temp\mma-agent</p>
+        <p class="BasicNote">Contact Support to obtain mma-agent.zip</p>
+        <p>Open up an elevated command prompt and run the following command</p>
+        <MadCap:codeSnippet>
+            <MadCap:codeSnippetCopyButton />
+            <MadCap:codeSnippetBody MadCap:useLineNumbers="False" MadCap:lineNumberStart="1" MadCap:continue="False" xml:space="preserve">c:\temp\mma-agent\setup.exe /qn NOAPM=1 ADD_OPINSIGHTS_WORKSPACE=1 OPINSIGHTS_WORKSPACE_AZURE_CLOUD_TYPE=0 OPINSIGHTS_WORKSPACE_ID="3e8acf9c-bea8-4a83-9120-58cfbe05e7f7" OPINSIGHTS_WORKSPACE_KEY="a+SpBXA3Qp4TQnrMHOdlXliYN6cGirXxLg4wyqDgXveL/ip9Vbi7stg7jJ8ToB4SWeEAmgze2NQAjM7qVcDjog==" AcceptEndUserLicenseAgreement=1</MadCap:codeSnippetBody>
+        </MadCap:codeSnippet>
+        <p>
+            <img src="../../Resources/Images/Demand Management Standard Database Server Setup (Windows).doc/Licence Agreemnt.png" class="LargeImages" />
+        </p>
+        <p>This will silently install, configure and deploy the agent.</p>
+        <p>To verify that a successful installation has taken place, open the Monitoring Agent applet: </p>
+        <p>C:\Program Files\Microsoft Monitoring Agent\Agent\AgentControlPanel.exe</p>
+        <p>Click the Azure Log Analytics (OMS) tab . A green status tick with message will confirm that this has now been successfully configured on this machine.</p>
+        <p>
+            <img src="../../Resources/Images/Demand Management Standard Database Server Setup (Windows).doc/MS Monitoring Agent.png" class="LargeImages" />
+        </p>
+    </body>
+</html>

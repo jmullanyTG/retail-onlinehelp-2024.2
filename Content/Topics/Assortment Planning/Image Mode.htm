@@ -1,0 +1,59 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head />
+    <body>
+        <h1>Image mode</h1>
+        <p>Image mode enables full-screen display of placeholder images. Like Image view within the Placeholder view, it allows editing of plans while retaining focus on the visual component of an assortment. </p>
+        <p>
+            <img src="../../Resources/Images/Assortment Planning/Image Mode.png" class="LargeImages" />
+        </p>
+        <h2>Image mode versus image view within the Placeholder view</h2>
+        <p>Image mode is designed especially for single-monitor users who want a bigger workspace for images than Image view provides. Image view is great for multi-screen users, as the view can be detached from the application and moved to a second monitor. </p>
+        <p>For more information on Image View, see <MadCap:xref href="Image View.htm">Image View</MadCap:xref>.</p>
+        <h2>Supporting views</h2>
+        <p>The supporting views available in Placeholder and Collection views are also available in Image mode, with the exception of Style Bank and Image view. If desired, detach these views and move them to different areas of the monitor (or to a different monitor if using multiple monitors).</p>
+        <h2>Toolbar options</h2>
+        <h3>View options</h3>
+        <p><span class="Emphasis">Quick Text</span>: sets text display options for image cells within the view. Only one quick text option (attribute or metric), plus the placeholder code, can be selected to show at once.<ul><li><span class="Emphasis">Show Code</span>: toggles the display of the placeholder code at the bottom of each cell. The code displays by default.</li><li><span class="Emphasis">Attributes</span>: select an Attribute Family defined in the Attribute Management module to display in the upper-right corner of each cell</li><li>AUC, Home AUT, Blended AUT, ROS $, ROS U, Ttl Sls $, Ttl Sls U, Ttl Buy $, Ttl Buy U: selects the metric to display in the upper-right corner of each cell</li><li><span class="Emphasis">Receipt Status</span>: displays the receipt statuses an indicator of if the placeholder requires recalculation of its receipt plan</li><li><span class="Emphasis">Replen Status</span>: displays the replenishment status as an indicator of if the placeholder has been updated with the most recent Replenishment forecast data (valid for placeholders of <span class="Emphasis">Replen</span> status only)</li><li><span class="Emphasis">Status</span>: displays the placeholder Status, Open, Created, Assigned, Committed, or Replen, in the upper-right corner of each cell</li></ul></p>
+        <p><span class="Emphasis">Inactive</span>: sets the desired visual behavior when temporarily making items inactive in Image view</p>
+        <p>By default, inactive images show as a diagonal slash:</p>
+        <p>
+            <img src="../../Resources/Images/Assortment Planning/Image Inactive Diagonal Slash.png" class="LargeImages" />
+        </p>
+        <p>This parameter can be set to Dark making temporarily inactive items display with a semi-transparent gray overlay:</p>
+        <p>
+            <img src="../../Resources/Images/Assortment Planning/Image Temporarily Inactive Dark.png" class="LargeImages" />
+        </p>
+        <p><span class="Emphasis">Recalculate</span>: recalculates sales plans for placeholders of Status “Replen” with a “Dirty” status in the Replen Status field.</p>
+        <ul>
+            <li>The date Replen placeholders or collections were last recalculated is shown in the Last Replen field</li>
+            <li>
+                <p>As Replenishment recalculations require complex calculations, they are sent to the Workload Queue module for scheduling and processing. </p>
+                <p>Though replenishment placeholders are recalculated immediately they may be deferred for later calculation based on the number of placeholders requiring recalculation and other jobs currently in the queue. Placeholders awaiting recalculation are locked and conditionally formatted to indicate this.</p>
+            </li>
+        </ul>
+        <h2>Parameters</h2>
+        <p>Image mode uses most of the same parameters as Placeholder and Collection modes:</p>
+        <ul>
+            <li><span class="Emphasis">Product</span>
+            </li>
+            <li><span class="Emphasis">Site Hierarchy</span>
+            </li>
+            <li><span class="Emphasis">Cluster Sets</span>
+            </li>
+            <li><span class="Emphasis">Window of Time</span>
+            </li>
+            <li><span class="Emphasis">Display Currency</span>
+            </li>
+            <li><span class="Emphasis">Grid Config</span>: See <a href="Image View.htm">Image view</a>.</li>
+            <li><span class="Emphasis">View Selection</span>
+            </li>
+        </ul>
+        <p>For more information, see <MadCap:xref href="View Parameters.htm">Placeholder and collection view parameters</MadCap:xref>.</p>
+        <h2>Toolbar buttons</h2>
+        <p><span class="Emphasis">Save</span>:&#160;Save changes made to the associated placeholders.</p>
+        <p><span class="Emphasis">Cancel</span>: Cancel changes.</p>
+        <p><span class="Emphasis">Parameters</span>: Shows or hides the parameters bar.</p>
+        <p><span class="Emphasis">Execute</span>: Refreshes Image mode using the selected parameters.</p>
+    </body>
+</html>

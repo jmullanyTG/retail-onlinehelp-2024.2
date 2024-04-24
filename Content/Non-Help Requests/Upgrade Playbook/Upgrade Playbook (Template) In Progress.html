@@ -1,0 +1,1150 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" xml:lang="en-us">
+    <head>
+        <link href="../../Resources/TableStyles/standard.css" rel="stylesheet" MadCap:stylesheetType="table" /><title></title>
+    </head>
+    <body>
+        <h1>Upgrade Playbook (Template)</h1>
+        <ul>
+            <li>
+                <p>Created by: Gunther Lotz</p>
+            </li>
+            <li>
+                <p>Created time: June 2, 2023 9:12AM</p>
+            </li>
+            <li MadCap:conditions="General.DoNotPublish">
+                <p>Tags:</p>
+            </li>
+        </ul>
+        <div class="Note_BasicNote">This is the upgrade playbook document, maintained by the development team. Please do not edit it directly. Instead, make a copy when starting an update to ensure information accuracy. The document provides step-by-step instructions for a successful system upgrade, as well as information on changes and potential issues during the upgrade. Before starting the upgrade, read through the document and ensure that you understand the steps involved. Make a copy of the document and refer to it throughout the upgrade process. Instructions on validating services and database after the upgrade are included. </div>
+        <h2>Resources</h2>
+        <ul>
+            <li><a href="https://drive.google.com/drive/u/0/folders/0AJWKNBPgkhsgUk9PVA">Official Release Folder</a>
+            </li>
+            <li><a href="https://drive.google.com/drive/u/0/folders/0AH_knLPGk-lIUk9PVA">Databases</a>
+            </li>
+            <li><a href="https://drive.google.com/drive/folders/1mPpMMVbd_p_WD6tLRfreiqrlrJewfzo-?usp=sharing">Defrag Utility</a>
+            </li>
+            <li><a href="https://drive.google.com/drive/folders/1oWDKTxs-8qb-sqbZq1QLLXZQ56Hzd8Eq?usp=drive_link">Customization Analysis</a>
+            </li>
+        </ul>
+        <h2>Pre-Update Steps</h2>
+        <ul>
+            <li>Create a copy of this document, and rename it to: Update Playbook: Client Name - v#.#.#.# to v#.#.#.#
+					<ul><li>In the newly created document, remove the versions not required, ex: if updating from 2019.3.*, remove sections 3.6-2019.2.</li></ul><ul><li>This new document will serve as the playbook when upgrading production, make notes as you progress.	</li></ul></li>
+            <li>Identify Modules (<a href="https://docs.google.com/spreadsheets/d/1L6TuiNlDRtUk3UYBrLv9v_4kUihQOXOwLv59r3tCRi8/edit?usp=sharing">Current Module deployed document (Up to date?)</a>)
+			<ul><li>Module 1</li></ul></li>
+            <li>Restore the latest Production Database: Restored to [QA] environment.
+				<div class="Note_Caution">Disable All Schedules:
+					<ul><li>Make a note of all enabled schedules
+						<p><code>SELECT * FROM tbl_JobManager_JobSchedule JS</code></p><table class="TableStyle-standard" cellspacing="0" style="mc-table-style: url('../../Resources/TableStyles/standard.css');margin-left: auto;margin-right: auto;"><col class="TableStyle-standard-Column-Column1" /><col class="TableStyle-standard-Column-Column2" /><col class="TableStyle-standard-Column-Column1" /><tbody><tr class="TableStyle-standard-Body-Body1"><td class="TableStyle-standard-BodyE-Column1-Body1">JobID</td><td class="TableStyle-standard-BodyE-Column2-Body1">ScheduleID</td><td class="TableStyle-standard-BodyD-Column1-Body1">IsEnabledFlag</td></tr><tr class="TableStyle-standard-Body-Body1" style="height: 20px;"><td class="TableStyle-standard-BodyB-Column1-Body1" /><td class="TableStyle-standard-BodyB-Column2-Body1" /><td class="TableStyle-standard-BodyA-Column1-Body1" /></tr></tbody></table><p><code>UPDATE JS SET IsEnabledFlag = 0 FROM tbl_JobManager_JobSchedule JS</code></p></li></ul></div></li>
+            <li>Evaluate the state of the current database.<ul><li>Execute the Checksum script included in the release folder. This will display to the user which objects are different or exist only in one of the databases (compared to an empty database at the same version).</li></ul></li>
+            <li>
+                <p>Create a Repository from Template if not exist - If project has been with support, we need to make sure that the latest code is in the repo)</p>
+                <ul>
+                    <li>Export custom/altered standard objects<ul><li>SQL</li><ul><li>Procedures</li><li>Views</li><li>Tables Creation Scripts</li></ul></ul><ul><li>UI
+							
+							<ul><li>Views, Widgets &amp; ViewCollectionSets (Import Utility can be used)</li><li>Job Manager Jobs</li></ul></li></ul></li>
+                </ul>
+            </li>
+        </ul>
+        <h2><a name="Update"></a>Update steps</h2>
+        <div class="Note_BasicNote">Update steps were recorded from version 3.6.0.* forward, when we started standardizing the process. If you have a version earlier than 3.5.5 (for 3.5.5, 3.6.0 will be the next service release), execute the update scripts in the following order: 6.8.20.0_2.8.0.0_JEUpdate → 6.8.20.0_2.10.0.0_JEUpdate → 6.8.20.0_2.12.0.0_JEUpdate → 6.8.20.0_3.0.4.0_JEUpdate → 6.8.20.0_3.1.0.0_JEUpdate → 6.8.20.0_3.2.0.0_JEUpdate → 6.8.20.0_3.2.4.0_JEUpdate → 6.8.20.0_3.3.0.0_JEUpdate → 6.8.20.0_3.3.3.0_JEUpdate → 6.8.20.0_3.4.0.0_JEUpdate → 6.8.20.0_3.4.5.0_JEUpdate → 6.8.20.0_3.5.0.0_JEUpdate → 6.8.20.0_3.5.1.0_JEUpdate → 6.8.20.0_3.5.2.0_JEUpdate → 6.8.20.0_3.5.3.0_JEUpdate → 6.8.20.0_3.5.4.0_JEUpdate → 6.8.20.0_3.5.5.0_JEUpdate</div>
+        <h2><a name="3.6.0"></a><strong>3.6.0</strong> </h2>
+        <h4>Update Script (6.8.22.0_3.6.0.0_JEUpdate)</h4>
+        <div class="Note_TechNote">EXEC usp_INIT_Common_Filter_Inventory_DeprecateAndAddReplacement_FilterTypeViews</div>
+        <p>The following procedure has been created to assist the movement of deprecated filter Meta data.</p>
+        <MadCap:codeSnippet>
+            <MadCap:codeSnippetCopyButton />
+            <MadCap:codeSnippetBody MadCap:useLineNumbers="False" MadCap:lineNumberStart="1" MadCap:continue="False" xml:space="preserve">EXEC dbo.usp_Common_Filter_Migrate_DeprecatedFilterCriteria
+     @bPerformUpdates         = 0
+   , @vPerformUpdatesPassword = NULL
+   , @iUserID                 = NULL</MadCap:codeSnippetBody>
+        </MadCap:codeSnippet>
+        <p>Running the procedure without the password will return the following results:</p>
+        <p>
+            <img src="../../Resources/Images/Upgrade Playbook (Template) images/Untitled.png" class="LargeImages" />
+        </p>
+        <p>If the results are acceptable, running the same procedure but with the password, will attempt to automatically replace Deprecated filter types with their replacement fields.</p>
+        <MadCap:codeSnippet>
+            <MadCap:codeSnippetCopyButton />
+            <MadCap:codeSnippetBody MadCap:useLineNumbers="False" MadCap:lineNumberStart="1" MadCap:continue="False" xml:space="preserve">EXEC dbo.usp_Common_Filter_Migrate_DeprecatedFilterCriteria
+  @bPerformUpdates = 1
+  , @vPerformUpdatesPassword = 'Running this procedure will cause filter criteria to update.  I have already run this procedure to assess the changes.'
+	, @iUserID = 1</MadCap:codeSnippetBody>
+        </MadCap:codeSnippet>
+        <h4>Clean up ~Deprecated fields in FilterType Tables:</h4>
+        <p class="Caution">If you have filters using this naming convention (and would therefore be included in the delete), please manage accordingly.</p>
+        <p><span class="Emphasis">IMPORTANT:</span> Any Filters using the deprecated columns will be broken when running these.</p>
+        <MadCap:codeSnippet>
+            <MadCap:codeSnippetCopyButton />
+            <MadCap:codeSnippetBody MadCap:useLineNumbers="False" MadCap:lineNumberStart="1" MadCap:continue="False" xml:space="preserve">DELETE TCFMVD
+        FROM dbo.tbl_FilterType TFT
+JOIN dbo.tbl_Common_Filter_MetaViewData TCFMVD ON TCFMVD.FilterTypeID = TFT.FilterTypeID WHERE TFT.FilterTypeDescription LIKE 'z~%'
+        DELETE TFCV
+        FROM dbo.tbl_FilterType TFT
+JOIN dbo.tbl_FilterCriteria TCFMVD ON TCFMVD.FilterTypeID = TFT.FilterTypeID
+JOIN dbo.tbl_FilterCriteriaValue TFCV ON TFCV.FilterCriteriaID = TCFMVD.FilterCriteriaID WHERE TFT.FilterTypeDescription LIKE 'z~%'
+        DELETE TCFMVD
+        FROM dbo.tbl_FilterType TFT
+JOIN dbo.tbl_FilterCriteria TCFMVD ON TCFMVD.FilterTypeID = TFT.FilterTypeID WHERE TFT.FilterTypeDescription LIKE 'z~%'
+DELETE TFT
+FROM dbo.tbl_FilterType TFT
+WHERE TFT.FilterTypeDescription LIKE 'z~%'</MadCap:codeSnippetBody>
+        </MadCap:codeSnippet>
+        <h2><a name="3.6.1"></a><strong>3.6.1</strong>
+        </h2>
+        <p><strong>Update Script (6.8.22.0_3.6.1.0_JEUpdate)</strong>
+        </p>
+        <p><strong>Schema Standardization</strong>
+        </p>
+        <p>SET options are a series of settings in SQL server that dictate how it should handle something unexpected. In very old versions of SQL Server, these settings were defaulted to OFF. Over time, they have been defaulted to ON in newer SQL Server versions. They were changed to comply with ANSI standards, and to prevent unexpected behavior.</p>
+        <p>In ToolsGroup JustEnough, we are now requiring that all the recommended SET options are set to ON (specifically, ANSI_NULLS, ANSI_WARNINGS, ANSI_PADDING, and QUOTED_IDENTIFIER). This could mean changing behavior in custom or older database code that relies on the old OFF settings. For instance, setting ANSI_NULLS to OFF allow the following statement to find records where the column is empty: "SELECT * FROM table WHERE column = NULL." When it is ON, it more correctly returns no records; to find empty records, you must use the syntax "SELECT * FROM table WHERE column IS NULL" (note the change from "=" to "IS").</p>
+        <p>Subsequent releases of TG JE will not be compatible with code compiled with the SET options set to OFF. This is the warning that these pieces of code must be inspected and changed to expect the SET options to be ON. For future development, take the steps included in the SQL Standards Appendix to ensure your environments always use correct SET options:</p>
+        <ol>
+            <li>All scripts SET the standard options as part of the preface in the script (use Templates for ease in achieving this).</li>
+            <li>Set options in Management Studio.</li>
+        </ol>
+        <p>For existing implementations, use the following new script to find objects with the incorrect SET options: EXEC utility.ScriptObjectSETOptions_CheckAndModify @bDoChanges = 0</p>
+        <p>
+            <img src="../../Resources/Images/Upgrade Playbook (Template) images/Untitled 1.png" class="LargeImages" />
+        </p>
+        <p>The output will show you the list of objects in violation for each SET option.
+</p>
+        <p>Many of the invalid SET options can be changed automatically. Running the same procedure with the input @bDoChanges set to 1 will change those that can be automatically changed (statements will print out reporting the success or failure of doing each modification).</p>
+        <p>
+            <img src="../../Resources/Images/Upgrade Playbook (Template) images/Untitled 2.png" class="LargeImages" />
+        </p>
+        <p class="BasicNote">Some objects will need to be changed manually</p>
+        <h2>3.6.2 </h2>
+        <h3> Update Script (6.8.22.0_3.6.2.0_JEUpdate)</h3>
+        <div class="Note_BasicNote">
+            <p>Before running the upgrade script, please note that there is an error in the constraint configuration for version 3.6.2. Specifically, for constraints that are configured to use "Cost" as the method, the Cost Types shown in the dropdown belong to the old cost table (tbl_CostType). The cost types that are relevant for constraints, and the cost values that are actually queried when applying constraints, are those defined in tbl_Common_CostType. This means that environments that use Cost constraints will need manual updating to ensure that the correct cost types are referenced. </p>
+            <p>Please note that only constraints that use Cost types specifically are affected; the Default Cost Type is not included in this issue. The upgrade script will drop the foreign key on tbl_Constraint that erroneously references tbl_CostType, and it will attempt to apply a foreign key that references tbl_Common_CostType if there are no constraints with cost types configured. However, if there are constraints with cost types configured, the upgrade script will not attempt to do any kind of automated switchover.</p>
+        </div>
+        <p>The user should do the following:</p>
+        <ol>
+            <li>Before upgrading, identify the constraints that use the Cost method, and find the Cost Types specified in those constraints.
+				<p><MadCap:codeSnippet><MadCap:codeSnippetCopyButton /><MadCap:codeSnippetBody MadCap:useLineNumbers="False" MadCap:lineNumberStart="1" MadCap:continue="False" xml:space="preserve">SELECT * FROM dbo.tbl_Constraint
+WHERE CostTypeID IS NOT NULL;</MadCap:codeSnippetBody></MadCap:codeSnippet></p></li>
+            <li>Examine the cost types listed in tbl_CostType and tbl_Common_CostType, and determine a mapping between the two. You should also examine tbl_InventoryCost (which is deprecated as of 3.6.1 and links to tbl_CostType), and tbl_Inventory_Cost (which is the correct cost table, and links to tbl_Common_CostType). If there exists a CostTypeID in tbl_CostType that doesn't actually contain any data in tbl_InventoryCost, then the constraint that references that CostTypeID is probably invalid (since it won't find any cost data to actually use in constraining), and you might consider deleting that constraint.</li>
+            <li>Determine an action plan to migrate all CostTypeID references for relevant constraints. <p class="BasicNote">If ConstraintMethodID is not 5 (this is the "Cost" type identifier), then you could just NULL out the CostTypeID reference, since it is not going to be used when the constraint is applied.</p></li>
+            <li>Apply the upgrade. You will get an error message that says 'Cost types associated with constraints could need manual examination. Please refer to the upgrade manual for guidance.' These specific steps are what this error message is referring to.</li>
+            <li>After upgrade, apply your updates to cost types. Note that, after the upgrade, the only cost types you will see in the Constraint module drop-down are the ones in tbl_Common_CostType.</li>
+            <li>After your data migrations are complete, add the correct foreign key to the constraint table 
+					<MadCap:codeSnippet><MadCap:codeSnippetCopyButton /><MadCap:codeSnippetBody MadCap:useLineNumbers="False" MadCap:lineNumberStart="1" MadCap:continue="False" xml:space="preserve">ALTER TABLE dbo.tbl_Constraint ADD CONSTRAINT FK_tbl_Constraint_CostTypeID FOREIGN
+KEY(CostTypeID) REFERENCES dbo.tbl_Common_CostType(CostTypeID);</MadCap:codeSnippetBody></MadCap:codeSnippet></li>
+            <li>Warnings when upgrading the Standard Database – These warnings are intended to inform the user that there is some data inconsistency in need of attention (section above)
+			<p><img src="../../Resources/Images/Upgrade Playbook (Template) images/Untitled 3.png" /></p></li>
+        </ol>
+        <h3>New Daily/Weekly Task(s)
+        </h3>
+        <ol>
+            <li>(Daily) Size Similarity [Disable as Default]: The size similarity functionality is designed to alter live data. The maintenance procedure is designed to be run as part of a periodic maintenance job, but its initial deployment should be executed with caution.</li>
+            <li>(Daily) Calendar TimeFrameBucket Generation: Standard Nightly Process that will align the Cache to the current Time Frame Definition</li>
+            <li>(PR) (Daily) Promotion\Event Export: Exports Events and associated Promotions and optionally NA Promotions</li>
+            <li>(RP) (Daily) Order Document Generation: A schedulable task that generates orders as part of scheduled jobs</li>
+            <li>(PR) (Weekly) Promotion\Event Export Cleanup:Maintenance task for Promotion\Event Exports</li>
+        </ol>
+        <h3>Changed Daily/Weekly Task(s)
+        </h3>
+        <ol>
+            <li><span class="Emphasis">(AL) (Daily) Maintenance: Prepare Strategies for Calculation</span> <p style="color: #FF0000;">[Breaking Change]</p><p>Daily Maintenance Procedure to prepare allocation strategies for calculation. This procedure previously required a task after it in the daily to wait for it to finish. This is not needed anymore. Performance has also been improved.</p><p><MadCap:codeSnippet><MadCap:codeSnippetCopyButton /><MadCap:codeSnippetBody MadCap:useLineNumbers="False" MadCap:lineNumberStart="1" MadCap:continue="False" xml:space="preserve">DECLARE @IDList Common_IntegerCollection
+EXEC dbo.usp_Allocate_Common_Inventory_Cache_Manager @iUserID = 1,
+@tAllocateStrategyIDList = @IDList,
+@bIsSynchronousFlag = 1,
+@bRebuildForecasts = 1,
+@bRebuildAllStrategies = 1,
+@bDebug = 0
+</MadCap:codeSnippetBody></MadCap:codeSnippet></p></li>
+            <li><span class="Emphasis">(Daily) Maintenance: All modules</span> <p style="color: #FF0000;">[Breaking Change]</p><p>A new procedure (utility.TempSchemaObjects_Drop.sql) which executes within the standard weekly task
+(core.Maintenance_AllModules_Weekly.sql) will drop objects within the temp schema. Any custom code
+referencing or otherwise depending on these objects should be updated.</p></li>
+            <li>(AL) (Daily) Calculate Exceptions [Remove]
+<p>The engine does this now.</p></li>
+        </ol>
+        <h3>New Job Tasks</h3>
+        <p class="BasicNote">With 3.6.2, the new Workload Queue Job Tasks better handles parallel processing and can be configured once to account for all Process Types (e.g. Inventory or Level Forecast, Price Actions, etc.) per timeframe ‘bucket’ (i.e. Daytime, Nightly and Weekend) or configured multiple times, per ‘bucket’ for larger scale server setups for higher input-output processing. Each Job Task will need to be identified with a unique ‘Marshal ID’ within each ‘bucket’ (i.e. Day Time, Nightly, and Weekend) to ensure accurate Workload Queue processing and logging. As good practice for debugging purposes, include the ‘Marshal ID’ in the Job Name.</p>
+        <h3>New User Rights
+        </h3>
+        <ol>
+            <li>Configuration<ul><li>
+Allow Deletion of Connections
+</li></ul><ul><li>Allow updating of Connections</li></ul></li>
+            <li>Content
+o Config<ul><li> Config – Allow Access To content Config</li><li>
+Config – Allow Creation Of Content Version</li><li>
+Config – Allow Deleting Of Content Version</li><li>
+Config – Allow Editing Of Content Field</li><li>
+Config – Allow Editing Of Content Version</li></ul></li>
+            <li>Forecast Definition<ul><li>
+Allow forecast Method Sets</li></ul></li>
+            <li>Site Manager<ul><li>
+Allow Deleting of Placeholder Sites</li><li>
+Allow Updating of Placeholder Sites</li></ul></li>
+            <li>Size<ul><li>
+Allow a user the ability to associate sizes and mark a similarity set as active or not</li><li>
+Allow a user the ability to delete size similarity set</li><li>Allow a user the ability to run the procedure that migrates size similarity sets</li></ul></li>
+            <li>Time Frame Maintenance<ul><li>Access to Time Frame Maintenance Module</li></ul></li>
+            <li>Variant manager<ul><li>Allow Maintaining of Prepacks</li></ul></li>
+            <li>Workload Queue<ul><li>Allow Workload Queue Configuration</li></ul></li>
+        </ol>
+        <h3>New System Policies</h3>
+        <ol>
+            <li>Allocate Engine Reservation Mode: How should stock be reserved when stock reservations are enabled? Pre-Reserved: Stock on Hand, then the soonest Purchase Order, then the latest Purchase Order. Time Phased: Latest PO, then soonest PO, then Stock on Hand.</li>
+            <li>Status Options [Additional Statuses]: 17: First Receivable &amp; 18: Apogee</li>
+            <li>Forecast Retrend Method To Use: The choice between PID (A proportional–integral–derivative controller) and Monte Carlo Technique (R Endpoint Required)</li>
+            <li>Notification Target Widget UUID: UUID for the Allocation Strategy Widget within the Allocation Strategy ViewCollectionSet. This is currently used by the Notifications Linking system so that when a user clicks on a Notification deep link they will be switched to the Allocations Module and the correct View within the module.</li>
+            <li>The RScript Service URL: For example <a href="http://localhost/JustEnough.R.API/">http://localhost/JustEnough.R.API/</a></li>
+            <li>Time Frames: Max Days Forward For Schedule Set End Date:
+The number of days forward from today to allow a time frame to be set with regard to Schedule Sets</li>
+            <li>Time Frames: Max Days Back For Schedule Set Start Date:
+The number of days back from today to allow a time frame to be set with regard to Schedule Sets</li>
+            <li>Template Format String for KCluster Collection Item Partition:
+Enables user to modify the naming convention used when creating KClusters with Item Partitioning</li>
+            <li>Template Format String for KCluster Collection Site Item Partition:
+Enables user to modify the naming convention used when creating KClusters with Item/Site Partitioning</li>
+            <li>Template Format String for KCluster Collection Site Partition:
+Enables user to modify the naming convention used when creating KClusters with Site Partitioning</li>
+            <li>Suppress Content Image Card's Add Option: If set to ‘True’, prevents you from adding a local or network Image to Content Manager by suppressing the Add button from the Images toolbar.</li>
+            <li>Save the LLY data for hybrid financial plans: When set to true LLY data is saved on initialize and during maintenance.</li>
+            <li>Use Supplier Receipts Only for Historic Receipts: Use tbl_SupplierReceipts solely for historic receipts in MFP and not a combination of tbl_SupplierReceipts, tbl_SupplierOrderHeader, and tbl_SupplierOrderLine.</li>
+            <li>Max Number of Sizes in Size Range:
+Maximum number of sizes allowed in a size range</li>
+            <li>Size Similarity: Max Wait Minutes for Garbage Collection
+Maximum number of minutes to wait after a log date until the system can garbage collect (Default 30 days)</li>
+            <li>Allow Synchronize Users To NameServer:
+Allows Synchronization of user accounts between the TG JE Database and a NameServer</li>
+            <li>The NameServer Service URL: For example <a href="http://localhost/JustEnough.NameServer.API/">http://localhost/JustEnough.NameServer.API/</a></li>
+        </ol>
+        <h2>3.7.0</h2>
+        <h3>Update Script (6.8.22.0_3.7.0.0_JEUpdate)        </h3>
+        <div class="Note_Caution">Possible Error Message: In the unlikely event that this error occurs while upgrading a client database, it is essential to reach out to the Support Team to establish the best course of action<p><img src="../../Resources/Images/Upgrade Playbook (Template) images/Untitled 4.png" /></p><p><MadCap:codeSnippet><MadCap:codeSnippetCopyButton /><MadCap:codeSnippetBody MadCap:useLineNumbers="False" MadCap:lineNumberStart="1" MadCap:continue="False" xml:space="preserve">SELECT * FROM tbl_Promotion P
+WHERE NOT EXISTS (Select 1 from clusterSite.clusterSet 
+WHERE ClusterSetID = P.ClusterSetID)</MadCap:codeSnippetBody></MadCap:codeSnippet></p><p style="color: #FF0000;">Regardless of the resolution of this error, it is essential that the script is re-executed after resolution to add the foreign key, which will ensure this error does not happen again.</p></div>
+        <h3>New System Policies: Some system policies must be configured before calibration.            </h3>
+        <ol>
+            <li>Allow Synchronize Users to Nameserver – Setting this policy to true will synchronize the users in the database to the nameserver the next time a user gets created/updated.</li>
+            <li>API - Validate user session of a batch – When True, the system will validate that the user session matches the one that created the batch. When False, the user session will be substituted by the one which created the batch to pass validation.</li>
+            <li>Demand Transference Sample History Days – Days of fulfillment history used to calculate the demand transference split factor.</li>
+            <li>Column Max – Maximum count of rows within an Item Manager document.</li>
+            <li>Row Max – Maximum count of rows within an Item Manager document.</li>
+            <li>Price Action Calendar View Collection Set – The View Collection Set is used to display the pricing changes, for a product, over time. This should not be modified without assistance from TG JE personnel.</li>
+            <li>Price Action View Collection Set – A View Collection Set that may be configured to display
+			information in the context of a Price Action (e.g. reports).</li>
+            <li>Use Logistical Projections – Action a secondary run which is considerate of logistical constraints (i.e.
+			pre-pack assignment) as a post-process to the optimized allocation engine run.</li>
+        </ol>
+        <h3>New Rights:    </h3>
+        <ol>
+            <li>Filters - Edit private filters –Allows users to view and edit other users’ private filters. Similar to the "system user" flag, but without exposure to the breadth of TG JE</li>
+        </ol>
+        <h2>3.7.1        </h2>
+        <h3>Update Script (6.8.22.0_3.7.1.0_JEUpdate.sql)        </h3>
+        <p class="BasicNote"><span class="Emphasis">Migration:</span> The Allocations, Time Frame, and SiteProduct Exclusions functionality have been updated to use new table structures. The update script includes a procedure called "dbo.usp_MigrateAll" that migrates standard functionality from the old table structures to the new ones. If you have customized the old tables, the migration script may not work as intended and will require further investigation.</p>
+        <h3>New/Changed System Policies     </h3>
+        <ol>
+            <li>Event.DefaultSlotSetTemplateID - Event.DefaultSlotSetTemplateID</li>
+            <li>Replenish.OrderProcessingLeadTimeType: How should order processing lead time be treated? 
+					<ol><li>0 = Calendar days meaning order processing lead time is the exact number of calendar days. </li><li>1 = Business days meaning order processing lead time only counts business days. For example, if a business is only open M-F as defined by its schedule, order processing lead time will skip sat/sun (and hence higher overall number of real days). Default=0</li></ol></li>
+        </ol>
+        <h3>New Rights        </h3>
+        <ol>
+            <li>Widgets - Configure Dashboard Widget</li>
+            <li>Essentials Assortment Planning - Allow selection of optional views on Line Visualization and Image View</li>
+        </ol>
+        <h2><a name="2019.1"></a>2019.1</h2>
+        <h3>Update Script (6.8.22.0_2019.1.0.0_JEUpdate) </h3>
+        <p class="Important" style="color: #FF0000;">From 2019.1 onward, it is essential that all compute nodes are entered into this view, including the engine services installed on the same server as the Compute Manager Service (for which localhost will work but should still be updated)</p>
+        <h3>New/Changed System Policies </h3>
+        <ol>
+            <li>Inventory Manager
+					<ol><li>Stock Projection Graph Series
+							<ol style="list-style-type: lower-roman;"><li>Projection Graph Series Visible (CSV):
+			<p><img src="../../Resources/Images/Upgrade Playbook (Template) images/Untitled 5.png" class="LargeImages" /></p></li></ol></li></ol></li>
+            <li>Engine
+			<ol><li>Items per chain thread
+				<ol style="list-style-type: lower-roman;"><li>Number of items per chain thread.</li></ol></li><li>Maximum Chain Input Queue
+							<ol style="list-style-type: lower-roman;"><li>Maximum chain input queue length allowed. This limits the number of work items in the chain input queue.</li></ol></li></ol></li>
+            <li>Allocation<ol><li>Product Model - Use Advanced Calculation<ol style="list-style-type: lower-roman;"><li>Whether to use the new version of the Product Model calculation</li></ol></li><li>API<ol style="list-style-type: lower-roman;"><li>API - Wait Minutes - Before Record Log Table Garbage Collection
+						<p>Maximum Time before clearing the record log tables</p></li></ol></li><li>Module: Financial Planning
+							<ol style="list-style-type: lower-roman;"><li>Include DC Stock Split into EOP / BOP
+									<ul><li>Whether to include DC stock, which is split into channels during actualization, into
+the rolling EOP / BOP calculations.</li></ul></li></ol></li><li>RateOfSaleCalculator
+				<ol style="list-style-type: lower-roman;"><li>Currency
+				<ul><li>The currency ID to use in the Rate of Sale module.</li></ul></li></ol></li><li>Assortment
+				<ol style="list-style-type: lower-roman;"><li>Allow Strict Site Exclusion
+				<ul><li>Site Exclusion is controlled at either Placeholder [True] or PlaceholderInstance [False]</li></ul></li></ol></li><li>Diagnostic
+				<ol style="list-style-type: lower-roman;"><li>Diagnostic: Allow System Diagnostic Capturing<ul><li>Policy that will allow the system to capture diagnostic logs when true.</li></ul></li></ol></li><li>Publisher / Subscriber Framework
+				<ol style="list-style-type: lower-roman;"><li>Maximum MilliSeconds Age Of Pub / Sub Logs
+				<ul><li>Maximum MilliSeconds Age Of Pub / Sub Logs (A Value Of 0 Will not Allow Logs To Expire)</li></ul></li></ol></li></ol></li>
+        </ol>
+        <h3>New Rights       </h3>
+        <ol>
+            <li>Item Manager
+					<ol><li>Allow Stock Projection Series Configuration</li><li>Allow Stock Projection Calculation Using Advanced Calc button<p><img src="../../Resources/Images/Upgrade Playbook (Template) images/Untitled 6.png" class="LargeImages" /></p></li></ol></li>
+            <li>Forecasts<ol><li>Allow Series Configuration
+			<p><img src="../../Resources/Images/Upgrade Playbook (Template) images/Untitled 7.png" class="LargeImages" /></p></li></ol></li>
+        </ol>
+        <h2>2019.2</h2>
+        <h3>Update Script (2019.2.0.0_JEUpdate) </h3>
+        <h3>New/Changed System Policies</h3>
+        <ol>
+            <li>Module: Inventory Policy
+					<ol><li>Safety Stock Use New Calculation: New safety stock calculation will look at order histories to determine lead times and calculates the historical forecasting error to speculate on how much uncertainty there is and picks a safety stock value off of that.</li><li>Safety Stock Use Inactive Items: Whether or not the revised safety stock calculation considers inactive items when determining historical lead time and forecast accuracies</li><li>Safety Stock Start Date: Start date for revised safety stock calculations. Orders and snapshots before this date are not considered</li></ol></li>
+            <li>Module: Filters
+				<ol><li>Mark filters as static after X days of non-use: Will update a filter to static after this many days of non-use within the system</li></ol></li>
+            <li>Module: Financial Planning
+			<ol><li>MFP Plan Size Threshold: Set an arbitrary size threshold for comparison to a PlanID's number of Product/Channel/Period combinations. Exceeding the threshold will result in running the process in the WorkManager Queue.</li></ol></li>
+            <li>Module: Price Planning
+					<ol><li>Advanced Validation Log: When this policy is set to 'False', the system will display failed Validations at the Inventory level. When the policy is set to 'True', the system will group Inventory failed Validations up to the Variant level and Site (i.e. suppressing Item Master).
+The system will also allow overrides to be acted upon at the Variant level if configured.</li></ol></li>
+        </ol>
+        <h3>New/Changed Job Manager Tasks</h3>
+        <ol>
+            <li>Cleanup of historical Price Actions and Plans: This job will cleanup historical Pricing Plans and Actions to maintain the database growth. The system will delete Price Actions first then Pricing Plans. The system will delete all Pricing Plans and Actions that have been deleted. For Pricing Plans and Actions that have been exported, three parameters are provided to configure any necessary retention period, in days after the Start Date, the customer might require.
+				<ol><li>Derelict Price Action Retention - Price Actions that were created with a Start Date in the past that were never acted on</li><li>Exported Price Action Retention - Price Actions that were executed with a Start Date in the past.</li><li>Pricing Plan Retention - Pricing Plans with a Start Date in the past
+					<p><img src="../../Resources/Images/Upgrade Playbook (Template) images/Untitled 8.png" class="LargeImages" /></p></li></ol></li>
+        </ol>
+        <h2>2019.3</h2>
+        <h3>Update Script (2019.3.0.0_JEUpdate)        </h3>
+        <h3>New/Changed System Policies        </h3>
+        <ol>
+            <li>Module: Assortment Plan
+					<ol><li>Allow Receipts After Markdown: Allow Receipts After Markdown. This allows engine to order
+stock after Markdown Date.</li><li>Style Bank Line Visualization Maximum number SQL Data Rows: The maximum number of
+SQL data rows that can be queried in the Style Bank in the Line Visualization view.</li><li>VAT Rounding Digits: The number of digits to round to when calculating historical VAT. A
+number 4 here means that the VAT value will be rounded to 0.xxxx, or xx.xx%.</li></ol></li>
+            <li>Module: Promotions
+					<ol><li>Promotions Applied to Markdown Default: Determines default property of whether promotions can be applied to a markdown period for an item. This can be overwritten at a
+promotion and promotion application level. If True, the default is that promotions can be
+applied to markdown periods.</li></ol></li>
+            <li>Module: Price Planning
+					<ol><li>Default SlotSetTemplateID: Set default SlotSetTemplateID for creating a new slot set</li><li>Product Pricing Level: The system policy determines the level at which the system will allow
+the generation of pricing (execution of calculations and validations) within the solution. Setting
+the value to Variant\Site and Item\Site Pricing will allow users to manipulate the generation
+of pricing at a high level (Variant\Site) as well as have greater control and degree of
+manipulation of pricing at a lower level (Item\Site). All Price Actions within a Pricing Plan will be limited to either Variant\Site or Item\Site pricing.</li></ol></li>
+        </ol>
+        <h3>New View(s)</h3>
+        <ol>
+            <li>Assortment Planning
+					<ol><li><div class="Note_BasicNote">Top Down Sales Plan
+						<p>To initialize the new Assortment Planning, after importing it by either using the import utility or the Views module, execute the following procedures:</p><MadCap:codeSnippet><MadCap:codeSnippetCopyButton /><MadCap:codeSnippetBody MadCap:useLineNumbers="False" MadCap:lineNumberStart="1" MadCap:continue="False" xml:space="preserve">exec ViewControl.GeneralTables_INIT-- Updates viewcontrol for assortment with appropriate view IDs
+exec ViewControl.SetDataMain_Select 1-- Returns viewcontrol configuration</MadCap:codeSnippetBody></MadCap:codeSnippet><p><img src="../../Resources/Images/Upgrade Playbook (Template) images/Untitled 9.png" class="LargeImages" /></p><p>When opening up an Assortment Plan in DM, the new Top Down Sales Plan will be visible.</p></div></li></ol></li>
+            <li>Engine Chaining
+			<ol><li><p>This view allows users to configure and activate Engine chains.</p><p><img src="../../Resources/Images/Upgrade Playbook (Template) images/Untitled 10.png" class="LargeImages" /></p></li></ol></li>
+        </ol>
+        <h2>2019.4</h2>
+        <h3>Update Script (2019.4.0.0_JEUpdate)        </h3>
+        <h3>New/Changed System Policies        </h3>
+        <ol>
+            <li>Module: Assortment Plan
+					<ol><li>Allow Receipts After Markdown: Allow Receipts After Markdown. This allows the engine to order stock after the Markdown Date</li><li>Style Bank Line Visualization Maximum number SQL Data Rows: The maximum number of SQL data rows that can be queried in the Style Bank in the Line Visualization view.</li><li>VAT Rounding Digits: The number of digits to round to when calculating historical VAT. A number 4 here means that the VAT value will be rounded to 0.xxxx, or xx.xx%</li></ol></li>
+            <li>Module: Promotions
+					<ol><li>Promotions Applied to Markdown Default: Determines default property of whether promotions can be applied to a markdown period for an item. This can be overwritten at a
+promotion and promotion application level. If True, the default is that promotions can be applied to markdown periods.</li></ol></li>
+            <li>Module: Price Planning
+					<ol><li>Default SlotSetTemplateID: Set default SlotSetTemplateID for creating a new slot set</li><li>Product Pricing Level: The system policy determines the level at which the system will allow
+generation of pricing (execution of calculations and validations) within the solution. Setting
+the value to Variant\Site and Item\Site Pricing will allow users to manipulate the generation
+of pricing at a high level (Variant\Site) as well as have greater control and degree of
+manipulation of pricing at a lower level (Item\Site). All Price Actions within a Pricing Plan will be limited to either Variant\Site or Item\Site pricing</li></ol></li>
+        </ol>
+        <h3>New View(s)</h3>
+        <ol>
+            <li>Assortment Planning
+			<ol><li>Assortment Promotion Detail
+				<p><img src="../../Resources/Images/Upgrade Playbook (Template) images/Untitled 11.png" class="LargeImages" /></p></li></ol></li>
+        </ol>
+        <h2>2020.1</h2>
+        <h3>Update Script (2020.1.0.0_JEUpdate)</h3>
+        <h3>New/Changed System Policies</h3>
+        <ol>
+            <li>API - Update Inventory Lead Time Days with Host System Lead Time: When set to True, the Import Process will update Lead Time Days with the provided Host System Lead Time Days. If the Host System Lead Time Days is not provided, the Import process will retain the existing value on update. On Insert, the value will be set to default when Host System Lead Time Days is not provided.</li>
+            <li>New Placeholders Added to Promotions Default: Determines the default selection for whether the option for adding new placeholders to promotions on creation is set to true or false.</li>
+            <li>New Placeholders Added to Promotions Filter Limit: The number of product filters that will be refreshed when new placeholders are added and their promos are to be refreshed. Increasing this value will have performance implications when creating new placeholders.</li>
+            <li>Promotion Causal Export Destination: URL for Promotion Causal Factor Export</li>
+            <li>Enable FX Neutralization in MFP: This policy enables or disables currency neutralization functionality. Default(False)</li>
+        </ol>
+        <h3>New/Changed Job Manager Tasks      </h3>
+        <ol>
+            <li>(MFP) (Weekly) Maintenance: FXNeutralization
+			<ol><li>Re-caches all FX neutralized values for future periods using current dates conversion rate</li><li>Requires <cite>Enable FX Neutralization in MFP</cite> policy to be set to True (Default is False)
+				<p><img src="../../Resources/Images/Upgrade Playbook (Template) images/Untitled 12.png" class="LargeImages" /></p></li></ol></li>
+        </ol>
+        <h3>Views, Widget &amp; Collections   </h3>
+        <ol>
+            <li>Inventory Manager
+			<ol><li>Aggregate Forecast
+				<p><img src="../../Resources/Images/Upgrade Playbook (Template) images/Untitled 13.png" class="LargeImages" /></p><p class="BasicNote">This view should be added to the Inventory Manager module.</p></li></ol></li>
+            <li>Assortment DC Split Factor
+			<p><img src="../../Resources/Images/Upgrade Playbook (Template) images/Untitled 14.png" class="LargeImages" /></p><p class="BasicNote">After importing the Assortment DC Split Factor view, execute the following procedure to initialize: EXEC assortment.GeneralTables_INIT</p><p><img src="../../Resources/Images/Upgrade Playbook (Template) images/Untitled 15.png" class="LargeImages" /></p></li>
+            <li>Price Header Variables<p><img src="../../Resources/Images/Upgrade Playbook (Template) images/Untitled 16.png" class="LargeImages" /></p></li>
+            <li>Stock Split Factor<p><img src="../../Resources/Images/Upgrade Playbook (Template) images/Untitled 17.png" class="LargeImages" /></p></li>
+        </ol>
+        <p class="BasicNote">2020.2 (Skipped Version Number)</p>
+        <h2>2020.3</h2>
+        <h3>Update Script (2020.3.0.0_JEUpdate)        </h3>
+        <h3>New/Changed System Policies        </h3>
+        <ol>
+            <li>Use Comparison Cluster Set Snapshots for Comparison Data: Target Creation - Calculation and Rationalization Processes. Indicates what time period of cluster set snapshots to use for Comparison metrics. A value of True (1) will use the snapshot active during the comparison time frame. A value of False (0) will use the cluster set snapshot active during the last period of the selected Window of Time for the scenario.</li>
+            <li>Force Single Dashboard Configuration: If [True] there will only be 1 Dashboard Configuration per Instance. If [False] each user will have their own Dashboard Configuration per Instance</li>
+            <li>Days to Ignore: Curves utilize the concept of "standard weeks." 365 is not divisible by 7, but 364 is, so one day needs to be ignored. Pick a date that is far from holidays, sales or other special events. Note that this only influence the shape of sales curves, not their magnitude</li>
+            <li>Day to Ignore Leap Year: Curves utilize the concept of "standard weeks." On leap years an additional day must be ignored.</li>
+            <li>Include Returns: Whether to include returns as negative sales when calculating curves, or to ignore them.</li>
+            <li>Disaster Model Product Hierarchy: The numeric hierarchy ID of the item master hierarchy to use for creating disaster models</li>
+            <li>Disaster Model Site Hierarchy: The numeric hierarchy ID of the site hierarchy to use for creating disaster models</li>
+            <li>Inventory Level Archive: active Inventory only: Option to archive Level Data for Active Inventory only.</li>
+            <li>Inventory Level Archive, batch size for data purge: How many rows per DELETE are allowed, to avoid locking the table (Max 5000).</li>
+            <li>Inventory Status Archive: active Inventory only: Option to archive Status Data for Active Inventory only.</li>
+            <li>Inventory Status Archive, Calendar ID for Snapshot Retention periods: The Calendar ID to use determine beginning and ending week and month dates.</li>
+            <li>Inventory Status Archive, Daily Snapshot Retention in Days: How many days back in time to retain Inventory Status values in the Archive where the data
+represent daily snapshots. Inclusive days-range back in time from "today". After this count of days, week and month snapshots will be preserved.</li>
+            <li>Inventory Status Archive, also keep SQL Server-oriented days-of-week "calendar" monthly and weekly: When retaining weekly or monthly snapshot data, in addition to any Calendar-based weeks
+and months, also keep the default corresponding first or last day of each SQL default period, relative to the keep the day closest to the start or the end of the week, relative to the Day of Week date part and day number.</li>
+            <li>Inventory Status Archive, monthly snapshot, use first or last day of the month: When retaining monthly snapshot data, keep the day closest to the start or the end of the
+month, relative to the Calendar, or default day-of-week numbering, scheme.</li>
+            <li>Inventory Status Archive, Total Retention Period in Days: How many days back in time to retain Inventory Status values in the Archive. Inclusive days range covering week and month snapshots. Decrease the range to decrease the quantity of data retained in the Inventory.InventoryStatusArchive table.</li>
+            <li>Inventory Status Archive, weekly snapshot, use first or last day of the week: When retaining weekly snapshot data, keep the day closest to the start or the end of the
+week, relative to the Calendar, or default day-of-week numbering, scheme.</li>
+            <li>Disable Action Level Calculate: If True the Calculate button at the Price Action Level will be disabled and users will need to select a single Cluster for Calculation.</li>
+            <li>Maximum Price Action Detail Tabs: The maximum number of Price Action Detail Tabs a Plan can have open</li>
+        </ol>
+        <h3>Views, Widget &amp; Collections</h3>
+        <ol>
+            <li>Assortment Planning
+			<ol><li><p>Assortment Out-of-Tier Report</p></li></ol></li>
+        </ol>
+        <ol start="2">
+            <p>
+                <img src="../../Resources/Images/Upgrade Playbook (Template) images/Untitled 18.png" />
+            </p>
+            <p>
+                <img src="../../Resources/Images/Upgrade Playbook (Template) images/Untitled 19.png" />
+            </p>
+            <li>Disaster Recovery
+			<ol><li>COVID-19 Retail Rescue Package<p><img src="../../Resources/Images/Upgrade Playbook (Template) images/Untitled 20.png" class="LargeImages" /></p></li></ol></li>
+            <li>Promotions
+			<ol><li>Promotion Columns
+					<p><img src="../../Resources/Images/Upgrade Playbook (Template) images/Untitled 21.png" class="LargeImages" /></p></li><li>Configuration in Promotion<p><img src="../../Resources/Images/Upgrade Playbook (Template) images/Untitled 22.png" class="LargeImages" /></p></li></ol></li>
+        </ol>
+        <h2>2020.4</h2>
+        <div class="Note_BasicNote">
+            <p>Repository Service</p>
+            <p>In 2020.4, using Gateway authentication enables the environment to use the Repository RESTful service and a GCP cloud repository.
+Up to now the default is still to have the repository files in the database, but using a cloud-based repository will require the environment to go through some data transformation.
+Switching from hosting the repository files in the database to a GCP repository is a breaking change and is not reversible.</p>
+        </div>
+        <h3>Update Script (2020.4.0.0_JEUpdate) </h3>
+        <h3>New/Changed System Policies   </h3>
+        <ol>
+            <li>Assortment.Config.EditabilityAUT [New]: This determines the means by which the AUT values can be set. The value of 1 means that AUT is editable through the UI only. A value of 2 means AUT is only managed through imports, and that Price Type must be set on the AP plans. A value of 3 means that AUT is managed through both imports and the UI, with a "last in wins" principle.</li>
+            <li>Assortment.Config.EditabilityReceiptAUC [New]: This determines the means by which the Receipt AUC values can be set. The value of 1 means that Receipt AUC is editable through the UI only. A value of 2 means Receipt AUC is only managed through imports, and that Cost Type must be set on the AP plans. A value of 3 means that Receipt AUC is managed through both imports and the UI, with a "last in wins" principle.</li>
+            <li>Assortment.Engine.DefaultFlowDateType [New]: When setting flow dates for hierarchy levels in the Assortment Default Flow Dates view, this is the value that will be used by default for all periods. The value of 0 indicates that the period may or may not be a receipt period; the engine will determine eligibility based on Periods Before Phase In and Flow Date Frequency settings. A value of 4 indicates that the period is a specifically opted-in receipt period. A value of 5 indicates the period is a specifically opted-out receipt period.</li>
+            <li>Assortment.Engine.FlowPeriodFromFirst [New]: When this is enabled, flow dates are generated using the Flow Period Frequency starting from the first pre-phase-in flow. If disabled, then flow dates are started from phase-in, effectively treating all pre-phase-in flows as having arrived at phase in.</li>
+            <li>Assortment.OrderManager.RequireReviewBeforeCommitment [New]: If True this requires Placeholders to be Reviewed before a Commitment is allowed to be generated</li>
+            <li>Assortment.Seed.PlaceholderCollectionDescription [New]: This is the description used for newly generated placeholder collections from the seed process, followed by the Style description</li>
+            <li>Assortment.Seed.PlaceholderDescription [New]o&#160;This is the description used for newly generated placeholders from the seed process, followed by the Variant description</li>
+            <li>Common.Filter.MinimumDaysBeforeDeleteDynamicFilters [New]: Minimum Days Before Deleting Dynamic Filters created by users</li>
+            <li>OrderManager.HideColumnViewOrderManagerDocumentCaption [New]: The Column View, if chosen, is not added to the Order Manager Document Caption. It will be visible on the Tooltip.</li>
+            <li>PriceManager.AllowPriceMatrixInPlansDefault [New]: Sets the default Price Matrix Usage value for New Pricing Plans</li>
+            <li>PricePoint.Matrix.ViewCollectionSetID [New]: View Collection Set ID containing price point Matrix</li>
+            <li>Reporting.Performance.HardwareMonitoringAllowedToRun [New]: System flag which allows to stop/start hardware monitoring </li>
+            <li>Reporting.Performance.MinRunTimeSeconds [New]: Minimum number of seconds that engine job has to run to be included in the report</li>
+        </ol>
+        <h3>Views, Widget &amp; Collections        </h3>
+        <ol>
+            <li>Site Manager
+				<ol><li>Site Capacity Temporal<p><img src="../../Resources/Images/Upgrade Playbook (Template) images/Untitled 23.png" class="LargeImages" /></p></li></ol></li>
+            <li>Price and Markdown
+				<ol><li>Price Point Matrix<p><img src="../../Resources/Images/Upgrade Playbook (Template) images/Untitled 24.png" class="LargeImages" /></p><p><img src="../../Resources/Images/Upgrade Playbook (Template) images/Untitled 25.png" class="LargeImages" /></p></li><li>Price Manager Config<p><img src="../../Resources/Images/Upgrade Playbook (Template) images/Untitled 26.png" class="LargeImages" /></p></li></ol></li>
+            <li>Assortment Planning
+				<ol><li>Assortment Flow Dates<p><img src="../../Resources/Images/Upgrade Playbook (Template) images/Untitled 27.png" class="LargeImages" /></p></li><li>Assortment Target Report<p><img src="../../Resources/Images/Upgrade Playbook (Template) images/Untitled 28.png" class="LargeImages" /></p></li></ol></li>
+        </ol>
+        <h3>New/Changed Job Manager Tasks</h3>
+        <ol>
+            <li>(Price) Maintain Site Details: Initializes and updates pricemanager.SiteDetails table.</li>
+            <li>(PricePoint) Maintain Price Matrix: Maintains table pricepoint.MatrixEntity and associated widget</li>
+        </ol>
+        <h2>2021.1</h2>
+        <h3>Update Script (2021.1.0.0_JEUpdate)   </h3>
+        <h3>New/Changed Job Manager Tasks    </h3>
+        <ol>
+            <li>(Weekly) Cache: Inventory Pub Sub<p><img src="../../Resources/Images/Upgrade Playbook (Template) images/Untitled 29.png" class="LargeImages" /></p></li>
+            <li>(Weekly) Cache: Variant Pub Sub<p><img src="../../Resources/Images/Upgrade Playbook (Template) images/Untitled 30.png" class="LargeImages" /></p></li>
+            <li>(Weekly) Cache: Variant Site Pub Sub<p><img src="../../Resources/Images/Upgrade Playbook (Template) images/Untitled 31.png" class="LargeImages" /></p></li>
+            <li>(Weekly) Cache: Causal Pub Sub<p><img src="../../Resources/Images/Upgrade Playbook (Template) images/Untitled 32.png" class="LargeImages" /></p></li>
+        </ol>
+        <p class="BasicNote">Pub Sub does introduce a performance hit on the system, take some time to do performance optimization.</p>
+        <h2>2021.2</h2>
+        <h3>Update Script (2021.2.0.0_JEUpdate)  </h3>
+        <h3>Views, Widget &amp; Collections     </h3>
+        <ol>
+            <li>Target Item Master Group Cluster Configuration: Allows the configuration of Item Master Group X values with clusters, based off system policy value (Target Filter Item Master Group, default value is disabled) for Item Master Group X and allowed clusters in AP.
+			<p><img src="../../Resources/Images/Upgrade Playbook (Template) images/Untitled 33.png" class="LargeImages" /></p></li>
+            <li>Site Capacity Temporal: To configure Reversion Types that can be used to Create Price Actions designed to revert prices to a previous state.</li>
+        </ol>
+        <h2>2021.3</h2>
+        <h3>Update Script (2021.3.0.0_JEUpdate)   </h3>
+        <div class="Note_BasicNote">
+            <p>Single Execution is <span class="Emphasis">needed</span> for allocation clients after executing the upgrade script.</p>
+            <ul>
+                <li>EXEC dbo.usp_Allocate_Strategy_Channel_Migrate @iUserID = 1 </li>
+            </ul>
+            <p>Single Execution <span class="Emphasis">needed</span> after upgrade &amp; <span class="Emphasis">2 New Weekly Tasks</span> </p>
+            <ul>
+                <li>EXEC dbo.usp_Allocate_LocationStrategy_Rebuild_CacheData @iUserID = 1</li>
+                <li>EXEC dbo.usp_Allocate_ProductGroup_Rebuild_CacheData @iUserID = 1</li>
+            </ul>
+        </div>
+        <h3>Views, Widget &amp; Collections</h3>
+        <ol>
+            <li>Assortment By Site Report: Allow users to see information by site.</li>
+            <li>Receipt Constraint Comparison Report: Allows us to compare values of Default Calculated Receipt Plan vs User Manual Receipt Plan, summarizing placeholders in mass (based on time/product hierarchy) to display variation from (TG assumption - current default) default value.</li>
+        </ol>
+        <h3>New/Changed System Policies   </h3>
+        <ol>
+            <li>Allocations Product Model Default HierarchyID: Hierarchy to be configured in the Hierarchy Filtering view</li>
+            <li>Allocations Sales Plan Curves HierarchyID: Hierarchy to be configured in the Hierarchy Filtering view</li>
+            <li>Algorithm To Match Markdown Curve to Sales Plan: ◦ This policy determines what mechanism is used to match a markdown curve to a sales plan. The two options are Period Match - this will search for the markdown week within the markdown curve (on any year, LY, LLY, a future year, etc, depending on the configurations of the time periods of the curve and sales plan). Then it will match up subsequent periods one by one, looping the curve around as many times as necessary as to cover the whole markdown plan. A value of Scale To Fit will align the first period of the curve with the first period of the markdown plan. If the sizes of the curve and plan are different, the curve will either be compressed or elongated to match the size of the sales plan.</li>
+            <li>Markdown Curve Default Behavior: His policy controls what will happen to the markdown sales plan if no markdown curve is selected. The default selection of "True" will indicate that a line trending to zero will be used to decrease the sales plan to zero at phase-out. A selection of "False" will not slope the sales plan to zero, but leave the markdown sales plan unchanged.</li>
+            <li>Batch size used in Assortment Price / Cost Imports: The number of PlaceholderInstanceIDs processed in a single batch during imports.</li>
+            <li>Stock On Hand Actualization Batch Size: The number of periods' worth of Stock On Hand (Inventory Level Archive) data to actualize at once. If SOH actualization is taking a long time, reducing this number to iterate over smaller batches may improve performance.</li>
+            <li>Use Phase In Out: Will the replenish engine respect phase in and phase out for ordering.</li>
+            <li>Replenish Engine - Supplier Orders - Number Of Late Days Allowed: The number of days a supplier order may be late from its expected delivery date before it is no longer considered for a Replenish Engine calculation.</li>
+            <li>Promotions Activity Log Retention Days: Number of days to retain Promotions Activity Log data.</li>
+        </ol>
+        <h2>2021.4</h2>
+        <h3>Update Script (2021.4.0.0_JEUpdate)</h3>
+        <div class="Note_BasicNote">
+            <p><cite>Possible Error Message:</cite>
+            </p>
+            <p>
+                <img src="../../Resources/Images/Upgrade Playbook (Template) images/Untitled 34.png" />
+            </p>
+            <MadCap:codeSnippet>
+                <MadCap:codeSnippetCopyButton />
+                <MadCap:codeSnippetBody MadCap:useLineNumbers="False" MadCap:lineNumberStart="1" MadCap:continue="False" xml:space="preserve">UPDATE tbl_Promotion_Common_PriceCalculation
+       SET AggregationTypeID = 4
+WHERE AggregationTypeID = 6
+GO
+EXEC dbo.usp_INIT_Promotion_All</MadCap:codeSnippetBody>
+            </MadCap:codeSnippet>
+        </div>
+        <h3>Views, Widget &amp; Collections</h3>
+        <ol>
+            <li>Allocations Strategy Activation<p><img src="../../Resources/Images/Upgrade Playbook (Template) images/Untitled 35.png" class="LargeImages" /></p></li>
+            <li>Common Cost and Price Type Maintenance<p><img src="../../Resources/Images/Upgrade Playbook (Template) images/Untitled 36.png" class="LargeImages" /></p></li>
+            <li>Target Creation<p><img src="../../Resources/Images/Upgrade Playbook (Template) images/Untitled 37.png" class="LargeImages" /></p></li>
+            <li>Planalytics Variant Segment Link<p><img src="../../Resources/Images/Upgrade Playbook (Template) images/Untitled 38.png" class="LargeImages" /></p></li>
+        </ol>
+        <h3>New/Changed System Policies</h3>
+        <ol>
+            <li>Generate Omni Channel Strategies: When we generate a strategy, if a strategy is allowed to have multiple channels in one strategy select True. If we want a strategy line per channel variant select False. This will not change existing strategies.</li>
+            <li>Cost Type for Supplier Variant Cost: Cost Type associated with the Supplier Variant Cost within the Receipt Plan View.</li>
+            <li>Use the SORT_IN_TEMPDB REBUILD Index option: Use the SORT_IN_TEMPDB REBUILD Index option when drive topology and space available permit. Defaults to "True", i.e., "ON"</li>
+            <li>REBUILD "Very Large" and Larger Indexes ONLINE or OFFLINE: State whether to, by default, and as the SQL Edition and available disk space permit, perform "Very Large" and Larger Index REBUILD operations ONLINE or OFFLINE. If the database server is part of a SQL Availability Group (AG), this policy overrides the "Offline" setting that would be in place as a consequence of the presence of that AG environment.</li>
+            <li>AG-sensitive REBUILD "Very Large" and Larger Indexes ONLINE or OFFLINE: When under an Availability Group (AG), state whether to, by default, and as the SQL Edition and available disk space permit, perform "Very Large" and Larger Index REBUILD operations ONLINE or OFFLINE. If the database server is part of a SQL Availability Group (AG), and this policy is set to "Online", it overrides the default "Offline" setting that would be in place as a consequence of the presence of the AG environment.PriceAction</li>
+            <li>Limits Price Actions to delete per run: The number of Price Actions that may be deleted in a single execution.</li>
+            <li>Limits DEADLOCK retries: The number of DEADLOCK Retries that may be attempted per DML statement - overrides the default System Policy</li>
+            <li>Limit permanent Purge Batch data deletion: The number of Days after the last date-time when a Price Action Purge Batch was touched, after which Purge Batch data and associated table-data may be permanently removed from the database. Defaults to 2 years.</li>
+            <li>Auto Generated Price Action Limit: Sets Variant batch size for auto-generated PriceActions</li>
+            <li>Limits Price Plans to delete per run: Limits DEADLOCK retries</li>
+            <li>Limits DEADLOCK retries: Limit permanent Purge Batch data deletion</li>
+            <li>Limit permanent Purge Batch data deletion: Plan Exclude Markdowns Default Value</li>
+            <li>Rationalize: Marginal Return Curve Extrapolation: Target Creation - Rationalization Process. Integer representing the minimum number of data points required in each period for the system to use the original calculated intra-style marginal return curve in determining the number of recommended choices to assign to each recommended collection. If this minimum is not met, the system will calculate a weighted curve based on the original intra-style marginal return curve and a curve calculated at a higher level of the product hierarchy to provide a more accurate recommendation.</li>
+            <li>Cleanse: Active Variant Threshold Factor: Target Creation - Calculation and Rationalization Processes. Percentage of a variant's deseasonalized average sales that must be met for that period to be considered "Active". Formatted as a decimal (e.g. 0.3 = 30%).</li>
+            <li>Cleanse: Active Variant Time on Offer Minimum: Target Creation - Rationalization Process. Percentage of the scenario time frame that an item must have been on offer to be considered "Active". Formatted as a decimal (e.g. 0.31 = 31%).</li>
+            <li>Cleanse: Average Inclusion Threshold: Target Creation - Calculation and Rationalization Processes. Percentage of a variant's maximum sales that must be met for a period to be considered in the deseasonalization process. Periods of sales for the variant below the threshold will be removed before deseasonalization. Formatted as a decimal (e.g. 0.03 = 3%).</li>
+            <li>Cleanse: Median Period Total Threshold: Target Creation - Calculation and Rationalization Processes. Percentage of a periods's median sales that must be met for a period total to be considered in the deseasonalization process. Periods with total sales below the threshold will be overwritten with the percentage of the median. Formatted as a decimal (e.g. 0.5 = 50%).</li>
+            <li>Calculate: User Values in Carryover Data: Target Creation - Calculation Processes. Reference sales override values for Carryover Sales in Target Creation for future periods</li>
+            <li>Calculate: Cluster Set Snapshots for Comparison Data: Target Creation - Calculation and Rationalization Processes. Indicates what time of cluster set snapshots to use for Comparison metrics. A value of True (1) will use the snapshot active during the comparison time frame. A value of False (0) will use the cluster set snapshot active during the last period of the selected Window of Time for the scenario. This is only used if the Site Aggregation configuration is "Cluster," or if using Target Creation within Assortment Planning.</li>
+            <li>Calculate: Target Filter Item Master Group: Target Creation - Calculation and Rationalization Processes. Indicates which Item Master Group should be used to additionally filter placeholders in use by cluster. A value of 0 indicates this feature is not in use. The value should be 1 - 20 for an ItemMasterGroup 1 - 20 selection, or 21 for Variant, 22 for Style, and 23 for Color. This feature will only be used in with Target Creation in Assortment Planning.</li>
+            <li>Maintenance: Days To Keep Deleted Data: The maximum number of days that deleted data will be held (hidden) in the database. Set a lower number for more aggressive deleting and more space conservation.</li>
+            <li>Config: Product Hierarchy: The ID of the Variant hierarchy to use when creating scenarios in standalone mode (this property will be superceded by the Assortment Plan property if used in the context of AP).</li>
+            <li>Config: Site Hierarchy: The ID of the Site hierarchy to use when creating scenarios in standalone mode (this property will be superceded by the Assortment Plan property if used in the context of AP).</li>
+            <li>Config: Site Aggregation: The level to which the geographical dimension should be aggregated. The choices are Cluster (aggregate to cluster set / cluster level), Site (aggregate to site), and Level (aggregate to lowest hierarchy level). If choosing Cluster, cluster sets must be configured in the Site Clustering module with access allowing Target Creation.</li>
+            <li>Config: Calendar: The ID of the Calendar to use when creating scenarios in standalone mode (this property will be superceded by the Assortment Plan property if used in the context of AP).</li>
+            <li>Config: Period Type: The ID of the Period Type to use when creating scenarios in standalone mode (this property will be superceded by the Assortment Plan property if used in the context of AP).</li>
+            <li>Config: Currency: The ID of the Currency to use when creating scenarios in standalone mode (this property will be superceded by the Assortment Plan property if used in the context of AP).</li>
+            <li>Config: Target ViewCollectionSet UUID: The identifier (UUID) of the ViewCollectionSet that will be the primary UI within the module.</li>
+            <li>Calculate: Carryover Price Type: The ID of the Price Type to use when looking up price data to calculate Carryover Sales.</li>
+        </ol>
+        <h2>2022.1</h2>
+        <h3>Update Script (2022.1.0.0_JEUpdate)   </h3>
+        <h3>New/Changed System Policies   </h3>
+        <ol>
+            <li>SOH Actualization Source: Dictates which source of stock on hand data to use during actualization - Inventory level data, or aggregated Variant level data. Variant level data should be chosen to expedite performance, but only if maintenance or imports are set up to maintain Variant-level data. (Allowed Values: Inventory, Variant | Default Value: Inventory)</li>
+            <li>Retrend: Selling Days: The number days (which will be converted into periods) in which there must be positive sales before the item is included in retrending. (Allowed Values: Positive Integer | Default Value: 3)</li>
+            <li>Retrend: Max Multiplicative Factor: The maximum multiplicative factor that the system is allowed to use during the retrend calculation. (Allowed Values: Positive Integer | Default Value: 3)</li>
+            <li>Retrend: Min Multiplicative Factor: The minimum multiplicative factor that the system is allowed to use during the retrend calculation. (Allowed Values: Positive Double | Default Value: 0.1)</li>
+            <li>Retrend: Evaluation Window Size: The evaluation window size used during the retrend calculation. (Allowed Values: Inventory, Variant | Default Value: Inventory)</li>
+            <li>Stock On Hand Actualization Source: Dictates which source of stock on hand data to use during actualization - Inventory level data, or aggregated Variant level data. Variant level data should be chosen to expedite performance, but only if maintenance or imports are set up to maintain Variant- level data. (Allowed Values: True, False Default Value: False)</li>
+            <li>Include on Order in EOP / BOP: Whether to include On Order and On Order Past Due into the rolling EOP / BOP calculations. (Allowed Values: True, False Default Value: False)</li>
+            <li>Rainbow Pack PlaceholderCollection Grouping: Use PlaceholderCollection in the Rainbow Pack Grouping. If True the PlaceholderCollection is used in the grouping if False the Variant Style (Allowed Values: | Default Value: )</li>
+            <li>Price Planner View Collection Set: The View Collection Set will be docked with the Site Details tab in the Plan-Planning tab. The view collection will be passed the following parameters: @iUserID - the user using price planner @iConfigID - the currently selected price plan @iFilterMasterID - The selected filter in price planner, if Show Plan, Show All Sites, or Null is checked, then no filter is passed in @ShowMissingPrice1 - The value of the Show Missing Price 1 checkbox @ShowMissingPrice2 - The value of the Show Missing Price 2 checkbox @iVariantID - The selected variant of in the variant grid. (Allowed Values: Update with ViewCollectionSetID | Default Value: 0)</li>
+            <li>New Site Pricing Displayed Variant Page Limit: Sets the limit of the number Variants to be displayed per page within the New Site Pricing UI. The value of the setting should never exceed 200000. (Allowed Values: Positive Integer | Default Value: 1000)</li>
+        </ol>
+        <h3>Views, Widget Collections</h3>
+        <ol>
+            <li>Rainbow Pack Calculator</li>
+        </ol>
+        <h2>2022.2</h2>
+        <h3>Update Script (2022.2.0.0_JEUpdate)</h3>
+        <h2>2022.3</h2>
+        <p class="BasicNote">Version 2022.3 introduces Auth0 as authentication method, this method needs an internet connection to authenticate when logging into the User Interface.</p>
+        <h3>Update Script (2022.3.0.0_JEUpdate) </h3>
+        <h3>New/Changed System Policies </h3>
+        <ol>
+            <li>MFP Restrict Editability to Admin: Restrict the editability of the following metrics to users in the Administrators group: Shrink % Of Sales, Target Receipt Freight, Season Begin. A value of true requires users to be administrators; a value of false allows edit ability of these metrics for all users.</li>
+        </ol>
+        <h3>New/Changed Job Manager Tasks </h3>
+        <ol>
+            <li>(DF) (Monthly) Gradient Boosting Run Train Process: Job Manager Task that will run our Train Process. The propose frequency is a monthly cadence. The task will run for ALL ACTIVE Sites so this process can take a while. If you do not have an elastic environment, do not set the Batch Size greater than 1 since it may crash your machine.</li>
+            <li>(DF) (Weekly) Gradient Boosting Run Inference Process: Job Manager Task that will run our Inference Process. The proposed frequency is at a weekly cadence. It is dependent on the Train Process being completed. If you do not have an elastic environment, then you should not set the Batch Size greater than 1 that can cause severe performance degradations and even crash your machine.</li>
+        </ol>
+        <h2>2022.4</h2>
+        <h3>Update Script (2022.4.0.0_JEUpdate)  </h3>
+        <h3>New/Changed System Policies   </h3>
+        <ol>
+            <li>Safety Stock Calculation Type: Specifies what calculation strategy to run for Safety Stock Days with regards to Target Service Level.
+			<ol><li>Standard: The original and simplest safety stock days calculation. (Equivalent to Use New Safety Stock Calculation being set to false.)</li><li>Advanced: The second iteration of safety stock days calculation. (Equivalent to Use New Safety Stock Calculation being set to true.)</li><li>Stock to Service: Use TG SO99’s Stock-to-Service curve calculation</li></ol></li>
+        </ol>
+        <h3>New/Changed Job Manager Tasks </h3>
+        <ol>
+            <li>(AP) (Weekly) Assortment Maintenance External Refresh: Hook for running data during the weekly to fire External ingestion.</li>
+            <li>(RP) (Weekly) Calculate Stock to Service Network Forecast: Enabling the Stock-to-Service functionality requires an API key and URL from ToolsGroup Professional Services. Once configured, users must configure a new system policy labeled Safety Stock Calculation Type. The new system policy replaces existing system policy Use New Safety Stock Calculation which is deprecated as of TG JE v2022.4 (This is dependent on an SO99 implementation also implemented)
+					<ol><li>This process needs to run to calculate the following parameter values to calculate STS
+				<ol style="list-style-type: lower-roman;"><li>Average Demand Quantity: "AVEDEMQTY": Grab From STS.NetworkForecast</li><li>Average Demand Variability: "AVEVAR": Grab From STS.NetworkForecast</li><li>Average Order Line Frequency: "AVEDEMLOS": Grab From STS.NetworkForecast</li><li>Average Order Line Variability: "AVEVARLOS": Grab From STS.NetworkForecast</li></ol></li></ol></li>
+        </ol>
+        <h2>2023.1</h2>
+        <h3>Update Script (2023.1.0.0_JEUpdate) </h3>
+        <h3>Views, Widget &amp; Collections   </h3>
+        <ol>
+            <li>Real-Time Retail Dashboard (Onera integration required): To demonstrate to users that the Real-Time Retail solution works, the system shall provide insight that may be used instead of having to query or access our database.
+			<p><img src="../../Resources/Images/Upgrade Playbook (Template) images/Untitled 39.png" class="LargeImages" /></p></li>
+            <li>Stock to Service Curve (SO99+ integration required): This is the UI portion where JE incorporates SO99+ STS curve graph capabilities. SO99 STS curve graph shows the users how different service levels would affect their inventory SS days value. This graph removes a lot of guesswork allocators have to do to obtain a realistic SS days value. The graph also explains a little bit about how the SS days value was reached
+			<p><img src="../../Resources/Images/Upgrade Playbook (Template) images/Untitled 40.png" class="LargeImages" /></p></li>
+        </ol>
+        <h3>New/Changed Job Manager Tasks </h3>
+        <ol>
+            <li>Two new Workload queue tasks to add in the Job Manager if RTR is being used (Onera integration required)<p><img src="../../Resources/Images/Upgrade Playbook (Template) images/Untitled 41.png" class="LargeImages" /></p></li>
+        </ol>
+        <h2>2023.2</h2>
+        <h3>Update Script (2023.2.0.0_JEUpdate) </h3>
+        <div class="Note_Caution">
+            <p>The identity column Inventoryid on tbl_Inventory has been changed to not be an identity column, after executing the upgrade script you will need to execute the following:
+</p>
+            <MadCap:codeSnippet>
+                <MadCap:codeSnippetCopyButton />
+                <MadCap:codeSnippetBody MadCap:useLineNumbers="False" MadCap:lineNumberStart="1" MadCap:continue="False" xml:space="preserve">EXEC inventory.InventoryID_Range_Generate @UserID = 1, -- int
+                                          @Debug = 1   -- tinyint</MadCap:codeSnippetBody>
+            </MadCap:codeSnippet>
+        </div>
+        <h3>New/Changed System Policies </h3>
+        <p>Allocations</p>
+        <ol>
+            <li><span class="Emphasis">Allow Allocation from Creating and Activating inventories</span>: This system policy allows Allocation Strategies to activate and creating inventories that are part of its strategy. (Default Value: True)</li>
+            <li><span class="Emphasis">Generate Orders Starting Tomorrow or Today</span>: Clients can choose the date for generating recommended orders. When set to Tomorrow, the system generates recommendations starting on the following day. When set to Today, the system generates recommendations starting on the current day. This is for customers who are unable to action on RTR orders the day of and need one more day to process orders. This system policy works along with BatchExclusionProcess.TimeSinceLastEngineCalculation to reduce the batch process if this is enabled.</li>
+        </ol>
+        <p>Assortment Planning</p>
+        <ol>
+            <li><span class="Emphasis">Cleanse: Active Variant Total Minimum</span>: Target Creation - Calculation and Rationalization Processes. Percentage of the average all active variants'' total sales that must be met for a variant to be considered "Active". Formatted as a decimal (Default Value: 0.1 = 10%).</li>
+            <li><span class="Emphasis">Default: Use Cluster Constraint</span>: The default value for the property Use Cluster Constraint when segments are created. (Default Value: False)</li>
+        </ol>
+        <p>Engine</p>
+        <ol>
+            <li>Real-Time-Retail
+                    <ol><li><span class="Emphasis">Engine Batch Exclusions Process</span>: When the policy is enabled, the system will bypass any items (Allocation Strategy or Item Master) that have been deemed unnecessary to undergo the engine calculation process. Engine.BatchExclusionProcess is not a user system policy and is enabled by (Daily) Enable Batch Exclusion Process. The setting should not be enabled during the day when the system is operated by users.</li><li><span class="Emphasis">Time Elapsed Since Last Calculation for Batch Exclusion</span>: This system policy enables the client to configure the time interval used to determine if an engine calculation occurred within the specified time limit. The policy applies to all engines. Clients can configure this time interval by setting the value of this policy to the desired number of hours. If the value is set to 0 or a negative number, the default time interval of 18 hours will be used. This system policy depends on Engine.BatchExclusionProcess being enabled.</li><li><span class="Emphasis">Generate Orders Starting Tomorrow or Today</span>: Clients can choose the date for generating recommended orders. When set to Tomorrow, the system generates recommendations starting on the following day. When set to Today, the system generates recommendations starting on the current day. This is for customers who are unable to action on RTR orders the day of and need one more day to process orders. This system policy works along with BatchExclusionProcess.TimeSinceLastEngineCalculation to reduce the batch process if this is enabled.
+				</li></ol></li>
+        </ol>
+        <p>Price Planning</p>
+        <ol>
+            <li><span class="Emphasis">Auto Pricing Excluded Price Types</span>: Comma Delimited List of Excluded Price Type IDs that should not be considered during the Auto Pricing Process. Example: 1,2,3</li>
+        </ol>
+        <h3>New/Changed Job Manager Tasks</h3>
+        <p>Allocation &amp; Replenishment</p>
+        <ol>
+            <li><span class="Emphasis">Enable Batch Exclusion Process / Disable Batch Exclusion Process</span>: When Enable Batch Exclusion Process is ran, the system will bypass any items (Allocation Strategy or Item Master) that have been deemed unnecessary to undergo the engine calculation process. Running (Daily) Disable Batch Exclusion Process will allow the engine to process all items it is given.</li>
+        </ol>
+        <h2>2023.3</h2>
+        <h3>Update Script (2023.3.0.0_JEUpdate) </h3>
+        <h3>Views, Widget &amp; Collections</h3>
+        <p>Assortment Planning</p>
+        <ol>
+            <li>
+                <p>Target Choices By Update</p>
+                <p>
+                    <img src="../../Resources/Images/Upgrade Playbook (Template) images/Target Choices By Update.png" class="LargeImages" />
+                </p>
+            </li>
+        </ol>
+        <h3>New/Changed System Policies </h3>
+        <p>Allocations</p>
+        <ol>
+            <li>
+                <p><span class="Emphasis">Time Since Last Allocation Strategy Inventory Cache Calculation for Batch Exclusion</span>: This system policy enables the client to configure the time interval used to determine when to skip an Allocation Strategy Inventory Cache calculation if it occurred within the specified time limit. Clients can configure this time interval by setting the value of this policy to the desired number of hours. If the value is set to a negative number, the default time interval of 18 hours will be used.</p>
+            </li>
+        </ol>
+        <p>Target Choice Count</p>
+        <ol>
+            <li>
+                <p><span class="Emphasis">Default: Use Collection For Intra-Style Curve</span>: If false, then the system will use the variant's style for the intra-style curve. If true, the system will use the variant's placeholder's collection.</p>
+            </li>
+            <li>
+                <p><span class="Emphasis">Rationalize: Pareto Threshold</span>: Target Creation - Rationalization Process. When Comparison Active variants are sorted by productivity in descending order, the variant that causes the cumulative sum to meet this percent of total is the Pareto Choice Count. For example, if the Pareto Threshold is 95%, and when rationalizing, the 37th variant has a cumulative productivity that is 95.4% of total productivity, the system will determine 37 as the Pareto Choice Count. Formatted as a decimal (e.g. 0.95 = 95%).</p>
+            </li>
+        </ol>
+        <p>Product Model</p>
+        <ol>
+            <li>
+                <p><span class="Emphasis">Time Interval To Skip a Product Model Calculation</span>: This system policy enables the client to configure the time interval used to determine when to skip a Product Model calculation if it occurred within the specified time limit. Clients can configure this time interval by setting the value of this policy to the desired number of hours. If the value is set to a negative number, the default time interval of 36 hours will be used.</p>
+            </li>
+        </ol>
+        <h3>New/Changed Job Manager Tasks</h3>
+        <p>Allocations</p>
+        <ol>
+            <li>
+                <p><span class="Emphasis">(AL) (Weekly) Maintenance Rebuild Product Models in Batches</span> - Replaces (AL) (Weekly) Maintenance Rebuild Product Models in the weekly.</p>
+            </li>
+        </ol>
+        <h2>2023.4</h2>
+        <h3>Update Script (2023.4.0.0_JEUpdate) </h3>
+        <h3>Views, Widget &amp; Collections</h3>
+        <p>Order Manager</p>
+        <ol>
+            <li>
+                <p>Supplier Capacity Report</p>
+            </li>
+        </ol>
+        <p>Supplier Manager</p>
+        <ol>
+            <li>
+                <p>Supplier Construction Type Capacity</p>
+            </li>
+        </ol>
+        <p>Site Manager</p>
+        <ol>
+            <li>
+                <p>Site Account Source Site Contribution</p>
+            </li>
+            <li>
+                <p>Site Account Customer Relations</p>
+            </li>
+        </ol>
+        <h3>New/Changed System Policies </h3>
+        <p>Assortment</p>
+        <ol>
+            <li>
+                <p><span class="Emphasis">Product Level Display</span>: Determines which fields to show in the Product Columns. 0 - Description, 1 - Code, 2 - Code and Description</p>
+            </li>
+        </ol>
+        <p>Financial Planning</p>
+        <ol>
+            <li>
+                <p><span class="Emphasis">DC Stock Include Pending</span>: Whether to reduce DC Available On Hand by Pending stock.</p>
+            </li>
+            <li>
+                <p><span class="Emphasis">DC Stock Include Reserved</span>: Whether to include Reserved stock in the EOP Units DC Split and DC Available On Hand metrics.</p>
+            </li>
+            <li>
+                <p><span class="Emphasis">Forecast Source</span>: Dictates which source of Forecast data to use - Inventory forecasts or aggregated level forecasts.  Level data should be chosen to expedite performance, but only if forecast jobs are set up to maintain hierarchy level data.</p>
+            </li>
+        </ol>
+        <p>Order Manager</p>
+        <ol>
+            <li>
+                <p><span class="Emphasis">Supplier Constraint: Bucket Type</span>: Defines which Bucket ID to use that represents the Time Period that will be used for Supplier Constraint.</p>
+            </li>
+            <li>
+                <p><span class="Emphasis">Supplier Constraint: Construction Type</span>: Defines which Attribute ID to use that represents the Construction Type Attribute that will be used for Supplier Constraint.</p>
+            </li>
+        </ol>
+        <p>Site Manager</p>
+        <ol>
+            <li>
+                <p><span class="Emphasis">Site Wholesale Account Distribution: ItemMaster Hierarchy ID</span>: ItemMaster Hierarchy ID to define what item level we want to manage DC to Account distribution, used by Wholesale Account Distribution.</p>
+            </li>
+        </ol>
+        <h3>New/Changed Job Manager Tasks</h3>
+        <p>Financial Planning</p>
+        <ol>
+            <li>
+                <p>(MFP) (All MFP Plans) Merchandise Financial Planning Forecast Task → This task will run a forecast for all MFP plans. This will run the same forecast parameters for all MFP master plans.</p>
+            </li>
+        </ol>
+        <p>LightGBM</p>
+        <ol>
+            <li>
+                <p>(DF) (Weekly) LightGBM Run Inference Process</p>
+            </li>
+            <li>
+                <p>(DF) (Monthly) LightGBM Run Train Process</p>
+            </li>
+            <li>
+                <p>(DF) (Monthly) MFP LightGBM Run Train Process</p>
+            </li>
+            <li>
+                <p>(DF) (Weekly) MFP LightGBM Run Inference Process</p>
+            </li>
+        </ol>
+        <p>Wholesales</p>
+        <ol>
+            <li>
+                <p>(WS) (Weekly) Generate Sales History from Customer Orders</p>
+            </li>
+        </ol>
+        <h2>2024.1</h2>
+        <h3>Update Script (2024.1.0.0_JEUpdate)</h3>
+        <h3>Views, Widget &amp; Collections</h3>
+        <p>Allocation</p>
+        <ol>
+            <li>
+                <p>Size Model Exceptions: The view will be a popup that will show the exceptions found for a given Size Curve Option.</p>
+                <p> <img src="../../Resources/Images/Allocations/Size Mode Exceptions.png" class="LargeImages" /></p>
+            </li>
+        </ol>
+        <h3>New/Changed System Policies </h3>
+        <p>Engine: Commitments</p>
+        <ol>
+            <li>
+                <p>Assortment Engine Supplier-to-DC Lead Time: Default Lead Time Days from the Supplier to the DC that is used to determine eligible receipt dates.  This will be rounded to the nearest period.</p>
+            </li>
+        </ol>
+        <p>Engine: Replenish</p>
+        <ol>
+            <li>
+                <p>Use New Beta Replenishment Engine: Set this to true to use the 2024 released replenishment engine.</p>
+            </li>
+        </ol>
+        <p>Module: Assortment</p>
+        <ol>
+            <li>
+                <p>Algorithm To Match Static Curve to Placeholder: This policy determines what mechanism is used to copy a placeholder from like style where the style has a static curve assigned.  The two options are: False - this will keep the same existing static curve that is already copied and assigned to the like style, True - Re-copy the original dynamic curve as a new static curve.</p>
+            </li>
+            <li>
+                <p>Attribute Display: Determines which fie</p>
+            </li>
+            <li>
+                <p>lds to show in the attributes columns. 0 - Description, 1 - Code, 2 - Code and Description</p>
+            </li>
+            <li>
+                <p>Price Conversion Method: Determines which Price Conversion Method to use when deriving currency-specific AUT values from the given home AUT value. 1 - Will use the original Price Exception method only, 2 - Will use the Price Matrix method only, 3 - Will use neither method.</p>
+            </li>
+            <li>
+                <p>Enable VAT Conversion In AUT Calculation: Determines whether to use VAT rate conversion steps when deriving currency-specific AUT values from the given home AUT value.</p>
+            </li>
+        </ol>
+        <p>Module: Target Choice Count</p>
+        <ol>
+            <li>
+                <p>Config: Code/Description Display: This policy describes how to display properties that have a code and description option, like hierarchy levels or attributes.</p>
+            </li>
+        </ol>
+        <h2>Services Architecture &amp; Additional Configuration</h2>
+        <p class="BasicNote">Each release containing new architecture contains a version-specific configuration guide. The following is the most recent.</p>
+        <p>
+            <img src="../../Resources/Images/Upgrade Playbook (Template) images/Recommended Setup.png" class="LargeImages" />
+        </p>
+        <ol>
+            <li>Uninstall TG JE Services</li>
+            <li>Browse to installation folders and <strong>move</strong> the leftover files.
+			<ol><li><p>C:\inetpub\wwwroot\JustEnough.* →C:\JustEnough\backup\configs</p></li><li><p>C:\Program Files (x86)\JustEnough Software Inc\JustEnough Services\* →C:\JustEnough\backup\configs</p></li></ol></li>
+            <p>
+                <MadCap:codeSnippet>
+                    <MadCap:codeSnippetCopyButton />
+                    <MadCap:codeSnippetBody MadCap:useLineNumbers="False" MadCap:lineNumberStart="1" MadCap:continue="False" xml:space="preserve">#Powershell
+						$sourceFolder_inetpub = "C:\inetpub\wwwroot"
+						$sourceFolder_programfiles = "C:\Program Files (x86)\JustEnough Software Inc\JustEnough Services"
+						$destinationFolder = "C:\JustEnough\backup\config"
+
+						if (-not (Test-Path -Path $destinationFolder)) {
+						New-Item -ItemType Directory -Path $destinationFolder -Force | Out-Null
+						}
+
+						$folders = Get-ChildItem -Path $sourceFolder_inetpub -Directory -Recurse | Where-Object { $_.Name -like "JustEnough*" }
+
+						foreach ($folder in $folders) {
+						$newPath = $folder.FullName.Replace($sourceFolder_inetpub, $destinationFolder)
+						Move-Item -Path $folder.FullName -Destination $newPath
+						}
+
+						$folders = $null
+						$folders = Get-ChildItem -Path $sourceFolder_programfiles -Directory -Recurse 
+
+						foreach ($folder in $folders) {
+						$newPath = $folder.FullName.Replace($sourceFolder_programfiles, $destinationFolder)
+						Move-Item -Path $folder.FullName -Destination $newPath
+					}</MadCap:codeSnippetBody>
+                </MadCap:codeSnippet>
+            </p>
+            <li>Install new services using the latest MSIs</li>
+        </ol>
+        <h2>Configure Stock To Service</h2>
+        <p>To Configure the Stock to Service service, an additional file needs to be created/configured. If file does not exist created it, else edit the file to look like the example below: C:\inetpub\wwwroot\JustEnough.Config\ToolsgroupIndustryRoutingConfiguration.json.</p>
+        <MadCap:codeSnippet>
+            <MadCap:codeSnippetCopyButton />
+            <MadCap:codeSnippetBody MadCap:useLineNumbers="False" MadCap:lineNumberStart="1" MadCap:continue="False" xml:space="preserve">{
+  "CompanyName": {
+    "api/StockToService": {
+      "BaseAddress": "&lt;StockToService.BaseAddress&gt;",
+      "Timeout": "00:01:00",
+      "ApiKey": "&lt;StockToService.ApiKey&gt;"
+    }
+  }
+}</MadCap:codeSnippetBody>
+        </MadCap:codeSnippet>
+        <p>CompanyName → Same as company name used when installing JustEnough Services</p>
+        <p>Please reach out to SO99+ installation team for an API key for the &lt;StockToService.BaseAddress&gt; and &lt;StockToService.ApiKey&gt; values.</p>
+        <p>ps: After changing any configuration it is recommended to restart IIS, compute and Scheduler services.</p>
+        <h2>Views, UIL &amp; Plugins</h2>
+        <p class="BasicNote">Each quarterly release has all the most recent views included, if updating past a quarterly release, only the latest CU is needed as it will have all the changes since the quarterly</p>
+        <p class="Caution">Export and backup all views, widgets and ViewCollectionSets before importing the new ones, these objects will be replaced based on UUIDs (synced with UUID Alignment scripts) </p>
+        <MadCap:codeSnippet>
+            <MadCap:codeSnippetCopyButton />
+            <MadCap:codeSnippetBody MadCap:useLineNumbers="False" MadCap:lineNumberStart="1" MadCap:continue="False" xml:space="preserve">#Powershell 
+.\JustEnough.Utility.Import.exe CONNECTIONTYPE:GATEWAY GATEWAYURL:https://localhost/JustEnough.Gateway.API/ CCLIENTID:[ClientID] SECRET:[Secret] DIR:C:\JustEnough\Export\ TYPE:ViewWidgetViewCollectionSet ACTION:Export</MadCap:codeSnippetBody>
+        </MadCap:codeSnippet>
+        <h3>Import Utility:  </h3>
+        <p>The import utility can be used to import all views, widgets and view collection sets in all folders and subfolders and can be found in the downloaded materials in the Utilities folder.</p>
+        <p>
+            <img src="../../Resources/Images/Upgrade Playbook (Template) images/Untitled 43.png" class="LargeImages" />
+        </p>
+        <p class="BasicNote">Clearing tbl_Common_File before quarterly update will avoid having multiple files with different versions in the table, which can cause errors when logging into the UI</p>
+        <MadCap:codeSnippet>
+            <MadCap:codeSnippetCopyButton />
+            <MadCap:codeSnippetBody MadCap:useLineNumbers="False" MadCap:lineNumberStart="1" MadCap:continue="False" xml:space="preserve">TRUNCATE TABLE tbl_Common_File</MadCap:codeSnippetBody>
+        </MadCap:codeSnippet>
+        <MadCap:codeSnippet>
+            <MadCap:codeSnippetCopyButton />
+            <MadCap:codeSnippetBody MadCap:useLineNumbers="False" MadCap:lineNumberStart="1" MadCap:continue="False" xml:space="preserve">#PowerShell
+$GatewayURL = 'https://localhost/justenough.gateway.api/'
+$ClientID = ''
+$Secret = ''
+$UIL_DIR = 'C:\JustEnough\Software\Version\UserInterface\Output\UIL'
+$Plugins_DIR = 'C:\JustEnough\Software\Version\UserInterface\Output\UIL\Plugins'
+$Views_DIR = 'C:\JustEnough\Software\Version' #Doing it at the highest level will also import views/widgets and collectionsets of utilities.
+.\JustEnough.Utility.Import.exe CONNECTIONTYPE:GATEWAY GATEWAYURL:$GatewayURL CLIENTID:$ClientID SECRET:$Secret DIR:$UIL_DIR INCLUDESUB:N TYPE:Assembly ACTION:Import
+.\JustEnough.Utility.Import.exe CONNECTIONTYPE:GATEWAY GATEWAYURL:$GatewayURL CLIENTID:$ClientID SECRET:$Secret DIR:$Plugins_DIR INCLUDESUB:N TYPE:Assembly ACTION:Import
+.\JustEnough.Utility.Import.exe CONNECTIONTYPE:GATEWAY GATEWAYURL:$GatewayURL CLIENTID:$ClientID SECRET:$Secret DIR:$Views_DIR INCLUDESUB:Y TYPE:ViewWidgetViewCollectionSet ACTION:Import</MadCap:codeSnippetBody>
+        </MadCap:codeSnippet>
+        <p>Importing a new View adds an "Import - [GUID]" stamp on it, this needs to be updated before initializing the views so tht configuration can identofy it.</p>
+        <p>
+            <img src="../../Resources/Images/Upgrade Playbook (Template) images/Untitled 44.png" class="LargeImages" />
+        </p>
+        <MadCap:codeSnippet>
+            <MadCap:codeSnippetCopyButton />
+            <MadCap:codeSnippetBody MadCap:useLineNumbers="False" MadCap:lineNumberStart="1" MadCap:continue="False" xml:space="preserve">--Updating Imported Views: 
+UPDATE VW
+	SET VW.ViewName = SUBSTRING(VW.ViewName, 50, LEN(VW.ViewName) - 49)
+FROM dbo.tbl_VW_View VW 
+WHERE VW.ViewName LIKE 'import - %'</MadCap:codeSnippetBody>
+        </MadCap:codeSnippet>
+        <p>After updating the ViewNames, initializing the views will update system policies required for the UI to function properly.</p>
+        <MadCap:codeSnippet>
+            <MadCap:codeSnippetCopyButton />
+            <MadCap:codeSnippetBody MadCap:useLineNumbers="False" MadCap:lineNumberStart="1" MadCap:continue="False" xml:space="preserve">EXEC ViewControl.GeneralTables_INIT 
+EXEC assortment.GeneralTables_INIT</MadCap:codeSnippetBody>
+        </MadCap:codeSnippet>
+        <h2>Deprecation of Objects</h2>
+        <ol>
+            <li>Cache deprecated objects again in current DBs. 
+					<p><MadCap:codeSnippet><MadCap:codeSnippetCopyButton /><MadCap:codeSnippetBody MadCap:useLineNumbers="False" MadCap:lineNumberStart="1" MadCap:continue="False" xml:space="preserve">EXEC utility.Deprecation_INIT
+EXEC utility.Deprecation_Execute @bCacheMetaData = 1</MadCap:codeSnippetBody></MadCap:codeSnippet></p></li>
+            <li>Compare Checksum results with deprecated and custom objects and note </li>
+            <li>Run Customization Analysis
+					<ol><li>This can be executed form the backend:
+						<MadCap:codeSnippet><MadCap:codeSnippetCopyButton /><MadCap:codeSnippetBody MadCap:useLineNumbers="False" MadCap:lineNumberStart="1" MadCap:continue="False" xml:space="preserve">EXEC utility.CustomObjects_Summarize 1
+EXEC utility.CustomObjects_History_Select
+EXEC utility.CustomObjects_ProcFunction_Select
+EXEC utility.CustomObjects_References_Select
+EXEC utility.CustomObjects_Summarize 
+EXEC utility.CustomObjects_TableView_Select 1</MadCap:codeSnippetBody></MadCap:codeSnippet><p><img src="../../Resources/Images/Upgrade Playbook (Template) images/Untitled 45.png" class="LargeImages" /></p></li><li>The front end has a more user-friendly view, which can be accessed from the views module: 
+				<ol style="list-style-type: lower-roman;"><li>Using Customization Analysis
+	<p><img src="../../Resources/Images/Upgrade Playbook (Template) images/Untitled 46.png" class="LargeImages" /></p></li></ol></li></ol></li>
+            <li>Compare Checksum results with deprecated and custom objects
+					 <ol><li><p>Generate a new list, rating referenced objects with a rank 0-2 to rate work involved to ensure deprecating objects won’t break the environment.</p></li></ol></li>
+            <p>
+                <MadCap:codeSnippet>
+                    <MadCap:codeSnippetCopyButton />
+                    <MadCap:codeSnippetBody MadCap:useLineNumbers="False" MadCap:lineNumberStart="1" MadCap:continue="False" xml:space="preserve">DECLARE @iLastRunID INT;
+
+SELECT @iLastRunID = MAX(RunID)
+FROM utility.CustomObjectRun;
+
+SELECT
+       co.SchemaName AS ReferencingSchema,
+       co.ObjectName AS ReferencingObject, 
+       sr.ReferenceCount,
+	   ISNULL(PARSENAME(REPLACE(sr.ObjectName, '.', '.'), 2), 'dbo') AS ReferencedSchemaName,
+       PARSENAME(REPLACE(sr.ObjectName, '.', '.'), 1) AS ReferencedObjectName,
+       --sr.ObjectName AS ReferencedObjectFullName,
+       CAST(CASE
+                WHEN OBJECT_ID(sr.ObjectName) IS NOT NULL THEN
+                    1
+                ELSE
+                    0
+            END AS BIT) ReferencedObjectExistsInDatabase,
+       LJ.DeprecatedObjectName,
+       LJ.ObjectType,
+       LJ.DeprecationVersion,
+       LJ.DropVersion,
+       LJ.ReferenceCount,
+       LJ.TableRowCount,
+       LJ.DropDate,
+       LJ.ErrorMessageOnLastDropAttempt,
+       LJ.ObjectExistsInDatabase,
+       LJ.IssueMessage
+FROM utility.CustomScriptObjectReferences sr
+    INNER JOIN utility.CustomObjects co
+        ON sr.ObjectID = co.ObjectID
+							AND sr.RunID = co.RunID
+    LEFT JOIN
+    (
+        SELECT dol.SchemaName,
+               dol.ObjectName AS DeprecatedObjectName,
+               dol.ObjectType,
+               dol.DeprecationVersion,
+               dol.DropVersion,
+               dol.ReferenceCount,
+               dol.TableRowCount,
+               dol.DropDate,
+               dol.ErrorMessageOnDrop AS ErrorMessageOnLastDropAttempt,
+               ISNULL(e.ObjectExistsInDatabase, 0) AS ObjectExistsInDatabase,
+               CASE
+                   WHEN dol.DropDate IS NOT NULL
+                        AND e.ObjectExistsInDatabase = 1 THEN
+                       'Object was recreated after being dropped.'
+                   WHEN dol.AddDate &lt; e.modify_date THEN
+                       'Object was modified after being marked for deprecation.'
+                   ELSE
+                       ''
+               END AS IssueMessage
+        FROM utility.DeprecatedObjectList dol
+            OUTER APPLY
+        (
+            SELECT 1 ObjectExistsInDatabase,
+                   o.modify_date
+            FROM sys.objects o
+                INNER JOIN sys.schemas s
+                    ON o.schema_id = s.schema_id
+            WHERE o.name = dol.ObjectName
+                  AND s.name = dol.SchemaName
+        ) e
+    ) LJ
+        ON LJ.DeprecatedObjectName = sr.ObjectName
+           AND LJ.SchemaName = ISNULL(PARSENAME(REPLACE(sr.ObjectName, '.', '.'), 2), 'dbo')
+WHERE sr.RunID = @iLastRunID
+      AND LJ.DeprecatedObjectName IS NOT NULL
+ORDER BY sr.ObjectName,
+         co.SchemaName,
+         co.ObjectName;</MadCap:codeSnippetBody>
+                </MadCap:codeSnippet>
+            </p>
+            <li>
+                <p>To drop object, run the deprecation process with the pastor, this will drop objects and can not be undone, it is advised to make a backup before this.</p>
+                <MadCap:codeSnippet>
+                    <MadCap:codeSnippetCopyButton />
+                    <MadCap:codeSnippetBody MadCap:useLineNumbers="False" MadCap:lineNumberStart="1" MadCap:continue="False" xml:space="preserve">EXEC [utility].[Deprecation_Execute] 
+      @vActuallyDropThingsPassword = 'By running this proc with this password, deprecated objects will be dropped, even if they contain data or are referenced in the application.'
+    , @bCacheMetaData              = 0
+    , @bDebug                      = 0
+    , @bRedropZombies              = 1</MadCap:codeSnippetBody>
+                </MadCap:codeSnippet>
+            </li>
+        </ol>
+        <h2><a name="Validation"></a>Validation</h2>
+        <h2>Services</h2>
+        <p>Ping Services: The most basic way to verify if services are accessible is by using a browser or curl calls.</p>
+        <ol>
+            <li>
+                <p>https://[ServerName]/JustEnough.[ServiceName].API/PING</p>
+                <MadCap:codeSnippet>
+                    <MadCap:codeSnippetCopyButton />
+                    <MadCap:codeSnippetBody MadCap:useLineNumbers="False" MadCap:lineNumberStart="1" MadCap:continue="False" xml:space="preserve">#Powershell
+$connectionType = 'https'
+$appServer = 'localhost'
+
+$computeNodes = @(
+		'localhost'
+)
+
+$coreServices = @(
+		'ComputeManager.Service'
+    'Dispatch.API',
+    'FileStore.API',
+    'Gateway.API/Proxy',
+    'ImportExport.API',
+    'JobManager.API',
+    'Log.API',
+    'Logistic.API',
+    #'Oner.Webhook',
+    'PushService.API',
+    'Python.API',
+    'R.API',
+    'RepositoryManagement.API',
+    'Security.API',
+    'Session.API',
+    'Sql.API',
+    'System.API',
+    'UserManagement.API'
+)
+
+$computeServices = @(
+    'Analysis.API',
+    'Draft.API',
+    'Forecast.API',
+    'Prepack.API',
+    'Promotion.API',
+    'Replenish.API'
+)
+
+# AppServices
+foreach ($Service in $coreServices) {
+    "----------- Testing $Service -----------"
+    $URL = $ConnectionType + "://$appServer/JustEnough.$Service/API/PING"
+    "$URL"
+    try {
+        $Result = Invoke-WebRequest -Uri $URL -UseBasicParsing
+        $Result.Content
+    }
+    catch {
+        Write-Host "Error testing $Service on $appServer :`n$_"
+    }
+}
+
+# ComputeServices
+foreach ($Node in $computeNodes) {
+    foreach ($Service in $computeServices) {
+        "----------- Testing $Service -----------"
+        $URL = $connectionType + "://$appServer/JustEnough.$Service/API/PING"
+        "$URL"
+        try {
+            $Result = Invoke-WebRequest -Uri $URL -UseBasicParsing
+            $Result.Content
+        }
+        catch {
+            Write-Host "Error testing $Service on $Node :`n$_"
+        }
+    }
+}</MadCap:codeSnippetBody>
+                </MadCap:codeSnippet>
+            </li>
+        </ol>
+        <h2>Database</h2>
+        <ol>
+            <li><a href="https://toolsgroup-dev.atlassian.net/l/cp/VQvwPmAj">Installation Guidelines</a>
+            </li>
+        </ol>
+        <p>
+            <p>Currently we rely on clr being enabled on a SQL server, running the following query will result in an error if it’s not enabled.</p>
+            <p>
+                <MadCap:codeSnippet>
+                    <MadCap:codeSnippetCopyButton />
+                    <MadCap:codeSnippetBody MadCap:useLineNumbers="False" MadCap:lineNumberStart="1" MadCap:continue="False" xml:space="preserve">SELECT * FROM dbo.clr_Common_ParseString(REPLACE('1', '"', ''));</MadCap:codeSnippetBody>
+                </MadCap:codeSnippet>
+            </p>
+        </p>
+    </body>
+</html>

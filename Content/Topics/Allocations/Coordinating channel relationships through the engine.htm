@@ -1,0 +1,12 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head>
+    </head>
+    <body>
+        <h1>Coordinating channel relationships through the engine</h1>
+        <p>The Allocations module does not coordinate channel relationships through the engine. It is imperative that this is resolved with the CLIENT’S PROCESS.</p>
+        <p>For example, <span class="Emphasis">Strategy One - Retail</span> and <span class="Emphasis">Strategy Two - Outlet</span> share DCs and/or SDCs. The last strategy to run the engine removes any OVERLAP inventory from the related strategies. </p>
+        <p>If <span class="Emphasis">Strategy One - Retail</span> runs first and has 200 units on order for a related DC, <span class="Emphasis">Strategy Two - Outlet</span> running second removes the 200 units from that related DC which can cause the entire order for <span class="Emphasis">Strategy One - Retail</span> to not be realistic.</p>
+        <p>The client’s process must be that they run their highest priority channel first through the engine, then set it to a state that sets Pending Stock (i.e. pre-authorized). Then they can run the next priority channel, then set the Order Manager State. This process will be repeated until their channel priority list is exhausted.</p>
+    </body>
+</html>

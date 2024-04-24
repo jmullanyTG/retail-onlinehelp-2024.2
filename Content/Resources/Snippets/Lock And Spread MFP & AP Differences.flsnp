@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head>
+    </head>
+    <body>
+        <p>It is important to note that while the cell locking mechanism and naming between MFP and AP is the same, the underlying logic is very different.</p>
+        <ul>
+            <li>
+                <p>In AP, there is no such thing as an aggregate lock. If a Month is locked, then all of the individual weeks that make up the month are separately locked. In MFP, the Month total can be locked, and each of the weeks underneath the month can still be changed. For example, users within MFP can change week 1 and week 2. Week 4 would rebalance to hold the month total. &#160; </p>
+            </li>
+            <li>
+                <p>The same is true in the other dimension: across products / geographies / items. &#160;If an aggregated value is locked in AP, it does not lock the aggregate while leaving the items unlocked; it locks all items separately.</p>
+            </li>
+            <li>
+                <p>Locks save forever in TDCP, no matter the selected parameters. &#160;In MFP, locks only persist for matching selection criteria in parameters.</p>
+            </li>
+            <li>
+                <p>In TDCP, sales metrics (Sales, Sales Units, Home AUT) and receipt metrics (Receipt Period, Receipt Units, Receipt AUC) can be locked separately. &#160;In MFP, there's only one lock, a sales lock.</p>
+            </li>
+        </ul>
+    </body>
+</html>

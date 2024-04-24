@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head>
+        <link href="../../Resources/TableStyles/standard.css" rel="stylesheet" MadCap:stylesheetType="table" />
+    </head>
+    <body>
+        <h1>Reserving stock at a distribution center</h1>
+        <p>Stock can be reserved in a distribution center (DC) for use by specific stores and channels. For example, reserving stock for a new store ensures stock is available when it opens or reserving stock for a specific sales channel such as e-commerce. </p>
+        <p>Reserved stock is logically partitioned to hide it from other sites or channels. This also prevents it from influencing normal order quantities for other sites and channels.</p>
+        <p>The actual amount of stock reserved for a store or channel is demand-driven and can vary from store-to-store and item-to-item based on:</p>
+        <ul>
+            <li>how many days of stock to reserve.</li>
+            <li>whether to include safety stock in the reservation.</li>
+            <li>the forecasted demand for the item at that location.</li>
+        </ul>
+        <h2>Reservations-related fields</h2>
+        <p>The following fields support stock reservations. For easy management and visibility of stock reservation settings, add them as columns in <a href="Creating a Site Manager Document.htm">Site Manager documents</a>. </p>
+        <ul>
+            <li>
+                <span class="Emphasis">Reserve?</span>  – Whether stock should be reserved for a store or channel.</li>
+            <li>
+                <span class="Emphasis">Days Reserved</span>  – The number of days of demand to cover when calculating how much stock to reserve.</li>
+            <li>
+                <span class="Emphasis">Consider Presentation?</span> – Whether safety stock (Safety Stock Days and Minimum Safety Stock Units values) should be included when calculating how much stock to reserve.</li>
+            <li>
+                <span class="Emphasis">Is Contained in Location Strategy?</span> – Read-only. Displays whether the site is part of a location strategy.</li>
+        </ul>
+        <p>Default values for these fields can be set by store in Site Manager. If a site is part of a location strategy, the default values can be overridden in the Allocation module's <a href="../Allocations/Location Exceptions View.htm">Location Exceptions</a> view.</p>
+        <h2>Reserving stock for placeholder sites, stores, or channels</h2>
+        <p>Stock for placeholder sites and regular stores or channels can be reserved. </p>
+        <h3>To reserve stock at a DC</h3>
+        <ol>
+            <li>From the Management tab, click <span class="Emphasis">Site Manager</span>.</li>
+            <li>Click <span class="Emphasis">Site Manager Document</span> in the Site Manager toolbar.</li>
+            <li>Select a site filter that contains the sites to reserve stock for.</li>
+            <li>In the Columns toolbar, click <span class="Emphasis">Choose</span>.</li>
+            <li>
+                <p>Include the following <span class="Emphasis">Allocations</span> fields: </p>
+                <ul style="font-weight: bold;">
+                    <li>Reserve?</li>
+                    <li>Days Reserved</li>
+                    <li>Consider Presentation?</li>
+                    <li>
+                        <p>Is Contained in Location Strategy</p>
+                    </li>
+                </ul>
+                <p>
+                    <img src="../../Resources/Images/Site Manager/Reserve Stock Columns.png" class="LargeImages" />
+                </p>
+            </li>
+            <li>
+                <p>In the Site Manager document, find a store to reserve stock for. Enter values for it in the following columns:</p>
+                <table class="TableStyle-standard" cellspacing="0" style="mc-table-style: url('../../Resources/TableStyles/standard.css');">
+                    <col class="TableStyle-standard-Column-Column1" />
+                    <col class="TableStyle-standard-Column-Column2" />
+                    <thead>
+                        <tr class="TableStyle-standard-Head-Header1">
+                            <th class="TableStyle-standard-HeadE-Column1-Header1">Column</th>
+                            <th class="TableStyle-standard-HeadD-Column2-Header1">Description</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr class="TableStyle-standard-Body-Body1">
+                            <td class="TableStyle-standard-BodyE-Column1-Body1">Reserve?</td>
+                            <td class="TableStyle-standard-BodyD-Column2-Body1">
+                                <p>If checked, then stock is reserved for this store. Click the checkbox to toggle checking and un-checking the checkbox. </p>
+                            </td>
+                        </tr>
+                        <tr class="TableStyle-standard-Body-Body1">
+                            <td class="TableStyle-standard-BodyE-Column1-Body1">Days Reserved</td>
+                            <td class="TableStyle-standard-BodyD-Column2-Body1">
+                                <p>The number of days of stock to reserve. </p>
+                                <p>The forecasted demand for each item at the selected site is used to calculate the quantity of stock required to meet this number of days of demand. Exact quantities of items reserved vary according to the forecasted demand for each item.</p>
+                            </td>
+                        </tr>
+                        <tr class="TableStyle-standard-Body-Body1">
+                            <td class="TableStyle-standard-BodyB-Column1-Body1">Consider Presentation?</td>
+                            <td class="TableStyle-standard-BodyA-Column2-Body1">
+                                <p>Whether stock is included to cover safety stock requirements (specified in each item's Safety Stock Days and Minimum Safety Stock Units values) in its reservation calculations. </p>
+                                <p>If checked, then enough stock is reserved to cover the safety stock requirements for each item.</p>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </li>
+            <li>
+                <p>Click <span class="Emphasis">Save</span>.</p>
+                <p>How much stock is required for the reservation is calculated and then orders generated as needed to ensure enough stock is available to the site when needed (such a new site's phase-in date). </p>
+                <p class="BasicNote"> The values entered in Site Manager can be overridden in the Allocations module if a site is part of a location strategy. <MadCap:conditionalText MadCap:conditions="General.ScreenOnly">For more information, see <MadCap:xref href="../Allocations/Location Exceptions View.htm">Allocations Strategy Location Exception View</MadCap:xref>.</MadCap:conditionalText><MadCap:conditionalText MadCap:conditions="General.PrintOnly">For more information, refer to the Allocations User Guide.</MadCap:conditionalText><br /></p>
+            </li>
+        </ol>
+    </body>
+</html>

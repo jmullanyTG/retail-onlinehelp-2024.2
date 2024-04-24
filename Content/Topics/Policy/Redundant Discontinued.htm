@@ -1,0 +1,107 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" xml:lang="en-us">
+    <head>
+        <title>
+        </title>
+    </head>
+    <body>
+        <h1>Configuring redundant settings</h1>
+        <p>Redundant or discontinued  items  are never likely to sell or be in demand. Classifying an item as Redundant prevents any more from being reordered.</p>
+        <h2>To configure redundant settings</h2>
+        <ol>
+            <li>
+                <p>From the Execute tab, click <span class="Emphasis">Policy</span>. </p>
+                <p>The Policy Task screen displays.</p>
+            </li>
+            <li>
+                <p>Click <span class="Emphasis">Edit</span>. </p>
+                <p>The Update Policy task screen displays.</p>
+            </li>
+            <li>From the Order Policy Type dropdown menu on the Policy section, select <span class="Emphasis">Redundant</span>.</li>
+            <li>Update the fields as required.</li>
+            <li>Click <span class="Emphasis">Ok</span>.</li>
+        </ol>
+        <table style="mc-table-style: url('../../Resources/TableStyles/standard.css');" class="TableStyle-standard" cellspacing="0">
+            <col class="TableStyle-standard-Column-Column1" />
+            <col class="TableStyle-standard-Column-Column2" />
+            <thead>
+                <tr class="TableStyle-standard-Head-Header1">
+                    <th class="TableStyle-standard-HeadE-Column1-Header1">Field</th>
+                    <th class="TableStyle-standard-HeadD-Column2-Header1">Description</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">
+                        <span class="Emphasis">Return Rate</span>
+                    </td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">
+                         The percentage of items sold which are expected to be returned. 
+                    </td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">
+                        <span class="Emphasis">Days Before Return</span>
+                    </td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">The expected number of days between the sale of an item and the return of that item to the store.</td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">
+                        <span class="Emphasis">Reuse Rate</span>
+                    </td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">
+                         The percentage of items that have been returned and may be considered as saleable stock again.  
+                    </td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">
+                        <span class="Emphasis">Days Before Reuse</span>
+                    </td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">
+                        The expected number of days between the return date of an item and it being considered as regular saleable stock again.  
+                    </td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">
+                        <span class="Emphasis">Order Multiple</span>
+                    </td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">
+                        The multiple of units in which the stock must be ordered.  
+                    </td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">
+                        <span class="Emphasis">Order Multiple Rounding</span>
+                    </td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">
+                        <MadCap:snippetBlock src="../../Resources/Snippets/Order Multiple Rounding.flsnp" />
+                    </td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">
+                        <span class="Emphasis">Excess for Redistribution Days</span>
+                    </td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">
+                        The number of days of excess that should be considered to be protected from a redistribution action. As a day value, the calculated unit value will be a resolved function of projected demand.  
+                    </td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">
+                        <span class="Emphasis">Expedite Freeze Days</span>
+                    </td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">
+                      The forward looking days in which orders should not be considered eligible for an expedite action. 
+                    </td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyB-Column1-Body1">
+                        <span class="Emphasis">Surplus Freeze Days</span>
+                    </td>
+                    <td class="TableStyle-standard-BodyA-Column2-Body1">
+                       The forward looking days in which orders should not be considered eligible for a surplus action. 
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </body>
+</html>

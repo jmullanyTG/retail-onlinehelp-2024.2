@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head>
+    </head>
+    <body>
+        <h1>Data imports including Sales ex VAT</h1>
+        <p>As periods begin to actualize, so VAT amounts are actualized for those periods. If an organization deals with VAT, it is important that the data import includes <span class="Emphasis">Sales ex VAT</span>, as the system uses the difference between <span class="Emphasis">Sales</span> and <span class="Emphasis">Sales ex VAT</span> to calculate historic VAT percentages for actualized periods. </p>
+        <p>If any records imported for a given variant/cluster/period lack <span class="Emphasis">Sales ex VAT</span>, the system nulls the VAT percentage for the entire variant/cluster/period, as an indicator that there is missing data in the import. This may cause anomalies in <span class="Emphasis">AUR ex VAT</span> in the main planning view and with metrics in the <span class="Emphasis">Price Exceptions</span> view. </p>
+        <p>A way to check for this is to look at the VAT percentages in the <span class="Emphasis">Sales Plan</span> view for periods that have actualized VAT percentages of zero though VAT percentages were in effect for the product.
+		</p>
+        <p class="BasicNote">System policy <span class="Emphasis">Enable VAT Conversion in AUT Calculation</span> determines whether to use VAT rate conversion steps when deriving currency-specific AUT (Blended AUT) values from the given Home AUT value. </p>
+    </body>
+</html>

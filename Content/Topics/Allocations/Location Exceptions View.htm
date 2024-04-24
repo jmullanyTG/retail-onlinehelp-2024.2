@@ -1,0 +1,36 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" xml:lang="en-us">
+    <head><title></title>
+    </head>
+    <body>
+        <h1>Location Exceptions </h1>
+        <p>Any overrides applied to a specific location or set of locations within the location strategy are considered to be location exceptions. Location exceptions are viewed and managed in the <span class="Emphasis">Allocations Strategy Location Exception</span> view. </p>
+        <p>To access this view, click the <span class="Emphasis">Overrides</span> button within the <span class="Emphasis">Location Strategy</span> field in the <span class="Emphasis">Allocation Strategy</span> grid.</p>
+        <p>
+            <img src="../../Resources/Images/Allocations/Allocation_Strategy_Grid Override Button.png" class="LargeImages" />
+        </p>
+        <p>Once configured, conditional formatting (bold) is applied to the <span class="Emphasis">Location Strategy</span> field in the allocation strategy view to indicate the existence of exceptions. </p>
+        <p>
+            <img src="../../Resources/Images/Allocations/Allocation_Strategy_Grid Conditional Formatting.png" class="LargeImages" />
+        </p>
+        <p>In the <span class="Emphasis">Allocations Strategy Location Exception</span> view, users can apply static override values to any of the listed fields on a site-by-site basis or through  a mass change. </p>
+        <p>
+            <img src="../../Resources/Images/Allocations/Apply Static Override Values.png" class="LargeImages" />
+        </p>
+        <p>Additional location information such as site grouping and hierarchical information can be optionally returned to the grid to assist with grouping. </p>
+        <h2>Changing multiple rows simultaneously</h2>
+        <ol>
+            <li>Select the first field to be updated.</li>
+            <li>Press the <span class="Emphasis">Shift</span> key and select the last row to be updated.</li>
+            <li>Right-click to display a menu.</li>
+            <li>Select <span class="Emphasis">Multiple Changes</span>.</li>
+            <li>Complete the <span class="Emphasis">Multi Data Change Form</span> dialog as required.</li>
+            <li>Click <span class="Emphasis">Save</span>.</li>
+        </ol>
+        <p>
+            <img src="../../Resources/Images/Allocations/Location Exceptions Multiple Changes.png" class="LargeImages" />
+        </p>
+        <p>Once saved, overridden values are conditionally formatted with an orange highlight as is the <span class="Emphasis">Clear Override?</span> checkbox. Selecting the checkbox and saving clears all overrides for the site. </p>
+        <p class="BasicNote">A blank or null value in a field does not equate to a zero (i.e. an actual 0). Thus, a user override value of <span class="Emphasis">0</span> in the weeks of cover field is an explicit user override specifying the desire to hold exactly zero weeks of cover in safety stock for the site, not that the strategy level value should be held.</p>
+    </body>
+</html>

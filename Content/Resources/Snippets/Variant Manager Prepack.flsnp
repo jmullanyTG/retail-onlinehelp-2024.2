@@ -1,0 +1,64 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head>
+    </head>
+    <body>
+        <p>Before any prepack analysis can be done within Order Manager, prepack configurations must be defined for all variants to prepack. To define prepack configurations, navigate to <b>Management &gt; Variant Manager</b>.</p>
+        <p>
+            <img src="../Images/Order Manager/Variant Manager Prepack.png" class="LargeImages" />
+        </p>
+        <h2>Configuring prepacks</h2>
+        <p>Within the Variant Manager Document screen:</p>
+        <ol>
+            <li>
+                <p>When prompted, select or define a product filter in the <span class="Emphasis">Items</span> dialog that includes the variants for which prepacks will be defined.</p>
+            </li>
+            <li>
+                <p>Click <b>Ok</b> to close the <span class="Emphasis">Items</span> dialog.</p>
+            </li>
+            <li>
+                <p>Select the variant within the grid to create prepack configurations for.</p>
+            </li>
+            <li>
+                <p>If the <span class="Emphasis">Prepack</span> blade is not displayed at the bottom of the screen, click the <span class="Emphasis">Details</span> button in the upper right of the screen.</p>
+            </li>
+            <li>
+                <p>Select the <b>Prepack</b> blade to show the prepack configurations work area.</p>
+                <p>
+                    <img src="../Images/Order Manager/Variant Manager Prepack Blade.png" class="LargeImages" />
+                </p>
+            </li>
+            <li>
+                <p>Add a Prepack or Prepack Template as required.</p>
+            </li>
+            <li>
+                <p>Click <span class="Emphasis">Save</span>.</p>
+            </li>
+        </ol>
+        <h2>Toolbar functionality</h2>
+        <ul>
+            <li><b>Save</b>: Saves all changes made to the currently selected prepack configuration or template.</li>
+            <li><b>Undo</b>: Undoes all changes made to the currently selected prepack configuration or template since the last time it was saved.</li>
+            <li><b>Delete</b>: Deletes the selected prepack configuration or template. </li>
+            <li><b>Add Prepack</b>: Creates a new blank prepack configuration in the <span class="Emphasis">Policy &gt; Manual</span> folder at the left of the screen.</li>
+            <li><b>Add Prepack Template</b>: Creates a new blank prepack template in the <span class="Emphasis">Template &gt; Manual</span> folder at the left of the screen.</li>
+        </ul>
+        <h2>Prepack folders (left side)</h2>
+        <ul>
+            <li>Prepack<ul><li><b>Import</b>: Prepack configurations that have been imported from external sources appear in this folder.</li><li><b>Manual</b>: Prepack configurations created by clicking the <span class="Emphasis">Add Prepack</span> button appear in this folder.</li><li><b>Process</b>: Prepack configurations created by the prepack optimization engine appear in this folder.</li></ul></li>
+            <li>Prepack/Template<ul><li><b>Code</b>: The prepack configuration/template name to be used.</li><li><b>Size Range (templates only)</b>: The range of sizes to be used in the prepack template.</li><li><b>Description</b>: A description for the prepack configuration/template.</li></ul></li>
+        </ul>
+        <h2>Prepack/template details (right side)</h2>
+        <p>With a prepack configuration selected:</p>
+        <ul>
+            <li><b>Add</b>: Launches the <span class="Emphasis">Add Variant</span> dialog<ul><li><b>Variant</b>: A variant to add to the prepack configuration.</li><li><b>Size Curve</b>: A size curve to apply to the variant being added.</li><li><b>Template</b>: A prepack template, instead of a size curve, to apply to the variant being added.</li><li><b>Included</b>: Whether a given size is included in the prepack configuration</li><li><b>Size</b>: (read-only) The size codes contained in the selected size curve or template.</li><li><b>Unit Count</b>: The number of units per size to include in the prepack configuration.</li><li><b>Cancel</b>: Closes the <span class="Emphasis">Add Variant</span> dialog without adding a variant to the selected prepack configuration.</li><li><span class="BodyWord">Ok</span>: Adds the variant, size, and unit count information defined in the <span class="Emphasis">Add Variant</span> dialog to the prepack details area.</li></ul></li>
+            <li><b>Remove</b>: Removes the selected variant or size from the prepack configuration details. Users are not asked to confirm prior to removing variants or sizes. However, changes can be reversed with the <span class="Emphasis">Undo</span> button.<ul><li><b>Variant</b>: The variant codes of those present in the selected prepack configuration.</li><li><b>Size</b>: The size codes included in the selected prepack configuration for the corresponding variant.</li><li><b>Unit Count</b>: The number of units per size for the corresponding variant to be included in the prepack configuration.</li></ul></li>
+        </ul>
+        <p>With a prepack template selected:</p>
+        <ul>
+            <li><b>Size Range</b>: The size range set for the selected prepack template.</li>
+            <li><b>Size</b>: The size codes included in the selected prepack template.</li>
+            <li><b>Unit Count</b>: The number of units per size for the corresponding variant to be included in the prepack configuration.</li>
+        </ul>
+    </body>
+</html>

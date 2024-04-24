@@ -1,0 +1,8 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head>
+    </head>
+    <body>
+        <p class="BasicNote">EOP and BOP values include Inter-Branch Transfers (IBT) for sites-in-cluster. Therefore, EOP and BOP values in all views and reports which use these metrics (such as the <span class="Emphasis">Sales Plan</span> view and the <span class="Emphasis">Receipt Plan</span> view) reflect values inclusive of IBT. The inclusion of IBTs within the EOP/BOP values helps minimize the occurrences of small EOP/BOP values where it appears a receipt is needed, but not recommended. If a user desires to understand BOP/EOP values WITHOUT IBTs, it is recommended that the EOP/BOP metrics be displayed beside the Stock In Transit values for a visual comparison.</p>
+    </body>
+</html>

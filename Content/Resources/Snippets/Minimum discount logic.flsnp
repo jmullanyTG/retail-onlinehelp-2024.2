@@ -1,0 +1,14 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head>
+    </head>
+    <body>
+        <h2>Minimum discount logic</h2>
+        <p>The minimum discount logic is as follows:</p>
+        <ul>
+            <li>Check <span class="Emphasis">Use Full Price</span> for the Site being calculated<ul><li>If true, use value as is.</li></ul><ul><li>If false, continue to <span class="Emphasis">Min Discount</span></li></ul></li>
+            <li>Check <span class="Emphasis">Min Discount</span><ul><li>If not set, use values as is as entry price for the Price Matrix.</li></ul><ul><li>If set, then compare the computed value against the set threshold and adjust the value passed on the Price Matrix.</li></ul></li>
+            <li>Resolve the value against the Price Matrix to get the adjusted value.</li>
+        </ul>
+    </body>
+</html>

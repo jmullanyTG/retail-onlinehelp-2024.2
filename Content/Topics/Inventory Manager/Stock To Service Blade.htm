@@ -1,0 +1,105 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head>
+        <link href="../../Resources/TableStyles/standard.css" rel="stylesheet" MadCap:stylesheetType="table" />
+    </head>
+    <body>
+        <h1>Stock to Service</h1>
+        <p>Users can easily view how different target service levels affect inventory Safety Stock days by navigating to the <span class="Emphasis">Stock to Service</span> blade in Inventory Manager and reviewing the <span class="Emphasis">Stock to Service Curve</span> graph. </p>
+        <p class="BasicNote">The <span class="Emphasis">Stock to Service</span> blade only displays if there has been an optional integration (via a Webhook) with the Stock to Service calculation. This calculation is an analytical curve developed by TG Service Optimizer 99+ (SO99+) affecting the <span class="Emphasis">safety stock days</span> of applied inventories. For more information regarding the Stock to Service calculation, see <MadCap:xref href="Policy Information.htm#Target">Target Service Level and Stock-to-Service (STS)</MadCap:xref>.</p>
+        <h3>Accessing the Stock to Service Curve blade</h3>
+        <p>To access the <span class="Emphasis">Stock to Service Curve</span> graph, navigate to Inventory Manager &gt; Select Inventory &gt; <span class="Emphasis">Stock to Service Curve</span> blade.</p>
+        <h3>Stock to Service Curve graph</h3>
+        <p>
+            <img src="../../Resources/Images/Inventory Manager/Stock to Service Curve Blade.png" class="LargeImages" />
+        </p>
+        <p>Users can change the graph minimum and maximum X values to view a portion on the graph by zooming in and use the curve to see the exact value of any given point on the graph. The curve rises or falls in 1% increments. 
+
+For example, users can put the curve at the 90% service level and move along the graph to see service levels 91%, 92%, and 93%.</p>
+        <h3>Axis definitions</h3>
+        <table style="width: 100%;margin-left: auto;margin-right: auto;mc-table-style: url('../../Resources/TableStyles/standard.css');" class="TableStyle-standard" cellspacing="0">
+            <col class="TableStyle-standard-Column-Column1" />
+            <col class="TableStyle-standard-Column-Column2" />
+            <thead>
+                <tr class="TableStyle-standard-Head-Header1">
+                    <th class="TableStyle-standard-HeadE-Column1-Header1">Axis</th>
+                    <th class="TableStyle-standard-HeadD-Column2-Header1">Definition</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">Y - Safety Stock Days</td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">Minimum value of 0 and maximum value is Safety Stock days value of 100% Service Level.</td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyB-Column1-Body1">X - Target Service Level</td>
+                    <td class="TableStyle-standard-BodyA-Column2-Body1">Minimum value of 0 and maximum value of 100.</td>
+                </tr>
+            </tbody>
+        </table>
+        <h3>Stock to Service curves </h3>
+        <p>Stock to Service (STS) curves are analytical curves that relate each service level value with the average stock that is statistically required to achieve it.</p>
+        <p>
+            <img src="../../Resources/Images/Policy/Stock To Service Curve.PNG" class="LargeImages" />
+        </p>
+        <p>Statistical demand characteristics are generated  in terms of: volume (expected demand), variability (volatility of demand), frequency (typical market/customer order profile).</p>
+        <p>The STS curve therefore determines the relative average stock and the associated control stock  values for each item/warehouse and for the desired service level.</p>
+        <p>
+            <img src="../../Resources/Images/Policy/Stock To Service Target Level.PNG" class="LargeImages" />
+        </p>
+        <h3>Logistic Parameters</h3>
+        <p>The following parameters represent the input for STS modeling.</p>
+        <table style="width: 100%;margin-left: auto;margin-right: auto;mc-table-style: url('../../Resources/TableStyles/standard.css');" class="TableStyle-standard" cellspacing="0">
+            <col class="TableStyle-standard-Column-Column1" />
+            <col class="TableStyle-standard-Column-Column2" />
+            <thead>
+                <tr class="TableStyle-standard-Head-Header1">
+                    <th class="TableStyle-standard-HeadE-Column1-Header1">Logistic parameters and constraints</th>
+                    <th class="TableStyle-standard-HeadD-Column2-Header1">Description</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">Review period [<i>periods</i>]
+					</td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">Generally corresponds with the planning frequency and the relative ability to react to events 
+					</td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">Minimum lead-time [<i>periods</i>]
+					</td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">Nominal or contractual lead-time, calculated from the moment in which the need to order is perceived to the moment when the material is available for picking at the warehouse
+					</td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">Average delay [<i>periods</i>]
+					</td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">Average supply delay added to the minimum lead-time
+					</td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">Minimum supply lot [<i>units</i>] (*)
+					</td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">
+						The minimum quantity that can be ordered from the supplier or produced
+						. 
+					<p class="BasicNote">For modeling, TG SO99+ uses whichever of the 2 parameters offers greater time coverage.</p></td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">Incremental supply lot [<i>units</i>]
+					</td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">Size of the incremental quantities allowed, in addition to the minimum lot
+					</td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyB-Column1-Body1">Minimum reorder interval [<i>periods</i>] (*)
+					</td>
+                    <td class="TableStyle-standard-BodyA-Column2-Body1">
+						Target minimum coverage of each order. It is effectively a replenishment lot expressed in periods (generally &gt;= stock review period)
+ 
+					<p class="BasicNote">For modeling, TG SO99+ uses whichever of the 2 parameters offers greater time coverage.</p></td>
+                </tr>
+            </tbody>
+        </table>
+    </body>
+</html>

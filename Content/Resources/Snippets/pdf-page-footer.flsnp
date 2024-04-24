@@ -1,0 +1,24 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head>
+    </head>
+    <body>
+        <table>
+            <col style="width: 80%;" />
+            <col style="width: 20%;" />
+            <tbody>
+                <tr>
+                    <td>
+                        <p class="RunningFooter"><MadCap:variable name="Variables.BookTitle" /> | <MadCap:variable name="Variables.BookVersion" /></p>
+                    </td>
+                    <td style="text-align: right;">
+                        <p class="RunningFooter">| <MadCap:variable name="System.PageNumber" /></p>
+                    </td>
+                </tr>
+                <tr>
+                    <td style="text-align: center;" colspan="2"><i>Proprietary to ToolsGroup</i> </td>
+                </tr>
+            </tbody>
+        </table>
+    </body>
+</html>

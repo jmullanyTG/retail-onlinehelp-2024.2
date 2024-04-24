@@ -1,0 +1,40 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head>
+    </head>
+    <body>
+        <h1>Configuring Item Master Group values with Clusters</h1>
+        <p>The <span class="Emphasis">Target Item Master Group Cluster Configuration</span> view allows for the configuration of Item Master Group X values with Clusters. Each segment is assigned cluster sets.  Comparison data is aggregated for all clusters found within those cluster sets (based on the snapshots specified for use in the scenario by the <span class="Emphasis">Use Comparison Cluster Set Snapshots for Comparison Data</span> system policy).
+</p>
+        <p class="BasicNote">The <span class="Emphasis">Target Item Master Group Cluster Configuration</span> view is used in Target Creation in the Assortment Planning module and requires that system policy <span class="Emphasis">Target Filter Item Master Group</span> be set to a particular Item Master Group. </p>
+        <p>The variants used to aggregate history is based on either the:</p>
+        <ul>
+            <li> Target Filter, or </li>
+            <li>the hierarchy level (if Segment by Hierarchy was used to create the segment). </li>
+        </ul>
+        <p>By configuring Item Master Group X values with Clusters, the list of variants is further narrowed down by cluster, depending on the definitions set in system policy <span class="Emphasis">Target Filter Item Master Group</span> (e.g. Cluster A will only use variants with Item Master X property of <span class="Emphasis">1</span>).
+
+</p>
+        <p>When Comparison data is generated, it is further constrained by this association.  Then, when Rationalization is run, recommended choice counts calculate over this narrower set of data.</p>
+        <p>
+            <img src="../../Resources/Images/Target Choice Count/Target Creation Cluster Configuration.PNG" class="LargeImages" />
+        </p>
+        <p class="BasicNote">For more information, regarding the <span class="Emphasis">Cluster Containment Configuration</span> and <span class="Emphasis">Cluster Set Containment Configuration</span> sections, see <MadCap:xref href="../Assortment Planning/Cluster Configuration.htm">Configuring which clusters get more choices than others</MadCap:xref>.</p>
+        <p>For example, where Store Grade values are: 1, 2, and 3 and possible Clusters are: A, B, C, and D, then users can map:</p>
+        <ul>
+            <li> A should only consider history for variants with Item Master Group X value of 1</li>
+            <li>B should only consider the values of 1 and 2</li>
+            <li>C should only consider the values of 1 and 2</li>
+            <li>D should use variants with any value for Item Master Group X (1, 2, and 3)</li>
+        </ul>
+        <h2>Configuring Item Master Group X values with Clusters</h2>
+        <ol>
+            <li>
+                <p>Select an Assortment Plan using the dropdown list in the <span class="Emphasis">Assortment Plan</span> field and then click <span class="Emphasis">Execute</span>. </p>
+                <p>The grid displays the intersection between Item Master Group X values and Cluster values. By default, all combinations are opted in. </p>
+            </li>
+            <li>As required, deselect particular combinations by clicking on the relevant checkbox.</li>
+            <li>Click <span class="Emphasis">Save</span>.</li>
+        </ol>
+    </body>
+</html>

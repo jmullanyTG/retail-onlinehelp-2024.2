@@ -1,0 +1,26 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head>
+    </head>
+    <body>
+        <p>Commitment lines can be custom grouped in Order documents. This functionality is enabled if system policy <span class="Emphasis">Allow custom grouping of Placeholder Commitment Lines</span> is set to <span class="Emphasis">True</span>.</p>
+        <p>The following dialog displays after <span class="Emphasis">Commitments</span> is clicked in an Assortment Plan’s main planning view and <span class="Emphasis">Selected</span> or <span class="Emphasis">All</span> were selected or a Commitment is triggered in the <span class="Emphasis">Receipt Plan</span> view:</p>
+        <p>
+            <img src="../Images/Assortment Planning/Commitment Grouping Select.PNG" class="LargeImages" />
+        </p>
+        <p>In the above example, generated commitments are grouped by <span class="Emphasis">AUT</span> and <span class="Emphasis">Delivery Date</span>. To change the grouping, click the ellipsis to display the <span class="Emphasis">Commitment Grouping</span> window.</p>
+        <p>
+            <img src="../Images/Assortment Planning/Commitment Grouping Window.PNG" class="LargeImages" />
+        </p>
+        <p>There are multiple options to choose from including Commitments (based on the Delivery Date), Assortment (including Cluster Set / Cluster), Hierarchy (including Variant and Style), and Attributes (all attributes are included). The inclusion of Attributes allows for the inclusion of new grouping items that could be configured on-site.</p>
+        <p>Click on <span class="Emphasis">&gt;</span> and <span class="Emphasis">&lt;</span> to include the items to group the commitment lines by.</p>
+        <p>Clicking <span class="Emphasis">Save</span> generates the Commitment lines based on their Placeholder Collection Codes and Months that the Delivery will occur in. 
+
+</p>
+        <div class="Note_BasicNote">If grouping does not include Placeholder (i.e. each Placeholder has its own Order) the system also tries to group by the Supplier associated with the Variant. 
+
+If the Placeholder was in the grouping this rule is ignored. 
+			 <p>Placeholders belonging to the same Collection appear under the same document header. </p></div>
+        <p MadCap:conditions="General.ScreenOnly">For additional information, see <MadCap:xref href="../../Topics/Assortment Planning/Commitment Orders.htm">Commitment orders </MadCap:xref>.</p>
+    </body>
+</html>

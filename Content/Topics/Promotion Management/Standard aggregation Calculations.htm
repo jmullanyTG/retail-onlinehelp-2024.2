@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd"
+      xml:lang="en-us">
+   <head>
+      <link href="../../Resources/TableStyles/standard.css"
+            rel="stylesheet"
+            MadCap:stylesheetType="table"/>
+      <title/>
+   </head>
+   <body>
+      <h1>Standard aggregation calculations</h1>
+      <p>The following standard aggregation Calculations set the lowest and highest promotion price values by rolling up from the corresponding values at the lower levels. With the exception of the Variant Calculations which are only used in Variant implementations, these Calculations are included in most Calculation Sets.</p>
+      <table class="TableStyle-standard"
+             cellspacing="0"
+             style="mc-table-style: url('../../Resources/TableStyles/standard.css');">
+         <thead>
+            <tr class="TableStyle-standard-Head-Header1">
+               <th class="TableStyle-standard-HeadE-Column1-Header1">
+                  <p>Calculation Name</p>
+               </th>
+               <th class="TableStyle-standard-HeadD-Column2-Header1">
+                  <p>Configuration</p>
+               </th>
+            </tr>
+         </thead>
+         <tbody>
+            <tr class="TableStyle-standard-Body-Body1">
+               <td class="TableStyle-standard-BodyE-Column1-Body1">
+                  <p>Standard - Promo Low - Variant</p>
+               </td>
+               <td class="TableStyle-standard-BodyD-Column2-Body1">
+                  <p>Set the Variant level LowestPromotionPrice field to the minimum Item level LowestPromotionPrice including overrides. To be used in a Variant implementation.</p>
+                  <ul>
+                     <li>Calculation Level – Variant Level</li>
+                     <li>Group Type – Buy Get Group</li>
+                     <li>Calculation Field – LowestPromotionPrice</li>
+                     <li>Aggregation Type – MIN no 0</li>
+                     <li>Formula – ISNULL(PromotionPrice_Override,LowestPromotionPrice)</li>
+                  </ul>
+               </td>
+            </tr>
+            <tr class="TableStyle-standard-Body-Body1">
+               <td class="TableStyle-standard-BodyE-Column1-Body1">
+                  <p>Standard - Promo High - Variant</p>
+               </td>
+               <td class="TableStyle-standard-BodyD-Column2-Body1">
+                  <p>Set the Variant level HighestPromotionPrice field to the maximum Item level HighestPromotionPrice including overrides. To be used in a Variant implementation.</p>
+                  <ul>
+                     <li>Calculation Level – Variant Level</li>
+                     <li>Group Type – Buy Get Group</li>
+                     <li>Calculation Field – HighestPromotionPrice</li>
+                     <li>Aggregation Type – MAX</li>
+                     <li>Formula – ISNULL(PromotionPrice_Override,HighestPromotionPrice)</li>
+                  </ul>
+               </td>
+            </tr>
+            <tr class="TableStyle-standard-Body-Body1">
+               <td class="TableStyle-standard-BodyE-Column1-Body1">
+                  <p>Standard - Promo Low - Group</p>
+               </td>
+               <td class="TableStyle-standard-BodyD-Column2-Body1">
+                  <p>Set the Group level LowestPromotionPrice field to the minimum LowestPromotionPrice of the products in the group, Item or Variant including overrides.</p>
+                  <ul>
+                     <li>Calculation Level – Group Level</li>
+                     <li>Group Type – Buy Get Group</li>
+                     <li>Calculation Field – LowestPromotionPrice</li>
+                     <li>Aggregation Type – MIN no 0</li>
+                     <li>Formula – ISNULL(PromotionPrice_Override,LowestPromotionPrice)</li>
+                  </ul>
+               </td>
+            </tr>
+            <tr class="TableStyle-standard-Body-Body1">
+               <td class="TableStyle-standard-BodyE-Column1-Body1">
+                  <p>Standard - Promo High - Group</p>
+               </td>
+               <td class="TableStyle-standard-BodyD-Column2-Body1">
+                  <p>Set the Group level HighestPromotionPrice field to the maximum HighestPromotionPrice of the products in the group, Item or Variant including overrides.</p>
+                  <ul>
+                     <li>Calculation Level – Group Level</li>
+                     <li>Group Type – Buy Get Group</li>
+                     <li>Calculation Field – HighestPromotionPrice</li>
+                     <li>Aggregation Type – MAX</li>
+                     <li>Formula – ISNULL(PromotionPrice_Override,HighestPromotionPrice)</li>
+                  </ul>
+               </td>
+            </tr>
+            <tr class="TableStyle-standard-Body-Body1">
+               <td class="TableStyle-standard-BodyE-Column1-Body1">
+                  <p>Standard - Promo Low - Promo Aggr</p>
+               </td>
+               <td class="TableStyle-standard-BodyD-Column2-Body1">
+                  <p>Set the Promotion Aggregate level LowestPromotionPrice field to the minimum LowestPromotionPrice of the products (Item/Variant or Groups) in the Promotion. For example, if the Promotion consists of Items and groups, the Promotion Aggregate value is set by comparing the PromotionPrice at Item level for the Items, the calculated PromotionPrice at the Group level for all groups, then setting to the Promotion Aggregate LowestPromotionPrice to the minimum value of all. Overrides are also taken into account.</p>
+                  <ul>
+                     <li>Calculation Level – Promotion Aggregate Level</li>
+                     <li>Group Type – Buy Get Group</li>
+                     <li>Calculation Field – LowestPromotionPrice</li>
+                     <li>Aggregation Type – MIN no 0</li>
+                     <li>Formula – ISNULL(PromotionPrice_Override,LowestPromotionPrice)</li>
+                  </ul>
+               </td>
+            </tr>
+            <tr class="TableStyle-standard-Body-Body1">
+               <td class="TableStyle-standard-BodyB-Column1-Body1">
+                  <p>Standard - Promo High - Promo Aggr</p>
+               </td>
+               <td class="TableStyle-standard-BodyA-Column2-Body1">
+                  <p>Set the Promotion Aggregate level HighestPromotionPrice field to the maximum HighestPromotionPrice of the products (Item/Variant or Groups) in the Promotion. For example, if the Promotion consists of Variants and groups, the Promotion Aggregate value is set by comparing the calculated PromotionPrice at Variant level for the Variants, the calculated PromotionPrice at the Group level for all groups, then setting to the Promotion Aggregate HighestPromotionPrice to the maximum value of all. Overrides are also taken into account.</p>
+                  <ul>
+                     <li>Calculation Level – Promotion Aggregate Level</li>
+                     <li>Group Type – Buy Get Group</li>
+                     <li>Calculation Field – HighestPromotionPrice</li>
+                     <li>Aggregation Type – MAX</li>
+                     <li>Formula – ISNULL(PromotionPrice_Override,HighestPromotionPrice)</li>
+                  </ul>
+               </td>
+            </tr>
+         </tbody>
+      </table>
+      <p> </p>
+      <p> </p>
+   </body>
+</html>

@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" xml:lang="en-us">
+    <head><title></title>
+    </head>
+    <body>
+        <h1>Technical details about supersessions</h1>
+        <p>Supersession information is contained in the following three tables (note the spelling):</p>
+        <ul>
+            <li>tbl_SupercessionHeader: holds the information visible in the <span class="Emphasis">Supersession Grid</span>.</li>
+            <li>tbl_SupercessionInventory: holds the inventory links.</li>
+            <li>tbl_SupercessionSite: holds the site-specific replenishment types for the old items.</li>
+        </ul>
+        <h2>Linking a supersession </h2>
+        <p>For the forecasting engine to read the demand history from a linked supersession, the data is written to <span class="Emphasis">tbl_InventoryHistory</span> in the SupercessionHistoryQuantity column. If there are lost sales in the superseded (old item) history, they come into <span class="Emphasis">tbl_InventoryHistory</span> as SupercessionLostSalesQuantity. These may then be included or excluded at the user’s discretion along with regular lost sales quantities. </p>
+        <p>Data is copied for all time periods which fall within the “Sales History Start Date” and “Sales History End Date” window. </p>
+    </body>
+</html>

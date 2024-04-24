@@ -1,0 +1,99 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" xml:lang="en-us">
+    <head>
+        <title>
+        </title>
+    </head>
+    <body>
+        <h1>Workload Queue grid fields</h1>
+        <p>There are two grids on the <span class="Emphasis">Workload Queue</span> home screen. The grids are:&#160;<span class="Emphasis">Active</span> and <span class="Emphasis">History</span>.</p>
+        <p>The <span class="Emphasis">Active</span> list displays the current batches being or waiting to be processed by the system. The list is sorted by Process Type and Status, which cannot be modified.</p>
+        <p>The <span class="Emphasis">History</span> list displays completed batches in the following statuses:&#160;complete, partially complete, failed, expired. The list also displays if a batch was removed from processing. </p>
+        <h2>Field descriptions</h2>
+        <table class="TableStyle-standard" cellspacing="0" style="mc-table-style: url('../../Resources/TableStyles/standard.css');">
+            <thead>
+                <tr class="TableStyle-standard-Head-Header1">
+                    <th class="TableStyle-standard-HeadE-Column1-Header1">Field</th>
+                    <th class="TableStyle-standard-HeadD-Column2-Header1">Description</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">Process Owner</td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">
+                        The name of the user who submitted the work to the queue. 
+                    </td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">Description</td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">
+                         Name used to identify different batches. 
+                        <ul><li><span class="Emphasis">Inventory Forecast</span> – The system uses the Item filter name and product filter used.</li><li><span class="Emphasis">Assortment Planning</span> – The system uses the scenario name. If a scenario name is not available, the plan name is displayed with the product filter used.</li></ul></td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">
+                        Process Type 
+                    </td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">
+                        Process types represent the supported ToolsGroup JustEnough solutions with the ability to use the Workload Queue. Batches are grouped by process types and are only displayed if there are active batches of that type. 
+                    </td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">Status Icon</td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">
+                        In the <span class="Emphasis">Active</span> grid, the icon for the current status of the batch. In the<span class="Emphasis"> History</span> grid, the appropriate icon for the final status of the batch.</td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">Batch Priority</td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">
+                        The priority calculated by the system or modified by a super user. The batch priority determines the order in which the batches  execute in conjunction with batch priority escalation based on the length of time it has been waiting to be processed. 
+                    </td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">Item Status</td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">
+                       The number of items completed out of the total number of items to be processed in the batch. 
+                    </td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">
+                         Archive Date 
+                    </td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">
+                         (<span class="Emphasis">History</span> grid) The date time stamp when the batch was moved from the Active to the History. 
+                    </td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">Enqueue Date</td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">
+                        The date time stamp the batch was submitted to the Workload Queue. 
+                    </td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">Start Date</td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">
+                       The date time stamp the batch began execution on the Workload Queue. The field is blank until execution begins. 
+                    </td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">Expire Date</td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">
+                        The system calculated date time stamp on which the batch is removed from the Workload Queue if its execution has not begun. 
+                    </td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">Last Changed Date</td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">
+                      The date time stamp of the last priority change. 
+                    </td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyB-Column1-Body1">Last Changed By</td>
+                    <td class="TableStyle-standard-BodyA-Column2-Body1">
+                       The name of the user who last modified the batch’s priority. 
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </body>
+</html>

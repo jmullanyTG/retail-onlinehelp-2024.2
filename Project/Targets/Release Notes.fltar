@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<CatapultTarget
+  Version="2"
+  Comment="Release Notes"
+  Type="PDF"
+  Destinations=""
+  GlossaryTermConversion="marked"
+  EquationsOutputType="PNG"
+  PatchHeadingLevels="true"
+  InjectBookHeadings="true"
+  EmbedImages="true"
+  RemoveImagesFromHeadings="true"
+  ConditionTagExpression="exclude[General.ScreenOnly or General.ScreenOnly or General.DoNotPublish]"
+  DisableAutoSync="true"
+  MasterToc="/Project/TOCs/Release Notes.fltoc"
+  MasterPageLayout="/Content/Resources/PageLayouts/Release Notes.flpgl">
+  <PrintedOutput
+    CollapseMargins="true"
+    GenerateTOCProxy="true"
+    GenerateIndexProxy="false"
+    GenerateGlossaryProxy="false"
+    ExpandingTextConversion="expand"
+    PopupConversion="expand"
+    DisableMasterPageUsage="true"
+    EnableTrackedChanges="true"
+    OutputFormat="docx" />
+  <Variables> <Variable
+      Name="Variables/BookVersion">2024.2</Variable><Variable
+      Name="Variables/BookTitle">ToolsGroup JustEnough</Variable> <Variable
+      Name="Variables/BookSubTitle">Release Notes</Variable></Variables>
+  <Destinations>
+    <Destination
+      Link="/Project/Destinations/PDF Output.fldes"
+      Publish="true" />
+  </Destinations>
+  <PDF
+    Tagged="true"
+    PageLayout="OneColumn"
+    CollapsedBookmarks="true"
+    ConvertBookmarks="true"
+    ShowUsedBookmarks="false"
+    PageMode="UseNone" />
+  <DocumentProperties
+    Author="" />
+</CatapultTarget>

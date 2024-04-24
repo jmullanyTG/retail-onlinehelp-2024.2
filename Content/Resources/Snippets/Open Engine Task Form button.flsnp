@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head>
+    </head>
+    <body>
+        <p> Either the <b>Replenish Task</b> form or the <b>Forecast Task</b> form displays with the selected engine’s specific task form. Many engine settings can be set here including generic engine configurations such as thread settings. Upon clicking on <b>Ok</b> on the engine task form, the generated XML from this form is saved in a read-only text box in the engine template form. </p>
+        <p>
+            <img src="../Images/Engine Template/Replenish Task.PNG" class="LargeImages" />
+        </p>
+        <p>The parameters differ for the <b>Forecast Task</b> form. </p>
+        <p>
+            <img src="../Images/Engine Template/Forecast Task.png" class="LargeImages" style="width: 151px;height: 226px;" />
+        </p>
+    </body>
+</html>

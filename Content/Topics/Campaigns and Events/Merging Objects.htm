@@ -1,0 +1,73 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head />
+    <body>
+        <h1>Merging objects</h1>
+        <p>Merging combines two adjacent objects into a single object. It is available to the following object types:</p>
+        <ul>
+            <li><a href="Price Display Formats.htm">Price display format</a> </li>
+            <li><a href="Attribute Display Formats.htm">Attribute display format</a> </li>
+            <li><a href="Item Display Formats.htm">Item display format</a> </li>
+            <li><a href="Slot Set Templates.htm">Slot set templates</a>
+            </li>
+            <li><a href="Editing Slot Set Layouts.htm">Event slot sets</a>
+            </li>
+        </ul>
+        <p>Options are merged using the <span class="Emphasis">Merge</span> menu on the toolbar or by right-clicking an object and choosing the option from the context menu. </p>
+        <h2>Merge options</h2>
+        <p>The Merge toolbar menu contains the following options:</p>
+        <ul>
+            <li>Merge Up</li>
+            <li>Merge Down</li>
+            <li>Merge Left</li>
+            <li>Merge Right</li>
+        </ul>
+        <h2>Merging considerations</h2>
+        <ul>
+            <li>
+                <p>Merge options are only available when there is at least one another object adjacent (above, below, right, or left) to the selected object.</p>
+            </li>
+            <li>Only the merge options that apply to a selected object are enabled. For example, in the following screenshot, only the <span class="Emphasis">Merge Up</span> option is available because the only other adjacent container is located above the selected object.<p><img src="../../Resources/Images/Events/Merge right-click.png" class="LargeImages" /></p></li>
+            <li>One object can be merged with multiple other objects if the other objects combine to share the same border width or height as the original object. (See example below.)</li>
+        </ul>
+        <p class="Caution">When merging, only the content in the originally-selected object is preserved (see examples below).</p>
+        <h2>Merging examples</h2>
+        <p>The following examples are shown using price display formats, but apply to the other supported objects as well.</p>
+        <h3>Merging equally-sized objects</h3>
+        <ol>
+            <li>
+                <p>Select an object with at least one other object adjacent to it. The selected object is outlined in blue.</p>
+                <p>
+                    <img src="../../Resources/Images/Events/Selected Object Outlined Blue.png" class="LargeImages" />
+                </p>
+                <p class="BasicNote"> A purple line along the selected object's border indicates that merging in that direction is possible.</p>
+            </li>
+            <li>
+                <p>Select <span class="Emphasis">Merge Right</span>.</p>
+                <p>The merge removes the content that was in the adjacent object. Only the selected object's contents and properties are preserved.</p>
+                <p>
+                    <p>
+                        <img src="../../Resources/Images/Events/Merge Equal Sized Right.PNG" class="LargeImages" />
+                    </p>
+                </p>
+            </li>
+        </ol>
+        <h3>Merging multiple adjacent objects</h3>
+        <p>In this example, an object is merged with two other objects. The merged objects share the same height  as the original selected object.</p>
+        <ol>
+            <li>
+                <p>Select an object that has multiple objects along its entire top, bottom, or side. </p>
+                <p>In this example, the selected object is adjacent to two horizontally-stacked objects that combine to be the same height as the selected object. </p>
+                <p>
+                    <img src="../../Resources/Images/Events/Merge Horizontal Objects.png" class="LargeImages" />
+                </p>
+                <p class="BasicNote">The purple line along the selected object's left border indicates that merging in that direction is possible.</p>
+            </li>
+            <li>
+                <p>Select <span class="Emphasis">Merge Up</span>.</p>
+                <p>The merge removes any content that was in the adjacent horizontally-stacked objects. Only the selected object's contents and properties are preserved.</p>
+                <p> <img src="../../Resources/Images/Events/Merge Multiple Result.png" class="LargeImages" /></p>
+            </li>
+        </ol>
+    </body>
+</html>

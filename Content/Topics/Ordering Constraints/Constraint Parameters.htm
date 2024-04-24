@@ -1,0 +1,24 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" xml:lang="en-us">
+    <head><title></title>
+    </head>
+    <body>
+        <h1>Constraint parameter descriptions</h1>
+        <p>Values change as users highlight different constraint sets within the header. When building a new constraint it is easy to think of the constraint as the following template sentence:</p>
+        <p style="text-align: left;"><span style="font-style: italic;">Constrain so that “</span><span style="font-weight: bold;font-style: italic;">Constraint Type”</span><span style="font-style: italic;"> is </span><span style="font-weight: bold;font-style: italic;">“Operator”</span><span style="font-style: italic;"> the value </span><span style="font-weight: bold;font-style: italic;">“Constraint Value”</span>.</p>
+        <ul>
+            <li><span class="Emphasis">Priority</span> – Constraints are applied in order of priority within context of the constraint set. Priority 1 is applied last and can override lower prioritized constraints.</li>
+            <li><span class="Emphasis">Constraint Type</span> – The inventory property to be constrained. All monetary constraint values apply to the system default currency. One of the following attributes:<ul><li><span class="Emphasis">Default Cost Value</span> – A standard cost value. </li><li><span class="Emphasis">Default Sell Value</span> – A standard value based on retail price. </li><li><span class="Emphasis">Quantity</span> – The quantity of units.</li><li> Any volume metric data imported into the system. </li><li><p>Any cost data imported into the system.</p></li></ul></li>
+        </ul>
+        <ul>
+            <li><span class="Emphasis">Operator</span> – The mathematical operator for the constraint. Can be one of the following:<ul><li><span class="Emphasis">Greater Than</span></li><li><span class="Emphasis">Less Than</span></li><li><span class="Emphasis">Equal To</span></li><li><span class="Emphasis">Equal to Multiple of</span> – Used for basic case pack logic.</li></ul></li>
+        </ul>
+        <ul>
+            <li><span class="Emphasis">Constraint Value</span> – Numerical value of the constraint.</li>
+            <li><span class="Emphasis">Tolerance Above</span> – Should the system be unable to constrain the value exactly to the correct amount, the tolerance above the value which is considered acceptable. This may be expressed as a percentage, or quantity of units.</li>
+            <li><span class="Emphasis">Tolerance Below</span> – Should the system be unable to constrain the value exactly to the correct amount, the tolerance below the value which is considered acceptable. This may be expressed as a percentage, or quantity of units.</li>
+            <li><span class="Emphasis">Rounding</span> – Acceptable rounding rules must be selected when the operator is <span class="Emphasis">Equal to Multiple of</span>:<ul><li><span class="Emphasis">Round Up</span></li><li><span class="Emphasis">Round Down</span></li><li><span class="Emphasis">Round to Nearest</span></li></ul></li>
+        </ul>
+        <p>Additional fields can be added by including groups of items within the selection. </p>
+    </body>
+</html>

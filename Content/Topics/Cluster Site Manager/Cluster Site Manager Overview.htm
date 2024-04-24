@@ -1,0 +1,104 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" xml:lang="en-us">
+    <head>
+        <link href="../../Resources/TableStyles/standard.css" rel="stylesheet" MadCap:stylesheetType="table" /><title></title>
+    </head>
+    <body>
+        <h1>Site Clustering Overview</h1>
+        <p>Stores can be clustered into logical groups using Site clustering. Site clustering involves the use of:</p>
+        <ul>
+            <li>partitions and statistical algorithms to cluster stores by both qualitative and quantitative criteria. </li>
+            <li>templates to quickly create clusters across different levels of the product and site hierarchies.  </li>
+            <li>cluster set snapshots to evolve cluster configurations over time.</li>
+        </ul>
+        <h2>Before creating site clusters</h2>
+        <p>Before creating clusters, it is vital that business discussions be had to determine what criteria are most important in addressing opportunities in the business. Also, the levels of the site hierarchy must be determined, at which the functions for which clusters are used, to facilitate efficiency throughout. As the clustering strategy is planned, consider the following:</p>
+        <ul>
+            <li>How is the business structured in terms of selling channels? Is there a need to segment by full and off-priced business, by country, by geography, some combination of all? Are there other factors related to site attributes (capacity, climate, demographic, etc.) to use to group sites together?</li>
+            <li>How is the business structured in terms of roles and responsibilities? Are planners responsible for multiple areas of the product and site hierarchies or are they specialized to certain areas? Based on the complexity of analysis that will be expected of them going forward and the tools available, should this structure be reassessed?</li>
+            <li>At what level of the product hierarchy will clusters be different? Should there be homogenous clusters that are used across multiple product areas or clusters that are specific to certain areas? In those areas, are there product attributes to consider to further specialize clusters?</li>
+            <li>What metrics should be used when clustering stores? Typically, this involves some type of historical or forecasted sales component, but should the business use sales revenue, units, cost, margin, margin %, GMROII, some combination of multiple?</li>
+        </ul>
+        <p>To use product and site attributes for the creation of site clusters, attribute sets, families, and values must be defined. At a minimum, at least one set must be assigned to the topmost level of both the product and site hierarchy on the Attribute Management solution on the Maintenance tab.</p>
+        <p>Site and product attribute associations can be set through configured data import processes, but they can also be managed manually in the following places:</p>
+        <ul>
+            <li><span class="Emphasis">Site Attributes:</span> Management &gt; Site Manager &gt; Site Attribute Management</li>
+            <li><span class="Emphasis">Product Attributes: </span>Management &gt; Variant Manager &gt; Variant Attribute Maintenance</li>
+        </ul>
+        <h2>Using new cluster sets</h2>
+        <p>Before beginning any activities in which the cluster sets are needed, do the following:</p>
+        <ol>
+            <li>Define the product and site hierarchies: <span class="Emphasis">System Utilities</span> &gt; <span class="Emphasis">Views</span> &gt; <span class="Emphasis">Maintenance </span>&gt; <span class="Emphasis">Hierarchy Filtering</span>.</li>
+            <li>(Optional) To use product and site attributes for the creation of site clusters, attribute sets, families, and values must be defined, and at a minimum, at least one set must be assigned to the topmost level of both the product and site hierarchy: <span class="Emphasis">Maintenance </span>&gt; <span class="Emphasis">Attribute Management</span>. </li>
+        </ol>
+        <p>Site and product attribute associations can be set via a configured data import process, or managed manually in the following places:</p>
+        <p><span class="Emphasis">Site Attributes: </span>Management &gt; Site Manager &gt; Site Attribute Management </p>
+        <p><span class="Emphasis">Product Attributes:</span> Management &gt; Variant Manager &gt; Variant Attribute Maintenance</p>
+        <h2>Understanding site clusters</h2>
+        <p>Though Site Clustering can be used to create store clusters for other purposes, its primary focus is to create clusters specifically for use in Assortment Planning. </p>
+        <p>The following table explains the concepts that underpin site clustering and how site clustering is used in Assortment Planning to facilitate planning activities.</p>
+        <table style="width: 100%;mc-table-style: url('../../Resources/TableStyles/standard.css');margin-left: 0;margin-right: auto;" class="TableStyle-standard" cellspacing="0">
+            <col class="TableStyle-standard-Column-Column1" />
+            <col class="TableStyle-standard-Column-Column2" />
+            <thead>
+                <tr class="TableStyle-standard-Head-Header1">
+                    <th class="TableStyle-standard-HeadE-Column1-Header1">Concept</th>
+                    <th class="TableStyle-standard-HeadD-Column2-Header1">Description</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">Cluster Set and Clusters</td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">
+                         A group of stores is referred to as a cluster. A cluster set is typically a collection of two or more clusters that were derived using the same set of criteria, though it is possible to have a cluster set with a single cluster.  
+                        <p class="Example">A typical cluster set  in a product hierarchy has clusters with stores assigned to those clusters based on their relative sales unit volume against others stores in the set. This scenario is common where cluster sets are created by business channel and the E- commerce channel consists of only one store. Thus, only one cluster is needed in the e-commerce cluster set.</p></td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">Clusters as Persistent Entities</td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">
+                         When a cluster is created in a cluster set, the cluster remains as a persistent entity in that set, regardless of whether any stores are assigned to that set. This facilitates the continuity of assortment plans, which continue on indefinitely once created, as the configuration of clusters in a set changes over time. 
+                        <p class="Example">For a cluster set with multiple clusters,&#160;stores naturally rank into the clusters based on their sales volume when the cluster set is initially calculated. When the cluster set is recalculated with current data, stores that improved their performance rank higher which may leave a cluster with no stores. However, the empty cluster still exists because it had stores earlier in the season. In this scenario, it is possible to manually shift stores into the empty cluster, if necessary.</p></td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">Cluster Sets and the Assortment Plan Site Hierarchy</td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">
+                        To be usable in a given assortment plan, a cluster set must be contained in a single portion of the lowest level of the site hierarchy assigned to that plan. This is required to allow for correct aggregation to site hierarchy levels in the various reporting and analysis functions in Assortment Planning. 
+                       <p>An assortment plan with an assigned site hierarchy that has the lowest level of country: US, UK, and China. The business plan is divided by channel (Retail, Wholesale, and e-commerce) and product category (Apparel, Footwear, and Accessories). In that scenario, the following cluster sets are created:</p><ul><li><p>US  Retail / Apparel, US Retail / Footwear,  US Retail Accessories</p></li><li>US Wholesale / Apparel, US  Wholesale / Footwear, US Wholesale Accessories</li><li><p> US e-commerce / Apparel, US e-commerce / Footwear, US  e-commerce / Accessories</p><p>UK Retail / Apparel, UK Retail / Footwear, UK  Retail / Accessories</p></li><li><p> UK Wholesale / Apparel, UK  Wholesale / Footwear, UK Wholesale / Accessories</p></li><li><p> UK  e-commerce / Apparel, UK  e-commerce / Footwear, UK e-commerce / Accessories</p></li><li><p>CHINA  Retail / Apparel, CHINA  Retail / Footwear, CHINA Retail / Accessories</p></li><li><p>CHINA  Wholesale / Apparel, CHINA  Wholesale / Footwear, CHINA Wholesale / Accessories</p></li><li><p>CHINA  e-commerce / Apparel, CHINA – e-commerce / Footwear, CHINA – e-commerce / Accessories</p></li></ul><p>Because the stores in each cluster set are contained in the lowest level of the site hierarchy assigned to the assortment plan, all of these cluster sets can be used.</p><p>Using the same assortment plan as in the previous example, ignoring the lowest level of country in the plan creates the following channel level cluster sets:
+							<ul><li><span class="Emphasis">Retail</span> Apparel, Retail / Footwear, Retail / Accessories</li><li><span class="Emphasis">Wholesale</span> Apparel, Wholesale / Footwear, Wholesale / Accessories</li><li><span class="Emphasis">e-commerce</span> Apparel, e-commerce / Footwear, e-commerce / Accessories</li></ul></p><p>Stores in the Retail and Wholesale channels exist across multiple countries (the lowest level of the assortment plan site hierarchy). Thus, these cluster sets do not pass validation by the assortment plan and cannot be used in it. </p><p class="BasicNote">Though cluster sets and clusters are not explicitly tied to the site hierarchy, they are related to it in the manner shown by these examples. Thus cluster sets available for selection in Assortment Planning is dictated by the levels of the site hierarchy that have been selected for the analysis or view.</p></td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">Cluster Set Snapshots and Event Management</td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">
+                     
+                        Cluster set snapshots save the cluster set and associated site configured cluster with an effective start date. The effective start date is used in Event Management to determine if it can be used during the time frame of the event. There must be at least a one day overlap with the event for the cluster set snapshot to be available. 
+                        <p>Over time, site clustering needs to be modified. When a new snapshot is created with a new effective start date, an end date will be in effect for the original snapshot and Event Management will no longer make it available to events that are configured out of its time frame. 
+                    </p></td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">Cluster Set Snapshots and Promotion Management</td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">
+                       
+                        Cluster set snapshots save the cluster set and associated site configured cluster with an effective start date. The effective start date is used in Promotion Management to determine if it can be used during the time frame of a promotion. There must be at least one day overlap with a promotion for the cluster set snapshot to be available. 
+                        <p>Over time, site clustering needs to be modified. When a new snapshot is created with a new effective start date, an end date is in effect for the original snapshot and it is no longer available to Promotions that are configured out of its time frame. 
+                    </p></td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">Cluster Set Snapshots and Assortment Planning</td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">
+                        
+                         Cluster set snapshots save the specific cluster assignments of stores within a cluster set at a point in time. Once a snapshot passes validation within an assortment plan, it is used to define not only the cluster sets that are eligible for use within that plan, but the number, specific stores, and percent contribution of the stores within each cluster. 
+                        <p>It is possible to have multiple cluster set snapshots become effective over the course of a plan or even within the life of a product. At a minimum, one cluster set snapshot with an effective date of the earliest historical period within the plan must be set. This allows for the proper assignment of sales to clusters, which are the lowest level at which plans are managed within Assortment Planning.</p><p class="BasicNote">Cluster set snapshots are sent to all existing assortment plans for validation as soon as they are created. Conversely, when new assortment plans are created, all existing cluster set snapshots are validated against them. No additional interaction is required to initiate the validation process.</p></td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyB-Column1-Body1">Clustering and Qualitative Criteria</td>
+                    <td class="TableStyle-standard-BodyA-Column2-Body1">
+                       
+                        Because the k-cluster type algorithms used for Site Clustering do not work with non-numeric data points, attributes with qualitative criteria cannot be specified as explicit conditions when creating cluster sets.  
+                        <p>There are two options when  clustering based on qualitative criteria: 
+                        </p><ol style="list-style-type: lower-alpha;"><li><p>Specify the criteria as Partition By parameters during cluster set configuration. For more information, see <a href="Viewing Collection Set Configuration.htm">Cluster set configuration</a>. </p><p>This creates separate cluster sets for each value that exists for the selected Partition By attribute, yielding the same number of total clusters as the likely desired outcome.</p></li><li>Create and assign site attribute values to the stores to cluster that are numeric equivalents or indicators of the desired qualitative criteria. This creates a single cluster set that (potentially) ranks stores into more granular clusters, depending on the number of clusters specified.
+</li></ol><p>Rather than specifying store capacity as High, Medium, and Low, specify square footage values  assigned by store, or numeric minimum or median values can be assigned for each desired tier (High = 20,000, Medium = 14,000, and Small = 8,000).</p><p>There may be unpredictable results if this method is used, depending on the specific numeric values used for the qualitative criteria equivalents, the degree of separation between each, and how those interact with the quantitative data points in the set. </p><p>For example, if clustering on sales volume and average temperature, stores with high sales volume and a low average temperature could be assigned to a cluster that was intended for low to mid sales volume and high average temperature. </p><p>This method is unclear as to the specific intent of the criteria. Consequently, the system  mathematically resolves the criteria for the purpose of ranking.</p></td>
+                </tr>
+            </tbody>
+        </table>
+    </body>
+</html>

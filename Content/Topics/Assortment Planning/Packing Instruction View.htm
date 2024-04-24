@@ -1,0 +1,95 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head>
+        <link href="../../Resources/TableStyles/standard.css" rel="stylesheet" MadCap:stylesheetType="table" />
+    </head>
+    <body>
+        <h1>Packing Instruction view</h1>
+        <p>Packs are configured in the Placeholder view using the <span class="Emphasis">Packing Instruction</span> supporting view. The selected placeholder must have a Size Curve assigned to use this view, otherwise the <span class="Emphasis">Packing Instruction</span> view is disabled. When accessing this view for a placeholder with an assigned size curve, the <span class="Emphasis">Pack Instruction Parameters</span> portion of the view is enabled. </p>
+        <p class="BasicNote">Use <span class="Emphasis">Configuration &gt;&#160;View Maintenance</span> to add the <span class="Emphasis">Packing Instruction</span> view to the <span class="Emphasis">View Selection</span> dropdown menu.</p>
+        <p>
+            <img src="../../Resources/Images/Assortment Planning/Packing Instruction view.png" class="LargeImages" />
+        </p>
+        <p> A new size curve for the placeholder can be selected to view available options from a different size curve. The <span class="Emphasis">Packing Instruction</span> view refreshes and disables additional pack instruction views. Only the <span class="Emphasis">Pack Instruction Parameters</span> view remains editable. The process can be repeated as required.</p>
+        <p>Once a Packing Instruction multiple has been selected, users can recalculate receipts and create commitments.</p>
+        <p class="BasicNote">The <span class="Emphasis">Packing Instruction</span> supporting view does not support multi-SKU prepacks.</p>
+        <h2>Defining a pack</h2>
+        <ol>
+            <li>In the <span class="Emphasis">Pack Instructions Parameters</span> section, review the default values and adjust these values as required.</li>
+            <li>
+                <p>If values were adjusted, click <span class="Emphasis">Save</span>.</p>
+                <p class="BasicNote">The Receipt Status changes to <span class="Emphasis">Dirty</span> after values are changed.</p>
+            </li>
+            <li>Click <span class="Emphasis">Calculate</span>.</li>
+            <li>
+                <p>In the <span class="Emphasis">Pack Instructions Selector</span>, review the suggested pack instructions.</p>
+                <p class="BasicNote">Fields with values that exceed default thresholds are formatted in red.</p>
+            </li>
+            <li>Review the various pack instructions in the <span class="Emphasis">Pack Instruction Size Details</span> and <span class="Emphasis">Pack Instruction Size Cover</span> sections.</li>
+            <li>Optionally, revise values in the <span class="Emphasis">Pack Instructions Parameters</span> section, click <span class="Emphasis">Save</span> and then click <span class="Emphasis">Calculate</span>.</li>
+            <li>Select one of the instructions sets and click <span class="Emphasis">Save</span>.</li>
+            <li>
+                <p>If the <span class="Emphasis">Pack Instruction Selector</span> dialog displays, click <span class="Emphasis">Yes</span>.</p>
+            </li>
+            <li>
+                <p>Navigate to the <span class="Emphasis">Receipt Plan</span> view and verify if <span class="Emphasis">Variant Order Multiple</span> matches the Pack Size. If not, recalculate the receipts using the <span class="Emphasis">Recalculate Receipts</span> button in the <span class="Emphasis">Receipt Plan</span> view.</p>
+                <p class="BasicNote">Any time a Packing Instruction is selected, the Order Multiple and Receipt Status is set automatically. Manually changing the Order Multiple value may cause the order quantity to not conform to the Pack Size. Click <span class="Emphasis">Calculate</span> again to get it to match.</p>
+            </li>
+            <li>
+                <p>Click the <span class="Emphasis">Create Commitments</span> button to create the Commitments. </p>
+                <p>The newly configured pack flows to Order Manager. The packing instructions in Order Manager are generated from the <span class="Emphasis">Packing Instruction</span> supporting view. </p>
+            </li>
+        </ol>
+        <p>
+            <MadCap:conditionalText MadCap:conditions="General.ScreenOnly">For more information, <MadCap:xref href="../Order Manager/Order Document Details Prepack.htm">Order Document details – Prepack tab</MadCap:xref></MadCap:conditionalText> <MadCap:conditionalText MadCap:conditions="General.PrintOnly">For more information, refer to the Order Manager User Guide.</MadCap:conditionalText></p>
+        <h2>Pack Instruction Parameters section</h2>
+        <p>The <span class="Emphasis">Pack Instruction Parameters</span> portion displays default parameters as defined from new metrics added to the Hierarchy Defaults view (<span class="Emphasis">Manage Assortment Defaults &gt; Assortment Plan Defaults</span>).</p>
+        <p>The metrics include:</p>
+        <table style="width: 100%;margin-left: auto;margin-right: auto;mc-table-style: url('../../Resources/TableStyles/standard.css');" class="TableStyle-standard" cellspacing="0">
+            <col class="TableStyle-standard-Column-Column1" />
+            <col class="TableStyle-standard-Column-Column2" />
+            <thead>
+                <tr class="TableStyle-standard-Head-Header1">
+                    <th class="TableStyle-standard-HeadE-Column1-Header1">Metric</th>
+                    <th class="TableStyle-standard-HeadD-Column2-Header1">Definition</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">Pack Type Pick Cost</td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">Used in the <span class="Emphasis">Pack Instruction Parameters</span> view and as part of the calculation of <span class="Emphasis">Picking Cost Ratio</span>.</td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">Pack Type Max Cost Ratio</td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">Used in the <span class="Emphasis">Pack Instruction Selector</span> view. The <span class="Emphasis">Picking Cost Ratio</span> cell is formatted red if the  Picking Cost Ratio goes above this value.</td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">Pack Type Max Weeks Cover</td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">The number of Weeks cover that the Pack should be below.</td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">Pack Type Max Error Ratio</td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">Used in the <span class="Emphasis">Pack Instruction Selector</span> view. The <span class="Emphasis">Absolute Error</span> cell is formatted red if the Absolute Error goes above this value.</td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">Pack Type Default Multiplier</td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">Used as a tie break. If the system cannot select a Pack then the pack with the Multiplier corresponding to this value is selected. Valid values are 1, 2, 2.5, 3, 3.5.</td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyB-Column1-Body1">Pack Type Default ROS</td>
+                    <td class="TableStyle-standard-BodyA-Column2-Body1">A default ROS can be set against the hierarchy. Users can choose to use this value instead of the Placeholder ROS in the calculation. To use this Default ROS, <span class="Emphasis">Apply Hierarchy ROS</span> must be checked on the <span class="Emphasis">Pack Instruction Parameters</span> view.</td>
+                </tr>
+            </tbody>
+        </table>
+        <p>Default values are adjusted within the <span class="Emphasis">Pack Instruction Parameters</span> view. Clicking <span class="Emphasis">Save</span> updates these values and starts the calculation. If no changes are desired, the <span class="Emphasis">Calculate</span> action button starts the calculation.</p>
+        <p MadCap:conditions="General.ScreenOnly">For more information on the defaults, see <MadCap:xref href="Assortment Plan Defaults tab.htm">Assortment Plan Defaults tab</MadCap:xref>.</p>
+        <h2>Pack Instruction Selector section</h2>
+        <p>The calculation returns 5 iterations of packing options within the <span class="Emphasis">Pack Instruction Selector</span> view. These options correspond to pack multipliers of 1, 2, 2.5, 3, and 3.5. The calculation returns values for each of these multipliers. Any values which are outside of the defined acceptable limits are highlighted red. An ideal pack multiplier would be below the Max Weeks Cover and have the lowest error ratio.</p>
+        <p>If an ideal pack is not available, the system selects the pack that corresponds to the Default Multiplier metric.</p>
+        <p> Fields formatted in blue color are editable. Editable values can be overridden at any time. </p>
+        <h2>Pack Instruction Size Details section</h2>
+        <p>Displays each pack’s details.</p>
+        <h2>Pack Instruction Size Cover</h2>
+        <p>Displays the weeks cover for size for average, fast, and slow rates of sale.</p>
+    </body>
+</html>

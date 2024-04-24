@@ -1,0 +1,118 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" xml:lang="en-us">
+    <head>
+        <link href="../../Resources/TableStyles/standard.css" rel="stylesheet" MadCap:stylesheetType="table" />
+        <title>
+        </title>
+    </head>
+    <body>
+        <h1>Editing slot set layouts</h1>
+        <p>The design of event slot layouts can only be edited using the <span class="Emphasis">Layout</span> view. From here, customize slots, their positions, space assignment, and item display format assignment. </p>
+        <p class="BasicNote" MadCap:conditions="General.ScreenOnly">Certain actions may be restricted based on <MadCap:xref href="../Users/Events Management User Rights.htm">Events management user rights</MadCap:xref>.</p>
+        <p>To edit the design of event slot slots, click the <span class="Emphasis">Layout Edit</span> button <img src="../../Resources/Images/Events/Layout edit.png" class="IconInline" /> (located about the slot set preview, next to the <span class="Emphasis">Zoom</span> slider).</p>
+        <p>
+            <img src="../../Resources/Images/Events/Zoom Slider.png" class="LargeImages" />
+        </p>
+        <p>Once in Layout Edit mode, the toolbar functionality refreshes and new panes appear in the right side of the Layout view.</p>
+        <ul>
+            <li>The Slot Information pane (top right) shows property details of the selected slot.</li>
+            <li>
+                <p>The Space Allocation pane (bottom right) shows space allocation by slot set and the overall event.</p>
+                <p>
+                    <img src="../../Resources/Images/Events/layout edit screen.png" class="LargeImages" />
+                </p>
+            </li>
+        </ul>
+        <h2>Promotions that are not shared with the logged-in user</h2>
+        <p>Users cannot split or merge Promotions that are not shared with them. Promotions adjacent to an unshared Promotion cannot be merged to the private Promotion. For example, a public Promotion to the right of a private Promotion cannot be merged left and the purple line does not appear.</p>
+        <p>Promotions in the Slot Set that have not been shared with the user are indicated by the following:</p>
+        <p>
+            <img src="../../Resources/Images/Events/Event Version Masked Promotion.png" class="LargeImages" />
+        </p>
+        <h2>Functionality</h2>
+        <table style="mc-table-style: url('../../Resources/TableStyles/standard.css');" class="TableStyle-standard" cellspacing="0">
+            <col class="TableStyle-standard-Column-Column1" />
+            <col class="TableStyle-standard-Column-Column2" />
+            <thead>
+                <tr class="TableStyle-standard-Head-Header1">
+                    <th class="TableStyle-standard-HeadE-Column1-Header1">
+                     Functionality
+                    </th>
+                    <th class="TableStyle-standard-HeadD-Column2-Header1">
+                        Description
+                    </th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">Edit slot properties</td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">
+                        In the Slot Information pane,  the following properties of a selected slot can be edited: 
+                        <ul><li>Slot name</li><li>Event space</li><li><p>Item display format</p><p>This field displays a dropdown list with the available Item Display formats. The list is filtered to be within corporate compliance to ensure consistent messaging to customers via the Slot Set Template Configuration screen.</p><p class="BasicNote">If an Item Display Format is assigned that is no longer applicable to the Slot Set Template the option remains until it has been substituted with a different Item Display Format. The invalid Item Display Format is no longer available once another Item Display Format has been selected and saved.</p></li><li><p>Notes</p></li></ul><p class="BasicNote">A user can only modify the above properties if the slot contains a Promotion that has been shared with them. In not shared,<span class="Emphasis"> Slot Name</span> and <span class="Emphasis">Notes</span> are masked and <span class="Emphasis">Event Space</span> and <span class="Emphasis">Item Display Format</span> are read-only.<br /></p></td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">Display headers
+<p><img src="../../Resources/Images/Events/Headers.png" class="IconInline" /></p></td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">Toggles showing or hiding slot headers. Slot headers display the position and item display format for each slot.</td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">Display dimensions
+<p><img src="../../Resources/Images/Events/Slot dimensions.png" class="IconInline" /></p></td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">Toggles showing or hiding each slot's dimensions and relative size.</td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">Drag promotions to different slots</td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">
+                    Dragging a promotion from one slot to another is possible within the same slot set as long as the promotion has at least one site cluster that matches the destination slot's geographies. Dragging removes the promotion from the original slot.  
+                        <p class="BasicNote">Drag and drop functionality for moving around slots is disabled if either the source or target slot has a private promotion assigned.</p></td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">
+                        <a href="Renumbering Slots.htm">Renumber slots</a>
+                    </td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">
+                        Clicking the <span class="Emphasis">#</span> button next to the <span class="Emphasis">Zoom</span> slider toggles entering and exiting slot renumbering mode. 
+                        <p class="BasicNote">This functionality is disabled if the slot contains a Promotion that has not been shared with the user. <br /></p></td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">Save changes</td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">Saves changes made to the slot set.</td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">
+                        <a href="Splitting Objects.htm">Split a slot</a>
+                    </td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">
+                        Splits the selected slot into multiple slots. Slots cannot be split into widths or heights smaller than 48 DIUs (about 1/2 inch). 
+                        <p class="BasicNote">This functionality is disabled if the slot contains a Promotion that has not been shared with the user. <br /></p></td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">
+                        <a href="Merging Objects.htm">Merge slots</a>
+                    </td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">Merges selected slots.</td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">
+                        <a href="Applying Equal Size to Selected Objects.htm">Equal size</a>
+                    </td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">
+                        
+                       Resizes selected  slots into equal heights or widths across their combined area. Slots must be adjacent to each other and aligned vertically or horizontally. 
+                        <p class="BasicNote">This functionality is disabled if at least one Promotion is selected on the Slot Set that has not been shared with the user.<br /></p></td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">Clear all</td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">
+                        
+                        Removes all slot configurations and resets the slot set to a single slot with default settings.  
+                        <p class="BasicNote">This functionality is disabled if the Slot Set contains at least one Promotion that has not been shared with the user.</p></td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyB-Column1-Body1">Undo and redo changes</td>
+                    <td class="TableStyle-standard-BodyA-Column2-Body1">The Undo and Redo toolbar buttons undo and redo unsaved changes to the slot set.</td>
+                </tr>
+            </tbody>
+        </table>
+    </body>
+</html>

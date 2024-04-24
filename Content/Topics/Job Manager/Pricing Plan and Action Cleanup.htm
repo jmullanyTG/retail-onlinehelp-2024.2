@@ -1,0 +1,380 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head>
+        <link href="../../Resources/TableStyles/standard.css" rel="stylesheet" MadCap:stylesheetType="table" />
+    </head>
+    <body>
+        <h1>Pricing plan and action cleanup</h1>
+        <p>The Pricing Plan and Action Cleanup task is used to cleanup historical price actions and plans so that the system data size can be maintained.</p>
+        <h2>Task parameters</h2>
+        <table style="width: 100%;margin-left: auto;margin-right: auto;mc-table-style: url('../../Resources/TableStyles/standard.css');" class="TableStyle-standard" cellspacing="0">
+            <col class="TableStyle-standard-Column-Column1" />
+            <col class="TableStyle-standard-Column-Column2" />
+            <thead>
+                <tr class="TableStyle-standard-Head-Header1">
+                    <th class="TableStyle-standard-HeadE-Column1-Header1">Parameter</th>
+                    <th class="TableStyle-standard-HeadD-Column2-Header1">Description</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1"><span class="Emphasis">Task Type</span>
+                    </td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">SQL Stored Procedure Task</td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1"><span class="Emphasis">Name</span>
+                    </td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">Price Manager - Mark Price Plan And Actions For Cleanup</td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1"><span class="Emphasis">Description</span>
+                    </td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">
+                        This job cleans up historical pricing plans and actions to maintain the database growth. The system deletes price actions first, and then pricing plans. The system deletes all pricing plans and actions that have been deleted. 
+                        <p>For pricing plans and actions that have been exported, three parameters are provided to customers, if required, to configure any necessary retention period in days after the start date. The parameters are:</p><ul><li>Derelict Price Action Retention:&#160;price actions that were created with a start date in the past that were never acted on.</li><li>Exported Price Action Retention:&#160; price actions that were executed with a start date in the past.</li><li>Pricing Plan Retention: pricing plans with a start date in the past.</li></ul></td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1"><span class="Emphasis">Progress Type</span>
+                    </td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">Report error and continue</td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1"><span class="Emphasis">Time Out (Seconds)</span>
+                    </td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">43,200 seconds</td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1"><span class="Emphasis">Retry Count</span>
+                    </td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">0</td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1"><span class="Emphasis">Retry Interval (ms)</span>
+                    </td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">10,000</td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1"><span class="Emphasis">Transaction Mode</span>
+                    </td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">Default</td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1"><span class="Emphasis">SQL Connection Type</span>
+                    </td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">Operations database</td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1"><span class="Emphasis">Method</span>
+                    </td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">pricemanager.Purge_PriceManagerDataByDate</td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyD-Column1-Body1" colspan="2"><span class="Emphasis">Method Parameters and defaults</span>
+                    </td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1"><span class="Emphasis">@iUserID </span>
+                    </td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">1</td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1"><span class="Emphasis">@iBatchSize</span>
+                    </td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">10,000 records</td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1"><span class="Emphasis">@iDerelictPriceActionRetention</span>
+                    </td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">7 days</td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1"><span class="Emphasis">@iExportedPriceActionRetention</span>
+                    </td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">7 days</td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1"><span class="Emphasis">@iPricingPlanRetention</span>
+                    </td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">90 days</td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyB-Column1-Body1"><span class="Emphasis">@yDebug</span>
+                    </td>
+                    <td class="TableStyle-standard-BodyA-Column2-Body1"><span class="Emphasis">0</span>: delete records 
+                        <p><span class="Emphasis">1</span>: returns the Price Actions and Pricing Plans that will be deleted with a sample set of the delete statements</p></td>
+                </tr>
+            </tbody>
+        </table>
+        <h2>Price Actions</h2>
+        <ul>
+            <li>
+               Where priceManager.PriceAction_Header.RowStatusID = -1
+            </li>
+            <li>
+                <p>Price Actions where priceManager.PriceAction_Header.PriceActionStatus = 7 AND the priceManager.PriceAction_Header.StartDate is X number of days before today</p>
+                <ul>
+                    <li>X is a configurable option on the job task.</li>
+                </ul>
+            </li>
+            <li>
+                <p>Price Actions where priceManager.PriceAction_Header.PriceActionStatus &gt;1000 AND the priceManager.PriceAction_HeaderStartDate is Y number of days before today .</p>
+                <ul>
+                    <li>
+                        <p>Y is a configurable option on the job task.</p>
+                    </li>
+                </ul>
+            </li>
+        </ul>
+        <h2>Pricing plans</h2>
+        <p>Data elements to be purged must include, but is not limited to:</p>
+        <ul>
+            <li>
+                <p>
+                Where priceManager.Plan_Header.RowStatusID = -1</p>
+                <ul>
+                    <li>All Price Actions associated to the plan will also be deleted even though they are not marked as deleted.</li>
+                </ul>
+            </li>
+            <li>
+                <p>    Pricing Plans where no Price Actions exist and the priceManager.Plan_Header.StartDate is Z number of days before today. </p>
+                <ul>
+                    <li>
+                        <p>The Z number of days for Plan is a different parameter than the X number of days for Actions.</p>
+                    </li>
+                </ul>
+            </li>
+        </ul>
+        <h2>Tables affected</h2>
+        <h3>v3.7.0.x Pricing plans</h3>
+        <table>
+            <tbody>
+                <tr>
+                    <td>
+                        <p>priceManager.Plan_Header</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <p>priceManager.Plan_SiteLink</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <p>priceManager.Plan_VariantLink</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <h3>v3.7.0.x Price actions</h3>
+        <table>
+            <tbody>
+                <tr>
+                    <td>
+                        <p>priceManager.MessageLog</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <p>priceManager.PriceAction_Header</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <p>priceManager.PriceAction_Inventory_Data</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <p>priceManager.PriceAction_InventoryExclusion</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <p>priceManager.PriceAction_ItemMaster_Data</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <p>priceManager.PriceAction_ItemMasterExclusion</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <p>priceManager.PriceAction_PriceMethod_VariableLink</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <p>priceManager.PriceAction_Record_UpdateProgress</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <p>priceManager.PriceAction_SiteExclusion</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <p>priceManager.PriceAction_SiteLink</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <p>priceManager.PriceAction_Variant_Data</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <p>priceManager.PriceAction_VariantExclusion</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <p>priceManager.PriceAction_VariantItemMasterLink</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <p>priceManager.PriceAction_VariantLink</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <p>priceManager.Validation_Log</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <p>priceManager.ValidationOverride</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <h3>v2019.2 Pricing plans</h3>
+        <table>
+            <tbody>
+                <tr>
+                    <td>
+                        <p>priceManager.Plan_Cluster</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <p>priceManager.Plan_ClusterSite</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <p>priceManager.Plan_Header</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <p>priceManager.Plan_VariantLink</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <h3>v2019.2 Price actions</h3>
+        <table>
+            <tbody>
+                <tr>
+                    <td>
+                        <p>priceManager.MessageLog</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <p>priceManager.PriceAction_Cluster</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <p>priceManager.PriceAction_ClusterItemMaster_Data</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <p>priceManager.PriceAction_ClusterPriceMethod_VariableLink</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <p>priceManager.PriceAction_ClusterSite</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <p>priceManager.PriceAction_ClusterVariant_Data</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <p>priceManager.PriceAction_Header</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <p>priceManager.PriceAction_Inventory_Data</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <p>priceManager.PriceAction_InventoryExclusion</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <p>priceManager.PriceAction_ItemMaster_Data</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <p>priceManager.PriceAction_Record_UpdateProgress</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <p>priceManager.PriceAction_SiteExclusion</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <p>priceManager.PriceAction_VariantItemMasterLink</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <p>priceManager.PriceAction_Variant_Data</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <p>priceManager.PriceAction_VariantLink</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <p>priceManager.PriceAction_WorkflowNarrative</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <p>priceManager.Validation_Log</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <p>priceManager.ValidationOverride</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <p>OptionsAttachments</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </body>
+</html>

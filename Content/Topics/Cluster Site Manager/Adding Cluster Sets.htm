@@ -1,0 +1,134 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head>
+        <link href="../../Resources/TableStyles/standard.css" rel="stylesheet" MadCap:stylesheetType="table" />
+    </head>
+    <body>
+        <h1>Adding cluster sets</h1>
+        <ol>
+            <li>
+                <p>From the Management tab,  click <span class="Emphasis">Site Clustering</span>. </p>
+            </li>
+            <li>
+                <p>Click <span class="Emphasis">Manage</span> to display the <span class="Emphasis">Cluster Set Management</span> window.</p>
+            </li>
+            <li>
+                <p>Click <span class="Emphasis">New</span>.</p>
+            </li>
+            <li>
+                <p>Complete the fields as required and click <span class="Emphasis">Ok</span>.</p>
+            </li>
+            <li>
+                <p>Click <span class="Emphasis">Ok</span> on the <span class="Emphasis">Cluster Set Management</span> window.</p>
+            </li>
+            <li>
+                <p>Click <span class="Emphasis">Calculate</span> on the <span class="Emphasis">Cluster Set</span> toolbar to calculates the cluster assignments for all stores included in the cluster set.</p>
+            </li>
+        </ol>
+        <h2>Cluster set field descriptions</h2>
+        <table style="mc-table-style: url('../../Resources/TableStyles/standard.css');" class="TableStyle-standard" cellspacing="0">
+            <col class="TableStyle-standard-Column-Column1" />
+            <col class="TableStyle-standard-Column-Column2" />
+            <thead>
+                <tr class="TableStyle-standard-Head-Header1">
+                    <th class="TableStyle-standard-HeadE-Column1-Header1">Property</th>
+                    <th class="TableStyle-standard-HeadD-Column2-Header1">Description</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">Name</td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">The name of the cluster set/template.</td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">Description</td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">An optional description of the cluster set/template.</td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">Group</td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">The group that the cluster set/template belongs to. Click the <span class="Emphasis">Change</span> button to select a different group.</td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">Security</td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">
+                         Indicates if this cluster set/template is available to all users (Public), some users (Shared), or just the logged-in user (Private). 
+                        <p>If <span class="Emphasis">Shared</span> was selected, click the <span class="Emphasis">Change</span> button to select the users and roles to share with.</p></td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">Modules</td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">
+                         The modules that this cluster set/template is available to. 
+                        <p>Notes:</p><ul><li>The cluster set/template is automatically filtered out of modules that are not selected in this property. This prevents having to sort through the clutter of cluster sets that are not intended for use.</li><li>Allocation and Assortment include support for their respective scenarios in the Rate of Sale module.</li></ul></td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">Cluster Type</td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">
+                       The cluster set/template type.
+                        <div class="Note_BasicNote"><p>For the <span class="Emphasis">Wholesale Account Cluster</span> cluster type, sites are selected the same way as with the other cluster types. Users do not select or create this cluster type within the UI as these are automatically created within the import process. However, users need to open new <span class="Emphasis">Wholesale Account Cluster</span> sets and click <span class="Emphasis">Calculate</span> to assign the correct Clusters. The result is Cluster Sets that have the correct Clusters assignments with a 1:1 Cluster to Site relationship. Snapshots continue as normal.</p><p>Editing a Cluster Set will show the Classifications created.</p></div></td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">Cluster Partition Site Filter By Field</td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">
+                         When the Cluster Type property is a Site Item Partition or Site Partition, this property sets the site property used to partition cluster sets. 
+                        <p>All site properties defined in Site Manager are available for selection, including basic store information, site attributes, hierarchy levels, site group, capacity, schedules and type.</p></td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">Site Filter Type</td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">
+                         The method used to determine the total group of stores to be clustered: 
+                        <ul><li>Site Hierarchy Level</li><li>Site Filter</li><li>Intersection Site Hierarchy Level And Site Filter</li></ul></td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">Site Hierarchy</td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">The site hierarchy to use to define the stores to be clustered.</td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">Site Level</td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">The level of the selected Site Hierarchy to define the stores to be clustered. This property is not visible when Site Filter is selected as the Site Filter Type.</td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">Site Filter</td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">The site filter to use for defining the stores to be clustered.</td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">Cluster Partition ItemMaster Hierarchy</td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">When the Cluster Type property is an Item Partition or Site Item Partition, this sets the product hierarchy to use for clustering data selection and cluster set partitioning.</td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">Cluster Partition ItemMaster Level</td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">When the Cluster Type property is an Item Partition or Item Site Partition, this property defines the product hierarchy level of the selected Cluster Partition ItemMaster Hierarchy to be used in clustering data selection and cluster set partitioning.</td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">Cluster Items</td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">
+                         The clusters to assign stores to when the cluster set/template is calculated. 
+                        <p>Click <span class="Emphasis">Maintain</span> to create, delete, and edit clusters.</p></td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">Cluster Settings</td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">The priority ranking of each cluster selected in the Cluster Items property. Adjust ranking up and down using the arrows on the right side of the cluster list. The cluster with the lowest number has the highest ranking and contains the stores with the highest relative value.</td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">Attribute Settings</td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">
+                         The priority ranking of each attribute used to calculate cluster sets. Adjust ranking up and down using the arrows on the right-hand side of the attribute list. The attribute with the lowest number has the highest ranking and will contain the stores with the highest relative value. 
+                        <p>For more information about attributes, see <MadCap:xref href="Adding an Attribute.htm">Managing attributes</MadCap:xref>.</p></td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">Distance Function</td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">
+                         The distance function to use when calculating cluster sets.  
+                        <ul><li><span class="Emphasis">Euclidean Distance</span> calculates distance in a straight line (as the crow files).</li><li><span class="Emphasis">Manhattan Distance</span> calculates distance between two points as a sum of horizontal and vertical lines on a grid (no diagonals).</li></ul></td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyB-Column1-Body1">Allow Cluster Count to be Resized</td>
+                    <td class="TableStyle-standard-BodyA-Column2-Body1">
+                       
+                        Indicates if all clusters in the cluster set must have sites assigned to them.  
+                        <p>When selected, stores rank naturally according to the results of the selected Cluster Type algorithm. This may leave some clusters without any stores assigned to them. 
+                        </p><p>If this option is not selected,  at least one store is assigned to each cluster in the cluster set.</p></td>
+                </tr>
+            </tbody>
+        </table>
+    </body>
+</html>

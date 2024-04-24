@@ -1,0 +1,120 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" xml:lang="en-us">
+    <head>
+        <link href="../../Resources/TableStyles/standard.css" rel="stylesheet" MadCap:stylesheetType="table" /><title></title>
+    </head>
+    <body>
+        <h1>Size models field reference</h1>
+        <p>Size model configuration allows users to create the curves, define the ranges, and determine their constituent
+items.</p>
+        <h3>Top grid</h3>
+        <ul>
+            <li><span class="Emphasis">Size Model Name</span> – User generated name for the size model. </li>
+            <li><span class="Emphasis">Size Model Description</span> – Optional description for the size model. </li>
+            <li><span class="Emphasis">Size Range</span> – The pre-defined set of acceptable sizes to be included in the curve. The size range data must be imported. </li>
+            <li>
+                <p><span class="Emphasis">Size Curve</span> - The size percentage contribution by store, based on historical sales.</p>
+            </li>
+            <li>
+                <p><span class="Emphasis">Exception Status</span>  - Required configuration elements are missing.</p>
+                <p>If a size curve’s item master filter is empty, the items in the filter have no history during recalculation, or all history has been filtered out due to sales model criteria, users are notified via an Exception message. If an Exception is present, the field is formatted red. Within the field, click <span class="Emphasis">View</span> to see the details of the issue.</p>
+                <p>
+                    <img src="../../Resources/Images/Allocations/Size Mode Exceptions.png" class="LargeImages" />
+                </p>
+                <p>There are three possible Exception messages:</p>
+                <table style="width: 100%;margin-left: 0;margin-right: auto;mc-table-style: url('../../Resources/TableStyles/standard.css');" class="TableStyle-standard" cellspacing="0">
+                    <col class="TableStyle-standard-Column-Column1" style="width: 20%;" />
+                    <col class="TableStyle-standard-Column-Column2" style="width: 80%;" />
+                    <thead>
+                        <tr class="TableStyle-standard-Head-Header1">
+                            <th class="TableStyle-standard-HeadE-Column1-Header1">Exception</th>
+                            <th class="TableStyle-standard-HeadD-Column2-Header1">Description</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr class="TableStyle-standard-Body-Body1">
+                            <td class="TableStyle-standard-BodyE-Column1-Body1">No Valid Items in Size Model Filters</td>
+                            <td class="TableStyle-standard-BodyD-Column2-Body1">There are no items matching the criteria specified in the item filter. Please ensure that the item filter is not empty or consider adjusting the filter criteria.</td>
+                        </tr>
+                        <tr class="TableStyle-standard-Body-Body1">
+                            <td class="TableStyle-standard-BodyE-Column1-Body1">No Qualified Sales</td>
+                            <td class="TableStyle-standard-BodyD-Column2-Body1">No historical sales were found within the specified timeframe. Please ensure that the items specified in the filter have valid sales records between the dates set by the start date, end date, and Last X Days parameters.</td>
+                        </tr>
+                        <tr class="TableStyle-standard-Body-Body1">
+                            <td class="TableStyle-standard-BodyB-Column1-Body1">No Qualified Sales Due to Thresholds</td>
+                            <td class="TableStyle-standard-BodyA-Column2-Body1">No qualified sales that fit the sales model criteria. No sales history within the specified time frame and item filter fit the Percent Covered and Weeks Covered criteria.</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </li>
+            <li><span class="Emphasis">Filter</span> – The product filter which is used as a base of historical data to generate the size model. </li>
+            <li><span class="Emphasis">Access Level</span> – Access levels determine which users may review or edit the size model. </li>
+            <li><span class="Emphasis">User Select</span> – Displays the specific users for a shared access level size model. </li>
+            <li><span class="Emphasis">Sales Type</span> – Type of sales in historical sales which will be used to generate the curve. </li>
+            <li><span class="Emphasis">Start Date</span> – The beginning history date from which sales data is used to calculate the size model.</li>
+            <li><span class="Emphasis">End Date</span> – The ending history date from which sales data is used to calculate the size model. </li>
+            <li><span class="Emphasis">Last X Days</span> – Number of preceding days of sales history data used to calculate the size model. </li>
+            <li>Percent Covered - The percentage of sizes in a range needed to consider a period in stock, Sizes are ideally weighted in importance based on sales data percentage to total.</li>
+            <li><span class="Emphasis">Calculate</span> – If checked, the size model calculates upon application. </li>
+            <li><span class="Emphasis">Override Allowed</span> – If checked, users can override calculated values within the size model detail screen. </li>
+            <li>
+                <p><span class="Emphasis"># Variants Qualified</span> - The number of variants for a site that must pass data cleansing for the size curve to pass.
+
+</p>
+            </li>
+            <li>
+                <p><span class="Emphasis">% Variants Qualified</span> - The percentage of variants for a site that must pass data cleansing for the size curve to pass
+.</p>
+            </li>
+            <li>
+                <p><![CDATA[
+]]><span class="Emphasis">Qualified Sales Units</span> - The number of sales units for a site that must be left after data cleansing for the size curve to pass.
+</p>
+            </li>
+            <li>
+                <p><span class="Emphasis">
+# Sizes Under</span> - The number of sizes for a site that can have a curve percentage contribution below <span class="Emphasis">% Size Under</span> for the size curve to pass.
+
+</p>
+            </li>
+            <li>
+                <p><span class="Emphasis">% Size Under</span> - The curve percentage contribution beneath which a size must fall to count in the <span class="Emphasis"># Sizes Under</span> threshold.
+</p>
+            </li>
+            <li>
+                <p><span class="Emphasis">
+# Sizes Over</span> - The number of sizes for a site that can have a curve percentage contribution above <span class="Emphasis">% Size Over</span> for the size curve to pass.
+
+</p>
+            </li>
+            <li>
+                <p><span class="Emphasis">% Size Over</span> - The curve percentage contribution above which a size must fall to count in the <span class="Emphasis"># Sizes Over</span> threshold.</p>
+            </li>
+        </ul>
+        <p class="BasicNote">Thresholds can be added to the grid measuring data-cleansed variants, sales units, and sizes at a site within the item filter selected for the size model. For more information, see <MadCap:xref href="Validating Size Models.htm">Validating enhanced size models</MadCap:xref>.</p>
+        <h3>Middle grid</h3>
+        <p>Aggregate Size Curves display in the middle grid. For more information, see <MadCap:xref href="Aggregate Size Curve widget.htm">Aggregate Size Curves across all sites.</MadCap:xref></p>
+        <h3>Bottom grid</h3>
+        <p>Double click a size model to display its details in the bottom grid. The grid displays the contributions of each size to the variant, by store. </p>
+        <ul>
+            <li><span class="Emphasis">Size Model Name</span> – Name of the highlighted curve in the size model configuration grid. </li>
+            <li><span class="Emphasis">Site Name</span> – Name of the site referenced in the site specific contributions. </li>
+            <li><span class="Emphasis">Site Code</span> - The Site Code of the Site.</li>
+            <li><span class="Emphasis">Channel Description</span> – Configurable site grouping. </li>
+            <li><span class="Emphasis">Clear Override</span> – A highlight indicates that there are override contributions within the curve. If checked, the calculation clears the override contributions, but does not alter the eligibility flag. For more information, see <MadCap:xref href="Clearing Substitutions and Other Size Model Overrides.htm">Clearing substitutions and other size model overrides</MadCap:xref>.</li>
+            <li><span class="Emphasis">Size Listings</span> – Each size in the selected size range appears as a column within the size model detail screen. <ul><li><span class="Emphasis">Is Eligible</span> – If selected, the size is considered to be eligible for allocation to the listed site. All eligible sizes have an associated contribution percentage. For more information, see <MadCap:xref href="Recalculating Size Model When Overrides are Present.htm">Recalculating size models when overrides are present</MadCap:xref>.</li><li><span class="Emphasis">Contribution</span> – Contribution for each site.</li></ul></li>
+        </ul>
+        <ul>
+            <li><span class="Emphasis">Total Contribution</span> – Total contribution will sum the contribution of all eligible sizes, and will re-normalize to 100% upon application and recalculation. </li>
+            <li>
+                <p><span class="Emphasis">Override Site</span> - A site to use as a substitute site. For more information, see <MadCap:xref href="Substituting size model.htm">Substituting size models</MadCap:xref>.</p>
+            </li>
+            <li>
+                <p><span class="Emphasis">Sync Override</span> - Designates whether the substitution site values are continuously updated each time a change is made. For more information, see <MadCap:xref href="Syncing Size Model Substitutions.htm">Syncing size model substitutions</MadCap:xref>.</p>
+            </li>
+            <li>
+                <p><span class="Emphasis">Pass?</span> - For a curve to Pass, all thresholds and tolerances set to non-null values must be passed. A single failure results in Fail.</p>
+            </li>
+        </ul>
+    </body>
+</html>

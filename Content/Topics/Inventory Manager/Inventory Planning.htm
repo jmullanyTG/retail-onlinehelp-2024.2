@@ -1,0 +1,380 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" xml:lang="en-us">
+    <head>
+        <link href="../../Resources/TableStyles/standard.css" rel="stylesheet" MadCap:stylesheetType="table" /><title></title>
+    </head>
+    <body>
+        <h1>Inventory planning</h1>
+        <table class="TableStyle-standard" cellspacing="0" style="margin-left: auto;margin-right: auto;mc-table-style: url('../../Resources/TableStyles/standard.css');">
+            <col class="TableStyle-standard-Column-Column1" />
+            <col class="TableStyle-standard-Column-Column2" />
+            <thead>
+                <tr class="TableStyle-standard-Head-Header1">
+                    <th class="TableStyle-standard-HeadE-Column1-Header1">Field</th>
+                    <th class="TableStyle-standard-HeadD-Column2-Header1">Description</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">
+                        Age
+                    </td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">
+                        Age in days of an item from first stocked date
+                    </td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">
+                        Back Order Ratio
+                    </td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">
+                        Used in replenishment logic. Estimation of number of customers who will place a back order.
+                    </td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">
+                        Bin Items In Use
+                    </td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">
+                        Items being used.&#160;For example, in a&#160;manufacturing plant.&#160; This is used for Bin Level calculations together with Bin Mean Time Between Failure values.&#160; These values need to be imported from the transaction system.
+                    </td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">
+                        Bin Meantime Between Failure Days
+                    </td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">
+                        The&#160;(mean) time in days before failure is likely to occur.&#160; This is used for Bin Level calculations together with Items in Use values.&#160; 
+                    </td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">
+                        Creation Date
+                    </td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">
+                        Imported from transaction system date or today – imported date
+                    </td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">
+                        Criticality Description
+                    </td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">
+                        Criticalities are user-applied indicators that are used to differentiate the functional importance of products such as a low cost item that is critical to the sale of a high cost item, but does not have a significant investment value.&#160; Criticalities can be used to set bin levels by service level per criticality and minimum safety stock values per criticality.&#160; Update during data import or by making the field editable. 
+                    </td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">
+                        Days From Creation
+                    </td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">
+                        Today – Creation date
+                    </td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">
+                        Days From First Stocked
+                    </td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">
+                        Today – First stock date
+                    </td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">
+                        Days From Last Issue
+                    </td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">
+                        Today – Last issue date
+                    </td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">
+                        Days From Last Receipt
+                    </td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">
+                        Today – Last receipt date
+                    </td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">
+                        Default Cost Price
+                    </td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">
+                        Average Landed Cost
+                    </td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">
+                        Default Margin
+                    </td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">
+                        Default Sell Price – Default Cost Price
+                    </td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">
+                        Default Selling Price
+                    </td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">
+                        Recommended Retail Price
+                    </td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">
+                        Excess For Redistribution Threshold Days
+                    </td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">
+                        LT + SS + RC + Factor (A)
+                    </td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">
+                        First Stocked Date
+                    </td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">
+                        Date when item was first created on the transaction system as read from transaction system, or if it is unavailable, the first&#160;date that the item has stock on hand on the transaction system.&#160;
+                    </td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">
+                        Generic
+                    </td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">
+                        Item code of generic material
+                    </td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">
+                        Group <i>n</i> Code
+                    </td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">
+                        Group code, downloaded from transaction system or updated by customization.
+                        <p class="BasicNote"><i>n</i> represents a numeric digit between 1 and 20.</p></td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">
+                        Group <i>n</i> Description
+                    </td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">
+                        Group description, downloaded from transaction system or updated by customization.
+                        <p class="BasicNote"><i>n</i> represents a numeric digit between 1 and 20.</p></td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">
+                        Issue Multiple Units
+                    </td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">
+                        Multiples that the item is issued in. Not necessarily equal to the order multiple. For example, a product is ordered in multiples of 100 but sold in multiples of 4.
+                    </td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">
+                        Last Issue Date
+                    </td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">
+                        Date of last issue date of inventory as read from transaction system.
+                    </td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">
+                        Last Receipt Date
+                    </td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">
+                        Date of last receipt of inventory as read from transaction system.
+                    </td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">
+                        Last Stock Count Date
+                    </td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">
+                        Date when last stock count was done on the item as read from transaction system.
+                    </td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">
+                        Manual Order Policy Indicator Flag
+                    </td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">
+                        Setting as indicated in the Policy Information tab for the right to change Type manually.
+                    </td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">
+                        Manual Policy Setting Flag
+                    </td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">
+                        Setting as indicated in the Policy Information tab for the right to change policy settings manually.
+                    </td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">
+                        Maximum Stock Days
+                    </td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">
+                        The maximum stock days cover an inventory is to have
+                    </td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">
+                        Maximum Stock Units
+                    </td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">
+                        The maximum stock units an inventory is to have
+                    </td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">
+                        Minimum Safety Stock Units
+                    </td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">
+                        Minimum safety stock units to be kept on hand.
+                    </td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">
+                        Priority
+                    </td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">
+                        Pareto Classification
+                    </td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">
+                        Replenishment Cycle Days
+                    </td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">
+                        Replenishment Cycle, specified in days.&#160; 
+                    </td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">
+                        Required Bin Level
+                    </td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">
+                        Bin Level for an Item.
+                    </td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">
+                        Review Period Days
+                    </td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">
+                        Review Period, specified in days.&#160; 
+                    </td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">
+                        Safety Stock Days
+                    </td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">
+                        Safety stock, specified in days .
+                    </td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">
+                        Service Level
+                    </td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">
+                        Targeted service level for plant/material.
+                    </td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">
+                        Stock On Hand
+                    </td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">
+                        Number of units on hand as read from transaction system.
+                    </td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">
+                        Stock On Hand Value
+                    </td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">
+                        Value of stock on hand at cost.
+                    </td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">
+                        Stock Reserved
+                    </td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">
+                        Stock reserved for specific orders but still part of Stock On Hand value.</td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">
+                        Superceded From Code
+                    </td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">
+                        Old material linked to a new material 
+                    </td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">
+                        Superceded From Description
+                    </td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">
+                        Old material linked to a new material 
+                    </td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">
+                        Superceded To Code
+                    </td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">
+                        New material linked to an old material 
+                    </td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">
+                        Superceded To Description
+                    </td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">
+                        New material linked to an old material 
+                    </td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">
+                        Type
+                    </td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">
+                        P – Normal Stocked<br />N – Non Stocked<br />R – Redundant<br />B – Bin
+                    </td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">
+                        Type Description
+                    </td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">
+                        P – Normal Stocked<br />N – Non Stocked<br />R – Redundant<br />B – Bin
+                    </td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">
+                        Unit Of Issue
+                    </td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">
+                        The unit of issue such as bottles, layers or each as read from transaction system.
+                    </td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">
+                        Unit Of Measure
+                    </td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">
+                        The unit of measure such as kg, liters or each as read from transaction system.
+                    </td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyB-Column1-Body1">
+                        Use Maximum Stock Flag
+                    </td>
+                    <td class="TableStyle-standard-BodyA-Column2-Body1">
+                        Use Maximum Stock (Days) (Ö) or not (&#160;) 
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </body>
+</html>

@@ -1,0 +1,61 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" xml:lang="en-us">
+    <head><title></title>
+    </head>
+    <body>
+        <h1>Schedules Overview</h1>
+        <p>Reusable sets of schedules are created using the <span class="Emphasis">Schedules</span> module. These schedules can be applied across modules. For example, the setting of supplier ordering and receiving schedules, as well as site shipping and receiving schedules. </p>
+        <p>By itself, a schedule is only used to determine a date or series of dates. The behavior of the schedule is determined by the mode in the schedule set and its application to a site or a supplier. </p>
+        <p>Schedule types control the recurrence of each schedule, as follows: </p>
+        <ul>
+            <li><span class="Emphasis">One-Time</span>: A single occurrence of the schedule.  The date must be greater than the current date (must be in the future) when creating a schedule.</li>
+            <li><span class="Emphasis">Recurring</span>: A recurring schedule with a specified frequency and duration. </li>
+        </ul>
+        <p>
+            <img src="../../Resources/Images/Schedules/Schedule Set.png" class="LargeImages" />
+        </p>
+        <h2>Deleting schedules </h2>
+        <p>Depending on the user's profile, any linked schedule can be deleted. Deleted schedules are deleted from all schedule sets. </p>
+        <ol>
+            <li>
+                <p>In the <span class="Emphasis">Schedule Set</span> view, select the schedule to be deleted.</p>
+            </li>
+            <li>
+                <p>Click <span class="Emphasis">Delete</span>. </p>
+                <p>A confirmation message displays. </p>
+            </li>
+            <li>Click <span class="Emphasis">Yes</span> to confirm the deletion.</li>
+        </ol>
+        <h2>Duration of schedules</h2>
+        <p>The duration of the schedule determines the effective period for the schedule’s application. </p>
+        <ul>
+            <li><span class="Emphasis">Start Date</span>: The effective start date for the schedule. </li>
+            <li><span class="Emphasis">End Date</span>: If an end date is known, it must be specified. </li>
+            <li><span class="Emphasis">No End Date</span>:&#160;Select this option if a schedule’s duration is unknown. </li>
+        </ul>
+        <h2>Determining the frequency of schedules</h2>
+        <p>For recurring schedules, determine the frequency with which the schedule occurs. Each occurrence option is accompanied by specific options to determine eligibility in the period type.</p>
+        <h3>Daily</h3>
+        <ul>
+            <li><span class="Emphasis">Recurs Every _ Day(s)</span>: The frequency in days. </li>
+        </ul>
+        <h3>Weekly</h3>
+        <ul>
+            <li><span class="Emphasis">Recurs Every _ Weeks On –</span>:&#160;The frequency in weeks. A schedule designed to occur every week must be set to <span class="Emphasis">1</span>.  A schedule designed to occur bi-weekly must be set to <span class="Emphasis">2</span>. </li>
+        </ul>
+        <h3>Monthly</h3>
+        <p>Monthly schedules can be set up based on a numerical date modifier or on a day of the week. </p>
+        <ul>
+            <li><span class="Emphasis">Day _ of</span>:&#160;Sets the day of the month on which the schedule will trigger. Values over 31 resolve to 31. Any values over 28 may risk not occurring in a specified month (check resolution details for confirmation). </li>
+            <li><span class="Emphasis">The _ _ of</span> : Sets a day of the week and the sequential occurrence of that day. The first, second, third, fourth, or last specified weekday can be chosen that falls in a month. </li>
+            <li><span class="Emphasis">Of Every _ Month(s)</span>: The frequency in months. A schedule designed to occur every month must be set to <span class="Emphasis">1</span>. A schedule designed to occur  bi-monthly must be set to <span class="Emphasis">2</span>. </li>
+        </ul>
+        <h3>Yearly </h3>
+        <p>Yearly (or annual) schedules may be set up based on a numerical date modifier, a month or week of the year, or for a specific day of the year. </p>
+        <ul>
+            <li><span class="Emphasis">...On Day _ of That Year</span>: A value between 1 and 366 that specifies a date. </li>
+            <li><span class="Emphasis">…On _ _ of That Year</span>: A month or week and an associated numerical modifier. This field is based on the selected start date. For a start date of January 1st, select <span class="Emphasis">Month</span> and <span class="Emphasis">2</span> to set up a schedule for February 1st (with a start date of January 1st). Select <span class="Emphasis">Week</span> and <span class="Emphasis">13</span> to set up a schedule for March 20th. Weeks  start on Sundays. </li>
+            <li><span class="Emphasis">…On day _ of Month _</span>: A specific day of the year on which to start the schedule (e.g. on day 4 of month July). </li>
+        </ul>
+    </body>
+</html>

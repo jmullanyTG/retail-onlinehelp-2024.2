@@ -1,0 +1,801 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head>
+        <link href="../../Resources/TableStyles/standard.css" rel="stylesheet" MadCap:stylesheetType="table" />
+    </head>
+    <body>
+        <h1>Wholesale Planning Overview</h1>
+        <p>While wholesale is often treated as a separate business entity, there is often a need to roll-up retail and wholesale plans into a singular total company view. As such, Wholesale functionality within TG JE is embedded beside Retail functionality. Rather than creating separate plans for Wholesale and Retail, the TG JE structure supports wholesale as a channel within the total company plan. This allows for easier movement of planned stock, sales, and other metrics as demand may shift from one channel to another, as early as the planning process. As the TG JE solution treats Retail and Wholesale as parts of a Total, revisions during the execution phase are also easier to implement.
+
+		</p>
+        <p>The following keeps Wholesale-related functionality grouped together; structured as a logical progression through the planning and execution processes. It is important to keep in mind that the functionality noted in this section is visible in the standard retail modules, as applicable.</p>
+        <h2>Establishing Wholesale Customer to Wholesale Account Relationships</h2>
+        <h3>Using customer orders as sales history for Customers </h3>
+        <p>From the Wholesale perspective, “sales” can be viewed in two ways within TG JE: </p>
+        <ol>
+            <li>
+                <p>Sales (or orders) signifying stock movement from the Wholesaler to the Customer Accounts, are referred to as Sell-In</p>
+            </li>
+            <li>
+                <p>Sales made by the Customer Accounts to end-consumers are referred to as Sell-Out </p>
+            </li>
+        </ol>
+        <p>There is reliable historical data for Sell-in across all accounts. Sell-out is not as consistently available. To that end, these accounts use Sell-ins (customer orders) in place of sales history for forecasting purposes and are managed by grouping multiple Sell-ins together into major accounts. </p>
+        <p>A weekly task, <span class="Emphasis">(WS) (Weekly) Generate Sales History from Customer Orders</span>, uses customer orders that happened in the past as sales history if the customer order went to an account. The relationships defined in Customer Manager determine how Customer order data rolls into which accounts.</p>
+        <p class="BasicNote">Actualized Sell-In Sales are populated by Customer orders (with accounts being collections of customers); which adhere to the Customer/Account configuration. Customer orders with dates in the future are ignored.</p>
+        <h2>Forecasting Wholesale Account Demand</h2>
+        <p>Wholesale planners managing wholesale accounts can have accounts that split demand between multiple DCs. This functions similarly to TG JE's demand transference, though in this case wholesale accounts transfer their sales into DCs and not stores with demand aggregating to DCs only.</p>
+        <p>Only the major accounts are forecast and replenished. For example,</p>
+        <ul>
+            <li>
+                <p>Vandelay Industries (the primary wholesale account)</p>
+                <ul>
+                    <li>
+                        <p>BrandA</p>
+                    </li>
+                    <li>
+                        <p>BrandB</p>
+                    </li>
+                    <li>
+                        <p>BrandC</p>
+                    </li>
+                </ul>
+                <p>Vandelay Industries is the major account and is the account that is forecast and replenished.</p>
+            </li>
+        </ul>
+        <p>Within the Customer Manager module, sites can be set up as site type <span class="Emphasis">Account</span> representing a collection of customer accounts in a many customers to one <span class="Emphasis">Account</span> site relationship. Customers are grouped 1 to 20 like other entities that can be used to show a hierarchy.  Users maintain the Customer entity and do the linking to the Account site entity in Customer Manager. </p>
+        <p>Accounts are not directly replenished. All forecasted account demand is replenished at DCs where the stock is held until anticipated wholesale account purchases. The DC responsible for holding stock is defined in the  <b>Site Account Source Site Contribution</b> widget in Site Manager.</p>
+        <p>Two fields <span class="Emphasis">Account Name</span> and <span class="Emphasis">Location Count</span> located under the <span class="Emphasis">Customer Account</span> group can be added to the top grid in the Customer Manager Document. Both fields are editable and have the <span class="Emphasis">Multiple Changes</span> right-click menu option. The value in the <span class="Emphasis">Location Count</span> field can be used within Assortment Planning.</p>
+        <h3>Reviewing the customers under an Account site type and setting default contributions</h3>
+        <p>Wholesale planners can, when managing wholesale accounts, use Site Manager to see the customer names for sites of type <span class="Emphasis">Account</span> by selecting the <span class="Emphasis">Site Account Customer Relations</span> blade. The customer names are read-only as changes to the Customer Account relationship are performed in Customer Manager.</p>
+        <p>
+            <img src="../../Resources/Images/Site Manager/Site Account Customer Relations.PNG" class="LargeImages">
+            </img>
+        </p>
+        <p class="BasicNote">Sites that are not of site type Account do not display any results.</p>
+        <p>A second new blade in Site Manager, <span class="Emphasis">Site Account Source Site Contribution</span>, displays a cross product of items in the hierarchy and all DCs. The blade displays, as a calculated percentage, the default contribution of each DC with the calculation being performed by new job task <span class="Emphasis">Calculate Source Site Percent Contribution for Accounts</span> which looks at an account’s sales history (customer orders). Users can use the <span class="Emphasis">Site Account Source Site Contribution</span> blade to refine contribution percentages as an override to set what percentage of an account’s projected stock each DC should hold. Overwritten values take priority over the calculated percentage.</p>
+        <p>
+            <img src="../../Resources/Images/Site Manager/Site Account Source Site Contribution.PNG" class="LargeImages">
+            </img>
+        </p>
+        <p>After a user enters a value in the <span class="Emphasis">Override</span> field and clicks <span class="Emphasis">Save</span>, the <span class="Emphasis">Clear Override</span> field for that row is formatted orange. The <span class="Emphasis">Clear Override</span> functionality clears overrides for all the DCs for the item. When overrides are cleared the default contribution percentage is used.</p>
+        <p class="BasicNote">If 10,000 units have a 50/50 split between 2 DCs out of a total of 4 DCs, then 5,000 units are sent to each of the 2 DCs.</p>
+        <p>System policy <span class="Emphasis">Site Wholesale Account Distribution: ItemMaster Hierarchy ID</span> defines the hierarchy used. </p>
+        <h3>Assigning clusters to Wholesale Account Cluster sets
+		</h3>
+        <p>There is a Cluster Type in the Site Clustering Module labeled <span class="Emphasis">Wholesale Account Cluster</span>. How sites are selected remains unchanged and is the same as with the other Cluster Types. Users do not select or create wholesale account clusters within the UI as these are automatically created within the import process. However, users need to open new wholesale account cluster sets and click <span class="Emphasis">Calculate</span> to assign the correct clusters. The result is Cluster Sets that have the correct Clusters assignments with a 1:1 Cluster to Site relationship. Snapshots continue as normal.</p>
+        <p class="BasicNote">Editing a Cluster Set will show the Classifications created.</p>
+        <h2>Merchandise Financial Planning</h2>
+        <p>As noted, rather than creating separate MFP plans for Wholesale and Retail, the TG JE structure supports wholesale as a channel within the total company plan. This allows users to include sites with a site type of Account. The channel name will be whatever name is included in the Site Group 1 - 20 metadata.</p>
+        <p>The wholesale channel can be included in a hierarchy, along with sub-channel hierarchies beneath the wholesale channel, for use in individual plans by account.</p>
+        <h3>Including wholesale totals in the hierarchy</h3>
+        <p>If the desired functionality is to include wholesale accounts in MFP but not plan them individually, then all that is necessary to do is include the Channel group in the MFP hierarchy configuration (or whichever Site Group indicates which sites are Retail and which are Accounts). Then the wholesale channel will be available when hierarchies are generated.</p>
+        <h3>Including Individual wholesale accounts in the hierarchy</h3>
+        <p>To include wholesale in the Channel hierarchy, the following steps must be taken:</p>
+        <ol>
+            <li>
+                <p>One of the Site Groups 1 - 20 should be used to represent each wholesale account.  For example, <span class="Emphasis">Site Group 7</span> is given a friendly name such as <span class="Emphasis">Wholesale Account</span>.</p>
+                <p>
+                    <img src="../../Resources/Images/Wholesale Planning/Site Group Representing Wholesale Account.PNG" class="LargeImages" />
+                </p>
+            </li>
+            <li>
+                <p>Import Site Group values that exactly match each Account, and assign that SiteGroupID value to each wholesale account site.</p>
+                <p class="BasicNote">All Retail sites / DCs / other sites will have value of 0, No SiteGroup.</p>
+            </li>
+            <li>
+                <p>Include the Site Group level in the Global Groups configuration in MFP.</p>
+                <p>
+                    <img src="../../Resources/Images/Wholesale Planning/Site Group Level Global Groups Configuration.PNG" class="LargeImages" />
+                </p>
+            </li>
+        </ol>
+        <p>Users can then view individual Wholesale Accounts in the MFP hierarchy.</p>
+        <p>
+            <img src="../../Resources/Images/Wholesale Planning/View Wholesale Accounts Maintain Financial Plan.PNG" class="LargeImages" />
+        </p>
+        <h3>Metrics supporting the wholesale channel</h3>
+        <p>All the below metrics have:</p>
+        <ul>
+            <li>
+                <p> an <span class="Emphasis">LY</span> version of the metric, which is named with <span class="Emphasis">LY</span> prepended to the metric name.</p>
+            </li>
+            <li>
+                <p>a <span class="Emphasis">Comparison 1</span> and <span class="Emphasis">Comparison 2</span> version of the metric, which is named with the comparison plan name appended to the metric name.</p>
+            </li>
+            <li>
+                <p>an asterisk if dynamic renaming of the metric is in place to support the use of these values in either a Retail or Wholesale context.</p>
+            </li>
+        </ul>
+        <table style="mc-table-style: url('../../Resources/TableStyles/standard.css');" class="TableStyle-standard" cellspacing="0">
+            <col class="TableStyle-standard-Column-Column1" style="width: 15%;" />
+            <col class="TableStyle-standard-Column-Column2" style="width: 10%;" />
+            <col class="TableStyle-standard-Column-Column1" style="width: 20%;" />
+            <col class="TableStyle-standard-Column-Column2" style="width: 10%;" />
+            <col class="TableStyle-standard-Column-Column1" style="width: 35%;" />
+            <thead>
+                <tr class="TableStyle-standard-Head-Header1">
+                    <th class="TableStyle-standard-HeadE-Column1-Header1">Metric Name</th>
+                    <th class="TableStyle-standard-HeadE-Column2-Header1">Editable?</th>
+                    <th class="TableStyle-standard-HeadE-Column1-Header1">Calculation</th>
+                    <th class="TableStyle-standard-HeadE-Column2-Header1">Format</th>
+                    <th class="TableStyle-standard-HeadD-Column1-Header1">Note</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">ASP*</td>
+                    <td class="TableStyle-standard-BodyE-Column2-Body1">
+                        <p>Yes</p>
+                    </td>
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">IF( Sales Units = 0, 0, Sales / Booked Units)</td>
+                    <td class="TableStyle-standard-BodyE-Column2-Body1">$0.00</td>
+                    <td class="TableStyle-standard-BodyD-Column1-Body1">Wholesale-specific metric; combines with AUR for retail channels</td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td rowspan="1" colspan="1" class="TableStyle-standard-BodyE-Column1-Body1">
+                        <p>AUT Discount %</p>
+                    </td>
+                    <td class="TableStyle-standard-BodyE-Column2-Body1">
+                        <p>Yes</p>
+                    </td>
+                    <td rowspan="1" colspan="1" class="TableStyle-standard-BodyE-Column1-Body1">
+                        <p>AUR / AUT</p>
+                    </td>
+                    <td rowspan="1" colspan="1" class="TableStyle-standard-BodyE-Column2-Body1">
+                        <p>0.01%</p>
+                    </td>
+                    <td class="TableStyle-standard-BodyD-Column1-Body1">Wholesale-specific metric</td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td rowspan="1" colspan="1" class="TableStyle-standard-BodyE-Column1-Body1">
+                        <p>Available To Sell Units*</p>
+                    </td>
+                    <td class="TableStyle-standard-BodyE-Column2-Body1">
+                        <p>No</p>
+                    </td>
+                    <td rowspan="1" colspan="1" class="TableStyle-standard-BodyE-Column1-Body1">
+                        <p>N/A</p>
+                    </td>
+                    <td rowspan="1" colspan="1" class="TableStyle-standard-BodyE-Column2-Body1">
+                        <p>0</p>
+                    </td>
+                    <td class="TableStyle-standard-BodyD-Column1-Body1">Wholesale-specific metric; combines with Total Buy Units for retail channels</td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">Booked At Wholesale*</td>
+                    <td class="TableStyle-standard-BodyE-Column2-Body1">
+                        <p>Yes</p>
+                    </td>
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">AUT * Booked Units</td>
+                    <td class="TableStyle-standard-BodyE-Column2-Body1">$0</td>
+                    <td class="TableStyle-standard-BodyD-Column1-Body1">Wholesale-specific metric; combines with Total Original Retail for retail channels</td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">Booked Units*</td>
+                    <td class="TableStyle-standard-BodyE-Column2-Body1">
+                        <p>Yes</p>
+                    </td>
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">IF( AUT = 0, 0, Booked At Wholesale / AUT)</td>
+                    <td class="TableStyle-standard-BodyE-Column2-Body1">0</td>
+                    <td class="TableStyle-standard-BodyD-Column1-Body1">Wholesale-specific metric; combines with Sales Units for retail channels</td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td rowspan="1" colspan="1" class="TableStyle-standard-BodyE-Column1-Body1">
+                        <p>Bookings Placed</p>
+                    </td>
+                    <td class="TableStyle-standard-BodyE-Column2-Body1">
+                        <p>No</p>
+                    </td>
+                    <td rowspan="1" colspan="1" class="TableStyle-standard-BodyE-Column1-Body1">
+                        <p>Bookings Placed Units * AUT</p>
+                    </td>
+                    <td rowspan="1" colspan="1" class="TableStyle-standard-BodyE-Column2-Body1">
+                        <p>$0</p>
+                    </td>
+                    <td class="TableStyle-standard-BodyD-Column1-Body1">Wholesale-specific metric</td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td rowspan="1" colspan="1" class="TableStyle-standard-BodyE-Column1-Body1">
+                        <p>Bookings Placed Units</p>
+                    </td>
+                    <td class="TableStyle-standard-BodyE-Column2-Body1">
+                        <p>No</p>
+                    </td>
+                    <td rowspan="1" colspan="1" class="TableStyle-standard-BodyE-Column1-Body1">
+                        <p>Bookings Placed / AUT</p>
+                    </td>
+                    <td rowspan="1" colspan="1" class="TableStyle-standard-BodyE-Column2-Body1">
+                        <p>0</p>
+                    </td>
+                    <td class="TableStyle-standard-BodyD-Column1-Body1">Wholesale-specific metric</td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td rowspan="1" colspan="1" class="TableStyle-standard-BodyE-Column1-Body1">
+                        <p>Cancel At Wholesale</p>
+                    </td>
+                    <td class="TableStyle-standard-BodyE-Column2-Body1">
+                        <p>Yes</p>
+                    </td>
+                    <td rowspan="1" colspan="1" class="TableStyle-standard-BodyE-Column1-Body1">
+                        <p>Cancel Units * AUT</p>
+                    </td>
+                    <td rowspan="1" colspan="1" class="TableStyle-standard-BodyE-Column2-Body1">
+                        <p>$0</p>
+                    </td>
+                    <td class="TableStyle-standard-BodyD-Column1-Body1">Wholesale-specific metric</td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td rowspan="1" colspan="1" class="TableStyle-standard-BodyE-Column1-Body1">
+                        <p>Cancel Rate %</p>
+                    </td>
+                    <td class="TableStyle-standard-BodyE-Column2-Body1">
+                        <p>Yes</p>
+                    </td>
+                    <td rowspan="1" colspan="1" class="TableStyle-standard-BodyE-Column1-Body1">
+                        <p>Cancel Units / Sales Units</p>
+                    </td>
+                    <td rowspan="1" colspan="1" class="TableStyle-standard-BodyE-Column2-Body1">
+                        <p>0.01%</p>
+                    </td>
+                    <td class="TableStyle-standard-BodyD-Column1-Body1">Wholesale-specific metric</td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td rowspan="1" colspan="1" class="TableStyle-standard-BodyE-Column1-Body1">
+                        <p>Cancel Units</p>
+                    </td>
+                    <td class="TableStyle-standard-BodyE-Column2-Body1">
+                        <p>Yes</p>
+                    </td>
+                    <td rowspan="1" colspan="1" class="TableStyle-standard-BodyE-Column1-Body1">
+                        <p>Cancel At Wholesale / AUT</p>
+                    </td>
+                    <td rowspan="1" colspan="1" class="TableStyle-standard-BodyE-Column2-Body1">
+                        <p>0</p>
+                    </td>
+                    <td class="TableStyle-standard-BodyD-Column1-Body1">Wholesale-specific metric</td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td rowspan="1" colspan="1" class="TableStyle-standard-BodyE-Column1-Body1">
+                        <p>Planned At Once</p>
+                    </td>
+                    <td class="TableStyle-standard-BodyE-Column2-Body1">
+                        <p>Yes</p>
+                    </td>
+                    <td rowspan="1" colspan="1" class="TableStyle-standard-BodyE-Column1-Body1">
+                        <p>Planned At Once Units * AUT</p>
+                    </td>
+                    <td rowspan="1" colspan="1" class="TableStyle-standard-BodyE-Column2-Body1">
+                        <p>$0</p>
+                    </td>
+                    <td class="TableStyle-standard-BodyD-Column1-Body1">Wholesale-specific metric</td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td rowspan="1" colspan="1" class="TableStyle-standard-BodyE-Column1-Body1">
+                        <p>Planned At Once Units</p>
+                    </td>
+                    <td class="TableStyle-standard-BodyE-Column2-Body1">
+                        <p>Yes</p>
+                    </td>
+                    <td rowspan="1" colspan="1" class="TableStyle-standard-BodyE-Column1-Body1">
+                        <p>Planned At Once / AUT</p>
+                    </td>
+                    <td rowspan="1" colspan="1" class="TableStyle-standard-BodyE-Column2-Body1">
+                        <p>0</p>
+                    </td>
+                    <td class="TableStyle-standard-BodyD-Column1-Body1">Wholesale-specific metric</td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td rowspan="1" colspan="1" class="TableStyle-standard-BodyE-Column1-Body1">
+                        <p>Sell Out Units</p>
+                    </td>
+                    <td class="TableStyle-standard-BodyE-Column2-Body1">
+                        <p>No</p>
+                    </td>
+                    <td rowspan="1" colspan="1" class="TableStyle-standard-BodyE-Column1-Body1">
+                        <p>N/A</p>
+                    </td>
+                    <td rowspan="1" colspan="1" class="TableStyle-standard-BodyE-Column2-Body1">
+                        <p>0</p>
+                    </td>
+                    <td class="TableStyle-standard-BodyD-Column1-Body1">Wholesale-specific metric</td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td rowspan="1" colspan="1" class="TableStyle-standard-BodyE-Column1-Body1">
+                        <p>Shipped At Wholesale</p>
+                    </td>
+                    <td class="TableStyle-standard-BodyE-Column2-Body1">
+                        <p>No</p>
+                    </td>
+                    <td rowspan="1" colspan="1" class="TableStyle-standard-BodyE-Column1-Body1">
+                        <p>Shipped Units * AUT</p>
+                    </td>
+                    <td rowspan="1" colspan="1" class="TableStyle-standard-BodyE-Column2-Body1">
+                        <p>$0</p>
+                    </td>
+                    <td class="TableStyle-standard-BodyD-Column1-Body1">Wholesale-specific metric</td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td rowspan="1" colspan="1" class="TableStyle-standard-BodyE-Column1-Body1">
+                        <p>Shipped Net Wholesale</p>
+                    </td>
+                    <td class="TableStyle-standard-BodyE-Column2-Body1">
+                        <p>No</p>
+                    </td>
+                    <td rowspan="1" colspan="1" class="TableStyle-standard-BodyE-Column1-Body1">
+                        <p>Shipped At Wholesale - Booked At Wholesale</p>
+                    </td>
+                    <td rowspan="1" colspan="1" class="TableStyle-standard-BodyE-Column2-Body1">
+                        <p>$0</p>
+                    </td>
+                    <td class="TableStyle-standard-BodyD-Column1-Body1">Wholesale-specific metric</td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td rowspan="1" colspan="1" class="TableStyle-standard-BodyE-Column1-Body1">
+                        <p>Shipped Units</p>
+                    </td>
+                    <td class="TableStyle-standard-BodyE-Column2-Body1">
+                        <p>No</p>
+                    </td>
+                    <td rowspan="1" colspan="1" class="TableStyle-standard-BodyE-Column1-Body1">
+                        <p>Shipped At Wholesale / AUT</p>
+                    </td>
+                    <td rowspan="1" colspan="1" class="TableStyle-standard-BodyE-Column2-Body1">
+                        <p>0</p>
+                    </td>
+                    <td class="TableStyle-standard-BodyD-Column1-Body1">Wholesale-specific metric</td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td rowspan="1" colspan="1" class="TableStyle-standard-BodyE-Column1-Body1">
+                        <p>Shipped Units % +/- Sell Out Units</p>
+                    </td>
+                    <td class="TableStyle-standard-BodyE-Column2-Body1">
+                        <p>No</p>
+                    </td>
+                    <td rowspan="1" colspan="1" class="TableStyle-standard-BodyE-Column1-Body1">
+                        <p>(Shipped Units - Sell Out Units) / Shipped Units</p>
+                    </td>
+                    <td rowspan="1" colspan="1" class="TableStyle-standard-BodyE-Column2-Body1">
+                        <p>0.01%</p>
+                    </td>
+                    <td class="TableStyle-standard-BodyD-Column1-Body1">Wholesale-specific metric</td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td rowspan="1" colspan="1" class="TableStyle-standard-BodyB-Column1-Body1">
+                        <p>Shipped Units +/- Sell Out Units</p>
+                    </td>
+                    <td class="TableStyle-standard-BodyB-Column2-Body1">
+                        <p>No</p>
+                    </td>
+                    <td rowspan="1" colspan="1" class="TableStyle-standard-BodyB-Column1-Body1">
+                        <p>Shipped Units - Sell Out Units</p>
+                    </td>
+                    <td rowspan="1" colspan="1" class="TableStyle-standard-BodyB-Column2-Body1">
+                        <p>0</p>
+                    </td>
+                    <td class="TableStyle-standard-BodyA-Column1-Body1">Wholesale-specific metric</td>
+                </tr>
+            </tbody>
+        </table>
+        <h3>Sites and customer accounts</h3>
+        <p>Retail Sites and Customer Accounts cannot co-mingle in MFP.  Data for wholesale accounts can exist in their own hierarchy levels alongside retail hierarchy levels, but at the leaf level, they cannot intersect.  For example, if the brand is <span class="Emphasis">ToolsGroup Tees</span>, the Toolsgroup Tees-owned retail site Irvine and the Customer Account called <span class="Emphasis">Irvine Sport Shop</span> that resells ToolsGroup Tees branded items cannot both exist in the <span class="Emphasis">Total Company &gt; USA &gt; Southwest</span> channel.  </p>
+        <p>The hierarchy must be further divided to separate sites and accounts, or hierarchy levels with mixtures must be excluded. If a mixed hierarchy level is included, the following message displays:</p>
+        <p>
+            <img src="../../Resources/Images/Wholesale Planning/Sites and Customer Accounts Mixed.png" class="LargeImages" />
+        </p>
+        <h2>Assortment Planning</h2>
+        <p>The following wholesale related metrics are available in the main planning view and the Cluster Sets, Sales Plan, Receipt Plan, and Top Down Core Plan views:</p>
+        <table style="width: 100%;">
+            <col />
+            <col />
+            <tbody>
+                <tr>
+                    <td>
+                        <ul>
+                            <li>
+                                <p>Discount %</p>
+                            </li>
+                            <li>
+                                <p>At Once ($)</p>
+                            </li>
+                            <li>
+                                <p>At Once (U)</p>
+                            </li>
+                            <li>
+                                <p>Cancel %</p>
+                            </li>
+                            <li>
+                                <p>Bookings Cancelled ($)</p>
+                            </li>
+                            <li>
+                                <p>Bookings Cancelled (U)</p>
+                            </li>
+                            <li>
+                                <p>Bookings Placed ($)</p>
+                            </li>
+                            <li>
+                                <p>Bookings Placed (U)</p>
+                            </li>
+                        </ul>
+                    </td>
+                    <td>
+                        <ul>
+                            <li>
+                                <p>Bookings Shipped ($)</p>
+                            </li>
+                            <li>
+                                <p>Bookings Shipped (U)</p>
+                            </li>
+                            <li>
+                                <p>Sell Out ($)</p>
+                            </li>
+                            <li>
+                                <p>Sell Out (U)</p>
+                            </li>
+                            <li>
+                                <p>Bookings Shipped/Sell Out Var</p>
+                            </li>
+                            <li>
+                                <p>Bookings Shipped/Sell Out Var %</p>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <h3>
+            <img src="../../Resources/Images/Assortment Planning/Wholesale Metrics MPV.png" class="LargeImages" />
+        </h3>
+        <h3>Metric notes</h3>
+        <p>For plans with:</p>
+        <ul>
+            <li>
+                <p>wholesale lines - Sales, Sls and AUR renamed to Bookings, BK and ASP.</p>
+                <p>
+                    <img src="../../Resources/Images/Assortment Planning/Wholesale Lines Only Naming.png" class="LargeImages" />
+                </p>
+            </li>
+            <li>
+                <p>mixed wholesale and retail - Sales, Sls and AUT renamed to Sales/Bookings, Sls/Bk and AUR/ASP.</p>
+                <p>
+                    <img src="../../Resources/Images/Assortment Planning/Wholesale Lines Metric Renaming.png" class="LargeImages" />
+                </p>
+            </li>
+        </ul>
+        <h3>Editability</h3>
+        <ul>
+            <li>
+                <p>Discount %, At Once $/U, Cancel %, Cancelled $/U are all editable when the line is a wholesale line or have an underlying Cluster Set that is wholesale.</p>
+            </li>
+            <li>
+                <p>All the wholesale fields are non-editable if the line does not have any Wholesale Cluster Sets.</p>
+            </li>
+            <li>
+                <p>Cancel %, Cancelled $/U are non-editable after actualization begins.</p>
+            </li>
+        </ul>
+        <p>The <span class="Emphasis">Wholesale</span> check box is purely informational and indicates a line is wholesale.</p>
+        <h3>Calculations</h3>
+        <p>Amending:</p>
+        <ul>
+            <li>
+                <p>At Once $ recalculates At Once U and vice versa.</p>
+            </li>
+            <li>
+                <p>Cancel % recalculates Cancelled $ and Cancelled U</p>
+            </li>
+            <li>
+                <p>Cancelled $ recalculates Cancelled U and Cancelled %</p>
+            </li>
+            <li>
+                <p>Cancelled U recalculates Cancelled $ and Cancelled %</p>
+            </li>
+            <li>
+                <p>AUT recalculates Cancelled $</p>
+            </li>
+        </ul>
+        <p>Any amendment that affects Sales Units and/or Total Bookings recalculates Cancelled U and Cancelled %.</p>
+        <h2>Inventory Manager</h2>
+        <p>Wholesale Accounts can be easily identified within an Inventory Manager document. Select <span class="Emphasis">Choose</span> on the toolbar and include <span class="Emphasis">Site Type</span> from the <span class="Emphasis">Site Type</span> metadata group. The <span class="Emphasis">Site Type</span> column displays <span class="Emphasis">Account</span> for wholesale accounts.</p>
+        <p>
+            <img src="../../Resources/Images/Wholesale Planning/Site Type.PNG" class="LargeImages" />
+        </p>
+        <p>Detailed forecast data can be viewed by navigating to the <span class="Emphasis">Forecast Viewer</span> blade and reviewing the <span class="Emphasis">Account Forecast</span> series.</p>
+        <h1>Supply Constraints</h1>
+        <p>A high-level goal of ToolsGroup JustEnough is to capitalize on Sales (Demand), with an assumption that orders can (and will) be made to achieve the necessary supply (or stock). However, individual suppliers do not have infinite capacity to manufacture stock or fulfill orders. With these capacity constraints in mind, TG JE functionality defines supplier capacity, based on a defined Construction Type attribute. These capacity constraints can then be applied during order generation, by using a Supplier Constraint order macro. This functionality is available during both Wholesale and Retail order generation.</p>
+        <h3>Assigning Supplier capacity through Attributes </h3>
+        <p>An import associates suppliers with Attributes. The import fields are:</p>
+        <ul>
+            <li>
+                <p>ConstructionCode</p>
+            </li>
+            <li>
+                <p>SupplierCode</p>
+            </li>
+            <li>
+                <p>Ranking</p>
+            </li>
+            <li>
+                <p>ActiveFlag</p>
+            </li>
+        </ul>
+        <p>A construction code can be associated with multiple suppliers. For example, if the construction code is <span class="Emphasis">SHIRT</span> then there can be multiple suppliers that can manufacture construction code <span class="Emphasis">SHIRT</span>.
+
+		While the construction code is very specific, the actual supplier constraint is an Attribute, which can be any Attribute. </p>
+        <p>Ranking is the list of suppliers that sets the order in which suppliers are used before consuming the next supplier’s capacity. It is possible to have different rankings per construction type. For example, for shirts, supplier A is  ranked 1 and supplier B is ranked 2. Whereas, for ties supplier B is ranked 1 and supplier A is ranked 2. </p>
+        <p>Each supplier can have multiple construction types and multiple construction groups associated with them. For example,</p>
+        <ul>
+            <li>
+                <p>Supplier 1: (V-necks, T-shirts, and Tank Tops)</p>
+            </li>
+            <li>
+                <p>Supplier 2: (T-shirts, Dress-shirts, and Collar Shirts)</p>
+            </li>
+        </ul>
+        <p>Construction type can be based on any finite capacity such as material, machinery, time required to complete manufacture of required amount of items, and so on. Said another way, construction type is something associated with the constraint that a supplier has in terms of the material, fabric or other factor related to the ability to actually run the production of the product and what limitations the supplier has.</p>
+        <p class="BasicNote">System policy <span class="Emphasis">Supplier Constraint: Construction Type</span> (Module: Order Manager) defines which Attribute to use for supplier constraint.</p>
+        <p>Should a product not have an Attribute associated with it then macro, <span class="Emphasis">Apply Supplier Production Limitation</span>, available for Supplier orders in Order Manager will not be applied and supply will not be constrained. The macro requires a product’s Attribute to be associated with a construction type in order to constrain by that construction type. Without that association, there is no link to the particular macro and supply cannot be constrained.</p>
+        <p class="BasicNote">The Attribute needs to be set prior to creating purchase orders.</p>
+        <h3>Reviewing suppliers associated with Attributes</h3>
+        <p>Within the Supplier Manager module, selecting a supplier in the top grid refreshes the <span class="Emphasis">Supplier Capacity Report</span> blade to display the Attributes associated with the supplier. Users define the production capacity (what the supplier can make and how much they can make) for each Attribute for a time period. Construction type is an Attribute of the supplier and is also an Attribute of items. Construction type is not a level of the hierarchy.</p>
+        <p class="BasicNote">The supplier and the construction types that the supplier can provide are visible in the <span class="Emphasis">Supplier Capacity Report</span> blade within Order Manager.</p>
+        <h3>Specifying capacities in time periods</h3>
+        <p>The <span class="Emphasis">Supplier Construction Type Capacity</span> blade (Supplier Manager module) shows a cross product of time buckets and construction type of the selected supplier. Users should use this blade to define the production capacity of a supplier for the given time bucket.  If a time frame is left unedited, it is assumed the supplier has an unlimited capacity for the given time frame for that construction type.</p>
+        <p class="BasicNote">System policy <span class="Emphasis">Supplier Constraint: Bucket Type</span> (Module: Order Manager) defines the time period to use for the supplier constraint. The bucket range is based on today and the value for existing system policy <span class="Emphasis">Future Days</span> (Engine: Forecasts).</p>
+        <p>
+            <img src="../../Resources/Images/Supplier/Supplier Construction Type Capacity Widget.png" class="LargeImages" />
+        </p>
+        <p>Only the <span class="Emphasis">Total Supplier Quantity</span> field is editable with all other columns being read-only. Planners can multi-select cells in the <span class="Emphasis">Total Supplier Quantity</span> field to specify the capacity in that bucket.</p>
+        <h3>Supplier production constraints</h3>
+        <p>When an order line is selected, the <span class="Emphasis">Supplier Capacity Report </span> blade, which displays when the <span class="Emphasis">Details</span> toolbar button is clicked, populates with all the suppliers that have the order line’s construction type.  Planners can review how much production capacity is left for each supplier of the construction type and how much of the capacity is taken up by pending stock. Supply planners can also manage scenarios where all suppliers are unable to fulfill the order so that exceptions are managed effectively.</p>
+        <p>Often times a wholesaler’s constraint lies with supplier production. In this scenario and bearing in mind each supplier can produce X amount of construction types a month, a supply planner:</p>
+        <ul>
+            <li>
+                <p> looks at all the unconstrained orders today
+
+				</p>
+            </li>
+            <li>
+                <p>adjusts the order quantity based on constraints such as
+
+				production capacity or orders for a particular vendor has been particularly low.</p>
+            </li>
+        </ul>
+        <p>By default, the <span class="Emphasis">Supplier Capacity Report</span> displays recommended orders for today without any supplier constraint applied. Planners can review and apply supplier constraints to recommended orders as needed by applying the supplier production limit of a construction type to the values in the <span class="Emphasis">User Order Quantity</span> field in the top grid using the <span class="Emphasis">Apply Supplier Production Limitation</span> macro. The values update automatically with the results displaying in the <span class="Emphasis">Supplier Capacity Report</span> blade.  </p>
+        <p>
+            <img src="../../Resources/Images/Order Manager/Pending Order Quantity.PNG" class="LargeImages" />
+        </p>
+        <p>In the above example, the value in the <span class="Emphasis">Pending Order Quantity</span> field is the sum total (64)  of the previously authorized orders (33, 31) shown in the <span class="Emphasis">User Order Quantity</span> field.</p>
+        <div class="Note_BasicNote">
+            <p>The <span class="Emphasis">Supplier Capacity Report</span> is read-only and color formatted as follows:</p>
+            <table style="width: 100%;mc-table-style: url('../../Resources/TableStyles/standard.css');" class="TableStyle-standard" cellspacing="0">
+                <col class="TableStyle-standard-Column-Column1" />
+                <col class="TableStyle-standard-Column-Column2" />
+                <thead>
+                    <tr class="TableStyle-standard-Head-Header1">
+                        <th class="TableStyle-standard-HeadE-Column1-Header1">Color</th>
+                        <th class="TableStyle-standard-HeadD-Column2-Header1">Remaining Percentage</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr class="TableStyle-standard-Body-Body1">
+                        <td class="TableStyle-standard-BodyE-Column1-Body1">Red</td>
+                        <td class="TableStyle-standard-BodyD-Column2-Body1">&lt; 30% (includes negative numbers)</td>
+                    </tr>
+                    <tr class="TableStyle-standard-Body-Body1">
+                        <td class="TableStyle-standard-BodyE-Column1-Body1">YELLOW</td>
+                        <td class="TableStyle-standard-BodyD-Column2-Body1">31 to 70 %</td>
+                    </tr>
+                    <tr class="TableStyle-standard-Body-Body1">
+                        <td class="TableStyle-standard-BodyB-Column1-Body1">GREEN</td>
+                        <td class="TableStyle-standard-BodyA-Column2-Body1">71 to 100 %</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <p>The default value that displays in the <span class="Emphasis"> Remaining Quantity</span> field is set in the Supplier Manager module against the bucket with the desired delivery date. Another product with the same Attribute contributes to the capacity. Failing to run the <span class="Emphasis">Apply Supplier Production Limitation</span> macro may, upon an order being Authorized, result in the value in the <span class="Emphasis"> Remaining Quantity</span> field turning negative due to an over commit. In this scenario, Planners can use the <span class="Emphasis">Retract</span> toolbar functionality to reverse the authorization and then run the macro against the order. This will add new order lines in the top grid and leave a positive value in the <span class="Emphasis"> Remaining Quantity</span> field.</p>
+        <p>Order lines that go beyond a supplier's production capacity split with the excess overflowing to the next ranked supplier of the same construction type. The resulting multiple order lines have the same order date, but different order quantities and  source supplier. Order quantities that exceed all available supplier capacity default to a supplier called <span class="Emphasis">Not Known</span> which has a limited capacity. Users should examine all <span class="Emphasis">Not Known</span> suppliers and either push the order and/or delivery date to a future production date or find additional supplier capacity to satisfy the order quantity of that construction type. Suppliers that have not been configured have a limited capacity rather than no capacity. The process does not look ahead to take orders from the next bucket (time period).</p>
+        <p> In the following, <span class="Emphasis">Intra State Supplies</span> was applied first being the default supplier with <span class="Emphasis">Mass Supply Shipments Inc</span> applied second being the next ranked supplier. </p>
+        <p>
+            <img src="../../Resources/Images/Order Manager/Default Supplier.PNG" class="LargeImages" />
+        </p>
+        <h3>Example: Supplier ranking</h3>
+        <table style="mc-table-style: url('../../Resources/TableStyles/standard.css');width: 99%;" class="TableStyle-standard" cellspacing="0">
+            <col class="TableStyle-standard-Column-Column1" style="width: 11%;">
+            </col>
+            <col class="TableStyle-standard-Column-Column2" style="width: 11%;">
+            </col>
+            <col class="TableStyle-standard-Column-Column1" style="width: 26%;">
+            </col>
+            <col class="TableStyle-standard-Column-Column2" style="width: 26%;">
+            </col>
+            <col class="TableStyle-standard-Column-Column1" style="width: 26%;">
+            </col>
+            <thead>
+                <tr class="TableStyle-standard-Head-Header1">
+                    <th class="TableStyle-standard-HeadE-Column1-Header1">Supplier</th>
+                    <th class="TableStyle-standard-HeadE-Column2-Header1">Month</th>
+                    <th class="TableStyle-standard-HeadE-Column1-Header1">Construction type 1 Capacity</th>
+                    <th class="TableStyle-standard-HeadE-Column2-Header1">Construction type 2 Capacity</th>
+                    <th class="TableStyle-standard-HeadD-Column1-Header1">
+                        <p>Construction type 3 Capacity</p>
+                    </th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1" style="text-align: center;">
+                        <p>1</p>
+                    </td>
+                    <td class="TableStyle-standard-BodyE-Column2-Body1" style="text-align: center;">
+                        <p>1</p>
+                    </td>
+                    <td class="TableStyle-standard-BodyE-Column1-Body1" style="text-align: center;">
+                        <p>1,000</p>
+                    </td>
+                    <td class="TableStyle-standard-BodyE-Column2-Body1" style="text-align: center;">
+                        <p>1,000</p>
+                    </td>
+                    <td class="TableStyle-standard-BodyD-Column1-Body1" style="text-align: center;">
+                        <p>1,000</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1" style="text-align: center;">
+                        <p>1</p>
+                    </td>
+                    <td class="TableStyle-standard-BodyE-Column2-Body1" style="text-align: center;">
+                        <p>2</p>
+                    </td>
+                    <td class="TableStyle-standard-BodyE-Column1-Body1" style="text-align: center;">
+                        <p>1,000</p>
+                    </td>
+                    <td class="TableStyle-standard-BodyE-Column2-Body1" style="text-align: center;">
+                        <p>1,000</p>
+                    </td>
+                    <td class="TableStyle-standard-BodyD-Column1-Body1" style="text-align: center;">
+                        <p>1,000</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1" style="text-align: center;">
+                        <p>2</p>
+                    </td>
+                    <td class="TableStyle-standard-BodyE-Column2-Body1" style="text-align: center;">
+                        <p>1</p>
+                    </td>
+                    <td class="TableStyle-standard-BodyE-Column1-Body1" style="text-align: center;">
+                        <p>500</p>
+                    </td>
+                    <td class="TableStyle-standard-BodyE-Column2-Body1" style="text-align: center;">
+                        <p>5,000</p>
+                    </td>
+                    <td class="TableStyle-standard-BodyD-Column1-Body1" style="text-align: center;">
+                        <p>1,000</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyB-Column1-Body1" style="text-align: center;">
+                        <p>2</p>
+                    </td>
+                    <td class="TableStyle-standard-BodyB-Column2-Body1" style="text-align: center;">
+                        <p>2</p>
+                    </td>
+                    <td class="TableStyle-standard-BodyB-Column1-Body1" style="text-align: center;">
+                        <p>5,000</p>
+                    </td>
+                    <td class="TableStyle-standard-BodyB-Column2-Body1" style="text-align: center;">
+                        <p>100</p>
+                    </td>
+                    <td class="TableStyle-standard-BodyA-Column1-Body1" style="text-align: center;">
+                        <p>1,000</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <p>Scenarios and results:</p>
+        <table style="mc-table-style: url('../../Resources/TableStyles/standard.css');width: 99%;" class="TableStyle-standard" cellspacing="0">
+            <col class="TableStyle-standard-Column-Column1" style="width: 10%;">
+            </col>
+            <col class="TableStyle-standard-Column-Column2" style="width: 45%;">
+            </col>
+            <col class="TableStyle-standard-Column-Column1" style="width: 45%;">
+            </col>
+            <thead>
+                <tr class="TableStyle-standard-Head-Header1">
+                    <th class="TableStyle-standard-HeadE-Column1-Header1">Supplier</th>
+                    <th class="TableStyle-standard-HeadE-Column2-Header1">Scenario</th>
+                    <th class="TableStyle-standard-HeadD-Column1-Header1">Result</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1" style="text-align: center;">
+                        <p>1</p>
+                    </td>
+                    <td class="TableStyle-standard-BodyE-Column2-Body1">
+                        <ul>
+                            <li>
+                                <p>DC 1 - Needs 100 Con1 today</p>
+                            </li>
+                            <li>
+                                <p>DC 1 - Needs 2,000 Con1 next month</p>
+                            </li>
+                        </ul>
+                    </td>
+                    <td class="TableStyle-standard-BodyD-Column1-Body1">
+                        <ul>
+                            <li>
+                                <p>DC 1 gets 100 Con1 units from Supplier 1 this month</p>
+                            </li>
+                            <li>
+                                <p>DC 1 gets 1,000 Con1 units from Supplier 1 next month</p>
+                            </li>
+                            <li>
+                                <p>DC 1 gets 1,000 Con1 units from Supplier 2 next month</p>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1" style="text-align: center;">
+                        <p>2</p>
+                    </td>
+                    <td class="TableStyle-standard-BodyE-Column2-Body1">
+                        <ul>
+                            <li>
+                                <p>DC 1 - Needs 3,000 Con1 today </p>
+                            </li>
+                            <li>
+                                <p>DC 2 - Needs 2,000 Con1 tomorrow</p>
+                            </li>
+                        </ul>
+                    </td>
+                    <td class="TableStyle-standard-BodyD-Column1-Body1">
+                        <ul>
+                            <li>
+                                <p>DC 1 gets 1,500 Con1 units from Supplier 1&amp;2</p>
+                            </li>
+                            <li>
+                                <p>DC 1 gets 1,500 Con1 units from Default Supplier</p>
+                            </li>
+                            <li>
+                                <p>DC 2 gets 2,000 Con1 units from Default Supplier</p>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyB-Column1-Body1" style="text-align: center;">
+                        <p>3</p>
+                    </td>
+                    <td class="TableStyle-standard-BodyB-Column2-Body1">
+                        <ul>
+                            <li>
+                                <p>DC 1 - Already shipped 200 units of Con1 from Sup1 this month</p>
+                            </li>
+                            <li>
+                                <p>DC 1 - Needs 1,000 more units of Con1 this month</p>
+                            </li>
+                        </ul>
+                    </td>
+                    <td class="TableStyle-standard-BodyA-Column1-Body1">
+                        <ul>
+                            <li>
+                                <p>DC 1 gets 800 Con1 units from Supplier 1 this month</p>
+                            </li>
+                            <li>
+                                <p>DC 1 gets 200 Con1 units from Supplier 2 this month</p>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <p class="Important">Existing system policy <span class="Emphasis">Update Stock Pending Value Based On DocumentStatusID Collection</span> (Module: Order Manager) should be taken into account when reserving pending stocks.</p>
+        <h3>Viewing Orders with Supplier constraints</h3>
+        <p>Planners can see all the different suppliers for a selected order line based on the order line's  construction type (construction types have a 1-to-1 relationship to items), the production capacity of each supplier over time, and how much of the production capacity is being used already by authorized orders.</p>
+        <p>The Order Date defines which recommended order lines of the same construction type are processed first with the earliest order date going first. The order in which suppliers are used to fulfill a construction type is dictated by the supplier construction priority provided during import. However, if all the orders have the same delivery date, construction type, and source supplier then order number is used.</p>
+        <p class="BasicNote">Dates do not change. Therefore, policies such as schedules and lead time do not apply. However, policies <span class="Emphasis">Minimum Order Quantity</span> and <span class="Emphasis">Maximum Order Quantity</span> do apply.</p>
+    </body>
+</html>

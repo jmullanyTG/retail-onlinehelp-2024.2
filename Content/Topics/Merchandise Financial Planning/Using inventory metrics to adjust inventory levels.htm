@@ -1,0 +1,170 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head>
+        <link href="../../Resources/TableStyles/standard.css" rel="stylesheet" MadCap:stylesheetType="table" />
+    </head>
+    <body>
+        <h1>Using inventory metrics to adjust inventory levels</h1>
+        <p>Users can adjust inventory quickly and conveniently using metrics labeled <span class="Emphasis">Inventory Adjustment</span> and <span class="Emphasis">Inventory Reduction</span>. These metrics can be assigned friendly names using the <span class="Emphasis">Metric Configuration</span> configuration screen.</p>
+        <p>Having separate individual metrics with user-friendly names gives greatly improved visibility to each, and better planning of AUR associated with each.</p>
+        <p>
+            <img src="../../Resources/Images/MFP/Inventory Metric Configuration.PNG" class="LargeImages" />
+        </p>
+        <h2>Configuring an inventory metric with a friendly name</h2>
+        <ol>
+            <li>
+                <p>Click <span class="Emphasis">Manage</span> in the main planning view.</p>
+            </li>
+            <li>
+                <p>Click the <span class="Emphasis">Configuration</span> option on the toolbar of the <span class="Emphasis">Financial Plan Maintenance</span> screen.</p>
+            </li>
+            <li>
+                <p>Select <span class="Emphasis">Metrics</span> from the dropdown list.</p>
+                <p>The <span class="Emphasis">Metric Configuration</span> screen displays.</p>
+            </li>
+            <li>
+                <p>In the <span class="Emphasis">Friendly Name</span> field, enter a new name for the metric.</p>
+            </li>
+            <li>
+                <p>Click <span class="Emphasis">Save</span>.</p>
+            </li>
+        </ol>
+        <p class="BasicNote">If the plan is already open, click <span class="Emphasis">Execute</span> or press F5 to refresh the screen.</p>
+        <h2>Inventory metrics</h2>
+        <p>
+            <span class="Emphasis">Inventory Adjustment 1-4</span> are identical in how they are calculated. All 4 can be given different user-friendly names and used for different adjustment scenarios.</p>
+        <p>The <span class="Emphasis">Inventory Reduction 1-3</span> metrics can be used in the same way as the <span class="Emphasis">Inventory Adjustment</span> metrics.
+
+</p>
+        <p>As both positive and negative values can be entered into Adjustments and Reductions metric fields, the following is important to note: </p>
+        <ul>
+            <li>
+                <p>Reduction fields are always subtracted, so negative values entered in these fields result in an addition.&#160; </p>
+            </li>
+            <li>
+                <p>Adjustment fields are always added, so negative values are subtracted.
+</p>
+            </li>
+        </ul>
+        <p class="BasicNote">Changes to Adjustments or Reductions affect rolling EOP and BOP.</p>
+        <h2>Generalization Of component metrics</h2>
+        <p>MFP has three sets of metrics called component metrics meaning they are corresponding parts of a whole other metric. The parts are:</p>
+        <ul>
+            <li>
+                <p>the metric set Comp and Non-Comp are parts of Sales. </p>
+            </li>
+            <li>
+                <p>The metric set of Regular, Promo, and Markdown are parts of Sales. </p>
+            </li>
+            <li>
+                <p>The Target Receipts 1 and 2 are parts of Target Receipts.  </p>
+            </li>
+        </ul>
+        <p>The application allows configurability as to which of these components are enabled and what they are called.</p>
+        <p>
+            <img src="../../Resources/Images/MFP/Metric Configuration Component Sets.png" class="LargeImages" />
+        </p>
+        <p>Components can be repurposed and renamed in whatever way is desired. Once saved, the changes take effect in the MFP grid once it is reloaded.  In the above screenshot, Comp and Non-Comp are repurposed to represent 2 sub-channels where stock is fulfilled either via the company’s DC or supply chain, or via a wholesaler.  Thus, the fields are renamed to Warehoused and Factory Direct.</p>
+        <p>At least two components in each component set must be included. For example, enable both Comp and Non-Comp, enable both TargetReceipts1 and TargetReceipts2, or enable 2 of the 3 Regular, Promo, Markdown set. Attempting to enable only 1 component generates the following error message:</p>
+        <p>
+            <img src="../../Resources/Images/MFP/Enable Single Component Error Msg.PNG" class="LargeImages" />
+        </p>
+        <p>In addition, there is the concept of a primary component.  This means that, if the total metric (e.g. Sales) is currently 0, and a non-zero value is added, then 100% of the value goes to the primary component.  The value does not evenly split among the components.  The primary component is indicated by a check mark in the <span class="Emphasis">Is Primary</span> column in the <span class="Emphasis">Generic Metric Configuration</span> view.  </p>
+        <p>In the case of the 3-Part Sales Component Set (the Regular / Promo / Markdown set), then Regular MUST be enabled if the component set is enabled at all.  In other words, users can disable all 3 components, or users can disable ONLY Promo or ONLY Markdowns, but Regular cannot be disabled while allowing the other 2 to be enabled.  If users attempt to disable only Regular, the following message displays, and the changes are not saved:</p>
+        <p>
+            <img src="../../Resources/Images/MFP/Primary Component Must Be Enabled.PNG" class="LargeImages" />
+        </p>
+        <h2>Metrics generated in the main planning view</h2>
+        <p>When a given generic Adjustment or Reduction metric is enabled, 29 metrics are visible for the Adjustment metric and 26 are visible for the Reduction metric in MFP. The difference is due to 3 <span class="Emphasis">Retail Ex Vat</span> metrics being applicable to Adjustment only.</p>
+        <p>Aside from <span class="Emphasis">Retail Ex Vat</span>, each of the set of metrics is repeated for <span class="Emphasis">TY</span>,<span class="Emphasis"> LY</span>, and <span class="Emphasis">Comparison</span>, in addition to <span class="Emphasis">% +/- LY</span> for Retail and Units.</p>
+        <p>If two or more Adjustments or Reductions are enabled, then a Total Adjustments and/or Total Reductions field displays as well. This is an aggregation of all enabled adjustment or reduction fields, but is not plannable.</p>
+        <p>
+            <img src="../../Resources/Images/MFP/Inventory Reduction Total fields.png" class="LargeImages" />
+        </p>
+        <p>Aside from <span class="Emphasis">Retail Ex Vat</span>, each of the set of metrics shown below is repeated for <span class="Emphasis">TY</span>,<span class="Emphasis"> LY</span>, and <span class="Emphasis">Comparison</span>, in addition to <span class="Emphasis">% +/- LY</span> for Retail and Units.</p>
+        <table style="margin-left: 0;margin-right: auto;mc-table-style: url('../../Resources/TableStyles/standard.css');" class="TableStyle-standard" cellspacing="0">
+            <col class="TableStyle-standard-Column-Column1" />
+            <col class="TableStyle-standard-Column-Column2" />
+            <thead>
+                <tr class="TableStyle-standard-Head-Header1">
+                    <th class="TableStyle-standard-HeadE-Column1-Header1">Metric</th>
+                    <th class="TableStyle-standard-HeadD-Column2-Header1">Plannable?</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">
+                        AUC
+                    </td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">
+                        No
+                    </td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">
+                        AUR
+                    </td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">
+                        No
+                    </td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">
+                        Cost
+                    </td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">
+                        Yes
+                    </td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">
+                        Margin %
+                    </td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">
+                        Yes
+                    </td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">
+                        Retail
+                    </td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">
+                        Yes
+                    </td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">
+                        Retail Ex Vat
+                    </td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">
+                        No (only for Adjustment type)
+                    </td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">
+                        Retail % of Sales
+                    </td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">
+                        Yes
+                    </td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">
+                        Units
+                    </td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">
+                        Yes
+                    </td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyB-Column1-Body1">
+                        Units % of Sales
+                    </td>
+                    <td class="TableStyle-standard-BodyA-Column2-Body1">
+                        Yes
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </body>
+</html>

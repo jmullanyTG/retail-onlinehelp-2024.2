@@ -1,0 +1,108 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head>
+    </head>
+    <body>
+        <p>Target segments can be defined to subdivide the product and site hierarchy levels selected for  scenarios in a variety of ways, from the most common scenario of creating segments by lower hierarchy levels to the more complex scenarios where segments are created based on criteria, such as product attributes, that may cross traditional hierarchy levels. </p>
+        <p>When creating segments as needed with Target Filters, or when using a Plan Basis plan whose hierarchies don’t directly align with those in the active assortment plan, it is advised to use the <span class="Emphasis">View Exclusions</span> function found on the top toolbar after defining segments to identify any products that are part of the scenario hierarchy selections but that were inadvertently excluded. </p>
+        <p>
+            <img src="../Images/Target Choice Count/Target Segment Definitions.png" class="LargeImages" />
+        </p>
+        <p>The <span class="Emphasis">Target Scenario Segments</span> grid at the bottom of the <span class="Emphasis">Target Choice Count</span> screen displays details about the segments users have defined for the scenarios selected in the <span class="Emphasis">Target Scenario List</span> grid.
+</p>
+        <p>
+If multiple scenarios are selected, segment data for each are stacked in the view.</p>
+        <p>
+            <img src="../Images/Target Choice Count/Target Scenario Segments Grid.png" class="LargeImages">
+            </img>
+        </p>
+        <p class="BasicNote">The flexibility of target segment definitions allows for scenarios in which the resulting segment cluster details may not add up to 100% of the hierarchies selected for the scenario – instead equaling more or less than 100% depending on how the segments are defined.</p>
+        <ul>
+            <li><span class="Emphasis">Scenario</span>: Scenario name.</li>
+            <li><span class="Emphasis">Target Segment</span>: User or system defined name for the target segment. <span class="Emphasis">Segment By Hierarchy</span> defaults segment names to the corresponding product hierarchy level description.</li>
+            <li><span class="Emphasis">Target Filter</span>: Product filter selection to define the items included in the segment. The filters used here are Placeholder filters. If defining a new Placeholder filter while already working in a scenario, click <span class="Emphasis">Execute</span> on the Target Creation dialog again to update the values in the dropdown.</li>
+            <li>
+                <p><span class="Emphasis">Supplemental Filter</span>: Product filter selection to define the items used in Rationalization only. Setting a Supplemental filter does not supersede the list of items used to return historical data for the segment in the Segment Cluster Details section. It is used only in the calculation of the marginal return curve used for choice count recommendations. </p>
+                <p class="BasicNote">For more information, see <MadCap:xref href="../../Topics/Assortment Planning/Rationalization.htm">Rationalization calculation</MadCap:xref>.</p>
+            </li>
+            <li>
+                <p><span class="Emphasis">Target Filter Generated?</span>: Using <span class="Emphasis">Segment By Hierarchy</span> to define segments checks this box indicating that the system will use a temporary filter based on the product hierarchy level corresponding to the segment in place of a standard Target Filter. </p>
+                <p>Subsequently selecting a Target Filter after using <span class="Emphasis">Segment By Hierarchy</span> unchecks this box and the system reverts to using the Target Filter selected for calculation of segment data. The only way to re-check it is to click <span class="Emphasis">Segment By Hierarchy</span> again, thus recreating the segment.</p>
+            </li>
+            <li>
+                <p><span class="Emphasis">Cluster Sets</span>: Selects the cluster sets to define the site groupings for the segment in the Segment Cluster Details section. Cluster sets selected will also be those initially eligible to be assorted placeholders generated for the segment through the Smart Start process. </p>
+                <p>Using <span class="Emphasis">Segment By Hierarchy</span> or Applying Target Segment Definitions with no cluster sets selected will default this to the cluster set(s) defined in Assortment Plan Defaults (see Assortment Plan Defaults above) for the assigned segment Product Hierarchy, provided they have been defined. </p>
+                <p>Because cluster set configurations can change over time in  Assortment Planning, the system uses the current Cluster Set Snapshot to determine site cluster assignments when calculating historical data used in the Segment Cluster Details section. </p>
+                <p>If the cluster sets selected don’t encompass all sites within the scenario Site Hierarchy selection, the data returned will only represent sales volume which occurred in the selected cluster sets. </p>
+                <p>Because it is possible to have multiple cluster sets with valid configurations that include some or all of the same sites, when assigning cluster sets to segments, the system checks to make sure overlapping cluster sets have not been assigned. </p>
+                <p class="Example">A cluster set for United States Retail and another for North America Retail which includes both US and Canada overlapping with United States Retail.</p>
+                <p>When <span class="Emphasis">Save</span> is clicked, a message displays and the cluster set selection reverts to what it was previously if there is an attempt to assign overlapping cluster sets.</p>
+            </li>
+            <li>
+                <p><span class="Emphasis">Comparison Time Frame</span>: Sets the comparison time frame from which to gather historical data for the segment. </p>
+                <p>Using <span class="Emphasis">Segment By Hierarchy</span> for segment creation or Applying Target Segment Definitions without setting a Comparison Time Frame defaults this to LY, an un-selectable system identifier indicating the last year periods directly correlating to the scenario Window of Time will be used.</p>
+            </li>
+            <li>
+                <p><span class="Emphasis">Product Hierarchy</span>: Sets the product hierarchy level to which placeholders generated from the segment through Smart Start will be assigned. <span class="Emphasis">Segment By Hierarchy</span> defaults this to the same product level as indicated by the segment Name. </p>
+                <p>For manually defined segments, when a user clicks <span class="Emphasis">Save</span> this setting defaults to the lowest common level of items returned in the Target Filter. </p>
+                <p class="Example">If a filter is defined to return all apparel products that are part of the color group <span class="Emphasis">Red</span> (assuming there are items belonging to this color group in each of the lowest product levels below Apparel), then Product Hierarchy is set to Apparel. Apparel being the lowest common level. </p>
+                <p>This setting does not have to be set to a leaf of the lowest level of the assortment plan Product Hierarchy. If unsure at the time of scenario creation where all the placeholders will ultimately be assigned, choose a higher level and change by placeholder later in the assortment planning process.</p>
+            </li>
+            <li><span class="Emphasis">Collection Option</span>: Defines the configuration of placeholders generated for the segment through Smart Start within collections. <ul><li><span class="Emphasis">Ascending Layering (Legacy)</span>: The system optimally assigns placeholders to collections based on the results of Rationalization. This yields the most common Style-to-Style-Color configuration such as a <span class="Emphasis">Crew Neck Tee</span> in 5 colors.</li><li><span class="Emphasis">All Variants in One Collection</span>: All placeholders generated for the segment through Smart Start are assigned to a single collection, using the results of only the Intra-Style Marginal Return Curve to determine rates of sale for each placeholder. </li><li><span class="Emphasis">One Collection per Variant</span>: Placeholders generated for the segment through Smart Start are assigned to their own collection, using the results of only the <span class="Emphasis">Inter-Style Marginal Return Curve</span>  to determine rates of sale for each placeholder. For more information regarding the <span class="Emphasis"> Inter-Style Marginal Return Curve</span>, see <MadCap:xref href="../../Topics/Assortment Planning/Rationalization.htm">Rationalization calculation</MadCap:xref>.</li><li><span class="Emphasis">Positional Merge</span>: Collection assignments are merged according to positions in the marginal return matrices. The result of collection assignments can be viewed in the <span class="Emphasis">Target New Choices</span> tab.
+						<p><p>Returning later to enable the Cluster Containment functionality by selecting  the <span class="Emphasis">Use Cluster Constraint</span> checkbox automatically sets the <span class="Emphasis">Collection Option</span> field to <span class="Emphasis">Positional Merge</span> when <span class="Emphasis">Save</span> is clicked.</p></p><p class="BasicNote">The default value for <span class="Emphasis">Collection Option</span> is set via system policy <span class="Emphasis">Default: Collection Option</span>.  However, if system policy <span class="Emphasis">Default: Use Cluster Constraint</span> is enabled, then the option must be set to <span class="Emphasis">Positional Merge</span>.</p></li></ul></li>
+            <li>
+                <p><span class="Emphasis">Use Cluster Constraint</span>: If checked, whether to use the cluster containment configurations in a scenario. This field can be selected when Target Creation is accessed via the Assortment Planning module, or when in standalone Target Choice Count mode with <span class="Emphasis">Cluster</span> as the specified Site Aggregation Level.</p>
+            </li>
+            <li><span class="Emphasis">Refresh Filters</span>: Refreshes the items associated with the Target and Supplemental Filters based on their criteria.</li>
+            <li><span class="Emphasis">Last Filter Process Date</span>: Displays the date of the last filter Refresh for the segment. Using <span class="Emphasis">Segment By Hierarchy</span> or when clicking <span class="Emphasis">Save</span> of newly created segments, defaults to the current date.</li>
+            <li>
+                <p><span class="Emphasis">New Variants</span>: Sum of the Max Act TY New Choices for all segments within the scenario. Defaults to blank. Updates after scenario has been Rationalized or TY Act New Choices has been updated, Applied, and the scenario has been refreshed. </p>
+                <p class="BasicNote">All new choices within a single segment are assumed to be shared among all assigned clusters. </p>
+                <p>For example, for a scenario with 2 segments, both with a single cluster set with 3 clusters assigned, the first segment has TY Act New Choice counts of 5, 3, and 2, and the second segment has TY Act New Choice counts of 4, 2, and 1, New Variants will equal 9 (max of 5 from segment one and 4 from segment two). This means that the clusters receiving fewer choices will still share from the max new choices by segment, they just won’t receive all of them.</p>
+            </li>
+            <li><span class="Emphasis">Total Variants</span>: Sum of the Max Act TY New Choices and the Max TY C/O Choices for all segments within the scenario. Defaults to blank; updates after scenario has been Rationalized or TY Act New Choices has been updated, Applied, and the scenario has been refreshed.</li>
+            <li>
+                <p><span class="Emphasis">Active Variant Threshold</span>:  Sets the percent of deseasonalized average to be used in step 3 of the data cleansing process for the segment. Changes to this value are valid within the active scenario only and will not alter the system policy value.</p>
+                <p class="BasicNote">Defaults to the value of the <span class="Emphasis">Active Variant Threshold Factor</span> system policy.</p>
+            </li>
+            <li><span class="Emphasis">Product Hierarchy Path</span>: Displays the full product hierarchy path of the Product Hierarchy selection for the segment. Used for specific identification of product levels in hierarchies where multiple levels may share the same description.</li>
+            <li>
+                <p><span class="Emphasis">Target S/T %</span>: (Sales + Min Pres) / Stock</p>
+            </li>
+            <li>
+                <p><span class="Emphasis">Min Pres</span>: The initial value is seeded from Hierarchy Defaults in AP mode. In standalone mode, the values do not seed. Only the hierarchy default is used and not the one by cluster or time.</p>
+                <p>The editability of Min Pres within the Target Worksheet supports setting various targets by Cluster Set/Cluster. For example, Min Pres for Retail A should be 12, and Retail B should be 10.</p>
+            </li>
+            <li>
+                <p><span class="Emphasis">Clear Supplemental Filter?</span>: If checked, then when the user clicks <span class="Emphasis">Save</span> this clears the Supplemental Filter set for the segment.</p>
+                <p class="BasicNote">Supplemental Filter defaults to (none) and Collection Option defaults to Multiple Variants Per Collection. All other fields are blank by default.</p>
+            </li>
+            <li>
+                <p><span class="Emphasis">Include Carryover In Rationalization?</span>: Default is checked. If unchecked, then during the Calculate process, items flagged as Carryover are automatically set to Inclusion Type <span class="Emphasis">Target Set Only</span>. They will be included in data cleansing but not in rationalization. This should be set if most carryover items in the Segment are long-life items that will continue to sell similarly to last year.</p>
+            </li>
+            <li>
+                <p><span class="Emphasis">Model Filter</span>:  (Optional) Product filter used in place of the Target Filter for the purpose of recommended choice count generation for the segment.</p>
+            </li>
+            <li>
+                <p><span class="Emphasis">Active Variant Total Minimum</span>: 
+                        Removes consistently low sellers from the cleansing process. The <span class="Emphasis">Active Variant Total Minimum</span> functionality:
+                        </p>
+                <ul>
+                    <li>
+                        <p>finds the total cleansed Active sales for all variants in the segment / cluster set / cluster</p>
+                    </li>
+                    <li>
+                        <p>finds the average of these totals</p>
+                    </li>
+                    <li>
+                        <p>multiplies the threshold to the average total to get the Minimum required</p>
+                    </li>
+                    <li>
+                        <p>excludes any variants whose total is lower than this Minimum</p>
+                    </li>
+                </ul>
+                <p>As with the other thresholds the default is set using a system policy. In this case, system policy <span class="Emphasis">Cleanse: Active Variant Total Minimum</span> (Module: Target Choice Count). The default is used when segments are created. However, users can change the value at the segment level.</p>
+            </li>
+        </ul>
+    </body>
+</html>

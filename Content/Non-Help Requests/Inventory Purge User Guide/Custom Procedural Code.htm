@@ -1,0 +1,26 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head>
+    </head>
+    <body>
+        <h1>Custom Procedural Code</h1>
+        <p>Inventory Purge supports the execution of custom code for one or more custom steps of type ID 5.</p>
+        <p>A wrapper-stub procedure is provided within the <code>Inventory_C</code> DB schema.  We strongly recommend using a wrapper-calls-custom-code coding paradigm to encapsulate custom code under near-identical-looking wrapper procedures.  This is how the core Purge process is architected when executing pre-existing core code procedures.  We do not restrict customization to using this approach -- there may be valid cases where the custom code need only be added to a clone of the wrapper-stub.</p>
+        <h2>Suggested Custom Procedure Development Approach</h2>
+        <p>The approach is very similar to that described above for the Custom INIT procedure – copy, rename (removing _STUB), ensure the SET statement is present, then customize.</p>
+        <p>The sample handles step-completion logging to the <code>Inventory.PurgeLog</code> table.</p>
+        <p>All <code>Inventory.PurgeBatch</code> and <code>Inventory.PurgeBatch_Step</code> progress updates are performed by core code.</p>
+        <p>Under NO circumstances are ANY UPDATE DML statements to be issued against ANY core table – they are unnecessary.</p>
+        <p>Core code procedures already coded in the STUB are the only procedures within the <code>Inventory.Purge</code> space that may be executed.</p>
+        <p>Note the comment block in the wrapper STUB:</p>
+        <MadCap:codeSnippet>
+            <MadCap:codeSnippetCopyButton />
+            <MadCap:codeSnippetBody MadCap:useLineNumbers="False" MadCap:lineNumberStart="1" MadCap:continue="False" xml:space="preserve">/* =============================================================================
+** When calling the Custom Procedure itself, the signature is the same as for
+** this stub IF ANY LOGGING IS TO OCCUR FOR EXCEPTIONS/INFORMATIONAL CONTENT.
+** ========================================================================== */</MadCap:codeSnippetBody>
+        </MadCap:codeSnippet>
+        <p>Using the same signature enables calls to the <code>Inventory.Purge_LogActivity</code> procedure to be made within the procedure called by the wrapper.</p>
+        <p>Using the core code’s wrapper and called procedures for educational purposes is highly recommended.</p>
+    </body>
+</html>

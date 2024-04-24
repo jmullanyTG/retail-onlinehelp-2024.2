@@ -1,0 +1,55 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head>
+        <link href="../../Resources/TableStyles/standard.css" rel="stylesheet" MadCap:stylesheetType="table" />
+    </head>
+    <body>
+        <h1>Strategy relations and prepack relationships</h1>
+        <p>The <span class="Emphasis">Strategy Relations</span> blade gives visibility into the relationship, if any, between strategies and between strategies and any configured prepacks. The blade includes two sections: <span class="Emphasis">Strategy Relationship</span> and <span class="Emphasis">Prepack Configuration</span>. </p>
+        <p>
+            <img src="../../Resources/Images/Allocations/Allocate_Strategy_Prepack_grid.png" class="LargeImages" />
+        </p>
+        <p>If the same rainbow prepack items are a part of more than one Allocation Strategy, users can identify if a linked strategy needs to be calculated or not.</p>
+        <p class="BasicNote">A nightly process associates a strategy to other strategies that are affiliated based on multi-SKU prepacks.
+Linked items are already grouped together (via a back-end process) in the Allocation run.
+</p>
+        <h2>How thresholds are calculated to release multi-SKU prepacks</h2>
+        <p>Thresholds originate with the Allocation Strategy itself or are determined by system policies. Two system policies linked to these calculations are:</p>
+        <ul>
+            <li>
+               Allocations CLR Prepack Run Mode 
+            </li>
+            <li>
+               Allocations Maximum Prepack Overage Threshold 
+            </li>
+        </ul>
+        <h2>Strategy Relationships</h2>
+        <p>Where omni-channel is allowed and there are multiple channels using the same strategy, then the <span class="Emphasis">Strategy Relationship</span> grid lists all the channels using that strategy.</p>
+        <p class="Important">It is important to note that there is only one stock-on-hand for the multiple channels sharing the same Variant. Therefore, it is recommended to first run the strategy with the most important channel and verify the order. Once satisfied, repeat the process with the other strategies to avoid over allocation.</p>
+        <p>The information in this section can be used to ensure the prepack strategies are configured correctly to align within the Allocation run. </p>
+        <h2>Prepack Configuration</h2>
+        <p>The <span class="Emphasis">Prepack Configuration</span> section lists all related prepacks linked to the selected Allocation strategy, based on ItemMasters linked to the Strategy. This provides a better understanding of what is within a prepack. This section identifies what ItemMasters are contained within a prepack.</p>
+        <h2>Field descriptions</h2>
+        <table style="width: 100%;margin-left: auto;margin-right: auto;mc-table-style: url('../../Resources/TableStyles/standard.css');" class="TableStyle-standard" cellspacing="0">
+            <col class="TableStyle-standard-Column-Column1" />
+            <col class="TableStyle-standard-Column-Column2" />
+            <thead>
+                <tr class="TableStyle-standard-Head-Header1">
+                    <th class="TableStyle-standard-HeadE-Column1-Header1">Field</th>
+                    <th class="TableStyle-standard-HeadD-Column2-Header1">Description</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">Is Cache dirty</td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">Indicates if a cache needs to be re-run.</td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyB-Column1-Body1">Is Forecast dirty</td>
+                    <td class="TableStyle-standard-BodyA-Column2-Body1">Indicates if something on the Forecast has changed.</td>
+                </tr>
+            </tbody>
+        </table>
+        <p>For more field descriptions, see <MadCap:xref href="Allocation Strategy grid field reference.htm">Allocation Strategy field reference</MadCap:xref>.</p>
+    </body>
+</html>

@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head>
+    </head>
+    <body>
+        <h2>The Calculate and Rationalize processes</h2>
+        <p>The Calculate and Rationalize processes can take some time to complete. Rather than have users wait for these processes to complete, these processes are submitted to the Workload Queue. Users are notified when these processes are queued and completed. In:
+
+</p>
+        <ul>
+            <li>Target Choice Count (TCC) mode, the Notification only contains the name of the Scenario and the hyperlink opens the Target Choice Count module.
+</li>
+            <li>
+AP/TCC mode, the Notification contains both the Assortment Plan name and the name of the Scenario and the hyperlink opens the AP module.
+
+</li>
+        </ul>
+        <p class="BasicNote">For more information on Notifications,<MadCap:conditionalText MadCap:conditions="General.PrintOnly"> refer to the Notifications User Guide.</MadCap:conditionalText><MadCap:conditionalText MadCap:conditions="General.ScreenOnly"> see <MadCap:xref href="../../Topics/Notifications/Notifications Overview.htm">Notifications overview</MadCap:xref>.</MadCap:conditionalText></p>
+    </body>
+</html>

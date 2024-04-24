@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" xml:lang="en-us">
+    <head><title></title>
+    </head>
+    <body>
+        <h1>Importing and exporting views</h1>
+        <p>Views can be exported from one instance of ToolsGroup JustEnough and imported into a second instance. This allows for the upgrade of standard versions or transportation of work between development, QA, and production environments. </p>
+        <p>
+            <img src="../../Resources/Images/Views/Import New.png" class="LargeImages" />
+        </p>
+        <h2>New views</h2>
+        <p>A new view can be imported using the <span class="Emphasis">Import New</span> function. </p>
+        <p>Importing a view as new creates the view with a new universally unique identifier (UUID) within not just the current instance of ToolsGroup JustEnough but across any version. </p>
+        <p>Views imported as new do not replace existing views and the feature should not be used to upgrade in place. When customizing or extending an existing standard view, it should first be exported, then re-imported as new to give the view a fresh UUID (and thus not be overwritten when upgrading). </p>
+        <h2>Existing views</h2>
+        <p>An upgraded version of an existing view can be imported using the <span class="Emphasis">Import Existing</span> function. </p>
+        <p>The <span class="Emphasis">Import Existing</span> function searches for and replaces an existing view with the same UUID within the system. This should be used to upgrade standard views in place.</p>
+    </body>
+</html>

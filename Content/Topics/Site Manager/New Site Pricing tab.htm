@@ -1,0 +1,72 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head>
+        <link href="../../Resources/TableStyles/standard.css" rel="stylesheet" MadCap:stylesheetType="table" />
+    </head>
+    <body>
+        <h1>Selecting new sites and copying pricing from similar sites</h1>
+        <p>The <span class="Emphasis">New Site Pricing</span> tab incorporated into Site Manager lets users select a new site and copy pricing from a similar site.  Select the site that is to be priced, the model site to copy pricing from, and the price type to be copied.  Pricing can be reviewed and then submitted to generate needed price actions in a designated plan.</p>
+        <p>
+            <img src="../../Resources/Images/Site Manager/New Site Pricing tab.PNG" class="LargeImages" />
+        </p>
+        <MadCap:snippetBlock src="../../Resources/Snippets/Filtering Variants if they have prices.flsnp" />
+        <p class="BasicNote">The <span class="Emphasis">New Site Pricing</span> tab is visible only if a user has been assigned User Right <span class="Emphasis">Allow Access to New Site Pricing</span>. However, if system policy <span class="Emphasis">Show New Site Pricing</span> is set to False (default), then the <span class="Emphasis">New Site Pricing</span> tab is hidden regardless of whether the User Right was assigned or not.</p>
+        <h2>Copying pricing from similar sites</h2>
+        <ol>
+            <li>Within a Site Manager Document, select the new store in the top grid.  </li>
+            <li>Select the <span class="Emphasis">New Site Pricing</span> blade.</li>
+            <li>Complete the parameters as required.</li>
+            <li>
+                <p>Click <span class="Emphasis">Execute</span>.</p>
+                <p>A read-only grid displays.</p>
+            </li>
+            <li>
+                <p>Click <span class="Emphasis">Submit</span> to create a Price Action.</p>
+                <p class="BasicNote">The Price Action is created for the specific new site’s Pricing Plan.</p>
+            </li>
+        </ol>
+        <h2>Parameters</h2>
+        <table style="width: 100%;margin-left: auto;margin-right: auto;mc-table-style: url('../../Resources/TableStyles/standard.css');" class="TableStyle-standard" cellspacing="0">
+            <col class="TableStyle-standard-Column-Column1" />
+            <col class="TableStyle-standard-Column-Column2" />
+            <thead>
+                <tr class="TableStyle-standard-Head-Header1">
+                    <th class="TableStyle-standard-HeadE-Column1-Header1">Parameter</th>
+                    <th class="TableStyle-standard-HeadD-Column2-Header1">Description</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">Model Site</td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">
+                      The site to copy pricing from. 
+                        <p><img src="../../Resources/Images/Site Manager/Model Site Drop Down.PNG" class="LargeImages" /></p><p class="BasicNote">The list of available sites is still filtered by the currency of the target site.</p></td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">Start Date</td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">The date the copied price values are effective. </td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">Price Type</td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">
+                        The price type value to be copied as the price. <span class="Emphasis">Current</span> is the most current price of any Price Type. 
+                        <p class="BasicNote">The Price Types available for selection is determined by the following system policy <span class="Emphasis">Allowed New Site Pricing Price Types</span> (Module: Price Planning).</p></td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">Strategy</td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">A predefined set of calculations and validations used to provide pricing for new stores.</td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">Copy From, Copy To</td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">The time period for which price values are copied. </td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyB-Column1-Body1">Page</td>
+                    <td class="TableStyle-standard-BodyA-Column2-Body1">
+                 Displays the number of pages of variants. Use the dropdown menu to select a particular page to look at.  
+                        <p>The number of variants returned is determined by system policy <span class="Emphasis">New Site Pricing Displayed Variant Page Limit</span>. The default for this system policy is 1000. </p></td>
+                </tr>
+            </tbody>
+        </table>
+    </body>
+</html>

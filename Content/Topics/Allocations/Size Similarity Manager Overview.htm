@@ -1,0 +1,50 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" xml:lang="en-us">
+    <head><title></title>
+    </head>
+    <body>
+        <h1>Grouping same real sizes</h1>
+        <p>It is not uncommon for the same real size to be present in a database under multiple names (for example, size small could be represented as S, SM, SML, etc.). This could be due to issues with the way data imports are set up or even problems with the master data being fed into ToolsGroup JustEnough. Regardless of the cause, these additional data points can cause unintended dilution when calculating and working with size models. </p>
+        <p>The <span class="Emphasis">Size Similarity Manager</span> view allows users to identify sizes that should be grouped together as one, specify a single name under which to unify and display them, and ultimately work with them as a single entity without the need to manually unify the relevant data points.</p>
+        <p>The <span class="Emphasis">Size Similarity Manager</span> view is accessed through the Views module – <span class="Emphasis">System Utilities &gt; Views &gt; Size Curves</span>. Select <span class="Emphasis">Size Similarity Manager</span> from the Navigation Menu.</p>
+        <p>
+            <img src="../../Resources/Images/Allocation Size/Size_Similarity_Manager_grid.png" class="LargeImages" />
+        </p>
+        <h2>Saving and restoring layouts</h2>
+        <p>Changes made to the screen layout through use of the <span class="Emphasis">Fields</span> button or pivot grid manipulation can be saved and quickly recalled later. Right-click to display a menu. Select <span class="Emphasis">Save Layout</span> to launch the <span class="Emphasis">Save Layout</span> dialog.</p>
+        <p>Enter a name for the layout, an optional Description, and a privacy option: Private, Public, or Shared (if Shared, click <img src="../../Resources/Images/Allocation Size/Functionality Notes_3.png" class="IconInline" /> to define the users with which to share the layout). </p>
+        <p>To make the layout being saved the default system layout for the current view, check <span class="Emphasis">Default</span>. Click <span class="Emphasis">Ok</span> and the layout is saved for future recall. Layouts can be restored through a right-click menu option: <span class="Emphasis">Restore Layout</span>.</p>
+        <h2>Opening and exporting files</h2>
+        <p>The ability to open and export files in various formats is available via a right-click menu option.</p>
+        <p>
+            <img src="../../Resources/Images/Allocation Size/Size_Similarity_Manager_layout_2.png" class="LargeImages" />
+        </p>
+        <p class="BasicNote"><span class="Emphasis">Open</span> opens the data from the view directly in the application associated with the chosen format whereas <span class="Emphasis">Export</span> requires the user to name and save the file and does not immediately open the data in the associated application.</p>
+        <h2>Functionality and fields</h2>
+        <h3>Toolbar</h3>
+        <p><span class="Emphasis">New</span>: Adds a new similarity set.</p>
+        <p><span class="Emphasis">Delete</span>: Deletes the selected similarity set.</p>
+        <p class="Important">This does not reverse any data migrations that have already been completed. Sets are prevented from being used for any future migrations or data imports. Deleting the set will also make any Similar Sizes that were displayed under the Display Size visible throughout ToolsGroup JustEnough once more.</p>
+        <p><span class="Emphasis">Fields</span>: Launches the <span class="Emphasis">Customization</span> dialog to customize the fields shown and layout of the current view.</p>
+        <p><span class="Emphasis">Save</span>: Saves to the database. Changes cannot be automatically undone with once saved.</p>
+        <p><span class="Emphasis">Cancel</span>: Undoes all changes made in the current view and restores deleted similarity sets provided the deletion has not been saved.</p>
+        <h3>Field Descriptions</h3>
+        <ul>
+            <li><span class="Emphasis">Size Similarity ID</span>: The unique system ID number associated with the similarity set.</li>
+            <li><span class="Emphasis">Size Similarity Set Name</span>: The name for the similarity set.</li>
+            <li><span class="Emphasis">Size Type</span>: The size type to define the similarity set for. This field populates with Size Types defined in the Allocation module.</li>
+            <li><span class="Emphasis">Display Size</span>: The size name under which all similar sizes in the similarity set display after migration has occurred. This field populates with sizes contained in the selected Size Type.</li>
+            <li><span class="Emphasis">Similar Size</span>: The sizes to be grouped together in the similarity set, populates with sizes contained in the selected Size Type.</li>
+            <li><span class="Emphasis">Queue For Migration</span>: Indicates that changes made to the similarity set have been saved and queued for migration in the next migration script run. Similarity sets that have been queued for migration but which contain sizes that have yet to be migrated are formatted in red.</li>
+        </ul>
+        <ul>
+            <li><span class="Emphasis">Has Migrated</span>: Whether migration has been completed for the similarity set.</li>
+            <li><span class="Emphasis">Last Migrated Date</span>: The date the similarity set was last migrated.</li>
+            <li><span class="Emphasis">Last Migrated</span>: Who last ran the migration script for the similarity set.</li>
+            <li><span class="Emphasis">Create Date</span>: The date the similarity set was created.</li>
+            <li><span class="Emphasis">Create User</span>: Who created the similarity set.</li>
+            <li><span class="Emphasis">Last Modified Date</span>: The date the similarity set was last modified.</li>
+            <li><span class="Emphasis">Last Modified User</span>: Who last ran the modified the similarity set.</li>
+        </ul>
+    </body>
+</html>

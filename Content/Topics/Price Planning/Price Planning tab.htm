@@ -1,0 +1,160 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head>
+        <link href="../../Resources/TableStyles/standard.css" rel="stylesheet" MadCap:stylesheetType="table" />
+    </head>
+    <body>
+        <h1>Creating price actions within Variant by Site plans</h1>
+        <p> Use the <span class="Emphasis">Planning</span> tab to determine which variants / variant sites are prime candidates for markdowns and to create the necessary price actions. The <span class="Emphasis">Planning</span> tab provides visibility to what the price is at a future date, stock on hand, sales, revenue, etc.</p>
+        <p>The <span class="Emphasis">Planning</span> tab is located between the Price Action <span class="Emphasis">Information</span> and <span class="Emphasis">Actions</span> tabs and is only available for Variant Site Plans.</p>
+        <p class="BasicNote">The <span class="Emphasis">Planning</span> tab is only visible with User Right <span class="Emphasis">Add Price Action</span>.</p>
+        <p>
+            <img src="../../Resources/Images/Price Planning/Price Planning tab.PNG" class="LargeImages" />
+        </p>
+        <p>Set the dates to plan for and the strategy to implement, and review all the variants in the plan, or use an available <span class="Emphasis">Variant Site Filter</span> to intelligently identify variants in the plan based on filter metadata. The data can then be reviewed and markdowns applied by entering a percentage or directly entering a new price at the variant or the variant site level. The plan can then either be saved with further markdowns applied at a later date or submitted to commit the changes and generate the needed price actions.</p>
+        <p>Another feature for Price and Markdown is the <span class="Emphasis">New Site Pricing</span> tool incorporated into Site Manager.  This tool is used to select a new site and copy pricing from a similar site.  From Site Manager, select the site that is to be priced, the model site to copy pricing from, and the price type to be copied.  Pricing can be reviewed and submitted to generate price actions in a designated plan.</p>
+        <MadCap:snippetBlock src="../../Resources/Snippets/Filtering Variants if they have prices.flsnp" />
+        <h2>Adding custom views in tab form </h2>
+        <p>For Variant by Site plans, custom views can be added as tabs on the <span class="Emphasis">Planning</span> view. <MadCap:conditionalText MadCap:conditions="General.ScreenOnly">For more information, see <MadCap:xref href="../Views/Price Planner Template.htm">Adding custom views to the Price Manager Planning tab</MadCap:xref>.</MadCap:conditionalText><MadCap:conditionalText MadCap:conditions="General.PrintOnly"> For more information, refer to the Views User Guide.</MadCap:conditionalText></p>
+        <p>
+            <img src="../../Resources/Images/Price Planning/Custom view added to Planning tab.png" class="LargeImages">
+            </img>
+        </p>
+        <p class="BasicNote">System policy <span class="Emphasis">Price Planner View Collection Set</span> must be set to the View Collection Set ID. When the system policy  is set to a valid View Collection Set ID, then that associated View is visible as a tab on the <span class="Emphasis">Planning</span> view next to the <span class="Emphasis">Site Detail</span> tab. When the system policy isn’t set, the tab is not visible.</p>
+        <h2>Grids</h2>
+        <p>The top grid is an aggregated view of all the prices of the variant site, up to variant. This grid displays style/color attributes, markdown price, recommended price, store inventory and sales history specific to the selected stores in the Store Selection pane. Users can enter a markdown price, or override a recommended price, directly or calculated as a percent discount of IP or CSP.</p>
+        <p>Prices can be further refined in the <span class="Emphasis">Site Detail</span> grid which displays the sites associated with the variant. In this grid, enter a style/color-store specific markdown price. </p>
+        <p>Click the <span class="Emphasis">Submit</span> button to create new price actions  for the modified entries to reflect the new prices. </p>
+        <h2>Notes</h2>
+        <ul>
+            <li>Resubmitted new sites have <span class="Emphasis">Resubmitted + Date &amp; Time</span> appended to the Price Action Name.</li>
+            <li>New sites must have existing variant site records.</li>
+            <li>If a Plan Cluster already exists based on the new site’s CountryID and CurrencyID, the new site is added to that Cluster. If a Cluster for the new site does not exist, a new cluster is added and the new site is assigned.</li>
+            <li>The new site will get Model Site prices for variant site records that already exist for the new site. This process does not add variant site records that exist for the Model Site but do not exist for the new site.</li>
+        </ul>
+        <h3>Grid functionality</h3>
+        <p><b>Choose</b>: Launches the <span class="Emphasis">Choose Fields</span> dialog in which additional columns can be selected to provide more information.</p>
+        <MadCap:snippetBlock src="../../Resources/Snippets/Calculated button functionality.flsnp" />
+        <h2>Toolbar functionality</h2>
+        <table style="width: 100%;margin-left: auto;margin-right: auto;mc-table-style: url('../../Resources/TableStyles/standard.css');" class="TableStyle-standard" cellspacing="0">
+            <col class="TableStyle-standard-Column-Column1" />
+            <col class="TableStyle-standard-Column-Column2" />
+            <thead>
+                <tr class="TableStyle-standard-Head-Header1">
+                    <th class="TableStyle-standard-HeadE-Column1-Header1">Functionality</th>
+                    <th class="TableStyle-standard-HeadD-Column2-Header1">Description</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">Execute</td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">Saves the selected parameters. The <span class="Emphasis">Execute</span> button is enabled once all mandatory parameters are selected. The selected parameters are saved as a set and can be selected later from the <span class="Emphasis">Select Configuration</span> dropdown menu.</td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">Submit</td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">Saves changes and creates a new price action based on the configuration and selected variants (variants with assigned price changes). The <span class="Emphasis">Submit</span> button is only active when unsubmitted price changes exist.</td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">Save</td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">Saves all changes since the last save.</td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">Apply Recs</td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">
+                        If there are any recommended prices with a start date between the price planning configuration’s Period Start and End date, then clicking <span class="Emphasis">Apply Recs</span> copies those price recommendations for the items currently displayed to the User Input Price and/or Percent Off fields, and the New Price for those items is calculated based off that recommended price. 
+                        <p>Recommended Price and Percent off values are also visible as columns in Price Planner displaying what those prices are prior to applying the recommendation.
+</p></td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">Refresh Pricing</td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">
+                        <p>Recalculate new prices based on the keyed in value. Refreshing the pricing does not overwrite any user keyed values.</p>
+                        <p>This is a quick and convenient way to check for and refresh price and cost data based on the date and recalculate all items for a price action or price action cluster regardless of the calculation status.</p>
+                        <p>Users can display a particular price action and refresh the whole price action or select and refresh a specific cluster. The entire price action is recalculated whether or not it's been modified.</p>
+                        <p>Refreshing can be repeated as necessary. For example, should all the prices or costs change later on, the <span class="Emphasis">Refresh Pricing</span> functionality can be rerun. All the prices or costs for all of the items and all the clusters update and the calculations redone.</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">Clear</td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">Deletes any previously saved data in progress (data that has not been used to create a Price Action) and clears the UI of all input values.</td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyB-Column1-Body1">Select Configuration</td>
+                    <td class="TableStyle-standard-BodyA-Column2-Body1"> Once the parameters are selected and at least one change made, the set is saved (except for the Variant Site Filter selection) and can be selected at a later date to further modify the Plan prior to the Plan being submitted.</td>
+                </tr>
+            </tbody>
+        </table>
+        <h2>Parameters</h2>
+        <table style="width: 100%;margin-left: auto;margin-right: auto;mc-table-style: url('../../Resources/TableStyles/standard.css');" class="TableStyle-standard" cellspacing="0">
+            <col class="TableStyle-standard-Column-Column1" />
+            <col class="TableStyle-standard-Column-Column2" />
+            <thead>
+                <tr class="TableStyle-standard-Head-Header1">
+                    <th class="TableStyle-standard-HeadE-Column1-Header1">Parameter</th>
+                    <th class="TableStyle-standard-HeadD-Column2-Header1">Description</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">Period</td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">The current price period. Based on a system policy.</td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">Strategy</td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">The Price Strategy to be used to create Planned Price Actions.</td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">Base Price Type</td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">
+                     
+                        The Price Type that discount inputs will be used to calculate against to get the new Price. <span class="Emphasis">Current</span> is the most current price of any Price Type. 
+                        <h3>Selecting the most recent Variant Price for the specified StartDate regardless of Price Type</h3><p>Select <span class="Emphasis">Current</span> to choose the most recent Variant Price for the specified StartDate regardless of Price Type. This option only displays if -1 is specified in the following system policies:</p><ul><li><span class="Emphasis">Allowed New Site Pricing Price Types</span></li><li><span class="Emphasis">Allowed Price Planner Price Types</span></li></ul></td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">Variant Site Filter</td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">A dropdown menu to filter which Plan variants display in the price planner grid.</td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">Null</td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">Selecting the <span class="Emphasis">Null</span> checkbox located beside the <span class="Emphasis">Variant Site Filter</span> parameter causes the <span class="Emphasis">Variant Site Filter</span> to be ignored. All Variants in the plan are returned. </td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">Price Action Name</td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">A descriptive label.</td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">Start Date</td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">A future date that the price action will set new product pricing.</td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">Use EoS</td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">
+                        Sets Price Actions to use the “End of Season” time frame where applicable. 
+                        <p class="BasicNote">A metadata labeled <span class="Emphasis">Season Time Frame</span> can be set in the Site Manager module to define an End of Season date that takes precedence over the Start Date. This requires a time frame be defined in the <span class="Emphasis">Timeframes</span> module and values be set via Site metadata labeled <span class="Emphasis">Season Time Frame</span> in Site Manager.</p><p>The <span class="Emphasis">Season Time Frame</span> column displays the defined time frame. Use the Choose Fields functionality to select <span class="Emphasis">Season Time Frame</span> from the <span class="Emphasis">Time Frames</span> group.</p><p>A column in the upper grid labeled <b>EoS Date</b> shows the actual resolved End Of Season date, this is the date that will be used when creating a price action through the <span class="Emphasis">Planning</span> tab if <span class="Emphasis">Use EoS</span> is checked.</p></td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">Currency</td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">
+                        The user selected currency. 
+                        <p class="BasicNote">For Plans that have sites with multiple currencies, values for sites that do not match the selected UI currency are converted to the corresponding currency.</p></td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">Addt’l Price, Find Missing</td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">
+                        Search for up to 2 additional Price Types via dropdown menus, each paired with a checkbox to indicate that only records without a value for the selected price type should be displayed. Users can toggle between viewing only those records with missing prices and all records returned by the search parameters. 
+                        <p>Within the search results:</p><ul><li>When the <span class="Emphasis">1st Addt’l Price</span> checkbox  is checked, then only records without a value for the Price Type selected in <span class="Emphasis">1st Addt’l Price</span> display.</li><li>When the <span class="Emphasis">2nd Addt’l Price</span> checkbox is checked, then only records  without a value for the Price Type selected in <span class="Emphasis">2nd Addt’l Price</span> display.</li><li>When both checkboxes are checked, then only records with missing values for both selected Price Types display.</li></ul></td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">Show All Sites</td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">
+                     When selected, the Sites grid displays all Sites within the Plan and related metadata.  This allows users to view all Sites and metadata related to a Variant regardless of the filter selected.
+All Sites are returned regardless if <span class="Emphasis">Find Missing</span> is checked.               <p class="BasicNote">This does not affect the aggregation in the upper grid as the aggregation is based on the selected Variant-Site filter.</p></td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyB-Column1-Body1">Show Plan</td>
+                    <td class="TableStyle-standard-BodyA-Column2-Body1">If checked, returns only Variants that have price changes and all sites in the <span class="Emphasis">Site Detail</span> grid regardless of how <span class="Emphasis">Show All Sites</span> is configured.</td>
+                </tr>
+            </tbody>
+        </table>
+    </body>
+</html>

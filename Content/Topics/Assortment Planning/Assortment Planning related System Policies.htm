@@ -1,0 +1,392 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head>
+        <link href="../../Resources/TableStyles/standard.css" rel="stylesheet" MadCap:stylesheetType="table" />
+    </head>
+    <body>
+        <h1>Assortment planning related system policies</h1>
+        <p>The following table describes the available Assortment Planning related system policies.</p>
+        <h2>Target Creation</h2>
+        <p>For system policies specifically related to the Target Creation functionality, see <MadCap:xref href="Target Creation Related System Policies.htm">Target creation related system policies</MadCap:xref>.</p>
+        <h2>Module: Assortment</h2>
+        <table style="width: 100%;margin-left: auto;margin-right: auto;mc-table-style: url('../../Resources/TableStyles/standard.css');" class="TableStyle-standard" cellspacing="0">
+            <col class="TableStyle-standard-Column-Column1" style="width: 231px;" />
+            <col class="TableStyle-standard-Column-Column2" />
+            <thead>
+                <tr class="TableStyle-standard-Head-Header1">
+                    <th class="TableStyle-standard-HeadE-Column1-Header1">System Policy</th>
+                    <th class="TableStyle-standard-HeadD-Column2-Header1">Description</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">Algorithm To Match Lifecycle Curve to Sales Plan</td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">
+                         This policy determines what mechanism is used to match a lifecyle curve to a sales plan. 
+                        <p>The two options are: </p><p><span class="Emphasis">Period Match</span> - this will search for the phase in week within the lifecycle curve (on any year, LY, LLY, a future year, etc, depending on the configurations of the time periods of the curve and sales plan).  Then it will match up subsequent periods one by one, looping the curve around as many times as necessary as to cover the whole sales plan.  </p><p><span class="Emphasis">Scale To Fit</span> will align the first period of the curve with the first period of the plan.  If the sizes of the curve and plan are different, the curve will either be compressed or elongated to match the size of the sales plan.</p></td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">Algorithm To Match Markdown Curve to Sales Plan</td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">This policy determines what mechanism is used to match a markdown curve to a sales plan.  The two options are: Period Match - this will search for the markdown week within the markdown curve (on any year, LY, LLY, a future year, etc, depending on the configurations of the time periods of the curve and sales plan).  Then it will match up subsequent periods one by one, looping the curve around as many times as necessary as to cover the whole markdown plan.  A value of Scale To Fit will align the first period of the curve with the first period of the markdown plan.  If the sizes of the curve and plan are different, the curve will either be compressed or elongated to match the size of the sales plan.</td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">Algorithm To Match Seasonality Curve to Sales Plan</td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">
+                         This policy determines what mechanism is used to match a seasonality curve to a sales plan.  
+                        <p>The two options are: </p><p><span class="Emphasis">Period Match</span> - this will search for the phase in week within the seasonality curve (on any year, LY, LLY, a future year, etc, depending on the configurations of the time periods of the curve and sales plan). Then it will match up subsequent periods one by one, looping the curve around as many times as necessary as to cover the whole sales plan. </p><p><span class="Emphasis">Scale To Fit</span> will align the first period of the curve with the first period of the plan. If the sizes of the curve and plan are different, the curve will either be compressed or elongated to match the size of the sales plan.</p></td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">Algorithm To Match Static Curve to Placeholder</td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">This policy determines what mechanism is used to copy a placeholder from like style where the style has a static curve assigned.  The two options are: False - this will keep the same existing static curve that is already copied and assigned to the like style, True - Re-copy the original dynamic curve as a new static curve.</td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">Allow custom grouping of Placeholder Commitment Lines</td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">If True this allows the user to specify a grouping before Commitments are generated. </td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">Allow DCs as Home Site</td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">Determines whether sites of type DC are allowed to be selected as the Home Site (used in determining Home VAT %) in Assortment Planning. Recommended setting: FALSE.</td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">Allow Strict Site Exclusion</td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">Site Exclusion is controlled at either Placeholder [True] or PlaceholderInstance [False]. Recommended setting: FALSE.</td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">Allow supplemental commitments</td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">
+						Allow for supplemental commitment orders for a period which already contains a confirmed commitment order. 
+					<ul><li><span class="Emphasis">0</span> = Do Not Allow (recommended setting)</li><li><span class="Emphasis"> 1</span> = Allow Supplemental Commits and Enforce Constraints on Supplemental Commit. </li><li><span class="Emphasis">2</span> = Allow Supplemental Commits and Do Not Enforce Constraints on Supplemental Commits </li></ul></td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">Assortment days history to actualize</td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">The number of days back to go when actualizing sales, receipts and stock on hand for assortment planning. Recommended setting: 60.</td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">Assortment days history to maintain</td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">The number of days back maintain in a live assortment plan.  Detail data older than this date will be summarized and then deleted.  Entering the value "0" will keep all history. Recommended setting: 730.</td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">Assortment Engine DC-to-Cluster Lead Time</td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">Default Lead Time Days from the DC to the Cluster that will be used to calculate Next Order Date information.  This will be rounded to the nearest period.</td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">Assortment Engine Supplier-to-DC Lead Time</td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">Default Lead Time Days from the Supplier to the DC that is used to determine eligible receipt dates.  This will be rounded to the nearest period.
+Default value is 7.</td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">Assortment sales types to actualize</td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">The sales types, as defined in tbl_SalesType, to use when computed actualized sales numbers. Recommended setting: 1, 2, 3.</td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">Attribute Display</td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">Determines which fields to show in the attributes columns. 0 - Description, 1 - Code, 2 - Code and Description</td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">Attribute to reference when applying item cube</td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">
+                        The name of the attribute to reference when applying flow period frequency logic based on item cube. 
+                        </td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">AttributeID to determine which default values to apply</td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">The AttributeID to reference when determining which default values in assortment.Attribute_Default to apply.  Value of 0 indicates functionality is not used.</td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">Automatically Mark Periods As Selling</td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">
+                         Default is False. If True, then when site counts change from zero to non-zero (e.g. when a cluster snapshot changes to re-populate a cluster), the period will automatically be marked as a selling period.  If False, then the period will remain non-selling (but eligible for manual changes). 
+                        </td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">Batch size used in Assortment Actualization.</td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">The number of PlaceholderIDs processed in a single batch during Actualization. Recommended setting: 50.</td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">Batch size used in Assortment Price / Cost Imports</td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">
+                       The number of PlaceholderInstanceIDs processed in a single batch during imports. The default is 500.
+                        <p class="BasicNote">The process batches through placeholder / cluster set / clusters (instances). Upon install, it is recommended that a technical resource watches the import batches, and increases or decreases the batch size and monitors how that affects batch completion time. Changes to the system policy will be incorporated in the next batch; no stopping and starting is required.</p></td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">Cost Type for Supplier Variant Cost.	
+					</td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">	Cost Type associated with the Supplier Variant Cost within the Receipt Plan View. </td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">Days To Keep Deleted Data</td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">The maximum number of days that deleted data will be held (hidden) in the database.  Set a lower number for more aggressive deleting and more space conservation. Recommended setting: 0 (zero).</td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">DC Stock Splits future number of periods</td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">Number of periods forward from the current period to determine % DC stock splits by cluster set / cluster.  Default is 8.</td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">Default Commitment Merge</td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">
+                         Default Merge OrderLines when commitments are created: 
+                        <ul><li><span class="Emphasis">0</span> = None</li><li><span class="Emphasis">1</span> = Merge by Variant (recommended setting)</li></ul></td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">Description for Generated Placeholder Collections from Seed</td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">This is the description used for newly generated placeholder collections from the seed process, followed by the Style description.</td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">Description for Generated Placeholders from Seed</td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">This is the description used for newly generated placeholders from the seed process, followed by the Variant description.</td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">Display products on Cluster Set parameter</td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">If enabled, display the field Products in the Cluster Sets dropdown.  This will show the default product hierarchy levels associated with each cluster set.  If there are too many levels to display, the column will show a count of product levels instead.</td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">Editable Elements on Line Visualization when Replen</td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">Editable Fields / Objects when Placeholder Status has been set to Replen. </td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">Enable Supersessions</td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">
+                         Determines whether item supersession information should be used to drive stock on hand and sales units inheritance between variants. If this is enabled, a new item's initial BOP value will be the supersession item's EOP, and actualized sales will show for the new item. 
+                    </td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">Enable VAT Conversion In AUT Calculation </td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">
+                         Determines whether to use VAT rate conversion steps when deriving currency-specific AUT values (<span class="Emphasis">Blended AUT</span>) from the given <span class="Emphasis">Home AUT</span> value. The default is <span class="Emphasis">True</span>.<p>This system policy is referenced in the following processes:</p><ul><li>when a placeholder has the AUT/AUR values recalculated from any numerical metric change (e.g. change a phase date, change total sales, change <span class="Emphasis">Home AUT</span>) </li><li>when a placeholder is created from a like style </li><li>when a placeholder is created from Smart Start </li><li>when the Home Site property is changed on an assortment plan </li><li>when daily maintenance runs, it only considers changed VAT rates if the feature is enabled </li><li>if a VAT rate is changed live in the UI, it only applies changes if VAT is enabled </li></ul></td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">Enforce Supplier matching before Variant Assignment</td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">
+                       If True a Placeholder must have the same Supplier as a Variant before being assigned</td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">Generate Receipts On New Item Creation</td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">Controls whether to generate receipt plans automatically on item creation.  A value of 0 will not generate receipts automatically, but create new items in Dirty status.  A value of 1 will queue receipts to be generated for items created through Smart Start.  A value of 2 will queue receipts to be generated for items created through the Main Planning View (i.e. through New and Hindsight).  A value of 3 will queue receipts to be generated for new items created through all means.</td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">Hidden Items on the View Selection dropdown</td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">Views that will be hidden on the View Selection dropdown separated by a ~. Options are StyleBank, SeasonalityCurve, RateOfSaleCalculator, Variants, Promotions, SalesPlan, ReceiptPlan, ImageView, ClusterSet, Attributes, AUT, PriceExceptions</td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">Image View Maximum number SQL Data Rows</td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">The maximum number of SQL data rows that can be queried in a view that returns images. Recommended setting: 20000.</td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">Line Visualization Allow Price Exceptions</td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">Allow View / Edit of Price Exceptions in Line Visualization. Recommended setting: TRUE.</td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">Line Visualization Maximum number SQL Data Rows</td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">The maximum number of SQL data rows that can be queried in a Line Visualization view. Recommended setting: 5000.<p class="BasicNote">An error displays if the data selection parameters exceed this maximum.</p></td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">Lower Limit for Unit-Based Metrics
+</td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">
+                        Default value is 0.0001. The lower limit for unit-based metrics.  This is to prevent infinitesimally small numbers from entering sales plans.  The value will be used as an absolute value.  A value of 0 disables this feature.  For information on setting an upper limit, see <span class="Emphasis">
+Upper Limit for Unit-Based Metrics</span>. 
+                        <p class="BasicNote">Currently, this system policy will only be applied to Sales Units.  When a value between -0.0001 and 0.0001 is detected in future periods, it will be set to 0.</p></td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">Markdown Curve Default Behavior</td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">This policy controls what will happen to the markdown sales plan if no markdown curve is selected.  The default selection of "True" will indicate that a line trending to zero will be used to decrease the sales plan to zero at phase out.  A selection of "False" will not slope the sales plan to zero, but leave the markdown sales plan unchanged.</td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">Multi Value Attribute Inheritance</td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">Defines the inheritance of multi-value attribute families attached to variants by the placeholders to which those variants are assigned  within Assortment Planning. Value of 1 indicates placeholder values will be entirely overwritten by the variant attributes on assignment of the variant. Value of 0 indicates unique values attached to the variant will be added to the existing placeholder values on assignment of the variant. Recommended setting: TRUE.</td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">New Placeholders Added to Promotions Default</td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">Determines the default selection for whether the option for adding new placeholders to promotions on creation is set to true or false.</td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">New Placeholders Added to Promotions Filter Limit</td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">The number of product filters that will be refreshed when new placeholders are added and their promos are to be refreshed.  Increasing this value will have performance implications when creating new placeholders.</td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">Prepack Max Overage Percent Resolution</td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">Aggregation Function to resolve default collisions. Recommended setting: MIN.</td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">Prepack Max Overage Resolution</td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">Aggregation Function to resolve default collisions. Recommended setting: MIN.</td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">Prepack Max Pack Configs Resolution</td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">Aggregation Function to resolve default collisions. Recommended setting: MAX.</td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">Prepack Max Pack Per Location Resolution</td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">Aggregation Function to resolve default collisions. Recommended setting: MIN.</td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">Prepack Max Pack Percent Total Resolution</td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">Aggregation Function to resolve default collisions. </td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">Prepack Max Units Per Pack Resolution</td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">Aggregation Function to resolve default collisions. Recommended setting: MAX.</td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">Prepack Min Pack Configs Resolution</td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">Aggregation Function to resolve default collisions. Recommended setting: MIN.</td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">Prepack Min Units Per Pack Resolution</td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">Aggregation Function to resolve default collisions. Recommended setting: MIN.</td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">Prepack Overage Weight Resolution</td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">Aggregation Function to resolve default collisions. Recommended setting: MIN.</td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">Prepack Pack Tolerance Resolution</td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">Aggregation Function to resolve default collisions. Recommended setting: MIN.</td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">Prepack Pack Weighting Resolution</td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">Aggregation Function to resolve default collisions. Recommended setting: MAX.</td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">Prepack Underage Weight Resolution</td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">Aggregation Function to resolve default collisions. Recommended setting: MAX</td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">Price Conversion Method</td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">Determines which Price Conversion Method to use when deriving currency-specific AUT values (<span class="Emphasis">Blended AUT</span>) from the given <span class="Emphasis">Home AUT</span> value. 1 - Will use the original Price Exception method only, 2 - Will use the Price Matrix method only, 3 - Will use neither method. Default value: 1.</td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">Product Level Display</td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">Determines which fields to show in the Product Columns. 0 - Description, 1 - Code, 2 - Code and Description</td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">Promotion Planning Time Periods</td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">Promotions - Approximation.  Integer representing the number of time periods before and after a promotion's application period that will be shown in Promotion Planning. Recommended setting: 2.</td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">Promotions Applied to Markdown Default</td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">Determines default property of whether promotions can be applied to a markdown period for an item.  This can be overwritten at a promotion and promotion application level.  If True, the default is that promotions can be applied to markdown periods. Recommended setting: TRUE.</td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">Receipt Cluster Merge All</td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">When commitments are generated, whether to group receipts for variants together across clusters by default, or whether to keep them separate by default. Recommended setting: TRUE.</td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">Remove User Override Receipt Units on Commit</td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">If True remove User Override Receipt Units from Sales Plan / Receipt Plan views after creating Commitments </td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">Require Display Primary Image</td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">Require usage of Primary Image Classification in Assortment Planning. Recommended setting: TRUE.</td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">Require Placeholder Review before Commitment Generation</td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">If True this requires Placeholders to be Reviewed before a Commitment is allowed to be generated.</td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">Retrend: Evaluation Window Size
+					</td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">The evaluation window size used during the retrend calculation.</td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">Retrend: Max Multiplicative Factor
+					</td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">The maximum multiplicative factor that the system is allowed to use during the retrend calculation.</td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">Retrend: Min Multiplicative Factor
+					</td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">The minimum multiplicative factor that the system is allowed to use during the retrend calculation.</td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">Retrend: Selling Days
+					</td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">The number days (which will be converted into periods) in which there must be positive sales before the item is included in retrending.</td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">Return all Cluster Set Snapshot Dates</td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">If set to True the system will return all Cluster Set Snapshot dates, ignoring the selected Window of Time</td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">Show Effective Forecast Units in Receipt Plan View</td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">Show Effective Forecast Units in Receipt Plan View</td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">SOH Actualization Number Of Periods Per Loop</td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">This policy should be set by a technical resource doing performance tuning of the actualization process.  This will determine how many periods' worth of stock on hand (SOH) data is actualized at once.  Depending on data size, hardware considerations, SQL version, etc, one period may need to be processed at a time (so the value set should be 1), or many periods could be processed in batch.</td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">Style Bank Line Visualization Maximum number SQL Data Rows</td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">The maximum number of SQL data rows that can be queried in the Style Bank in the Line Visualization view. Recommended setting: 5000.</td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">Toggle on/off snapshot aware seasonal index calculation</td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">Allows the assortment sales plan calculation to update based on future cluster site snapshots through manipulation of the curve indices.  If Enabled, site counts by period will be used to scale seasonality indexes.  If Disabled, seasonality indexes will be used as generated by the Curves module.</td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">Update Variant Attributes in Assortment Planning</td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">
+                         Defines the ability to make attribute changes on assigned placeholders.  
+                        <ul><li><span class="Emphasis">1</span> = Indicates that placeholder attribute changes are allowed on assigned placeholders.</li><li><span class="Emphasis">0</span> = Indicates attribute changes cannot be made to assigned placeholders. </li></ul><p>Recommended setting: TRUE.</p></td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">Upper Limit for Value-Based Metrics</td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">
+                        Default value is 100,000,000. The upper limit for value-based metrics. This is to prevent infinitely large numbers from entering sales plans. The value will be used as an absolute value. A value of 0 disables this feature. For information on setting a lower limit, see <span class="Emphasis"> Lower Limit for Unit-Based Metrics</span>. 
+                        <p>Currently, this system policy will only be applied to <span class="Emphasis">Home AUT</span>, <span class="Emphasis">Blended AUT</span>, and AUR. When a value greater than 100,000,000 or more negative than -100,000,000 is detected in future periods, it will be set to NULL.                       </p></td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">Use Size Curve By Site</td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">If enabled, then the size curve used for the placeholder will be by-site, meaning, the site-specific breakdowns of size distributions will be used.  If false, then the aggregate size curve across all sites will be used.</td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">Variant Level Duty Percentage</td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">
+                        If True the Duty Percentage will be pulled from the Variant Level, if False from the Supplier record </td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">Variant Primary Image Classification Update</td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">Allow Update of Primary Image Classification if Variant Present - Assortment Planning / Variant Manager. Recommended setting: TRUE.</td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyB-Column1-Body1">VAT Rounding Digits</td>
+                    <td class="TableStyle-standard-BodyA-Column2-Body1">The number of digits to round to when calculating historical VAT.  A number 4 here means that the VAT value will be rounded to 0.xxxx, or xx.xx%. Recommended setting: 4.</td>
+                </tr>
+            </tbody>
+        </table>
+        <h2>Engine: Commitments</h2>
+        <table style="width: 100%;margin-left: auto;margin-right: auto;mc-table-style: url('../../Resources/TableStyles/standard.css');" class="TableStyle-standard" cellspacing="0">
+            <col class="TableStyle-standard-Column-Column1" style="width: 231px;" />
+            <col class="TableStyle-standard-Column-Column2" />
+            <thead>
+                <tr class="TableStyle-standard-Head-Header1">
+                    <th class="TableStyle-standard-HeadE-Column1-Header1">System Policy</th>
+                    <th class="TableStyle-standard-HeadD-Column2-Header1">Description</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyB-Column1-Body1">Flow Sequence From First Flow Date</td>
+                    <td class="TableStyle-standard-BodyA-Column2-Body1">When this is enabled, flow dates are generated using the Flow Period Frequency starting from the first pre-phase-in flow.  If disabled, then flow dates are started from phase-in, effectively treating all pre-phase-in flows as having arrived at phase in.</td>
+                </tr>
+            </tbody>
+        </table>
+        <h2>General: Planning</h2>
+        <table style="width: 100%;margin-left: auto;margin-right: auto;mc-table-style: url('../../Resources/TableStyles/standard.css');" class="TableStyle-standard" cellspacing="0">
+            <col class="TableStyle-standard-Column-Column1" style="width: 231px;" />
+            <col class="TableStyle-standard-Column-Column2" />
+            <thead>
+                <tr class="TableStyle-standard-Head-Header1">
+                    <th class="TableStyle-standard-HeadE-Column1-Header1">System Policy</th>
+                    <th class="TableStyle-standard-HeadD-Column2-Header1">Description</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyB-Column1-Body1">Default Supply Chain</td>
+                    <td class="TableStyle-standard-BodyA-Column2-Body1">Default supply chain to use across the planning suite of modules</td>
+                </tr>
+            </tbody>
+        </table>
+    </body>
+</html>

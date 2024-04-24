@@ -1,0 +1,43 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<CatapultTarget
+  Version="2"
+  Comment="For Printed Manuals"
+  Type="PDF"
+  Destinations=""
+  MasterToc="/Project/TOCs/Glossary.fltoc"
+  PatchHeadingLevels="true"
+  InjectBookHeadings="true"
+  RemoveImagesFromHeadings="true"
+  EmbedImages="true"
+  ConditionTagExpression="include[General.PrintOnly]exclude[&quot;General.ScreenOnly&quot; or General.DoNotPublish]"
+  DisableAutoSync="true">
+  <PrintedOutput
+    CollapseMargins="true"
+    GenerateTOCProxy="false"
+    GenerateIndexProxy="false"
+    GenerateGlossaryProxy="false"
+    ExpandingTextConversion="expand"
+    PopupConversion="expand"
+    GeneratePDF="false"
+    DisableMasterPageUsage="true"
+    OutputFormat="doc" />
+  <Variables>   <Variable
+      Name="Variables/BookTitle">ToolsGroup JustEnough</Variable><Variable
+      Name="Book Title &amp; Sub Title/BookTitle">ToolsGroup JustEnough</Variable><Variable
+      Name="Book Title &amp; Sub Title/BookSubTitle">Glossary</Variable><Variable
+      Name="Variables/BookVersion">2022.4</Variable><Variable
+      Name="Variables/BookSubTitle">Glossary</Variable></Variables>
+  <Destinations>
+    <Destination
+      Link="/Project/Destinations/PDF Output.fldes"
+      Publish="true" />
+  </Destinations>
+  <PDF
+    Tagged="true"
+    PageMode="UseNone"
+    PageLayout="OneColumn"
+    CollapsedBookmarks="true"
+    ConvertBookmarks="true" />
+  <DocumentProperties
+    Author="" />
+</CatapultTarget>

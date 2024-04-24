@@ -1,0 +1,48 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" xml:lang="en-us">
+    <head><title></title>
+    </head>
+    <body>
+        <h1>Policies Overview</h1>
+        <p>The Policies module is the control panel for ToolsGroup JustEnough. The user interface is meant to interact with the system policy table  and should not be manipulated by anyone other than a ToolsGroup JustEnough technical consultant or an extremely well trained administrative level user. <br /></p>
+        <p>System policies are grouped together for ease of navigation. They may apply to one of the .NET engines, or to the behavior of a specific module, or to the application as a whole. </p>
+        <h2>System policy settings</h2>
+        <p>System policy settings are segregated by module, engine, or overall system. They should only be manipulated with a full understanding of the potential consequences. System policies are organized by system policy type. These are typically grouped together by module, or within context of system specific functions or tasks. </p>
+        <ul>
+            <li><span class="Emphasis">Engine</span> – Relates to an engine specific set of policies and parameters. </li>
+            <li><span class="Emphasis">General</span> – Relates to common application settings. </li>
+            <li><span class="Emphasis">Import Defaults</span> – Relates to assigned defaults for imported data. </li>
+            <li><span class="Emphasis">Module</span> – Policy settings specific to the context of the listed module. </li>
+            <li><span class="Emphasis">Process</span> – Policy settings common across the application. </li>
+        </ul>
+        <h2>List of available system policies</h2>
+        <p>The list of available system policies displays in a navigation pane.</p>
+        <p>
+            <img src="../../Resources/Images/System Policy/System Policy Overview.png" class="LargeImages" />
+        </p>
+        <p>Users can expand these folders to view the available system policies.</p>
+        <p>
+            <img src="../../Resources/Images/System Policy/Expanded System Policy Folders.png" class="LargeImages" />
+        </p>
+        <p>Highlighting these populates the system policy settings screen.</p>
+        <p>
+            <img src="../../Resources/Images/System Policy/System Policy details.png" class="LargeImages" />
+        </p>
+        <h3>Required Configuration</h3>
+        <p>For certain modules, system policy settings will need to be configured as part of the setup and initialization process. Details related to the specifics of these policies should be referenced within the functional help documentation of the associated modules. </p>
+        <h2>System policy settings</h2>
+        <p>All policies which appear in the user interface have a SystemPolicyIsVisibleFlag = <span class="Emphasis">1</span></p>
+        <p>Policy types control the display groupings of system polices. These may be referenced in <span class="Emphasis">tbl_SystemPolicyType</span>. </p>
+        <h2>Policy Data Type</h2>
+        <p>A single character is used to designate the data type which may be entered within a system policy setting field. </p>
+        <ul>
+            <li>B – Boolean. A bit/flag indicating an on/off setting. May be a <span class="Emphasis">1</span> or a <span class="Emphasis">0</span>. </li>
+            <li>C – Char. A single letter character.</li>
+            <li>D – Date. A datetime value. </li>
+            <li>E – Enumerator. A value selected from the available values listing. </li>
+            <li>I – Integer. An integer value. </li>
+            <li>N – Number. A numeric value.</li>
+            <li>S – String. A Unicode text value. May be a list.</li>
+        </ul>
+    </body>
+</html>

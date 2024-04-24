@@ -1,0 +1,119 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" xml:lang="en-us">
+    <head>
+        <link href="../../Resources/TableStyles/standard.css" rel="stylesheet" MadCap:stylesheetType="table" /><title></title>
+    </head>
+    <body>
+        <h1>Creating and editing pricing plans</h1>
+        <p>Pricing Plans are created and managed  in the <span class="Emphasis">Home</span> tab of the Price Manager module. Additional products and sites can be configured at a later time. </p>
+        <h2>Creating pricing plans</h2>
+        <p>In the <span class="Emphasis">Home</span> screen toolbar, click <span class="Emphasis">New</span> to create a new pricing plan, enter the required fields and click <span class="Emphasis">Ok</span>. </p>
+        <p>
+            <img src="../../Resources/Images/Price Planning/Create Pricing Plans.png" class="LargeImages" />
+        </p>
+        <h3>Product pricing level</h3>
+        <p>The level at which price actions are created for new pricing plans is dictated by the system policy <span class="Emphasis">Product Pricing Level</span> and is indicated on the plan’s <span class="Emphasis">Information</span> tab as follows:</p>
+        <p>
+            <img src="../../Resources/Images/Price Planning/Price Action levels in Pricing Plans.png" class="LargeImages" />
+        </p>
+        <h2>Editing pricing plans</h2>
+        <p>In the <span class="Emphasis">Home</span> screen toolbar, select a plan and click <span class="Emphasis">Edit</span> in the toolbar.</p>
+        <h2>Price Details section: fields and descriptions</h2>
+        <table class="TableStyle-standard" cellspacing="0" style="mc-table-style: url('../../Resources/TableStyles/standard.css');">
+            <thead>
+                <tr class="TableStyle-standard-Head-Header1">
+                    <th class="TableStyle-standard-HeadE-Column1-Header1">
+                         Field 
+                    </th>
+                    <th class="TableStyle-standard-HeadD-Column2-Header1">
+                   Description 
+                    </th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">
+                        Plan Name
+                    </td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">
+                   The display name of the pricing plan
+                    </td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">
+                        Start Date 
+                    </td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">
+                      
+                         Select a future date that associated pricing actions default to. The start date is defaulted and selection of an earlier date is restricted, by a globally configured number of days forward from today. Special permissions such as <span class="Emphasis">Emergency Pricing Action</span> allow for overriding this restriction and selecting tomorrow at the earliest. 
+                        <p>When modifying the start date, the system restricts moving the date forward any further than by any price action start date.</p><p class="Example"> Original Plan Start Date = 01/01/2024<br />Earliest Price Action Start Date (already exported) = 02/01/2024<br />Result: System will not allow a new Plan Start Date greater than 02/01/2024</p></td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">
+                       Plan Description 
+                    </td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">
+                        An optional description of the pricing plan.
+                    </td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">
+                       Variant Filter 
+                    </td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">
+                         Select a filter from the dropdown or  click <span class="Emphasis">Maintain Filter</span> to configure a new filter to designate the products to be used within the pricing plan's actions. This is the initial set of products to be added to the price action. Additional products can be added or removed at a later time. 
+                    </td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">
+                     Site Cluster Set 
+                    </td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">
+                      Site cluster sets are available based on site clustering configuration.
+                    </td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1" MadCap:conditions="">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">Product Pricing Level</td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">
+                       A dropdown menu with the following options:
+                        <ul><li>Variant Site Plan</li><li>Item Site Plan</li></ul><p class="BasicNote">This field only displays when system policy <span class="Emphasis">Product Pricing Level</span> is set to <span class="Emphasis">Variant\Site and Item\Site Pricing</span>.</p></td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1" MadCap:conditions="">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">Allow Price Matrix</td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">Sets the plan to allow price point conversion through a price matrix. If unchecked, then price actions use the system policy.</td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1" MadCap:conditions="">
+                    <td class="TableStyle-standard-BodyB-Column1-Body1">Allow Auto Price</td>
+                    <td class="TableStyle-standard-BodyA-Column2-Body1">
+                        Sets the plan to allow auto pricing. When checked, users with the appropriate rights can view and edit the plan’s auto pricing parameters. 
+                        <p>The user rights (Right Group: Price Manager) are:</p><ul><li>Allow Access to Plan Auto Price Configuration</li><li>Allow Access to Plan Price Reversion</li></ul><p class="BasicNote">If <span class="Emphasis">Allow Auto Price</span> is unchecked, then the <span class="Emphasis">Auto Price Settings</span> section does not display.</p></td>
+                </tr>
+            </tbody>
+        </table>
+        <h2>Auto Price Settings section: fields and descriptions</h2>
+        <p>A Plan can be set at anytime to allow or not allow Auto Pricing. </p>
+        <p>User Right <span class="Emphasis">Allow Access to Plan Auto Price Configuration</span> is required to edit this section.</p>
+        <div class="Note_BasicNote">The available price types for Base Price and Target Price in the Auto Price parameter field is limited by the following system policies:
+			<ul><li>Allowed Auto Price Base Price Types</li><li>Allowed Auto Price Target Price Types</li></ul></div>
+        <table style="width: 100%;margin-left: 0;margin-right: auto;mc-table-style: url('../../Resources/TableStyles/standard.css');" class="TableStyle-standard" cellspacing="0">
+            <col class="TableStyle-standard-Column-Column1" style="width: 100px;" />
+            <col class="TableStyle-standard-Column-Column2" />
+            <thead>
+                <tr class="TableStyle-standard-Head-Header1">
+                    <th class="TableStyle-standard-HeadE-Column1-Header1">Field</th>
+                    <th class="TableStyle-standard-HeadD-Column2-Header1">Description</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">Strategy</td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">A dropdown list filtered to only include strategies configured with the System Input variable.</td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyB-Column1-Body1">Auto Price Filter</td>
+                    <td class="TableStyle-standard-BodyA-Column2-Body1">A dropdown filtered by Variant-Site.</td>
+                </tr>
+            </tbody>
+        </table>
+    </body>
+</html>

@@ -1,0 +1,88 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" xml:lang="en-us">
+    <head><title></title>
+    </head>
+    <body>
+        <h1>Custom notification implementation examples</h1>
+        <p>Examples are provided to provide a better understanding of how notifications parameters must be passed into notification initiation.</p>
+        <h2>Simple notification message</h2>
+        <p>In the following example, SQL is used to calculate a future date that will be passed into the token ‘DueDate’.</p>
+        <p>Review product category's *[Allocation]* for next season and submit for approval by [%DueDate%]</p>
+        <MadCap:codeSnippet>
+            <MadCap:codeSnippetCopyButton />
+            <MadCap:codeSnippetBody MadCap:useLineNumbers="False" MadCap:lineNumberStart="1" MadCap:continue="False" xml:space="preserve">DECLARE @nMessageToken nvarchar(max);
+SET @nMessageToken ='&lt;tokens&gt;
+&lt;token key="DueDate"&gt;'+CONVERT(varchar(10),GETDATE()+ 30, 120)+'&lt;/token&gt;
+&#160;&#160;&#160;&#160; &lt;/tokens&gt;';
+&#160;
+EXEC notification.Notification_Add 
+&#160; @iMessageUUID ='d67d48de-313f-44d2-9a28-7f0eebc7ab41'
+, @iSenderUserID = 1
+, @nRecipientUserIDList ='2,3,4,5'
+, @nMessageToken = @nMessageToken
+, @cTokenIdentifier =NULL
+, @bDebug = 0;</MadCap:codeSnippetBody>
+        </MadCap:codeSnippet>
+        <h2>Intermediate notification message</h2>
+        <p>In the following example, multiple tokens are passed in as static values.</p>
+        <MadCap:codeSnippet>
+            <MadCap:codeSnippetCopyButton />
+            <MadCap:codeSnippetBody MadCap:useLineNumbers="False" MadCap:lineNumberStart="1" MadCap:continue="False" xml:space="preserve">*[[%ORDER_HEADER_NAME%]]* [%GROUP_IDENTIFIER%] prepack calculation submitted. [%JOB_POSITION%] of [%TOTAL_JOBS%] in queue ([%QUEUE_PRIORITY%])
+DECLARE @nMessageToken nvarchar(max);
+SET @nMessageToken ='
+&lt;tokens&gt;
+&#160;&#160;&#160; &lt;token key="ORDER_HEADER_NAME"&gt;Assortment Plan : P0517-000028 (2022-12-11)&lt;/token&gt;
+&#160;&#160;&#160; &lt;token key="GROUP_IDENTIFIER"&gt;Auto generated for MFP Level:169&lt;/token&gt;
+&#160;&#160;&#160; &lt;token key="JOB_POSITION"&gt;1&lt;/token&gt;
+&#160;&#160;&#160; &lt;token key="TOTAL_JOBS"&gt;1&lt;/token&gt;
+&#160;&#160;&#160; &lt;token key="QUEUE_PRIORITY"&gt;Synchronous&lt;/token&gt;
+&lt;/tokens&gt;';
+&#160;
+EXECnotification.Notification_Add 
+&#160; @iMessageUUID ='bdff6c58-37cd-4272-99dc-3dcd37b66b68'
+, @iSenderUserID = 1
+, @nRecipientUserIDList ='2,3,4,5'
+, @nMessageToken = @nMessageToken
+, @cTokenIdentifier =NULL
+, @bDebug = 0;
+</MadCap:codeSnippetBody>
+        </MadCap:codeSnippet>
+        <h2>Complex notification message</h2>
+        <p>In the following example multiple tokens are passed in from a #MessageToken table that could be built up dynamically. </p>
+        <MadCap:codeSnippet>
+            <MadCap:codeSnippetCopyButton />
+            <MadCap:codeSnippetBody MadCap:useLineNumbers="False" MadCap:lineNumberStart="1" MadCap:continue="False" xml:space="preserve">*[[%ORDER_HEADER_NAME%]]* [%GROUP_IDENTIFIER%] prepack calculation submitted. [%JOB_POSITION%] of [%TOTAL_JOBS%] in queue ([%QUEUE_PRIORITY%])
+DECLARE @nMessageToken nvarchar(max);
+CREATETABLE #MessageToken( 
+&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160; [Key]&#160;&#160; nvarchar(1000)
+&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160; , [Value] nvarchar(1000));
+&#160;
+INSERTINTO #MessageToken 
+&#160;&#160;&#160;&#160;&#160;&#160; ( [Key]
+&#160;&#160;&#160;&#160;&#160;&#160; , [Value]
+&#160;&#160;&#160;&#160;&#160;&#160; ) 
+VALUES
+&#160;&#160;&#160;&#160;&#160;&#160; ('ORDER_HEADER_NAME','Assortment Plan : P0517-000028 (2022-12-11)'),
+&#160;&#160;&#160;&#160;&#160;&#160; ('GROUP_IDENTIFIER','Auto generated for MFP Level:169'),
+&#160;&#160;&#160;&#160;&#160;&#160; ('JOB_POSITION','1'),
+&#160;&#160;&#160;&#160;&#160;&#160; ('TOTAL_JOBS','1'),
+&#160;&#160;&#160;&#160;&#160;&#160; ('QUEUE_PRIORITY','Synchronous');
+&#160;
+&#160;
+SET @nMessageToken =CONVERT(nvarchar(max), 
+&#160;&#160;&#160; (SELECT [Key] AS'@key'
+&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160; , [Value] '*'
+&#160;&#160;&#160;&#160;&#160;&#160;&#160; FROM #MessageToken
+&#160;&#160;&#160;&#160;&#160;&#160;&#160; FORXMLPATH('token'),ROOT('tokens'),TYPE
+&#160;&#160;&#160; ));
+&#160;
+EXECnotification.Notification_Add 
+&#160; @iMessageUUID ='bdff6c58-37cd-4272-99dc-3dcd37b66b68'
+, @iSenderUserID = 1
+, @nRecipientUserIDList ='2,3,4,5'
+, @nMessageToken = @nMessageToken
+, @cTokenIdentifier =NULL
+, @bDebug = 0;</MadCap:codeSnippetBody>
+        </MadCap:codeSnippet>
+    </body>
+</html>

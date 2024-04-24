@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head>
+    </head>
+    <body>
+        <h1>Adding additional data to the Promotions module Planner tab</h1>
+        <p>The <span class="Emphasis">Promotion Planner Custom View Collection Set</span> view can be configured to display additional product information pertinent to promotion planning in the <span class="Emphasis">Planner</span> tab of the Promotions module. The additional data can assist in determining what items to promote.</p>
+        <p>The view label is at the direction of the user.</p>
+        <p class="BasicNote">The View Collection Set is linked to the Promotion Planner UI through system policy <span class="Emphasis">Promotion Planner View Collection Set</span>. If the system policy is not configured with the View Collection Set ID, then the View Collection Set is not used and the custom tab will not display.</p>
+        <h2>Garbage collection for obsolete Promotion Planner data</h2>
+        <p>Three system policies (<span class="Emphasis">Module: PromoPlanner</span>) can be used on a daily or weekly basis to remove obsolete Promotion Planner data. All three are optional. The system policies are:</p>
+        <ul>
+            <li><span class="Emphasis">Days elapsed following a Promotion assignment to the Plan, after when the Plan becomes Delete-eligible</span>
+            </li>
+            <li><span class="Emphasis">Days elapsed following the Plan's end-date, after when the Plan becomes Delete-eligible</span>
+            </li>
+            <li><span class="Emphasis">Days of no Plan modification activity, after when the Plan becomes Delete-eligible</span> </li>
+        </ul>
+    </body>
+</html>

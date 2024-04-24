@@ -1,0 +1,77 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" xml:lang="en-us">
+    <head>
+        <link href="../../Resources/TableStyles/standard.css" rel="stylesheet" MadCap:stylesheetType="table" /><title></title>
+    </head>
+    <body>
+        <h1>ROS scenario calculation and results</h1>
+        <p>After the inputs for a scenario are set, calculation gathers the data returned by those inputs and then applies a data cleansing process to remove data points that would skew the scenario results. The cleansing process used is identical to that employed during Rationalization. </p>
+        <p class="BasicNote">Raw ROS which has not undergone data cleansing also displays for comparison purposes. The raw ROS can also be applied if desired.</p>
+        <h2>Reviewing Raw ROS and Adjusted ROS sales distributions</h2>
+        <p>Once scenarios have been calculated, users can review the resulting ROS by defined performance bands (set during configuration) as both raw and adjusted (cleansed) values.&#160; The results are grouped into the following performance percentiles (configurable during implementation): </p>
+        <ul>
+            <li>Minimum</li>
+            <li>25th percentile</li>
+            <li>Median (50th percentile)</li>
+            <li>75th percentile</li>
+            <li>Maximum</li>
+            <li>
+                <p>Average (default selection)</p>
+                <p class="BasicNote">Average shows the true average ROS per variant/period for the selected data and not the average from the configured percentile bands.</p>
+            </li>
+        </ul>
+        <h2>Performance percentiles grid layout</h2>
+        <p>The sales history for the selected items is distributed across a performance percentile&#160;(Worst, 30%, 50%, 70%, and Best). (Range is configurable during design).</p>
+        <p>
+            <img src="../../Resources/Images/Assortment Planning/ROS Scenario Performance Percentile.png" class="LargeImages" />
+        </p>
+        <p>
+            <img src="../../Resources/Images/Assortment Planning/ROS Scenario Calculation Results Grid.png" class="LargeImages" />
+        </p>
+        <h2>Scenario results field definitions</h2>
+        <table style="width: 100%;margin-left: auto;margin-right: auto;mc-table-style: url('../../Resources/TableStyles/standard.css');" class="TableStyle-standard" cellspacing="0">
+            <col class="TableStyle-standard-Column-Column1" />
+            <col class="TableStyle-standard-Column-Column2" />
+            <thead>
+                <tr class="TableStyle-standard-Head-Header1">
+                    <th class="TableStyle-standard-HeadE-Column1-Header1">Field</th>
+                    <th class="TableStyle-standard-HeadD-Column2-Header1">Description</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1"><span class="Emphasis">Raw ROS</span>
+                    </td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">No data cleansing or filtering</td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1"><span class="Emphasis">Adjusted ROS</span>
+                    </td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">Sales history that has been cleansed</td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1"><span class="Emphasis">Record Count</span>
+                    </td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">The number of data points (style/color sales periods) used in the calculation of the displayed rates of sale. This serves as an indication of relative data strength.</td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyB-Column1-Body1"><span class="Emphasis">Effective ROS</span>
+                    </td>
+                    <td class="TableStyle-standard-BodyA-Column2-Body1">
+                        The ROS to be applied to the list of placeholders/variants in the third and bottom view of the ROS calculator screen.&#160; The Effective ROS is adjusted by checking the ROS from the Scenario results or by manually entering a value.
+                        <p class="BasicNote">ROS selection is cluster specific and the distribution selection can vary by cluster.</p></td>
+                </tr>
+            </tbody>
+        </table>
+        <h2>Additional information</h2>
+        <p>For more information, refer to:</p>
+        <ul>
+            <li>
+                <MadCap:xref href="Rationalization.htm">Rationalization </MadCap:xref>
+            </li>
+            <li>
+                <MadCap:xref href="Rate of Sale Calculator.htm">Rate of Sale Calculator View</MadCap:xref>
+            </li>
+        </ul>
+    </body>
+</html>

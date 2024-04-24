@@ -1,0 +1,148 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" xml:lang="en-us">
+    <head>
+        <link href="../../Resources/TableStyles/standard.css" rel="stylesheet" MadCap:stylesheetType="table" /><title></title>
+    </head>
+    <body>
+        <h1>Price translation management</h1>
+        <p>Different pricing strategies by currency and price range are set using the <span class="Emphasis">Price Translation Management</span> screen. The primary intent of this functionality is to allow users to account for differing costs of doing business in other countries without having to manage pricing for them all individually.</p>
+        <p>In Assortment Planning, the <span class="Emphasis">Multi-Currency Price View</span> side view can be used to make overrides by item/currency to the rules created here. <MadCap:conditionalText MadCap:conditions="General.ScreenOnly">For more information, see <MadCap:xref href="../Assortment Planning/Multi-Currency Price View.htm">Price Exceptions View</MadCap:xref>.</MadCap:conditionalText></p>
+        <p class="Important">Even if no price translations are needed, at a minimum create at least one rule with a Translation Factor of 1 for all From and To currencies to be used and with a Start Date of the earliest date to be used within any of the assortment plans and assign the rule to the Total Company level of the product hierarchies used in those plans.</p>
+        <p>This screen can be accessed by navigating to <span class="Emphasis">System Utilities &gt; Views &gt; Currency &gt; Price Translation Management</span>.</p>
+        <p>
+            <img src="../../Resources/Images/Currency and VAT Management/Price Translation Management.png" class="LargeImages" />
+        </p>
+        <h2>Fields</h2>
+        <table style="width: 100%;margin-left: auto;margin-right: auto;mc-table-style: url('../../Resources/TableStyles/standard.css');" class="TableStyle-standard" cellspacing="0">
+            <col class="TableStyle-standard-Column-Column1" />
+            <col class="TableStyle-standard-Column-Column2" />
+            <thead>
+                <tr class="TableStyle-standard-Head-Header1">
+                    <th class="TableStyle-standard-HeadE-Column1-Header1">Field</th>
+                    <th class="TableStyle-standard-HeadD-Column2-Header1">Description</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1"><span class="Emphasis">Currency From</span>
+                    </td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">
+                        The currency to view or create translation rules from in the view.                        <p>Generally, Rules only need to be created for the home currency the assortment plans are managed in.</p></td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1"><span class="Emphasis">Currency To</span>
+                    </td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">The currencies to view or create translations to in the view.</td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyB-Column1-Body1"><span class="Emphasis">Include Unidentified</span>
+                    </td>
+                    <td class="TableStyle-standard-BodyA-Column2-Body1">
+                        Whether rules that do not yet have From and To currencies defined appear in the Price Translation Rules section. Clicking this parameter automatically refreshes the view.
+                        <p class="BasicNote"> This should be left checked when creating new rules as From and To currencies can only be defined in the Details section after clicking <span class="Emphasis">Save</span> in the Rules section. Clicking <span class="Emphasis">Save</span> with this setting unchecked when creating new rules causes new rule lines to disappear from the view.</p></td>
+                </tr>
+            </tbody>
+        </table>
+        <h2>Toolbar buttons</h2>
+        <table style="width: 100%;margin-left: auto;margin-right: auto;mc-table-style: url('../../Resources/TableStyles/standard.css');" class="TableStyle-standard" cellspacing="0">
+            <col class="TableStyle-standard-Column-Column1" />
+            <col class="TableStyle-standard-Column-Column2" />
+            <thead>
+                <tr class="TableStyle-standard-Head-Header1">
+                    <th class="TableStyle-standard-HeadE-Column1-Header1">Button</th>
+                    <th class="TableStyle-standard-HeadD-Column2-Header1">Description</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1"><span class="Emphasis">Parameters</span>
+                    </td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">Toggles between displaying or hiding the Parameters area of the view.</td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyB-Column1-Body1"><span class="Emphasis">Execute</span>
+                    </td>
+                    <td class="TableStyle-standard-BodyA-Column2-Body1">
+                   Updates the Rules and Details sections of the view to display rules with the selected Currency From and Currency To assignments.                        <p class="BasicNote">Rules only have to match one of the Currency From or To assignments to be shown.</p></td>
+                </tr>
+            </tbody>
+        </table>
+        <h2>Price Translation Rules section</h2>
+        <table style="width: 100%;margin-left: auto;margin-right: auto;mc-table-style: url('../../Resources/TableStyles/standard.css');" class="TableStyle-standard" cellspacing="0">
+            <col class="TableStyle-standard-Column-Column1" />
+            <col class="TableStyle-standard-Column-Column2" />
+            <thead>
+                <tr class="TableStyle-standard-Head-Header1">
+                    <th class="TableStyle-standard-HeadE-Column1-Header1">Button</th>
+                    <th class="TableStyle-standard-HeadD-Column2-Header1">Description</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1"><span class="Emphasis">New</span>
+                    </td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">Creates a new price translation rule line.</td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1"><span class="Emphasis">Delete</span>
+                    </td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">
+                       Deletes the selected price translation rule lines.
+                        <p class="Caution">There is no pop-up message requesting confirmation of deletion of translation rules.</p></td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1"><span class="Emphasis">Fields</span>
+                    </td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">Opens the <span class="Emphasis">Customization</span> dialog where users can drag fields to or from the tab’s header area and this dialog to customize the view.</td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1"><span class="Emphasis">Save</span>
+                    </td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">Saves all new price translation rules and changes made to existing rules.</td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyB-Column1-Body1"><span class="Emphasis">Cancel</span>
+                    </td>
+                    <td class="TableStyle-standard-BodyA-Column2-Body1">Removes all new price translation rules and undoes  changes.</td>
+                </tr>
+            </tbody>
+        </table>
+        <h2>Saving or restoring a custom layout</h2>
+        <p>Custom layouts can be saved or restored by right-clicking in the Pivot Grid and selecting Save Layout or Restore Layout, respectively.</p>
+        <h2>Pivot Grid fields</h2>
+        <ul>
+            <li><span class="Emphasis">Price Translation Rule ID</span>: A unique system identifier for the price translation rule.</li>
+            <li><span class="Emphasis">Rule Name</span>: The name for the translation rule.</li>
+            <li><span class="Emphasis">Privacy</span>: The privacy settings for the translation rule:
+				<ul><li><span class="Emphasis">Public</span>: All users with sufficient rights can view and edit the rule</li><li><span class="Emphasis">Private</span>: Only the user who created the rule and view and edit it</li><li><span class="Emphasis">Shared</span>: Only specified users with sufficient rights can view and edit the rule</li></ul></li>
+            <li><span class="Emphasis">Allowed Users</span>: The users allowed to view or edit the rule.</li>
+            <li><span class="Emphasis">From Currencies</span>: The currencies being translated from in the rule.</li>
+            <li><span class="Emphasis">To Currencies</span>: The currencies being translated to in the rule.</li>
+            <li><span class="Emphasis">Price Range Endpoints</span>: The price range end points for the rule (corresponds to the <span class="Emphasis">Price Greater Than...?</span> entries in the <span class="Emphasis">Price Translation Rule Details</span> section). If the <span class="Emphasis">Price Greater Than...?</span> 0 line in the bottom section for the rule does not have a translation factor set, then this field is conditionally formatted:			<p><img src="../../Resources/Images/Currency and VAT Management/Price Range Endpoints.png" class="LargeImages" /></p></li>
+            <li><span class="Emphasis">Minimum Date Present</span>: The earliest start date for the rule.</li>
+            <li><span class="Emphasis">Maximum Date Present</span>: The latest start date for the rule.</li>
+            <li><span class="Emphasis">Copy Rule</span>: If checked, creates a copy of the rule with “ – Copy” and the current date appended to the Rule Name. 	
+		Multiple rules can be copied with a single save.</li>
+            <li><span class="Emphasis">Missing Values</span>: Checked if the Price Greater than 0 line for the selected rule in the Rule Details section does not have Translation Factors set. At a minimum, 			all rules must have a translation factor for the Price Greater Than 0 line set.</li>
+        </ul>
+        <h2>Price Translation Rule Details section</h2>
+        <h3>Buttons</h3>
+        <ul>
+            <li><span class="Emphasis">New</span>: Creates a new translation factor line for the rule.</li>
+            <li><span class="Emphasis">Delete</span>: Deletes the selected price translation rule lines. Users are not asked to confirm deletion of lines.<p class="BasicNote">The Price Greater Than 0 line populates for new rules by default and cannot be deleted. If deleted, the line regenerates when <span class="Emphasis">Save</span> is clicked.</p></li>
+            <li><span class="Emphasis">Fields</span>: Opens the fields Customization dialog. Users can drag fields to or from the tab’s header area and this dialog to customize the view.</li>
+            <li><span class="Emphasis">Save</span>: Saves all new translation lines created and changes made to existing lines.</li>
+            <li><span class="Emphasis">Cancel</span>: Removes all new translation lines created and undoes deletions.</li>
+        </ul>
+        <h2>Saving or restoring custom layouts</h2>
+        <p>Custom layouts are saved or restored by right-clicking in the Pivot Grid and selecting <span class="Emphasis">Save Layout</span> or <span class="Emphasis">Restore Layout</span>, respectively.</p>
+        <h2>Grid fields</h2>
+        <ul>
+            <li><span class="Emphasis">Price Greater Than</span>: Sets the starting price for the translation factors defined in the line to be applied and sets the ending price for the previous line to be less than the value entered.</li>
+            <li><span class="Emphasis">Start Date</span>: Sets the date translation factors in the line become active.</li>
+            <li><span class="Emphasis">Price Translation Rule Detail ID</span>: A unique system identifier for the translation rule detail. This is unique by line by currency.</li>
+            <li><span class="Emphasis">Translation Factor</span>: Sets the translation factor for the corresponding currency and price range of the line.<p class="BasicNote">
+			Translation factors are applied as a multiplier to the home ticket price (Home AUT) of the product in the From Currency and are invoked by Home AUTs in that currency, regardless of what the To Currencies are. Setting a factor of 1 indicates no change.</p><p class="Important">Translation factors are applied to Home ticket prices (Home AUTs) that have Home Site VAT values excluded, for the purposes of dependent calculations within Assortment Planning.</p><h3>Example</h3><p>A product has a ticket price of $20.00 USD. Due to the increased cost of doing business in the UK, a translation rule with the following factors is required:</p><p><img src="../../Resources/Images/Currency and VAT Management/Example Translation Factor.png" class="LargeImages" /></p><p>The current ticket price in USD for sites doing business in GBP is $25.00 because the translation factor for products $20 and above is 1.25 ($20 * 1.25 = $25). </p><p>A week later, the product goes on promotion for 20%, setting its new price in USD at $16.00. This means the new USD ticket price for GBP sites is $19.20 ($16 * 1.2 = $19.20).</p></li>
+        </ul>
+    </body>
+</html>

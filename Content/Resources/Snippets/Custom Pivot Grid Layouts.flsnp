@@ -1,0 +1,8 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head>
+    </head>
+    <body>
+        <p>After making changes and clicking <span class="Emphasis">Ok</span> in the <span class="Emphasis">Fields Customization</span> dialog, right click anywhere in the Pivot Grid and choose <span class="Emphasis">Save Layout</span>. Restore a custom layout by right-clicking anywhere in the Pivot Grid, choosing Restore Layout, and selecting the layout to restore.</p>
+    </body>
+</html>

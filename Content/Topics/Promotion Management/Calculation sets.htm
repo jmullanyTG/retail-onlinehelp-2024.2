@@ -1,0 +1,96 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" xml:lang="en-us">
+    <head>
+        <title>
+        </title>
+    </head>
+    <body>
+        <h1>Calculation sets</h1>
+        <p>Calculation sets are a grouping of calculations that are performed in a specified order. Calculation sets can be assigned to a promotion strategy. </p>
+        <p>For more information, see <MadCap:xref href="Promotion Strategies.htm">Promotion Strategy</MadCap:xref>.</p>
+        <h2>Creating calculation sets</h2>
+        <p>Within the <span class="Emphasis">Calculations</span> tab, click <span class="Emphasis">New</span> on the <span class="Emphasis">Calculation Sets</span> toolbar to create a new calculation set. Enter a name and description and click <span class="Emphasis">Save</span>.</p>
+        <table class="TableStyle-standard" cellspacing="0" style="mc-table-style: url('../../Resources/TableStyles/standard.css');">
+            <thead>
+                <tr class="TableStyle-standard-Head-Header1">
+                    <th class="TableStyle-standard-HeadE-Column1-Header1">Field</th>
+                    <th class="TableStyle-standard-HeadD-Column2-Header1">Description</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">Name                    </td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">A descriptive label to summarize the purpose of the Calculation Set. This identifies the calculation set when configuring promotion strategies.
+                    </td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyB-Column1-Body1">Description                    </td>
+                    <td class="TableStyle-standard-BodyA-Column2-Body1">
+                        An optional summary of the calculation set.
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <h2>Modifying calculation sets</h2>
+        <p>Modifications are made directly in the <span class="Emphasis">Calculation Sets</span> grid. Click <span class="Emphasis">Save</span> to save modifications. Click <span class="Emphasis">Cancel</span> to discard modifications. Existing promotions referencing the calculation set must either be recalculated manually or by an overnight process.</p>
+        <p>Modifications can also be made to the <span class="Emphasis">Calculation Set Calculations</span> grid. For more information, see <MadCap:xref href="Calculations assigned to a Calculation Set.htm">Calculations assigned to a calculation set </MadCap:xref>.</p>
+        <h2>Cloning calculation sets</h2>
+        <p>Within the <span class="Emphasis">Calculation Sets</span> grid, </p>
+        <ol>
+            <li>Select the calculation set to be cloned. </li>
+            <li>
+                <p>Click the <span class="Emphasis">Clone</span> button on the toolbar.</p>
+                <p> A new calculation set is added to the <span class="Emphasis">Calculation Sets</span> grid with the suffix <span class="Emphasis">(Clone)</span>.</p>
+            </li>
+            <li>
+                <p>Modify the copy as desired.</p>
+            </li>
+            <li>Click <span class="Emphasis">Save</span>. </li>
+        </ol>
+        <h2>Deleting calculation sets</h2>
+        <p>Click the <span class="Emphasis">Delete</span> button in the <span class="Emphasis">Calculation Sets</span> section of the top toolbar. Calculation sets cannot be deleted if associated to promotions not already exported and in that state. </p>
+        <h2>Assigning calculations to calculation sets</h2>
+        <p>Within the <span class="Emphasis">Calculations</span> tab, select a Calculation Set and then click <span class="Emphasis">Add</span> in the <span class="Emphasis">Calculation Set Calculations</span> section of the toolbar. Complete the required fields and click <span class="Emphasis">Save</span> to assign the Calculation to the Calculation Set.</p>
+        <table class="TableStyle-standard" cellspacing="0" style="mc-table-style: url('../../Resources/TableStyles/standard.css');">
+            <thead>
+                <tr class="TableStyle-standard-Head-Header1">
+                    <th class="TableStyle-standard-HeadE-Column1-Header1">Field</th>
+                    <th class="TableStyle-standard-HeadD-Column2-Header1">Description</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">
+                        Order                     </td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">A numeric value identifying the sequence order for the new calculation being added.
+                    </td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">
+                        Calculation                   </td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">
+                        A dropdown list populated with calculations defined in the <span class="Emphasis">Calculation Repository</span> grid.
+                    </td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">Description                    </td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">
+                        (read-only) Defaults to the calculation description after changes are applied.
+                    </td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyB-Column1-Body1">
+                        Active                    </td>
+                    <td class="TableStyle-standard-BodyA-Column2-Body1">
+                        Selected by default and indicates that the calculation is active in the calculation set.
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <h2>Modifying assigned calculations</h2>
+        <p>Modifications are made directly to the <span class="Emphasis">Calculation Set Calculations</span> grid. Existing promotions referencing the calculation set must either be recalculated manually or by an overnight process. </p>
+        <p class="BasicNote">Calculations can be temporarily removed from a calculation set by unchecking the <span class="Emphasis">Active</span> checkbox.</p>
+        <h2>Deleting assigned calculations</h2>
+        <p>Click the <span class="Emphasis">Remove</span> button and select <span class="Emphasis">Yes</span> to confirm. Existing promotions referencing the calculation set must either be recalculated manually or by an overnight process.</p>
+    </body>
+</html>

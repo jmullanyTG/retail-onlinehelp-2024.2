@@ -1,0 +1,162 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head>
+        <link href="../../Resources/TableStyles/standard.css" rel="stylesheet" MadCap:stylesheetType="table" />
+        <link href="../../Resources/TableStyles/standard.css" rel="stylesheet" MadCap:stylesheetType="table" />
+    </head>
+    <body>
+        <h1>Main planning view</h1>
+        <p>A plan's data is viewed and edited  in the grid. As it would be impractical to display an entire financial plan on screen at once, parts of the plan can be selected to display in the grid.</p>
+        <h2>Hybrid financial planning grid</h2>
+        <p>The <span class="Emphasis">Hybrid Financial Planning Grid</span> is used to plan sales, sales units, and average unit retails regardless of which method of inventory valuation, Cost or Retail, is in use for the active plan. Growth and decline up and down the product and location hierarchies can be budgeted for over time to determine the sales activity in these segments of the business.&#160; </p>
+        <p>
+            <img src="../../Resources/Images/MFP/hybrid finanical planning grid.png" class="LargeImages" />
+        </p>
+        <p> Fields can be aggregated, disaggregated, and rearranged  allowing for a more intuitive and fluid process. This view works in exactly the same way as the main planning view in terms of core functionality. </p>
+        <p>The parameters selected in the main planning view are connected to the <span class="Emphasis">Hybrid Financial Planning view</span>.&#160;Changes to the parameters in the <span class="Emphasis">Hybrid Financial Planning view</span> header area are reflected in the main planning view as well. Additionally, the calculation toggles and the locks that are invoked are consistent with the selections made in the main planning view.</p>
+        <h3>Cell colors</h3>
+        <p>Data cells in the grid are color coded to indicate what type of metrics they represent and whether their values are locked.  </p>
+        <table style="margin-left: 0;margin-right: auto;mc-table-style: url('../../Resources/TableStyles/standard.css');" class="TableStyle-standard" cellspacing="0">
+            <col class="TableStyle-standard-Column-Column1" style="width: 156px;" />
+            <col class="TableStyle-standard-Column-Column2" />
+            <thead>
+                <tr class="TableStyle-standard-Head-Header1">
+                    <th class="TableStyle-standard-HeadE-Column1-Header1">Cell Color</th>
+                    <th class="TableStyle-standard-HeadD-Column2-Header1">Description</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td style="background-color: #ceeef3;" class="TableStyle-standard-BodyE-Column1-Body1">Light blue</td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">Plannable metrics. These cells are editable. Their values represent the financial plan data.</td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td style="background-color: #e2daf8;" class="TableStyle-standard-BodyE-Column1-Body1">Light purple</td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">
+                      Comparison Plan 1 metric. These cells are read-only. Their values are read directly from the comparison plan selected in the Parameters pane.
+                    </td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td style="background-color: #b7a3ed;" class="TableStyle-standard-BodyE-Column1-Body1">Medium purple</td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">Comparison Plan 2 metric. A core subset of metrics compared to Comparison Plan 1. Read-only and read directly from the comparison plan selected in the Parameters pane.
+</td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td style="background-color: #e1e1e1;" class="TableStyle-standard-BodyE-Column1-Body1">Dark gray</td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">Actualized metrics. These cells are read-only. Their values come from the actual sales data that has been imported into Financial Planning.</td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td style="background-color: #e3efdf;" class="TableStyle-standard-BodyE-Column1-Body1">Light green</td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">
+                       Ex-VAT metrics. For plans that include VAT, these are values that exclude any amount associated with value added tax. These cells are read-only.
+                        <p class="BasicNote"> If the VAT % is zero for the given product/site level, ex VAT metrics will be equal to the non-ex VAT metrics (i.e. Sales = Sales ex VAT, etc.)</p><p> Calculation: The generic calculation for any ex VAT metric is <i>= non-ex VAT metric value / (1 + VAT %)</i></p></td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td style="background-color: #f7cac3;" class="TableStyle-standard-BodyB-Column1-Body1">Light red</td>
+                    <td class="TableStyle-standard-BodyA-Column2-Body1">
+                   This cell value is locked. Light-red coloring is applied only to sales-related metrics. Other types of metrics do not change color when locked. 
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <h3>Aggregate columns</h3>
+        <p>Aggregate Total columns are added to the grid whenever lower-level data is displayed. These columns follow the same color-coding scheme as other data cells, but use a gradient instead of a solid background. Examples:</p>
+        <table style="width: 100%;margin-left: auto;margin-right: auto;mc-table-style: url('../../Resources/TableStyles/standard.css');" class="TableStyle-standard" cellspacing="0">
+            <col class="TableStyle-standard-Column-Column1" />
+            <col class="TableStyle-standard-Column-Column2" />
+            <thead>
+                <tr class="TableStyle-standard-Head-Header1">
+                    <th class="TableStyle-standard-HeadE-Column1-Header1">Color</th>
+                    <th class="TableStyle-standard-HeadD-Column2-Header1">Description</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">
+                        <img src="../../Resources/Images/MFP/gradient plannable.png" class="LargeImages" />
+                    </td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">An aggregated plannable value</td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">
+                        <img src="../../Resources/Images/MFP/gradient comp.png" class="LargeImages" />
+                    </td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">An aggregated comparison value</td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyB-Column1-Body1">
+                        <img src="../../Resources/Images/MFP/gradient red.png" class="LargeImages" />
+                    </td>
+                    <td class="TableStyle-standard-BodyA-Column2-Body1">A locked aggregated sales-related value</td>
+                </tr>
+            </tbody>
+        </table>
+        <h2>Hybrid financial planning grid right-click menu options</h2>
+        <p>Right-click inside the data grid to see the following options.</p>
+        <table style="width: 100%;margin-left: 0;margin-right: auto;mc-table-style: url('../../Resources/TableStyles/standard.css');" class="TableStyle-standard" cellspacing="0">
+            <col class="TableStyle-standard-Column-Column1" style="width: 278px;" />
+            <col class="TableStyle-standard-Column-Column2" />
+            <thead>
+                <tr class="TableStyle-standard-Head-Header1">
+                    <th class="TableStyle-standard-HeadE-Column1-Header1">Option</th>
+                    <th class="TableStyle-standard-HeadD-Column2-Header1">Description</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">Best Fit Columns</td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">Adjusts the column widths to best fit the column names.</td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">Best Fit Data</td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">Adjusts column widths to best fit data values.</td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">Open</td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">Opens grid data in the selected format.</td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">Export</td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">Exports grid data to a file in the selected format.</td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">Export Options</td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">Sets text export options (Value or Display Text).</td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">
+                        <MadCap:xref href="Restoring  previously saved layouts.htm">Restore Layout</MadCap:xref>
+                    </td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">Displays plan data in the selected layout.</td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">&#160;</td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">Changes the data fields displayed to those included in the selected data layout.</td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">
+                        <MadCap:xref href="Designing and saving layouts.htm">Save Layout</MadCap:xref>
+                    </td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">Saves the current configuration of filters, pivots, and data fields.</td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyB-Column1-Body1">Status Bar</td>
+                    <td class="TableStyle-standard-BodyA-Column2-Body1">Toggles showing and hiding the status bar.</td>
+                </tr>
+            </tbody>
+        </table>
+        <h2>Customizing the Hybrid financial planning grid</h2>
+        <p>For information on customizing the grid, see:</p>
+        <ul>
+            <li>
+                <MadCap:xref href="Parameters.htm">Plan Parameters</MadCap:xref>
+            </li>
+            <li>
+                <MadCap:xref href="Restoring  previously saved layouts.htm">Changing Data Layouts</MadCap:xref>
+            </li>
+            <li>
+                <MadCap:xref href="Adding, Removing, and Rearranging Fields.htm">Adding, Removing, and Rearranging Fields</MadCap:xref>
+            </li>
+        </ul>
+    </body>
+</html>

@@ -1,0 +1,9 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head>
+    </head>
+    <body>
+        <h2>Filtering unpriced Variants for new sites</h2>
+        <p>System policy <span class="Emphasis">Filter unpriced Variants for New Site Pricing</span> controls whether the <span class="Emphasis">New Site Pricing</span> utility in Site Manager returns all variants or only those with prices for the selected price type (Regular, Promotion, etc.). The default for the system policy is <span class="Emphasis">False</span> meaning all variants for the selected price type display. If the system policy is set to <span class="Emphasis">True</span>, then only variants with a price for the selected price type display.</p>
+    </body>
+</html>

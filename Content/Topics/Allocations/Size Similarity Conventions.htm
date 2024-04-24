@@ -1,0 +1,78 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" xml:lang="en-us">
+    <head>
+        <link href="../../Resources/TableStyles/standard.css" rel="stylesheet" MadCap:stylesheetType="table" /><title></title>
+    </head>
+    <body>
+        <h1>Size similarity conventions</h1>
+        <p>When working with the Size Similarity Manager, there are some basic constructs and conventions to be aware of to get the most out of the available functionality.</p>
+        <h2>Destructive nature of size similarity sets</h2>
+        <p>The most important point to understand about this functionality is that, to prevent the need for live reads and conversions based on saved similarity sets, migrated data is permanently changed within ToolsGroup JustEnough and cannot be restored by deleting a similarity set for which migration has occurred. </p>
+        <p>Similarly, newly imported data is converted to the selected Display Size for the corresponding similarity set. Reference to original external identifiers is maintained for the purpose of synchronizing exported data with external systems, but within ToolsGroup JustEnough, Similar Sizes other than the Display Size of migrated similarity sets do not exist. </p>
+        <p>For this reason, it is essential that access to the Size Similarity Manager be limited to only users trusted to make such system changes and that those changes be well thought out and agreed upon by all interested parties prior to being saved and queued for migration.</p>
+        <h2>Related import and system changes</h2>
+        <p>Multiple imports account for sizes that are migrated. The checks only consider sizes that are active and were previously migrated (not <span class="Emphasis">Queue For Migration</span>). The import are: Prepack, Item Master, Size Model, Size Range, and Supplier Order Line Variant.</p>
+        <h2>Size type and similarity sets</h2>
+        <p>The intent of similarity sets is to identify data that should be homogenized within single defined size types. Therefore, sizes outside of the chosen size type can't be chosen for the rule Display Size or for the Similar Sizes to be grouped.</p>
+        <p class="Example">A new size model for Mens Short Sleeve Tees is required. The newest items in that category have the size range S, M, L, XL, and XXL, but some pre-existing items were sized with a slightly different but equivalent range – S, M, L, XL, and 2XL. Currently, Mens Short Sleeve Tees size type does not contain the new XXL size but XXL is to be the go-forward Display Size. To do this, first add XXL to the Mens Short Sleeve Tees size type, then choose it as the Display Size for the similarity set and choose both XXL and 2XL as the Similar Sizes to group.</p>
+        <h2>Data migration</h2>
+        <p class="p">A job task labeled <span class="Emphasis">Size Similarity</span> homogenizes data for the Similar Sizes defined in a similarity rule. A user must have the required configuration rights to run the script.</p>
+        <table style="mc-table-style: url('../../Resources/TableStyles/standard.css');" class="TableStyle-standard" cellspacing="0">
+            <thead>
+                <tr class="TableStyle-standard-Head-Header1">
+                    <th class="TableStyle-standard-HeadE-Column1-Header1">Parameter Name</th>
+                    <th class="TableStyle-standard-HeadD-Column2-Header1">Description</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">
+                        <p>@iUserID</p>
+                    </td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">
+                        <p>The user ID executing the migration.</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">
+                        <p>@bOkayToMigrate</p>
+                    </td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">
+                        <p>An explicit opt in variable to tell the procedure when it is okay to migrate.</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">
+                        <p>@bLogInformation</p>
+                    </td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">
+                        <p>An optional parameter to suppress logging. If migrating, forces logging on.</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">
+                        <p>@bTurnONTransaction</p>
+                    </td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">
+                        <p><span class="Emphasis">BEWARE:</span> This is to allow turning off transactions for testing purposes.</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyB-Column1-Body1">
+                        <p>@bDebug</p>
+                    </td>
+                    <td class="TableStyle-standard-BodyA-Column2-Body1">
+                        <p>&#160;</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <h3>Running the script</h3>
+        <p>The ideal place is during the weekly scripts since imports were updated as well to help align the sizes to the display size. The process gathers all of the sizes that are <span class="Emphasis">Queue For Migration</span>. Any of the canned tables that are detected will be backed up if the user decides to migrate. The backed up tables are listed in the temp schema which means they can be destroyed at any time.</p>
+        <h2>Data log</h2>
+        <p>A user can decide to not migrate but can consult the log table to see which tables were flagged as having migration work.</p>
+        <p class="BasicNote">Garbage Collection: Because of the extensive logs created by the Size Similarity Manager, a garbage collection script  was created to help minimize storage of log data that is no longer needed.</p>
+        <h2>Retention of data log entries</h2>
+        <p>How long data log entries created by the Size Similarity Manager are retained prior to deletion is determined by system policy <span class="Emphasis">Size Similarity Max Wait Minutes for Garbage Collection</span> (Module: Size). This policy is set in minutes and has a default value of 43,200 which is the equivalent of 30 days.</p>
+    </body>
+</html>

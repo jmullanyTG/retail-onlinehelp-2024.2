@@ -1,0 +1,72 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head>
+        <link href="../../Resources/TableStyles/standard.css" rel="stylesheet" MadCap:stylesheetType="table" />
+    </head>
+    <body>
+        <h1>Dynamic inventory policies</h1>
+        <p>Dynamic inventory policies can be set up with start and end dates to make specific modifications for a certain period of time. These policies can be layered to systematically affect only certain measures during eligible periods. By making adjustments into the future, the correct amount of product can be sent to stores.</p>
+        <p>Policy settings can be either replaced or modified.</p>
+        <h2>Working with dynamic policies</h2>
+        <h3>Adding dynamic policies</h3>
+        <ol>
+            <li>
+                <p>From the Execute tab, click <span class="Emphasis">Policy</span>. </p>
+                <p>The <span class="Emphasis">Policy Task</span> screen displays.</p>
+            </li>
+            <li>
+                <p>Select a Policy Task.</p>
+                <p>The <span class="Emphasis">Update Policy Task</span> screen displays.</p>
+            </li>
+            <li>
+                <p>Select the <span class="Emphasis">Policy</span> tab.</p>
+            </li>
+            <li>In the<span class="Emphasis"> Dynamic Policy</span> section, click <span class="Emphasis">Add Dynamic Policy</span>.</li>
+            <li>Complete the fields in the grid as required.</li>
+            <li>Click <span class="Emphasis">Ok</span>.</li>
+        </ol>
+        <h2>Deleting dynamic policies</h2>
+        <ol>
+            <li>Select a policy the policy to be deleted.</li>
+            <li>
+                <p>Click <span class="Emphasis">Delete Dynamic Policy</span>. </p>
+                <p>A message prompts to confirm the deletion.</p>
+            </li>
+            <li>
+                <p>Click <span class="Emphasis">Yes</span> to confirm. </p>
+                <p>The dynamic policy is deleted.</p>
+            </li>
+        </ol>
+        <h2>Dynamic Policy field descriptions</h2>
+        <table style="width: 100%;mc-table-style: url('../../Resources/TableStyles/standard.css');margin-left: 0;margin-right: auto;" class="TableStyle-standard" cellspacing="0">
+            <col class="TableStyle-standard-Column-Column1" style="width: 151px;" />
+            <col class="TableStyle-standard-Column-Column2" />
+            <thead>
+                <tr class="TableStyle-standard-Head-Header1">
+                    <th class="TableStyle-standard-HeadE-Column1-Header1">Field</th>
+                    <th class="TableStyle-standard-HeadD-Column2-Header1">Description</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">Policy Date</td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">The effective start date for the dynamic policy.</td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">End Date</td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">The end date for the dynamic policy.</td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">Notes</td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">	Optional notes field.</td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyB-Column1-Body1">Policy Type</td>
+                    <td class="TableStyle-standard-BodyA-Column2-Body1">
+                         Determines how dynamic policy values will affect the default settings. The options are:  
+                        <table style="width: 100%;margin-left: auto;margin-right: auto;mc-table-style: url('../../Resources/TableStyles/standard.css');" class="TableStyle-standard" cellspacing="0"><col class="TableStyle-standard-Column-Column1" /><col class="TableStyle-standard-Column-Column2" /><thead><tr class="TableStyle-standard-Head-Header1"><th class="TableStyle-standard-HeadE-Column1-Header1">Option</th><th class="TableStyle-standard-HeadD-Column2-Header1">Description</th></tr></thead><tbody><tr class="TableStyle-standard-Body-Body1"><td class="TableStyle-standard-BodyE-Column1-Body1">Adjust</td><td class="TableStyle-standard-BodyD-Column2-Body1">Adjustments can be additive or multiplicative. Not applicable to all policy settings (e.g. order policy type, target service level). An additive value applies a positive or negative quantity change to the default policy value. A Multiplicative value applies a multiplicative percent adjustment to the default policy value.	</td></tr><tr class="TableStyle-standard-Body-Body1"><td class="TableStyle-standard-BodyE-Column1-Body1">Replace</td><td class="TableStyle-standard-BodyD-Column2-Body1">A value in a replace policy type overwrites the default policy value during the effective period of the dynamic policy.</td></tr><tr class="TableStyle-standard-Body-Body1"><td class="TableStyle-standard-BodyB-Column1-Body1">Percent Adjust</td><td class="TableStyle-standard-BodyA-Column2-Body1">A multiplicative percent adjustment to the default policy value. <p>Applying a multiplicative adjustment to a ratio or percentage policy value produces a multiplicative result. For example, if a back order ratio is set to 50%, applying a +5% change yields a result of 52.5% effective back order ratio, not 55%.</p></td></tr></tbody></table></td>
+                </tr>
+            </tbody>
+        </table>
+    </body>
+</html>

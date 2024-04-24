@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" xml:lang="en-us">
+    <head>
+        <link href="../../Resources/TableStyles/standard.css" rel="stylesheet" MadCap:stylesheetType="table" /><title></title>
+    </head>
+    <body>
+        <h1>Forecast Viewer</h1>
+        <p>The <span class="Emphasis">Forecast Viewer</span> tab displays identical information to that which may be found in the <span class="Emphasis">Forecasts</span> module.  Users can configure the colors of the various available series within the graph selecting a color palette which is most appealing and accessible for them.</p>
+        <p class="BasicNote">Additional information is found within the Forecasts module online help.</p>
+        <p class="BasicNote">The ability to configure a series’ color requires user right <span class="Emphasis">Allow Series Configuration</span>.</p>
+        <p>
+            <img src="../../Resources/Images/Inventory Manager/Forecast viewer tab.png" class="LargeImages" />
+        </p>
+        <h2>Allocation versus replenishment forecasts</h2>
+        <p>The <span class="Emphasis">Forecast Viewer</span> tab displays allocation- or replenishment-related forecast data depending on whether the selected item is managed by the Allocations module or the Demand&#160;Forecasting/Inventory Planning/Replenishment suite (Replenishment, for short). </p>
+        <p>If both the Allocations module and the Replenishment suite are enabled, the <span class="Emphasis">Allocation Strategy Selection</span> field in the <span class="Emphasis">Allocation Strategy</span> screen sets whether an item is managed by Allocations or Replenishment. </p>
+        <p>The <span class="Emphasis">Execution Process</span> column can be added to the Inventory Manager view to see which process manages each item. Its read-only values are <span class="Emphasis">Allocations engine</span> or <span class="Emphasis">Replenishment engine</span>.</p>
+        <h2>Generating a forecast for a selected item</h2>
+        <ul>
+            <li>To generate a forecast for a selected item, click <span class="Emphasis">Forecast</span>.</li>
+        </ul>
+        <h2>Including or excluding forecasting methods</h2>
+        <p>The locking process performed on items prevents the items from being re-forecasted and from using a different method until the lock expires.</p>
+        <h3>Setting a lock</h3>
+        <ol>
+            <li>
+                <p>Click the <span class="Emphasis">Lock</span> icon to open the <span class="Emphasis">Forecast Task</span> dialog.</p>
+                <p>
+                    <img src="../../Resources/Images/Inventory Manager/Lock button Forecast Viewer.PNG" class="LargeImages" />
+                </p>
+            </li>
+            <li>Select the checkboxes corresponding to the forecast methods to be locked.</li>
+            <li>Set the lock expiration date in the <span class="Emphasis">Lock Expiration</span> field.</li>
+            <li>Click <span class="Emphasis">Ok</span>.</li>
+        </ol>
+        <h2>Status bar</h2>
+        <p>
+            <img src="../../Resources/Images/Inventory Manager/Status Bar menu option.png" class="LargeImages" />
+        </p>
+        <p>A status bar is available in both the Inventory and Level Forecast views with additional metadata based on the row selection or cells within a row. Certain cells within a row or a whole row can be highlighted to view the sum, average, count, minimum, and maximum values.</p>
+        <p>To display the status bar, right-click in the grid and select the <span class="Emphasis">Status Bar</span> menu option.</p>
+        <h2>Toolbar functionality</h2>
+        <p>The toolbar contains the following functionality.</p>
+        <table class="TableStyle-standard" cellspacing="0" style="mc-table-style: url('../../Resources/TableStyles/standard.css');">
+            <thead>
+                <tr class="TableStyle-standard-Head-Header1">
+                    <th class="TableStyle-standard-HeadE-Column1-Header1">Button</th>
+                    <th class="TableStyle-standard-HeadD-Column2-Header1">Description</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">
+                        Save
+                    </td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">
+                        Saves changes made to the forecast.
+                    </td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">
+                        Undo
+                    </td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">Enabled when changes are made to the forecast. Click this button to undo the changes.
+                    </td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">
+                        Change All
+                    </td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">Changes multiple lines (either rows or columns) within the grid. They can be set to a specified value, increased or decreased, copied from another column or row, or split across other columns based on a percent contribution.
+                    </td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">
+                        Forecast
+                    </td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">
+                        Generates a forecast for a selected item. 
+                    </td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">
+                        Lock, Unlock
+                    </td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">
+                        <ul>
+                            <li><span class="Emphasis">Lock</span>. Excludes certain forecasting methods from being run for the inventory item. A lock expiration can be set to limit the period of time for which the lock is intended to cover.</li>
+                            <li><span class="Emphasis">Unlock</span>. Displays only if a forecast has a lock applied. Allows users to remove a method lock.</li>
+                        </ul>
+                    </td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">
+                        Reviewed
+                    </td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">
+                        As part of a business flow process, displays that a particular forecast for an item has been approved. Clicking <span class="Emphasis">Reviewed</span> populates the current date in the <span class="Emphasis">Review Date</span> field.
+                    </td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">
+                        Notes
+                    </td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">
+                        Launches the <span class="Emphasis">Notes Viewer</span> to add information related to the particular inventory item as it relates to the forecast.
+                        <p><img src="../../Resources/Images/Demand Forecasting/Notes button.png" class="LargeImages" /></p></td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">
+                        Causals
+                    </td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">
+                        Launches the <span class="Emphasis">Maintain Item Causal Links</span> window letting users include or exclude any causals which have been created in the <span class="Emphasis">Causals</span> module.
+                    </td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyB-Column1-Body1">
+                        Settings
+                    </td>
+                    <td class="TableStyle-standard-BodyA-Column2-Body1">
+                        Launches the <span class="Emphasis">Visible Bucket Period Limits</span> dialog. This determines the number of periods which display in both the graph and grid sections of the forecast viewer. Depending on the period type (daily, weekly, or monthly) the visible bucket period limits can be adjusted to take a bigger picture look at the inventory item, or narrow the focus if so desired.
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </body>
+</html>

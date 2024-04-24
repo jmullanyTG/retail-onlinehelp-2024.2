@@ -1,0 +1,32 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" xml:lang="en-us">
+    <head><title></title>
+    </head>
+    <body>
+        <h1>Best practices for creating and managing plans</h1>
+        <p style="margin-top: 5pt;margin-bottom: 5pt;">Here are some best practice suggestions to help get the most out of the available functionality in the plan creation and plan management sections of this module.</p>
+        <h2>Master and branch plan set up tips</h2>
+        <ul style="font-weight: normal;">
+            <li>Master plans should contain all necessary product and location hierarchical components to properly manage an open-to-buy process.</li>
+            <li>Stay at a level that is reasonable in terms of the layers available to plan.&#160; When managing an open-to-buy think of the spending on receipts and how to manage that spend at an executive type level.&#160; Executives don’t want information that is too granular, so keep it at a level that is effective and everyone in the organization can understand.&#160; An example would be planning at a category level or layer below division.&#160; If total Female was a division and underneath that layer is categories of product such as denim, skirts, dresses, blouses, etc.&#160; It’s very easy to see where the growth and declines of the business are occurring at that level.&#160; Spend the time managing the open-to-buy at that level to move inventory investment into the right categories at the right time.</li>
+            <li>Create a master working branch underneath the master plan.&#160; A master branch contains everything in the hierarchical structure for product and location.&#160; This becomes the branch that everyone moves their changes into.&#160; This allows for a holistic review of the business prior to approving a plan to merge into the master.&#160; Users can then create their own branches off the master branch and merge their changes into the master branch.&#160; Ensure the end date of this branch goes out as far as possible into the future.</li>
+            <li>When setting up read and write access for users, consider how much data they should see versus how much data they can edit.&#160; An example is giving the Women’s denim planner write access for that category, but read access for total women’s.&#160; They can make changes to Denim and understand what is happening in total Women’s.</li>
+            <li>When creating branches to edit the plans and there is a formal plan approval process in place, branch off the time periods that should be reviewed and approved.&#160; This streamlines the process and is very helpful when conducting in-season plan reviews.&#160; Additionally, upon approval only the changes to those time periods merge to the parent branch or master plan.</li>
+        </ul>
+        <h2>Snapshot utilization</h2>
+        <p>Utilize snapshots as part of the plan review and approval process.&#160; When a plan has been approved, take a snapshot so that there is record of the plans at that point in time.&#160; This helps users understand Plan versus Actual and the variance between the two.</p>
+        <h2>Use snapshot templates to schedule regular snapshots</h2>
+        <ul>
+            <li>Snapshot templates can be created to automatically take snapshots on a regular schedule. Schedule snapshots to be taken of the Master plan and Master working branch every week.&#160; This makes reviewing the business simpler as the comparisons of plan vs. actual on a weekly basis are available directly in the main planning view.</li>
+            <li>Set an appropriate calendar level: The calendar level should be week if week to week planning is an important part of the business.&#160; Otherwise, select Month as the calendar level.&#160; </li>
+        </ul>
+        <h2>Create user specific master and branch plans</h2>
+        <p>Be aware of the intended users when creating branch and sub-branch plans. Creating branches that only contain the product/site levels each user is responsible for speeds the planning process by limiting the amount of data the system has to read and process for each transaction. If the organization includes planners that are specifically concerned with higher levels of the product/site hierarchies, create additional Master plans for them that don’t include the lower levels of the hierarchy. These plans can ultimately be reconciled with lower level plans via Rebalance functionality.</p>
+        <h2>Adding new leaf levels to existing plan hierarchies</h2>
+        <p>As the business evolves, add new product/site levels to existing plans. Once the new leaf levels are created within the desired ItemMaster/Site Groups, first use the Initialize functionality on the Master plan, selecting ONLY THE NEW LEVEL(s) to be added. </p>
+        <p>Once complete, use the Reseed functionality on the branch plans beneath that master, again selecting ONLY THE NEW LEVEL(s) that were added to the master. In this manner, new levels can be set up in existing plans without losing the data for the existing levels.</p>
+        <p class="BasicNote">Leaf level refers to an additional entity within an existing ItemMaster/Site Group. </p>
+        <p>For example, <span class="Emphasis">SiteGroup 4</span> is Site and contains 3 sites. If another site is added as a new site that is opening, then this is adding a new leaf level to <span class="Emphasis">SiteGroup</span> 4. </p>
+        <p>This example does not pertain to adding a new structure level. An example of adding a new structure level would be when a Site Hierarchy consists of SiteGroups 1-4: Company, Country, District, Site and then a new SiteGroup, <span class="Emphasis">Region</span>, is inserted between Country and District. This type of change constitutes a hierarchy restructure and requires that a new Master plan be created.</p>
+    </body>
+</html>

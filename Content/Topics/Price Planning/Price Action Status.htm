@@ -1,0 +1,85 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" xml:lang="en-us">
+    <head>
+        <link href="../../Resources/TableStyles/standard.css" rel="stylesheet" MadCap:stylesheetType="table" /><title></title>
+    </head>
+    <body>
+        <h1>Price action status, status changes, and messages</h1>
+        <p>The Price Action Status provides the ability to drive corporate configured processes and associated permissions by roles and users, for each Status, as well as provide communication between Statuses that can be reviewed to understand the life cycle of the Pricing Action. </p>
+        <h2>Changing price action statuses</h2>
+        <p>Price Action statuses can be changed by clicking the <span class="Emphasis">Change Status(es)</span> button to display a dropdown menu to change the status of a single Price Action or change the status of multiple Price Action at one time. </p>
+        <p>The ability to simultaneously change multiple Price Action Statuses greatly reduces  the repetition associated with opening and changing the Status for each and every Price Action.</p>
+        <p>The menu options are:</p>
+        <ul>
+            <li>Change Status</li>
+            <li>Change Multiple Statuses</li>
+        </ul>
+        <h3>Change Status</h3>
+        <p>The <span class="Emphasis">Change Status</span> menu option is based on the Price Actions selected in the List grid. Selecting this option opens the <span class="Emphasis">Change Status</span> dialog. </p>
+        <p>
+            <img src="../../Resources/Images/Promotion Management/Change Status Dialog.png" class="LargeImages" />
+        </p>
+        <p>This menu option is enabled when the:</p>
+        <ul>
+            <li>start date is today or in the future.</li>
+            <li>state is not <span class="Emphasis">Calculation Required</span>.</li>
+            <li>appropriate User Rights have been assigned to modify the status in its current Workflow Status State.</li>
+            <li>user has permissions to the next Workflow Transition.</li>
+        </ul>
+        <h3>Change Multiple Statuses</h3>
+        <p>The <span class="Emphasis">Change Multiple Statuses</span> menu option is based on ALL the Price Actions displayed in the List grid. Selecting this option opens the <span class="Emphasis">Change Statuses</span> dialog. </p>
+        <p>
+            <img src="../../Resources/Images/Price Planning/Change Multiple Price Action Statuses.png" class="LargeImages" />
+        </p>
+        <table style="width: 100%;margin-left: auto;margin-right: auto;mc-table-style: url('../../Resources/TableStyles/standard.css');" class="TableStyle-standard" cellspacing="0">
+            <col class="TableStyle-standard-Column-Column1" />
+            <col class="TableStyle-standard-Column-Column2" />
+            <thead>
+                <tr class="TableStyle-standard-Head-Header1">
+                    <th class="TableStyle-standard-HeadE-Column1-Header1">Field</th>
+                    <th class="TableStyle-standard-HeadD-Column2-Header1">Description</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">Price Action ID (Read Only)</td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">A unique identifier</td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">Price Action (Read Only)</td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">The Price Action name</td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">Workflow Name (Read Only)</td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">The Price Action Workflow</td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">Price Action Status</td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">Displays a dropdown with the next available Status for the assigned Price Action's Workflow for which the user has been provided access.</td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">Owner</td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">
+                        Displays a dropdown populated with all Users and Roles that are not disabled and not deleted. The list is filtered by users that have the right to edit Price Actions. 
+                        <p class="BasicNote"> The purpose of changing the Price Action Owner is to assign the Price Action to another user for additional work or review and approval.</p></td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyB-Column1-Body1">Message</td>
+                    <td class="TableStyle-standard-BodyA-Column2-Body1">An editable text field used for capturing the reason for the Status change or a message to the newly selected owner.</td>
+                </tr>
+            </tbody>
+        </table>
+        <p>This menu option is enabled unless any one of the following criteria is true: </p>
+        <ul>
+            <li>all Price Actions have a start date that is in the past.</li>
+            <li>all  Price Actions have a state of <span class="Emphasis">Calculation Required</span>.</li>
+            <li>permissions have not been assigned to modify Price Action status during the current Status State for all Price Actions.</li>
+            <li>the user does not have permissions to the next Workflow Transition, for all Price Actions.</li>
+        </ul>
+        <h2>Status changes and messages</h2>
+        <p>To view the Price Action status changes and messages, double-click the icon in the <span class="Emphasis">Messages</span> field to display the <span class="Emphasis">Messages</span> window.</p>
+        <p>
+            <img src="../../Resources/Images/Price Planning/View Price Action Status Changes and Messages.png" class="LargeImages" />
+        </p>
+    </body>
+</html>

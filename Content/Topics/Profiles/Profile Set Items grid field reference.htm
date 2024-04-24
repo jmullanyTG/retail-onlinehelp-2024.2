@@ -1,0 +1,71 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" xml:lang="en-us">
+    <head>
+        <title>
+        </title>
+    </head>
+    <body>
+        <h1>Profile Set Items screen fields and descriptions </h1>
+        <p>The <span class="Emphasis">Profile Set Items</span> screen details inventory specific information about how the profile is applied. This provides an overview of the inventories which are affected by the profile and in which way.</p>
+        <ul>
+            <li>
+                <span class="Emphasis">Apply Override (%)</span> – Checked if it is intended to apply the override percentage. </li>
+            <li>
+                <span class="Emphasis">Causal Shift</span> – Controls whether the total sales value of the model is held or increased based on the application of the causal.<ul><li><p><span class="Emphasis">Reshape</span> - Holds total sales and decreases the non-causaled period contributions (assuming a positive causal effect). It "reshapes" the whole profile to accommodate the causal factor.</p></li><li><p><span class="Emphasis">Lift</span> - Does not hold total sales and the impact of the causal is only recognized on the causaled period. It "lifts" the affected periods.</p></li></ul></li>
+            <li>
+                <span class="Emphasis">Curve Changed</span> – (read-only) If the selected curve has changed, this checkbox is flagged. </li>
+            <li>
+                <span class="Emphasis">Curve Name</span> – The selected curve (from the Curves Module/curve management screen). May be changed by using the “Choose Curve” button. </li>
+            <li>
+                <span class="Emphasis">Effective Average</span> – Average sales (per period/bucket) over the effective period.</li>
+            <li>
+                <span class="Emphasis">Effective End</span> – The actual end date for the application of the profile considers any and all constraints).</li>
+            <li>
+                <span class="Emphasis">Effective Start</span> – The actual start date for the application of the profile (considers any and all constraints). </li>
+            <li>
+                <span class="Emphasis">Effective Volume</span> – Sales volume over the effective period.</li>
+            <li>
+                <span class="Emphasis">Location</span> – The site code for the inventory.</li>
+            <li>
+                <span class="Emphasis">Location Description</span> – The description tied to the site code. </li>
+            <li>
+                <span class="Emphasis">Override Effective Average</span> – Average sales (per period/bucket) during the effective profile period if the override is applied. </li>
+            <li>
+                <span class="Emphasis">Override Effective Volume</span> – Sales volume for the effective profile period if the override is applied. </li>
+            <li>
+                <span class="Emphasis">PEP (Profile Evaluation Period)</span> – The number of periods to use to evaluate the effectiveness of the profile curve (counts forward from the start date).</li>
+            <li>
+                <span class="Emphasis">PEP Data Points</span> – Number of data points during the performance evaluation period. Includes data points from the current period historically back to the specified number of specified (PEP value), but not further than the effective start date. </li>
+            <li>
+                <span class="Emphasis">PEP Profile Average</span> – Average sales of the profile (per period/bucket) during the performance evaluation period.</li>
+            <li>
+                <span class="Emphasis">PEP Profile Volume</span> – Total sales using the profile curve. </li>
+            <li>
+                <span class="Emphasis">PEP Sales Average</span> – Average sales (per period/bucket) during the performance evaluation period. </li>
+            <li>
+                <span class="Emphasis">PEP Sales Volume</span> – Total sales volume during the performance evaluation period. </li>
+            <li>
+                <span class="Emphasis">Product</span> – The item master code for the inventory. </li>
+            <li>
+                <span class="Emphasis">Product Description</span> – The description tied to the item master code. </li>
+            <li>
+                <span class="Emphasis">Profile Average</span> – Average sales (per period/bucket) for the entire profile period. </li>
+            <li>
+                <span class="Emphasis">Profile Override (%)</span> – Override percentage for the profile ((PEP Sales Volume – PEP Profile Volume) / PEP Profile Volume * 100)</li>
+            <li>
+                <span class="Emphasis">Profile Start</span> – The date from which the profile evaluation period is to start. </li>
+            <li>
+                <span class="Emphasis">Profile Volume</span> – Sales volume for the entire profile period.</li>
+            <li>
+                <span class="Emphasis">Re-Apply Curve</span> – If the curve needs to be re-applied, users should check this box. </li>
+            <li>
+                <span class="Emphasis">Sample Average</span> – Average sales (per period/bucket) during the sample period. </li>
+            <li>
+                <span class="Emphasis">Sample End Date</span> – End date of the sample period. </li>
+            <li>
+                <span class="Emphasis">Sample Start Date</span> – Start date of the sample period.</li>
+            <li>
+                <span class="Emphasis">Sample Volume</span> – Total sales volume during the sample period. The sample data is used to determine the magnitude of the profile.</li>
+        </ul>
+    </body>
+</html>

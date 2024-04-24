@@ -1,0 +1,48 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head />
+    <body>
+        <h1>Engine task templates</h1>
+        <p>Some engine chains require a default task template to be available before they can be run. The <span class="Emphasis">Forecast before Replenish</span> (FR) engine chain requires that a Replenish Task template be created before it can be used. This task is required to prevent multiple engine task forms from being prompted to the user before the task can be processed. Currently, engine templates are only available for the Forecast and Replenish engines as they are the only ones that have a user-configurable task form.</p>
+        <p>The only template that can and will be utilized is the one for the <span class="Emphasis">Default Replenish FRChain Template</span>. This is provided to allow for a mostly out-of-the-box running implementation of the FRChain if it is enabled. A user with the correct permissions may need to modify some settings in the template such as which Supply Chain to use, the proper Horizon Days, etc.</p>
+        <p>The <span class="Emphasis">Engine Template</span> module is located under the <span class="Emphasis">Management</span> tab.</p>
+        <h2>Creating task templates</h2>
+        <p>There are two default task templates that can be used by the Engine to run items requested by the user without requiring any input from the user about the configuration. These task templates are configured by editing a <span class="Emphasis">Replenish Task</span> form or a <span class="Emphasis">Forecast Task</span> form and saving the updated configuration into the template.</p>
+        <ol>
+            <li>Select the <span class="Emphasis">Engine Template</span> module to display the <span class="Emphasis">Engine Template Maintenance</span> screen.</li>
+            <li>Click <span class="Emphasis">Add</span>  to open the <span class="Emphasis">Add / Update Engine Template</span> dialog.</li>
+            <li>Complete the <span class="Emphasis">Name</span> and <span class="Emphasis">Description</span> fields as required.</li>
+            <li>
+                <p>Select the engine type by clicking the dropdown arrow in the <span class="Emphasis">Engine Type</span> field.</p>
+                <p class="BasicNote">The engine type selected determines which Engine Task Form displays.</p>
+            </li>
+            <li>Select the engine sub type by clicking the dropdown arrow in the <span class="Emphasis">Engine Sub Type</span> field.</li>
+            <li>
+                <p>Click the <span class="Emphasis">Open Engine Task Form</span> button.</p>
+                <MadCap:snippetBlock src="../../Resources/Snippets/Open Engine Task Form button.flsnp" />
+            </li>
+            <li>Complete the fields within the <span class="Emphasis">Replenish Task</span> form or the <span class="Emphasis">Forecast Task</span> form as required.</li>
+            <li>Click <span class="Emphasis">Ok</span>.</li>
+        </ol>
+        <h2>Editing task templates</h2>
+        <p>There are two default task templates that can be used by the Engine to run items requested by the user without requiring any input from the user about the configuration. These task templates are configured by editing a <span class="Emphasis">Replenish Task</span> form or a <span class="Emphasis">Forecast Task</span> form and saving the updated configuration into the template.</p>
+        <ol>
+            <li>Select the <span class="Emphasis">Engine Template</span> module to display the <span class="Emphasis">Engine Template Maintenance</span> screen.</li>
+            <li>Click <span class="Emphasis">Edit</span> to open the <span class="Emphasis">Add / Update Engine Template</span> dialog.</li>
+            <li>
+                <p>Edit the <span class="Emphasis">Name</span> and <span class="Emphasis">Description</span> fields as required.</p>
+                <p class="BasicNote">On editing an existing form, the engine type and subtype cannot be changed and the fields are set to read-only.</p>
+                <p class="BasicNote">The engine type determines which Engine Task Form displays.</p>
+            </li>
+            <li>
+                <p>Click the <span class="Emphasis">Open Engine Task Form</span> button.</p>
+            </li>
+            <li>
+                <p>Update the parameters as required and click <span class="Emphasis">Ok</span>.</p>
+            </li>
+            <li>
+                <p>Click <span class="Emphasis">Ok</span> to close the dialog.</p>
+            </li>
+        </ol>
+    </body>
+</html>

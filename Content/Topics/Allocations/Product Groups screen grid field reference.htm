@@ -1,0 +1,47 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" xml:lang="en-us">
+    <head><title></title>
+    </head>
+    <body>
+        <h1>Product Groups screen fields and descriptions</h1>
+        <p>The <span class="Emphasis">Product Groups</span> screen is used to build and configure product groups. </p>
+        <ul>
+            <li><span class="Emphasis">Group Name</span> – The user defined name for the product group. </li>
+            <li><span class="Emphasis">Group Description</span> – Optional description for the product group. </li>
+            <li><span class="Emphasis">Group Allocation Priority</span> – Determines how the variants within the group are prioritized for allocations. <ul><li><span class="Emphasis">Lowest SOH</span> – Products with the lowest stock on hand will be granted higher priority. </li><li><span class="Emphasis">Highest SOH</span> – Products with the highest stock on hand will be granted higher priority. </li><li><span class="Emphasis">Sellthrough</span> – Products with the highest sellthrough % will be granted higher priority.</li><li><span class="Emphasis">Margin Rate</span> – Products with the highest margin rate will be granted higher priority. </li><li><span class="Emphasis">Aged Inventory</span> – Products will be prioritized based on last receipt date. This is meant to grant higher priority to stagnant items. </li><li><span class="Emphasis">High ROS</span> – Products with the highest rate of sale will be granted higher priority. </li><li><span class="Emphasis">Low ROS</span> – Products with the lowest rate of sale will be granted higher priority. </li></ul></li>
+        </ul>
+        <ul>
+            <li><span class="Emphasis">Max SOH per Variant</span> – Allows users to define a maximum quantity per variant. This will allow users to maintain color maximums when variant level is set to style-color. </li>
+            <li><span class="Emphasis">Product Eligibility</span> – The Item Master filter used to determine the Variants available for inclusion in a group. Check or uncheck the <span class="Emphasis">Include</span> checkbox to include or exclude Variants. </li>
+            <li>
+                <p><span class="Emphasis">Allowed Channels</span> - Displays the channels that are or were previously included. Channels associated with a strategy continue to display even if the strategy is later removed.</p>
+                <p>When users create Product Groups, the allowable channels is dependent on their assigned Rights. Therefore, if they are only allowed to work with Retail, then <span class="Emphasis">Allowed Channels</span> defaults to Retail.  If there are no restrictions to channels or sites, then the user has access to all of them. </p>
+            </li>
+            <li><span class="Emphasis">Included Strategy Channels</span> - The channels associated with the selected strategies in the bottom left grid.</li>
+            <li><span class="Emphasis">Included Strategy Count</span> - The number of strategies associated with a channel.</li>
+            <li><span class="Emphasis">Access Level</span> – Access levels determine which users may use or edit the group. </li>
+            <li><span class="Emphasis">User Select</span> – Displays the specific users for a <span class="Emphasis">Shared</span> access level product group. </li>
+            <li><span class="Emphasis">Strategy Access Level</span> – Access levels determine which users may use the group within the Allocation Strategy screen. May be different from product group creation and modification permissions.&#160; </li>
+            <li><span class="Emphasis">Strategy User Select</span> – Displays the specific users for a <span class="Emphasis">Shared</span> access level product model. </li>
+            <li><span class="Emphasis">Created</span> – Revision history metric showing the creation date of the group.</li>
+            <li><span class="Emphasis">Created By</span> – User ID of the group creator. </li>
+            <li><span class="Emphasis">Last Updated</span> – Revision history metric showing the date of the most recent revision. </li>
+            <li><span class="Emphasis">Updated By</span> – User ID of the most recent editor. </li>
+        </ul>
+        <h2>Strategies grid</h2>
+        <ul>
+            <li><span class="Emphasis">Include</span> – If checked, the variant is included in the product group. </li>
+            <li><span class="Emphasis">Allocate Strategy ID</span> - The Allocate Strategy ID associated with a strategy within a Product Group.</li>
+            <li><span class="Emphasis">Code</span> – The variant name as specified in the item master group which has been defined as the variant level. </li>
+            <li><span class="Emphasis">Description</span> – Optional description of the variant. </li>
+            <li><span class="Emphasis">Configured Channel</span> - The available channels.</li>
+            <li MadCap:conditions="General.DoNotPublish"><span class="Emphasis">Effective Channel</span> - </li>
+            <li><span class="Emphasis">Location Strategy</span> - The location strategy associated with a particular strategy within a Product Group.</li>
+            <li><span class="Emphasis">Available SOH</span> – Total stock on hand quantity across all DCs (will use the available to allocate calculation). Does not include placeholder stock.</li>
+            <li><span class="Emphasis">Total Inbound</span> – Sum of inbound orders to all DCs. </li>
+            <li><span class="Emphasis">Actual ROS</span> – Actualized rate of sale. Will display as “0” if item has not begun selling. Must be attached to an allocation strategy to populate values.</li>
+            <li><span class="Emphasis">Sizes with SOH</span> – Total count of sizes with a company-wide stock on hand greater than zero.</li>
+            <li><span class="Emphasis">Max Size SOH</span> – The maximum of stock on hand across all sizes with a stock on hand greater than zero.</li>
+        </ul>
+    </body>
+</html>

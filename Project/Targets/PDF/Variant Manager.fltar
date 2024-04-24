@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<CatapultTarget Version="2" Comment="For Printed Manuals" Type="PDF" Destinations="" ShowMadCapBacklink="true" GlossaryTermConversion="marked" ConditionTagExpression="include[General.PrintOnly], exclude[General.DoNotPublish or General.ScreenOnly]" RemoveImagesFromHeadings="true" InjectBookHeadings="true" PatchHeadingLevels="true" DisableAutoSync="true" MasterToc="/Project/TOCs/Variant Manager.fltoc">
+    <PrintedOutput CollapseMargins="true" GenerateTOCProxy="true" GenerateIndexProxy="false" GenerateGlossaryProxy="false" OutputFormat="docx" ExpandingTextConversion="expand" PopupConversion="expand" />
+    <Variables>
+        <Variable Name="Variables/BookSubTitle">User Guide</Variable>
+        <Variable Name="Variables/BookTitle">Variant Manager</Variable>
+        <Variable Name="Variables/BookVersion">2024.2</Variable>
+    </Variables>
+    <Destinations>
+        <Destination Link="/Project/Destinations/PDF Output.fldes" Publish="true" />
+    </Destinations>
+    <PDF PageMode="UseNone" PageLayout="OneColumn" CollapsedBookmarks="true" ConvertBookmarks="true" />
+</CatapultTarget>

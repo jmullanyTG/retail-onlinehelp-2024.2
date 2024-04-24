@@ -1,0 +1,26 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head>
+    </head>
+    <body>
+        <p> The <span class="Emphasis">Calculated</span> button extends  the <span class="Emphasis">Choose</span> columns functionality further by allowing users to create their own custom columns based on data in the grid. For example, if a user has a Stock On Hand metadata column and a Cost column, they can create a Cost on Hand column by SOH x Cost using the <span class="Emphasis">Expression Editor</span>.</p>
+        <p>
+            <img src="../Images/Order Manager/Create Calculated Column.png" class="LargeImages">
+            </img>
+        </p>
+        <ul>
+            <li><b>Column Name</b>: The name for the new calculated column</li>
+            <li><b>Column Type</b>: The data type for the new calculated column<ul><li><b>Integer</b>: Data that will consist only of whole numbers</li><li><b>Decimal</b>: Data that requires decimal precision</li><li><b>DateTime</b>: Data that specifies dates, times, or both</li><li><b>String</b>: Data that will be formatted and treated as text only</li><li><b>Boolean</b>: Binary (true/false) data</li></ul></li>
+            <li>
+                <p><b>Format String</b>: The way data in the new calculated field is to be formatted. </p>
+                <p>For example, entering #,###.00 yields numeric values with commas every three places to the left of the decimal and round to a static two decimal places to the right of the decimal. <span class="Emphasis">1000.9</span> is formatted as <span class="Emphasis">1,000.90</span> and <span class="Emphasis">10.891</span> formats <span class="Emphasis">10.89</span>. A format string of <span class="Emphasis">0,000.00</span> yields <span class="Emphasis">0010.89</span>. </p>
+                <p>Entering mm/dd/yyyy yields date values with two digits for month and day and four digits for year, with month, day, and year separated by slashes (for example, 11/19/2023).</p>
+                <p>
+                    <img src="../Images/Order Manager/Expression Editor.png" class="LargeImages">
+                    </img>
+                </p>
+            </li>
+        </ul>
+        <p>The <span class="Emphasis">Expression editor</span> allows users to write custom expressions with which to populate new calculated columns.  For more information on using the <span class="Emphasis">Expression Editor</span>, visit the following URL: <a href="https://documentation.devexpress.com/%23WindowsForms/CustomDocument6212">https://documentation.devexpress.com/#WindowsForms/CustomDocument6212.</a> </p>
+    </body>
+</html>

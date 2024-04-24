@@ -1,0 +1,87 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" xml:lang="en-us">
+    <head>
+        <link href="../../Resources/TableStyles/standard.css" rel="stylesheet" MadCap:stylesheetType="table" /><title></title>
+    </head>
+    <body>
+        <h1>About custom notifications</h1>
+        <p>Custom notifications can be configured and received  through the Default delivery method.</p>
+        <p>Custom Notifications are initiated by a scheduled task in the Job Manager or through a customized stored procedure that can only be configured by ToolsGroup JustEnough Professional Service or Support.</p>
+        <p>
+            <img src="../../Resources/Images/Notifications/Custom Notifications.png" class="LargeImages" />
+        </p>
+        <h2>Creating custom notifications</h2>
+        <ol>
+            <li>
+                <p>Click <span class="Emphasis">Notification Maintenance</span>. </p>
+                <p>The <span class="Emphasis">Notification Maintenance</span> screen displays.</p>
+            </li>
+            <li>
+                <p>Under the respective solution, click the<span class="Emphasis"> [+ Add Custom Notification]</span> row. </p>
+                <p>A new row displays.</p>
+            </li>
+            <li>In the Notification Properties panel:<ol style="list-style-type: lower-alpha;"><li>enter a notification title.</li><li>select the notification type.</li><li>enter the notification message.</li></ol></li>
+            <li>
+                <p>Click Preview on the toolbar to preview the custom notification message.</p>
+                <p>
+                    <img src="../../Resources/Images/Notifications/Preview a Custom Notification.png" class="LargeImages" />
+                </p>
+            </li>
+            <li>Click <span class="Emphasis">Save</span> to create the custom notification message.</li>
+        </ol>
+        <p>To initiate the custom notification, see <MadCap:xref href="Initiate Custom Notification Configuration.htm">Initiate Custom Notification Configuration</MadCap:xref>.</p>
+        <table class="TableStyle-standard" cellspacing="0" style="mc-table-style: url('../../Resources/TableStyles/standard.css');">
+            <col style="width: 93px;" class="TableStyle-standard-Column-Column1" />
+            <col class="TableStyle-standard-Column-Column2" />
+            <thead>
+                <tr class="TableStyle-standard-Head-Header1">
+                    <th class="TableStyle-standard-HeadE-Column1-Header1">
+                         Field 
+                    </th>
+                    <th class="TableStyle-standard-HeadD-Column2-Header1">
+                        Description 
+                    </th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">
+                         Solution 
+                    </td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">
+                        The notification solution depends on where the custom notification is initiated. The selection:                     <ul><li> determines which icon is used in the notification message that is sent to users.</li><li>can be used to sort messages in the Notification Inbox.</li></ul></td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">
+                      Title 
+                    </td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">Describes the purpose of the message. Follow corporate standards naming conventions, if applicable. The title  is not displayed in the message sent, but it is updated in the Notification subscription window. 
+                    </td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">
+                        Type 
+                    </td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">
+                        The notification type displays an icon according to the message type selected. The system defaults all custom notifications as a General notification type. The types are:                     <table style="width: 100%;"><col /><col /><tbody><tr><td><ul><li>Assignment</li><li>Completed</li><li>Error</li><li>General</li></ul></td><td><ul><li>Information</li><li>New Task</li><li>Warning</li></ul></td></tr></tbody></table></td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">
+                        Message
+                    </td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">
+                        The notification message is the content in a message, which also displays in the Notification Inbox.  
+                    </td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyB-Column1-Body1">
+                         UUID 
+                    </td>
+                    <td class="TableStyle-standard-BodyA-Column2-Body1">
+                         (read-only) The Universal Unique ID number is a system-generated identifier used when configuring the notification to be initiated in Job Manager or through a Customized Stored Procedure (CUSP hook). 
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </body>
+</html>

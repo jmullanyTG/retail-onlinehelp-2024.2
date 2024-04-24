@@ -1,0 +1,41 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" xml:lang="en-us">
+    <head><title></title>
+    </head>
+    <body>
+        <h1>Help Overview</h1>
+        <p>The <span class="Emphasis">Help</span> module manages the location and type of help documentation which the application can access. Details of the help context are displayed and maintained within the single help context management screen of the Help module. </p>
+        <ul>
+            <li><span class="Emphasis">Help Context Key</span> – The name used to identify the location in which the Help launches. The help context key is one of the module UIL files.</li>
+            <li><span class="Emphasis">Help Type</span> – The file type of the associated help document.<ul><li><span class="Emphasis">Open File</span> – A plain text file which is opened by an outside application on the client computer such as Microsoft (MS)&#160;Word or Notepad.</li><li><span class="Emphasis">HTML Help Pages</span> – A website which is accessible through a web browser. </li><li><span class="Emphasis">Microsoft Help</span> – A windows compatible  help file such as a .chm file.</li></ul></li>
+            <li><span class="Emphasis">HTML URL</span> – The destination URL if using an HTML type help document.</li>
+            <li><span class="Emphasis">MS Help File Location</span> – The file name if using an MS help file. All .chm files should be loaded into the database (using the files module) and can be referenced only by their full file name. </li>
+            <li><span class="Emphasis">MS Help Navigator Type</span> – The MS Help Navigator type assists the Help module in directing Help actions to the appropriate section within a .chm document. There are two types which should be used for most cases. The Help file opens to:<ul><li>a specific topic if the topic exists. Used to link to a specific segment of a larger .chm file (such as a sub-heading). Requires an accompanying MS Help Parameter to work. </li><li>the table of contents. Defaults to the table of contents for the .chm file. Default for module specific help. </li></ul><p class="BasicNote">The following are not intended for use with current Help files.</p><ul><li>the index. Opens to the index. </li><li>the search page. Opens to the search page. </li><li>the index entry for the first letter of a specified topic. Opens to the index entry for the first letter of a specified topic.</li><li>the topic with the specified index entry if one exists. Otherwise, the index entry closest to the specified keyword is displayed. Gives multiple options for how the file is opened.</li></ul></li>
+            <li><span class="Emphasis">MS Help Parameter</span> – If the help navigator type required a parameter (if using “the help file opens to a specific topic, if the topic exists”, a parameter is required), this field holds the parameter. </li>
+            <li><span class="Emphasis">Other File Location</span> – If using <span class="Emphasis">Open File</span>, this is the file path of the file. </li>
+        </ul>
+        <h2>Importing a help configuration (.jehc) file</h2>
+        <p>For most installations, the Help files are pre-loaded into the user interface by way of the database. During implementations, it may be necessary to import a Help Configuration (.jehc) file, which contains all of the appropriate file links.</p>
+        <h3>Creating or modifying entries</h3>
+        <p>If desired, users can create new entries or modify entries to point to a new location. This is useful for custom workflow screens which would benefit from specific Help documentation. </p>
+        <p>
+            <img src="../../Resources/Images/Help/Help Overview.png" class="LargeImages" />
+        </p>
+        <p>A new line may be added by clicking the <span class="Emphasis">Add</span> button. A highlighted row is deleted by clicking the <span class="Emphasis">Delete</span> button. Changes enable the <span class="Emphasis">Save</span> and <span class="Emphasis">Undo</span> buttons. </p>
+        <h4>Creating entries for MS help files (.chm)</h4>
+        <p>When building a Help configuration entry to accompany a .chm help file which has already been added to the database using the Files Module, there are a few tricks and tip that make the process easier:  </p>
+        <ol>
+            <li>Getting the Context Key – The context key is the module file name. As some of these can be quite verbose, an easy way to collect this syntax has been included. <ol><li><p>Navigate to the Module and click the help button or press <span class="Emphasis">F1</span>. The following window displays informing the user that no Help file currently exists. </p><p><img src="../../Resources/Images/Help/Help Overview_1.png" class="LargeImages" /></p></li><li><p>Click <span class="Emphasis">Yes</span>. </p><p>The context key syntax copies to the clipboard.</p></li></ol></li>
+            <li>Return to the Help Module and paste in the context key.</li>
+            <li>Getting the MS Help Parameter – If using the “help file opens to a specific topic, if the topic exists” option to link to a certain sub-heading within a .chm file, the required parameter must be included.<ol><li>Open the .chm file and browse to the desired sub-heading. </li><li>Right click and choose properties. </li><li>Under the <span class="Emphasis">Address (URL)</span> section, the end of the entry displays the file name and link for the specific sub-heading. </li></ol></li>
+            <p>
+                <img src="../../Resources/Images/Help/Help Overview_2.png" class="LargeImages" />
+            </p>
+            <li>Copy this syntax and paste it into the MS Help Parameter.</li>
+        </ol>
+        <h3>Importing and exporting help configuration files</h3>
+        <p>The most common way in which the Help is configured is via a full import of a .jehc file. This contains the links to the appropriate help file locations. However, it does not contain the Help files themselves. These must still be imported using the Files Module. </p>
+        <h2>Loading .chm help files into the database</h2>
+        <p>To load .chm help files into the database, the functionality included in the Files Module is the optimal tool (reference the Help in the Files Module). </p>
+    </body>
+</html>

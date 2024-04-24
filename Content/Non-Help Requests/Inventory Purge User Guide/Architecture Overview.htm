@@ -1,0 +1,51 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head>
+    </head>
+    <body>
+        <h1>Architecture Overview</h1>
+        <h2>Data</h2>
+        <p>The utility comprises a small set of tables, specific to Inventory Purge and referenced by no external artifacts.</p>
+        <p><span class="EmphasisItalic">Conceptually</span>: there is a <span class="EmphasisItalic">prescription</span> that comprises many individual steps.  It is immaterial whether data rows for a given Inventory exist for a Step to act upon.  Such is the construct of the Inventory Solution that, at the customer’s discretion, few, or many, features may be used, resulting in few, or many, tables being populated.  The full prescription assumes that the full breadth of features, per Inventory, have been used.  Thus, it searches out data wherever it is possible to find it and purges it at the correct time so as to abide by data-integrity rules.</p>
+        <p><span class="EmphasisItalic">At Execution</span>: the original Steps are evaluated, and several performance optimization actions may translate the <span class="EmphasisItalic">conceptual prescription</span> into an <span class="EmphasisItalic">execution prescription</span>.  These optimizations involve making the best use of the best index available on each <span class="Emphasis">Hard Delete</span> target table (see below for more on <span class="Emphasis">Hard Delete</span>.)  They also involve shuffling the execution sequence of groups of steps from the <span class="EmphasisItalic">conceptual prescription</span>.  The purpose of shuffling (<span class="EmphasisItalic">randomization</span>) is to reduce the number of concurrent threads accessing the same table and bumping into each other (blocking and deadlocking in technical terms).</p>
+        <p>There are five types of Step that may be assembled into a prescription:</p>
+        <ol>
+            <li>
+                <p><span class="Emphasis">Direct Hard Delete</span>: the most common operation; immediately removes rows from a single table. Where the target table’s existing indexing would result in a poor path to the rows to delete within SQL Server, the Type-1 row is cloned to a pair of Type-2 (ID-List Bulder) and Type-3 (Id-List-Driven Hard Delete) Steps, with optimal data access language elements generated to get to and remove the target rows.  The majority of Type-1 Steps are treated this way in reality, or the overall Solution would be hampered by an additional fifteen indexes just for this Purge Utility, which is highly undesirable!</p>
+            </li>
+            <li>
+                <p><span class="Emphasis">ID-List Builder</span>: for hard- or soft-deletion of related rows from a table that does not use the InventoryID as a key. Many Steps may populate the same ID-list from different source tables (typically link-tables).</p>
+            </li>
+            <li>
+                <p><span class="Emphasis">ID-List-Driven Hard Delete</span>: using a single previously built ID List.</p>
+            </li>
+            <li>
+                <p><span class="Emphasis">ID-List-Driven Soft Delete</span>: requires the prefix of the ID-list table, that the target table exists, the ID of which is a single int column. The inventory.PurgeStep row details the target table name and column that the ID-list ID matches to.</p>
+            </li>
+            <li>
+                <p><span class="Emphasis">Procedural Action</span>: invoke a stored procedure that may use zero, one, or many input lists of IDs from a prior ID-list-builder step.  For Custom procedures, there is no stipulation as to any table count, or row count limitations.  Batching logic is, however, strongly recommended for high-volume table DML actions.  Procedural delete code may issue soft- or hard-delete DML actions, or may perform un-link actions (e.g., removal of a Foreign Key, whether that be a column-referenced database artifact-enforced CONSTRAINT, or simply a denormalized reference-column).</p>
+            </li>
+        </ol>
+        <p>Soft deletes set a RowStatusID, or some variant of an ActiveFlag, in the target table row. A target Column Name is required, along with the soft-delete flag value to set. The target column name may not be exactly "InventoryID".</p>
+        <p>The Custom Step Definition section, later, will provide, where appropriate, greater detail about each type than is needed in this overview.</p>
+        <h3>Inventory Table Special Treatment</h3>
+        <p>The initial core prescription comprised over 120 <span class="Emphasis">conceptual</span> Steps, the last of which is to remove the Inventory parent row itself, which is explicitly numbered 999999.  During development, several operational restrictions were found that required the 999999 Step per Batch, a Type-1, <span class="Emphasis">Direct Hard Delete</span>, be cloned and the IDs the original Step worked upon be sharded into small Batches with one Step per Batch.</p>
+        <p>With all due deference to how SQL Server enables maximum concurrent access to a table, each shard comprises 4,500 / ( Active Index Count + 1) rows.  At initial incarnation there were FOUR active Indexes, CLUSTERED and NON-CLUSTERED, meaning each shard contained 900 rows.</p>
+        <p>The total lock counts for each DELETE cannot exceed approximately 5,120 or SQL Server will give one thread <span class="Emphasis">Exclusive</span> access to the table, causing potentially long delays for any other threads acting upon the same table.  As there were in excess of 60 active Foreign Keys that SQL could preemptively take at least one lock on the related table, 4,500 and the divisor stated above have been proven to deliver virtually no contention nor delays.  With respect to these 999999 child Batches, the Purge ensures that none of them may execute until all Steps in the <span class="EmphasisItalic">execution prescription</span> have completed successfully--core and custom Steps.</p>
+        <p>The original 999999 <span class="EmphasisItalic">conceptual prescription</span> Steps are removed from what will become the <span class="EmphasisItalic">execution prescription</span>.</p>
+        <h3>Overarching Custom Restrictions</h3>
+        <p>To reiterate, from above: No declarative referential integrity from a custom table to a core table is permitted with the solution.  Inventory Purge requires full adherence to this mandate.</p>
+        <h4>Important Notes</h4>
+        <ol>
+            <li>
+                <p>Deletion of the dbo.tbl_Inventory rows per Batch is carried out AFTER any Custom Step(s), and all Core Steps must be successful for any such custom step to execute.</p>
+            </li>
+            <li>
+                <p>If the utility should detect the absence of a targeted Custom table from the database’s tables catalog, it will log a Fatal Error and immediately force the cessation of all activity.</p>
+            </li>
+            <li>
+                <p>Any Custom Table Triggers <b style="text-decoration: underline;">MUST</b> reference CONTEXT_INFO to ensure the logic does not fire -- the utility sets the CONTEXT_INFO explicitly to x666 to render trigger logic inoperative.</p>
+            </li>
+        </ol>
+    </body>
+</html>

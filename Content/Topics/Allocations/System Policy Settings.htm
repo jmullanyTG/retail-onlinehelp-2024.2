@@ -1,0 +1,14 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" xml:lang="en-us">
+    <head><title></title>
+    </head>
+    <body>
+        <h1>System policy settings</h1>
+        <p>Several system policy vales must be set for the Allocations Module to function correctly. These policy values must be addressed as part of the business solution design process, or the IT solution design process. </p>
+        <h2>R Engine: Call to get the URL</h2>
+        <p>The use of the R Engine within the Compute Node Manager was deprecated with the call to get the URL reverting back to the previously existing system policy <span class="Emphasis">The RScript Service URL</span> (Module: Allocation). The reason is that R Engine did not go through the Compute Node Manager. It goes through a separate dispatch broker call.</p>
+        <p class="BasicNote">This system policy was previously hidden but is now visible.</p>
+        <h2>Configuring when to skip Allocation Strategy Inventory Cache calculations</h2>
+        <p>System policy <span class="Emphasis">Time Since Last Allocation Strategy Inventory Cache Calculation for Batch Exclusion</span> can be used to set when to skip an Allocation Strategy Inventory Cache calculation if it occurred within the specified time limit. The system policy is configured with the desired number of hours. If the value is set to a negative number, the default time interval of 18 hours is used.</p>
+    </body>
+</html>

@@ -1,0 +1,94 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head>
+    </head>
+    <body>
+        <h1>Editing price actions</h1>
+        <p>The <span class="Emphasis">Actions</span> tab provides the ability to create and manage price actions in price plans. As there is limited ability within the <span class="Emphasis">Actions</span> tab to change data specific price actions need to be opened in a separate tab for more extensive edits. The <span class="Emphasis">Edit</span> button only allows changes to the price action header. The <span class="Emphasis">Open</span> button opens the price action in a separate tab where detailed changes can be made.</p>
+        <p>
+            <img src="../../Resources/Images/Price Planning/Price Action Tab.PNG" class="LargeImages" />
+        </p>
+        <h2>Opening price actions in a separate tab</h2>
+        <p>To open a price action in a separate tab, either:</p>
+        <ul>
+            <li>double-click a price action in the <span class="Emphasis">Price Actions</span> grid on the <span class="Emphasis">Home</span> screen which displays the <span class="Emphasis">Actions</span> tab. </li>
+            <li>double-click a plan in the <span class="Emphasis">Plan</span> grid on the <span class="Emphasis">Home</span> screen. Navigate to the <span class="Emphasis">Actions</span> tab.</li>
+        </ul>
+        <p>In the <span class="Emphasis">Actions</span> tab, select a price action and click <span class="Emphasis">Open</span>.</p>
+        <p>Detailed information is available in the separate tab. In addition to the <span class="Emphasis">Price Actions</span> grid and the <span class="Emphasis">Clusters</span> grid, there is a <span class="Emphasis">Details</span> section. </p>
+        <p>
+            <img src="../../Resources/Images/Price Planning/Price Action Details grid.PNG" class="LargeImages" />
+        </p>
+        <p>Within the <span class="Emphasis">Details</span> section, the data that displays in the <span class="Emphasis">Variants</span> grid is at the Variant-Site level (the Filter Entity Type is Variant-Site). <MadCap:conditionalText MadCap:conditions="General.ScreenOnly">For more information on Filters, see <MadCap:xref href="../Filters/Creating a New Filter.htm">Creating a new filter</MadCap:xref>.</MadCap:conditionalText><MadCap:conditionalText MadCap:conditions="General.PrintOnly"> For more information, refer to the Filters User Guide.</MadCap:conditionalText></p>
+        <h3>Modifying pricing in the Variants grid</h3>
+        <p>New values for applicable Variant variables can be applied within the <span class="Emphasis">Variants</span> grid. The modified value is applied to all lower levels (i.e. Item and Item Location Detail). </p>
+        <p>
+            <img src="../../Resources/Images/Price Planning/Modify Values in the Details Grid.PNG" class="LargeImages" />
+        </p>
+        <p>Any differences within a level are denoted by a shaded cell. Lower level differences are noted by a marked <span class="Emphasis">Exception</span> checkbox. </p>
+        <h3>Additional detailed information</h3>
+        <p>To view and edit the details for multiple variants in a single screen, highlight the desired variants and click the <span class="Emphasis">Variant Details</span> button on the toolbar.</p>
+        <p>
+            <img src="../../Resources/Images/Price Planning/Variant Details Additional.PNG" class="LargeImages" />
+        </p>
+        <h2>Modifying price action header information</h2>
+        <p>A price action’s header information can be modified directly within the <span class="Emphasis">Actions</span> tab by clicking <span class="Emphasis">Edit</span> in the <span class="Emphasis">Price Actions</span> section. </p>
+        <p class="BasicNote">For more extensive editing, click <span class="Emphasis">Open</span> to open selected price actions in a separate tab.</p>
+        <p>Within the Price Manager screen:</p>
+        <ol>
+            <li>Double-click a Pricing Plan in the <span class="Emphasis">Home</span> screen to open the Plan in a new tab.</li>
+            <li>Select the <span class="Emphasis">Actions</span> tab.</li>
+            <li>Select a Price Action in the <span class="Emphasis">Price Actions</span> grid.</li>
+            <li>
+                <p>Click <span class="Emphasis">Edit</span> in the toolbar to display the <span class="Emphasis">Edit Price Action</span> dialog.</p>
+                <p>
+                    <img src="../../Resources/Images/Price Planning/Edit a Price Action dialog.png" class="LargeImages" />
+                </p>
+                <p class="BasicNote">The Price Strategies available to be selected are filtered based on the Price Action Strategy’s restricted User and Role access. If a Price Action Strategy was selected in the past that is no longer valid, the system retains the invalid Price Action Strategy. The invalid Price Action Strategy is no longer available once a different Price Action Strategy is selected.</p>
+                <p>The Price Action screen refreshes. If a new Strategy or Start Date is selected, then the system ensures that the Price and Cost values are still valid.</p>
+            </li>
+            <li>Revise the field values as required.</li>
+            <li>
+                <p>Click <span class="Emphasis">Ok</span>.</p>
+                <p>The <span class="Emphasis">Actions</span> tab automatically refreshes and displays the new values.</p>
+            </li>
+        </ol>
+        <h2>Running calculations</h2>
+        <p>The <span class="Emphasis">Calculate</span> button on the <span class="Emphasis">Price Actions</span> toolbar runs calculations on all clusters for the selected price action.</p>
+        <p>The <span class="Emphasis">Calculate</span> button on the <span class="Emphasis">Clusters</span> toolbar runs calculations on the selected cluster only.</p>
+        <p>Once a price action has been configured, click <span class="Emphasis">Calculate</span> to execute the Price Strategy’s configured prioritized calculations and validations, which are run at the lowest level, and displayed as a minimum and maximum in the Price Action Summary grid. </p>
+        <p>If there are any differences in entered variable information the <span class="Emphasis">Exception</span> checkbox is marked for easy identification. To view lower level calculated pricing information, click <span class="Emphasis">Detail</span> for the appropriate Variant details.</p>
+        <p class="BasicNote"> You cannot edit a Price Action while it is being calculated and validated by the system.</p>
+        <h2>Applying Price Matrixes to Clusters in a Price Action</h2>
+        <p>A Price Matrix can be applied to all the Clusters in a Price Action. To apply a Price Matrix, select the checkbox in the <span class="Emphasis">Apply Matrix To All</span> field in the <span class="Emphasis">Clusters</span> grid.</p>
+        <p>If a Price Matrix is applied to all the Clusters in a Price Action, then values that are not percents in all the other&#160;Clusters within the Price Action use the foreign currency equivalent from the exchange matrix that was imported into <span class="Emphasis">Price Point Matrix</span> module. For example, if the chosen Cluster is priced in Belgium/EUR at 4.99, then a second Cluster priced in Canada/USD updates to 6.00. (See following screenshot.)</p>
+        <p class="BasicNote">If the variable is a percent value, then the percent value applies as is to all sibling Clusters.</p>
+        <h4>The Price Point exchange matrix</h4>
+        <p>
+            <img src="../../Resources/Images/Price Matrix/Price Matrix screen with selections.png" class="LargeImages" />
+        </p>
+        <p>
+            <MadCap:conditionalText MadCap:conditions="General.ScreenOnly">For more information, see <MadCap:xref href="../Price Matrix/Price Matrix Overview.htm">Price Matrix overview</MadCap:xref>.</MadCap:conditionalText> <MadCap:conditionalText MadCap:conditions="General.PrintOnly">For more information, refer to the Price Matrix User Guide.</MadCap:conditionalText></p>
+        <h2>Changing the status of a price action</h2>
+        <p>For more information on using the Change Status(es) button, see <MadCap:xref href="Price Action Status.htm">Modify price action statuses</MadCap:xref>.</p>
+        <h2>Deleting price actions</h2>
+        <p>The <span class="Emphasis">Delete</span> button is hidden without the User Right to delete the Price Action based on the Price Action’s current status, if a workflow has been configured, or if the Price Action has already been exported.</p>
+        <p>
+            <img src="../../Resources/Images/Price Planning/Exported Price Actions.PNG" class="LargeImages" />
+        </p>
+        <div class="Note_BasicNote">
+            <p>For more information on managing Price Actions, see:</p>
+            <ul>
+                <li>
+                    <MadCap:xref href="Exclude Products from the Price Action.htm">Variant Site plans: Excluding or re-including a variant or site</MadCap:xref>
+                </li>
+                <li>
+                    <MadCap:xref href="Exclude a specific Site product from the Price Action.htm">Item Site plans: Excluding or re-including an item or item location </MadCap:xref>
+                </li>
+                <li>
+                    <MadCap:xref href="Excluding or re-including products at the Variant, Item Master, and Inventory levels.htm">Item Site plans: Advanced product exclusions</MadCap:xref>
+                </li>
+            </ul>
+        </div>
+    </body>
+</html>

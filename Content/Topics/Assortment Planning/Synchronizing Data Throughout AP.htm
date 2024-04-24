@@ -1,0 +1,156 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head>
+        <link href="../../Resources/TableStyles/standard.css" rel="stylesheet" MadCap:stylesheetType="table" />
+    </head>
+    <body>
+        <h1>Synchronizing data throughout Assortment Planning</h1>
+        <p>Throughout AP, the system may need to queue processing tasks to keep data synchronized. The following is a summary of the various asynchronous data processing tasks that may occur while using AP.</p>
+        <p class="BasicNote">The order in which the tasks start and stop does not matter.</p>
+        <table style="mc-table-style: url('../../Resources/TableStyles/standard.css');margin-left: auto;margin-right: auto;width: 100%;" class="TableStyle-standard" cellspacing="0">
+            <col class="TableStyle-standard-Column-Column1" style="width: 10%;" />
+            <col class="TableStyle-standard-Column-Column2" style="width: 20%;" />
+            <col class="TableStyle-standard-Column-Column1" />
+            <thead>
+                <tr class="TableStyle-standard-Head-Header1">
+                    <th class="TableStyle-standard-HeadE-Column1-Header1">Name</th>
+                    <th class="TableStyle-standard-HeadE-Column2-Header1">Description</th>
+                    <th class="TableStyle-standard-HeadD-Column1-Header1">Executes when...</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">
+                         Actualization 
+                    </td>
+                    <td class="TableStyle-standard-BodyE-Column2-Body1">
+                        Reaggregate detailed historical sales, stock on hand, and receipt data in order to better inform future plans. 
+                    </td>
+                    <td class="TableStyle-standard-BodyD-Column1-Body1">
+                        <ul>
+                            <li>
+                                <p>Variant assignment changes in main planning view. </p>
+                            </li>
+                            <li>
+                                <p>A new cluster is added to the assortment in main planning view &gt; <span class="Emphasis">Cluster Details</span>.</p>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">
+                         Allocation Push 
+                    </td>
+                    <td class="TableStyle-standard-BodyE-Column2-Body1">
+                         Push AP rate of sale, cluster assortment, minimum presentation, and phase dates to matched allocation strategies. 
+                    </td>
+                    <td class="TableStyle-standard-BodyD-Column1-Body1">
+                         The button <span class="Emphasis">Process Queue &gt; Push Allocations</span> is clicked in the main planning view. 
+                    </td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">
+                        Core Data Plan 
+                    </td>
+                    <td class="TableStyle-standard-BodyE-Column2-Body1">
+                        Ingest On Order data into future periods of the AP stock positioning plan. If configured, ingest AUT and/or Receipt AUC values from Variant-Site price and cost data. 
+                    </td>
+                    <td class="TableStyle-standard-BodyD-Column1-Body1">
+                        <ul>
+                            <li>
+                                <p>Variant assignment changes in main planning view. </p>
+                            </li>
+                            <li>
+                                <p>A new cluster is added to the assortment in main planning view &gt; <span class="Emphasis">Cluster Details</span>.</p>
+                            </li>
+                            <li>
+                                <p> Placeholder phase dates are extended in main planning view, Collection View, or the Cluster Sets side pane.</p>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">
+                        External Import 
+                    </td>
+                    <td class="TableStyle-standard-BodyE-Column2-Body1">
+                         If configured, ingest any AP data from external systems into various AP metrics. 
+                    </td>
+                    <td class="TableStyle-standard-BodyD-Column1-Body1">
+                        <ul>
+                            <li>
+                                <p>Variant assignment changes in main planning view. </p>
+                            </li>
+                            <li>
+                                <p>A new cluster is added to the assortment in main planning view &gt; <span class="Emphasis">Cluster Details</span>.</p>
+                            </li>
+                            <li>
+                                <p> Placeholder phase dates are extended in main planning view, Collection View, or the Cluster Sets side pane.</p>
+                            </li>
+                            <li>
+                                <p> The button Process Queue &gt; <span class="Emphasis">Recalculate External</span> is clicked in main planning view.</p>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">
+                        Receipt Plan 
+                    </td>
+                    <td class="TableStyle-standard-BodyE-Column2-Body1">
+                         Recalculate suggested receipts based on the sales plans and receipt constraints. 
+                    </td>
+                    <td class="TableStyle-standard-BodyD-Column1-Body1">
+                        <ul>
+                            <li>
+                                <p>A new placeholder is created through the New, Hindsight, Duplicate, Split, or Smart Start processes.</p>
+                            </li>
+                            <li>
+                                <p> Receipt flow dates are changed through the Manage &gt; Receipt Periods screen.</p>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">
+                        Replen Import 
+                    </td>
+                    <td class="TableStyle-standard-BodyE-Column2-Body1">
+                       Ingest replenishment data into AP sales, receipt. and stock positioning plans. 
+                    </td>
+                    <td class="TableStyle-standard-BodyD-Column1-Body1">
+                        <ul>
+                            <li>
+                                <p>Data Source configurations are changed for Replen-type items. </p>
+                            </li>
+                            <li>
+                                <p>Placeholder status is changed to Replen. </p>
+                            </li>
+                            <li>
+                                <p>A new cluster is added to the assortment in main planning view &gt; <span class="Emphasis">Cluster Details</span>. </p>
+                            </li>
+                            <li>
+                                <p>The button Process Queue &gt; <span class="Emphasis">Recalculate Replenishment</span> is clicked in main planning view.</p>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyB-Column1-Body1">
+                        Retrend 
+                    </td>
+                    <td class="TableStyle-standard-BodyB-Column2-Body1">
+                        Calculate a suggested Rate of Sale based on actualized sales history. 
+                    </td>
+                    <td class="TableStyle-standard-BodyA-Column1-Body1">
+                        The button Process Queue &gt; <span class="Emphasis">Retrend</span> is clicked in main planning view. 
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <p>Users receive notifications when these actions are queued and when they are completed.  For example, after adding a Cluster assortment to a placeholder in <span class="Emphasis">External</span> status, the following work was completed and notifications were sent:</p>
+        <p>
+            <img src="../../Resources/Images/Assortment Planning/Asynchronous Data Processing Tasks Notifications.png" class="LargeImages" />
+        </p>
+    </body>
+</html>

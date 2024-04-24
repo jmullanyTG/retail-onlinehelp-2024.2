@@ -1,0 +1,117 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head>
+        <link href="../../Resources/TableStyles/standard.css" rel="stylesheet" MadCap:stylesheetType="table" />
+        <link href="../../Resources/TableStyles/standard.css" rel="stylesheet" MadCap:stylesheetType="table" />
+    </head>
+    <body>
+        <h1>Promotion Detail View tab</h1>
+        <p>The <span class="Emphasis">Promotion Detail View</span> tab provides flexibility and visibility to promotions applied to placeholders across time and geography. This lets users effectively manage all active placeholder promotions at one time in one view. This view is modifiable and cluster set clusters can be opted in to participate in a particular promotion application.</p>
+        <p>
+            <img src="../../Resources/Images/Assortment Planning/Promotion Detail View tab.png" class="LargeImages" />
+        </p>
+        <p>Filter in the data area can be dragged into the Pivot Grid.</p>
+        <h2>Parameters</h2>
+        <p>In addition to the parameters found in the <span class="Emphasis">Assortment Promotion</span> tab, the <span class="Emphasis">Promotion Detail View</span> tab includes the following:</p>
+        <table style="width: 100%;margin-left: auto;margin-right: auto;mc-table-style: url('../../Resources/TableStyles/standard.css');" class="TableStyle-standard" cellspacing="0">
+            <col class="TableStyle-standard-Column-Column1" />
+            <col class="TableStyle-standard-Column-Column2" />
+            <thead>
+                <tr class="TableStyle-standard-Head-Header1">
+                    <th class="TableStyle-standard-HeadE-Column1-Header1">Parameter</th>
+                    <th class="TableStyle-standard-HeadD-Column2-Header1">Description</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyB-Column1-Body1">Promotion Applications</td>
+                    <td class="TableStyle-standard-BodyA-Column2-Body1">
+                     Allows for the selection of all Active and Inactive Promotion Applications as defined in the <span class="Emphasis">Promotions Definitions</span> tab.  
+                        <p>For more information, see <MadCap:xref href="Promotions Screen Parameters.htm">Promotions Screen Parameters</MadCap:xref>.</p></td>
+                </tr>
+            </tbody>
+        </table>
+        <h2>Pivot grid fields</h2>
+        <table style="width: 100%;margin-left: auto;margin-right: auto;mc-table-style: url('../../Resources/TableStyles/standard.css');" class="TableStyle-standard" cellspacing="0">
+            <col class="TableStyle-standard-Column-Column1" />
+            <col class="TableStyle-standard-Column-Column2" />
+            <thead>
+                <tr class="TableStyle-standard-Head-Header1">
+                    <th class="TableStyle-standard-HeadE-Column1-Header1">Field</th>
+                    <th class="TableStyle-standard-HeadD-Column2-Header1">Description</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1"><span class="Emphasis">Included?</span>
+                    </td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">
+                      Whether cells are included or not. When checked for the first time, users need to assign a new promotion index before proceeding. If a user unchecks a checked field, then the promotion index is removed.  
+                        <p>Checking or unchecking a promotion from each time period and cluster acts as an override to previous assignments.</p><p class="BasicNote">A square fill in indicates that some periods are skipped in the life of the promotion.</p></td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyB-Column1-Body1"><span class="Emphasis">Promo Index</span>
+                    </td>
+                    <td class="TableStyle-standard-BodyA-Column2-Body1">
+                     Displays the index is for the plan.  
+                        <p>Adjusting index values for each placeholder by time period and cluster acts as an override to previous assignments.</p><p>For example, <span class="Emphasis">1.4</span> means there is a 40% lift in sales plan units while the promotion is in effect.</p></td>
+                </tr>
+            </tbody>
+        </table>
+        <h2>Grid formatting scheme</h2>
+        <p>The cells in the grid follow the formatting scheme indicated below:</p>
+        <table style="width: 100%;margin-left: auto;margin-right: auto;mc-table-style: url('../../Resources/TableStyles/standard.css');" class="TableStyle-standard" cellspacing="0">
+            <col class="TableStyle-standard-Column-Column1" />
+            <col class="TableStyle-standard-Column-Column2" />
+            <thead>
+                <tr class="TableStyle-standard-Head-Header1">
+                    <th class="TableStyle-standard-HeadE-Column1-Header1">Color</th>
+                    <th class="TableStyle-standard-HeadD-Column2-Header1">Description</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">Lighter gray</td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">Past periods</td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">Darker gray</td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">
+                         Non-editable periods 
+                        <p>See below for why metadata might be non-editable.</p></td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">Blue</td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">Editable regular periods</td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">Green</td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">Editable promotion periods</td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">Yellow</td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">Editable markdown periods</td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">Bold</td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">Active promotions</td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyB-Column1-Body1">Italicized</td>
+                    <td class="TableStyle-standard-BodyA-Column2-Body1">Inactive promotions</td>
+                </tr>
+            </tbody>
+        </table>
+        <h2>Why promotion metadata may be non-editable</h2>
+        <p>Promotion metadata may be non-editable if: </p>
+        <ul>
+            <li>It is in the past.</li>
+            <li>It is a replenishment item.</li>
+            <li>The placeholder is part of the promotion header’s exclusion list.</li>
+            <li>The engine status is queued or processing.</li>
+            <li>The item is not assorted to the given cluster set / cluster.</li>
+            <li>The item is not in phase for the selected time periods.</li>
+            <li>The item is in markdown and the Apply to Markdowns setting is off.</li>
+        </ul>
+    </body>
+</html>

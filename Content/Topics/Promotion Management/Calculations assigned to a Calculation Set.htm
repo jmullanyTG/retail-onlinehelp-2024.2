@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" xml:lang="en-us">
+    <head><title></title>
+    </head>
+    <body>
+        <h1>Considerations when assigning calculations to calculation sets</h1>
+        <p> A promotion strategy referencing the Calculation Set runs in the order listed in the <span class="Emphasis">Calculation Set Calculations</span> grid.</p>
+        <h2>Calculations and level</h2>
+        <p>User entered values, such as promoted price, amount off and percent off, are at the Promotion level, with possible overrides at lower levels (i.e. Group, Variant or Item levels). However, Promotion Price, Promotion Price High and Promotion Price Low values cannot be immediately calculated at this high level since individual product pricing data is stored at the lowest Item level.</p>
+        <h2>Ensuring necessary values roll up accurately</h2>
+        <p>It is an important first step in a Calculation Set to fill down manually entered values (promoted price, amount off dollar off, total promotional price , etc.) that will be used to calculate Promotion Price down to the lowest level. This ensures that all necessary values can be rolled up accurately.</p>
+        <p>After the values have been pushed to the lowest level, it may be necessary, depending on the type of Promotion Strategy, to calculate the Promotion Price at the lowest level. For promoted discount Promotion Strategies, the Promotion Price at the lowest level must be calculated and set based on the Item’s EDLP and the keyed promoted discount values.</p>
+        <h3>Notes</h3>
+        <p>This is not needed for a Fixed Promotion Strategy since the manually entered value that is filled down is the actual Promotion Price and can be rolled up as needed. </p>
+        <p>For any EDLP Promotion Strategy (e.g. EDLP, BOGO AA Free, BOGO AB Free, etc.), the EDLP price is already stored at the lowest level and does not need to be filled down. </p>
+        <p>Calculations must be performed in a bottom up approach for the system to derive the calculated lower levels to higher promotional aggregation levels. For example, a calculation using the Promotion Price for each Item in a product group is used to calculate the product group’s Promotion Price. </p>
+        <p>The Promotion Price High of the product group is determined by the highest Promotion Price of the products in the product group. A similar calculation is performed for the product group’s Promotion Price Low.</p>
+        <p>These calculated values for the Promotion’s product groups are then rolled up to calculate Promotion Price High and Promotion Price Low at the Promotion Aggregate level.</p>
+        <p>For promoted discount Promotion Strategies, the high and low promoted discount values are usually presented to the customer. Calculating these high and low amounts should follow the same bottom up approach as Promotion Price, once the manually entered discount is pushed to the lowest level.</p>
+    </body>
+</html>

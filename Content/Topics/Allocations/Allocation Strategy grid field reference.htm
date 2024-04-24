@@ -1,0 +1,334 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" xml:lang="en-us">
+    <head>
+        <link href="../../Resources/TableStyles/standard.css" rel="stylesheet" MadCap:stylesheetType="table" /><title></title>
+    </head>
+    <body>
+        <h1>Allocation Strategy field reference</h1>
+        <p>The following fields are available on the <span class="Emphasis">Allocation Strategy</span> screen:</p>
+        <ul>
+            <li><span class="Emphasis">Active Flag</span> – Checked if the strategy is currently active.</li>
+            <li><span class="Emphasis">Actual Rate of Sale</span> – Actualized rate of sale based on sales history. </li>
+            <li><span class="Emphasis">Allocate Strategy ID</span> – A unique identifier for the strategy line. Any active product groups are assigned a unique allocate strategy ID. </li>
+            <li>
+                <p><span class="Emphasis">Allocation Strategy Selection</span> – Defines the strategy bucket used to classify the strategy. Typically, these strategy selections are determined by product life cycle status. This field drives which exceptions are triggered, how some of the settings are applied, and which process (Allocations or Replenishment) manages the item. </p>
+                <ul>
+                    <li><span class="Emphasis">New Item</span> – An item without sales history, or with a minimal volume of sales history data which has been deemed insufficient to drive allocation measures. <span class="Emphasis">New Item</span> can be used to drive initial load supply chains (e.g. circumventing regional distribution centers). The individual supply chain mapping configuration for the different strategy selection values is maintained in the Supply Chain Map Configuration maintenance view. New Items are managed by the Allocations engine.</li>
+                    <li><span class="Emphasis">Ongoing Item</span> – An item which has multiple points of sales history data. This item can have a re-trending method applied to the sales projection. Ongoing items are managed by the Allocations engine.</li>
+                    <li><span class="Emphasis">Replenishment</span> – An item which no longer needs to be managed at the strategy level and can be put on an automated replenishment strategy. Replenishment items are managed by the Replenishment engine, which takes over responsibility from the Allocations engine for executing processes and providing item-related information. The strategy line is read-only when this option is selected.</li>
+                </ul>
+            </li>
+            <li>
+                <p><span class="Emphasis">Allowed Channels</span> -  Whether there is one or more channels depends on whether an omni-channel strategy is allowed. If allowed, then one strategy can have multiple channels. If an omni-channel environment is not allowed, then the strategy is broken down into multiple strategies each with 1 channel. </p>
+                <p>A new strategy is always created when a strategy is activated using <span class="Emphasis">Strategy Activation</span> view. To add channels in existing strategies without going into the <span class="Emphasis">Strategy Activation</span> view and creating unwanted strategies, click within this field and select the ellipsis to display the <span class="Emphasis">Allowed Channels</span> dialog. The <span class="Emphasis">Allowed Channels</span> dialog is used to add and remove channels as needed. </p>
+            </li>
+            <li><span class="Emphasis">Allow Reservation</span> – Ensures that all stores that were set up to have reservation quantities receive their reserved stock quantities.</li>
+            <li><span class="Emphasis">Calculate Allocation</span> – Formatted in orange if there are changes made to the allocation strategy. </li>
+            <li><span class="Emphasis">Channels In Use</span> -  The channel or channels associated with the strategy. Which channels are allowed displays in the <span class="Emphasis">Allowed Channels</span> field.</li>
+            <li><span class="Emphasis">Cluster Sets</span> – (For users with the Site Clustering module) Location strategies may be defined by selecting specific site grades within cluster sets (cluster sets must be configured for use with Allocations). A location strategy value of <span class="Emphasis">Cluster based all sites</span> must be set to use cluster sets to define the effective location strategy. Location exceptions are still applicable. For more information, see <MadCap:xref href="../Cluster Site Manager/Viewing Collection Set Configuration.htm">Configuring a cluster collection  set</MadCap:xref>.</li>
+            <li>
+                <p><span class="Emphasis">Code</span> – The identifying code for the level ID associated with the strategy. This is the item master group code of the hierarchical level defined in the allocation hierarchy. </p>
+            </li>
+            <li>
+                <p><span class="Emphasis">Create Save Point</span> – Creates a Save Point. </p>
+                <p>All the information relating to the strategy including location exceptions is saved. Users can then go to the <span class="Emphasis">Allocate Strategy Save Point</span> screen and mass apply a Save Point to all the variants in the Item Filter.</p>
+            </li>
+            <li><span class="Emphasis">Demand Rate of Sale</span> – The rate of sale currently being applied to the phase period (defined as the period between the phase-in date or current date and the phase-out date). </li>
+            <li>
+                <p><span class="Emphasis">Demand Type</span> – Determines the driver for the demand signal. This setting also determines which fields within the allocation strategy are and are not relevant to shaping the demand signal. </p>
+                <ul>
+                    <li><span class="Emphasis">Total Sales Quantity</span> – Input the Total Sale Demand Units for the Phase In / Phase Out period. This value is used to determine the average weekly ROS by spreading it across the stores and weeks between the Phase In / Phase Out.</li>
+                    <li><span class="Emphasis">Rate of Sale</span> – For use with rate of sale type plans. </li>
+                    <li><span class="Emphasis">Total Available Quantity</span> – Allocation based on total available quantity while protecting the size curve.</li>
+                    <li>
+                        <p><span class="Emphasis">Total Push</span> – Allocates all available inventory in the selected inventory sources at one time.  A specific quantity to push can be designated by entering a value in the <span class="Emphasis">Push Qty</span> field. </p>
+                        <p>Total push demand type prioritizes the movement of stock from the DC and violates store level constraints or ideal stock quantities such as phase in, phase out, and max stock. </p>
+                    </li>
+                    <li><span class="Emphasis">Rate of Sale by Grade</span> – (For users with access to the Rate of Sale Calculator module) A rate of sale value by cluster grade can be applied to individual locations. A location strategy of cluster based must be specified, and site clusters must be selected to define the location strategy for this demand type. Included grades by cluster set must be configured within the allocate cluster rate of sale view.</li>
+                </ul>
+            </li>
+            <li><span class="Emphasis">Description</span> – A description accompanying the code. This is the item master group description of the hierarchical level defined in the allocation hierarchy.</li>
+            <li><span class="Emphasis">Dynamic SS&#160;Policies</span> - (read-only) If the checkbox is checked, then the strategy has dynamic safety stock policies. </li>
+            <li><span class="Emphasis">Eligible Channel</span> – A configurable named site group, or the explicit channel attribute. Additional site groups may be returned as required. Informational only. </li>
+            <li><span class="Emphasis">Engine Run Date</span> – A date field showing the last time the allocation strategy was calculated.</li>
+            <li>
+                <p><span class="Emphasis">Exception Status</span> – If required configuration elements are missing from the strategy or if it is ready to allocate. If there are no blocking exceptions, then <span class="Emphasis">Ready to Allocate</span> displays. </p>
+                <p>To view exceptions, click within the <span class="Emphasis">Exception Status</span> field and then click <span class="Emphasis">View</span> to launch the <span class="Emphasis">Allocations Strategy Exceptions</span> dialog.</p>
+                <p>
+                    <img src="../../Resources/Images/Allocations/Exception Status List.PNG" class="LargeImages" />
+                </p>
+                <h3>Exceptions</h3>
+                <p>Exceptions include:</p>
+                <table style="width: 100%;margin-left: auto;margin-right: auto;mc-table-style: url('../../Resources/TableStyles/standard.css');" class="TableStyle-standard" cellspacing="0">
+                    <col class="TableStyle-standard-Column-Column1" style="width: 20%;" />
+                    <col class="TableStyle-standard-Column-Column2" style="width: 80%;" />
+                    <thead>
+                        <tr class="TableStyle-standard-Head-Header1">
+                            <th class="TableStyle-standard-HeadE-Column1-Header1">Exception</th>
+                            <th class="TableStyle-standard-HeadD-Column2-Header1">Description</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr class="TableStyle-standard-Body-Body1">
+                            <td class="TableStyle-standard-BodyE-Column1-Body1">Channel Migration Overlap Detected</td>
+                            <td class="TableStyle-standard-BodyD-Column2-Body1">An allocation strategy had overlapping channels and were not migrated.</td>
+                        </tr>
+                        <tr class="TableStyle-standard-Body-Body1">
+                            <td class="TableStyle-standard-BodyE-Column1-Body1">Missing Channel Configuration</td>
+                            <td class="TableStyle-standard-BodyD-Column2-Body1">An allocation strategy has no associated channels; therefore, the strategy cannot be processed.</td>
+                        </tr>
+                        <tr class="TableStyle-standard-Body-Body1" MadCap:conditions="General.DoNotPublish">
+                            <td class="TableStyle-standard-BodyB-Column1-Body1">Overlapping Channel Configuration</td>
+                            <td class="TableStyle-standard-BodyA-Column2-Body1">&#160;</td>
+                        </tr>
+                    </tbody>
+                </table>
+                <p>Allocation strategies detect if the Size Model used contains any Exceptions. The following message displays:</p>
+                <table style="width: 100%;margin-left: 0;margin-right: auto;mc-table-style: url('../../Resources/TableStyles/standard.css');" class="TableStyle-standard" cellspacing="0">
+                    <col class="TableStyle-standard-Column-Column1" style="width: 20%;" />
+                    <col class="TableStyle-standard-Column-Column2" style="width: 80%;" />
+                    <thead>
+                        <tr class="TableStyle-standard-Head-Header1">
+                            <th class="TableStyle-standard-HeadE-Column1-Header1">Exception</th>
+                            <th class="TableStyle-standard-HeadD-Column2-Header1">Description</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr class="TableStyle-standard-Body-Body1">
+                            <td class="TableStyle-standard-BodyB-Column1-Body1">Bad Size Model Detected</td>
+                            <td class="TableStyle-standard-BodyA-Column2-Body1">An exception has been detected in the used Size Model. Please navigate to the Size Models module to review the model or select an alternative size model. Recalculate the allocation strategy once the exception has been addressed.</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </li>
+            <li><span class="Emphasis">Has A Related Strategy</span> - Displays which strategies have a relationship. The relationship is either a Prepack or a Channel.</li>
+            <li><span class="Emphasis">Holdback %</span> - Defines a quantity of stock to reserve in the warehouse or distribution center.  </li>
+            <li><span class="Emphasis">Holdback Qty</span> – A holdback quantity instead of a holdback percentage if desired. The holdback quantity is applied at a variant level allowing Allocators to reserve a fixed quantity of stock in reserve for new store openings or other related purposes. Holdback quantity is not applicable to product groups.</li>
+            <li>
+                <p><span class="Emphasis">Inventory Source Rule</span> – Defines the priority for the sourcing of stock.  </p>
+                <ul>
+                    <li><span class="Emphasis">No Priority</span> – No source priority should be applied. This applies to selected DC and PO stock restrictions as well (i.e. absolutely no restrictions are placed). </li>
+                    <li><span class="Emphasis">PO Only</span> – Only use purchase orders.</li>
+                    <li><span class="Emphasis">PO then WH</span> – Source from purchase orders first, then warehouse stock.</li>
+                    <li><span class="Emphasis">Warehouse Only</span> – Only use warehouse stock.</li>
+                    <li><span class="Emphasis">WH then PO</span> – Source from warehouse stock first, then purchase orders. </li>
+                    <li><span class="Emphasis">PH Only</span> – Use only placeholder stock.</li>
+                    <li><span class="Emphasis">PH + Available</span> – Use placeholder stock, then any available stock. </li>
+                </ul>
+            </li>
+            <li>
+                <p><span class="Emphasis">Item Exceptions</span> – Any and all item level exceptions which have been triggered appear in this field. Multiple exceptions can be viewed in the exception detail view. </p>
+                <h4>New item exceptions</h4>
+                <ul>
+                    <li>
+                        <p><span class="Emphasis">Undefined Product Model</span> – An item without a selected product model.</p>
+                    </li>
+                    <li><span class="Emphasis">Unallocated Weeks Before Set</span> – For new items, the difference in time between the current week and the scheduled set week are less than the defined lead time.</li>
+                </ul>
+                <h4>Both new item and ongoing exceptions</h4>
+                <ul>
+                    <li><span class="Emphasis">Missing Actionable Inventory</span> - The allocation strategy does not have any available inventory.</li>
+                    <li><span class="Emphasis">Phase Window Exceeds Limit</span> – The phase window (defined as the number of days between the phase-in and phase-out dates) exceeds the allowed quantity as defined by the system policy for the phase window.</li>
+                    <li><span class="Emphasis">Size Model to Range Mismatch</span> – The allocation strategy has a size model that does not cover all of the sizes for the selected item or product group.</li>
+                    <li><span class="Emphasis">Supply Chain Incomplete</span> – An Inventory does not have an associated DC or Store as a source site priority.</li>
+                    <li><span class="Emphasis">Undefined Size Model Option</span> – An item without a selected size model.</li>
+                    <li><span class="Emphasis">Undefined Strategy Location</span> – An item without a selected location strategy.</li>
+                    <li><span class="Emphasis">Undefined Temporal Plan</span> – An item which has been defined as using an imported plan sales type curve, without a plan selected.</li>
+                </ul>
+                <h4>Allocation item exceptions </h4>
+                <p>Item level exceptions which may or may not be blocking.</p>
+                <h4>New item exceptions</h4>
+                <p>The Item is defined as <span class="Emphasis">New Item</span>:</p>
+                <ul>
+                    <li><span class="Emphasis">Item Recording Selling</span> – The Item has actualized selling of more than 3 periods.</li>
+                    <li><span class="Emphasis">In DC Missing Cutoff</span> – The goods will not arrive in time to be ordered and arrive in store by the Phase In date.  There is no DC OH or store OH and the Projected PO Receipt Date is greater than the Phase In date minus the lead time.</li>
+                    <li><span class="Emphasis">Purchase Order, No Allocation</span> – The Item has purchase orders at DC and no Stock OnHand in the stores and no orders have been generated.</li>
+                    <li><span class="Emphasis">Stock On Hand, No Sales</span> – The Item has warehouse OH and no Stock OnHand in the stores and no units in transit to the stores.</li>
+                </ul>
+                <h4>Ongoing allocations</h4>
+                <ul>
+                    <li><span class="Emphasis">Out of Stock</span> – There is not enough inventory to fill the projected weeks of cover between today and the Phase Out date.</li>
+                    <li><span class="Emphasis">Below Min SOH</span> – There is not enough inventory to fill the projected weeks of cover.  At least 1 store will be below the minimum stock OH.</li>
+                    <li><span class="Emphasis">Markdown Upcoming</span> – the specified MD Date is within the defined weeks of cover, or the MD Date is the week after the current week.</li>
+                    <li><span class="Emphasis">Phase-Out Upcoming</span> - the specified Phase Out Date is within the defined weeks of cover, or the Phase Out Date is the week after the current week.</li>
+                    <li><span class="Emphasis">Incoming MD, Below Sell-thru</span> - The projected sell thru % at the item defined Markdown Date is less than the item defined sell thru %.</li>
+                    <li><span class="Emphasis">Purchase Order, No Allocation</span> – Item is defined as “Ongoing Allocation” and the incoming Purchase Order at DC has not been allocated and the receipt date is with the weeks of cover.</li>
+                    <li><span class="Emphasis">Aged DC Inventory</span> – Item is defined as “Ongoing Allocation” and the Warehouse stock OH is greater than 0 and there has been sales recorded for 13 weeks and no reduction in DC Inventory.</li>
+                    <li><span class="Emphasis">Flow Expected, No Receipt</span> – The Store Purchase Order receipt date is before the current week, but the goods have not arrived.</li>
+                </ul>
+                <h4>Both new item and ongoing exceptions</h4>
+                <ul>
+                    <li><span class="Emphasis">Actual Qty Above Expected Qty</span> - The actualized PO receipt for the week is greater than 105% of the total expected units from the purchase order.</li>
+                    <li><span class="Emphasis">Actual Qty Below Expected Qty –</span> The actualized PO receipt for the week is less than 95% of the total expected units from the purchase order.</li>
+                    <li><span class="Emphasis">Unable to Fulfill Pending Orders</span> – Pending Orders will not be fulfilled due to a lack of stock OH and/or incoming order.</li>
+                </ul>
+            </li>
+            <li><span class="Emphasis">Last AP Push</span> - When the Assortment Planning module last updated the Allocations module.</li>
+            <li><span class="Emphasis">Location Strategy</span> – Displays the selected location strategy for the allocation. If the location strategy column is bolded, an override has been applied to that allocation strategy’s location strategy. The location strategy contains a group of sites which are the intended destination for the allocated stock. </li>
+            <li><span class="Emphasis">Markdown Date</span> – The planned date on which the product is to be marked down. </li>
+            <li><span class="Emphasis">Max Retrend WOC</span>: Shows the MAX Value of (Total Retrend Forecast within the WOC End Date - Total Forecast within same date range) / Total Forecast for phase window WOC End Date is pretty complex but it boils down to today's date + RC + Days of Cover.</li>
+            <li><span class="Emphasis">Max Stock</span> – A maximum stock constraint for each site contained within the location strategy. Set for the allocation strategy level (typically style-color).  </li>
+            <li>
+                <p><span class="Emphasis">Maximum Prepack Overage Allowed</span> – An editable number between 1 and 100 as a percentage. Implements a ceiling for incomplete prepacks that the system recommends.</p>
+                <p>Consider the following scenarios of varying prepack demands for a prepack of 5 units and a threshold of 41%:</p>
+                <ul>
+                    <li>1 single unit of demand = 1/5 prepack = 20% &lt; 41%, therefore round up and send the full prepack</li>
+                    <li>2 units = 2/5 = 40%, therefore send a full prepack</li>
+                    <li>3 units = 60% which is greater than 41% therefore a prepack is not sent</li>
+                </ul>
+            </li>
+            <li><span class="Emphasis">Min Stock per Size</span> – Item master level safety stock.  </li>
+            <li><span class="Emphasis">Phase In Date</span> – The date on which the items will be set or placed on sale within the stores. The phase-in date is the starting anchor point for the demand signal.</li>
+            <li><span class="Emphasis">Phase Out Date</span> – The end-of-life or clearance date of the product. Strategy will no longer be considered or calculated if it is outside of Phase Out date. If not entered, the default calculation is six months from the Phase In date.</li>
+            <li>
+                <p><span class="Emphasis">Placeholder Stock</span> – Allows for Allocators to specify a stock quantity that is expected to be ordered for allocation. This allow Allocators to determine the result of an allocation based on a mock quantity to ensure the sizing and quantity is sufficient to meet the allocation constraints of a given strategy.</p>
+                <ul>
+                    <li><span class="Emphasis">Direct Ship Functionality</span> – Users wishing to execute orders based on opportunity buys may create direct supplier orders by using placeholder stock. When placeholder stock is selected as an inventory source and users have keyed in a placeholder quantity, orders will be generated as direct supplier orders to the sites contained in the location strategy. These order recommendations may be approved and actioned upon within Order Manager when selecting a “from strategy” allocation order.</li>
+                </ul>
+            </li>
+            <li>
+                <p MadCap:conditions="General.DoNotPublish"><span class="Emphasis">Prepack Run Mode</span> – Default is NULL. Allows for the selection by strategy line of the mode for a prepack Assignment. The default is set by the system policy <span class="Emphasis">Allocate Prepack Run Mode</span>.The three possible modes are:</p>
+                <ul>
+                    <li MadCap:conditions="General.DoNotPublish"><span class="Emphasis">Match Process By Match Process</span>:</li>
+                    <li MadCap:conditions="General.DoNotPublish"><span class="Emphasis">Period by Period</span>:</li>
+                    <li>
+                        <p MadCap:conditions="General.DoNotPublish"><span class="Emphasis">Skip Perfect Fit</span>: Similar to Period by Period mode, but ignores the perfect fit step.</p>
+                        <p class="BasicNote" MadCap:conditions="General.DoNotPublish">Thresholds need to be set to 51% or higher to get desirable results.</p>
+                    </li>
+                </ul>
+            </li>
+            <li>
+                <p><span class="Emphasis">Presentation Priority</span> – Defines what to do in a constrained situation: </p>
+                <ul>
+                    <li>
+                        <p><span class="Emphasis">Order Multiple &gt; Presentation &gt; Demand</span> – Prioritizes coverage to ensure all locations receive units, then fulfills minimum presentation requirements for all locations, then addresses demand. If there is not enough stock available to cover all stores, then global site priority is used to determine which stores get coverage.</p>
+                        <p>It is important to note that the Engine uses the term Need which is comprised of multiple components such as Coverage, Safety stock, and Demand to determine what each site is requesting to generate recommended orders.</p>
+                        <p>For example, the following recommended orders are generated for 2 sites with a Need of 25:</p>
+                        <table style="mc-table-style: url('../../Resources/TableStyles/standard.css');margin-left: 0;margin-right: auto;" class="TableStyle-standard" cellspacing="0">
+                            <col class="TableStyle-standard-Column-Column1" style="width: 20%;" />
+                            <col class="TableStyle-standard-Column-Column2" style="width: 20%;" />
+                            <col class="TableStyle-standard-Column-Column1" style="width: 20%;" />
+                            <col class="TableStyle-standard-Column-Column2" style="width: 20%;" />
+                            <col class="TableStyle-standard-Column-Column1" style="width: 20%;" />
+                            <thead>
+                                <tr class="TableStyle-standard-Head-Header1">
+                                    <th class="TableStyle-standard-HeadE-Column1-Header1" style="text-align: center;">Site</th>
+                                    <th class="TableStyle-standard-HeadE-Column2-Header1" style="text-align: center;">Need</th>
+                                    <th class="TableStyle-standard-HeadE-Column1-Header1" style="text-align: center;">Order Multiple (Coverage)</th>
+                                    <th class="TableStyle-standard-HeadE-Column2-Header1" style="text-align: center;">Presentation (Safety Stock)</th>
+                                    <th class="TableStyle-standard-HeadD-Column1-Header1" style="text-align: center;">Demand</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr class="TableStyle-standard-Body-Body1">
+                                    <td class="TableStyle-standard-BodyE-Column1-Body1" style="text-align: center;">1</td>
+                                    <td class="TableStyle-standard-BodyE-Column2-Body1" style="text-align: center;">25</td>
+                                    <td class="TableStyle-standard-BodyE-Column1-Body1" style="text-align: center;">5</td>
+                                    <td class="TableStyle-standard-BodyE-Column2-Body1" style="text-align: center;">8</td>
+                                    <td class="TableStyle-standard-BodyD-Column1-Body1" style="text-align: center;">12</td>
+                                </tr>
+                                <tr class="TableStyle-standard-Body-Body1">
+                                    <td class="TableStyle-standard-BodyB-Column1-Body1" style="text-align: center;">2</td>
+                                    <td class="TableStyle-standard-BodyB-Column2-Body1" style="text-align: center;">25</td>
+                                    <td class="TableStyle-standard-BodyB-Column1-Body1" style="text-align: center;">8</td>
+                                    <td class="TableStyle-standard-BodyB-Column2-Body1" style="text-align: center;">15</td>
+                                    <td class="TableStyle-standard-BodyA-Column1-Body1" style="text-align: center;">2</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        <p class="BasicNote">This is the only option for Replenishment Runs</p>
+                    </li>
+                    <li><span class="Emphasis">Demand &gt; Presentation</span> – Prioritizes the planned demand for all locations over presentation minimums. </li>
+                    <li><span class="Emphasis">Presentation &gt; Demand</span> – Fulfills minimum presentation requirements for all locations before addressing demand. </li>
+                </ul>
+                <h3>Constrained situations
+</h3>
+                <p>					In Allocations, users can decide what to do in a constrained situation with the following:
+
+					</p>
+                <p>Coverage (aka order multiple) → Safety Stock (aka presentation) → Demand
+
+					</p>
+                <p>Demand → Safety stock 
+
+					</p>
+                <p>Safety Stock → Demand (Also this is the only option for Replenishment Runs)
+</p>
+                <p>It is important to note that the Engine uses the term <span class="Emphasis">Need</span> which comprises of multiple components such as Coverage/SS/Demand to determine what each site is requesting to generate recommended orders. 
+
+					</p>
+                <p class="Example">Site 1 could have a Need of 25 but the Engine sees that as a Coverage = 5, SS = 8, and Demand = 12, where Site 2’s Need = 25, but Coverage=8, SS=15, Demand=2</p>
+            </li>
+            <li><span class="Emphasis">Primary WH Only</span> – Restricts sourcing to the primary warehouse as defined by the supply chain. </li>
+            <li>
+                <p><span class="Emphasis">Priority Sequence</span> - If Priority Groups will be used to protect specific stores before referring to Global Priority Group:</p>
+                <ul>
+                    <li>
+                        <p><span class="Emphasis">Use Priority Group</span> – when looking to fulfill orders, Priority Group will be considered.</p>
+                    </li>
+                    <li>
+                        <p><span class="Emphasis">Ignore Priority Group</span> – when looking to fulfill orders, Priority Group will be ignored.</p>
+                    </li>
+                </ul>
+            </li>
+            <li><span class="Emphasis">Product Models</span> – The selected model or models. These may be adjusted by clicking on the ellipses to launch the product model selection wizard. </li>
+            <li><span class="Emphasis">Push Qty</span> – A specific quantity of stock with which to execute a “total push” demand type allocation. </li>
+            <li><span class="Emphasis">Rate of Sale Override</span> – A user override value for the strategy rate of sale.  </li>
+            <li><span class="Emphasis">Rate of Sale Variance</span> – Percentage difference between the demand rate of sale and the actual rate of sale. </li>
+            <li>
+                <p><span class="Emphasis">Re-Trend Method</span> - The method to use for obtaining a retrend forecast for the allocation strategy.</p>
+                <ul>
+                    <li><span class="Emphasis">Default</span> - Uses the option set in the <span class="Emphasis">Default Forecast Retrend Method To Use</span> system policy.</li>
+                    <li><span class="Emphasis">PID</span> - Use the standard retrend calculation to create a retrend forecast.</li>
+                    <li><span class="Emphasis">Monte Carlo</span> - Uses the Monte Carlo retrend method to create a retrend forecast. For more information, see <MadCap:xref href="Monte Carlo Re Trend Overview.htm">Monte Carlo Re-Trend Overview</MadCap:xref>.</li>
+                    <li><span class="Emphasis">Demand Forecast</span> - Uses a generated inventory-level demand forecast as the retrend forecast. Requires the Inventory Forecasting module and an existing demand forecast. (Demand forecasts are not generated as part of Allocation execution.) For more information, see <MadCap:xref href="../Inventory Forecasts/Inventory Forecasting Overview.htm">Inventory forecasting overview</MadCap:xref>.</li>
+                </ul>
+            </li>
+            <li><span class="Emphasis">Rollup</span> – The <span class="Emphasis">View</span> button embedded within the <span class="Emphasis">Rollup</span> field launches the <span class="Emphasis">Rollup (Strategy)</span> window containing information on the highlighted strategy. This window presents a more narrow focus when compared to the Allocation Rollup screen.</li>
+            <li><span class="Emphasis">Safety Stock</span> – The minimum required quantity of stock to allocate. Sometimes referred to as presentation stock. </li>
+            <li>
+                <p><span class="Emphasis">Sales Curve Basis</span> – Determines the type of sales curve which will be used to shape the demand signal of the allocation strategy.  </p>
+                <ul>
+                    <li><span class="Emphasis">Last Year</span> – Curve based on last year’s historical sales. This information comes from the <span class="Emphasis">Curves</span> module. </li>
+                    <li><span class="Emphasis">Imported</span> – Use an imported sales curve. </li>
+                    <li><span class="Emphasis">Imported Plan</span> – Use an imported temporal plan. </li>
+                    <li><span class="Emphasis">Manual Selection</span> – Allows for the manual selection of a sales curve as generated in the Curves Module. If selected, the curve must be specified within the sales curve selection field. </li>
+                </ul>
+            </li>
+            <li><span class="Emphasis">Sales Curve Selection</span> – The curves available for manual selection. The selected curve will only be applied to the demand forecast if the sales plan basis is set to “manual selection”.</li>
+            <li><span class="Emphasis">Sales Plan Name</span> – A plan with a time period based strategy which is used to define the sales curve. Effective if <span class="Emphasis">Imported Plan</span> is selected in the sales curve type field. </li>
+            <li><span class="Emphasis">Sellthrough Target</span> – This is an input which designates a planned sell-through percentage.  </li>
+            <li><span class="Emphasis">Setting Source</span> – Whether Allocations or Assortment Planning is setting the source. The default is <span class="Emphasis">Allocation</span>. <p>If set to <span class="Emphasis">Assortment Planning</span>, then the following are pushed from the Assortment Planning module to the Allocations module:</p><MadCap:snippetBlock src="../../Resources/Snippets/Data pushed from AP to Allocations.flsnp" /><h4>What data is not pushed to Allocations</h4><MadCap:snippetBlock src="../../Resources/Snippets/Data NOT pushed from AP to Allocations.flsnp" /></li>
+            <li><span class="Emphasis">Setting Source Description</span> – A description of the origin of where the data came from.</li>
+            <li><span class="Emphasis">Site Count</span> – Site count lists the number of sites (stores) contained within the location strategy.  </li>
+            <li><span class="Emphasis">Size Model Assignment</span> – The selected size model for the strategy. A listing of available size models presents as part of a dropdown menu.  </li>
+            <li>
+                <p><span class="Emphasis">Strategy State</span> – Determines how the strategy is managed and if it is visible to users. </p>
+                <ul>
+                    <li><span class="Emphasis">Active</span> – Default state. The strategy may be actively managed and allocations may be created using the strategy. Type 1.</li>
+                    <li><span class="Emphasis">Hidden</span> – Strategies with no actionable stock may be set to hidden to ease navigation. Type 2. </li>
+                    <li><span class="Emphasis">Inactive</span> – User driven status to deactivate a strategy. Type 3.</li>
+                    <li><span class="Emphasis">Deleted</span> – System setting for inactive strategies which may be removed. Type 4.</li>
+                </ul>
+            </li>
+            <li>
+                <p><span class="Emphasis">Strategy State Management</span> – Determines if users are able to action on the strategy state field. </p>
+                <ul>
+                    <li><span class="Emphasis">Open</span> – No restrictions (may be updated based on system policies and execution).</li>
+                    <li><span class="Emphasis">Manual</span> – Only users are able to change the field.  </li>
+                </ul>
+            </li>
+            <li><span class="Emphasis">Strategy Stock</span> – The available stock count given the strategy parameters. Uses the available to allocate calculation and is inclusive of any stock availability restrictions which have been applied and saved. </li>
+            <li><span class="Emphasis">Supply Chain</span> – The supply chain used in the allocation strategy line. Allocation Strategy Selection determines the supply chain used, and each Strategy can have its default supply chain configured in the Configure Engine Chain view.</li>
+            <li><span class="Emphasis">Total Sales Demand</span> – Quantity of sales units defined as demand for strategies utilizing total sales quantity as the demand type.</li>
+            <li><span class="Emphasis">Use Re-Trend</span> – If selected, the allocation strategy recalculates the allocation strategy quantities using the re-trend calculator. </li>
+            <li><span class="Emphasis">Variant Code</span> - The unique code describing the variant.</li>
+            <li><span class="Emphasis">Variant Description</span> - The optional description for the variant.</li>
+            <li><span class="Emphasis">Weeks of Cover</span> – The number of weeks of demand for which stock is allocated and is an aggregation of days of cover.</li>
+            <li>
+                <p><span class="Emphasis">Weeks of Supply</span> – The effective replenishment cycle for this product. In other words, it is the effective length of time (in weeks) in which stock supply will be depleted to safety stock, before being restocked.</p>
+                <p class="BasicNote">Overrides the <span class="Emphasis">Allocation:Replenish Cycle</span> system policy value.</p>
+            </li>
+        </ul>
+    </body>
+</html>

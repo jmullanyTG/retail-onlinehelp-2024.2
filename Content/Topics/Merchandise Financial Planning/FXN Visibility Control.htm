@@ -1,0 +1,104 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head />
+    <body>
+        <h1>Metrics impacted by FX neutralization</h1>
+        <p>Designated LY metrics either display non-FX neutralized numbers if the selection in the <span class="Emphasis">Currency Neutralization</span> dropdown is set to <span class="Emphasis">Standard</span> or they will display FX neutralized numbers if <span class="Emphasis">Currency Neutralization</span> is set to <span class="Emphasis">LY Neutralized</span>.
+
+</p>
+        <p>FX neutralized and non-FX neutralized are not simultaneously visible on the same view. To view both, the user must render the view with the first option in the <span class="Emphasis">Currency Neutralization</span> toggle chosen, save off the data, and then re-view the data with the second option chosen.
+</p>
+        <p>
+            <img src="../../Resources/Images/MFP/FXN Currency Neutralization drop down  menu.png" class="LargeImages" />
+        </p>
+        <h2>The metrics that can be FX neutralized</h2>
+        <p>The following metrics are FX neutralized when the <span class="Emphasis">LY Neutralized</span> option is chosen:</p>
+        <table style="width: 100%;">
+            <col />
+            <col />
+            <col />
+            <tbody>
+                <tr>
+                    <td>
+                        <ul>
+                            <li>AUR % +/- LY</li>
+                            <li>AUT % +/- LY</li>
+                            <li>Comp Sales % +/- LY</li>
+                            <li>LY AUR</li>
+                            <li>LY AUT</li>
+                            <li>LY Comp AUR</li>
+                            <li>LY Comp Sales</li>
+                            <li>LY Markdown AUR</li>
+                            <li>LY Markdown Sales</li>
+                            <li>LY Markdowns</li>
+                        </ul>
+                    </td>
+                    <td>
+                        <ul>
+                            <li>LY Markdowns % of Sales</li>
+                            <li>LY Markdowns (ex VAT)</li>
+                            <li>LY Non-Comp AUR</li>
+                            <li>LY Non-Comp Sales</li>
+                            <li>LY Promo AUR</li>
+                            <li>LY Promo Sales</li>
+                            <li>LY Reg AUR</li>
+                            <li>LY Reg Sales</li>
+                            <li>LY Sales</li>
+                            <li>LY Sales (ex VAT)</li>
+                        </ul>
+                    </td>
+                    <td>
+                        <ul>
+                            <li>LY Sales Build Ratio</li>
+                            <li>LY Total Original Retail</li>
+                            <li>LY Total Original Retail (ex VAT)</li>
+                            <li>Markdown Rate +/- LY</li>
+                            <li>Markdown Sales % +/- LY</li>
+                            <li>Markdowns Var to LY</li>
+                            <li>Non-Comp Sales % +/- LY</li>
+                            <li>Promo Sales % +/- LY</li>
+                            <li>Reg Sales % +/- LY</li>
+                            <li>Sales % +/- LY</li>
+                        </ul>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <h2>Metrics calculated based on  FX neutralized and non-FX neutralized values</h2>
+        <p>The following metrics are calculated based on a mix of FX neutralized and non-FX neutralized values, meaning they are computing metrics in “mixed” mode.</p>
+        <p>For example, for “LY COGS % of Sales,” LY COGS is converted to plan currency using the historical period’s conversion rates, but LY Sales is converted to plan currency using the viewing period’s conversion rates, so the ratio between the two is comparing a historical exchange rate number to a viewing period rate number.</p>
+        <table style="width: 100%;">
+            <col />
+            <col />
+            <tbody>
+                <tr>
+                    <td>
+                        <ul>
+                            <li>COGS % of Sales +/- LY</li>
+                            <li>IMU Rate +/- LY</li>
+                            <li>LY COGS % of Sales</li>
+                            <li>LY GMROI</li>
+                            <li>LY IMU %</li>
+                            <li>LY IMU Retail</li>
+                        </ul>
+                    </td>
+                    <td>
+                        <ul>
+                            <li>LY Gross Margin % (Product)</li>
+                            <li>LY Gross Margin (Product)</li>
+                            <li>LY Gross Margin (Total)</li>
+                            <li>LY Shrink Retail % of Sales</li>
+                            <li>LY Stock to Sales</li>
+                            <li>Gross Margin Rate +/- LY (Product)</li>
+                        </ul>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <p>If there are custom metrics that use any of the above in their calculations, then those custom metrics would also be affected by FX neutralization.
+
+</p>
+        <p>No other metrics such as COGS, AUC, EOP Cost / Retail, and BOP Cost / Retail will be FX neutralized. These metrics always show values with their LY currency conversion rates.
+</p>
+    </body>
+</html>

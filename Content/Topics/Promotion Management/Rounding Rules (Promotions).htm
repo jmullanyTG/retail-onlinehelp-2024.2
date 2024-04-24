@@ -1,0 +1,152 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" xml:lang="en-us">
+    <head>
+        <link href="../../Resources/TableStyles/standard.css" rel="stylesheet" MadCap:stylesheetType="table" /><title></title>
+    </head>
+    <body>
+        <h1>Rounding rules</h1>
+        <p>Rounding rules can be configured using two views:</p>
+        <ul>
+            <li>
+                <p><span class="Emphasis">Rounding Rules - Price Ending</span>
+                </p>
+            </li>
+            <li>
+                <p><span class="Emphasis">Rounding Rules - Standard</span>
+                </p>
+            </li>
+        </ul>
+        <p>Rounding rules allow users to create grouped rounding criteria which are applied to a promotion calculation to conform to corporate price rounding standards. rounding criteria determine which prices a rule should act upon and what should be done to the price. The Promotion module can be configured with both standard rounding as well as rounding with price endings.</p>
+        <p class="BasicNote">Price ending rounding refers to the selection of a numeric position and rounding it to the configured price ending value based on the preceding numeric position value.</p>
+        <h2>Create a rounding rule – standard or price ending</h2>
+        <p>Within the relevant Rounding Rule tab, click <span class="Emphasis">New</span> to create a new rounding rule, enter the required fields and click <span class="Emphasis">Save</span>. </p>
+        <h3>Standard tab: fields and descriptions</h3>
+        <table class="TableStyle-standard" cellspacing="0" style="mc-table-style: url('../../Resources/TableStyles/standard.css');">
+            <thead>
+                <tr class="TableStyle-standard-Head-Header1">
+                    <th class="TableStyle-standard-HeadE-Column1-Header1">Field</th>
+                    <th class="TableStyle-standard-HeadD-Column2-Header1">Description</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">
+                        Name </td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">A descriptive label summarizing the purpose of the rounding rule. This is used to identify the rounding rule when creating promotion calculations.
+                    </td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">
+                        Description                     </td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">An optional summary of the rounding rule.
+                    </td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyB-Column1-Body1">
+                        Active&#160; (Optional)
+                    </td>
+                    <td class="TableStyle-standard-BodyA-Column2-Body1">
+                        Leave selected to indicate that this rounding rule is active and is available when configuring promotion calculations.
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <h2>Modifying rounding rule or rounding rule criteria</h2>
+        <p>For both standard and price ending rounding rules, modifications can be made directly to the <span class="Emphasis">Rounding Rule</span> and <span class="Emphasis">Rounding Rule Criteria</span> grids. </p>
+        <h2>Deleting rounding rule or rounding rule criteria</h2>
+        <p>For both standard and price ending rounding rules, selecting a rounding rule or rounding rule criteria enables the <span class="Emphasis">Delete</span> button above the applicable grid. </p>
+        <p class="Important">Rounding rules cannot be deleted if associated to a Calculation and once deleted cannot be restored. </p>
+        <h2>Create rounding criteria – price ending</h2>
+        <p>With the rounding rule selected, click <span class="Emphasis">New</span> above the <span class="Emphasis">Rounding Criteria</span> grid to add criteria to the rounding rule. Enter the required fields and click <span class="Emphasis">Save</span> above the grid.</p>
+        <p>
+            <img src="../../Resources/Images/Promotion Management/Create rounding criteria price ending.png" class="LargeImages" />
+        </p>
+        <table class="TableStyle-standard" cellspacing="0" style="mc-table-style: url('../../Resources/TableStyles/standard.css');">
+            <thead>
+                <tr class="TableStyle-standard-Head-Header1">
+                    <th class="TableStyle-standard-HeadE-Column1-Header1">Field</th>
+                    <th class="TableStyle-standard-HeadD-Column2-Header1">Description</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">
+                        Currency </td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">
+                        The available currencies specified by each site. Select a currency for the criteria configuration which applies to the applicable sites when price actions are calculated.                     </td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">
+                        Price Ending </td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">
+                        The right most decimal value searched for in price fields.
+                    </td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">
+                        Position </td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">
+                        Select the numeric position that is modified based on the criteria.
+                    </td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">
+                        Direction (Optional)
+                    </td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">
+                        Whether the calculated value rounds up, down or to the closest based on the calculated mid-point of the price ending configured value.
+                        <ul><li>Closest - The configured position determines whether the calculated value rounds up or down to the desired price ending.</li><li>Down - The configured position and calculated mid-point are evaluated  and the calculated value rounds down to the desired price ending.</li><li>Up - The configured position and calculated mid-point are evaluated and the calculated value rounds up to the desired price ending.</li></ul></td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyB-Column1-Body1">
+                        Active (Optional)
+                    </td>
+                    <td class="TableStyle-standard-BodyA-Column2-Body1">
+                        Leave selected to indicate that the rounding criteria is active within the rounding rule.
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <h2>Create rounding criteria – standard </h2>
+        <p>With the rounding rule selected, click <span class="Emphasis">New</span> above the <span class="Emphasis">Rounding Criteria</span> grid to add criteria to the rounding rule. Enter the required fields and click <span class="Emphasis">Save</span> above the grid. </p>
+        <p>
+            <img src="../../Resources/Images/Promotion Management/Create rounding criteria standard.png" class="LargeImages" />
+        </p>
+        <table class="TableStyle-standard" cellspacing="0" style="mc-table-style: url('../../Resources/TableStyles/standard.css');">
+            <thead>
+                <tr class="TableStyle-standard-Head-Header1">
+                    <th class="TableStyle-standard-HeadE-Column1-Header1">Field</th>
+                    <th class="TableStyle-standard-HeadD-Column2-Header1">Description</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">
+                        Currency </td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">
+                        The available currencies specified by each site. Select a currency for the criteria configuration which applies to the applicable sites when price actions are calculated.                     </td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">
+                        Position </td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">The numeric position to be modified based on the criteria.
+                    </td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">
+                        Mid Point </td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">The decimal value that is considered the mid-point for the rounding criteria. If the numeric value in the position is smaller than the mid-point, no changes are made. However, if the numeric value in the position is equal to or greater than the mid-point, the numeric value rounds up.
+                    </td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyB-Column1-Body1">
+                        Active (Optional)
+                    </td>
+                    <td class="TableStyle-standard-BodyA-Column2-Body1">
+                        Leave selected to indicate that the rounding criteria is active within the rounding rule.
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </body>
+</html>

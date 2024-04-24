@@ -1,0 +1,110 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" xml:lang="en-us">
+    <head>
+        <link href="../../Resources/TableStyles/standard.css" rel="stylesheet" MadCap:stylesheetType="table" /><title></title>
+    </head>
+    <body>
+        <h1>Price variables</h1>
+        <p>The <span class="Emphasis">Price Variables</span> tab is used to define parameters (system derived as well as user configurable) which are used in calculations and can be configured for export.</p>
+        <p>
+            <img src="../../Resources/Images/Price Planning/Variables.png" class="LargeImages" />
+        </p>
+        <h2>Giving pricing variables different numeric precisions to be inline with local currencies</h2>
+        <p>System policy <span class="Emphasis">Variable Numeric Precision</span> addresses the need at the time
+of implementation to configure pricing variables to have different numeric precision for
+different geographic locations to be inline with local currencies. This system policy is
+hidden and is only set once at the time of implementation. This system policy is not
+changed after initial implementation.
+</p>
+        <p><span class="Emphasis">Variable Numeric Precision</span> sets the database field precision to ensure efficient updates
+and selects and maintenance of database growth for configured pricing variables and
+their assignment to pricing strategies. Further refinement of each pricing variable's
+formatting is implemented via the <span class="Emphasis">Price Manager Configuration</span> screen.</p>
+        <h2>Creating and maintaining variables</h2>
+        <p>Users can:</p>
+        <ul>
+            <li>click <span class="Emphasis">New</span> to create a new variable, enter the required fields, and click <span class="Emphasis">Save</span>.</li>
+            <li>modify variables directly in the grid.</li>
+            <li>
+                <p>select variables and delete them. </p>
+                <p class="BasicNote">Variables cannot be deleted if associated to a Calculation.</p>
+            </li>
+        </ul>
+        <h2>Variables&#160;fields and descriptions</h2>
+        <table class="TableStyle-standard" cellspacing="0" style="mc-table-style: url('../../Resources/TableStyles/standard.css');">
+            <thead>
+                <tr class="TableStyle-standard-Head-Header1">
+                    <th class="TableStyle-standard-HeadE-Column1-Header1">Field</th>
+                    <th class="TableStyle-standard-HeadD-Column2-Header1">Description</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">
+                      Variable Name</td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">
+                       A descriptive label to summarize the purpose of the variable.
+                    </td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">
+                      Variable Description</td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">An optional summary describing the purpose of the variable.
+                    </td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">
+                      Format String (Required)
+                    </td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">
+                       A designation that determines how the system formats manual entry:
+                        <ul><li><p>Currency (C2) – data is formatted using the configured currency with 2 decimal digits</p><ul><li>Database Value: 5.990000</li><li>Cost (C2): $5.99</li></ul></li></ul><ul><li><p>Decimal (D6) – data is formatted as a whole number using a minimum of 6 digits</p><ul><li>Database Value: 5.990000</li><li>Cost (D6): 5.990000</li></ul></li></ul><ul><li><p>Number (N2) – data is formatted as a numeric field with 2 decimal digits</p><ul><li>Database Value: 5.990000</li><li>Cost (N2): 5.99</li></ul></li></ul><ul><li><p>Percent (P2) – data is multiplied by 100 with 1 decimal digit</p><ul><li>Database Value: 0.5990000</li><li>Percent Off: 59.90%<br /></li></ul></li></ul><p>Detailed information can be found on Microsoft’s MSDN website:</p><p><a href="https://msdn.microsoft.com/en-us/library/dwhawy9k(v=vs.110).aspx\">https://msdn.microsoft.com/en-us/library/dwhawy9k(v=vs.110).aspx\</a></p></td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">
+                      Output Field Name</td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">
+                         A read-only label created when the record is saved. This label is used when designing calculation formulas as well as the export staging tables. 
+                    </td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">
+                    Input Type</td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">
+                  The option selected determines the available options in <span class="Emphasis">Input Price / Cost Field</span>. 
+                        <ul><li><span class="Emphasis">Cost</span>, <span class="Emphasis">Price</span> – imported read-only fields for reference for calculation formulas and validations. </li></ul><p class="BasicNote"><span class="Emphasis">Cost</span> and <span class="Emphasis">Price</span> are configured during implementation and determined by actual fields configured to be imported.</p><ul><li><span class="Emphasis">User</span> – A manually entered or calculated field</li></ul></td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">
+                     Input Price / Cost Field</td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">
+                   Which <span class="Emphasis">Input Type</span> is selected determines which options are available in the <span class="Emphasis">Input Price / Cost Field</span>. Select an option to be associated to the variable.
+                    </td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">
+                      Allow Output Override (Optional)
+                    </td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">
+                        The checkbox is only editable when <span class="Emphasis">Input Type</span> is <span class="Emphasis">User</span>. If checked, users can enter data to be associated to the variable. 
+                    </td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">&gt;Active (Optional)
+                    </td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">
+                       Unchecking the checkbox removes the ability to configure the variable in any new calculations. When a price action is calculated the price strategy calculations and validations are affected.
+                    </td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyB-Column1-Body1">
+                       Active (Optional)
+                    </td>
+                    <td class="TableStyle-standard-BodyA-Column2-Body1">
+                     Determines if the rounding criteria is used when a rounding rule is configured with a calculation.
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </body>
+</html>

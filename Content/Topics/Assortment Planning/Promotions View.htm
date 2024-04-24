@@ -1,0 +1,103 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" xml:lang="en-us">
+    <head>
+        <link href="../../Resources/TableStyles/standard.css" rel="stylesheet" MadCap:stylesheetType="table" /><title></title>
+    </head>
+    <body>
+        <h1>Promotions view (not available in Collection view)</h1>
+        <p>The <span class="Emphasis">Promotions</span> view provides visibility to the various active and inactive promotions that have been applied to the selected placeholder or collection within the plan. Start and end dates can be adjusted for applied promotions. </p>
+        <p class="BasicNote">The creation and management of promotions is done in the <span class="Emphasis">Promotions</span> area of Assortment Planning. For more detailed information on promotional applications and the effects they have on the sales plan, see <MadCap:xref href="Promotions.htm">Promotions</MadCap:xref>.</p>
+        <h2>Field descriptions</h2>
+        <table style="mc-table-style: url('../../Resources/TableStyles/standard.css');margin-left: auto;margin-right: auto;" class="TableStyle-standard" cellspacing="0">
+            <col class="TableStyle-standard-Column-Column1" style="width: 15%;" />
+            <col class="TableStyle-standard-Column-Column2" style="width: 85%;" />
+            <thead>
+                <tr class="TableStyle-standard-Head-Header1">
+                    <th class="TableStyle-standard-HeadE-Column1-Header1">Field</th>
+                    <th class="TableStyle-standard-HeadD-Column2-Header1">Description</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1"><span class="Emphasis">Promotion Name</span>
+                    </td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">The name of the promotion.</td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1"><span class="Emphasis">Behavior</span>
+                    </td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">
+                        The stacking behavior of the promotion: 
+                        <ul><li><span class="Emphasis">Stacking</span>: all stacking promotions that are active in a given period combine their effects. Stacking is always applied in order depending on the type of AUR effect assigned to each: New AUR, % Off, $ Off.</li><li><span class="Emphasis">Non-Stacking</span>: non-stacking promotions operate on best-deal logic. The  resulting AURs of applied promotions are compared and the one with the lowest AUR is applied.</li><li><span class="Emphasis">Supersede</span>: the Supersede behavior is only valid for global promotions. When set, supersede promotions are applied in place of any others applied during a given period regardless of whether their resulting AURs are lower.</li></ul><h3>Example of stacking behavior</h3><p>3 promos are applied for a period, 2 stacking, and 1 non-stacking:</p><p><img src="../../Resources/Images/Assortment Planning/Promotions View_1.png" style="width: 554px; height: 121px;" class="LargeImages" /></p><p>Both stacking promotions are grouped together and treated as one. In this case, <span class="Emphasis">Promo 1</span> is considered first, since it is a New AUR promotion, followed by <span class="Emphasis">Promo 2</span>, which takes an additional 20% off the $18 result after <span class="Emphasis">Promo 1</span>. The result is compared to the result of <span class="Emphasis">Promo 3</span>, which is still lower than the result of <span class="Emphasis">Promo 1</span> and <span class="Emphasis">Promo 2</span>, so <span class="Emphasis">Promo 3</span> is ultimately applied.</p></td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1"><span class="Emphasis">AUR Effect</span>
+                    </td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">Displays the defined effect to AUR for the promotion: New AUR, % Off, or $ Off and the value or magnitude associated with each.</td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1"><span class="Emphasis">Global?</span>
+                    </td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">Whether the promotion is a global promotion. Global promotions are typically used for store wide promotions like <span class="Emphasis">30% everything in stock except ______.</span>.</td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1"><span class="Emphasis">Application Status</span>
+                    </td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">The status of the promotion application: Active or Inactive.</td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1"><span class="Emphasis">Start</span>
+                    </td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">The start date of the promotion application for the selected placeholder/collection. Selections are limited to periods before End and within the promo application time frame defined in Promotions.</td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1"><span class="Emphasis">End</span>
+                    </td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">The end date of the promotion application for the selected placeholder/collection. Selections are limited to periods after Start and within the promo application time frame defined in Promotions.</td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1"><span class="Emphasis">Hold Sales</span>
+                    </td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">
+                         Whether the promotion has the ability to increase total sales of the placeholder/cluster: 
+                        <ul><li><span class="Emphasis">Checked</span>: the total sales of the placeholder/cluster remain the same as before the promotion was applied, and only magnitude of sales in each period is adjusted.</li><li><span class="Emphasis">Unchecked</span>: the total sales of the placeholder/cluster can increase above the magnitude prior to promotion application. This is effected through recalculation of the placeholder/cluster rate of sale.</li></ul></td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1"><span class="Emphasis">Final Index</span>
+                    </td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">The promotional index to apply to the placeholder/cluster.</td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyB-Column1-Body1"><span class="Emphasis">Included?</span>
+                    </td>
+                    <td class="TableStyle-standard-BodyA-Column2-Body1">Whether the promotion is applied to each the placeholder/cluster or not.</td>
+                </tr>
+            </tbody>
+        </table>
+        <h2>Grid buttons</h2>
+        <table style="width: 100%;margin-left: 0;margin-right: auto;mc-table-style: url('../../Resources/TableStyles/standard.css');" class="TableStyle-standard" cellspacing="0">
+            <col class="TableStyle-standard-Column-Column1" style="width: 15%;" />
+            <col class="TableStyle-standard-Column-Column2" style="width: 85%;" />
+            <thead>
+                <tr class="TableStyle-standard-Head-Header1">
+                    <th class="TableStyle-standard-HeadE-Column1-Header1">Button</th>
+                    <th class="TableStyle-standard-HeadD-Column2-Header1">Description</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">Fields</td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">Opens the fields Customization dialog. Drag fields to and from the promotions column header area and this dialog to customize the view. Custom layouts can be saved or restored by right-clicking in the Snapshot Templates area and selecting Save Layout or Restore Layout.</td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">Save</td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">Saves changes made to start and end dates and recalculates the placeholder sales plan.</td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyB-Column1-Body1">Cancel</td>
+                    <td class="TableStyle-standard-BodyA-Column2-Body1">Cancels changes made to start and end dates and reverts them to their previously saved values.</td>
+                </tr>
+            </tbody>
+        </table>
+    </body>
+</html>

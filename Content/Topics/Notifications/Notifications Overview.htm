@@ -1,0 +1,44 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" xml:lang="en-us">
+    <head><title></title>
+    </head>
+    <body>
+        <h1>Notifications Overview</h1>
+        <p>Notifications report when processes (calculations, forecasts, validations, etc.) have been initiated or completed and if any errors occurred. </p>
+        <p>Notification delivery settings are system configured. However, these settings can be changed on the <span class="Emphasis">Notification Preferences</span> screen.</p>
+        <p>There are three Notification views:</p>
+        <ul>
+            <li><span class="Emphasis">Notification Maintenance</span>: Used by system administrators to subscribe to system generated notifications, by module, and configure the default delivery method for each subscription. Additionally, administrators can create custom notifications, by module, which can be scheduled and sent by Job Manager or through customized stored procedures (CUSP hooks) in the respective solution.</li>
+            <li><span class="Emphasis">Notification Preferences</span>: Located under the User Settings tab, allows users to override system configured delivery methods. </li>
+            <li><span class="Emphasis">Notification Inbox</span>: Displays the notifications as they were configured. The Notification icon on the right side at the top of the screen indicates the number of unread notifications. Click the Notification icon to display the <span class="Emphasis">Notification Inbox</span>.</li>
+        </ul>
+        <p>Depending on the view, notifications  can be subscribed to and configured in the following:</p>
+        <table style="width: 100%;">
+            <col />
+            <col />
+            <tbody>
+                <tr>
+                    <td>
+                        <ul>
+                            <li>Allocation</li>
+                            <li>Assortment Plan <ul><li>Order Manager - Prepack</li></ul></li>
+                            <li>Assortment (Receipt) Plan </li>
+                            <li>Site Clustering (custom notifications only)</li>
+                            <li>Content Manager (custom notifications only)</li>
+                            <li>Curves</li>
+                        </ul>
+                    </td>
+                    <td>
+                        <ul> <li>Events (custom notifications only)</li><li>Inventory and Level Forecast</li><li>Group Forecast</li><li>Price Manager</li><li>Promotions (custom notifications only)</li><li>System (custom notifications only)</li><li>Workflow (custom notifications only)</li></ul>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <p>Standardized jobs in the <span class="Emphasis">Notification Nightly Purge</span> can be configured to delete messages that are older than a certain number of days. In the standardized job, a parameter is available to modify the number of days the messages are stored in the database. By default, notification messages are stored for seven  days. </p>
+        <p>The job must be scheduled to run outside of the regular work hours. For example, a Saturday from 3 AM to 11 PM.</p>
+        <h2>Notifications Configuration</h2>
+        <p>Notifications must be configured only  by ToolsGroup JustEnough Professional Services, Support, or a trained on-site super user.</p>
+        <h2>Notification user rights</h2>
+        <p>The <span class="Emphasis">Access Notification System Maintenance</span> global permission allows a super user to access and manage user permissions from the Notification Subscription screen.</p>
+    </body>
+</html>

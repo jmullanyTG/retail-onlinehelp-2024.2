@@ -1,0 +1,75 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head />
+    <body>
+        <h1>Supply Chain Overview</h1>
+        <p>Users can determine the supply chains that provide inventory to distribution centers (DCs) and stores. </p>
+        <h2>ERP data integration</h2>
+        <p>Supplier and site data from an Enterprise Resource Planning (ERP) system is used as the building blocks for the supply chains. To view this site information, see:</p>
+        <ul>
+            <li>
+                <MadCap:xref href="../Supplier Manager/Supplier Manager Overview.htm">Supplier Manager Overview</MadCap:xref> - displays information about external suppliers.</li>
+            <li>
+                <MadCap:xref href="../Site Manager/Site Manager Overview.htm">Site Manager Overview</MadCap:xref> - displays information about stores and DCs.</li>
+            <li>
+                <MadCap:xref href="../Inventory Manager/Inventory Manager Overview.htm">Inventory Manager overview</MadCap:xref> - displays the supplier for an item at a location.</li>
+        </ul>
+        <h2>Flexible supply chain designs</h2>
+        <p>Supply chains can be simple or complex. </p>
+        <h3>Supplier to DC/store supply chains</h3>
+        <p>In these flat supply chains, stores get their inventory directly from external suppliers. </p>
+        <ul>
+            <li>
+                <MadCap:xref href="Display direct to store supply chain.htm">Displaying a direct-to-store delivery supply chain </MadCap:xref>
+            </li>
+        </ul>
+        <h3>Supplier to DC to store supply chains</h3>
+        <p>This is a traditional supply chain design, with external suppliers feeding DCs that distribute inventory to local stores.</p>
+        <ul>
+            <li>
+                <MadCap:xref href="Set up a supplier-to-DC-to-store supply chain.htm">Setting Supplier-to-DC-to-Store Supply Chains</MadCap:xref>
+            </li>
+        </ul>
+        <h3>Multi-level supply chains</h3>
+        <p>This design has multiple levels of distribution centers (primary and regional) supplying stores.</p>
+        <ul>
+            <li>
+                <MadCap:xref href="Display multi-level supply chain.htm">Displaying a Multi-Level Supply Chain</MadCap:xref>
+            </li>
+        </ul>
+        <h3>Redistribution supply chains</h3>
+        <p>Stores or DCs can be grouped into redistribution pools using the <span class="Emphasis">Redistribution</span> supply chain. These pools determine where inventory can be redistributed when there are inventory overages or shortages in sites. Customize lead times and source priorities within each pool as needed.</p>
+        <ul>
+            <li>
+                <MadCap:xref href="Assign a site to a pool of stores.htm">Assigning Sites to Pools of Stores (Redistribution Supply Chain)</MadCap:xref>
+            </li>
+        </ul>
+        <h2>Supply chain overrides</h2>
+        <p>Supply chain overrides are used for situations when certain products at certain sites need to be supplied from a different source than their regular supply chain. </p>
+        <p>For example, during November and December suppliers might deliver Christmas related merchandise directly to stores instead of DCs. Overrides can be planned for specific time periods (such as holiday rushes) or set to run indefinitely. </p>
+        <ul>
+            <li>
+                <MadCap:xref href="Create a supply chain override.htm">Creating a Supply Chain Override</MadCap:xref>
+            </li>
+        </ul>
+        <h2><a name="Customiz"></a>Customizable source priority</h2>
+        <p>If a site experiences a potential shortfall in inventory, rank the preferred order of other sites it receives stock from. For example, prioritize geographically close sites, but protect flagship stores. To determine site priority, the following values are checked in order:</p>
+        <ol>
+            <li>Priority defined for the site in the supply chain</li>
+            <li>Priority group (if present)</li>
+            <li>Global Site Priority (for more information,<MadCap:conditionalText MadCap:conditions="General.ScreenOnly"> see <MadCap:xref href="../Site Manager/Global Site Priority.htm">Prioritizing Stock Distribution.</MadCap:xref></MadCap:conditionalText><MadCap:conditionalText MadCap:conditions="General.PrintOnly">refer to the Site Manager User Guide.</MadCap:conditionalText>)</li>
+            <li>Site ID</li>
+            <li>Wait time days</li>
+        </ol>
+        <h2>Automated supply chain resolution</h2>
+        <p>Create a task in  Job Manager to re-process supply chains as part of a nightly or weekly job. This ensures that any additions or modifications made to supply chains get propagated throughout the system. <MadCap:conditionalText MadCap:conditions="General.PrintOnly">For more information, refer to the Job Manager User Guide.</MadCap:conditionalText></p>
+        <h2 MadCap:conditions="General.ScreenOnly">Related topics</h2>
+        <ul MadCap:conditions="General.ScreenOnly">
+            <li>
+                <MadCap:xref href="../Job Manager/Inventory Supply Chain Resolution Task.htm">Inventory supply chain resolution task</MadCap:xref>
+            </li>
+            <li><a href="../Order Manager/Order Manager Overview.htm">Order Manager overview</a>
+            </li>
+        </ul>
+    </body>
+</html>

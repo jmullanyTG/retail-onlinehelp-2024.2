@@ -1,0 +1,57 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head />
+    <body>
+        <h1>Generating redistribution orders</h1>
+        <p>A redistribution order is used to pull excess or leftover stock from stores and redistribute the stock to stores with unfulfilled demand. Redistribution orders are primarily filter driven to determine eligible items. Users select the desired inventories while the quantities to redistribute are driven by the source stock selection options.</p>
+        <p class="BasicNote">Redistributions can only be executed across a sibling level tier within the normal supply chain (that is a DC may not redistribute to a store, as that is a normal distribution. A store may not redistribute to a DC as that is a reconsolidation action. To resolve these tiers, the Replenish Engine references the default supply chain defined using system policy <span class="Emphasis">Default Supply Chain</span> (which is of type site/supplier).</p>
+        <h2>Setup</h2>
+        <p>The following objects must be set up before generating a redistribution order:</p>
+        <ul>
+            <li>a filter that includes the items and sites to redistribute.</li>
+            <li>the supply chain to use.</li>
+            <li>demand forecasts for the items to redistribute.</li>
+            <li>stocking strategies for the items to redistribute.</li>
+        </ul>
+        <h2>To generate a redistribution order for an item</h2>
+        <p>To action a redistribution order, users should select the order type within Order Manager.</p>
+        <ol>
+            <li>
+                <p>From the <span class="Emphasis">Execute</span> tab, click <span class="Emphasis">Order Manager</span>. </p>
+                <p>The Navigation menu displays.</p>
+            </li>
+            <li>
+                <p>Click the <span class="Emphasis">Redistribution</span> option on the toolbar. </p>
+                <p class="BasicNote">The <span class="Emphasis">Items</span> window displays providing the option to select a filter that determines the eligible items. Inventory filter types are available. A location dimension element can be added to any product filters if desired.</p>
+            </li>
+            <li>
+                <p>In the <span class="Emphasis">Filter</span> field, select the  filter with the items and sites to be included.</p>
+                <p>The  <span class="Emphasis">Add Redistribution Order: Redistribution</span> window displays.</p>
+                <p>
+                    <img src="../../Resources/Images/Order Manager/Add Redistribution Order.PNG" class="LargeImages" />
+                </p>
+                <p class="BasicNote">For field descriptions, see <MadCap:xref href="Rebalance orders.htm">Generating rebalance orders</MadCap:xref>.</p>
+            </li>
+            <li>
+                <p>Select:</p>
+                <ul>
+                    <li>the item to be redistributed from the <span class="Emphasis">Supply Chain</span> dropdown menu.</li>
+                    <li>
+                        <p>what type of orders to redistribute such as <span class="Emphasis">Today's Orders</span>, <span class="Emphasis">This Week's Orders</span>, etc.</p>
+                        <p class="BasicNote">Selecting more than one source stock causes the minimum value (including zero) to be considered when building the redistribution order. As such, it is considered best practice to select a single source stock per redistribution order.</p>
+                    </li>
+                </ul>
+            </li>
+            <li>
+                <p>Click <span class="Emphasis">Ok</span>. </p>
+                <p>The recommended orders display. Each row represents a different recommended order and contains basic details of the order. </p>
+                <p>
+                    <img src="../../Resources/Images/Order Manager/Order Supplier Result.png" class="LargeImages" />
+                </p>
+            </li>
+            <li>
+                <p>Double-click an order row to view the demand forecast, stocking strategy, stock holding projection, and other details that drove the order recommendation.</p>
+            </li>
+        </ol>
+    </body>
+</html>

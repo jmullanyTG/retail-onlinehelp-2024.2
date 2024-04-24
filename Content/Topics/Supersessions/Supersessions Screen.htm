@@ -1,0 +1,127 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" xml:lang="en-us">
+    <head>
+        <link href="../../Resources/TableStyles/standard.css" rel="stylesheet" MadCap:stylesheetType="table" /><title></title>
+    </head>
+    <body>
+        <h1>Supersession Grid screen reference</h1>
+        <p>Supersessions are managed using the <span class="Emphasis">Supersession Grid</span> screen.</p>
+        <h2>To access the Supersession screen</h2>
+        <p>From the Execute tab, click <span class="Emphasis">Supersession</span>. </p>
+        <p>The <span class="Emphasis">Supersession Grid</span> screen displays the active and inactive supersessions.</p>
+        <p>
+            <img src="../../Resources/Images/Supersessions/Supersessions Screen.png" class="LargeImages" />
+        </p>
+        <h2>Fields and descriptions</h2>
+        <p>The following is a description of the fields available on the <span class="Emphasis">Supersession Grid</span> screen.</p>
+        <table class="TableStyle-standard" cellspacing="0" style="mc-table-style: url('../../Resources/TableStyles/standard.css');">
+            <col class="TableStyle-standard-Column-Column1" />
+            <col class="TableStyle-standard-Column-Column2" />
+            <thead>
+                <tr class="TableStyle-standard-Head-Header1">
+                    <th class="TableStyle-standard-HeadE-Column1-Header1">Field</th>
+                    <th class="TableStyle-standard-HeadD-Column2-Header1">Description</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">Old Item</td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">The item that  supplies the supersession history. In many instances, this is the item that is being replaced (last year’s model).</td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">New Item </td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">The item that supersedes the item described in the <span class="Emphasis">Old Item</span> column. This is the item that is replacing the old item (this year’s model).</td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">Superseded for Replenishment </td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">If selected, this supersedes the new item over the old item for all replenishment orders.</td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">Superseded for Forecasting </td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1"> If selected, this brings in the demand history of the old item into the forecast engine to calculate the projected demand for the new item</td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">Replenishment Ratio </td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">Value of the ratio to 1 that is applied to the old item stock on hand quantities. A value of 1 gives a 1:1 ratio of old item quantities to new item quantities. A value of 2 gives a 2:1 ratio of new item demand to old item demand, a 100% increase. A value of 1.2 is for a 20% increase. </td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">Forecast Ratio</td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">Value of the ratio to 1 that is applied to the old item sales history amounts.  A value of 1 gives a 1:1 ratio of old item quantities to new item quantities. A value of 2 gives a 2:1 ratio of new item demand to old item demand, a 100% increase. A value of 1.2 is for a 20% increase. </td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">Sales History Start Date</td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1"> The beginning of the measurement period for the old item sales history.</td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">Sales History End Date </td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">The end of the measurement period for the old item sales history.</td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">Supersession Start Date </td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">Determines when the supersession becomes active. If blank, the supersession is considered active from the go-live date of the system.</td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">Supersession End Date</td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">Determines when the supersession becomes inactive. If blank, the supersession is considered to continue in perpetuity. </td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">Active </td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">The active flag displays in the Active checkbox if the supersession is currently active.</td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">Old Item Type</td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">Determines the replenishment status of the old item.</td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">Redundant </td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">The item remains in stock, but will no longer be ordered. </td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">Non-Stocked</td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">The item will no longer remain in stock (not on the shelf). </td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">User </td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">The UserID of the creator of the supersession. Useful for audit purposes. </td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyB-Column1-Body1">Date Created</td>
+                    <td class="TableStyle-standard-BodyA-Column2-Body1">The date on which the supersession was created.</td>
+                </tr>
+            </tbody>
+        </table>
+        <h3>Sites affected</h3>
+        <p>When a supersession is selected in the <span class="Emphasis">Supersession Grid</span>,  the sites affected by that supersession display on the <span class="Emphasis">Sites Affected</span> panel on the right of the screen.</p>
+        <h3>Notes</h3>
+        <p>A place for additional notes along with a time stamp and the user ID of the person who added the note.</p>
+        <h2>Toolbar functionality</h2>
+        <table class="TableStyle-standard" cellspacing="0" style="mc-table-style: url('../../Resources/TableStyles/standard.css');">
+            <col class="TableStyle-standard-Column-Column1" />
+            <col class="TableStyle-standard-Column-Column2" />
+            <thead>
+                <tr class="TableStyle-standard-Head-Header1">
+                    <th class="TableStyle-standard-HeadE-Column1-Header1">Action</th>
+                    <th class="TableStyle-standard-HeadD-Column2-Header1">Description</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">New</td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">Creates a new supersession. See, <MadCap:xref href="Creating Supersessions.htm">Creating supersessions</MadCap:xref>.</td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">Edit</td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">Updates the sites for the selected supersession.</td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">Delete</td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">Deletes the selected supersession.</td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyB-Column1-Body1">Save</td>
+                    <td class="TableStyle-standard-BodyA-Column2-Body1">Saves property changes made on the Supersessions grid.</td>
+                </tr>
+            </tbody>
+        </table>
+    </body>
+</html>

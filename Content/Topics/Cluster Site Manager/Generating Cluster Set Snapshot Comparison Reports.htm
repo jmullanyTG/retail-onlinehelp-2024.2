@@ -1,0 +1,104 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head>
+        <link href="../../Resources/TableStyles/standard.css" rel="stylesheet" MadCap:stylesheetType="table" />
+    </head>
+    <body>
+        <h1>Cluster Set Snapshot Comparison report</h1>
+        <p>The <span class="Emphasis">Cluster Set Snapshot Comparison</span> report compares cluster set snapshots across a specified time frame.</p>
+        <p>
+            <img src="../../Resources/Images/Cluster Site Manager/Cluster Set Snapshot Comparison.png" class="LargeImages" />
+        </p>
+        <h2>To generate the Cluster Set Snapshot Comparison report</h2>
+        <ol>
+            <li>
+                <p>Display a cluster set. </p>
+                <p class="BasicNote">For details, see <MadCap:xref href="Viewing Cluster Sets.htm">Viewing cluster sets </MadCap:xref>.</p>
+            </li>
+            <li>
+                <p>From the Snapshot window at the bottom of the screen,  click the <span class="Emphasis">Report</span> button. </p>
+                <p>The <span class="Emphasis">Time Frame</span> dropdown menu displays.</p>
+            </li>
+            <li>From the <span class="Emphasis">Time Frame</span> dropdown menu, select a period start and end date to display.</li>
+            <li>
+                <p>Click <span class="Emphasis">Execute</span>. </p>
+                <p>The Cluster Set Snapshot Comparison Report displays.</p>
+            </li>
+        </ol>
+        <h2>Toolbar functionality</h2>
+        <table class="TableStyle-standard" cellspacing="0" style="mc-table-style: url('../../Resources/TableStyles/standard.css');">
+            <col class="TableStyle-standard-Column-Column1" />
+            <col class="TableStyle-standard-Column-Column2" />
+            <thead>
+                <tr class="TableStyle-standard-Head-Header1">
+                    <th class="TableStyle-standard-HeadE-Column1-Header1">Object</th>
+                    <th class="TableStyle-standard-HeadD-Column2-Header1">Description</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">
+                         Time Frame 
+                    </td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">
+                         Select the time frames that include the snapshots  to compare. 
+                    </td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">
+                         Parameters 
+                    </td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">
+                         Toggles displaying or hiding the Parameters area of the report. 
+                    </td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyB-Column1-Body1">
+                         Execute 
+                    </td>
+                    <td class="TableStyle-standard-BodyA-Column2-Body1">
+                         Generates the report and compares the snapshots selected in the Time Frame list. 
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <h2>Cluster Set Snapshot Comparison report</h2>
+        <p>For each site, a snapshot classification is highlighted in orange when it is different than the classification for the snapshot to its left.</p>
+        <table class="TableStyle-standard" cellspacing="0" style="mc-table-style: url('../../Resources/TableStyles/standard.css');">
+            <col class="TableStyle-standard-Column-Column1" />
+            <col class="TableStyle-standard-Column-Column2" />
+            <thead>
+                <tr class="TableStyle-standard-Head-Header1">
+                    <th class="TableStyle-standard-HeadE-Column1-Header1">Column</th>
+                    <th class="TableStyle-standard-HeadD-Column2-Header1">Description</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">
+                         Site Code 
+                    </td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">
+                         The unique code for the site in the system. 
+                    </td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">
+                         Site Name 
+                    </td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">
+                         The description for the site. 
+                    </td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyB-Column1-Body1">
+                        Classification Name 
+                    </td>
+                    <td class="TableStyle-standard-BodyA-Column2-Body1">
+                       The assigned classification for the site during the corresponding snapshot's effective time frame. 
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </body>
+</html>

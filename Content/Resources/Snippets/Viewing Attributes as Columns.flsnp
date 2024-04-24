@@ -1,0 +1,10 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head>
+    </head>
+    <body>
+        <h2>Viewing Attributes as columns </h2>
+        <p>Attributes that have been set up in Attribute Manager as Placeholder and/or Variant attributes, such as Season Type or Item Season,  automatically display as read-only columns in the main planning view, the <span class="Emphasis">Assortment Out-of-Tier Report</span> view, and the <span class="Emphasis">Variants</span> view. </p>
+        <p>The Attributes can be edited using the <span class="Emphasis">Attributes</span> supporting view which allows for viewing and editing of the attributes associated with Collections, Variants, and Placeholders. Multiple Edits can be achieved by highlighting multiple entities in Collection or Placeholder view.</p>
+    </body>
+</html>

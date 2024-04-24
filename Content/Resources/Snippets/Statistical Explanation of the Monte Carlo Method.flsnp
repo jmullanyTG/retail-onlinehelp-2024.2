@@ -1,0 +1,358 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head>
+        <link href="../TableStyles/standard.css" rel="stylesheet" MadCap:stylesheetType="table" />
+    </head>
+    <body>
+        <p>Consider an item that had the following historic demand and forecast values over an eleven week period (the current date is 3/12/2022):</p>
+        <table style="width: 100%;margin-left: auto;margin-right: auto;mc-table-style: url('../TableStyles/standard.css');" class="TableStyle-standard" cellspacing="0">
+            <col class="TableStyle-standard-Column-Column1" style="width: 33%;" />
+            <col class="TableStyle-standard-Column-Column2" style="width: 33%;" />
+            <col class="TableStyle-standard-Column-Column1" style="width: 33%;" />
+            <thead>
+                <tr class="TableStyle-standard-Head-Header1">
+                    <th style="text-align: center;" class="TableStyle-standard-HeadE-Column1-Header1">Date</th>
+                    <th style="text-align: center;" class="TableStyle-standard-HeadE-Column2-Header1">Actuals</th>
+                    <th style="text-align: center;" class="TableStyle-standard-HeadD-Column1-Header1">Forecast</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td style="text-align: center;" class="TableStyle-standard-BodyE-Column1-Body1">
+                        <p>1/1/2022</p>
+                    </td>
+                    <td style="text-align: center;" class="TableStyle-standard-BodyE-Column2-Body1">
+                        <p>-</p>
+                    </td>
+                    <td style="text-align: center;" class="TableStyle-standard-BodyD-Column1-Body1">
+                        <p>3.65</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td style="text-align: center;" class="TableStyle-standard-BodyE-Column1-Body1">
+                        <p>1/8/2022</p>
+                    </td>
+                    <td style="text-align: center;" class="TableStyle-standard-BodyE-Column2-Body1">
+                        <p>6</p>
+                    </td>
+                    <td style="text-align: center;" class="TableStyle-standard-BodyD-Column1-Body1">
+                        <p>0.92</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td style="text-align: center;" class="TableStyle-standard-BodyE-Column1-Body1">
+                        <p>1/15/2022</p>
+                    </td>
+                    <td style="text-align: center;" class="TableStyle-standard-BodyE-Column2-Body1">
+                        <p>1</p>
+                    </td>
+                    <td style="text-align: center;" class="TableStyle-standard-BodyD-Column1-Body1">
+                        <p>1.31</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td style="text-align: center;" class="TableStyle-standard-BodyE-Column1-Body1">
+                        <p>1/22/2022</p>
+                    </td>
+                    <td style="text-align: center;" class="TableStyle-standard-BodyE-Column2-Body1">
+                        <p>9</p>
+                    </td>
+                    <td style="text-align: center;" class="TableStyle-standard-BodyD-Column1-Body1">
+                        <p>3.58</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td style="text-align: center;" class="TableStyle-standard-BodyE-Column1-Body1">
+                        <p>1/29/2022</p>
+                    </td>
+                    <td style="text-align: center;" class="TableStyle-standard-BodyE-Column2-Body1">
+                        <p>-</p>
+                    </td>
+                    <td style="text-align: center;" class="TableStyle-standard-BodyD-Column1-Body1">
+                        <p>0.92</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td style="text-align: center;" class="TableStyle-standard-BodyE-Column1-Body1">
+                        <p>2/5/2022</p>
+                    </td>
+                    <td style="text-align: center;" class="TableStyle-standard-BodyE-Column2-Body1">
+                        <p>1</p>
+                    </td>
+                    <td style="text-align: center;" class="TableStyle-standard-BodyD-Column1-Body1">
+                        <p>1.50</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td style="text-align: center;" class="TableStyle-standard-BodyE-Column1-Body1">
+                        <p>2/12/2022</p>
+                    </td>
+                    <td style="text-align: center;" class="TableStyle-standard-BodyE-Column2-Body1">
+                        <p>-</p>
+                    </td>
+                    <td style="text-align: center;" class="TableStyle-standard-BodyD-Column1-Body1">
+                        <p>1.77</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td style="text-align: center;" class="TableStyle-standard-BodyE-Column1-Body1">
+                        <p>2/19/2022</p>
+                    </td>
+                    <td style="text-align: center;" class="TableStyle-standard-BodyE-Column2-Body1">
+                        <p>5</p>
+                    </td>
+                    <td style="text-align: center;" class="TableStyle-standard-BodyD-Column1-Body1">
+                        <p>3.83</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td style="text-align: center;" class="TableStyle-standard-BodyE-Column1-Body1">
+                        <p>2/26/2022</p>
+                    </td>
+                    <td style="text-align: center;" class="TableStyle-standard-BodyE-Column2-Body1">
+                        <p>-</p>
+                    </td>
+                    <td style="text-align: center;" class="TableStyle-standard-BodyD-Column1-Body1">
+                        <p>1.02</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td style="text-align: center;" class="TableStyle-standard-BodyE-Column1-Body1">
+                        <p>3/5/2022</p>
+                    </td>
+                    <td style="text-align: center;" class="TableStyle-standard-BodyE-Column2-Body1">
+                        <p>2</p>
+                    </td>
+                    <td style="text-align: center;" class="TableStyle-standard-BodyD-Column1-Body1">
+                        <p>0.11</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td style="text-align: center;" class="TableStyle-standard-BodyB-Column1-Body1">
+                        <p>3/12/2022</p>
+                    </td>
+                    <td style="text-align: center;" class="TableStyle-standard-BodyB-Column2-Body1">
+                        <p>10</p>
+                    </td>
+                    <td style="text-align: center;" class="TableStyle-standard-BodyA-Column1-Body1">
+                        <p>6.10</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <p>
+            <img src="../Images/Allocations/Monte Carlo Forcast vs Actuals.png" class="LargeImages" />
+        </p>
+        <p>The first step is to calculate some statistical properties for the item’s demand that will be used in the Monte Carlo simulation.</p>
+        <table style="width: 100%;margin-left: auto;margin-right: auto;mc-table-style: url('../TableStyles/standard.css');" class="TableStyle-standard" cellspacing="0">
+            <col class="TableStyle-standard-Column-Column1" />
+            <col class="TableStyle-standard-Column-Column2" />
+            <thead>
+                <tr class="TableStyle-standard-Head-Header1">
+                    <th class="TableStyle-standard-HeadE-Column1-Header1">Property</th>
+                    <th class="TableStyle-standard-HeadD-Column2-Header1">Description</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">
+                        <p>Intermittency</p>
+                    </td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">
+                        <p>A measure of how consistent an item’s sales are, what percentage of periods in a given time frame can one expect zero sales</p>
+                        <p>
+                            <img src="../Images/Allocations/Intermittency.png" />
+                        </p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">
+                        <p>Average Non-Zero Demand</p>
+                    </td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">
+                        <p>The average expected demand per period, only measured across&#160; periods with non-zero demand</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyB-Column1-Body1">
+                        <p>Standard Deviation Non-Zero Demand</p>
+                    </td>
+                    <td class="TableStyle-standard-BodyA-Column2-Body1">
+                        <p>The standard deviation of demand across&#160; periods with non-zero demand</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <p>For the example the statistics would be equal to,</p>
+        <table style="width: 100%;margin-left: auto;margin-right: auto;mc-table-style: url('../TableStyles/standard.css');" class="TableStyle-standard" cellspacing="0">
+            <col class="TableStyle-standard-Column-Column1" />
+            <col class="TableStyle-standard-Column-Column2" />
+            <thead>
+                <tr class="TableStyle-standard-Head-Header1">
+                    <th class="TableStyle-standard-HeadD-Column1-Header1" colspan="2">Item Demand Statistics</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">Intermittency</td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">36%</td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">Average Non-Zero Demand</td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">4.9</td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyB-Column1-Body1">Standard Deviation Non-Zero Demand</td>
+                    <td class="TableStyle-standard-BodyA-Column2-Body1">3.7</td>
+                </tr>
+            </tbody>
+        </table>
+        <p>Using the above statistics, a Monte Carlo simulation is generated for the items total demand over the eleven week period.</p>
+        <p>Doing 500 simulations yields the below distribution for total demand</p>
+        <p>
+            <img src="../Images/Allocations/Monte Carlo Demand  Distribution.png" class="LargeImages" />
+        </p>
+        <p>The next step is using the simulated demand distribution to calculate an overall demand satisfaction level.&#160; The demand satisfaction is dependent on total demand which can vary greatly as can be seen from the above distribution.</p>
+        <p>An appropriate level of demand based on a certain level of confidence is chosen . For this specific distribution, there is a 50% confidence level that the total demand is 35 units or less. At an 80% confidence level the total demand is 46 units or less. </p>
+        <p>
+            <img src="../Images/Allocations/Monte Carlo Demand Distribution Confidence.png" class="LargeImages" />
+        </p>
+        <p>The confidence level is dynamically calculated for each item based on how volatile the demand is, and how many observations the demand statistics are based on.&#160; A very volatile item or an item with only 2 periods of history will have a very low confidence level. Whereas a high volume, or more predictable item, will have a much higher confidence level.</p>
+        <p>The confidence level is calculated as follows:</p>
+        <p>First, calculate the relative deviation of the item’s actuals</p>
+        <p>
+            <img src="../Images/Allocations/Relative_Deviation.png" class="LargeImages" />
+        </p>
+        <p>An observation penalty is calculated based on the number of actual data points that was available to calculate the demand statistics,</p>
+        <p>
+            <img src="../Images/Allocations/Observation Penalty.PNG" />
+        </p>
+        <p class="BasicNote">Base confidence is always equal to 50%.</p>
+        <p>
+            <img src="../Images/Allocations/Min_Observations.png" class="LargeImages" />
+        </p>
+        <p>From the example data set, the final confidence level is calculated as per the following:</p>
+        <table style="width: 100%;margin-left: auto;margin-right: auto;mc-table-style: url('../TableStyles/standard.css');" class="TableStyle-standard" cellspacing="0">
+            <col class="TableStyle-standard-Column-Column1" style="width: 75%;" />
+            <col class="TableStyle-standard-Column-Column2" style="width: 25%;" />
+            <thead>
+                <tr class="TableStyle-standard-Head-Header1">
+                    <th style="text-align: center;" class="TableStyle-standard-HeadE-Column1-Header1">Relative Deviation</th>
+                    <th style="text-align: center;" class="TableStyle-standard-HeadD-Column2-Header1">1.22</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td style="text-align: center;" class="TableStyle-standard-BodyE-Column1-Body1">
+                        <p>Observation Penalty</p>
+                    </td>
+                    <td style="text-align: center;" class="TableStyle-standard-BodyD-Column2-Body1">
+                        <p>-</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td style="text-align: center;" class="TableStyle-standard-BodyE-Column1-Body1">
+                        <p>Final Deviation</p>
+                    </td>
+                    <td style="text-align: center;" class="TableStyle-standard-BodyD-Column2-Body1">
+                        <p>1.22</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td style="text-align: center;" class="TableStyle-standard-BodyE-Column1-Body1">
+                        <p>Base Confidence</p>
+                    </td>
+                    <td style="text-align: center;" class="TableStyle-standard-BodyD-Column2-Body1">
+                        <p>50%</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td style="text-align: center;" class="TableStyle-standard-BodyE-Column1-Body1">
+                        <p>Scaling Factor</p>
+                    </td>
+                    <td style="text-align: center;" class="TableStyle-standard-BodyD-Column2-Body1">
+                        <p>1.29</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td style="text-align: center;" class="TableStyle-standard-BodyB-Column1-Body1">
+                        <p>Final Confidence
+                        </p>
+                    </td>
+                    <td style="text-align: center;" class="TableStyle-standard-BodyA-Column2-Body1">
+                        <p>65%</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <p>Based on the final confidence level the appropriate total demand is then selected from the Monte Carlo distribution, total demand satisfied is calculated, and the forecast is adjusted to a level where the total demand satisfied percentage is reached.</p>
+        <p>In the special case where all periods of historic demand are equal to zero, the forecast will naturally be trended downwards to zero (downward re-trend will be restricted by the min re-trend factor setting). </p>
+        <p>Because the majority of items are very intermittent, this situation can occur quite often especially in the early stages where an item does not have a lot of history.&#160; </p>
+        <p>To ensure there is no re-trending downwards too aggressively where few observations are available, a confidence level is not used. Instead estimated demand is set equal to a linear combination of total forecast:</p>
+        <p>
+            <img src="../Images/Allocations/Estimated_Demand.png" class="LargeImages" />
+        </p>
+        <p>The estimated demand satisfied calculation would be as follows:</p>
+        <table style="width: 100%;margin-left: auto;margin-right: auto;mc-table-style: url('../TableStyles/standard.css');" class="TableStyle-standard" cellspacing="0">
+            <col class="TableStyle-standard-Column-Column1" style="width: 75%;" />
+            <col class="TableStyle-standard-Column-Column2" style="width: 25%;" />
+            <thead>
+                <tr class="TableStyle-standard-Head-Header1">
+                    <th class="TableStyle-standard-HeadE-Column1-Header1">Estimated Demand at 65% confidence level</th>
+                    <th class="TableStyle-standard-HeadD-Column2-Header1">40</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">
+                        <p>Total Forecast (Forecast Period=-11)
+                        </p>
+                    </td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">
+                        <p>24.7</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">
+                        <p>Demand Satisfied</p>
+                    </td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">
+                        <p>38.6%</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyB-Column1-Body1">
+                        <p>Desired Demand Satisfied</p>
+                    </td>
+                    <td class="TableStyle-standard-BodyA-Column2-Body1">
+                        <p>95%</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <p>The multiplication factor (re-trend factor) to apply to the forecast going forward is calculated as,</p>
+        <p>
+            <img src="../Images/Allocations/Multiplication_Factor.png" class="LargeImages" />
+        </p>
+        <p>The final multiplication factor is equal to:</p>
+        <table style="width: 100%;margin-left: auto;margin-right: auto;mc-table-style: url('../TableStyles/standard.css');" class="TableStyle-standard" cellspacing="0">
+            <col class="TableStyle-standard-Column-Column1" />
+            <col class="TableStyle-standard-Column-Column2" />
+            <tbody>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyB-Column1-Body1">
+                        <p>Multiplication Factor</p>
+                    </td>
+                    <td class="TableStyle-standard-BodyA-Column2-Body1">
+                        <p>1.55</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <p>This is the re-trend factor that is applied to all future forecast periods.</p>
+        <p class="BasicNote">The final multiplication factor is restricted to be within the bounds set by the min and max multiplication factor settings.</p>
+        <p>
+            <img src="../Images/Allocations/Actual_vs_Original_Forecast_graph.png" class="LargeImages" />
+        </p>
+    </body>
+</html>

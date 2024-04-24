@@ -1,0 +1,222 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head>
+        <link href="../../Resources/TableStyles/standard.css" rel="stylesheet" MadCap:stylesheetType="table" /><title></title>
+    </head>
+    <body>
+        <h1>Managing assortment plans and setting plan defaults</h1>
+        <p>To access the <span class="Emphasis">Manage Assortment Plans</span> screen, from the <span class="Emphasis">Plan</span> tab, click <span class="Emphasis">Assortment Planning</span> and then <span class="Emphasis">Manage</span>. </p>
+        <p>
+            <img src="../../Resources/Images/Assortment Planning/Manage Assortment Plans screen.png" class="LargeImages" />
+        </p>
+        <p>The following functionality is available on the <span class="Emphasis">Manage Assortment Plans</span> screen:</p>
+        <h2>New</h2>
+        <p>
+            <img src="../../Resources/Images/Assortment Planning/New Assortment button.png" class="LargeImages" />
+        </p>
+        <p>Add a new assortment plan. For information describing the buttons and fields, see <MadCap:xref href="General Tab.htm">General Tab </MadCap:xref>.</p>
+        <h2>Edit</h2>
+        <p>Launches the <span class="Emphasis">Update Assortment</span> dialog for the selected assortment plan.</p>
+        <p>
+            <img src="../../Resources/Images/Assortment Planning/Edit Assortment button.png" class="LargeImages" />
+        </p>
+        <p>Note that most of the plan parameters are now locked. </p>
+        <p><span class="Emphasis">User Access tab</span>: User and role permissions for the assortment plan are edited in the same manner as described in the <span class="Emphasis">User Access</span> section below.</p>
+        <h2>Delete</h2>
+        <p>Deletes the selected assortment plan. </p>
+        <h2>User Access</h2>
+        <p>Launches the <span class="Emphasis">Manage Access</span> view for the selected plan. Access can be set at the User level or by Role with roles being assigned as users are added to the system.</p>
+        <p>The Product and Site Hierarchy access levels available is dependent on the corresponding parameter selections for the assortment plan.</p>
+        <p>The <span class="Emphasis">Select All</span> and <span class="Emphasis">Select None</span> buttons in the <span class="Emphasis">Product</span> and <span class="Emphasis">Site</span> fields in the upper portion of the view can be used to quickly apply or remove complete access to all available Product or Site hierarchy levels within the plan without having to interact with the bottom portion of the dialog.</p>
+        <h3>Buttons</h3>
+        <table style="width: 100%;margin-left: auto;margin-right: auto;mc-table-style: url('../../Resources/TableStyles/standard.css');" class="TableStyle-standard" cellspacing="0">
+            <col class="TableStyle-standard-Column-Column1" />
+            <col class="TableStyle-standard-Column-Column2" />
+            <thead>
+                <tr class="TableStyle-standard-Head-Header1">
+                    <th class="TableStyle-standard-HeadE-Column1-Header1">Button</th>
+                    <th class="TableStyle-standard-HeadD-Column2-Header1">Description</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1"><span class="Emphasis">Save</span>
+                    </td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1"> Saves permissions changes made to the assortment plan.</td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1"><span class="Emphasis">Cancel</span>
+                    </td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1"> Closes the <span class="Emphasis">Manage Access</span> view without saving changes made to the assortment plan.</td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyB-Column1-Body1"><span class="Emphasis">Save and Close</span>
+                    </td>
+                    <td class="TableStyle-standard-BodyA-Column2-Body1">Saves permissions changes made to the assortment plan and closes the <span class="Emphasis">Manage Access</span> view.</td>
+                </tr>
+            </tbody>
+        </table>
+        <p class="BasicNote">User permissions for assortment plans can also be edited via the <span class="Emphasis">User Access</span> tab of the Update Assortment dialog (see <span class="Emphasis">Edit</span> section above). Additional permissions can also be setup in the user manager.</p>
+        <h2>Snapshot</h2>
+        <p>Launches the <span class="Emphasis">Manage Snapshots</span> dialog in which users can plan snapshots which occur on a regular schedule and to create and delete snapshots manually. Snapshots are captures of the state of the current plan at the time they are generated for the purpose of future comparisons as users work with the plan. Snapshots can be used within the Sales Plan, Assortment Rollup, and Reconciliation views within Assortment planning.</p>
+        <p>For details on the metrics included in snapshots, see Comparison metrics listed in under the respective sections for these supporting views.</p>
+        <p>
+            <img src="../../Resources/Images/Assortment Planning/Snapshot dialog.png" alt="https://lh6.googleusercontent.com/XYMkqkoOihI7W-bizh20xfFhesJsx0vkNwnR8o1RK-ZCc6EKlBThk0K58F3zl9WoJAmyIkuPxQeeqo7J_lwSxxOUNKszLfxu_62rON6vFGrX-1ypyIHfUu2UlJwFprH-aDHlicQr" class="LargeImages" />
+        </p>
+        <p>For descriptions of buttons and fields, see <MadCap:xref href="Snapshot Tab.htm">Snapshot Tab </MadCap:xref>.</p>
+        <h2><a name="Defaults"></a>Defaults </h2>
+        <p>Launches the <span class="Emphasis">Manage Assortment Defaults</span> view for the current plan. Users can set default parameters for plan elements and functions used frequently within Assortment Planning so they do not have to be manually set each time. Default parameters can generally still be changed later by the user if needed.</p>
+        <p>Defaults set here are applied to placeholders assigned to the specified level of the product hierarchy at the time of generation, whether manually within the main planning view or through the Smart Start function.</p>
+        <p>Defaults are set in an inheritance scheme, meaning defaults set at higher levels of the product hierarchy persist down through the levels beneath unless different defaults are set at those lower levels as exceptions.</p>
+        <p class="BasicNote">Changing defaults in this screen does not alter settings for placeholders that already exist.</p>
+        <p class="Example">A hierarchy has a department called Mens Tops. Beneath Mens Tops there are the sub-departments Mens Tees, Mens Wovens, and Mens Knits. A user sets a default at the Mens Tops level and then sets a different default at the Mens Knits level. Mens Tees and Wovens inherit the same default that was set at the Mens Tops level, but Men’ Knits uses the default set at its own level. All default settings are not required.</p>
+        <p MadCap:conditions="General.ScreenOnly">For more information on the tabs in the default screen, refer to the following:</p>
+        <ul MadCap:conditions="General.ScreenOnly">
+            <li>
+                <MadCap:xref href="Assortment Plan Defaults tab.htm">Assortment Plan Defaults tab</MadCap:xref>
+            </li>
+            <li>
+                <MadCap:xref href="Assortment Plan Defaults By Cluster tab.htm">Assortment Plan Defaults By Cluster tab</MadCap:xref>
+            </li>
+            <li>
+                <MadCap:xref href="Assortment Plan Defaults By Time.htm">Assortment Plan Defaults By Time tab</MadCap:xref>
+            </li>
+        </ul>
+        <h2><a name="Receipt"></a>Receipt Periods</h2>
+        <p>Launches the <span class="Emphasis">Manage Receipt Periods</span> view in which Receipt periods can be defined in a pivot table. The <span class="Emphasis">Manage Receipt Periods</span> view provides detailed visibility to how receipts are planned and provides a way to effectively manage Receipts at an aggregated hierarchy level with Receipt periods assigned to specific weeks. </p>
+        <p>Receipt periods can be assigned at any level of the Product hierarchy and can be assigned to all underlying levels. Exceptions can be made on underlying levels in the hierarchy. Only those time periods selected using the <span class="Emphasis">Window of Time</span> parameter populate the grid.</p>
+        <p>The Receipt periods are applied to all existing Placeholders whose phase dates intersect with the selected time periods, and the defaults will be applied to all new placeholders created in the future.</p>
+        <h3>Defaults</h3>
+        <p>
+            <img src="../../Resources/Images/Assortment Planning/Receipt Periods screen.PNG" class="LargeImages" />
+        </p>
+        <p>The following defaults are available within each field:</p>
+        <table style="width: 100%;margin-left: auto;margin-right: auto;mc-table-style: url('../../Resources/TableStyles/standard.css');" class="TableStyle-standard" cellspacing="0">
+            <col class="TableStyle-standard-Column-Column1" />
+            <col class="TableStyle-standard-Column-Column2" />
+            <thead>
+                <tr class="TableStyle-standard-Head-Header1">
+                    <th class="TableStyle-standard-HeadE-Column1-Header1">Default</th>
+                    <th class="TableStyle-standard-HeadD-Column2-Header1">Description</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">Flow Candidate</td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">A possible flow period. Whether the period is a flow period is determined by the Periods Before Phase In and the Flow Period Frequency. </td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">Flow Date</td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">Specifies that the selected period is a flow date. If selected, then the period will always be opted in as a receipt period.</td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyB-Column1-Body1">No Flow Date</td>
+                    <td class="TableStyle-standard-BodyA-Column2-Body1">Specifies that the selected period is not a flow date. If specified, then the period will never have flows going into it for the items in the product level for the Cluster Set Clusters.</td>
+                </tr>
+            </tbody>
+        </table>
+        <p class="BasicNote">The default setting is determined by the system policy <span class="Emphasis">Default Flow Date Type</span>.</p>
+        <h3>Setting a default for all sub-categories of a hierarchy level</h3>
+        <p>A default can be assigned at a higher level (for example, <span class="Emphasis">Coats &amp; Jackets</span>) and all lower levels are automatically set to that default. This saves having to configure many sub-categories. </p>
+        <p>For example, to set <span class="Emphasis">Flow Date</span> as the default for all sub-categories of <span class="Emphasis">Coats &amp; Jackets</span> for a particular set of weeks, click on the Accessories label to highlight all the relevant fields. Within the grid, right-click and select the <span class="Emphasis">Multiple Changes</span> menu option to update multiple fields using the <span class="Emphasis">Multi Data Change Form</span>. This updates all the sub-categories simultaneously.</p>
+        <p>
+            <img src="../../Resources/Images/Assortment Planning/Receipt Period Mens Accessories.PNG" class="LargeImages" />
+        </p>
+        <p>Alternatively, a particular hierarchy level can be collapsed by clicking on the arrow and set the default in the appropriate field in the grid.</p>
+        <h3>Selections available by period</h3>
+        <p>Once saved, the field selections act as defaults. This means anything created after the default was set inherits the default. </p>
+        <p class="BasicNote">Existing items are not affected unless either <span class="Emphasis">Apply Visible, Saved Defaults to Existing Items</span> or <span class="Emphasis">Apply Visible, Saved Defaults Over User Overrides</span> is clicked.</p>
+        <h3>Applying changes to existing items</h3>
+        <p>The user can apply all Receipt Period defaults to all existing items by clicking one of the two buttons on the top of the screen. For both, users must click <span class="Emphasis">Save</span> before the defaults on screen are applied.  If the user does not click <span class="Emphasis">Save</span> before clicking an <span class="Emphasis">Apply</span> button, then the unsaved changes will not be in effect.</p>
+        <p>The changes brought on by clicking these buttons only affect items in any of the hierarchy levels and cluster set / clusters currently displayed in the grid.</p>
+        <p>If there are placeholders that are assigned to a parent hierarchy level but haven’t been assigned a final product level, then all placeholders assigned at that parent level are affected. For example, placeholders assigned to <span class="Emphasis">Mens &gt; Accessories</span> that have not been given a more specific assignment (Bags, Belts, etc) will be affected if the <span class="Emphasis">Mens &gt; Accessories</span> level is on the screen.</p>
+        <p>The date selection parameter determines which placeholders are affected in terms of how their Phase dates overlap.  If any point of the life cycle of the placeholder intersects the selected Window of Time, then all flow dates for the planned life of that placeholder are updated, not just the periods being selected.</p>
+        <p>Changes are applied to existing items in one of two ways:</p>
+        <table style="width: 100%;margin-left: auto;margin-right: auto;mc-table-style: url('../../Resources/TableStyles/standard.css');" class="TableStyle-standard" cellspacing="0">
+            <col class="TableStyle-standard-Column-Column1" />
+            <col class="TableStyle-standard-Column-Column2" />
+            <thead>
+                <tr class="TableStyle-standard-Head-Header1">
+                    <th class="TableStyle-standard-HeadE-Column1-Header1">Option</th>
+                    <th class="TableStyle-standard-HeadD-Column2-Header1">Description</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">Apply Visible, Saved Defaults to Existing Items</td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">Applies the defaults on screen to all existing items, but leaves user overrides made in <span class="Emphasis">Receipt Plan</span> intact.  It only changes flows made by previous applications of <span class="Emphasis">Receipt Periods</span> default data or automatically generated flow dates.</td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyB-Column1-Body1">Apply Visible, Saved Defaults Over User Overrides</td>
+                    <td class="TableStyle-standard-BodyA-Column2-Body1">Applies the defaults on screen to all existing items, including any user overrides made in <span class="Emphasis">Receipt Plan</span>.  There is a confirmation message to ensure the user intends to clear out all placeholder-specific <span class="Emphasis">Receipt Plans</span>.</td>
+                </tr>
+            </tbody>
+        </table>
+        <h3>Mixed defaults within an aggregate level</h3>
+        <p>If there are mixed defaults within a hierarchy level, then when the field is collapsed the formatting changes. The text is removed and the field is highlighted yellow to indicate there are different states below. Conversely, if all defaults below are the same the formatting does not change.</p>
+        <p>
+            <img src="../../Resources/Images/Assortment Planning/Receipt Periods screen mixed states.PNG" class="LargeImages" />
+        </p>
+        <h4>Collapsed view</h4>
+        <p>
+            <img src="../../Resources/Images/Assortment Planning/Receipt Periods screen mixed states yellow.PNG" class="LargeImages" />
+        </p>
+        <h2><a name="Seed"></a>Seed</h2>
+        <p>Launches the <span class="Emphasis">Seed Placeholders</span> dialog. Because of the way placeholder entities are used within Assortment Planning, a necessary step in creating new plans is generating equivalent placeholder entities for existing items for which historical selling information is to be utilized.</p>
+        <p class="BasicNote">Ideally, this process is performed once per plan as all new items created in Assortment Planning are generated as placeholder entities. However, the process can be re-run to pick up new items that weren’t present at the time of seeding without adversely affecting anything that has already been seeded. The process looks for variants that don’t have placeholder entities created and creates them.</p>
+        <p>
+            <img src="../../Resources/Images/Assortment Planning/Seed Placeholders View.png" class="LargeImages" />
+        </p>
+        <p>Two system policies allow for the specification of custom user-friendly descriptions for placeholders and collections generated from the Seed process. A style description or variant description is still respectively appended at the end of the custom description as an indicator to the seed link (for example, ‘custom text from system policy’ + style or variant description). The two system policies are:</p>
+        <ul>
+            <li><span class="Emphasis">Description for Generated Placeholder Collections from Seed</span>
+            </li>
+            <li><span class="Emphasis">Description for Generated Placeholders from Seed</span>
+            </li>
+        </ul>
+        <h3>Seeding and Attribute Inheritance</h3>
+        <p>When seeding placeholders from historical variants, any attributes attached to those variants will also be attached to the resultant placeholders, provided the following are true:</p>
+        <ul>
+            <li>A valid attribute set is associated with the product level to which the variants belong. Association can be by directly choosing an attribute set for that level of the product hierarchy or through inheritance of a set from a level above.</li>
+            <li>That attribute set is assigned to both the Variant and Variant Placeholder entity types.</li>
+            <li>That attribute set includes all attribute families containing the attribute values associated with the variants placeholders are being created for.</li>
+            <li>All applicable attribute families are assigned to both the Variant and Variant Placeholder entity types.</li>
+            <li>All attribute values associated with the variants placeholders are being created for are marked as Allowed for the corresponding attribute set.</li>
+        </ul>
+        <p MadCap:conditions="General.ScreenOnly">For more information on creating and assigning attribute sets, families, and values, see <MadCap:xref href="../Attribute Management/Attribute Management Overview.htm">Attribute Management and Assignment Overview</MadCap:xref>.</p>
+        <p MadCap:conditions="General.PrintOnly">For more information, refer to the Attribute Management online help.</p>
+        <h3>Seed Placeholders parameters</h3>
+        <p><span class="Emphasis">Start Date</span>: Sets the historical date the system begins at when generating placeholders for existing items. This should be set to the farthest date back desired to utilize historical sales in Assortment Planning. A general best practice is at least 2 years as most businesses typically view data this far back as being relevant to current plans.</p>
+        <p class="Important">Start date cannot fall before the date designated by the current date minus the number of days specified in the <span class="Emphasis">Assortment days history to maintain</span> system policy (accessed via <span class="Emphasis">Maintenance &gt; Policies &gt; Module: Assortment</span>).</p>
+        <h3>Seed Placeholders grid</h3>
+        <p><span class="Emphasis">Use Default Cluster Set(s) per product level</span>: This option appears at the top of the cluster set list and allows users to easily seed historical placeholders for the default cluster sets assigned by product level. For this option to work properly, at least one default cluster set must be assigned either directly or through inheritance from a level above for all product levels present in the plan being seeded. An error message displays indicating the need to do this if it has not been done at the time seeding is initiated.</p>
+        <p>This option cannot be used in tandem with the selection of other cluster sets within the list. An error displays if there is an attempt to do so.</p>
+        <p class="BasicNote">Due to the dynamic nature of cluster configurations, all that is needed here is to select the cluster sets that contain the sites where the items sold historically. Sales assignments are made at site level and returned based on the active cluster set snapshot for a given period.</p>
+        <h2>Split Factors</h2>
+        <p>Split factors are managed using the <span class="Emphasis">Manage Split Factors</span> screen within the <span class="Emphasis">Assortment Planning</span> module. For more information, see <MadCap:xref href="Managing Split Factors.htm">Managing Split Factors</MadCap:xref>.</p>
+        <h3>Grid columns</h3>
+        <p><span class="Emphasis">Cluster Set</span>: A read-only description for each validated cluster set within the current plan.</p>
+        <p><span class="Emphasis">Overlapping Cluster Sets</span>: A read-only description for any validated cluster sets that overlap with a given cluster set (it contains some or all of the same sites as another set). While it is possible to have overlapping cluster sets within a single plan, it is not possible to assort placeholder items to multiple overlapping cluster sets. One cluster set per group of sites must be chosen in which to plan.</p>
+        <p><span class="Emphasis">Current Placeholder Count</span>: A read-only count of all placeholder items currently generated that registered sales in a given cluster set from the Start Date forward.  </p>
+        <h3>Buttons</h3>
+        <p><span class="Emphasis">Refresh</span>: Refreshes the <span class="Emphasis">Manage Assortment Plans</span> dialog.</p>
+        <p><span class="Emphasis">Execute</span>: Selects the cluster sets in which the historical items to generate placeholders for were present.</p>
+        <p><span class="Emphasis">Fields</span>: Opens the fields <span class="Emphasis">Customization</span> dialog. Users can drag fields to/from the Assortment Seed Placeholders column header area and this dialog to customize the view. Custom layouts can be saved/restored by right-clicking in the Assortment Seed Placeholders area and selecting <span class="Emphasis">Save Layout</span> or <span class="Emphasis">Restore Layout</span>, respectively.</p>
+        <p><span class="Emphasis">Save</span>: Initiates the placeholder generation procedure for the selected cluster sets from the Start Date forward.</p>
+        <p><span class="Emphasis">Cancel</span>: Unchecks selected cluster sets in the Assortment Seed Placeholders section or closes the <span class="Emphasis">Manage Assortment Plans</span> view without opening an assortment plan.          </p>
+        <p><span class="Emphasis">Ok</span>: Opens the selected assortment plan and launches the <span class="Emphasis">Smart Start</span> screen.</p>
+        <h2>Import Config</h2>
+        <p>The configuration of sources of external data is done using the <span class="Emphasis">Manage Import Config</span> screen. 
+
+To display this view, click the <span class="Emphasis">Import Config</span> button on the <span class="Emphasis">Manage Assortment Plans</span> toolbar. The screen displays a list of AP metrics and allows for the configuration of each source of external data in one place. </p>
+        <p>
+            <img src="../../Resources/Images/Assortment Planning/Manage Import Config.PNG" class="LargeImages" /><![CDATA[ 
+
+]]></p>
+        <h3>Data Source Type Configuration pane</h3>
+        <p>To choose the Source Type for each field, click in the field to display a dropdown list of options. The options that display depends on whether a price (AUT/AUR) or a cost (AUC) type is selected.</p>
+        <h3>Metric notes</h3>
+        <p>The <span class="Emphasis">Seasonality Curve</span>, <span class="Emphasis">Lifecycle Curve</span>, and <span class="Emphasis">Markdown Curve</span> fields in the main planning view display <span class="Emphasis">(External)</span> to indicate the Curve in use is from External data. <span class="Emphasis">(External)</span> will only show if the Sales Units metric is set to non-editable in the <span class="Emphasis">Manage Import Config</span> view (the <span class="Emphasis">External Editability</span> field is set to <span class="Emphasis">No</span>).</p>
+        <p>The metric <span class="Emphasis">Projected Sales Units</span> is configurable.  Depending on how this metric is configured, the <span class="Emphasis">Projected Sales Units</span> line in the <span class="Emphasis">Sales Plan</span> view populates from either Replen or External.</p>
+    </body>
+</html>

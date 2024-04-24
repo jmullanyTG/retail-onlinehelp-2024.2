@@ -1,0 +1,136 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head>
+        <link href="../../Resources/TableStyles/standard.css" rel="stylesheet" MadCap:stylesheetType="table" />
+    </head>
+    <body>
+        <h1>Real-Time Retail (RTR) </h1>
+        <h2>Responding real-time to changes to stock on hand (SOH)</h2>
+        <p>If configured, planners can receive a real-time data feed from ToolsGroup Onera that reports any changes to the stock on hand (SOH) value of an inventory. TG Onera receives feeds from client ERP systems, and then feeds real-time data via a Webhook into TG JE. </p>
+        <p>To take advantage of this functionality, TG&#160;Onera is required and an API key from TG&#160;Onera configured to access and authenticate with TG&#160;JE.</p>
+        <p class="BasicNote"> The value provided by TG Onera is the total remaining SOH at that time and not the delta between the original and new values. </p>
+        <p>The integration of a continuous data feed means users can be notified in real-time that a fast selling item is approaching its defined end of period safety stock level allowing them to react accordingly. This gives planners the ability to avoid unexpected stock outs and lost sales while also avoiding over ordering stock. This process cuts down the reaction time of TG JE’s system and can alert planners a stock out is about to occur in minutes rather than hour or days. The trigger for an updated recommendation calculation is also configurable to cater to different customer needs. </p>
+        <p>With TG Onera live reporting, planners can generate and approve orders within hours of an approaching stock out event instead of waiting overnight for the nightly batch process to make recommendations. The real-time data feed is in addition to, and faster than, the existing nightly batch process as users don't have to wait overnight to update SOH&#160;values. It is important to note that the data feed does not replace the existing overnight batch process and still relies on the nightly batch for the complete import and process.</p>
+        <p>The Notifications sent to users are silent in that they don't pop up on the screen to avoid being intrusive. In this case, the arrival of Notifications is indicated by an increase in the notification flag count at the top-right of TG JE screens. Additionally, Notifications are aggregated to avoid recipients from being overwhelmed.
+</p>
+        <p>Within a Notification, users can click a link that will open the <span class="Emphasis">Real-Time Retail Dashboard</span> view to gain insight into the received data.</p>
+        <h2>Getting insight into real-time data received from TG&#160;Onera </h2>
+        <p>The real-time data feed can be reviewed using the <span class="Emphasis">Real-Time Retail Dashboard</span> view. This dashboard functions as a central control center for today’s recommended actions providing planners insight to if and when they should generate orders for today. </p>
+        <p>The <span class="Emphasis">Real-Time Retail Dashboard</span> view provides a visually interesting and easy way to gain insight into the following data received from TG Onera's Inventory Hub:</p>
+        <ul>
+            <li>
+                <p>today’s Stock on Hand events
+</p>
+            </li>
+            <li>
+                <p>
+the number of Recalculation events that resulted today.
+
+</p>
+            </li>
+            <li>
+                <p>the recommended order quantity and generated order quantity for today
+</p>
+            </li>
+            <li>
+                <p>
+the last 25 events that resulted in a threshold process event. </p>
+            </li>
+        </ul>
+        <p>
+            <img src="../../Resources/Images/Real-Time Retail/Real-Time Retail Dashboard.png" class="LargeImages" />
+        </p>
+        <p>The data that displays is filtered by selecting predefined filters in the <span class="Emphasis">Inventory Filter</span> field. The dashboard then displays the data for the defined filtered items only. This prevents planners from being overwhelmed by the vast amount of incoming data allowing them to pay close attention to top priority inventories. </p>
+        <p>The dashboard is comprised of the following:</p>
+        <table style="margin-left: auto;margin-right: auto;mc-table-style: url('../../Resources/TableStyles/standard.css');" class="TableStyle-standard" cellspacing="0">
+            <col class="TableStyle-standard-Column-Column1" />
+            <col class="TableStyle-standard-Column-Column2" />
+            <thead>
+                <tr class="TableStyle-standard-Head-Header1">
+                    <th class="TableStyle-standard-HeadE-Column1-Header1">Section</th>
+                    <th class="TableStyle-standard-HeadD-Column2-Header1">Description</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td rowspan="1" colspan="1" class="TableStyle-standard-BodyE-Column1-Body1"><span class="Emphasis">Today’s Real Time SOH Events</span>
+                    </td>
+                    <td rowspan="1" colspan="1" class="TableStyle-standard-BodyD-Column2-Body1">
+                        The total amount of RTR updates compared to the amount displayed using this particular filter.
+                    </td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td rowspan="1" colspan="1" class="TableStyle-standard-BodyE-Column1-Body1"><span class="Emphasis">Today’s Recalculation Events</span>
+                    </td>
+                    <td rowspan="1" colspan="1" class="TableStyle-standard-BodyD-Column2-Body1">
+                        Out of the total amount of RTR updates, how many triggered a calculation.
+                    </td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td rowspan="1" colspan="1" class="TableStyle-standard-BodyE-Column1-Body1"><span class="Emphasis">Today’s Orders Ready for Generation</span>
+                    </td>
+                    <td rowspan="1" colspan="1" class="TableStyle-standard-BodyD-Column2-Body1">
+                        <ul>
+                            <li>
+                                <p rowspan="1" colspan="1"><span class="Emphasis">Generated Order Qty</span> - Out of all the recommended orders in this filter, how many do not have an order generated for the recommendation.</p>
+                            </li>
+                            <li>
+                                <p rowspan="1" colspan="1"><span class="Emphasis">Recommended Order Qty</span> - The total amount of recommendations with an order date of today using this filter.</p>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td rowspan="1" colspan="1" class="TableStyle-standard-BodyB-Column1-Body1"><span class="Emphasis">Latest Threshold Processed Events</span>
+                    </td>
+                    <td rowspan="1" colspan="1" class="TableStyle-standard-BodyA-Column2-Body1">
+						The last 25 events processed by RTR.
+					<p class="BasicNote">The number of events is not configurable.</p></td>
+                </tr>
+            </tbody>
+        </table>
+        <p class="BasicNote">Today is any entry that has a time stamp from 12 am (midnight) up to but not including midnight of the next day. For example, 1/13/2023 00:00:00 to 1/13/2023 23:59:59 is considered today for 1/13/2023.</p>
+        <p>Once planners think it is a good time to generate an order form for today’s orders, orders can be created directly in the view by clicking <span class="Emphasis">Generate Order</span>. This creates an adhoc order for all the items in the filter. The planner can then review and modify the order in Order Manager just like any other order.</p>
+        <h3>Comparing new SOH values against thresholds</h3>
+        <p>The new real-time SOH values are compared against thresholds defined within TG&#160;JE. When the new SOH goes beyond a threshold, the outstanding need for the item is calculated, and an order for today automatically generated ready for review. These new orders are treated by TG JE as if they were manually processed.</p>
+        <p>The thresholds are recorded at individual inventory. The thresholds are:</p>
+        <ul>
+            <li>
+                <p>time based: If the system’s current time exceeds this value, a recalculation is triggered. The value is set to be 1440 minutes (24 hours) from the last known Engine run date or today.</p>
+            </li>
+            <li>
+                <p>value based: If SOH falls below this value, a recalculation is triggered. The value is set to be an Inventory’s End Of Period Safety Stock amount for their current time period (i.e this week or this month).</p>
+            </li>
+            <li>
+                <p>forced flag based: When true, a recalculation is always triggered. This is set to true when there is no recommended projection data for an inventory for their current time period (i.e. this week).</p>
+            </li>
+        </ul>
+        <p class="BasicNote">A CUSP hook has been provided to grant customers the ability to set the Forced Flag, Time, Value entries as they see fit. This does not grant the ability to change how the thresholds are evaluated. For Value based checks, an Inventory’s SOH is always used. However, instead of EOP Safety Stock being the value, it may be another value provided by a more complex calculation.</p>
+        <p>For example, an item has 100 SOH at the start of the day and a defined safety stock level of 20. TG&#160;JE receives a continuous feed from TG&#160;Onera with updates showing the item is continuing to sell briskly. At a certain point during the day, an update is received with a SOH value of 19. As the SOH has dropped below the defined safety stock level of 20 the Item recalculates and produces new recommended orders.</p>
+        <h3>Allocation and replenishment items</h3>
+        <p>Once a threshold has been crossed,  a replenishment runs or an Allocation strategy runs  (if there are multiple strategies defined for the item, only the smallest strategy ID runs).</p>
+        <p>A replenishment item is the item master associated with that replenishment. The item master runs using defined system policies.</p>
+        <p>These allocations and replenishments are placed into specific Workload Queues (made for this purpose) that only handle intra-day processed items. Items that are queued multiple times are grouped together up to the point when the calculation runs. This helps reduce the noise associated with items with constantly changing stock levels. The 2 Workload Queues are:</p>
+        <ul>
+            <li>
+                <p>Real-time Retail Allocations</p>
+            </li>
+            <li>
+                <p>Real-time Retail Replenishment</p>
+            </li>
+        </ul>
+        <h2>Batching items to eliminate delays in processing</h2>
+        <p>The RTR Queue Marshall job task eliminates conflicts when items are manually calculated or calculated by RTR. With a stream of current data, and the need to process that data, along with typical user actions, keeping the stream of real-time data separate from the other job tasks is imperative to not delay calculations triggered other user actions. The RTR Queue Marshall batches groups of related items together for much faster batch processing. This greatly accelerates processing times and improves the user experience.</p>
+        <p>There are two Job Manager jobs for the RTR Queue Marshall  job task:</p>
+        <ul>
+            <li>
+                <p><span class="Emphasis">Queue Marshal RTR - Allocations</span>
+                </p>
+            </li>
+            <li>
+                <p><span class="Emphasis">Queue Marshal RTR - Replenish</span>
+                </p>
+            </li>
+        </ul>
+    </body>
+</html>

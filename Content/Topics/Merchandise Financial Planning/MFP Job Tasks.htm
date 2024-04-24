@@ -1,0 +1,156 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head>
+        <link href="../../Resources/TableStyles/standard.css" rel="stylesheet" MadCap:stylesheetType="table" />
+    </head>
+    <body>
+        <h1>MFP related job tasks </h1>
+        <p>The MFP tasks are primarily used to actualize history &amp; roll the current inventory, take snapshots, and clean up deleted plans.</p>
+        <ol>
+            <li>
+                <p><span class="Emphasis">(MFP) (Daily) Maintain MFP Snapshots</span>: Determines which snapshot templates are ready to have a snapshot taken, and takes the snapshot.</p>
+            </li>
+            <li>
+                <p><span class="Emphasis">(MFP) (Weekly) Maintenance: Clean up deleted plans</span>: Purges data from financial plans that have been deleted.</p>
+            </li>
+            <li>
+                <p><span class="Emphasis">(MFP) (Weekly) Maintain Hybrid Based Plans</span>: Updates the MFP Hybrid tables with the latest actualized data. Requires configuration of the job task parameters. The job task parameters can be useful for troubleshooting by narrowing the scope of time/product/channel that’s maintained.</p>
+            </li>
+        </ol>
+        <table style="margin-left: auto;margin-right: auto;mc-table-style: url('../../Resources/TableStyles/standard.css');" class="TableStyle-standard" cellspacing="0">
+            <col class="TableStyle-standard-Column-Column1" />
+            <col class="TableStyle-standard-Column-Column2" />
+            <col class="TableStyle-standard-Column-Column1" />
+            <thead>
+                <tr class="TableStyle-standard-Head-Header1">
+                    <th class="TableStyle-standard-HeadE-Column1-Header1">Parameter Name</th>
+                    <th class="TableStyle-standard-HeadE-Column2-Header1">Description</th>
+                    <th class="TableStyle-standard-HeadD-Column1-Header1">Default Value</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td rowspan="1" colspan="1" class="TableStyle-standard-BodyE-Column1-Body1">
+                        <p>@iFinancialPlanID</p>
+                    </td>
+                    <td rowspan="1" colspan="1" class="TableStyle-standard-BodyE-Column2-Body1">
+                        <p>Can be left as NULL to process all Hybrid type plans, if a value is provided, then only that plan's master plan will be processed as well as all children.</p>
+                    </td>
+                    <td rowspan="1" colspan="1" class="TableStyle-standard-BodyD-Column1-Body1">
+                        <p>NULL</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td rowspan="1" colspan="1" class="TableStyle-standard-BodyE-Column1-Body1">
+                        <p>@iDaysHistoryToActualize</p>
+                    </td>
+                    <td rowspan="1" colspan="1" class="TableStyle-standard-BodyE-Column2-Body1">
+                        <p>Can be left as NULL which will re-process history all the way back to the seed type of the plan, if a value is provided, then only that many days sales, receipts and inventory will be updated.</p>
+                    </td>
+                    <td rowspan="1" colspan="1" class="TableStyle-standard-BodyD-Column1-Body1">
+                        <p>90</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td rowspan="1" colspan="1" class="TableStyle-standard-BodyE-Column1-Body1">
+                        <p>@bUpdateOrders</p>
+                    </td>
+                    <td rowspan="1" colspan="1" class="TableStyle-standard-BodyE-Column2-Body1">
+                        <p>Flag to specify order update</p>
+                    </td>
+                    <td rowspan="1" colspan="1" class="TableStyle-standard-BodyD-Column1-Body1">
+                        <p>True</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td rowspan="1" colspan="1" class="TableStyle-standard-BodyE-Column1-Body1">
+                        <p>@bUpdateForecast</p>
+                    </td>
+                    <td rowspan="1" colspan="1" class="TableStyle-standard-BodyE-Column2-Body1">
+                        <p>Flag to specify forecast update</p>
+                    </td>
+                    <td rowspan="1" colspan="1" class="TableStyle-standard-BodyD-Column1-Body1">
+                        <p>True</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td rowspan="1" colspan="1" class="TableStyle-standard-BodyE-Column1-Body1">
+                        <p>@bUpdateSales</p>
+                    </td>
+                    <td rowspan="1" colspan="1" class="TableStyle-standard-BodyE-Column2-Body1">
+                        <p>Flag to specify sales updates</p>
+                    </td>
+                    <td rowspan="1" colspan="1" class="TableStyle-standard-BodyD-Column1-Body1">
+                        <p>True</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td rowspan="1" colspan="1" class="TableStyle-standard-BodyE-Column1-Body1">
+                        <p>@bUpdateInventory</p>
+                    </td>
+                    <td rowspan="1" colspan="1" class="TableStyle-standard-BodyE-Column2-Body1">
+                        <p>Flag to specify inventory updates</p>
+                    </td>
+                    <td rowspan="1" colspan="1" class="TableStyle-standard-BodyD-Column1-Body1">
+                        <p>True</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td rowspan="1" colspan="1" class="TableStyle-standard-BodyE-Column1-Body1">
+                        <p>@bUpdateCustomMetric</p>
+                    </td>
+                    <td rowspan="1" colspan="1" class="TableStyle-standard-BodyE-Column2-Body1">
+                        <p>Flag to specify custom metric updates, including shrink, vendor cost &amp; inventory adjustments</p>
+                    </td>
+                    <td rowspan="1" colspan="1" class="TableStyle-standard-BodyD-Column1-Body1">
+                        <p>True</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td rowspan="1" colspan="1" class="TableStyle-standard-BodyE-Column1-Body1">
+                        <p>@vPeriodList</p>
+                    </td>
+                    <td rowspan="1" colspan="1" class="TableStyle-standard-BodyE-Column2-Body1">
+                        <p>If this field is populated along with @vProductLevelList and @vChannelLevelList, then only that intersection of data will be worked on</p>
+                    </td>
+                    <td rowspan="1" colspan="1" class="TableStyle-standard-BodyD-Column1-Body1">
+                        <p>NULL</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td rowspan="1" colspan="1" class="TableStyle-standard-BodyE-Column1-Body1">
+                        <p>@vProductLevelList</p>
+                    </td>
+                    <td rowspan="1" colspan="1" class="TableStyle-standard-BodyE-Column2-Body1">
+                        <p>If this field is populated along with @vPeriodList and @vChannelLevelList, then only that intersection of data will be worked on</p>
+                    </td>
+                    <td rowspan="1" colspan="1" class="TableStyle-standard-BodyD-Column1-Body1">
+                        <p>NULL</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td rowspan="1" colspan="1" class="TableStyle-standard-BodyE-Column1-Body1">
+                        <p>@vChannelLevelList</p>
+                    </td>
+                    <td rowspan="1" colspan="1" class="TableStyle-standard-BodyE-Column2-Body1">
+                        <p>If this field is populated along with @vPeriodList and @vProductLevelList, then only that intersection of data will be worked on</p>
+                    </td>
+                    <td rowspan="1" colspan="1" class="TableStyle-standard-BodyD-Column1-Body1">
+                        <p>NULL</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td rowspan="1" colspan="1" class="TableStyle-standard-BodyB-Column1-Body1">
+                        <p>@iUserID</p>
+                    </td>
+                    <td rowspan="1" colspan="1" class="TableStyle-standard-BodyB-Column2-Body1">
+                        <p>&#160;</p>
+                    </td>
+                    <td rowspan="1" colspan="1" class="TableStyle-standard-BodyA-Column1-Body1">
+                        <p>NULL</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </body>
+</html>

@@ -1,0 +1,81 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" xml:lang="en-us">
+    <head><title></title>
+    </head>
+    <body>
+        <h1>Execute action message allow singleton execution on distinct action</h1>
+        <p>The Execute Action Messages Allow Singleton Execution On Distinct Action is a strategy that only allows one singleton instance of an Action Message to be executed if Action Messages have identical Actions specified. This is the strictest of all the schemes in terms of granular control, ensuring that only the minimal amount of Action Messages are being processed. </p>
+        <p class="BasicNote">If there is an identical Action for an Action Message currently executed and a new Action Message with identical Action arrives for processing, then the new Action Message is discarded and this discarding of the Action Message is reported.</p>
+        <h2>Example scenario</h2>
+        <p>Action Message A is not identical to Action Message B but does have the same Action. </p>
+        <p>Action Message C is not identical to A and B and does not have the same Action. </p>
+        <p>All 3 Action Messages arrive at the Dispatch Broker for processing. In addition, assume that the messages arrive in order A, B and C. </p>
+        <p>With the Execute Action Messages Allow Singleton Execution On Distinct Action strategy, A and C are processed immediately while B is discarded or thrown away.</p>
+        <p>To use this execution scheme, users need to compose an Action Message where the Action is the following constant string:</p>
+        <ul>
+            <li>
+                <p><span class="Emphasis">DISPATCH_SERVICE_SEND_EXECUTE_ACTION_SINGLETON_DISTINCT_ACTION </span>
+                </p>
+            </li>
+        </ul>
+        <h2>Example Action Message</h2>
+        <p>The following is a simple Action Message to determine if the service is currently running using the Execute Action Messages Queue On Distinct Action strategy:</p>
+        <MadCap:codeSnippet>
+            <MadCap:codeSnippetCopyButton />
+            <MadCap:codeSnippetBody MadCap:useLineNumbers="False" MadCap:lineNumberStart="1" MadCap:continue="False" xml:space="preserve">&lt;ActionMessage&gt;
+&lt;Sender&gt;
+&lt;string&gt;DATABASE&lt;/string&gt;
+&lt;/Sender&gt;
+&lt;Recipients&gt;
+&lt;ArrayOfString xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"&gt;
+&lt;string&gt;DISPATCH_SERVICE&lt;/string&gt;
+&lt;/ArrayOfString&gt;
+&lt;/Recipients&gt;
+&lt;Action&gt;
+&lt;string&gt;DISPATCH_SERVICE_SEND_EXECUTE_ACTION_SINGLETON_DISTINCT_ACTION&lt;/string&gt;
+&lt;/Action&gt;
+&lt;ActionParameters.Count&gt;
+&lt;int&gt;2&lt;/int&gt;
+&lt;/ActionParameters.Count&gt;
+&lt;ActionParameters&gt;
+&lt;ActionParameters.Item&gt;
+&lt;ActionParameters.Item.Key&gt;
+&lt;string&gt;DISPATCH_SERVICE_EXECUTE_ACTION_ACTION_MESSAGE&lt;/string&gt;
+&lt;/ActionParameters.Item.Key&gt;
+&lt;ActionParameters.Item.ValueType&gt;
+&lt;string&gt;ToolsGroup JustEnough.Common.Action.ActionMessage, ToolsGroup JustEnough.Common.Action&lt;/string&gt;
+&lt;/ActionParameters.Item.ValueType&gt;
+&lt;ActionParameters.Item.Value&gt;
+&lt;ActionMessage&gt;
+&lt;Sender&gt;
+&lt;string&gt;DATABASE&lt;/string&gt;
+&lt;/Sender&gt;
+&lt;Recipients&gt;
+&lt;ArrayOfString xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" /&gt;
+&lt;/Recipients&gt;
+&lt;Action&gt;
+&lt;string&gt;COMMON_SEND_PING&lt;/string&gt;
+&lt;/Action&gt;
+&lt;ActionParameters.Count&gt;
+&lt;int&gt;0&lt;/int&gt;
+&lt;/ActionParameters.Count&gt;
+&lt;ActionParameters /&gt;
+&lt;/ActionMessage&gt;
+&lt;/ActionParameters.Item.Value&gt;
+&lt;/ActionParameters.Item&gt;
+&lt;ActionParameters.Item&gt;
+&lt;ActionParameters.Item.Key&gt;
+&lt;string&gt;DISPATCH_SERVICE_EXECUTE_ACTION_ACTION_MESSAGE_CALL_IDENTIFICATION_TOKEN&lt;/string&gt;
+&lt;/ActionParameters.Item.Key&gt;
+&lt;ActionParameters.Item.ValueType&gt;
+&lt;string&gt;System.String, mscorlib&lt;/string&gt;
+&lt;/ActionParameters.Item.ValueType&gt;
+&lt;ActionParameters.Item.Value&gt;
+&lt;string&gt;33CAECFF-2419-4E78-A4BD-9612953EC2D0&lt;/string&gt;
+&lt;/ActionParameters.Item.Value&gt;
+&lt;/ActionParameters.Item&gt;
+&lt;/ActionParameters&gt;
+&lt;/ActionMessage&gt;</MadCap:codeSnippetBody>
+        </MadCap:codeSnippet>
+    </body>
+</html>

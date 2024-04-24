@@ -1,0 +1,220 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" xml:lang="en-us">
+    <head>
+        <link href="../../Resources/TableStyles/standard.css" rel="stylesheet" MadCap:stylesheetType="table" /><title></title>
+    </head>
+    <body>
+        <h1>Promotion manager system policies</h1>
+        <p>System policies are configured to set up default settings. They are configured by Professional Services and shouldn’t be modified without assistance from ToolsGroup JustEnough Professional Services or Support. These policies are configured by clicking <span class="Emphasis">Policies</span> from the <span class="Emphasis">Maintenance</span> tab.</p>
+        <h2>Module: PromoPlanner</h2>
+        <table class="TableStyle-standard" cellspacing="0" style="mc-table-style: url('../../Resources/TableStyles/standard.css');margin-left: 0;margin-right: auto;">
+            <col class="TableStyle-standard-Column-Column1" />
+            <col class="TableStyle-standard-Column-Column2" />
+            <thead>
+                <tr class="TableStyle-standard-Head-Header1">
+                    <th class="TableStyle-standard-HeadE-Column1-Header1">
+                         System Policy 
+                    </th>
+                    <th class="TableStyle-standard-HeadD-Column2-Header1">
+                        Description 
+                    </th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">Days elapsed following a Promotion assignment to the Plan, after when the Plan becomes Delete-eligible</td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">Days elapsed following a promotion assignment to a plan, after which the plan becomes eligible for deletion.</td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">Days elapsed following the Plan's end-date, after when the Plan becomes Delete-eligible</td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">Days elapsed following a plan's end-date, after which the plan becomes eligible for deletion.</td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">Days of no Plan modification activity, after when the Plan becomes Delete-eligible</td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">Days of no plan modification activity, after which the plan becomes eligible for deletion.</td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">Plan Exclude Markdowns Default Value</td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">Sets the default value for the <span class="Emphasis">Exclude Markdowns</span> checkbox within the <span class="Emphasis">Manage Plans</span> UI.</td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyB-Column1-Body1">Promotion Planner View Collection Set</td>
+                    <td class="TableStyle-standard-BodyA-Column2-Body1">A View Collection Set that can be configured to display product information pertinent to Promotion Planning.</td>
+                </tr>
+            </tbody>
+        </table>
+        <h2>Module: Promotions</h2>
+        <table class="TableStyle-standard" cellspacing="0" style="mc-table-style: url('../../Resources/TableStyles/standard.css');margin-left: 0;margin-right: auto;">
+            <col class="TableStyle-standard-Column-Column1" />
+            <col class="TableStyle-standard-Column-Column2" />
+            <thead>
+                <tr class="TableStyle-standard-Head-Header1">
+                    <th class="TableStyle-standard-HeadE-Column1-Header1">
+                     System Policy 
+                    </th>
+                    <th class="TableStyle-standard-HeadD-Column2-Header1">
+                         Description 
+                    </th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">
+                        Allow Multiple Dates
+                    </td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">Lets users set a promotion  to run multiple times across the calendar by setting more than one start and end date. Should be set to <span class="Emphasis">False</span>.
+                    </td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">
+                        Allow Promotions with duplicate names
+                    </td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">
+                        Promotions are generally uniquely identified by a combination of their names and dates. Allows multiple promotions with the same name and dates to exist. Should be set to <span class="Emphasis">False</span>.
+                    </td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">Auto select first group and load items when opening a promotion</td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">Auto select first group and load items when opening a promotion.</td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">
+                        Clone Filters On Link to Promotion
+                    </td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">
+                        If a filter is linked to a promotion, a clone of the filter is created if set to <span class="Emphasis">True</span>. Lets users make promotion level modifications to a filter without affecting the original filter.
+                    </td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">
+                        Default Price Strategy used for new Promotions
+                    </td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">
+                        If a default promotion strategy is to be defined for new Promotions, enter the promotion Strategy ID. If the promotion Strategy should not be defaulted, set to <span class="Emphasis">0</span>.
+                    </td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">
+                        Default PriceType
+                    </td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">
+                        (Default is Price Type <span class="Emphasis">1</span> if left blank) Assign the default PriceType for Promotions by its ID. </td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">
+                        Item Calendar View Collection Set
+                    </td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">
+                        Assign the View Collection Set to display the Item Calendar by its ID. If this is not set to a valid ID, a blank screen displays in the Item Calendar tab.
+                    </td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">Limit permanent Purge Batch data deletion</td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">The number of days after the last date-time when a Promotion Purge Batch was touched, after which Purge Batch data and associated table-data can be permanently removed from the database.  Defaults to 2 years.</td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">Limits DEADLOCK retries</td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">The number of DEADLOCK Retries that can be attempted per DML statement - overrides the default system policy.</td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">	Limits Promotions to delete per run
+</td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">The number of Promotions that can be deleted in a single execution</td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">New Promotion View Collection Set</td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">
+                      Set ViewCollectionSetID for creating a new promotion
+                        <p>Assign the View Collection Set to display as a second tab in the <span class="Emphasis">Create New Promotion</span> wizard by its ID. If this is not set to a valid ID, the second tab does not display.</p></td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">Promotion Calendar View Collection Set</td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">
+                       Set ViewCollectionSetID for displaying a promotion calendar.
+                        <p>Assign the View Collection Set to display the Promotion Calendar by its ID. If this is not set to a valid ID, a blank screen displays in the <span class="Emphasis">Promotion Calendar</span> tab.</p></td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">
+                        Promotion Inventory Meta Data View
+                    </td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">
+                        Assign the View Collection Set to display the Promotion Inventory in a promotion by its ID. If this is not set to a valid ID, the default data view displays.
+                    </td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">Promotion Product Price and Cost Level</td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">
+                         The source level of Price and Cost values retrieved for products in a promotion.   
+                        <ul><li><p><span class="Emphasis">Item\Site Pricing</span> (Default) pulls Price and Cost from the Inventory Price and Inventory Cost tables.  </p></li><li><p><span class="Emphasis">Variant\Site Pricing</span> uses Variant-Site Price and Variant-Site Cost tables.  This setting is only supported via the Promotion Public API set.  </p></li></ul></td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">
+                        Promotion Product Selection Level
+                    </td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">
+                        Select <span class="Emphasis">Item Level</span> if the implementation will be Item Master based, or <span class="Emphasis">Variant Level</span> if Variants are preferred.
+                    </td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">Promotions Activity Log Retention Days</td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">
+                         Number of days to retain Promotions Activity Log data. 
+                        </td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">
+                        Recalculate Locked Promotion
+                    </td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">
+                        If set to <span class="Emphasis">True</span>, even promotions that are marked as locked can be recalculated by an overnight process. 
+                        <p class="BasicNote">This could result in system pricing differing from advertised pricing if the promotion is in production.</p></td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">
+                        Show Bids in Promotion View
+                    </td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">
+                        If set to <span class="Emphasis">True</span>, Bids functionality is available for promotions.
+                    </td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">
+                        Show Companion Items in Promotion View
+                    </td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">
+                        If set to <span class="Emphasis">True</span>, Companion Items functionality is available for promotions.
+                    </td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">
+                        Show View Collection Set for Promotion Calendar
+                    </td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">
+                        If set to <span class="Emphasis">True</span>, show the View Collection Set defined in the <span class="Emphasis">Promotion Calendar View Collection Set</span> policy, otherwise use the static Promotion Calendar.
+                    </td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">
+                        Show View Collection Set for Item Calendar
+                        &#160;
+                    </td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">
+                        If set to <span class="Emphasis">True</span>, show the View Collection Set defined in the <span class="Emphasis">Item Calendar View Collection Set</span> policy or the <span class="Emphasis">Variant Calendar View Collection Set</span> policy depending on the <span class="Emphasis">Promotion Product Selection Level</span> setting, otherwise use the default Item Calendar or Variant Calendar.
+                    </td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">Track Promotional Pricing Changes</td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">When set to <span class="Emphasis">True</span>, promotion pricing change records are created that can be reported to see the differences over time. The change records are retained until the promotion has been deleted and the scheduled Promotion Cleanup has been run.</td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyB-Column1-Body1">
+                        Variant Calendar View Collection Set
+                    </td>
+                    <td class="TableStyle-standard-BodyA-Column2-Body1">
+                        Assign the View Collection Set to display the Variant Calendar by its ID. If this is not set to a valid ID, a blank screen displays in the <span class="Emphasis">Variant Calendar</span> tab.
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </body>
+</html>

@@ -1,0 +1,10 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" xml:lang="en-us">
+    <head><title></title>
+    </head>
+    <body>
+        <h1>Job Manager Accessor</h1>
+        <p>The Job Manager Accessor provides methods to control the execution of Jobs which are comprised of tasks. In addition, the Job Manager Accessor provides controls for controlling Job Locks which persist to the database. Locks guarantee that for any job across all systems that connect to a specified database, that at any one point in time, there is only one singleton instance of the Job being processed. </p>
+        <p>Further, the Job Locks provide a mechanism to be able to cancel jobs without tearing state of a processing task. This is because when the cancellation command for a given Job is sent it allows the job execution to complete the task it is busy with before cleanly canceling the rest of the remaining other tasks for the Job.</p>
+    </body>
+</html>

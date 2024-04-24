@@ -1,0 +1,200 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head>
+        <link href="../../Resources/TableStyles/standard.css" rel="stylesheet" MadCap:stylesheetType="table" />
+    </head>
+    <body>
+        <h1>Modeling sales data</h1>
+        <p>If  sales are reduced significantly due to a large scale event such as a disaster, modeled sales can be put in place using the <span class="Emphasis">Disaster Sales Modeling</span> screen. Select a store and have the application system calculate relevant theoretical sales history data for this store during the periods impacted by the event.</p>
+        <p>The modeled sales history data for selected stores is based on forecasting methods. The data is modeled on the LY periods for the same store at the same levels of the product hierarchies. This data is entered as a special sales type so that it does not conflate or otherwise interfere with actual sales.</p>
+        <h2>Accessing the Disaster Sales Modeling screen</h2>
+        <p>This screen can be accessed by:</p>
+        <ul>
+            <li> navigating to System Utilities &gt; Views &gt; Disaster Model &gt; Disaster Sales Modeling</li>
+            <li>adding the view to the Site Manager module. (For more information, see <MadCap:xref href="../Site Manager/Site Manager Configuration.htm">Site Manager Configuration</MadCap:xref>.)</li>
+        </ul>
+        <p>
+            <img src="../../Resources/Images/Views/Disaster Sales Modeling View.PNG" class="LargeImages" />
+        </p>
+        <h2>Parameters</h2>
+        <table style="width: 100%;mc-table-style: url('../../Resources/TableStyles/standard.css');margin-left: 0;margin-right: auto;" class="TableStyle-standard" cellspacing="0">
+            <col class="TableStyle-standard-Column-Column1" />
+            <col class="TableStyle-standard-Column-Column2" />
+            <thead>
+                <tr class="TableStyle-standard-Head-Header1">
+                    <th class="TableStyle-standard-HeadE-Column1-Header1">Parameter</th>
+                    <th class="TableStyle-standard-HeadD-Column2-Header1">Description</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">
+                        <span class="Emphasis">Sales Type</span>
+                    </td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">Select the sales type (default is <span class="Emphasis">COVID-19</span>). Additional sales types can be added.</td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyB-Column1-Body1">
+                        <span class="Emphasis">Time Periods to Replace</span>
+                    </td>
+                    <td class="TableStyle-standard-BodyA-Column2-Body1">The time periods to model. The intended periods with missing data that model data needs to be created for.</td>
+                </tr>
+            </tbody>
+        </table>
+        <h2>Site Level Selection and Product Level Selection panes</h2>
+        <p>The <span class="Emphasis">Site Level Selection</span> and <span class="Emphasis">Product Level Selection</span> panes display the site level hierarchies and product level hierarchies for which model sales and sales history by type can be created. One or more site hierarchies and one or more product hierarchies can be selected at one go. </p>
+        <p>In fact, all site hierarchies and product hierarchies can be selected and a sales model done at the company wide level. However, this would take time to generate the sales model data and it is recommended that this be scheduled at a convenient time.</p>
+        <h3>System policies</h3>
+        <p>The following system policies determine which Site and Product master hierarchies are available for selection:</p>
+        <ul>
+            <li>
+                <p>Disaster Model Product Hierarchy</p>
+            </li>
+            <li>
+                <p>Disaster Model Site Hierarchy</p>
+            </li>
+        </ul>
+        <h3>Time Model Configuration pane</h3>
+        <p>Use this section to configure how the model sales is designed. </p>
+        <table style="width: 100%;margin-left: 0;margin-right: auto;mc-table-style: url('../../Resources/TableStyles/standard.css');" class="TableStyle-standard" cellspacing="0">
+            <col class="TableStyle-standard-Column-Column1" />
+            <col class="TableStyle-standard-Column-Column2" />
+            <thead>
+                <tr class="TableStyle-standard-Head-Header1">
+                    <th class="TableStyle-standard-HeadE-Column1-Header1">Column</th>
+                    <th class="TableStyle-standard-HeadD-Column2-Header1">Description</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">
+                        <span class="Emphasis">Time Period To Replace</span>
+                    </td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">The intended periods with missing data that model data needs to be created for. The time periods that display in this field are selected in the <span class="Emphasis">Time Periods to Replace</span> parameter.</td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">
+                        <span class="Emphasis">Included?</span>
+                    </td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">Whether a particular time period will have modeled sales. If checked, the time period will have modeled sales.</td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">
+                        <span class="Emphasis">Time Period To Copy From</span>
+                    </td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">The LY time period from which sales data is copied. The LY time period does not have to correspond with the time period with depressed sales. For example, week 16 can be modeled on LY week 12.</td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyB-Column1-Body1">
+                        <span class="Emphasis">Adjustment Factor</span>
+                    </td>
+                    <td class="TableStyle-standard-BodyA-Column2-Body1">
+                         The desired percentage of sales data to be copied from the previous period.  
+                        <p>Not all the sales data from the previous period has to be copied. Leaving the value in this field as 1.00 copies 100% of the previous time period’s sales data. The teal blue portion of each column in the graph that displays in the <span class="Emphasis">Modeled Sales Data</span> pane is the actual sales for the time periods to be replaced.</p><p>Therefore, subtract the actual sales data from the sales data to be copied over. For example, if the actual sales are 50% of what was expected, then enter .5 in this field to copy over 50% of the previous time periods sales.</p><p>Also, a value of 1.2 can be entered for a 20% lift or a value of 0.8 for a 20% depression.</p><p>The graph automatically updates when click <span class="Emphasis">Save</span> is clicked in this pane.</p></td>
+                </tr>
+            </tbody>
+        </table>
+        <h3>Formatting</h3>
+        <p>Certain conditions are highlighted by a change in the formatting in the grid.</p>
+        <table style="width: 100%;margin-left: 0;margin-right: auto;mc-table-style: url('../../Resources/TableStyles/standard.css');" class="TableStyle-standard" cellspacing="0">
+            <col style="width: 274px;" class="TableStyle-standard-Column-Column1" />
+            <col class="TableStyle-standard-Column-Column2" />
+            <thead>
+                <tr class="TableStyle-standard-Head-Header1">
+                    <th class="TableStyle-standard-HeadE-Column1-Header1">Formatting</th>
+                    <th class="TableStyle-standard-HeadD-Column2-Header1">Description</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">Light blue background</td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">The time period is selected for inclusion in the sales model.</td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">Orange background</td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">The time period is in a mixed state. When multiple sites or product levels have been selected and some sites or products are included and some are not.</td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">
+                        <img src="../../Resources/Images/Views/Included Mixed State icon.PNG" />
+                    </td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">Indicates that there is a mix of included and excluded.</td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyB-Column1-Body1">
+                        <ul>
+                            <li>
+                                <span class="Emphasis">Time Period To Copy From</span> label is replaced with <span class="Variable">(Mixed)</span></li>
+                            <li>The value in the <span class="Emphasis">Adjustment Factor</span> field is italicized.</li>
+                        </ul>
+                    </td>
+                    <td class="TableStyle-standard-BodyA-Column2-Body1">
+                        <p>Multiple sites levels with existing sales models have been selected and the sites have different time periods as the basis for their sales models. The value in the <span class="Emphasis">Adjustment Factor</span> field is now an average of the adjustment factors in the individual sales models.</p>
+                        <p>See example below.</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <h3>Example: Selecting multiple site levels with existing sales models</h3>
+        <p>If two site levels are selected each with their own pre-existing sales models and there are differences in the time periods included between the sales models, then the following formatting displays:</p>
+        <p>
+            <img src="../../Resources/Images/Views/Average formatting.PNG" class="LargeImages" />
+        </p>
+        <p>The background color is blue for all 3 rows as they are included in both selections. The labels for week 14 and week 16 are spelled out because both site level selections are using week 14 and week 16 in their sales models. The label for week 15 is <span class="Variable" style="font-weight: bold;">(Mixed)</span> because one site level sales one includes week 15 and one sales model does not include it. The adjustment factor value for week 15 is italicized because it is the average of the adjustment factors for the 3 individual sales models.</p>
+        <p>Clicking <span class="Emphasis">Save</span> effectively creates a supersession for both site levels as the rule is copied down to the individual site level sales models. This can be seen by clicking on the individual site levels and reviewing their time model configurations. Supersessions can be removed by deselecting an included site level and clicking <span class="Emphasis">Save</span>. The supersession sales model data for the site level is deleted. </p>
+        <h3>Modeled Sales Data pane</h3>
+        <p>The <span class="Emphasis">Modeled Sales Data</span> pane includes a  graph showing the sales counts as they exist today. Teal blue indicates actual sales.</p>
+        <p>
+            <img src="../../Resources/Images/Views/Model Sales Data Graph.PNG" class="LargeImages" />
+        </p>
+        <table style="width: 100%;margin-left: 0;margin-right: auto;mc-table-style: url('../../Resources/TableStyles/standard.css');" class="TableStyle-standard" cellspacing="0">
+            <col class="TableStyle-standard-Column-Column1" />
+            <col class="TableStyle-standard-Column-Column2" />
+            <thead>
+                <tr class="TableStyle-standard-Head-Header1">
+                    <th class="TableStyle-standard-HeadE-Column1-Header1">Metric</th>
+                    <th class="TableStyle-standard-HeadD-Column2-Header1">Definition</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">
+                        <span class="Emphasis">Real Sales Units</span>
+                    </td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">The actual sales (both regular and promotional). Used in the modeled sales.</td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">
+                        <span class="Emphasis">Site Modeled Sales Units</span>
+                    </td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">Saved site modeling data. Used in the modeled sales.</td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">
+                        <span class="Emphasis">Disaster Modeled Sales Units</span>
+                    </td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">The theoretical or modeled sales units for a specified time period.</td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyB-Column1-Body1">
+                        <span class="Emphasis">Build Ratio</span>
+                    </td>
+                    <td class="TableStyle-standard-BodyA-Column2-Body1">How sales have decreased over time.</td>
+                </tr>
+            </tbody>
+        </table>
+        <h2>Generating model sales data</h2>
+        <p>To generate model sales data:</p>
+        <ol>
+            <li>Review the graph in the <span class="Emphasis">Modeled Sales Data</span> pane to identify a period with a significant decline in sales.</li>
+            <li>
+                <p>Choose one or more site level hierarchy in the <span class="Emphasis">Site Level Selection</span> and one or more product level hierarchy in the <span class="Emphasis">Product Level Selection</span> pane.</p>
+            </li>
+            <li>
+                <p>Select the time periods to be included by checking the checkbox in the <span class="Emphasis">Included?</span> field in the <span class="Emphasis">Time Model Configuration</span> pane.</p>
+                <p class="BasicNote">The default time periods that display is last year (LY). The time period is changed by clicking within the field to select a different time period to copy sales data from.</p>
+            </li>
+            <li>Click the <span class="Emphasis">Adjustment Factor</span> field and enter the desired percentage of sales data to be copied from the target time period.</li>
+        </ol>
+    </body>
+</html>

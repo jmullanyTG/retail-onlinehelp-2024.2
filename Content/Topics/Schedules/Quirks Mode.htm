@@ -1,0 +1,9 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" xml:lang="en-us">
+    <head><title></title>
+    </head>
+    <body>
+        <h1>Quirks mode</h1>
+        <p>The Schedules module runs in a method for date resolution that uses NULL values when taking today’s date into consideration. If the start date is left blank when creating a new schedule, the system saves this date to the database as  NULL. When returning schedules to the user interface, NULL values for ActiveStartDate in the <span class="Emphasis">tbl_Common_Schedule</span> table are considered as today's date [GETDATE()]. </p>
+    </body>
+</html>

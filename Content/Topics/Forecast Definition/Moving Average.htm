@@ -1,0 +1,11 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" xml:lang="en-us">
+    <head><title></title>
+    </head>
+    <body>
+        <h1>Moving average</h1>
+        <p>One way to modify the influence of past data on the mean-as-a-forecast is to specify at the outset just how many past observations will be included in the mean. This procedure is described as a moving average because as each new observation becomes available, a new average can be computed by dropping the oldest observation and including the newest one.</p>
+        <p>When the moving average method is applied, the forecasting engine will look back a specific number of periods, find the mean of those periods and then forecast a straight, flat line at that value for all future points. The number of points the engine observes is the period of the moving average.</p>
+        <p class="Example">For the series of data points 7, 4, 10 representing historical sales and a 3 point moving average (looking at the last 3 points), the moving average is 7 (the mean). When the sales figures for the next month come in with sales of 9 units, then the moving average takes the data points of 4, 10, 9 into account and presents a new forecast of 7.66.</p>
+    </body>
+</html>

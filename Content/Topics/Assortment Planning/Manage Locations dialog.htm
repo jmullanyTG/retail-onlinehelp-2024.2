@@ -1,0 +1,182 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head>
+        <link href="../../Resources/TableStyles/standard.css" rel="stylesheet" MadCap:stylesheetType="table" />
+        <link href="../../Resources/TableStyles/standard.css" rel="stylesheet" MadCap:stylesheetType="table" />
+    </head>
+    <body>
+        <h1>Managing locations in clusters to which a placeholder is assorted</h1>
+        <p>The <span class="Emphasis">Manage Locations</span> view is used to include or exclude specific sites from clusters to which a placeholder is assorted and adjust their sales plans accordingly.</p>
+        <p>Click the <span class="Emphasis">Locations</span> button in the main planning view to launch this view. </p>
+        <h3>Sites excluded by default when moved to a new cluster</h3>
+        <p>By default, sites that are specifically excluded within Assortment Planning remain so. This is based on the system policy described in the following table. If the system policy is enabled, then when a site that has been excluded moves from one cluster to another cluster it remains excluded. Having an exclusion hold by default when a site moves from one cluster to another reduces the risk of assorting and later allocating items that were not intended to be sent out to that store. If a site should receive the item after changing cluster it can easily be included again.</p>
+        <p>Data is not destroyed on a system policy change, so if a switch is done in error there are no consequences, unless a manual data migration was done and data loss occurred. If no manual data migration is performed then all data is preserved but not actioned or displayed depending on how the system policy is defined.</p>
+        <table style="mc-table-style: url('../../Resources/TableStyles/standard.css');" class="TableStyle-standard" cellspacing="0">
+            <col class="TableStyle-standard-Column-Column1" />
+            <col class="TableStyle-standard-Column-Column2" />
+            <thead>
+                <tr class="TableStyle-standard-Head-Header1">
+                    <th class="TableStyle-standard-HeadE-Column1-Header1">System Policy</th>
+                    <th class="TableStyle-standard-HeadD-Column2-Header1">Location</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyB-Column1-Body1">Allow Strict Site Exclusion</td>
+                    <td class="TableStyle-standard-BodyA-Column2-Body1">Maintenance &gt; Policies &gt; Module: Assortment</td>
+                </tr>
+            </tbody>
+        </table>
+        <p>Users can make exceptions for more than one placeholder at once by selecting multiple placeholders in the main planning view prior to clicking the <span class="Emphasis">Locations</span> button. Items selected are stacked in both the top and bottom sections of the <span class="Emphasis">Manage Locations</span> window.</p>
+        <p>
+            <img src="../../Resources/Images/Assortment Planning/Manage Locations view.png" class="LargeImages" />
+        </p>
+        <p>The <span class="Emphasis">Cluster % Cont</span> column lets users see the impact of including or excluding a site in a cluster based on a specific period of time.</p>
+        <h2>Adding or removing rows and columns from the grid</h2>
+        <ol>
+            <li>Right-click on a column header in the bottom section to display a menu. </li>
+            <li>Select <span class="Emphasis">Show Field List</span>. </li>
+            <li>Use the <span class="Emphasis">PivotGrid Field List</span> window to add or remove rows and columns.</li>
+            <li>Close the <span class="Emphasis">PivotGrid Field List</span> window when finished.</li>
+        </ol>
+        <h2>Cell formatting</h2>
+        <p>Formatting is applied to cells to provide additional information.</p>
+        <p>
+            <img src="../../Resources/Images/Assortment Planning/Manage Locations Change Layout.PNG" class="LargeImages" /> </p>
+        <div class="Note_BasicNote">
+            <p>A cell with a gray checkbox and a gray background indicates that there is nothing underlying that data i.e. the location has no E-Com stores or that all of the underlying stores are locked. </p>
+            <p>A white checkbox with a gray background means the stores are locked. To see the reason, bring in the <span class="Emphasis">Lock Reason</span> field into the Data Area. In this case, one suggestion would be to filter the Locked entries out so as to ensure that those values do not interfere with setting at a higher level. Either by placing in the Filter Area or by placing in the Row Area.</p>
+        </div>
+        <h2>Top section fields</h2>
+        <table style="mc-table-style: url('../../Resources/TableStyles/standard.css');" class="TableStyle-standard" cellspacing="0">
+            <col class="TableStyle-standard-Column-Column1" />
+            <col class="TableStyle-standard-Column-Column2" />
+            <thead>
+                <tr class="TableStyle-standard-Head-Header1">
+                    <th class="TableStyle-standard-HeadE-Column1-Header1">Fields</th>
+                    <th class="TableStyle-standard-HeadD-Column2-Header1">Description</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1"><span class="Emphasis">Code</span>
+                    </td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1"> The system codes for all selected placeholders.</td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1"><span class="Emphasis">Description</span>
+                    </td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1"> The description the placeholder.</td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1"><span class="Emphasis">Cluster Set</span>
+                    </td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1"> The cluster sets the placeholder is assorted to.</td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1"><span class="Emphasis">Cluster</span>
+                    </td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1"> The clusters within each cluster set the placeholder is assorted to.</td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1"><span class="Emphasis">Location Count</span>
+                    </td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1"> Count of the sites currently included in the corresponding cluster’s assortment of the placeholder, based on exclusions made in the bottom section of the dialog.
+			<p class="BasicNote">This field reflects the actual number of assorted sites within a cluster for the placeholder, but the Site Count metric in the main view will not update based on exclusions made here. This is because when saving exclusions the cluster level rates of sale are recalculated. Based on the % contribution of included sites and decreasing Site Count would cause double-decrementing of the related sales plan.</p></td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1"><span class="Emphasis">Total Sales ($)</span>
+                    </td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1"> The total sales revenue for the placeholder.</td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1"><span class="Emphasis">Total Sales (U)</span>
+                    </td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1"> The total sales units for the placeholder.</td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyB-Column1-Body1"><span class="Emphasis">Adjusted Sales ($)</span>, <span class="Emphasis">Adjusted Sales (U)</span></td>
+                    <td class="TableStyle-standard-BodyA-Column2-Body1"> The % contribution changes made to the cluster in this view.
+					<p class="BasicNote">Users can restore and go back to sales numbers before any exclusion was made.</p></td>
+                </tr>
+            </tbody>
+        </table>
+        <h2>Bottom section fields</h2>
+        <table style="width: 100%;margin-left: auto;margin-right: auto;mc-table-style: url('../../Resources/TableStyles/standard.css');" class="TableStyle-standard" cellspacing="0">
+            <col class="TableStyle-standard-Column-Column1" />
+            <col class="TableStyle-standard-Column-Column2" />
+            <thead>
+                <tr class="TableStyle-standard-Head-Header1">
+                    <th class="TableStyle-standard-HeadE-Column1-Header1">Fields</th>
+                    <th class="TableStyle-standard-HeadD-Column2-Header1">Description</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1"><span class="Emphasis">Code</span>
+                    </td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1"> The system codes for all selected placeholders.</td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1"><span class="Emphasis">Description</span>
+                    </td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1"> The description the placeholder.</td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1"><span class="Emphasis">Cluster Set</span>
+                    </td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1"> The cluster sets the placeholder is assorted to.</td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1"><span class="Emphasis">Cluster</span>
+                    </td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1"> The clusters within each cluster set the placeholder is assorted to.</td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1"><span class="Emphasis">Loc ID</span>
+                    </td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1"> Unique system identifiers for the sites contained in each cluster.</td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1"><span class="Emphasis">Loc Desc</span>
+                    </td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1"> The corresponding site descriptions for the sites contained in each cluster.</td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1"><span class="Emphasis">Cluster % Cont</span>
+                    </td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1"> Percentage based on assigned Product Hierarchy level of the placeholder.
+         <p class="BasicNote">The level of product hierarchy data used to calculate the location % contribution tables is set by the Level Contribution parameter for the current assortment plan. The sales included are determined by the Sales Types parameter for the current plan. See Manage Assortment Plans above for more information.</p><p class="BasicNote">When calculating location % contribution for location exceptions, sales defined by the above mentioned parameters and that correspond to the LY periods of the lifecycle (periods from Phase in to Phase Out) of each placeholder/cluster are used.</p></td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyB-Column1-Body1"><span class="Emphasis">Include?</span>
+                    </td>
+                    <td class="TableStyle-standard-BodyA-Column2-Body1"> (Default is checked) Whether a site is planned to receive the placeholder or not.   <p class="BasicNote">The sites displayed by cluster in this dialog are based on all effective cluster set snapshots for the placeholder over its life (or through the plan horizon, for placeholders without Phase Out dates). <MadCap:conditionalText MadCap:conditions="General.ScreenOnly">For more information, see <MadCap:xref href="../Cluster Manager/Cluster Manager Overview.htm">Cluster manager overview</MadCap:xref>.</MadCap:conditionalText><MadCap:conditionalText MadCap:conditions="General.PrintOnly">For more information, refer to the Cluster Manager User Guide.</MadCap:conditionalText></p></td>
+                </tr>
+            </tbody>
+        </table>
+        <h2>Buttons</h2>
+        <table style="width: 100%;margin-left: auto;margin-right: auto;mc-table-style: url('../../Resources/TableStyles/standard.css');" class="TableStyle-standard" cellspacing="0">
+            <col class="TableStyle-standard-Column-Column1" />
+            <col class="TableStyle-standard-Column-Column2" />
+            <thead>
+                <tr class="TableStyle-standard-Head-Header1">
+                    <th class="TableStyle-standard-HeadE-Column1-Header1">Button</th>
+                    <th class="TableStyle-standard-HeadD-Column2-Header1">Description</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1"><span class="Emphasis">Cancel</span>
+                    </td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1"> Closes the Manage Locations dialog without making any changes to the selected placeholders.</td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyB-Column1-Body1"><span class="Emphasis">Save</span>
+                    </td>
+                    <td class="TableStyle-standard-BodyA-Column2-Body1"> Saves the changes made to the selected placeholders and updates the main planning view ROS $ and ROS U fields with the Adj ROS $ and Adj ROS U values shown in the top section of the <span class="Emphasis">Manage Locations</span> dialog.</td>
+                </tr>
+            </tbody>
+        </table>
+    </body>
+</html>

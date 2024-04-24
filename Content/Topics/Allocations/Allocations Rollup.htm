@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" xml:lang="en-us">
+    <head><title></title>
+    </head>
+    <body>
+        <h1>Allocation Rollups</h1>
+        <p>The <span class="Emphasis">Allocation Rollup</span> screen displays demand and stock projections at several different levels based on supplied parameters, including:</p>
+        <ul>
+            <li>Product Hierarchy and Product Level</li>
+            <li>Location Hierarchy and Location Level</li>
+            <li>Time Window (historic, present and future)</li>
+        </ul>
+        <p class="BasicNote">To enhance performance, the maximum number of rows to be returned can be defined using system policy <span class="Emphasis">Allocation Rollup Maximum Rows Returned</span>. The default is 500,000 rows.</p>
+        <p>The <span class="Emphasis">Allocation Rollup</span> screen contains a pivot grid where allocations data can be customized  and reports generated.</p>
+        <p>
+            <img src="../../Resources/Images/Allocations/Allocation Rollup Screen.PNG" class="LargeImages" />
+        </p>
+        <h2>Behavior of product groups within Allocations Rollup</h2>
+        <p>Although data from allocation strategy lines can be used into product groups that might not be at the same aggregation level, this data may not aggregate correctly. In this case, aggregation is done to the lowest common level. All common levels display the product group name instead of an aggregatable level. In the product groups, size is treated like an attribute instead of a product dimension level.</p>
+        <p>If an item filter contains items which are in a product group and some which are not in product groups, one row is displayed for the product group and the remaining  items  display the expected hierarchical value names for that item. </p>
+    </body>
+</html>

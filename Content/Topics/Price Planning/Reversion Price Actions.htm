@@ -1,0 +1,189 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head>
+        <link href="../../Resources/TableStyles/standard.css" rel="stylesheet" MadCap:stylesheetType="table" />
+    </head>
+    <body>
+        <h1>Reversion price actions</h1>
+        <p>Price reversions are applied from within Pricing Plans by navigating to the <span class="Emphasis">Price Reversion</span> tab.  Select a price reversion type and the effective date of the reversion for a series of Variant-Sites. </p>
+        <p>The grid displays the latest past markdown up to today's date along with all future planned markdowns.</p>
+        <h2>Multiple reversions for the same Variant-Site</h2>
+        <p>The same Variant-Site can’t have 2 or more reversions of the same Reversion Type and the same Start Date. To set  multiple reversions for the same Variant-Site, use different reversion types, different start dates, or submit them separately.</p>
+        <p class="BasicNote">Price Action logic separates price actions by Effective Date (PA Start Date), Channel, and Reversion Type ID (Price Method, Workflow, Source Type).
+
+</p>
+        <p>
+            <img src="../../Resources/Images/Price Planning/Price Reversion screen.PNG" class="LargeImages" />
+        </p>
+        <div class="Note_BasicNote">The <span class="Emphasis">Price Reversion</span> tab is only visible if:
+			<ul><li>system policy <span class="Emphasis">Price Reversion Tab Visibility</span> is set to <span class="Emphasis">True</span></li><li>the user has been assigned User Rights: <ul><li><span class="Emphasis">Add Price Action</span></li></ul><ul><li><span class="Emphasis">Allow Access to Plan Price Reversion</span></li></ul></li></ul></div>
+        <h2>Creating reversion price actions</h2>
+        <p>Within a new or existing Pricing Plan:</p>
+        <ol>
+            <li>Click <span class="Emphasis">Select Items</span> to display the Select Items screen displaying all Variants in the Pricing Plan.</li>
+            <li>
+                <p>Select one or more Variants and click <span class="Emphasis">Ok</span>.</p>
+                <p>The <span class="Emphasis">Price Reversion</span> tab refreshes displaying data for the selected Variants and Sites in the Pricing Plan.</p>
+            </li>
+            <li>In the <span class="Emphasis">Reversion Type</span> field, select a Reversion Type.</li>
+            <li>Enter a start date in the <span class="Emphasis">Start Date</span> field.</li>
+            <li>Click <span class="Emphasis">Submit</span>.</li>
+        </ol>
+        <p>Price Actions are created using the entered start dates with strategy, workflow, source price type from the selected reversion type.</p>
+        <h2>Configuring multiple grid rows simultaneously</h2>
+        <ol>
+            <li>Select the multiple rows to be updated. </li>
+            <li>In the <span class="Emphasis">Reversion Type</span> or <span class="Emphasis">Start Date</span> fields, right-click and select the <span class="Emphasis">Multiple Changes</span> menu option. </li>
+            <li>
+                <p>Enter a value in the <span class="Emphasis">New value</span> field.</p>
+                <p>
+                    <img src="../../Resources/Images/Price Planning/Reversion Type Multi Change.PNG" class="LargeImages" />
+                </p>
+            </li>
+            <li> Click <span class="Emphasis">Save</span>.</li>
+        </ol>
+        <h2>Reversion Price Action examples</h2>
+        <p>Based on the Price Reversion Source Type, the new price action’s Price will be the first occurrence of the Source Price Type, that is the most recent price:</p>
+        <h3>Markdown Source Type, the price will be reverted to the price at June 1st.</h3>
+        <table style="mc-table-style: url('../../Resources/TableStyles/standard.css');width: 100%;margin-left: 0;margin-right: auto;" class="TableStyle-standard" cellspacing="0">
+            <col class="TableStyle-standard-Column-Column1" style="width: 379px;" />
+            <col class="TableStyle-standard-Column-Column2" style="width: 587px;" />
+            <col class="TableStyle-standard-Column-Column1" />
+            <thead>
+                <tr class="TableStyle-standard-Head-Header1">
+                    <th class="TableStyle-standard-HeadE-Column1-Header1">
+                        Price Type 
+                    </th>
+                    <th class="TableStyle-standard-HeadE-Column2-Header1">
+                         Start Date 
+                    </th>
+                    <th class="TableStyle-standard-HeadD-Column1-Header1">
+                        Price 
+                    </th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1" style="text-align: center;">
+                        <p>MarkDown</p>
+                    </td>
+                    <td class="TableStyle-standard-BodyE-Column2-Body1" style="text-align: center;">
+                        <p>January 1st (Current price)</p>
+                    </td>
+                    <td class="TableStyle-standard-BodyD-Column1-Body1" style="text-align: center;">
+                        <p>$99.99</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyB-Column1-Body1" style="text-align: center;">
+                        <p>MarkDown</p>
+                    </td>
+                    <td class="TableStyle-standard-BodyB-Column2-Body1" style="text-align: center;">
+                        <p>June 1st</p>
+                    </td>
+                    <td class="TableStyle-standard-BodyA-Column1-Body1" style="text-align: center;">
+                        <p>$109.99</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <h3>Source Type Regular, Reverts to $149.99</h3>
+        <table style="margin-left: 0;margin-right: auto;width: 100%;mc-table-style: url('../../Resources/TableStyles/standard.css');" class="TableStyle-standard" cellspacing="0">
+            <col class="TableStyle-standard-Column-Column1" style="width: 379px;" />
+            <col class="TableStyle-standard-Column-Column2" style="width: 587px;" />
+            <col class="TableStyle-standard-Column-Column1" />
+            <thead>
+                <tr class="TableStyle-standard-Head-Header1">
+                    <th class="TableStyle-standard-HeadE-Column1-Header1">
+                       Price Type 
+                    </th>
+                    <th class="TableStyle-standard-HeadE-Column2-Header1">
+                        Start Date 
+                    </th>
+                    <th class="TableStyle-standard-HeadD-Column1-Header1">
+                         Price 
+                    </th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1" style="text-align: center;">
+                        <p>MarkDown</p>
+                    </td>
+                    <td class="TableStyle-standard-BodyE-Column2-Body1" style="text-align: center;">
+                        <p>January 1st (Current price)</p>
+                    </td>
+                    <td class="TableStyle-standard-BodyD-Column1-Body1" style="text-align: center;">
+                        <p>$99.99</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1" style="text-align: center;">
+                        <p>MarkDown</p>
+                    </td>
+                    <td class="TableStyle-standard-BodyE-Column2-Body1" style="text-align: center;">
+                        <p>June 1st</p>
+                    </td>
+                    <td class="TableStyle-standard-BodyD-Column1-Body1" style="text-align: center;">
+                        <p>$109.99</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyB-Column1-Body1" style="text-align: center;">
+                        <p>Regular</p>
+                    </td>
+                    <td class="TableStyle-standard-BodyB-Column2-Body1" style="text-align: center;">
+                        <p>May 1st</p>
+                    </td>
+                    <td class="TableStyle-standard-BodyA-Column1-Body1" style="text-align: center;">
+                        <p>$149.99</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <p>If there is no Price based on the 2 scenarios above, or the price is 0, then the Variant-Site is excluded from the Reversion Price Action.</p>
+        <h2>Default and additional grid columns</h2>
+        <p class="p">In addition to columns that display data relating to Variants and Sites, the following Pricing columns display by default:</p>
+        <ul>
+            <li>Previous Price Type - Based on Source Price Type in Reversion Type</li>
+            <li>Previous Price Date</li>
+            <li>Previous Price</li>
+            <li>Current Price Type</li>
+            <li>Current Price Date</li>
+            <li>Current Price</li>
+        </ul>
+        <p>Click <span class="Emphasis">Choose</span> on the toolbar to view Variant-Site metadata in addition to current and previous price data. Any date based data is evaluated using the current date.</p>
+        <p class="BasicNote">Additional price types may be displayed as columns within the grid. These additional price types are defined using system policy <span class="Emphasis">Price Reversion UI Displayed Price Types</span>.</p>
+        <h2>Toolbar functionality</h2>
+        <table style="width: 100%;margin-left: 0;margin-right: auto;mc-table-style: url('../../Resources/TableStyles/standard.css');" class="TableStyle-standard" cellspacing="0">
+            <col class="TableStyle-standard-Column-Column1" />
+            <col class="TableStyle-standard-Column-Column2" />
+            <thead>
+                <tr class="TableStyle-standard-Head-Header1">
+                    <th class="TableStyle-standard-HeadE-Column1-Header1">Functionality</th>
+                    <th class="TableStyle-standard-HeadD-Column2-Header1">Description</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">Select Items</td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">Displays the Select Items screen displaying all Variants in the Pricing Plan.</td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">Choose</td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">Launches the <span class="Emphasis">Choose Fields</span> dialog in which users can select and include additional columns to provide more information.</td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">Clear</td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">Clears the screen without saving any work in progress.</td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyB-Column1-Body1">Submit</td>
+                    <td class="TableStyle-standard-BodyA-Column2-Body1">
+                         Validates all modified rows have a valid Reversion Type assigned and a valid future Start Date.  
+                        <p>Clicking <span class="Emphasis">Submit</span> creates Reversion Price Actions using entered start dates with Strategy, Workflow, Source Price Type from the selected Reversion Type.</p></td>
+                </tr>
+            </tbody>
+        </table>
+    </body>
+</html>

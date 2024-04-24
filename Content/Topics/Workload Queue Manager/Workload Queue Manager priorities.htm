@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd"
+      xml:lang="en-us">
+   <head>
+      <title/>
+   </head>
+   <body>
+      <h1>Workload Queue priorities</h1>
+      <ul>
+         <li>
+            <span class="Emphasis">Synchronous:</span> bypasses the Workload Queue and runs in parallel with any queued batches.</li>
+         <li>
+            <span class="Emphasis">Immediate:</span> the batch estimated workload is calculated to run first during the daily time frame, in parallel with Synchronous Batches.</li>
+         <li>
+            <span class="Emphasis">ASAP:</span> -the batch estimated workload is calculated to run during the daily time frame, after Immediate batches, taking into account escalation based upon the batch’s S-Curve time factor.</li>
+         <li>
+            <span class="Emphasis">Low Priority:</span> the batch estimated workload is calculated to run during the daily time frame, after ASAP and Immediate Batches, taking into account escalation based upon the batch’s S-Curve time factor.</li>
+         <li>
+            <span class="Emphasis">Nightly:</span> the batch estimated workload is calculated to run during the nightly time frame, after Low Priority, ASAP, and Immediate Batches, taking into account escalation based upon the batch’s S-Curve time factor.</li>
+         <li>
+            <span class="Emphasis">Weekend:</span> the batch estimated workload is calculated to run during the weekend time frame, after Nightly, Low Priority, ASAP, and Immediate Batches, taking into account escalation based upon the batch’s S-Curve time factor.</li>
+      </ul>
+   </body>
+</html>

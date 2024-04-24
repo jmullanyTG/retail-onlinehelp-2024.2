@@ -1,0 +1,121 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" xml:lang="en-us">
+    <head>
+        <link href="../../Resources/TableStyles/standard.css" rel="stylesheet" MadCap:stylesheetType="table" /><title></title>
+    </head>
+    <body>
+        <h1>Assortment planning and order management</h1>
+        <p>The integration of Assortment Planning with Order Manager and Workflow creates a great deal of flexibility in fleshing out order details and communicating those details both within the organization and externally to ERP/POM systems and suppliers. </p>
+        <h2>Workflow and order document approvals</h2>
+        <p> A common practice in the retail/wholesale industry is to have approvals at multiple stages in the ordering process, potentially submitting order information to suppliers several times throughout, with increased detail in each submission.</p>
+        <h3>Example workflow</h3>
+        <p>An order for Mens Tops with a 6 month lead time from order submission to delivery in the DC. The supplier for all items on the order only requires initial unit commitments up front, with sizing and prepacking details being provided 4 months and 2 months prior to delivery, respectively. Internally, the planning manager must review before submission of order details to suppliers. </p>
+        <p>Using the integration of the Workflow module with the functionality inherent to Order Manager Commitment orders, the process works in document status cycles (Workspace (Analysis), Forwarded, Authorized, Upload Verified) that govern this order. When defining the workflow for this order, the three main nodes to be created are <span class="Emphasis">Initial Commitment</span>, <span class="Emphasis">Break By Size</span>, and <span class="Emphasis">Prepack</span>.  </p>
+        <p>
+            <MadCap:conditionalText MadCap:conditions="General.ScreenOnly">For more information, see <MadCap:xref href="../Workflow Manager/Workflow Manager Overview.htm">Workflow manager overview</MadCap:xref>.</MadCap:conditionalText> <MadCap:conditionalText MadCap:conditions="General.PrintOnly">For more information, refer to the Workflow Manager User Guide.</MadCap:conditionalText></p>
+        <p>The rights users have needs to be determined for each node. Thus, planners may only have rights to do the required analysis step  and to forward the document  for review. In the same node, a manager may Authorize if the order is ready to upload and Reject if changes are required.</p>
+        <p>As each node is completed, the cycle of analysis, forward, authorize, and upload repeats until all nodes in the workflow have been completed. </p>
+        <p>By setting Completion Days Out for each node (in the above example, this equates to roughly 180 days for Initial Commitment, 120 days for Break By Size, and 60 days for Prepack) progress can be tracked and upcoming submission due dates for the order. This ensures the added order details are provided in enough time to meet the requirements of the supplier. </p>
+        <p>These due dates can be reviewed and actioned against in the <span class="Emphasis">Assortment Upcoming Commitments Dashboard</span> within Assortment Planning. For more information, see <MadCap:xref href="Assortment Upcoming Commitments Report.htm">Assortment Upcoming Commitments Report</MadCap:xref>. </p>
+        <h2>Expedited workflow</h2>
+        <p>Another common use case is an opportunity (at-once buy) where work must occur on a condensed time scale that does not allow for the standard approval process.</p>
+        <h3>Example expedited workflow</h3>
+        <p>A rush order for Mens Tops that needs to be received in 3 months from order submission to delivery in the DC. The product supplier has agreed to an accelerated timeline, but asks for all order details, including sizing and prepack information, up front. To accommodate the condensed timeline, an alternate workflow with adjusted document status cycles should be employed.</p>
+        <table style="margin-left: auto;margin-right: auto;mc-table-style: url('../../Resources/TableStyles/standard.css');width: 90%;" class="TableStyle-standard" cellspacing="0">
+            <col class="TableStyle-standard-Column-Column1" />
+            <col class="TableStyle-standard-Column-Column2" />
+            <col class="TableStyle-standard-Column-Column1" />
+            <col class="TableStyle-standard-Column-Column2" />
+            <thead>
+                <tr class="TableStyle-standard-Head-Header1">
+                    <th class="TableStyle-standard-HeadE-Column1-Header1">
+                         &#160; 
+                    </th>
+                    <th colspan="3" class="TableStyle-standard-HeadD-Column2-Header1">
+                         Workflow Status 
+                    </th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">
+                        Nodes
+                    </td>
+                    <td class="TableStyle-standard-BodyE-Column2-Body1">
+                        Initial Commitment
+                    </td>
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">
+                        Break By Size
+                    </td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">
+                        Prepack
+                    </td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td rowspan="3" class="TableStyle-standard-BodyE-Column1-Body1">
+                        Document Status
+                    </td>
+                    <td class="TableStyle-standard-BodyE-Column2-Body1">
+                        Workspace (Analysis)
+                    </td>
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">
+                        Workspace (Analysis)
+                    </td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">
+                        Workspace (Analysis)
+                    </td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column2-Body1" style="text-align: center;">
+                        n/a
+                    </td>
+                    <td class="TableStyle-standard-BodyE-Column1-Body1" style="text-align: center;">
+                        n/a
+                    </td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">
+                        Authorized
+                    </td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyB-Column2-Body1" style="text-align: center;">
+                        n/a
+                    </td>
+                    <td class="TableStyle-standard-BodyB-Column1-Body1" style="text-align: center;">
+                        n/a
+                    </td>
+                    <td class="TableStyle-standard-BodyA-Column2-Body1">
+                        Upload Verified
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <p>There are three main nodes in the workflow, Initial Commitment, Break By Size, and Prepack.</p>
+        <p>However, because of the condensed timeline a single individual is responsible for both Analysis and Authorization of order documents and only one Authorization will occur after all order details have been defined. Rights can be set so that a manager is still required to authorize the order or extend Authorize rights to regular planners if desired.</p>
+        <p class="BasicNote">Access to the accelerated workflow itself can be managed  by user. For example, only managers are allowed to use condensed timeline workflows.</p>
+        <p>Because all three nodes must be completed prior to Authorization and upload to the supplier, the workflow should be configured to allow transition between each node without requiring Authorization or Upload Verification for the first two. </p>
+        <p>Only in the Prepack node should rights to Authorize be available, as Authorization initiates the order upload.</p>
+        <p>
+            <MadCap:conditionalText MadCap:conditions="General.ScreenOnly">For more information, see <MadCap:xref href="../Workflow Manager/Workflow Manager Overview.htm">Workflow manager overview</MadCap:xref>.</MadCap:conditionalText> <MadCap:conditionalText MadCap:conditions="General.PrintOnly">For more information, refer to the Workflow Manager User Guide.</MadCap:conditionalText></p>
+        <h2>Multi-SKU prepacks</h2>
+        <p>Prepacks containing more than one variant, whether these be different colors of the same item, or different items entirely that are somehow related, can be achieved easily enough through the integration of Variant Manager and the use of an Order Manager field called <span class="Emphasis">Grouping Identifier</span>.</p>
+        <ul>
+            <li>In <span class="Emphasis">Variant Manager &gt; Prepack</span> tab, create a new prepack configuration containing the variants to prepack together.</li>
+            <li>In <span class="Emphasis">Grid</span> view for the order document, enter identical values in the <span class="Emphasis">Grouping Identifier</span> field for the order lines containing the variants to prepack together.</li>
+            <li>In the <span class="Emphasis">Prepack</span> tab of the Details view, the Grouping Identifier displays that was entered for the desired order lines listed in the Prepack Groups area. Select it, make sure the <span class="Emphasis">Calculate</span> field for prepack configuration created in Variant Manager is checked, and calculate. The multi-SKU is used in the same way as any normal prepack.</li>
+        </ul>
+        <p>For more information, <MadCap:conditionalText MadCap:conditions="General.ScreenOnly">see <MadCap:xref href="../Order Manager/Merging Variants into a single multi-SKU prepack.htm">Merging Variants into a single multi-SKU prepack</MadCap:xref>.</MadCap:conditionalText><MadCap:conditionalText MadCap:conditions="General.PrintOnly">refer to the Order Manager User Guide.</MadCap:conditionalText></p>
+        <h2>Order documents and receipt dates</h2>
+        <p> Order manager documents can only be created with a single receipt date each due to the inherent inaccuracies associated with doing analyses for multiple receipt dates simultaneously. Unlimited order lines, including different variants and store cluster orders, can be included as long as they all share a single receipt date. This constraint also facilitates the tracking of outstanding activities for orders through the Upcoming Commitments Dashboard in Assortment Planning. </p>
+        <p>For more information, see <MadCap:xref href="Assortment Upcoming Commitments Report.htm">Assortment Upcoming Commitments Report</MadCap:xref>. </p>
+        <h2>Order workflow</h2>
+        <p>Order Manager has been integrated with the Workflow module to facilitate movement through the various stages of the ordering process, as defined by the needs of the organization. Multiple workflows, ranging from very simple expedited flows, where all stages are completed at once with a single submission of the order, to very complex, with several levels of approval at each stage and submissions to external systems after each, can be configured and used within Order Manager. </p>
+        <p>The number of days out from the receipt date that each stage must be completed is configured in the Workflow module and then compared to the current date in the  Upcoming Commitments Dashboard, allowing users to track their progress against established deliverables. </p>
+        <p class="Important">Workflow status is set at the order line level of order documents. However, all lines in a document must have the same status to advance the document status and submit the order document to external systems. This is mainly relevant in pre-pack stage, as order lines can be selected for prepacking individually or in groups, in addition to all order lines at once.</p>
+        <p>
+            <MadCap:conditionalText MadCap:conditions="General.ScreenOnly">For more information, see <MadCap:xref href="../Workflow Manager/Workflow Manager Overview.htm">Workflow manager overview</MadCap:xref>.</MadCap:conditionalText> <MadCap:conditionalText MadCap:conditions="General.PrintOnly">For more information, refer to the Workflow Manager User Guide.</MadCap:conditionalText></p>
+        <h2>Document status versus workflow status</h2>
+        <p> There are two types of status within Order Manager: document status and workflow status. </p>
+        <p>Document status describes the current ownership or state of the order document as a whole. Document statuses include Forwarded, Authorized, and Uploaded, and cannot be changed without customization. Workflow status describes the stage of the active workflow that the order document is currently in. </p>
+        <p>Workflow statuses are configurable through the Workflow module and can include anything an organization deems important. Available workflow statuses are dependent on the workflow currently assigned to an order document.</p>
+    </body>
+</html>

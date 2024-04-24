@@ -1,0 +1,57 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" xml:lang="en-us">
+    <head>
+        <title>
+        </title>
+    </head>
+    <body>
+        <h1>Location strategies</h1>
+        <p>Location strategies are groups of sites which are used to ensure that the products are allocated to the correct locations. </p>
+        <p>Location strategies may be created and applied to allocation strategies to define the location dimension of both the inventory cache and the allocation orders. They can be saved and re-applied to multiple strategies by multiple users. Location strategies may be based on hierarchical relationships or attributes (when available). </p>
+        <p> Strategies can be duplicated to reduce repetitive work by selecting the <span class="Emphasis">Duplicate</span> checkbox and clicking <span class="Emphasis">Save</span>. </p>
+        <p>The location strategy grid lists the location strategies. </p>
+        <p>
+            <img src="../../Resources/Images/Allocations/Location Strategy tab.png" class="LargeImages" />
+        </p>
+        <p>The bottom grid displays the sites the logged-in user has access to based of the site assignment filter. Selected sites are denoted by a check mark in the <span class="Emphasis">Site Eligible</span> checkbox.</p>
+        <h2>Defining a location strategy</h2>
+        <ol>
+            <li>Click <span class="Emphasis">New</span>.</li>
+            <li>Provide a unique name in the <span class="Emphasis">Location Strategy Name</span> field.</li>
+            <li>Click on the <span class="Emphasis">Site Filter</span> field and select a filter in the Items window.</li>
+            <li>Select <span class="Emphasis">Save</span> to populate the bottom grid.</li>
+            <li>
+                <p>In the bottom grid, select the checkbox in the <span class="Emphasis">Site Eligible</span> column for each site that is to be part of the location strategy.</p>
+                <p class="BasicNote">Only selected sites are considered part of the strategy. </p>
+            </li>
+            <li>Click the <span class="Emphasis">Save</span> button in the bottom grid.</li>
+        </ol>
+        <h2>Location strategy  fields and descriptions</h2>
+        <ul>
+            <li>
+                <span class="Emphasis">Location Strategy Name</span> – User supplied name for the location strategy. </li>
+            <li>
+                <span class="Emphasis">Location Strategy Description</span> – An optional description for the location strategy. </li>
+            <li>
+                <p>
+                    <span class="Emphasis">Site Filter</span> – A filtered list of sites to be included in the location strategy.</p>
+                <p>These are the sites to which inventory is distributed. It is not intended that the distribution centers be included in this list. Location strategies are populated based on the filter contents at the time of the strategy creation and do not automatically update based on filter content changes.</p>
+                <p>All sites contained in the store selection must be of type “store” (type 1). No DCs (type 2) or “store/DC” (type 3) should be presented in the store selection. </p>
+                <p class="BasicNote">The <span class="Emphasis">Is Contained in Location Strategy?</span> field is used in site filters to identify sites which are (or are not) included in location strategies.</p>
+            </li>
+            <li>
+                <span class="Emphasis">Included Channels</span> - Indicates the channels defined for the selected sites in the lower grid. For example, if at least one selected site is configured for Retail, then Retail displays in this field. If no selected sites were configured for eCom, then the eCom channel does not display in this field.</li>
+            <li>
+                <span class="Emphasis">Referenced Strategy Count</span> - Indicates how often the location strategy is used in the <span class="Emphasis">Allocation Strategy</span> tab. The number that displays may not exactly match the number of occurrences in the Location Strategy column in the Allocation Strategy tab. This could be due to strategies not being visible or being tied to a group. </li>
+            <li>
+                <span class="Emphasis">Included Site Count</span> - The number of sites selected in the bottom grid. </li>
+            <li>
+                <span class="Emphasis">Access Level</span> – Access levels determine which users may use or edit the location strategy. </li>
+            <li>
+                <span class="Emphasis">User Select</span> – Editable if <span class="Emphasis">Shared</span> was selected for Access Level. Displays the specific users for a shared access level location strategy. </li>
+            <li>
+                <span class="Emphasis">Duplicate</span> – If checked, the strategy is duplicated upon application. This allows users to easily build similar groups of stores.</li>
+        </ul>
+        <p class="BasicNote">Dynamic Store Eligibility does not work with product groups, causals, and total available quantity. When a threshold is set to 0 or NULL, it defaults to 0.0001 (not actually zero).</p>
+    </body>
+</html>

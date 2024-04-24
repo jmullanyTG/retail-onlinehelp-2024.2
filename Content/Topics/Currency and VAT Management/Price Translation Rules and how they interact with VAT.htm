@@ -1,0 +1,41 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" xml:lang="en-us">
+    <head><title></title>
+    </head>
+    <body>
+        <h1>Price translation rules and how they interact with VAT</h1>
+        <p style="margin-top: 5pt;margin-bottom: 5pt;">Maintenance of currency exchange and VAT rates is very straightforward aside from the establishment of data feeds during implementation. There is rarely a need to reference or change them. Price Translation Rules and how they interact with VAT warrant more explanation.</p>
+        <h2>Price Translations and AUR in Assortment Planning</h2>
+        <p>Though assortment plans are not done explicitly by site, a number of site level calculations and changes can occur within assortment plans. Product exclusions can be made at the site level as can participation in promotions. Also, because it is possible for a single cluster to contain sites that do business in multiple currencies, price translation rules must also be considered when calculating blended AUR (average unit retail price) for products. </p>
+        <p>The steps the system goes through to do this are:</p>
+        <ol>
+            <li>
+                <p>Take the Home AUT (home average unit ticket price) of a product for a given period and remove the Home Site’s VAT rate (if this enabled by system policy).</p>
+            </li>
+            <li>
+                <p>Apply Price Translation Rules applicable to the base selling price from the previous step (if this is enabled by system policy) OR apply Price Matrix translation rules to the base selling price.</p>
+            </li>
+            <li>
+                <p>Apply applicable site VAT Rates to the product to calculate the VAT inclusive selling price by site (if this is enabled by system policy). </p>
+                <p class="BasicNote"> This derives the Blended AUT value.</p>
+            </li>
+            <li>
+                <p>Apply any promotions at the site level to determine the new base selling price.</p>
+            </li>
+            <li>
+                <p>Calculate the weighted average selling price from the selling prices by site from the previous step and the values stored in the<span class="Emphasis"> Location % Contribution</span> tables (calculated based on historical sales units at the product hierarchy level defined by the Level Contribution setting of the assortment plan. This is updated in regular recurring system processes) – this is the period level blended AUR.</p>
+            </li>
+            <li>
+                <p>Calculate the weighted average selling price across the entire life of the product using the same method but across all periods in the product’s life.</p>
+            </li>
+        </ol>
+        <h2>Blended VAT Rates in Assortment Planning</h2>
+        <p>As an extension of the above process used to calculate blended AUR, the system performs additional steps to arrive at a blended VAT Rate by period:</p>
+        <ol>
+            <li>For planned weekly sales for the product, project the sales by site based on the <span class="Emphasis">Location % Contribution</span> tables.</li>
+            <li>Calculate projected sales revenue in home currency by site by multiplying projected site unit sales by the VAT inclusive selling price for each site.</li>
+            <li>Calculate the VAT revenue amount by multiplying the projected sales revenue for each site by the corresponding VAT Rate.</li>
+            <li>Calculate the blended VAT Rate for the period by dividing the sum of VAT revenue for all sites by the projected sales revenue for all sites.</li>
+        </ol>
+    </body>
+</html>

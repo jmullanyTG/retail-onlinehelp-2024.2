@@ -1,0 +1,9 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head>
+    </head>
+    <body>
+        <p>When enabled, <span class="Emphasis">Hold Sales</span> ensures that the Total Sales for the plan is preserved while applying the promotion. This means that periods that are not on promotion see a sales decrease, to account for the sales increase during the promotion period. </p>
+        <p>However, this functionality is not compatible with markdowns. Therefore, if <span class="Emphasis">Hold Sales</span> is enabled for a promotion that intersects a markdown period, the Hold Sales functionality will not apply. It will be as if Hold Sales was not enabled for the promotion. A Hold Sales promotion is never applied on top of a markdown.</p>
+    </body>
+</html>

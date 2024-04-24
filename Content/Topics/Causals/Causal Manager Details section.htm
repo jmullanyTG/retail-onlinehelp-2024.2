@@ -1,0 +1,70 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" xml:lang="en-us">
+    <head><title></title>
+    </head>
+    <body>
+        <h1>Reviewing a causal’s detailed information</h1>
+        <p>Although causals are typically managed by filters, they can be linked to an inventory and/or an item master object. The <span class="Emphasis">Causal Details</span> tab displays the causal over time. What these values mean varies depending on the causal type. They may be positive or negative and represented in units or a percent lift factor. The series value view scales on the y-axis depending on the values present in the grid. </p>
+        <p>Click <span class="Emphasis">Choose</span> on the toolbar to add the following metadata to quickly see how a causal is linked to the inventory records:</p>
+        <ul>
+            <li>
+                <p><span class="Emphasis">Has Filter Links</span>
+                </p>
+            </li>
+            <li>
+                <p><span class="Emphasis">Has Hierarchy Level Links</span>
+                </p>
+            </li>
+            <li>
+                <p><span class="Emphasis">Has Inventory Links</span>
+                </p>
+            </li>
+            <li>
+                <p><span class="Emphasis">Has ItemMaster Links</span>
+                </p>
+            </li>
+        </ul>
+        <p>
+            <img src="../../Resources/Images/Causals/Causal Manager view.png" class="LargeImages" />
+        </p>
+        <p>Navigate to the relevant tab for detailed information.</p>
+        <p class="BasicNote">For more information on available metadata, see <MadCap:xref href="External Signal related metadata.htm">External Signal related metadata</MadCap:xref>.</p>
+        <h2>Causal Details tab</h2>
+        <p>Selecting a causal in the top grid refreshes the <span class="Emphasis">Causal Details</span> tab with the details of the selected causal.</p>
+        <p>Header level information related to the causal including the name and type displays above the grid.</p>
+        <p>
+            <img src="../../Resources/Images/Causals/Causal Details Tab.png" class="LargeImages" />
+        </p>
+        <p><span class="Emphasis">Name</span> – The user created name for the causal. </p>
+        <p><span class="Emphasis">Type</span> – The type of causal. Understanding the distinctions between the causal types and their correct applications is key to properly using <span class="Emphasis">Causal Manager</span>.</p>
+        <ul>
+            <li>
+                <p><span class="Emphasis">Causal</span> – An additive causal that adds or subtracts based on a non-explicit scoring factor (the default value). The values typically relate to an increase or decrease in the overall volume of units. Negative values can be entered.</p>
+                <p MadCap:conditions="General.ScreenOnly">
+                    <img src="../../Resources/Images/Causals/Causal Type.png" class="LargeImages" />
+                </p>
+            </li>
+            <li>
+                <p><span class="Emphasis">Event</span> – Used to flag a period that is associated with an event. This is useful if there is an obvious jump in the data series, but the cause of which is unknown. The forecasting engine matches it to the best fit. </p>
+                <p>Series values are used as a unique identifier. Any number or letter can be used. Any events that span multiple periods must have a different unique identifier per period, if the desired effect is to completely remove the event’s effect. If the desired effect is to use the event across multiple future periods, any events with the same unique identifier will average the effect for the future periods.</p>
+                <p MadCap:conditions="General.ScreenOnly">
+                    <img src="../../Resources/Images/Causals/Event Type.png" class="LargeImages" />
+                </p>
+            </li>
+            <li><span class="Emphasis">Information Causal</span> – For informational purposes only. This type of causal is rarely used.</li>
+            <li>
+                <p><span class="Emphasis">Manual Causal</span> – A multiplicative causal that adjusts up or down based on an explicit factor, such as a 10% increase or a 20% decrease.</p>
+                <p MadCap:conditions="General.ScreenOnly">
+                    <img src="../../Resources/Images/Causals/Manual Causal.png" class="LargeImages" />
+                </p>
+            </li>
+        </ul>
+        <ul>
+            <li><span class="Emphasis">Bucket Type</span> – The type of container period for the series values of the associated causal. This must match the bucket types of the eventual linked items/inventories.</li>
+        </ul>
+        <h3>Grid values</h3>
+        <p>Defines the nominal value for the causal set. In almost all cases, this should be set to 0. Applying a non-zero to the default value elevates (or decreases) the nominal value to the entire history of the linked items.</p>
+        <h2>Using the causal linking tabs</h2>
+        <p>For more information on the causal linking tabs, see <MadCap:xref href="Linking Causals.htm">Linking causals</MadCap:xref>.</p>
+    </body>
+</html>

@@ -1,0 +1,36 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" xml:lang="en-us">
+    <head><title></title>
+    </head>
+    <body>
+        <h1>Rate of Sale Overview</h1>
+        <p>The <span class="Emphasis">Rate of Sale</span> module helps determine how much a particular placeholder, collection or variant has the potential to sell, in units or revenue per site per week.&#160; </p>
+        <p>
+            <img src="../../Resources/Images/Rate of Sale Calculator/Rate of Sale Calculator Assortment Planning.png" class="LargeImages" />
+        </p>
+        <p>Often, merchandise planners and allocators must make assumptions around the potential volume an item can deliver before committing to materials and raising a purchase order or executing an allocation within the business.&#160; The <span class="Emphasis">Rate of Sale</span> module makes it easier and more efficient to determine a reasonable rate of sale in a site cluster, site or site group, given the historical sales of similar items defined by the user. </p>
+        <p class="BasicNote">These rates of sale can be applied to demand plans whether in assortment plans or allocation strategies.&#160; This functionality is integrated with both the  Assortment Planning module and the Allocation module to support the application of demand for merchandise planning and inventory execution within an organization.</p>
+        <h2>Rate of Sale defined</h2>
+        <p>The <span class="Emphasis">Scenario Results</span> section of the <span class="Emphasis">Rate of Sale</span> module displays the results of two different calculations: <span class="Emphasis">Raw ROS</span> and <span class="Emphasis">Adjusted ROS</span>. Both raw ROS and adjusted ROS are automatically calculated and returned when users calculate the rate of sale for a scenario.</p>
+        <h3>Raw ROS</h3>
+        <p>The <span class="Emphasis">Raw ROS</span>  is the sum total of sales in the variant in the time frame divided by the total number of weeks, which is derived from the number of products in the variant times the number of weeks in the time frame. </p>
+        <p><span class="Emphasis">(Total Sales / (Total Weeks per Product x Number of Products).)</span> </p>
+        <p>This calculation uses Time Frame, the number of products in the variant, and the total sales of the product. </p>
+        <p class="Important">If <span class="Emphasis">ROS Level</span> is set to <span class="Emphasis">Variant</span>, both raw and adjusted ROS will not be divided by product count.</p>
+        <p><span class="Emphasis">Raw ROS</span> data is not cleansed of data points that might skew scenario results but can be used for comparison purposes. </p>
+        <h3>Adjusted ROS</h3>
+        <p>If a user wants to know the ROS when a product is in season they may need to exclude certain weeks, such as when a product is discounted, weeks with non-zero sales from before or after the product was introduced, or weeks during the defined season with zero sales because the product is highly seasonal. In these cases, the user should use the adjusted ROS. </p>
+        <p>In general, Raw ROS answers the question “What is the average performance per week across the entire specified time period?” and Adjusted ROS answers “What is the average performance per week in the most relevant part of the life cycle?”</p>
+        <p>A deseasonalized ROS can be determined by using the adjusted ROS&#160;with the right criteria set. The criteria includes: </p>
+        <ul>
+            <li>Max Price</li>
+            <li>Min Price</li>
+            <li>Min Volume</li>
+            <li>Days From Phase In</li>
+            <li>Include Inner Zeros</li>
+            <li>Include Outer Values</li>
+        </ul>
+        <p>Certain weeks are excluded from consideration based on the above criteria. Users can exclude weeks if there are not enough sales, if the product is discounted, if individual products have a shorter life cycle than the variant as a whole, or if the product has sold out. The calculation is the adjusted total sales divided by the adjusted total weeks.</p>
+        <p class="Important">Total weeks is 'product weeks,' not 'variant weeks,' unless <span class="Emphasis">ROS&#160;Level</span> is set to <span class="Emphasis">Variant</span>.</p>
+    </body>
+</html>

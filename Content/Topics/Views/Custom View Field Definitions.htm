@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" xml:lang="en-us">
+    <head><title></title>
+    </head>
+    <body>
+        <h1>Custom view field definitions</h1>
+        <ul>
+            <li><span class="Emphasis">Name</span> – The name for the selected view. View names do not need to be unique within the view group. However, it is recommended that names be a view’s unique identifier for ease of navigation. View groups can be created and maintained in the view groups pane to the left of the view creation/edit window.</li>
+            <li><span class="Emphasis">Description</span> – A description of the view. May include author or date if desired.</li>
+            <li><span class="Emphasis">Group</span> - The view group to which the new custom view is assigned.</li>
+            <li><span class="Emphasis">View Type</span> – Determines the layout possibilities for the widgets contained within the view. Requirements vary depending on the number of widgets. <ul><li><span class="Emphasis">Vertical Widget Layout</span> – Stacks widgets vertically based on the order provided in the <span class="Emphasis">Widgets</span> section. If the view contains only one widget, it is common to see this view type selected.</li><li><span class="Emphasis">Tabbed Widget Layout</span> – Creates a tab style layout similar to those provided by the view collections. </li><li><span class="Emphasis">Layout Controlled Widget Layout</span> – The most customizable layout allowing for much greater customization and configuration of the view. If selected, the widget order is irrelevant. Users can drag and drop elements within the views to manipulate the widgets, scroll bars and separators to best frame the workflow process. </li></ul></li>
+        </ul>
+        <p><span class="Emphasis">Assign Roles or Users</span> – Displays the <span class="Emphasis">Maintain Users And Roles</span> dialog used to configure included and excluded roles and users. </p>
+        <p class="BasicNote">If users cannot find a view, this is a common troubleshooting spot to check. </p>
+        <h2>checkboxes</h2>
+        <ul>
+            <li><span class="Emphasis">Hide Parameter(s)</span> – Required parameters for the view to pass to the database to retrieve data display near the top of the view. Check this box to hide the parameter section if more screen space is needed.</li>
+            <li><span class="Emphasis">Auto Refresh on Parameter Change</span> – Select this option if users should be able to toggle between several parameters within the same view. The entire view automatically refreshes without the need to click the <span class="Emphasis">Execute</span> button. </li>
+            <li><span class="Emphasis">Auto Refresh on Widget Parameter Change</span> – Refreshes data when a parameter within a widget changes. </li>
+            <li><span class="Emphasis">Allow Update Method Parameter Value</span> – In situations where there is more than one parameter and they are dependent upon one another, selecting this option allows the parameters to update if there is a change to one or the other. </li>
+            <li><span class="Emphasis">Allow Use and Save User View Parameter Values</span> – If selected, saves the parameters when the view is closed and reopened. </li>
+        </ul>
+        <h2>Widgets section</h2>
+        <p>The <span class="Emphasis">Widget</span> section displays the widgets selected for inclusion in the view. </p>
+        <ul>
+            <li><span class="Emphasis">Widget Name</span> – The assigned name as defined in the <span class="Emphasis">Maintain Widgets</span> configuration sub-menu.</li>
+            <li><span class="Emphasis">Widget Description</span> – The assigned description.</li>
+            <li><span class="Emphasis">Widget Order</span> – For vertical widget layouts and tabbed widget layouts, this determines the order in which the widgets appear in the view. The lowest number is stacked near the top in a vertical layout and near the left in a tabbed layout. </li>
+        </ul>
+        <h2>Parameters section</h2>
+        <p>The <span class="Emphasis">Parameters</span> section displays the parameters required for each of the widgets listed in the <span class="Emphasis">Widgets</span> section. </p>
+        <ul>
+            <li><span class="Emphasis">Parameter Name</span> – The assigned name as defined in the <span class="Emphasis">Create Parameters</span> configuration sub-menu.</li>
+            <li><span class="Emphasis">Parameter Description</span> – The assigned description. </li>
+            <li><span class="Emphasis">Parameter Order</span> – The order in which the parameters are display (left to right) across the top of the screen.</li>
+        </ul>
+        <h2>Actions section</h2>
+        <p>The <span class="Emphasis">Actions</span> section is used to configure View Actions. These Actions are buttons that appear at the top of the view, alongside the built-in actions like <span class="Emphasis">New</span>, <span class="Emphasis">Delete</span>, <span class="Emphasis">Save</span>, and so on.</p>
+        <p>Some examples of View Actions are in Target Choice Counts. All of the buttons across the top, like <span class="Emphasis">Copy</span>, <span class="Emphasis">Compare</span>, and <span class="Emphasis">Smart Start</span>, are View Actions. To create View Actions, write very specific XML that allows the environment to know which View to open and what parameters from the launching screen to pass through.</p>
+    </body>
+</html>

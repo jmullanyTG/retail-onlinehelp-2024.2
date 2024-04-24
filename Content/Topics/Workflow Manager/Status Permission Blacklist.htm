@@ -1,0 +1,111 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" xml:lang="en-us">
+    <head>
+        <link href="../../Resources/TableStyles/standard.css" rel="stylesheet" MadCap:stylesheetType="table" /><title></title>
+    </head>
+    <body>
+        <h1>Status state permission blacklist</h1>
+        <p>An object (event, promotion, price action, order header) can pass through several states in the context of a workflow status. For example, events are marked In Progress while they are not ready to progress to the next workflow status. </p>
+        <p>Status permission blacklists are used to enforce different sets of permissions  based on the state of an object while it is in a specific workflow status. For example, an event workflow may begin with a Planning status. For events in the Planning status, all users are granted the right to edit events that are In Progress, but edit rights are restricted to managers only when an event is marked Completed. As events progress through the workflow, permissions are granted to smaller sets of users in each progressive workflow status.</p>
+        <h2>Denying permissions for specific users</h2>
+        <p>It is possible to grant a permission to a Role while denying that same permission to a specific user who is associated to that Role. In this case, the specific user is blacklisted and unable to perform the action even though the Role the user is associated to is not blacklisted.</p>
+        <p>Where a Role is blacklisted but not the user, then the user is blacklisted because of their association to the Role.</p>
+        <h2>User blacklist rights used for the nightly workflow heartbeat job </h2>
+        <p>The system takes into account the User Blacklist Rights that is used for the nightly Workflow Heartbeat job to determine if a Price Action, Promotion, or Event must be automatically advanced to the next Workflow Status based on the appropriate solution object's current Status State.</p>
+        <p>The system evaluates the user's user right to modify status based on the current status state of the object:</p>
+        <ul>
+            <li>
+                <p>If the Job User does not have user rights to <span class="Emphasis">Modify Status</span> based on the current Status State nor permission to the Transition, the system will not change to the next Workflow Status.</p>
+            </li>
+            <li>
+                <p>If the Job User has user rights to <span class="Emphasis">Modify Status</span> based on the current Status State and permission to the Transition, the system will change to the next Workflow Status.</p>
+            </li>
+        </ul>
+        <h2>Setting permissions</h2>
+        <p>Select a workflow status in the Design pane to see its Status Permission Blacklist in the Status Information pane. The blacklist contains a list of user rights and a set of columns representing potential object states.</p>
+        <p>
+            <img src="../../Resources/Images/Workflow Manager/Blacklist.png" class="LargeImages" />
+        </p>
+        <p>A <span class="Emphasis">black</span> user icon in a state column indicates that all roles and users are granted that user right when an object is in that state. A <span style="font-weight: bold; color: #6495ed;">blue</span> user icon indicates that at least one role or user has been denied that user right for objects in that state.</p>
+        <p> Click on a user icon to view or edit its user permissions. For more information, see <MadCap:xref href="Editing a Status Permission Blacklist.htm">Editing  a status permission blacklist</MadCap:xref>.</p>
+        <h2>Object states and workflow types</h2>
+        <p>The object states in a blacklist differ according to the workflow type. </p>
+        <h3>Event states</h3>
+        <table style="mc-table-style: url('../../Resources/TableStyles/standard.css');" class="TableStyle-standard" cellspacing="0">
+            <col class="TableStyle-standard-Column-Column1" />
+            <col class="TableStyle-standard-Column-Column2" />
+            <thead>
+                <tr class="TableStyle-standard-Head-Header1">
+                    <th class="TableStyle-standard-HeadE-Column1-Header1" style="text-align: center;">Icon</th>
+                    <th class="TableStyle-standard-HeadD-Column2-Header1">Description</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1" style="text-align: center;">
+                        <img src="../../Resources/Images/Workflow Manager/State In Progress.png" style="width: 31px; height: 31px;" />
+                    </td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">Work due for this status is in progress.</td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyB-Column1-Body1" style="text-align: center;">
+                        <img src="../../Resources/Images/Workflow Manager/State Valid.png" style="width: 33px; height: 33px;" />
+                    </td>
+                    <td class="TableStyle-standard-BodyA-Column2-Body1">Work due for this status has been completed.</td>
+                </tr>
+            </tbody>
+        </table>
+        <p class="BasicNote">Some user rights in an event status permission blacklist apply at the event level and others apply at the slot set level. For more information, see <a href="Controlling user rights within Event workflows.htm">Event and Slot Set User Rights.</a></p>
+        <h3>Order header states</h3>
+        <table style="mc-table-style: url('../../Resources/TableStyles/standard.css');" class="TableStyle-standard" cellspacing="0">
+            <col class="TableStyle-standard-Column-Column1" />
+            <col class="TableStyle-standard-Column-Column2" />
+            <thead>
+                <tr class="TableStyle-standard-Head-Header1">
+                    <th class="TableStyle-standard-HeadE-Column1-Header1" style="text-align: center;">Icon</th>
+                    <th class="TableStyle-standard-HeadD-Column2-Header1">Description</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyB-Column1-Body1" style="text-align: center;">
+                        <img src="../../Resources/Images/Workflow Manager/State Order.png" class="LargeImages" />
+                    </td>
+                    <td class="TableStyle-standard-BodyA-Column2-Body1">Applies to the entire duration of the status. </td>
+                </tr>
+            </tbody>
+        </table>
+        <h3>Price action and promotion states</h3>
+        <p>Price action and promotion status states are based on the results of validations run while the price action or promotion is in the selected status.</p>
+        <table style="mc-table-style: url('../../Resources/TableStyles/standard.css');" class="TableStyle-standard" cellspacing="0">
+            <col class="TableStyle-standard-Column-Column1" />
+            <col class="TableStyle-standard-Column-Column2" />
+            <thead>
+                <tr class="TableStyle-standard-Head-Header1">
+                    <th class="TableStyle-standard-HeadE-Column1-Header1" style="text-align: center;">Icon</th>
+                    <th class="TableStyle-standard-HeadD-Column2-Header1">Description</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1" style="text-align: center;">
+                        <img src="../../Resources/Images/Workflow Manager/State Valid.png" style="width: 33px; height: 33px;" />
+                    </td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">All validations succeeded or had the <span class="Emphasis">Information </span>severity type</td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1" style="text-align: center;">
+                        <img src="../../Resources/Images/Workflow Manager/State Warning.png" style="width: 33px; height: 33px;" />
+                    </td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">At least one validation with the <span class="Emphasis">Warning </span>severity level failed.</td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyB-Column1-Body1" style="text-align: center;">
+                        <img src="../../Resources/Images/Workflow Manager/State Error.png" style="width: 37px; height: 34px;" />
+                    </td>
+                    <td class="TableStyle-standard-BodyA-Column2-Body1">At least one validation with the <span class="Emphasis">Error </span>severity level failed.</td>
+                </tr>
+            </tbody>
+        </table>
+    </body>
+</html>

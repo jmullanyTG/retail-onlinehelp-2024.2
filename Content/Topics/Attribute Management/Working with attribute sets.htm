@@ -1,0 +1,33 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" xml:lang="en-us">
+    <head><title></title>
+    </head>
+    <body>
+        <h1>Working with attribute sets</h1>
+        <p>Attribute sets define a list of attribute families that are applicable to the set. This function allows users to default a set of attribute families to a product hierarchy level so that each product in that hierarchy level is eligible to receive the attribute values in question or default certain attribute values if necessary.</p>
+        <p>These sets can be used to define attribute values that are only applicable to certain products in the appropriate hierarchy such as sleeve length which may only be applicable to shirts and not to shoe categories.</p>
+        <p>
+            <img src="../../Resources/Images/Attribute Management/Attribute Sets.png" class="LargeImages" />
+        </p>
+        <h2>Creating attribute sets</h2>
+        <p>To create an attribute set:</p>
+        <ol>
+            <li>Navigate to the <span class="Emphasis">Attribute Sets</span> tab within the <span class="Emphasis">Attribute Management</span> module.</li>
+            <li>Select an entity type and a hierarchy level.</li>
+            <li>In the <span class="Emphasis">Attribute Sets</span> section, click <span class="Emphasis">New</span>.</li>
+            <li>Complete the <span class="Emphasis">Set Name</span> and <span class="Emphasis">Entity Types</span> fields as required.</li>
+            <li>Click <span class="Emphasis">Save</span>.</li>
+        </ol>
+        <h2>Specifying an attribute set for a hierarchy path</h2>
+        <p>If a compatible hierarchy is selected which supports the entity types selected, users are presented with the hierarchy and can specify for each of the hierarchy paths an attribute set that provides the list of attribute families that are allowed for that hierarchy.</p>
+        <p class="BasicNote">An attribute set at the higher level of the hierarchy defaults to all the levels below in the hierarchy.</p>
+        <p>
+            <img src="../../Resources/Images/Attribute Management/Attribute Set Hierarchy Assignments.png" class="LargeImages" />
+        </p>
+        <p>In the above example, specifying the attribute set at the Mens level of the hierarchy means that all of the subsequent Accessories levels of the hierarchy inherit the default set for Mens. However, users could set a different attribute set for each level below in the hierarchy if necessary.</p>
+        <h2>Parameter definitions</h2>
+        <p><span class="Emphasis">Entity Type</span> – Which attribute sets are returned based on the attribute sets associated with the entity. Only attribute sets that are associated with the chosen entity are returned.</p>
+        <p>For information on a specific entity type, see <MadCap:xref href="Creating and maintaining attribute families.htm">Creating and maintaining attribute families</MadCap:xref>.</p>
+        <p><span class="Emphasis">Hierarchy</span> – Users can select a single product hierarchy from the list available. This populates the bottom screen in the view with the appropriate product hierarchy to which an attribute set can be associated. Select the product hierarchy associated with the assortment plan to set defaults for assortment planning.</p>
+    </body>
+</html>

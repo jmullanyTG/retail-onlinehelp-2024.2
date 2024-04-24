@@ -1,0 +1,186 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" xml:lang="en-us">
+    <head><title></title>
+    </head>
+    <body>
+        <h1>Hindsight management</h1>
+        <p>The <span class="Emphasis">Hindsight</span> button on the toolbar launches the <span class="Emphasis">Hindsight Placeholder Management</span> screen in Placeholder view and the <span class="Emphasis">Hindsight Collection Management</span> screen in Collection view. This screen can be used to create new placeholders and manage <span class="Emphasis">Like Style</span> mappings for new and existing placeholders and collections within plans. </p>
+        <p>
+            <img src="../../Resources/Images/Assortment Planning/Hindsight toolbar button.png" class="LargeImages" />
+        </p>
+        <p>
+            <img src="../../Resources/Images/Assortment Planning/Hindsight Placeholder Management screen.PNG" class="LargeImages" />
+        </p>
+        <h2>Customizing the columns included in the Current and Historical views</h2>
+        <p>Right-click in either grid header and select <span class="Emphasis">Column Chooser</span> to customize the columns that appear in the <span class="Emphasis">Current</span> and <span class="Emphasis">Historical</span> views.</p>
+        <h2>Editing multiple rows simultaneously</h2>
+        <p>To edit multiple rows simultaneously:</p>
+        <ol>
+            <li>Select multiple rows.</li>
+            <li> Right-click in a field that is blue in color.</li>
+            <li>Choose <span class="Emphasis">Multiple Changes</span> from the context menu.</li>
+            <li>Update the fields as required in the <span class="Emphasis">Multi Data Change Form</span>.</li>
+            <li>Click Save.</li>
+        </ol>
+        <h2>Dragging and dropping</h2>
+        <p>Regardless of the view configuration (with Current on the left and Historical on the right or vice versa) users can drag and drop items from both sections to the other to set <span class="Emphasis">Map From</span> and <span class="Emphasis">Map To</span> (see below for details on these fields).</p>
+        <h2>Filtering results</h2>
+        <p>To filter results, hover the mouse in the top right of each column header and click the <img src="../../Resources/Images/Assortment Planning/Filter Results icon.png" class="IconInline" /> icon to display a filter dialog. </p>
+        <p>In the <span class="Emphasis">Coll Code</span> and <span class="Emphasis">Coll Desc</span> column headers, click the <img src="../../Resources/Images/Assortment Planning/Filter Results icon.png" class="IconInline" /> icon and select a value or type in the text field to filter the results returned.  <span class="Emphasis">%</span> is a wildcard to do “contains” type filtering instead.</p>
+        <p>To create a new collection,  enter a description for the collection in the space provided and click <span class="Emphasis">New</span>.</p>
+        <p>
+            <img src="../../Resources/Images/Assortment Planning/Collection Desc.png" class="LargeImages" />
+        </p>
+        <h2>Toolbar functionality</h2>
+        <ul>
+            <li><span class="Emphasis"># Placeholders</span>, <span class="Emphasis"># Collections</span>: The number of new placeholder or collection lines to add when <span class="Emphasis">New</span> is clicked.</li>
+            <li>
+                <p><span class="Emphasis">New</span>: </p>
+                <p>In <span class="Emphasis">Placeholder</span> view: Adds the number of new placeholder lines specified in <span class="Emphasis"># Placeholders</span> to the bottom of the <span class="Emphasis">Current</span> grid. </p>
+                <p>In <span class="Emphasis">Collection</span> view: Adds the number of new collections specified in <span class="Emphasis"># Collections</span> to the bottom of the <span class="Emphasis">Current</span> grid. The number of placeholders to be added is specified in the <span class="Emphasis">PH Count</span> field.</p>
+            </li>
+            <li><span class="Emphasis">Copy</span>: Lets users bulk select and copy placeholders or collections in the <span class="Emphasis">Historical</span> grid. All details, attributes, and the new adjusted ROS, comparison stock and end date are copied. For collections, copies all existing placeholders from the original collection, but drops variant mapping, so the new collections consist of the same number of placeholders as LY.</li>
+            <li><span class="Emphasis">Clear</span>: Removes mapped <span class="Emphasis">Like Styles</span> for selected placeholders or collections.</li>
+            <li><span class="Emphasis">Delete</span>: Deletes selected new placeholders or collections. Existing placeholders are deleted in the main planning view.</li>
+            <li>
+                <p><span class="Emphasis">Mirror Options</span>: When highlighted, copies the selections made for the topmost new placeholder or collection line to any beneath it. It is not necessary to un-highlight this option to deviate from the selections made in the topmost placeholder line. Edit as normal and the button un-highlights automatically.</p>
+                <p> The default behavior is to save the state of the button (whether selected or not) when the view is exited. For example, if the <span class="Emphasis">Mirror Options</span> button is selected when the view is exited, then the button is selected (highlighted) the next time the view displays.</p>
+            </li>
+            <li><span class="Emphasis">Current Collection</span>: (Placeholder view only) When highlighted, automatically sets the <span class="Emphasis">Coll Code</span> and <span class="Emphasis">Coll Desc</span> columns for newly created placeholders to the values for the collection of the placeholder that was selected when the <span class="Emphasis">Hindsight Placeholder Management</span> screen was launched.</li>
+            <li>
+                <p><span class="Emphasis">Historical</span>: Flips the <span class="Emphasis">Current</span> and <span class="Emphasis">Historical</span> sections in the view.</p>
+                <p>The dynamic of assigning historical variants to placeholders is essentially the same regardless of the layout. Be aware that while a single historical variant can be assigned to many current placeholders,  only one variant can be mapped to a current placeholder when assigning in reverse. (If a blend of multiple variants is desired to seed rate of sale for a placeholder, the <span class="Emphasis">Rate of Sale Calculator</span> can be used.)</p>
+                <p>Placeholders that are Inactive or in Committed status will not be shown in the Current section of the view.</p>
+                <p>For more information, see <MadCap:xref href="Rate of Sale Calculator.htm">Rate of Sale Calculator View</MadCap:xref>. </p>
+            </li>
+            <li><span class="Emphasis">Parameters</span>: Shows or hides the data selection parameters for the view.</li>
+        </ul>
+        <p>Parameter options are the same as in the main planning view defaulting to the same product, site, and cluster set selections as in the main view. <span class="Emphasis">Window of Time</span> defaults to the <span class="Emphasis">LY</span> equivalent of the time selected in the main view.</p>
+        <p>Data selection parameters only determine the variants/placeholders that populate in the <span class="Emphasis">Historical</span> section of the view. Current placeholders are populated based on those shown in the main planning view.</p>
+        <h2>Current section</h2>
+        <p class="BasicNote">Attribute columns within the <span class="Emphasis">Hindsight Placeholder Management</span> screen are controlled in the same way as Attribute columns for Variant Manager i.e. within Attribute Management.</p>
+        <ul>
+            <li>
+                <p><span class="Emphasis">Active</span>: If checked, then the new placeholder or collection is active and can be added to existing promotions. If unchecked (inactive), then the <span class="Emphasis">Add to Promos?</span> field is deselected and not editable. For more information, see <MadCap:xref href="Manipulating placeholders and collections.htm">Main planning view </MadCap:xref>.</p>
+                <p class="BasicNote">Sales plans created from mapped variants should persist.</p>
+            </li>
+            <li>
+                <p><span class="Emphasis">Add to Promo?</span>: If checked, new placeholders are automatically included in all applicable existing promotions. </p>
+                <p class="BasicNote">Whether the checkbox is checked by default is determined by the system policy <span class="Emphasis">New Placeholders Added to Promotions Default</span>.</p>
+            </li>
+            <li>
+                <p><span class="Emphasis">Adj ROS ($)</span>: Blank unless <span class="Emphasis">Map From</span> is set. Displays the placeholder level ROS $ calculated from the <span class="Emphasis">Map From</span> based on the Comp Start and Comp End Dates and any Mod Factor specified that will be assigned to the placeholder.</p>
+                <p class="BasicNote">As rates of sale are calculated and assigned at the cluster level, actual rates of sale assigned to individual clusters may vary from the value shown here, just as differences can exist between the ROS $ shown in Placeholder view versus those in Cluster Set view.</p>
+            </li>
+            <li>
+                <p><span class="Emphasis">Adj ROS (U)</span>: Blank unless <span class="Emphasis">Map From</span> is set. Displays the placeholder level ROS U calculated from the <span class="Emphasis">Map From</span> based on the Comp Start and Comp End Dates and any Mod Factor specified that will be assigned to the placeholder.</p>
+                <p class="BasicNote">As rates of sale are calculated and assigned at the cluster level, actual rates of sale assigned to individual clusters may vary from the value shown here, just as differences can exist between the ROS U shown in Placeholder view versus those in Cluster Set view.</p>
+            </li>
+            <li>
+                <p><span class="Emphasis">Attrib Copy</span>: Only valid if <span class="Emphasis">Map From</span> is set. Defines whether any product attributes assigned to the <span class="Emphasis">Map From</span> are copied to the new placeholder line or if any defined attribute defaults for the Product Hierarchy level is assigned instead.</p>
+                <p>
+                    <MadCap:conditionalText MadCap:conditions="General.ScreenOnly"> For more information, see <MadCap:xref href="Assortment Planning Overview.htm">Assortment Planning Overview</MadCap:xref>.</MadCap:conditionalText>
+                    <MadCap:conditionalText MadCap:conditions="General.PrintOnly">For more information, refer to the Attribute Management User Guide. </MadCap:conditionalText>
+                </p>
+            </li>
+            <li><span class="Emphasis">AUR</span>:  The average unit retail (AUR) price for the placeholder.</li>
+            <li>
+                <p><span class="Emphasis">Home AUT</span>: Sets the home currency average unit ticket (AUT).  <span class="Emphasis">Home AUT</span> is set to that of the selected variant if a <span class="Emphasis">Map From</span> is specified. </p>
+                <p>AUT is assumed to be inclusive of the Home Site’s VAT rate for the purpose of all calculations within Assortment Planning. For companies in which VAT is not in effect for the home currency assigned to the active assortment plan, no special actions are required as long as the associated VAT percent is set to zero. Alternatively, the system policy that enables the use of VAT rates in AUT calculations can be disabled. </p>
+                <p>
+                    <MadCap:conditionalText MadCap:conditions="General.ScreenOnly">For more information, see <MadCap:xref href="../Currency and VAT Management/Currency and VAT Management Overview.htm">Currency and VAT Management Overview</MadCap:xref>.</MadCap:conditionalText>
+                    <MadCap:conditionalText MadCap:conditions="General.PrintOnly">For more information, refer to the Currency and VAT Management User Guide.</MadCap:conditionalText>
+                </p>
+            </li>
+            <li>
+                <p><span class="Emphasis">Cluster Copy</span>: Only valid if <span class="Emphasis">Map From</span> is set. Defines whether the placeholder copies the cluster assignments of the selected <span class="Emphasis">Map From</span> or uses those set by the user on the placeholder line.</p>
+                <p>Existing cluster assignments are overwritten when a <span class="Emphasis">Map From</span> is assigned and its cluster assignments are copied for placeholders that existed prior to launching the <span class="Emphasis">Hindsight Placeholder Management</span> screen.</p>
+                <p>When a <span class="Emphasis">Map From</span> is assigned but its cluster assignments are not copied for placeholders that existed prior to the launching of the <span class="Emphasis">Hindsight</span> dialog, it is possible that some of the pre-assigned clusters will not have rates of sale if there were no sales in those clusters between the Comp Start and Comp End dates for the <span class="Emphasis">Map From</span> selected.</p>
+            </li>
+            <li>
+                <p><span class="Emphasis">Cluster Set Message</span>: Displays system messages regarding the copying of cluster assignments from a <span class="Emphasis">Map From</span> for the specified placeholder.</p>
+                <h3>An example of a scenario that would generate a message:</h3>
+                <p>Scenario: Placeholders X and Y are both assigned to Variant A.&#160; Placeholder X is assorted to Cluster Set 1 and Placeholder Y is assorted to Cluster Set 2. Placeholder X in the <span class="Emphasis">Hindsight</span> view is to be changed.</p>
+                <p> If a <span class="Emphasis">Map From</span> that is assorted to Cluster Set 2 is selected, then cluster sets cannot be copied because it would cause both Placeholders X and Y to be assorted to Cluster Set 2 for the same variant.</p>
+                <h3>Cluster set messages</h3>
+                <ul>
+                    <li>The <span class="Emphasis">Like Style</span> is assorted to more cluster sets than are visible: (&lt;list of cluster sets if the length of list is less than 512 characters OR the text "x cluster sets"&gt;), If applied with Cluster Assortment Copy checked, these assortments will also be created for this placeholder</li>
+                    <li>The Placeholder to be altered is assorted to more cluster sets than are visible: (&lt;list of cluster sets if the length of list is less than 512 characters OR the text "x cluster sets"&gt;). If applied with <span class="Emphasis">Cluster Assortment Copy</span> checked, these assortments will also be removed from this placeholder</li>
+                    <li>The Placeholder to be altered is assorted to cluster sets to which the logged-in user does not have access: Assortments to this placeholder cannot be altered using this method</li>
+                    <li>Changing assortments for this variant would cause overlapping cluster sets to exist over the same time ranges: This is when the placeholder to be altered is assorted to a variant, that variant is also assigned to other placeholders in the plan, and those other placeholders' combined cluster set / cluster / date assignments would be in conflict if the change was made.</li>
+                </ul>
+            </li>
+            <li><span class="Emphasis">Cluster Sets</span>: The cluster sets to which the placeholder is assigned. The cluster sets listed include all default and additionally available cluster sets for the product level selected in the <span class="Emphasis">Product</span> parameter.</li>
+            <li>
+                <p><span class="Emphasis">Coll Code</span>: (Editable for new placeholders in Placeholder view) Double-click in the dropdown list to select a collection code to which the placeholder is assigned.</p>
+            </li>
+            <li><span class="Emphasis">Coll Desc</span>: The corresponding description for the Placeholder or Collection. Editable for new Collections.</li>
+            <li><span class="Emphasis">Color Code</span>: The color code for the placeholders / variants shown. The field is filterable and sortable. Editable for new rows.</li>
+            <li><span class="Emphasis">Color Desc</span>: A description of the color.</li>
+            <li><span class="Emphasis">Comp End</span>: Defaults to the Phase Out of the <span class="Emphasis">Map From</span>. Only valid if <span class="Emphasis">Map From</span> is set. Defines the end date for the desired window of time from which to capture sales for the <span class="Emphasis">Map From</span>. If set, selections are limited to periods prior to Comp Start.</li>
+            <li><span class="Emphasis">Comp Start</span>: Defaults to the Phase In of the <span class="Emphasis">Map From</span>. Only valid if <span class="Emphasis">Map From</span> is set. Defines the start date for the desired window of time from which to capture sales for the <span class="Emphasis">Map From</span>. </li>
+            <li><span class="Emphasis">Image</span>: The primary image associated with the placeholder. If no primary image exists, then <span class="Emphasis"> No image data</span> displays</li>
+            <li><span class="Emphasis">Locked</span>: For full description, see <MadCap:xref href="Manipulating placeholders and collections.htm">Main planning view </MadCap:xref>.</li>
+            <li>
+                <p><span class="Emphasis">Map From</span>: (Optional) Selects a placeholder item to use as a <span class="Emphasis">Like Style</span> from which the system can seed a sales plan and other information. </p>
+                <p><span class="Emphasis">Like Styles</span> can also be dragged from the <span class="Emphasis">Historical</span> section onto the target placeholders in the <span class="Emphasis">Current</span> section. Dragging a <span class="Emphasis">Like Style</span> onto a placeholder that already has a <span class="Emphasis">Like Style</span> assigned will replace the previous assigned style with the new one.</p>
+                <p>Populates with placeholders and/or variants shown in the Historical section that exist within the selected Product Hierarchy for the line.</p>
+                <p class="BasicNote">If set, this copies the selected item’s Size Option, Curve Mode, Seasonality Curve, Home AUT (unless specified in Home Ticket Price), Min Pres, Location Exceptions, and receipt plan constraints (Receipt Variant Min, Receipt Size Min, Variant Order Multiple, Periods of Supply, Periods Before Phase In, Flow Period Frequency, Min Stock to Sales, Shrink % of Sales, Recalc Buy, and Hold Receipt Units) and calculates a sales plan based on sales present for the selected Like PH between the Comp Start and End dates specified.</p>
+            </li>
+            <li><span class="Emphasis">Margin %</span>: Gross margin percentage for the placeholder.<ul><li><span class="Emphasis">Calculation</span>: ((AUR ex VAT / (1 + VAT %)) – AUC) / (AUR ex VAT / 1 + VAT %)</li></ul></li>
+            <li><span class="Emphasis">Markdown</span>: The markdown date for the placeholder.</li>
+            <li>
+                <p><span class="Emphasis">Mkdn No. Periods</span>: The time frame for the markdown date to phase out date. </p>
+                <MadCap:snippetBlock src="../../Resources/Snippets/Number of Markdown Periods.flsnp" />
+            </li>
+            <li><span class="Emphasis">Mkdn Offset Locked</span>: Links the markdown and phase out dates to each other so they work dependently on each other. 
+			<p> <MadCap:snippetBlock src="../../Resources/Snippets/Markdown Offset Lock.flsnp" /></p></li>
+            <li><span class="Emphasis">Mod Factor</span>: Defaults to 1.0. Only valid if <span class="Emphasis">Map From</span> is set. Defines a factor to multiply the sales history of the <span class="Emphasis">Map From</span>.</li>
+            <li>
+                <p><span class="Emphasis">OOT Sales</span>: Whether the item meets or exceeds the  product hierarchy level default threshold for sales units outside an assorted cluster. A mark indicates the threshold has been met or exceeded.</p>
+                <p>The <span class="Emphasis">OOT Sales</span> field indicates that there have been noteworthy sales of units at non-assorted sites. This helps provide a total picture of sales including those sales outside of the assorted cluster for a placeholder or variant. Users may decide to include the site in the cluster set moving forward.</p>
+            </li>
+            <li>
+                <p class="p"><span class="Emphasis">OOT Stock</span>: Whether the item  meets or exceeds the threshold at the product hierarchy level for the number of units in stock at sites that were not originally assorted to. A mark indicates the threshold has been met or exceeded.</p>
+            </li>
+            <li><span class="Emphasis">PH Code</span>: Unique system generated code for the placeholder</li>
+            <li>
+                <p><span class="Emphasis">PH Count</span>: (not present in Placeholder view). The number of the placeholders assigned to a collection. Editable for new Collections.</p>
+            </li>
+            <li><span class="Emphasis">PH Desc</span>: The description for the placeholder</li>
+            <li>
+                <p><span class="Emphasis">Phase In</span>: The phase in date for the placeholder. If set, selections limit to periods prior to Phase Out. </p>
+                <p class="BasicNote">Defaults to the earliest non-actualized period within the time frame selected.</p>
+            </li>
+            <li>
+                <p><span class="Emphasis">Phase Out</span>: The phase out date for the placeholder. If set, selections limit to periods after Phase In. </p>
+                <p class="BasicNote">Defaults to the last period within the Window of Time in the data selection parameters.</p>
+            </li>
+            <li>
+                <p><span class="Emphasis">Product Level</span>: The product hierarchy level to which the placeholder is assigned. </p>
+                <p class="BasicNote">This defaults to the lowest common product hierarchy level present in the Product filter in the data selection parameters for Placeholder view.</p>
+            </li>
+            <li><span class="Emphasis">Promo?</span>: Whether the placeholder has any active promotions applied to it.</li>
+            <li><span class="Emphasis">Receipt AUC</span>: Average unit cost price of receipts coming from the sales plan view.</li>
+            <li><span class="Emphasis">ROS ($)</span>: The current ROS $ for the placeholder. Blank for new placeholders.</li>
+            <li><span class="Emphasis">ROS (U)</span>: The current ROS U for the placeholder. Blank for new placeholders.</li>
+            <li><span class="Emphasis">S/T %:</span> The target sell-through percentage for the placeholder.<ul><li><span class="Emphasis">Calculation</span>: (Ttl Sls U / Ttl Buy U)</li></ul></li>
+            <li><span class="Emphasis">Ttl Sls ($):</span> The current total sales revenue planned for the placeholder. Blank for new placeholders.</li>
+            <li><span class="Emphasis">Ttl Sls U</span>: The current total sales units planned for the placeholder. Blank for new placeholders.</li>
+        </ul>
+        <h2>Historical section</h2>
+        <p>This section displays the placeholders and variants contained within the <span class="Emphasis">Product</span>, <span class="Emphasis">Site Hierarchy</span>, <span class="Emphasis">Cluster Set</span>, and <span class="Emphasis">Window of Time</span> parameters. Rows in this section can be dragged onto new placeholders or collections in the <span class="Emphasis">Current</span> section.</p>
+        <p>The label <span class="Emphasis">Historical</span> is a generic term that is based on the selected parameter. Placeholders and variants from any time frame can be displayed here.</p>
+        <p>All metrics in this section are essentially the same as their <span class="Emphasis">Current</span> section counterparts except that none are editable when the standard view configuration is engaged (meaning the <span class="Emphasis">Current</span> section on the left and the <span class="Emphasis">Historical</span> section is on the right).</p>
+        <h3>When the Historical Section is on the left</h3>
+        <p>This is achieved by clicking the <span class="Emphasis">Historical</span> button on the toolbar. The <span class="Emphasis">Attrib Copy</span>, <span class="Emphasis">Mod Factor</span>, <span class="Emphasis">Comp Start</span>, <span class="Emphasis">Comp End</span>, <span class="Emphasis">Adj ROS ($)</span>, and <span class="Emphasis">Adj ROS (U)</span> fields become part of the Historical section.</p>
+        <p><span class="Emphasis">Map to</span>: Selects a placeholder from those in the <span class="Emphasis">Current</span> section with compatible product levels to map the item to as a <span class="Emphasis">Like Style</span>.</p>
+        <p class="BasicNote">This field functions very similarly to the <span class="Emphasis">Map From</span> field except that each placeholder in the <span class="Emphasis">Current</span> section can only be selected as a <span class="Emphasis">Map to</span> once in the Historical section, as this view is not capable of mapping multiple items to a single placeholder. To blend multiple items together for the purpose of seeding rates of sale, users must use the <span class="Emphasis">Rate of Sale Calculator</span> supporting view. For more information, see <MadCap:xref href="Rate of Sale Calculator.htm">Rate of Sale Calculator View</MadCap:xref>.</p>
+        <p class="BasicNote">Users can also drag and drop placeholders from the <span class="Emphasis">Current</span> section to set the <span class="Emphasis">Map to</span>. If the placeholder being dropped is already selected as the <span class="Emphasis">Map To</span> for another line in the <span class="Emphasis">Historical</span> section, it is removed from that line and set as the <span class="Emphasis">Map To</span> for the new line.</p>
+        <h2>Buttons</h2>
+        <ul>
+            <li><span class="Emphasis">Cancel</span>: Closes the screen without committing any changes.</li>
+            <li><span class="Emphasis">Save</span>: Adds all new placeholders or collections and commits all <span class="Emphasis">Map From</span> and <span class="Emphasis">Map To</span> changes. Also, this initiates the recalculation of placeholder sales plans based on changes made.</li>
+        </ul>
+    </body>
+</html>

@@ -1,0 +1,46 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head />
+    <body>
+        <h1>Excluding unwanted messages</h1>
+        <p>Filters can be created that exclude unwanted messages from appearing in the <span class="Emphasis">Broker Dispatch Viewer</span>. This removes clutter from the message display. </p>
+        <p class="BasicNote"> Filtered messages are not deleted but just suppressed from view in the <span class="Emphasis">Broker Dispatch Viewer</span> screen.</p>
+        <h2>Excluding filters</h2>
+        <p>Exclude filters are managed from the <span class="Emphasis">Message Log Exclude Filter Management</span> dialog box.</p>
+        <p>
+            <img src="../../Resources/Images/Broker Dispatch/Exclude Filter.png" class="LargeImages" />
+        </p>
+        <h2>Creating an exclude filter</h2>
+        <ol>
+            <li>
+                <p>Click <span class="Emphasis">Exclude Filter</span> in the <span class="Emphasis">Broker Dispatch Viewer</span> toolbar.</p>
+            </li>
+            <li>In the <span class="Emphasis">Message Log Exclude Filter Management</span> dialog box, click <span class="Emphasis">New</span>. </li>
+            <li>
+                <p>Enter the following values for the new filter in the <span class="Emphasis">Message Log Exclude Filter</span> dialog:</p>
+                <p>
+                    <img src="../../Resources/Images/Broker Dispatch/New Filter.png" class="LargeImages" />
+                </p>
+                <ul>
+                    <li><span class="Emphasis">Exclude Filter Description</span> - A brief name or description for the filter.</li>
+                    <li><span class="Emphasis">Exclude Filter Type</span> - Select what type of value the filter will exclude. Options are:<ul><li><span class="Emphasis">Message Regular Expression</span>: Select to filter based on the content of the message.</li><li><span class="Emphasis">Affable Message Regular Expression</span>:</li><li><span class="Emphasis">Message Event Log Entry Type</span>: Select to filter messages by severity (Information, Warning, or Error).</li><li><span class="Emphasis">Message Type</span>: Select to filter messages by specific type (Dispatch, Progress, Application, Database Dispatch Execute Action Parallel, API, or Unknown).</li></ul></li>
+                    <li><span class="Emphasis">Exclude Filter Value</span> - Enter or select the values to exclude from view. Options are based on the Exclude Filter Type selected. <ul><li>For expression filter types, type or paste the value directly into the field.</li><li>For all other types, select one of the preset values.</li></ul></li>
+                    <li><span class="Emphasis">Security</span> - Whether to make the filter private (available only to the logged-in user), public (available to all roles and users), or shared (available only to selected users and roles).</li>
+                    <li>
+                        <p><span class="Emphasis">Is Enabled</span> - Enables the filter. When unchecked, the filter is disabled.</p>
+                    </li>
+                </ul>
+            </li>
+            <li>If <span class="Emphasis">Shared</span> is selected, click <span class="Emphasis">Change</span> to select the users and roles to share the filter with.</li>
+            <li>Click <span class="Emphasis">Ok</span> to save the filter</li>
+        </ol>
+        <h2>Editing an exclude filter</h2>
+        <ol>
+            <li>In the <span class="Emphasis">Message Log Exclude Filter Management</span> dialog box, select a filter and click <span class="Emphasis">Edit</span>. </li>
+            <li>
+                <p>Edit the filter values as desired.</p>
+            </li>
+            <li>Click <span class="Emphasis">Ok</span> to save changes.</li>
+        </ol>
+    </body>
+</html>

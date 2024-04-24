@@ -1,0 +1,53 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head />
+    <body>
+        <h1>Defining the curve used for shape forecasting</h1>
+        <p>Shape forecasting applies a pre-selected curve to an item's moving average sales history to generate a moving-average based, season-affected demand forecast for that item.</p>
+        <p>Select the <span class="Emphasis">Forecast</span> toolbar button to display the <span class="Emphasis">Forecast Task</span> dialog in which <span class="Emphasis">Shape Forecasting</span> methods are selected to be used in the forecast tournament.</p>
+        <p>
+            <img src="../../Resources/Images/Demand Forecasting/Shape Forecasting Method.png" class="LargeImages" />
+        </p>
+        <p>Shape forecasting requires the following setup tasks: </p>
+        <ul>
+            <li>Define appropriate curves (<MadCap:conditionalText MadCap:conditions="General.ScreenOnly">see <MadCap:xref href="../Curves/Curves Overview.htm">Curves overview</MadCap:xref>.</MadCap:conditionalText><MadCap:conditionalText MadCap:conditions="General.PrintOnly">Refer to the Curves User Guide.</MadCap:conditionalText>)</li>
+            <li>Identify the desired curve for each item in the <span class="Emphasis">Shape Forecast Maintenance</span> view.</li>
+        </ul>
+        <h3>Shape Forecast Maintenance View</h3>
+        <p>Use the <span class="Emphasis">Shape Forecast Maintenance</span> view to identify the curve that generates an item's shape forecast.</p>
+        <h2>Assigning or removing curves for multiple items</h2>
+        <p>Select multiple items and right-click within the <span class="Emphasis">Curve</span> field to display a dropdown menu. Select <span class="Emphasis">Multiple Changes</span> to display the <span class="Emphasis">Multi Data Change Form For Column Curve</span> window. </p>
+        <p class="BasicNote">Selecting <span class="Emphasis">(None)</span> in the <span class="Emphasis">New value</span> field removes curves from all selected items. </p>
+        <h2>Defining curves for items</h2>
+        <ol>
+            <li>
+                <p>In the Views module, open the <span class="Emphasis">Shape Forecast Maintenance</span> view.</p>
+            </li>
+            <li>
+                <p>In the <span class="Emphasis">Filter</span> list, choose the filter containing the desired items. </p>
+                <p>
+                    <img src="../../Resources/Images/Demand Forecasting/Shape Forecasting Maintenance View.png" class="LargeImages" />
+                </p>
+                <p>The items appear in two grids. The top grid lists items at sites. The bottom grid lists items by channel. (The same items appear in both grids.)</p>
+            </li>
+            <li>
+                <p>Select an item.</p>
+            </li>
+            <li>
+                <p>In the <span class="Emphasis">Curve</span> field, click the <span class="Emphasis">...</span> (ellipsis).</p>
+            </li>
+            <li>
+                <p>In the <span class="Emphasis">Curve Selection</span> dialog box, choose the curve to apply by selecting its row in the grid. </p>
+                <p>
+                    <img src="../../Resources/Images/Demand Forecasting/Curve Selection dialog.png" class="LargeImages" />
+                </p>
+            </li>
+            <li>
+                <p>Click <span class="Emphasis">Ok</span>.</p>
+            </li>
+            <li>
+                <p>Click <span class="Emphasis">Save</span> above the grid to save the change.</p>
+            </li>
+        </ol>
+    </body>
+</html>

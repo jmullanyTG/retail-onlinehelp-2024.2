@@ -1,0 +1,206 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head>
+        <link href="../../Resources/TableStyles/standard.css" rel="stylesheet" MadCap:stylesheetType="table" />
+    </head>
+    <body>
+        <h1>FX neutralization and selecting different currencies</h1>
+        <p>If a user selects a different currency for display than the plan currency (e.g. the plan is USD but the user selects EUR), then a conversion rate must be selected in order to display the cached data in the chosen currency.  The currency conversion rate chosen follows the same logical steps as those used to cache data. All future periods use the current period’s conversion rate for FXN LY and LLY metrics.</p>
+        <p>The following examples are for the <span class="Emphasis">Sales</span> metric in a plan currency of USD, but apply to all default currencies and the metrics described in <MadCap:xref href="FXN Visibility Control.htm">Metrics Impacted by FX Neutralization</MadCap:xref>.</p>
+        <h2>Sales in USD for the historical period 2022_wk10:</h2>
+        <table style="mc-table-style: url('../../Resources/TableStyles/standard.css');margin-left: 0;margin-right: auto;" class="TableStyle-standard" cellspacing="0">
+            <col class="TableStyle-standard-Column-Column1" style="width: 17%;" />
+            <col class="TableStyle-standard-Column-Column2" style="width: 17%;" />
+            <col class="TableStyle-standard-Column-Column1" style="width: 17%;" />
+            <col class="TableStyle-standard-Column-Column2" style="width: 17%;" />
+            <col class="TableStyle-standard-Column-Column1" style="width: 17%;" />
+            <col class="TableStyle-standard-Column-Column2" style="width: 17%;" />
+            <thead>
+                <tr class="TableStyle-standard-Head-Header1">
+                    <th class="TableStyle-standard-HeadE-Column1-Header1">Site</th>
+                    <th class="TableStyle-standard-HeadE-Column2-Header1">Sales</th>
+                    <th class="TableStyle-standard-HeadE-Column1-Header1">LY Sales (std)</th>
+                    <th class="TableStyle-standard-HeadE-Column2-Header1">LLY Sales (std)</th>
+                    <th class="TableStyle-standard-HeadE-Column1-Header1">LY Sales (FXN)</th>
+                    <th class="TableStyle-standard-HeadD-Column2-Header1">LLY Sales (FXN)</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyB-Column1-Body1">
+                        <p>Total</p>
+                    </td>
+                    <td class="TableStyle-standard-BodyB-Column2-Body1">
+                        <p>$2170</p>
+                    </td>
+                    <td class="TableStyle-standard-BodyB-Column1-Body1">
+                        <p>$2465</p>
+                    </td>
+                    <td class="TableStyle-standard-BodyB-Column2-Body1">
+                        <p>$1835</p>
+                    </td>
+                    <td class="TableStyle-standard-BodyB-Column1-Body1">
+                        <p>$2487</p>
+                    </td>
+                    <td class="TableStyle-standard-BodyA-Column2-Body1">
+                        <p>$1895</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <h2>Conversion to EUR for the historical period 2022_wk10:</h2>
+        <table style="mc-table-style: url('../../Resources/TableStyles/standard.css');margin-left: 0;margin-right: auto;" class="TableStyle-standard" cellspacing="0">
+            <col class="TableStyle-standard-Column-Column1" style="width: 171px;" />
+            <col class="TableStyle-standard-Column-Column2" style="width: 17%;" />
+            <col class="TableStyle-standard-Column-Column1" style="width: 17%;" />
+            <col class="TableStyle-standard-Column-Column2" style="width: 17%;" />
+            <col class="TableStyle-standard-Column-Column1" style="width: 17%;" />
+            <col class="TableStyle-standard-Column-Column2" style="width: 17%;" />
+            <thead>
+                <tr class="TableStyle-standard-Head-Header1">
+                    <th class="TableStyle-standard-HeadE-Column1-Header1">Site</th>
+                    <th class="TableStyle-standard-HeadE-Column2-Header1">Sales</th>
+                    <th class="TableStyle-standard-HeadE-Column1-Header1">LY Sales (std)</th>
+                    <th class="TableStyle-standard-HeadE-Column2-Header1">LLY Sales (std)</th>
+                    <th class="TableStyle-standard-HeadE-Column1-Header1">LY Sales (FXN)</th>
+                    <th class="TableStyle-standard-HeadD-Column2-Header1">LLY Sales (FXN)</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyB-Column1-Body1">
+                        <p>Total</p>
+                    </td>
+                    <td class="TableStyle-standard-BodyB-Column2-Body1">
+                        <p>$2170 / 1.17 = €1855</p>
+                    </td>
+                    <td class="TableStyle-standard-BodyB-Column1-Body1">
+                        <p>$2465 / 1.15 = €2143</p>
+                    </td>
+                    <td class="TableStyle-standard-BodyB-Column2-Body1">
+                        <p>$1835 / 1.10 = €1668</p>
+                    </td>
+                    <td class="TableStyle-standard-BodyB-Column1-Body1">
+                        <p>$2487 / 1.17 = €2125</p>
+                    </td>
+                    <td class="TableStyle-standard-BodyA-Column2-Body1">
+                        <p>$1895 / 1.17 = €1620</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <p style="font-weight: bold;">Data selection in Standard mode</p>
+        <p>Depending on display currency:</p>
+        <p><span class="Emphasis">Sales</span> = $2170 or €1855</p>
+        <p><span class="Emphasis">LY Sales</span> = $2465 or €2143</p>
+        <p><span class="Emphasis">LLY Sales</span> = $1835 or €1668</p>
+        <p><span class="Emphasis">Data selection in FX Neutralized mode</span>
+        </p>
+        <p>Depending on display currency:
+</p>
+        <p><span class="Emphasis">Sales</span> = $2170 or €1855
+</p>
+        <p><span class="Emphasis">LY Sales</span> = $2487 or €2125
+</p>
+        <p><span class="Emphasis">LLY Sales</span> = $1895 or €1620
+</p>
+        <p class="BasicNote">The system relies on the already converted and stored USD totals across all sites.  It will not go back to site-specific data and reconvert all individual values from site currency to display currency.</p>
+        <h2>Sales in USD for the future period 2023_wk10:</h2>
+        <table style="mc-table-style: url('../../Resources/TableStyles/standard.css');margin-left: 0;margin-right: auto;" class="TableStyle-standard" cellspacing="0">
+            <col class="TableStyle-standard-Column-Column1" style="width: 17%;" />
+            <col class="TableStyle-standard-Column-Column2" style="width: 17%;" />
+            <col class="TableStyle-standard-Column-Column1" style="width: 17%;" />
+            <col class="TableStyle-standard-Column-Column2" style="width: 17%;" />
+            <col class="TableStyle-standard-Column-Column1" style="width: 17%;" />
+            <col class="TableStyle-standard-Column-Column2" style="width: 17%;" />
+            <thead>
+                <tr class="TableStyle-standard-Head-Header1">
+                    <th class="TableStyle-standard-HeadE-Column1-Header1">Site</th>
+                    <th class="TableStyle-standard-HeadE-Column2-Header1">Sales</th>
+                    <th class="TableStyle-standard-HeadE-Column1-Header1">LY Sales (std)</th>
+                    <th class="TableStyle-standard-HeadE-Column2-Header1">LLY Sales (std)</th>
+                    <th class="TableStyle-standard-HeadE-Column1-Header1">LY Sales (FXN)</th>
+                    <th class="TableStyle-standard-HeadD-Column2-Header1">LLY Sales (FXN)</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyB-Column1-Body1">
+                        <p>Total</p>
+                    </td>
+                    <td class="TableStyle-standard-BodyB-Column2-Body1">
+                        <p>$2500 (planned)</p>
+                    </td>
+                    <td class="TableStyle-standard-BodyB-Column1-Body1">
+                        <p>$2444</p>
+                    </td>
+                    <td class="TableStyle-standard-BodyB-Column2-Body1">
+                        <p>$2170</p>
+                    </td>
+                    <td class="TableStyle-standard-BodyB-Column1-Body1">
+                        <p>$2540</p>
+                    </td>
+                    <td class="TableStyle-standard-BodyA-Column2-Body1">
+                        <p>$2200</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <h2>Conversion to EUR for the future period 2023_wk10:</h2>
+        <table style="mc-table-style: url('../../Resources/TableStyles/standard.css');margin-left: 0;margin-right: auto;" class="TableStyle-standard" cellspacing="0">
+            <col class="TableStyle-standard-Column-Column1" style="width: 174px;" />
+            <col class="TableStyle-standard-Column-Column2" style="width: 17%;" />
+            <col class="TableStyle-standard-Column-Column1" style="width: 17%;" />
+            <col class="TableStyle-standard-Column-Column2" style="width: 17%;" />
+            <col class="TableStyle-standard-Column-Column1" style="width: 17%;" />
+            <col class="TableStyle-standard-Column-Column2" style="width: 17%;" />
+            <thead>
+                <tr class="TableStyle-standard-Head-Header1">
+                    <th class="TableStyle-standard-HeadE-Column1-Header1">Site</th>
+                    <th class="TableStyle-standard-HeadE-Column2-Header1">Sales</th>
+                    <th class="TableStyle-standard-HeadE-Column1-Header1">LY Sales (std)</th>
+                    <th class="TableStyle-standard-HeadE-Column2-Header1">LLY Sales (std)</th>
+                    <th class="TableStyle-standard-HeadE-Column1-Header1">LY Sales (FXN)</th>
+                    <th class="TableStyle-standard-HeadD-Column2-Header1">LLY Sales (FXN)</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyB-Column1-Body1">
+                        <p>Total</p>
+                    </td>
+                    <td class="TableStyle-standard-BodyB-Column2-Body1">
+                        <p>$2500 / 1.20 = €2083</p>
+                    </td>
+                    <td class="TableStyle-standard-BodyB-Column1-Body1">
+                        <p>$2444 / 1.12 = €2182</p>
+                    </td>
+                    <td class="TableStyle-standard-BodyB-Column2-Body1">
+                        <p>$2170 / 1.17 = €1855</p>
+                    </td>
+                    <td class="TableStyle-standard-BodyB-Column1-Body1">
+                        <p>$2540 / 1.20 = €2117</p>
+                    </td>
+                    <td class="TableStyle-standard-BodyA-Column2-Body1">
+                        <p>$2200 / 1.20 = €1833</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <p><span class="Emphasis">Data selection in Standard mode</span>
+        </p>
+        <p>Depending on display currency:
+</p>
+        <p>Sales = $2500 or €2083</p>
+        <p>LY Sales = $2444 or €2182</p>
+        <p>LLY Sales = $2170 or €1855</p>
+        <p style="font-weight: bold;">Data selection in FX Neutralized mode</p>
+        <p>Depending on display currency:
+</p>
+        <p>Sales = $2500 or €2083</p>
+        <p>LY Sales = $2540 or €2117</p>
+        <p>LLY Sales = $2200 or €1833</p>
+        <p class="BasicNote">The system relies on the already converted and stored USD totals across all sites.  It will not go back to site-specific data and reconvert all individual values from site currency to display currency.
+</p>
+    </body>
+</html>

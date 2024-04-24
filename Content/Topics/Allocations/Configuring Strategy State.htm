@@ -1,0 +1,140 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" xml:lang="en-us">
+    <head><title></title>
+    </head>
+    <body>
+        <h1>Configuring strategy state</h1>
+        <p>With the correct configuration of the strategy state, work flows can be streamlined by hiding strategies which may not be managed, and setting strategies inactive which designates them as future candidates for deletion. There are four strategy states: Active, Inactive, Hidden, and Deleted. </p>
+        <h2>Hidden state</h2>
+        <ul>
+            <li>Only the system shall be able to set a visible flag via a periodic or nightly process.</li>
+            <li>
+                <p>The hidden state shall be set if all of the following conditions are met:</p>
+                <ul>
+                    <li>No stock on hand (SOH) at the DC</li>
+                    <li>No inbound stock</li>
+                    <li>Allocation Strategy is Ready To Allocate</li>
+                    <li>Strategy is currently in an Active or Hidden State</li>
+                    <li>Not in a manual mode state</li>
+                </ul>
+            </li>
+            <li>
+                <p>When the hidden state is set:</p>
+                <ul>
+                    <li>The user interface shall not display the corresponding allocation strategy unless specified.</li>
+                    <li>All normal processing shall continue on the allocation strategy.&#160; </li>
+                </ul>
+            </li>
+            <li>If a state is no longer hidden it shall revert to an Active state, even if it was previously inactive or deleted. This shall not apply to Manual Active Flag Management Type</li>
+            <li>Additionally, when a group is hidden and new variants are added to it, it should run the hidden process to see if it can now be active.</li>
+            <li>Similarly, a strategy which is not active and not in manual mode shall run the hidden process to see if it can be active after a save of the allocation strategy occurs.&#160; </li>
+        </ul>
+        <h2>Active or inactive flag and state</h2>
+        <h3>User specific </h3>
+        <ul>
+            <li>A user is able to determine if an allocation is active or not by setting the allocation strategy active flag.</li>
+            <li>
+                <p>Only allocation strategies that are variants shall be allowed to be made inactive.</p>
+                <ul>
+                    <li>Group allocation strategies shall be prevented from being marked inactive (prevent edit in grid). The <span class="Emphasis">Delete</span> button shall be used instead, which should mark the allocation strategy of the group deleted as well as release all included variants.&#160;&#160; </li>
+                </ul>
+            </li>
+            <li>The date and time is saved when the active flag is altered.</li>
+            <li>
+                <p>When a user updates the active flag (via UI) </p>
+                <ul>
+                    <li>An indicator shall be set. For example, an Active Flag Management Type is set to Manual. The indicator shall be displayed to the user as well.</li>
+                    <li>The Allocation State shall be set accordingly.</li>
+                </ul>
+            </li>
+            <li>
+                <p>When an allocation has a Manual Active Flag Management Type it shall only be affected by user input and not the system.</p>
+            </li>
+            <li>
+                <p>The Active Flag Management Type is comprised of Open and Manual types. By default an Allocation’s Active Flag Management Type is set to Open. </p>
+            </li>
+        </ul>
+        <h3>System specific</h3>
+        <ul>
+            <li>The system updates the active flag on all allocations that have an Active Flag Management Type of Open. For Open management types, the system has a standard check for setting the strategy state to inactive via a periodic or nightly process. This process can be customized.</li>
+            <li>
+                <p>The standard check shall mark the state inactive if all of the following conditions are met: </p>
+                <ul>
+                    <li>No stock on hand (SOH) at the DC </li>
+                    <li>The average stock on hand for all stores in the allocation strategy is less than the Min Average SOH as defined by system policy <span class="Emphasis">Set Active State - Min Average for In Store Stock</span>, but if not provided defaults to 100. </li>
+                    <li>No inbound stock</li>
+                    <li>No sales for X days, where X days is defined by system policy <span class="Emphasis">Set Active State - Days Of No Sale</span>, but if not provided defaults to 30 days.</li>
+                    <li>Allocation Strategy is Ready To Allocate</li>
+                    <li>Not already in a Deleted State or Inactive State (so not to reset the last modified time)</li>
+                    <li>Not an Allocation Group</li>
+                    <li>Not in a Manual State</li>
+                </ul>
+            </li>
+        </ul>
+        <h3>Effects of inactive or active setting </h3>
+        <ul>
+            <li>
+                <p>When the state is set to inactive:</p>
+                <ul>
+                    <li>The user interface will not display the corresponding allocation strategy unless specified. </li>
+                    <li>The engine will not process the allocation strategy. </li>
+                    <li>The inventory cache will be cleared of any entries that relate to the allocation strategy.</li>
+                    <li>Forecasts and Projected values will remain. However, the roll up screens shall not display values that correlate to inactive allocations. </li>
+                    <li>The date and time stamp will be updated.</li>
+                    <li>Any dependent fields such as location strategy or size model are restricted from deletion to maintain data integrity.</li>
+                </ul>
+            </li>
+            <li>
+                <p>If the system or user marks an allocation strategy active the following shall occur:</p>
+                <ul>
+                    <li>The engine will continue to process the allocation strategy.</li>
+                    <li>The date/time stamp will be updated.</li>
+                </ul>
+            </li>
+            <li>If a state is no longer inactive, it will revert to an Active State, even if it was previously deleted.</li>
+        </ul>
+        <h2>Deleted state and garbage collection</h2>
+        <ul>
+            <li>Only the system  sets the deleted flag via a periodic/nightly process.</li>
+            <li>The date and time is saved when the deleted state is set.</li>
+            <li>A user has the ability to see if an allocation strategy is deleted.</li>
+            <li>
+                <p>The deleted state is set if all of the following conditions are met:</p>
+                <ul>
+                    <li>An allocation strategy has been in an inactive state for X days, where X days is defined by a system policy, if not provided defaults to 30 days.</li>
+                    <li>It does not matter if the inactive state was manually set or not</li>
+                    <li>The exception status can be in any state (missing configuration/ready to allocate)</li>
+                </ul>
+            </li>
+            <li>
+                <p>When the deleted state is set:</p>
+                <ul>
+                    <li>The user interface will not display the corresponding allocation strategy unless specified.</li>
+                    <li>The date/time will be updated.</li>
+                    <li>Any dependent field such as location strategy or size model shall still not be allowed to be deleted to obtain data integrity.</li>
+                </ul>
+            </li>
+            <li>Only the system is able to garbage collect via a periodic or nightly process. </li>
+            <li>
+                <p>The process will not allow the ability for customization. However, some system policies have been provided:</p>
+                <ul>
+                    <li>Batch Size to process (<span class="Emphasis">Garbage Collection - Batch Size</span>)</li>
+                    <li>Number of Days an allocation has to be marked deleted (<span class="Emphasis">Garbage Collection - Days To Wait</span>)</li>
+                    <li>The max time to allow for processing (<span class="Emphasis">Garbage Collection - Minutes Until Timeout</span>)</li>
+                </ul>
+            </li>
+            <li>
+                <p>Garbage collection occurs when the following conditions are met:</p>
+                <ul>
+                    <li>An allocation strategy has been in a deleted state for X days, where X days is defined by a system policy. If not provided, defaults to 90 days.</li>
+                </ul>
+            </li>
+            <li>
+                <p>When garbage collection starts the following should occur:</p>
+                <ul>
+                    <li>The allocation strategy shall be removed from ALL Allocation related tables.</li>
+                </ul>
+            </li>
+        </ul>
+    </body>
+</html>

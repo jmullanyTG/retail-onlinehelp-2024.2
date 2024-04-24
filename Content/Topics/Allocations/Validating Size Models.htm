@@ -1,0 +1,139 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head>
+        <link href="../../Resources/TableStyles/standard.css" rel="stylesheet" MadCap:stylesheetType="table" />
+    </head>
+    <body>
+        <h1>Validating enhanced size models</h1>
+        <p>Setting up pass or fail tests ensures each site had enough qualified data left over after data cleansing to calculate a valid size model. For more information, see <MadCap:xref href="Size Curve Thresholds.htm">Data Cleansing Thresholds</MadCap:xref>.</p>
+        <p class="BasicNote">Size model validations are for informational purposes only and do not affect whether a curve is used.</p>
+        <h2>Thresholds</h2>
+        <p>Validations are based on the following user-defined thresholds, which appear as columns in the Size Models grid. </p>
+        <p class="BasicNote">These thresholds measure the data-cleansed variants, sales units, and sizes at a site within the item filter selected for the size model.</p>
+        <table style="mc-table-style: url('../../Resources/TableStyles/standard.css');" class="TableStyle-standard" cellspacing="0">
+            <col class="TableStyle-standard-Column-Column1" />
+            <col class="TableStyle-standard-Column-Column2" />
+            <thead>
+                <tr class="TableStyle-standard-Head-Header1">
+                    <th class="TableStyle-standard-HeadE-Column1-Header1">Threshold</th>
+                    <th class="TableStyle-standard-HeadD-Column2-Header1">Description</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1"># Variants Qualified</td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">
+                       The minimum number of variants required at a site for its size model to be valid.
+                        <p>After data cleansing, the curve validation fails for a site if the number of remaining variants at that site is less than this value. </p></td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">% Variants Qualified</td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">
+                        The minimum percentage of variants at a site that must pass data cleansing for the size model to be valid.
+                        <p>After data cleansing,  the curve validation fails for a site if the remaining percentage of variants at that site is less than this value.  </p></td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">Qualified Sales Units</td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">
+                        The minimum number of sales units required at a site for its size model to be valid.
+                        <p>After data cleansing, the curve validation fails for a site if the number of sales units at that site is less than this value.</p></td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1"># Sizes Under</td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">
+                       The maximum number of sizes allowed at a site whose contribution to the size model falls below the value defined in the <span class="Emphasis">%&#160;Sizes Under</span> threshold.
+                        </td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">% Sizes Under</td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">
+                         The % contribution value to test against when validating # <span class="Emphasis">Sizes Under</span>. (A size's % contribution value is shown in the Size Model Detail pane's <span class="Emphasis">Contribution</span> column.) 
+                        <p><img src="../../Resources/Images/Allocation Size/Contribution values.png" class="LargeImages" /></p><p>For example, if this value is set to 10 and <span class="Emphasis"># Sizes Under</span> is set to 2, a validation checks the number of sizes with contribution values below 10%. If more than 2 sizes at a site have contribution values below 10%, then the validation fails for that site. </p></td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1"># Sizes Over</td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">
+                       The maximum number of sizes to allow at the site whose contribution to the size model is greater than the value defined in the <span class="Emphasis">%&#160;Sizes Over</span> threshold.
+                        </td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyB-Column1-Body1">%&#160;Sizes Over</td>
+                    <td class="TableStyle-standard-BodyA-Column2-Body1">
+                         The % contribution value to test against when validating # <span class="Emphasis">Sizes Over</span>. (A size's % contribution value is shown in the Size Model Detail pane's <span class="Emphasis">Contribution</span> column.) 
+                        <p><img src="../../Resources/Images/Allocation Size/Contribution values.png" /></p><p>For example, if this value is set to 25, and <span class="Emphasis"># Sizes Over</span> is set to 2,  a validation checks the number of sizes with contribution values greater than 25%. If more than 2 sizes at a site have contribution values greater than 25%, then the validation fails for that site. </p></td>
+                </tr>
+            </tbody>
+        </table>
+        <p>Not all of these thresholds need to be used to test size models, just the ones that make sense for the data. Also, validations <i>per curve</i> can be customized, with different sets of thresholds and values for each curve as desired. </p>
+        <p class="Important">If more than one threshold is needed to test a size model, then  a curve must satisfy all thresholds to pass validation. Testing stops  once any threshold test fails.</p>
+        <p>Once changes to a size model's thresholds are saved, the system automatically validates the site-specific curves against those thresholds and displays the results in the Size Model Detail pane. </p>
+        <h2>Setting up validations for the enhanced size model</h2>
+        <p>This section describes how to set up validations for enhanced size models. </p>
+        <ol>
+            <li>From the Execute tab, click <span class="Emphasis">Allocations</span> to open the Allocation window.</li>
+            <li> Click <span class="Emphasis">Size Models</span> on the toolbar to open the Size Models grid.</li>
+            <li>
+                <p>Find the row of the enhanced size model to be validated. </p>
+                <p>To tell if a size model is enhanced or not, look at the curve's read-only <span class="Emphasis">Used Advanced Calc</span> column. If the checkbox is marked, it is an enhanced size model.</p>
+                <p>
+                    <img src="../../Resources/Images/Allocation Size/Used Advanced Calc.png" class="LargeImages" />
+                </p>
+            </li>
+            <li>
+                <p>In the size model row, enter the desired threshold values in the threshold columns described in the table above. </p>
+                <p>
+                    <img src="../../Resources/Images/Allocation Size/Validation Thresholds.png" class="LargeImages" />
+                </p>
+                <p class="BasicNote"> Any combination of thresholds can be entered. However, if defining <span class="Emphasis">Sizes Under</span> or <span class="Emphasis">Sizes Over</span> thresholds, enter values in both the <span class="Emphasis"># Sizes</span> and <span class="Emphasis">% Sizes</span> columns.</p>
+            </li>
+            <li>
+                <p>Click <span class="Emphasis">Save</span> to save the thresholds and execute the validations against the site-specific size models. </p>
+                <p class="BasicNote"> Results are shown in the <span class="Emphasis">Size Model Detail</span> pane. Size models are not automatically recalculated prior to validation. They are run against the current or existing size model.</p>
+            </li>
+            <li>Repeat steps 3-5 for each enhanced size model to be validated.</li>
+        </ol>
+        <h2><a name="results"></a>Validation results</h2>
+        <p>Select a size model in the top grid to view its validation results in the bottom grid.</p>
+        <p>
+            <img src="../../Resources/Images/Allocation Size/Validation Results.png" class="LargeImages" />
+        </p>
+        <p>The <span class="Emphasis">Pass?</span> column indicates whether the size model for each site passed validation. </p>
+        <table style="mc-table-style: url('../../Resources/TableStyles/standard.css');" class="TableStyle-standard" cellspacing="0">
+            <col class="TableStyle-standard-Column-Column1" />
+            <col class="TableStyle-standard-Column-Column2" />
+            <thead>
+                <tr class="TableStyle-standard-Head-Header1">
+                    <th class="TableStyle-standard-HeadE-Column1-Header1">Value</th>
+                    <th class="TableStyle-standard-HeadD-Column2-Header1">Description</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">
+                        <img src="../../Resources/Images/Allocation Size/Validation Pass.png" class="LargeImages" />
+                    </td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">The size model for this site passed validation.</td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyB-Column1-Body1">
+                        <img src="../../Resources/Images/Allocation Size/Validation Fail.png" class="LargeImages" />
+                    </td>
+                    <td class="TableStyle-standard-BodyA-Column2-Body1">
+                        The size model for this site failed validation.
+                        <p>In addition, the site's Total Contribution column value appears <span class="Emphasis">color: #ff4500; red</span>. (This is a visual indicator only and does not reflect any issues with the total contribution value itself.)</p></td>
+                </tr>
+            </tbody>
+        </table>
+        <h2>When size models fail validation</h2>
+        <p>The following options are available if a size model fails validation:</p>
+        <ul>
+            <li>
+                <MadCap:xref href="Manually overridding size models.htm">Manually overriding size models</MadCap:xref>
+            </li>
+            <li>
+                <MadCap:xref href="Substituting size model.htm">Substituting size models</MadCap:xref>
+            </li>
+            <li>Use the size model as is.</li>
+        </ul>
+    </body>
+</html>

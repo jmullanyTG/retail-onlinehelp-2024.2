@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head>
+    </head>
+    <body>
+        <h1>Deployment Model</h1>
+        <p>The core code deployment includes executing the purge-specific <span class="EmphasisItalic">INIT</span> script.  By design, the initial setup deploys reference data, then adds the <span class="EmphasisItalic">prescription</span> to follow to effect Inventory purges.</p>
+        <p>When the solution is upgraded with a quarterly release or refreshed by a hot-fix or Cumulative Update, the same <span class="EmphasisItalic">INIT</span> script is run.  The script does what it can to preserve Custom prescription steps.  The only time such steps are removed is when we remove a core-code step-type, which is extremely unlikely.  By definition, removal of a step-type includes removal of any logic performed when that step-type existed in prior versions.</p>
+        <p>The purge utility is versioned within the overall solution.</p>
+        <p>We recommend that the <ins>Custom</ins> <span class="EmphasisItalic">INIT</span> script be kept under version control.  Any custom step that runs custom procedural code would recommend that the custom code also be managed under version control.</p>
+        <p>The utility is provided in a form whereby successful execution of core code is the norm.  We are not responsible for any custom steps or code that act upon custom tables, or that act upon core tables but not within core code.  <span class="Emphasis" style="text-decoration: underline;">Complete and thorough testing of custom facets is required in a non-production environment prior to production usage.</span>  Data recovery of information losses due to custom artifacts is the responsibility of the customer where we have not been engaged to provide said custom artifacts in a thoroughly tested form.</p>
+        <p>It is incumbent upon Support, for hosted implementations, or the on-premise Customer, to <span class="EmphasisItalic">review Job Manager Tasks</span> to ensure that ANY <span class="EmphasisItalic">Inventory Data Purge</span> , whether custom-built, or a ToolsGroup Support script, is not directly referenced.  If it is, it must be removed.  It is recommended to only use Method names in Job Manager.</p>
+        <p>Ensure that the @UserID value is assigned to the currently logged-in User ID or accept that defaulting to UserID = 1 reduces traceability in regard to the person explicitly starting the Task.  For the <span class="EmphasisItalic">Stop No</span>w Task, ensure that the parameter value is <span class="EmphasisItalic">True</span>.</p>
+    </body>
+</html>

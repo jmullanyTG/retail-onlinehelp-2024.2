@@ -1,0 +1,24 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" xml:lang="en-us">
+    <head><title></title>
+    </head>
+    <body>
+        <h1>Defining home currency, exchange rates, VAT rates, and price translations</h1>
+        <p>There are four related views that manage how currencies are dealt with by Assortment Planning. The parameters set in these views contribute to the calculation of proper blended AUR (average unit retail) pricing in implementations with multiple currencies and countries. These parameters are also used in single-currency/country implementations being set to maintain flat pricing with no adjustments. </p>
+        <p class="Important">The configuration of these views is a required step in the implementation of Assortment Planning and should be completed prior to the creation of any assortment plans.</p>
+        <h2>Site currency assignments</h2>
+        <p style="margin-left: 2pt; color: #000000;">Home currencies need to be established for all sites in use before configuring currency exchanges and price translations. For more information, see <MadCap:xref href="Currency Exchange Rates.htm">Currency Exchange Rates</MadCap:xref>.</p>
+        <h2>Updating exchange rates</h2>
+        <p style="margin-left: 2pt; color: #000000;">As exchange rates between currencies are volatile, how often these rates are updated needs to be planned effectively. Considerations include the source of the rates and how the rates are updated.&#160; While more frequent updating of rates may yield a greater degree of accuracy, these changes cause recalculations within assortment plans that need to be reviewed.</p>
+        <p style="margin-left: 2pt; color: #000000;">For more information, see <MadCap:xref href="Price Translation Management.htm">Price Translation Management</MadCap:xref>.</p>
+        <h2>Price Translation rules</h2>
+        <p style="margin-left: 2pt; color: #000000;">Price Translation rules allow users to define rules to adjust pricing by price range within each currency and then assign those rules to levels of the product hierarchy. </p>
+        <p style="margin-left: 2pt; color: #000000;">For more information, see <MadCap:xref href="Price Translation Hierarchy Assignment.htm">Price Translation Hierarchy Assignment</MadCap:xref>.</p>
+        <h2>Updating VAT&#160;rates</h2>
+        <p style="margin-left: 2pt; color: #000000;">Although VAT rates do change they are much less volatile than currency exchange rates. Users can maintain VAT rates at any level of a given product hierarchy and by Site Groups 1-20. </p>
+        <p style="margin-left: 2pt; color: #000000;">However, Assortment Planning was not designed to be used with product hierarchies that extend to the style/variant level. That said, VAT rates should be maintained at a level above that. </p>
+        <p style="margin-left: 2pt; color: #000000;">Any variations occurring beneath (due to fabric type in some countries, etc.) should be handled by entering a blended VAT rate for the level based on the expected % contribution of the products attached to varying VAT rates beneath. </p>
+        <p style="margin-left: 2pt; color: #000000;">As with currency exchanges, the frequency, source, and method of VAT rate updates needs to be considered. For more information, see <MadCap:xref href="Planning VAT Rates.htm">Planning VAT Rates</MadCap:xref>.</p>
+        <p class="BasicNote"> Target Creation, with Assortment Planning, can be used as a purely analytical tool and could be useful in determining the % contribution of product types that exist beneath established product hierarchy levels. (For more information, see <MadCap:xref href="../Assortment Planning/Target Creation Overview.htm">Target Creation</MadCap:xref>.)</p>
+    </body>
+</html>

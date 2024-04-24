@@ -1,0 +1,92 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" xml:lang="en-us">
+    <head>
+        <link href="../../Resources/TableStyles/standard.css" rel="stylesheet" MadCap:stylesheetType="table" />
+        <title>
+        </title>
+    </head>
+    <body>
+        <h1>Strategies</h1>
+        <p>The <span class="Emphasis">Strategies</span> screen is used to assign Calculation Sets, Validation Sets, and Pricing Details to a Promotion Strategy. Mandatory and required fields can be setup that are seen in the Promotion Pricing grid and Promotion Strategies set as active (i.e. available for use). </p>
+        <p>
+            <img src="../../Resources/Images/Promotion Management/Promotion Strategies.png" class="LargeImages" />
+        </p>
+        <h2>Fields and descriptions</h2>
+        <table class="TableStyle-standard" cellspacing="0" style="mc-table-style: url('../../Resources/TableStyles/standard.css');">
+            <thead>
+                <tr class="TableStyle-standard-Head-Header1">
+                    <th class="TableStyle-standard-HeadE-Column1-Header1">Field</th>
+                    <th class="TableStyle-standard-HeadD-Column2-Header1">Description</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">
+                        Name 
+                    </td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">
+                        The Strategy’s name used to select a Promotion Strategy when creating a Promotion.
+                    </td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">Type 
+                    </td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">
+                        Select the Strategy Type from the dropdown list to determine how the Promotion Strategy displays.
+                        <ul><li>Promoted Price - A promotional price.</li><li>Promoted Discount – An amount off or percent off Promotion.</li><li>Buy Get – A buy X get X or buy X get Y Promotion.</li><li>Spend Get – A spend X get points, dollars, or percent off.</li><li>Rebate – A regular retail or promotional price with a rebate.</li></ul></td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">
+                        Is Group Synced (Optional)
+                    </td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">
+                        Must be selected for all BOGO AA type Promotion Strategies.
+                    </td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">
+                        Validation Set (Optional)
+                    </td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">
+                        Populated with Validation Sets defined in the Promotion Validation Configuration grid. Validations are performed after Calculations.
+                    </td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">
+                        Calculation Set (Required)
+                    </td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">Populated with Calculation Sets defined in the Promotion Validation Configuration grid. Calculations are performed after methods.
+                    </td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">
+                        Price Output Set                    </td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">
+                        Select a Promotion Pricing Detail from the dropdown list. Populated with Pricing Outputs defined in the Promotion Price Output Set Configuration grid.
+                    </td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">
+                        Price View Collection                     </td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">
+                        The dropdown is populated by available pivot template to display pricing information. Select a display to use in the Promotion – Price Details tab.
+                    </td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">
+                        Analysis View Collection  (Optional)
+                    </td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">
+                        The available pivot template to display analysis information. Select a display to use in the Promotion – Analysis tab.
+                    </td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyB-Column1-Body1">Edit Users</td>
+                    <td class="TableStyle-standard-BodyA-Column2-Body1">
+                        By default, all Roles and Users have access to all Promotion Strategies. Clicking on this field opens the Remove User Rights dialog in which access to a Promotion Strategy can be removed from particular Roles and Users. 
+                        <p class="BasicNote">The list is filtered to only display Users that have User Right Allow Creation of Promotion.</p></td>
+                </tr>
+            </tbody>
+        </table>
+    </body>
+</html>

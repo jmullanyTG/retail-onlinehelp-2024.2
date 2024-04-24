@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head />
+    <body>
+        <h1>The ToolsGroup JustEnough Prepack Engine and the genetic algorithm</h1>
+        <p>The ToolsGroup JustEnough Prepack Engine uses a modified version of the Genetic Algorithm to produce optimal pack sizes and number of packs for each inputted location. The Genetic Algorithm generalizes how an initial population grows and mutates over time until the optimal outcome is achieved after a certain number of generations. </p>
+        <p>For more information on the Genetic Algorithm, see <a href="https://en.wikipedia.org/wiki/Genetic_algorithm">Genetic Algorithm</a>.</p>
+        <h2>Prepack Derivative</h2>
+        <p>The Prepack Engine uses the Genetic Algorithm to determine how packing similar items into a shipping set will be most efficient for logistical operations. The set is determined by the population, or in terms of prepacks the sizes of the items based on the inputted size model and calculates the most optimal pack(s) to send for all given sites. The engine takes in additional input parameters to the Genetic Algorithm to help determine optimal pack sizes, how many different packs to generate, and how many of them to send to each site in order to fulfill the inputted need requirements. There are two modes in the prepack engine: Allocation Only, Optimize Configurations.</p>
+        <h2>Allocation Only mode </h2>
+        <p>The Allocation Only mode requires additional pack size inputs to be sent to the engine and it will only compute how many of those packs should go to each site based on their need with the given parameters to the engine such as overage weight, underage weight, etc.</p>
+        <h2>Optimize Configuration mode </h2>
+        <p>The Optimize Configuration mode runs the Genetic Algorithm to determine the optimal pack sizes first given the specific input parameters such as max pack size, number of packs, min allocation ratio, etc., and then will try allocating those packs to each site based on its need. This mode also includes running the Allocation Only mode after the configurations have been determined by the engine.</p>
+    </body>
+</html>

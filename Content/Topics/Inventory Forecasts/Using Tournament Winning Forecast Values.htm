@@ -1,0 +1,33 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head>
+    </head>
+    <body>
+        <h1>Using tournament&#160;winning forecast values to build MFP plans</h1>
+        <p>Users can generate forecasts based on product level history and projections and not tied to specific skus/locations. In addition to LY, LLY or a defined comparison time period, planners now have visibility to a sales projection with a very high level of accuracy. The forecast results are the winning forecast method from the forecast tournament with AI and gradient boosting included in that forecast tournament.</p>
+        <p>MFP forecasting creates a forecast at the lowest MFP hierarchy level. Meaning, for an MFP plan that includes Mens &gt; Mens Tops &gt; Mens Tees &gt; Mens Graphic Tees, with graphic tees being the lowest product level, then the forecast runs using the graphic tees grouping as the forecast source. </p>
+        <p>Lowest hierarchy level applies to Channel as well. For example, if the Channel hierarchy is Total &gt; Retail &gt; West, then the forecast is performed at the Channel level and not by individual sites within that Channel.</p>
+        <p>Forecasted values can be seen within MFP with the following existing metrics: <span class="Emphasis">Forecast Sales</span> and <span class="Emphasis">Forecast Sales Units</span>. Use the <span class="Emphasis">Fields Customization</span> functionality to display these fields.</p>
+        <p>
+            <img src="../../Resources/Images/Demand Forecasting/Forecast Sales Metrics.PNG" class="LargeImages" />
+        </p>
+        <p class="BasicNote">Forecasts are future looking. As such, LY Forecast Sales and LY Forecast Sales Units only populate for future periods. For example, if there is a forecast for 2024, then LY Forecast will populate for the same period in 2025.</p>
+        <h3>Running forecasts for a plan or for all plans</h3>
+        <p>Forecasts can be generated at a financial plan level for a particular plan or for all plans. These forecasts do not go down to the inventory level. Two standard job tasks are available:</p>
+        <ul>
+            <li>
+                <p><span class="Emphasis">(MFP) (Per MFP Plan) Merchandise Financial Planning Forecast Task</span> can be imported to run a forecast task for a single MFP master plan.</p>
+            </li>
+            <li>
+                <p><span class="Emphasis">(MFP) (All MFP Plan) Merchandise Financial Planning Forecast Task</span> can be imported and run immediately to generate a forecast, with the same forecast parameters, for all MFP master plans.</p>
+            </li>
+        </ul>
+        <p>Tasks to generate forecasts for MFP plans are built using a new type of forecast type called <span class="Emphasis">Merchandise Financial Plan Forecast Engine Task</span>.</p>
+        <p>
+            <img src="../../Resources/Images/Job Manager/MFP Forecast Task.png" class="LargeImages" />
+        </p>
+        <p>To generate forecasts for particular plans or to run a forecast for all plans, click <span class="Emphasis">Add</span> to create a new task and select the appropriate option from the dropdown menu in the <span class="Emphasis">MFP Plan</span> field on the <span class="Emphasis">Forecast Task</span> dialog or click <span class="Emphasis">Edit</span> next to the <span class="Emphasis">Engine Task</span> field to update an existing task.</p>
+        <h3>MFP forecast frequency</h3>
+        <p>The MFP forecast frequency can be configured to run on a schedule such as weekly or monthly using two job manager tasks. These tasks need to be configured so that TG JE's implementation of Gradient Boosting can analyze MFP plan level data.</p>
+    </body>
+</html>

@@ -1,0 +1,63 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" xml:lang="en-us">
+    <head><title></title>
+    </head>
+    <body>
+        <h1>Creating view collections using an SQL script</h1>
+        <p class="BasicNote" MadCap:conditions="General.DoNotPublish">The following example was verified as valid and correct JULY&#160;2022. DMDEV-82353.</p>
+        <p>View collection data are stored in the database in the <span class="Emphasis">tbl_VW</span> namespace. While it is typical to create a view collection in the user interface, they can created with a SQL script as follows (the example is for merchandise financial planning):</p>
+        <h2>Create View Collection</h2>
+        <MadCap:codeSnippet>
+            <MadCap:codeSnippetCopyButton />
+            <MadCap:codeSnippetBody MadCap:useLineNumbers="False" MadCap:lineNumberStart="1" MadCap:continue="False" xml:space="preserve">IF NOT EXISTS ( SELECT 1
+FROM dbo.tbl_VW_ViewCollection
+WHERE Name = 'Merchandise Financial Planning' )
+BEGIN
+DECLARE @iViewCollectionID INT
+INSERT INTO dbo.tbl_VW_ViewCollection
+( Name
+, Description
+, ImageIndex
+, [Order]
+)
+VALUES
+( N'Merchandise Financial Planning'
+, N'Merchandise Financial Planning Collection.'
+, 123
+, 0
+)
+SET @iViewCollectionID = SCOPE_IDENTITY()
+END
+ELSE
+BEGIN
+SELECT @iViewCollectionID = ViewCollectionID
+FROM dbo.tbl_VW_ViewCollection
+WHERE Name = 'Merchandise Financial Planning'
+END
+</MadCap:codeSnippetBody>
+        </MadCap:codeSnippet>
+        <p>Linking the view collection to the parented view collection set may be done using the following script:</p>
+        <h2>Link View Collection Set to View Collection</h2>
+        <MadCap:codeSnippet>
+            <MadCap:codeSnippetCopyButton />
+            <MadCap:codeSnippetBody MadCap:useLineNumbers="False" MadCap:lineNumberStart="1" MadCap:continue="False" xml:space="preserve">IF NOT EXISTS ( SELECT 1
+FROM dbo.tbl_VW_ViewCollectionSetLink
+WHERE ViewCollectionID = @iViewCollectionID
+AND ViewCollectionSetID = @iViewCollectionSetID )
+AND @iViewCollectionID IS NOT NULL
+AND @iViewCollectionSetID IS NOT NULL
+BEGIN
+INSERT INTO dbo.tbl_VW_ViewCollectionSetLink
+( ViewCollectionSetID
+, ViewCollectionID
+, [Order]
+)
+VALUES
+( @iViewCollectionSetID
+, @iViewCollectionID
+, 0
+)
+END</MadCap:codeSnippetBody>
+        </MadCap:codeSnippet>
+    </body>
+</html>

@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" xml:lang="en-us">
+    <head><title></title>
+    </head>
+    <body>
+        <h1>Split to redundant or non-stocked inventory types</h1>
+        <p>Redundant and non-stocked inventory types require additional consideration when considering split logic. There are four possible ways by which splits can handle redundant and non-stocked inventories:</p>
+        <ul>
+            <li>Exclude – Excludes values from both history and forecast, inventory is essentially ignored.</li>
+            <li>Include – Includes  values in both history and forecast.</li>
+            <li>Partial Forecast – Includes the history and split assuming all items participate in the model, but will not record the results of the split for redundant / non-stocked inventories.</li>
+            <li>Full Forecast – Includes the history and split to only those inventories which are not redundant / non-stocked.</li>
+        </ul>
+        <p>Default split methodologies may be defined for redundant inventories and non-stocked inventories independently, or by forecast type, all through application of system polices. </p>
+    </body>
+</html>

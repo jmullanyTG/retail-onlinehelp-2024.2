@@ -1,0 +1,79 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head>
+        <link href="../../Resources/TableStyles/standard.css" rel="stylesheet" MadCap:stylesheetType="table" />
+    </head>
+    <body>
+        <h1>Analyzing irregular sales history</h1>
+        <p>Items with anomalous spikes in sales history are reviewed using the <span class="Emphasis">Irregular Sales History Analysis</span> screen. Products that are either over- performing based on recent history or under-performing based on recent history can be identified using filters in the <span class="Emphasis">Irregular Sales Analysis</span> group. The filters are available at the Inventory level. </p>
+        <p>The filters are:</p>
+        <ul>
+            <li>Has Irregular Sales</li>
+            <li>Has Underperforming Irregular Sales</li>
+            <li>Has Overperforming Irregular Sales.</li>
+        </ul>
+        <p>Filter irregular items to review the forecasts and potentially apply causals.</p>
+        <h2 MadCap:conditions="General.DoNotPublish">Accessing the Irregular Sales History Analysis screen</h2>
+        <p MadCap:conditions="General.DoNotPublish">This screen can be accessed by:</p>
+        <ul MadCap:conditions="General.DoNotPublish">
+            <li> navigating to System Utilities &gt; Views &gt; Inventory &gt; Irregular Sales History Analysis</li>
+            <li MadCap:conditions="General.DoNotPublish">adding the view to the Site Manager module. (For more information, see <MadCap:xref href="../Site Manager/Site Manager Configuration.htm">Site Manager Configuration</MadCap:xref>.)</li>
+        </ul>
+        <h2>Setting the calculation parameters for irregular sales history</h2>
+        <p>The calculation parameters for anomalous sales history as set using the <span class="Emphasis">Irregular Sales History Analysis</span> screen. This screen can be accessed by navigating to <span class="Emphasis">System Utilities &gt; Views &gt; Inventory &gt; Irregular Sales History Analysis</span>.</p>
+        <p>
+            <img src="../../Resources/Images/Views/Irregular Sales History Analysis View.PNG" class="LargeImages" />
+        </p>
+        <h2>Viewing the results of the calculation</h2>
+        <p>The results of the calculation can be filtered in Inventory Manager using the columns in the <span class="Emphasis">Irregular Sales Analysis</span> column group.</p>
+        <h2>Field definitions</h2>
+        <table style="width: 100%;margin-left: 0;margin-right: auto;mc-table-style: url('../../Resources/TableStyles/standard.css');" class="TableStyle-standard" cellspacing="0">
+            <col class="TableStyle-standard-Column-Column1" />
+            <col class="TableStyle-standard-Column-Column2" />
+            <thead>
+                <tr class="TableStyle-standard-Head-Header1">
+                    <th class="TableStyle-standard-HeadE-Column1-Header1">Field</th>
+                    <th class="TableStyle-standard-HeadD-Column2-Header1">Definition</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">Filter</td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">All the inventories the system will run calculations over.</td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">Time Frame</td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">To select a time frame, double-click within this field to display the <span class="Emphasis">Time Frames</span> selector. Click the dropdown arrow to choose a time frame.</td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">Sales Type</td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">The sales types to consider. </td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">Lower Factor</td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">Factor * Standard Deviation below the mean that will be labeled irregular.</td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">Upper Factor</td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">Factor * Standard Deviation above the mean that will be labeled irregular.</td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">Create Date</td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">When the filter was created.</td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">Create User</td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">Who created the filter.</td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">Last Modified Date</td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">When the filter was last modified.</td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyB-Column1-Body1">Last Modified User</td>
+                    <td class="TableStyle-standard-BodyA-Column2-Body1">Who last modified the filter.</td>
+                </tr>
+            </tbody>
+        </table>
+    </body>
+</html>

@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd"
+      xml:lang="en-us"
+      MadCap:lastBlockDepth="6"
+      MadCap:lastHeight="1482"
+      MadCap:lastWidth="1418">
+   <head>
+      <title/>
+   </head>
+   <body>
+      <h1>Plan status values</h1>
+      <p>The status of a financial plan displays in the <span class="Emphasis">Plan Status Name</span> column in the <span class="Emphasis">Financial Plan Maintenance</span> window. Each potential status is described below.</p>
+      <ul>
+         <li>
+            <span class="Emphasis">Created</span>:  The status of a plan after the tabs in the <span class="Emphasis">Maintain Financial Plan</span> view have been defined<ul>
+               <li>All plans and plan types are in the status immediately following the creation of a plan</li>
+               <li>Edits are not available for any plan in created status</li>
+               <li>Users have the ability to initialize a created plan</li>
+               <li>Plans in created status cannot be Re-Initialized, Re-Seeded or Re-Balanced</li>
+               <li>Snapshots cannot be taken for plans in created status</li>
+               <li>Branches cannot be created off of plans in created status</li>
+            </ul>
+         </li>
+      </ul>
+      <ul>
+         <li>
+            <span class="Emphasis">Initialized</span>:   The status of a plan once it has been seeded per the selected seed type<ul>
+               <li>Edits are not available for master plans but are available for branch plans, no changes to the plan have been made after initialization</li>
+               <li>Users have the ability to edit a branch plan or merge a branch into the master plan, this status will change to In-Progress once an edit has been made and saved</li>
+               <li>Master Plans in Initialized status can be re-initialized</li>
+               <li>All plans in initialized status can be re-seeded</li>
+               <li>All plans in initialized status can be re-balanced</li>
+               <li>All plans in initialized status can have snapshots taken</li>
+               <li>All plans in initialized status can have branches created from them</li>
+            </ul>
+         </li>
+      </ul>
+      <ul>
+         <li>
+            <span class="Emphasis">In-Progress</span>:  The status of a plan after a plan has been initialized and changes have been made post-initialization<ul>
+               <li>Edits are not available for master plans but are available for branch plans</li>
+               <li>Users have the ability to edit a branch plan, merge a branch into the master plan or set the status to Awaiting Approval</li>
+               <li>All Plans in this status can’t be re-initialized</li>
+               <li>All Plans in this status can be re-seeded</li>
+               <li>All Plans in this status can be re-balanced</li>
+               <li>All plans in this status can have snapshots taken</li>
+               <li>All plans in this status can have branches created from them</li>
+            </ul>
+         </li>
+      </ul>
+      <ul>
+         <li>
+            <span class="Emphasis">Awaiting Approval</span>:   The status of a branch plan after a user has submitted the plan to an authorized user for approval<ul>
+               <li>Master plans will never be in this status</li>
+               <li>Edits are not available for master plans or branch plans in this status, a notification to all users with write access will be sent to alert them of the status change</li>
+               <li>Users with access have the ability to review the plan and move to approved or back to In-progress if they reject the plan</li>
+               <li>All plans in this status cannot be re-initialized</li>
+               <li>All plans in this status cannot be re-seeded</li>
+               <li>All plans in this status cannot be re-balanced</li>
+               <li>All plans in this status can have snapshots taken</li>
+               <li>All plans in this status can have branches created from them</li>
+            </ul>
+         </li>
+      </ul>
+      <ul>
+         <li>
+            <span class="Emphasis">Approved</span>:   The status of a master or branch plan after an authorized user has approved the child branch plan<ul>
+               <li>Once a plan is moved to approved status, users with rights can move the plan back to In-Progress</li>
+               <li>Master plans can be re-initialized</li>
+               <li>Master plans can be re-seeded</li>
+               <li>All plans in this status can be re-balanced</li>
+               <li>All plans in this status can have snapshots taken</li>
+               <li>All plans in this status can have branches created from them</li>
+            </ul>
+         </li>
+      </ul>
+   </body>
+</html>

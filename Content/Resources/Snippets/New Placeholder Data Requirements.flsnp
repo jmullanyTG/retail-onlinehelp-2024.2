@@ -1,0 +1,28 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head>
+    </head>
+    <body>
+        <p>The following are required for all new placeholders no matter the generation method (i.e. if created through New, Hindsight, Seed, Target Creation Smart Start, Split, or Duplicate):</p>
+        <ul>
+            <li>
+                <p>Phase In Date</p>
+            </li>
+            <li>
+                <p>Phase Out Date (even if set to <span class="Emphasis">None</span>)</p>
+            </li>
+            <li>
+                <p>AUT</p>
+            </li>
+            <li>
+                <p>Receipt AUC</p>
+            </li>
+            <li>
+                <p>Product Hierarchy Level</p>
+            </li>
+            <li>
+                <p>Cluster Sets</p>
+            </li>
+        </ul>
+    </body>
+</html>

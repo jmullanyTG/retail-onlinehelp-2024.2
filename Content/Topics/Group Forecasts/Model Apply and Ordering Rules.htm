@@ -1,0 +1,42 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" xml:lang="en-us">
+    <head><title></title>
+    </head>
+    <body>
+        <h1>Model apply and ordering rules</h1>
+        <p>Model apply and ordering rules are used for conflict resolution in instances of model overlap for an inventory by creating and maintaining a set of deterministic rules that define the inventory to model mapping. </p>
+        <p>These rules are maintained via the <span class="Emphasis">Maintain Model Apply Rules And Apply Order</span> dialog. </p>
+        <h2>Accessing the Maintain Model Apply Rules And Apply Order window</h2>
+        <ol>
+            <li>
+                <p>In the <span class="Emphasis">Group Forecast</span> window, click <span class="Emphasis">Manage</span>. </p>
+                <p>The <span class="Emphasis">Forecast&#160;Group Model Management</span> window displays.</p>
+            </li>
+            <li>
+                <p>Click the <span class="Emphasis">Maintain Model Apply And Ordering Rules</span> button. </p>
+                <p>The <span class="Emphasis">Maintain Model Apply Rules And Apply Order</span> window displays.</p>
+            </li>
+        </ol>
+        <h2>Changing the application order for the models</h2>
+        <p>Choosing to edit the application order for the models creates deterministic rules for how the inventories are affected by group forecast models. </p>
+        <p>To edit the application order:</p>
+        <ul>
+            <li>
+                <p>Click the <span class="Emphasis">Edit Apply Rule</span> button.</p>
+                <p>
+                    <img src="../../Resources/Images/Group Forecasts/Editing Application Order.PNG" class="LargeImages" />
+                </p>
+            </li>
+        </ul>
+        <p>These rule orders are read when the group forecast values are moved into the live forecast tables which define the projected demand. </p>
+        <h2>Fields and descriptions </h2>
+        <ul>
+            <li><span class="Emphasis">Model Name</span> – The name of the model.</li>
+            <li><span class="Emphasis">Order</span> – The order of application to the inventory. The rules are applied in numerical order (e.g. rule 1 is applied and overridden by rule 2, etc.)</li>
+            <li><span class="Emphasis">Apply Type</span> – Determines when the rule is applied. <ul><li><span class="Emphasis">Do Not Apply</span> – Will not apply the group forecast model to any inventories. </li><li><span class="Emphasis">Automatic</span> – Will apply group forecast changes automatically to associated inventories. </li><li><span class="Emphasis">Manual</span> – Will only apply group forecast changes if the user requests a manual push.</li></ul></li>
+            <li><span class="Emphasis">Apply From</span> – The effective start date of the rule. </li>
+            <li><span class="Emphasis">Apply To</span> – The effective end date of the rule. </li>
+            <li><span class="Emphasis">Edit Apply Rule</span> – A button which launches the apply rule editor. </li>
+        </ul>
+    </body>
+</html>

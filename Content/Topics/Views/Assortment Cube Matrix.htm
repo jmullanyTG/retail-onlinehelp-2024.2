@@ -1,0 +1,28 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head>
+    </head>
+    <body>
+        <h1>Setting flow period frequency based on Item Cube (ROS &amp; Cube size)</h1>
+        <p>The <span class="Emphasis">Assortment Cube Matrix</span> view is used to define and update the Flow Period Frequency based on the intersecting ranges of Placeholder/variant ROS and Cube Size (which references a volumetric attribute). Flow Period Frequency is the default number of periods between receipt dates calculated by the receipt planning engine.</p>
+        <p>This feature is only applicable in Assortment Planning.</p>
+        <p>
+            <img src="../../Resources/Images/Views/Assortment Cube Matrix.PNG" class="LargeImages" />
+        </p>
+        <p class="BasicNote">The attribute to reference is defined using system policy <span class="Emphasis">Attribute to reference when applying item cube</span>.</p>
+        <h2>Accessing the Assortment Cube Matrix view</h2>
+        <p>Navigate to the Views module to access the <span class="Emphasis">Assortment Cube Matrix</span> view.</p>
+        <h2>Working with Assortment Cube Matrixes</h2>
+        <p>All three grids are initially blank when the screen first displays. The <span class="Emphasis">Matrix</span> grid populates automatically as entries are added to (or delete entries from) both the <span class="Emphasis">ROS Cube</span> and <span class="Emphasis">Item Cube</span> grids. Both cube start and end values must be populated on the top grids.</p>
+        <p>If the cube attribute assignment is removed for a placeholder, then the hierarchy default Flow Period Frequency value applies. Changing the Flow Period Frequency in the <span class="Emphasis">Assortment Receipt Plan Constraints</span> grid overrides the values in the <span class="Emphasis">Assortment Cube Matrix</span> view.</p>
+        <p>The decimal formatting for the start and end values of each cube can be modified within the grids.</p>
+        <p class="BasicNote">Flow period frequency defaults to 1 as the entries are created, and cannot be updated to any negative values.</p>
+        <h2>Setting which levels use item cube logic</h2>
+        <p>Specify which levels use item cube logic using the <span class="Emphasis">Use Cube for Flow Period Frequency?</span> field in the <span class="Emphasis">Assortment Plan Defaults</span> screen within Assortment Planning.</p>
+        <h2>Overlaps in ROS&#160;group definitions</h2>
+        <p>Any placeholder with a ROS that exists in 2 ROS cube groups results in the ROS group with the higher Cube Start Value being chosen as the tiebreaker. For example:</p>
+        <p>ROS&#160;GROUP 1 (1.00 - 5.00)</p>
+        <p>ROS GROUP 2 (3.00 - 5.00)</p>
+        <p>A placeholder with a ROS of 3.75 is assigned to ROS GROUP 2.</p>
+    </body>
+</html>

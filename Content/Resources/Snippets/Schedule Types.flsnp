@@ -1,0 +1,24 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head>
+    </head>
+    <body>
+        <h2>Schedule types</h2>
+        <p> Multiple types of schedules can be created for sites and Distribution Centers (DCs). Each schedule affects the lead time that ToolsGroup JustEnough takes to determine the date an order needs to be placed.</p>
+        <p>The schedule types available to sites are as follows:</p>
+        <ul>
+            <li>
+                <p><span class="BodyWord">Destination Ship Schedule</span>: Incorporates allocations wherein product is shipped directly from the manufacturer to destination stores.</p>
+            </li>
+            <li><span class="BodyWord">Drop Ship Schedule</span>: Used for direct supplier orders that do not follow your normal shipping and receiving schedules. </li>
+            <li><span class="BodyWord">Order Processing Schedule</span>:  Sets the dates when staff is available to process orders at the store or DC. It is used to derive the number of lead time days needed to process orders at the site. </li>
+            <li>
+                <p><span class="BodyWord">Outbound Handling Schedule</span>: When a DC cannot accommodate an order request the day it was placed, outbound handling schedules can be applied to better represent the realistic ship date from the DC.</p>
+            </li>
+            <li><span class="BodyWord">Receiving Schedule</span>: Sets the dates on which a store or DC receives stock. This type of schedule ensures that busy stores receive stock shipments during times with less foot traffic, or when staff is available for processing. </li>
+            <li><span class="BodyWord">Shipping Schedule</span>: Sets the dates on which an order can be placed against a store or DC. It is assumed that any location can ship on the same day that an order is placed.</li>
+            <li><span class="BodyWord">Transportation Schedule</span>:  Sets the dates on which transportation of stock to a store or DC is available (such as truck schedules). When calculating lead times for shipments to a receiving site, the destination site's transportation schedule is used to determine what days transportation to the destination site is available. </li>
+        </ul>
+        <p class="BasicNote"> A schedule set can be used in any type of schedule. </p>
+    </body>
+</html>

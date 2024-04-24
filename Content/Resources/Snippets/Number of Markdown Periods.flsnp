@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head>
+    </head>
+    <body>
+        <p>Determines what the phase out date should be from the markdown date, once a user enters a markdown date during placeholder creation (i.e. default is 4, markdown date is 4/29, phase out date will be 5/27, four weeks post markdown.). The default is ignored if the markdown falls outside of the phase in/out window or in the past. </p>
+		<p>
+        <ul>
+            <li> If Phase Out is set first and a markdown default is set, then Markdown date automatically sets to N default periods before the user's chosen Phase Out.</li>
+            <li>If Phase Out is set first but there is no markdown default for the selected hierarchy level, then markdown date is left empty.</li>
+            <li>If Markdown Date is set first and a markdown default is set, the Phase Out automatically populates with the N default periods after the user's chosen Markdown Date.</li>
+            <li>If Markdown Date is set first and there is no markdown default, Phase Out needs to be manually entered by the user before saving, or standard phase out logic applies.</li>
+            <li>Any change to either Markdown Date or Phase Out Date after initial value is set does not preserve the default.</li>
+        </ul>
+			</p>
+    </body>
+</html>

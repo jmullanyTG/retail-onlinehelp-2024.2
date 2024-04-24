@@ -1,0 +1,149 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" xml:lang="en-us">
+    <head>
+        <link href="../../Resources/TableStyles/standard.css" rel="stylesheet" MadCap:stylesheetType="table" />
+        <title>
+        </title>
+    </head>
+    <body>
+        <h1>Creating pivot grids</h1>
+        <p>To create pivot grids:</p>
+        <ol>
+            <li>
+                <p>Select the <span class="Emphasis">Views </span>tab, and then <span class="Emphasis">Widgets</span>. </p>
+                <p>The<span class="Emphasis"> Maintain Widgets</span> window displays.</p>
+            </li>
+            <li>
+                <p>Click <span class="Emphasis">New</span>. </p>
+                <p>The <span class="Emphasis">Choose Widget Type</span> window displays the available widgets.</p>
+                <p>
+                    <p>
+                        <img src="../../Resources/Images/Views/Widget Type Pivot Grid.png" class="LargeImages" />
+                    </p>
+                </p>
+            </li>
+            <li>Select <span class="Emphasis">Pivot Grid</span> from the dropdown list in the <span class="Emphasis">Widget Type</span> field.</li>
+            <li>Click <span class="Emphasis">Ok</span>. </li>
+            <li>
+                <p>Complete each tab as required.</p>
+            </li>
+            <li>Click <span class="Emphasis">Save</span>.</li>
+        </ol>
+        <h2>Widget tab fields and definitions</h2>
+        <table style="width: 100%;mc-table-style: url('../../Resources/TableStyles/standard.css');" class="TableStyle-standard" cellspacing="0">
+            <col class="TableStyle-standard-Column-Column1" />
+            <col class="TableStyle-standard-Column-Column2" />
+            <tbody>
+                <tr class="TableStyle-standard-Body-shaded" MadCap:pattern="4">
+                    <td class="TableStyle-standard-BodyD-Column1-shaded" colspan="2">
+                        <span class="Emphasis">General Tab</span>: Displays header level information about the widget</td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">
+                        <span class="Emphasis">Field</span>
+                    </td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">
+                        <span class="Emphasis">Description</span>
+                    </td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">Name</td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">The unique name for the widget</td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">Description</td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">
+                        The optional description for the widget
+                    </td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">Read Only</td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">
+                        The widget can be set up as read-only to prevent manipulation of the presented data
+                    </td>
+                </tr>
+                <tr class="TableStyle-standard-Body-shaded" MadCap:pattern="4">
+                    <td class="TableStyle-standard-BodyD-Column1-shaded" colspan="2">
+                        <span class="Emphasis">Data Selection Tab</span>: Determines how the information displays in the widget</td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">SQL Connection Type</td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">
+					   Indicates from which database the widgets retrieve information:
+
+                        <ul><li><span class="Emphasis">Operations</span>: the regular database that contains most of the current and operational data for ToolsGroup JustEnough. This is the default selection for most applications.</li><li><span class="Emphasis">Warehouse</span>: if set up, the warehouse database can function as a container for archived data. </li></ul></td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">Method</td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">Displays every SQL stored procedure  in the database. </td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">Method Parameters</td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">
+                        Once the stored procedure method is selected, the Method Parameters window displays  the required parameters for the procedure. These parameters vary depending on the requirements of the stored procedure:
+                        <ul><li><span class="Emphasis">Method Parameter Name</span>: the name of the required parameter as specified in the stored procedure.</li><li><span class="Emphasis">Parameter</span>: the selected parameter entry to be passed. </li><li><span class="Emphasis">Maintain Parameters</span>: displays the Select Parameter window with all displaying all available parameters</li><li><span class="Emphasis">Default Value</span>: the default value, if any, passed to the parameter.</li></ul></td>
+                </tr>
+                <tr class="TableStyle-standard-Body-shaded" MadCap:pattern="4">
+                    <td class="TableStyle-standard-BodyD-Column1-shaded" colspan="2">
+                        <span class="Emphasis">Grid Properties Tab</span>:  Determines how the information displays in the grid</td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">Grid Options</td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">
+                        <span class="Emphasis">Data Field Area</span>: specifies the location of the data field. The default value is “none”.
+                        <p><span class="Emphasis">Horizontal Scrolling</span>:&#160;determines how the grid can be scrolled horizontally:</p><ul><li><span class="Emphasis">Cells Area</span>: enables the scroll bar to allow for horizontal scrolling through the data cells only</li><li><span class="Emphasis">Control</span>:&#160;enables the scroll bar to allow for  horizontally scrolling through the entire widget, including the control area.</li></ul><p><span class="Emphasis">Show Horizontal Line</span>:&#160;similar to MS Excel, toggles the horizontal row lines on and off.</p><p><span class="Emphasis">Show Vertical Line</span>s:&#160;similar to MS Excel, toggles the vertical column lines on and off.</p><p><span class="Emphasis">
+Totals Location</span>:&#160;determines the location for totals columns:</p><ul><li><span class="Emphasis">Near</span>: displays the totals column to left of the column field values.</li><li><span class="Emphasis">Far</span>: displays the totals column to left of the column field values.
+</li></ul><p><span class="Emphasis">Allow Compact View</span>: when selected, compact layouts can be created for hierarchical pivot table row values, thus creating more space horizontally without sacrificing the distinction between the hierarchical row values.</p><p><span class="Emphasis">Show Filter Drop Area</span>:&#160;displays the drag-and-drop area to add fields to the filter area.</p><p><span class="Emphasis">Show Data Drop Area</span>: displays the drag-and-drop area to add fields to the data area.</p><p><span class="Emphasis">Show Column Drop Area</span>:&#160;displays the drag-and-drop area to add fields to the column area.
+</p><p><span class="Emphasis">Show Row Drop Area</span>:&#160;displays the drag-and-drop area to add fields to the row area.
+</p><p><span class="Emphasis">Show Defer Rolling Actions</span>:&#160;displays a button to prevent rolling.</p><p><span class="Emphasis">Pivot Level Calculated Fields Use Summary Values For Calculations</span>: if selected, the pivot grid uses the aggregated level values for the calculation. If not selected, calculations perform at the lowest level and aggregate using the aggregation type (e.g. SUM, AVG).</p><p><span class="Emphasis">Editor Show Mode</span>: specifies how an in-place editor is activated for a cell in the grid.
+</p><p><span class="Emphasis">Enable Word Wrap</span>:&#160;if enabled, the text wraps within the cell (mostly used for column names).
+</p><p><span class="Emphasis">Enable Runtime Expression Edit</span>: if enabled, displays the expression when there is a right-click on a row.</p></td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">Column Total Options</td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">
+                        <span class="Emphasis">Show Column Grand Totals</span>: displays the grand totals for columns that can be summed.
+                        <p><span class="Emphasis">Show Column Totals</span>:&#160;displays the total for the column if the column can be summed.</p><p><span class="Emphasis">Column Totals Editable</span>: if enabled, the column totals become editable.
+</p><p><span class="Emphasis">Column Grand Totals Editable</span>:&#160;if enabled, the column grand totals  become editable.
+</p><p><span class="Emphasis">Column Custom Totals Editable</span>: if enabled, makes any custom column totals editable.</p></td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">Column Total Options</td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">
+                        <span class="Emphasis">Show Row Grand Totals</span>: displays the grand totals for rows that can be summed.
+                        <p><span class="Emphasis">Show Row Totals</span>:&#160;displays the total for the row if the column can be summed.</p><p><span class="Emphasis">Row Totals Editable</span>: if enabled, the row totals become editable.
+</p><p><span class="Emphasis">Row Grand Totals Editable</span>:&#160;if enabled, the row grand totals  become editable.
+</p><p><span class="Emphasis">Row Custom Totals Editable</span>: if enabled, makes any custom row totals editable.</p></td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">Update Options</td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">
+                        <span class="Emphasis">Confirmation Message on Update</span>: if enabled, displays a confirmation message.
+                        <p><span class="Emphasis">Confirmation Message</span>: the text of the confirmation message. Defaults to <span class="Emphasis">Save Changes?</span>.</p><p><span class="Emphasis">Refresh Data on Update</span>:&#160;enabled by default. Promptly updates a field when the field's information is changed. </p><p><span class="Emphasis">Refresh Widget Siblings</span>: must be enabled for dependent widgets in the view requiring data updates.</p></td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">Chart Options</td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">
+                        <span class="Emphasis">Pivot Chart Enabled</span>: if checked, the chart options are available for the pivot grid.
+                        <p><span class="Emphasis">Pivot Chart Data Vertical</span>:&#160;if selected, displays the pivot data vertically.
+</p><p><span class="Emphasis">Pivot Chart Selection Only</span>: if enabled, the pivot chart only has the highlighted data cells for the chart features (as opposed to charting every row and column).
+</p><p><span class="Emphasis">Pivot Chart Show Column Grand Totals</span>:&#160;if checked, displays the grand totals for columns that can be summed in the chart view.
+</p><p><span class="Emphasis">Pivot Chart Show Column Totals</span>:&#160;if checked, displays the totals for columns that can be summed in the chart view.
+</p><p><span class="Emphasis">Pivot Chart Show Row Grand Totals</span>: if checked, displays the grand totals for rows that can be summed in the chart view.
+</p><p><span class="Emphasis">Pivot Chart Show Row Totals</span>: if checked, displays the totals for rows that can be summed in the chart view.
+</p><p><span class="Emphasis">Pivot Chart Vertical x Axis Labels</span>:&#160;if checked, displays the X axis labels in the chart.
+</p><p><span class="Emphasis">Pivot Chart Show Legend</span>: if checked, displays the chart legend.
+</p><p><span class="Emphasis">Pivot Chart Show Point Labels</span>: if checked, displays the data related to the point in the chart.
+</p><p><span class="Emphasis">Pivot Chart View Type</span>: the type of chart (see chart widget for further details on chart types). Not all chart types may be available or practical for use with pivot data.</p></td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyB-Column1-Body1">Row Total Options</td>
+                    <td class="TableStyle-standard-BodyA-Column2-Body1">
+                        <span class="Emphasis">Show Row Grand Totals</span>: displays the grand totals for rows that can be summed.
+                        <p><span class="Emphasis">Show Row Totals</span>: displays the total for the row if the column can be summed.</p><p><span class="Emphasis">Row Totals Editable</span>: if checked, the row totals can be changed. </p><p><span class="Emphasis">Row Grand Totals Editable</span>: if checked, the row grand totals can be changed. 
+</p><p><span class="Emphasis">Row Custom Totals Editable</span>: if checked, turns any custom row totals editable. </p></td>
+                </tr>
+            </tbody>
+        </table>
+    </body>
+</html>

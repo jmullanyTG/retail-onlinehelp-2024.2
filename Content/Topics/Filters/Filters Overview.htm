@@ -1,0 +1,158 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" xml:lang="en-us">
+    <head>
+        <link href="../../Resources/TableStyles/standard.css" rel="stylesheet" MadCap:stylesheetType="table" /><title></title>
+    </head>
+    <body>
+        <h1>Filters Overview</h1>
+        <p>Filters display only the subsets of data to be worked on in a given screen (or that the system works with in a given process). Filters can be as simple or as complex as needed and then saved for future use. Once created, they can be shared across the entire organization, with select others, or kept for private use.&#160;&#160; </p>
+        <h2>Flexibility</h2>
+        <p>Filters are extremely flexible and are able to support:</p>
+        <ul>
+            <li><span class="Emphasis">Static data</span>: the data the filter displays never changes ensuring the same data displays whenever the filter is used.</li>
+            <li><span class="Emphasis">Static conditions</span>: the conditions used to filter data cannot change, but the data displayed can change ensuring that the data is current.&#160; </li>
+            <li><span class="Emphasis">Dynamic conditions</span>: users select the condition values used to filter data ensuring the filter is relevant to their current needs.</li>
+        </ul>
+        <h2>Entity-specific filtering</h2>
+        <p>Because different modules involve different data entities (such as suppliers, inventory, and sites), the available filters apply to the relevant entity. </p>
+        <p class="Example">In the Suppliers screen, there is a list of available supplier filters as opposed to a mix of supplier, inventory, and site filters. </p>
+        <h2>Creating filter groups</h2>
+        <p>Filter groups make it easier to organize and find filters. To create a new filter group, click the three dots next to the <span class="Emphasis">Filter Group</span> dropdown menu.</p>
+        <p>
+            <img src="../../Resources/Images/Filters/Editing a Filter.png" class="LargeImages" />
+        </p>
+        <h2>Filter criteria and conditions</h2>
+        <p>Filter criteria and conditions work together. Filter conditions determine the field values that a filter searches for, and filter criteria determine whether an entity that meets those conditions is included or excluded as a result. When managing filters with multiple conditions, it is important to pay attention to the order in which the conditions are listed. </p>
+        <h3>Filter criteria</h3>
+        <p>Filter criteria can be one of the following, where:</p>
+        <ul>
+            <li>all of the following must be met.</li>
+            <li>any of the following must be met.</li>
+            <li>none of the following must be met.</li>
+        </ul>
+        <h3>Filter conditions</h3>
+        <p>Adding or editing filter conditions is done through the <span class="Emphasis">Filter Condition</span> dialog.</p>
+        <p>
+            <img src="../../Resources/Images/Filters/Filter Condition dialog.png" class="LargeImages" />
+        </p>
+        <p>Filter conditions involve the following settings:</p>
+        <table class="TableStyle-standard" cellspacing="0" style="mc-table-style: url('../../Resources/TableStyles/standard.css');">
+            <col class="TableStyle-standard-Column-Column1" />
+            <col class="TableStyle-standard-Column-Column2" />
+            <thead>
+                <tr class="TableStyle-standard-Head-Header1">
+                    <th class="TableStyle-standard-HeadE-Column1-Header1">Setting</th>
+                    <th class="TableStyle-standard-HeadD-Column2-Header1">Description</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">Field </td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">The field to use for the condition.</td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">Condition </td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">How the value of the field in the entity data must compare to the value specified in the condition.</td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">Equals 
+                    </td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">Matches the exact value.</td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">Contains the Phrase </td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">Searches the field for the exact value.</td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">Contains the Phrase at the Beginning</td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">
+                       Searches the field for the exact value at the beginning of the phrase.
+                    </td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">Contains the Phrase at the End</td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">
+                        Searches the field for the exact value at the end of the phrase.
+                    </td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">More Than</td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">Greater than the value.</td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">Is After</td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">
+                        Greater than the value for date-times.
+                    </td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">More or Equal to </td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">
+                        Greater than or equal to the value.
+                    </td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">Is After or On </td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">
+                     Greater than or equal to the value for date-times.
+                    </td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">Smaller Than</td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">
+                       Less than the value.
+                    </td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">Is Before </td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">Less than the value for date-times.</td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">Smaller or Equal to</td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1"> Less than or equal to the value. </td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">Is Before or Equal to </td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">Less than or equal to the value for date-times.</td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">In Between </td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">Set between two values. Selecting this option will require more than one value, identified as the “start value” and “end value”.</td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">Is One of the Following </td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">Will include or exclude the entities based on several supplied values. </td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">Sounds Like </td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">Searches the field for similar sounding values (%Value%).</td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyB-Column1-Body1">Value(s) </td>
+                    <td class="TableStyle-standard-BodyA-Column2-Body1">The value or values to search for in the field data. Varchar, char, and nvarchar fields display as dropdown menus. Decimal, float, and int (integer) fields display as an entry field where numerical values can be entered. Datetime fields display the calendar and clock view to create a value. Bit fields must have a value of <span class="Emphasis">1</span> or <span class="Emphasis">0</span>.</td>
+                </tr>
+            </tbody>
+        </table>
+        <h3>Allow dynamic condition</h3>
+        <p>To select the condition value for a filter, select <span class="Emphasis">Allow dynamic condition</span> in the Filter Condition window. For example, a site filter with a dynamic Site Region value condition displays the option of regions to work on at the time the filter is selected. This can be much more convenient than creating separate filters for each region.</p>
+        <h2>Filter conditions and data implications</h2>
+        <p>The following should be considered when creating filters to determine how and what data displays.</p>
+        <h3>Should the entire filter be static?</h3>
+        <p>A static filter always displays the same data set. Select <span class="Emphasis">Filter is Static</span> in the filter details to make a filter static.</p>
+        <p class="Example">A filter is created in January 2024 at the end of the planning period <span class="Emphasis">Block 1</span> for the class <span class="Emphasis">Ladies Shirts</span>. The data set displayed by this filter  contains all variants in Ladies Shirts at the end of <span class="Emphasis">Block 1</span>. This data set does not change after the filter is saved.</p>
+        <h3>What conditions should be static?</h3>
+        <p>Static filter conditions do not change when the filter is used. However, the actual data displayed by the condition can change as time goes on. </p>
+        <p>To make a condition static, add the condition and do not select <span class="Emphasis">Allow dynamic condition</span>.</p>
+        <p class="Example">A filter is created to display all variants for the class, <span class="Emphasis">Ladies Shirts</span>. A condition is added (class value = Ladies Shirts). As new styles are created for the class Ladies Shirts, the data set displayed by the filter is updated to include the new styles.</p>
+        <h3> What conditions should be dynamic? </h3>
+        <p>Conditions that are dynamic can be changed when the filter is selected. The data displayed by the filter is determined by the user's selection.</p>
+        <p class="Example">A filter is created with a dynamic condition for Class. When using this filter, the class to filter on is chosen. For example, the class <span class="Emphasis">Ladies Shirts</span> displays all styles of ladies shirts and the class <span class="Emphasis">Mens Shirts</span> displays all styles of mens shirts.</p>
+        <p>To make a condition dynamic, add the condition and select <span class="Emphasis">Allow dynamic condition</span>.</p>
+        <p>Filters are color coded so that when selecting a filter users know which filters are static and which have dynamic conditions. For more information, see <MadCap:xref href="Selecting a Filter.htm">Selecting a filter</MadCap:xref>.</p>
+        <h2>Filter with multiple criteria and conditions</h2>
+        <p>Filters can have multiple criteria and multiple conditions. The criteria display in a tree format to show the order in which each criteria and condition is applied by the filter. The filter starts at the top of the list and works its way down.</p>
+        <p>
+            <img src="../../Resources/Images/Filters/Filters Multiple Criteria.png" class="LargeImages" />
+        </p>
+    </body>
+</html>

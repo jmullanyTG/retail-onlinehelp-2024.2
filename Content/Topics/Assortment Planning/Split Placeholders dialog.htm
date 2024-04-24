@@ -1,0 +1,148 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head>
+        <link href="../../Resources/TableStyles/standard.css" rel="stylesheet" MadCap:stylesheetType="table" />
+    </head>
+    <body>
+        <h1>Splitting placeholders</h1>
+        <p>The <span class="Emphasis">Split Placeholders</span> dialog is available in the Placeholder view. The <span class="Emphasis">Split Placeholders</span> dialog is not available in the Collection view.</p>
+        <p class="Example">A placeholder with a phase window of <span class="Emphasis">11/1-11/30/2024</span> has 2 sets applied. The original line now has a phase window of <span class="Emphasis">11/1-11/15/2024</span> and the additional placeholder created has a phase window of time of <span class="Emphasis">11/15-11/30/2024</span>.</p>
+        <p>
+            <img src="../../Resources/Images/Assortment Planning/Split Placeholders dialog.png" class="LargeImages" />
+        </p>
+        <h2>Applying a number of sets not evenly dividing into the number of periods</h2>
+        <p>When applying a number of sets that doesn’t evenly divide into the number of periods in a placeholder’s life cycle, 1 additional period is allocated onto each created placeholder in set order until the remainder is used. </p>
+        <p>For example, 15 periods, 4 sets = 4 total placeholders, 3 with 5 periods, 1 with 4 periods.</p>
+        <h2>Applying a number of sets greater than the number of periods</h2>
+        <p>When applying a number of sets greater than the number of periods in a placeholder’s life cycle, the number of placeholders defaults equal to the number of periods with each being allotted one period. </p>
+        <p>For example, 9 periods, 10 sets = 9 total placeholders, each with a 1 period life cycle.</p>
+        <h2>Placeholders resulting from splits</h2>
+        <p>Placeholders resulting from splits calculate their new sales plans and related metrics based on the sales by period of the original placeholder and the specific periods allotted to each new placeholder:</p>
+        <table style="margin-left: auto;margin-right: auto;width: 100%;mc-table-style: url('../../Resources/TableStyles/standard.css');" class="TableStyle-standard" cellspacing="0">
+            <col class="TableStyle-standard-Column-Column1" style="width: 14%;" />
+            <col class="TableStyle-standard-Column-Column2" style="width: 14%;" />
+            <col class="TableStyle-standard-Column-Column1" style="width: 14%;" />
+            <col class="TableStyle-standard-Column-Column2" style="width: 14%;" />
+            <col class="TableStyle-standard-Column-Column1" style="width: 14%;" />
+            <col class="TableStyle-standard-Column-Column2" style="width: 14%;" />
+            <col class="TableStyle-standard-Column-Column1" style="width: 14%;" />
+            <thead>
+                <tr class="TableStyle-standard-Head-Header1">
+                    <th class="TableStyle-standard-HeadE-Column1-Header1">&#160;</th>
+                    <th style="text-align: center;" class="TableStyle-standard-HeadE-Column2-Header1">&#160;</th>
+                    <th style="text-align: center;" class="TableStyle-standard-HeadE-Column1-Header1">&#160;</th>
+                    <th style="text-align: center;" class="TableStyle-standard-HeadE-Column2-Header1">&#160;</th>
+                    <th style="text-align: center;" class="TableStyle-standard-HeadE-Column1-Header1">&#160;</th>
+                    <th style="text-align: center;" class="TableStyle-standard-HeadE-Column2-Header1">Site Count</th>
+                    <th style="text-align: center;" class="TableStyle-standard-HeadD-Column1-Header1"> 10</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">
+                        <p>Sales U</p>
+                    </td>
+                    <td style="text-align: center;" class="TableStyle-standard-BodyE-Column2-Body1">
+                        <p>Wk 1</p>
+                    </td>
+                    <td style="text-align: center;" class="TableStyle-standard-BodyE-Column1-Body1">
+                        <p>Wk 2</p>
+                    </td>
+                    <td style="text-align: center;" class="TableStyle-standard-BodyE-Column2-Body1">
+                        <p>Wk 3</p>
+                    </td>
+                    <td style="text-align: center;" class="TableStyle-standard-BodyE-Column1-Body1">
+                        <p>Wk 4</p>
+                    </td>
+                    <td style="text-align: center;" class="TableStyle-standard-BodyE-Column2-Body1">
+                        <p>Ttl Ssl U</p>
+                    </td>
+                    <td style="text-align: center;" class="TableStyle-standard-BodyD-Column1-Body1">
+                        <p>ROS U</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">
+                        <p>Original</p>
+                    </td>
+                    <td style="text-align: center;" class="TableStyle-standard-BodyE-Column2-Body1">
+                        <p> 189</p>
+                    </td>
+                    <td style="text-align: center;" class="TableStyle-standard-BodyE-Column1-Body1">
+                        <p> 188</p>
+                    </td>
+                    <td style="text-align: center;" class="TableStyle-standard-BodyE-Column2-Body1">
+                        <p> 186</p>
+                    </td>
+                    <td style="text-align: center;" class="TableStyle-standard-BodyE-Column1-Body1">
+                        <p> 92</p>
+                    </td>
+                    <td style="text-align: center;" class="TableStyle-standard-BodyE-Column2-Body1">
+                        <p> 655</p>
+                    </td>
+                    <td style="text-align: center;" class="TableStyle-standard-BodyD-Column1-Body1">
+                        <p> 16.38</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">
+                        <p>split 1</p>
+                    </td>
+                    <td style="text-align: center;" class="TableStyle-standard-BodyE-Column2-Body1">
+                        <p> 189</p>
+                    </td>
+                    <td style="text-align: center;" class="TableStyle-standard-BodyE-Column1-Body1">
+                        <p> 188</p>
+                    </td>
+                    <td style="text-align: center;" class="TableStyle-standard-BodyE-Column2-Body1">
+                        <p>&#160;</p>
+                    </td>
+                    <td style="text-align: center;" class="TableStyle-standard-BodyE-Column1-Body1">
+                        <p>&#160;</p>
+                    </td>
+                    <td style="text-align: center;" class="TableStyle-standard-BodyE-Column2-Body1">
+                        <p> 377</p>
+                    </td>
+                    <td style="text-align: center;" class="TableStyle-standard-BodyD-Column1-Body1">
+                        <p> 18.85</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyB-Column1-Body1">
+                        <p>split 2</p>
+                    </td>
+                    <td style="text-align: center;" class="TableStyle-standard-BodyB-Column2-Body1">
+                        <p>&#160;</p>
+                    </td>
+                    <td style="text-align: center;" class="TableStyle-standard-BodyB-Column1-Body1">
+                        <p>&#160;</p>
+                    </td>
+                    <td style="text-align: center;" class="TableStyle-standard-BodyB-Column2-Body1">
+                        <p> 186</p>
+                    </td>
+                    <td style="text-align: center;" class="TableStyle-standard-BodyB-Column1-Body1">
+                        <p> 92</p>
+                    </td>
+                    <td style="text-align: center;" class="TableStyle-standard-BodyB-Column2-Body1">
+                        <p> 278</p>
+                    </td>
+                    <td style="text-align: center;" class="TableStyle-standard-BodyA-Column1-Body1">
+                        <p> 13.90</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <h2>Field definitions</h2>
+        <p><span class="Emphasis">Placeholder Code</span>: The code of the placeholder to be split.</p>
+        <p><span class="Emphasis">Placeholder Description</span>: A description of the placeholder to be split.</p>
+        <p><span class="Emphasis">Number of Sets</span>: The number of placeholders the selected placeholder splits into.</p>
+        <h2>Buttons</h2>
+        <p><span class="Emphasis">Cancel</span>: Closes the dialog without making any changes to the selected placeholder.</p>
+        <p><span class="Emphasis">Save</span>: Splits the selected placeholder into the specified number of sets.</p>
+        <ul>
+            <li>The original placeholder remains intact after a split only changing its phase dates and related metrics.</li>
+            <li>Additional placeholders resulting from the Split function copy the original PH code and description but have <ul><li>(<span class="Emphasis">Split #</span>) appended to the code. # is the number of the split in sequence. </li><li>(Split from PH ID, number #) appended to the description. PH ID is the unique system ID for the placeholder.</li></ul></li>
+            <li>Additional placeholders retain all non-sales related properties of the original placeholder (product level, min pres, seasonality curve, size option, attributes, etc)</li>
+        </ul>
+    </body>
+</html>

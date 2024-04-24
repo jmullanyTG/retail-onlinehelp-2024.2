@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" xml:lang="en-us">
+    <head><title></title>
+    </head>
+    <body>
+        <h1>Schedule sets </h1>
+        <p>Schedule sets are containers for schedules. The sets are applied to sites and suppliers to control order behavior. </p>
+        <p>Schedules are applied to a set based on their order in the set. The application order is top-down through the set. The mode of the top-most schedule dictates the expected behavior for all other dates that are not specifically mentioned.</p>
+        <p>Schedule sets are stored as almanacs in the database<MadCap:conditionalText MadCap:conditions="General.DoNotPublish">. They can be found in the <span class="Emphasis">tbl_Common_Schedule_Almanac</span> table</MadCap:conditionalText>. </p>
+        <p MadCap:conditions="General.DoNotPublish">Schedule relationships are stored in the <span class="Emphasis">tbl_Common_Schedule_AlmanacLink</span>. table. This table also holds the behavior as ScheduleMode and the priority. For a particular schedule set (almanac), the priority 0 determines the highest priority. Its associated ScheduleMode determines the behavior of all non-specified dates. </p>
+        <h2>Navigation pane</h2>
+        <ul>
+            <li><span class="Emphasis">Set Name</span>: The name for the schedule set. The set name displays in Site Manager and Supplier Manager solutions for selection.  </li>
+            <li><span class="Emphasis">Mode</span>: The mode dictates the intended behavior of a schedule in the  schedule set. </li>
+            <li><span class="Emphasis">Enabled</span>: Allows the schedule set to be selected in Site Manager and Supplier Manager. </li>
+        </ul>
+        <h2>Schedule set details </h2>
+        <p>The schedule set details display when a schedule set is selected in the navigation pane.</p>
+        <ul>
+            <li><span class="Emphasis">Name</span>: The schedule set name. </li>
+            <li><span class="Emphasis">Active Flag</span>: Controls the enabled behavior for the schedule set in the Details view. </li>
+            <li><span class="Emphasis">Description</span>:&#160;An optional description field for the schedule set. </li>
+            <li><span class="Emphasis">Schedules</span>: Information related to the schedules in the schedule set. <ul><li><span class="Emphasis">Enabled</span>: Controls the enabled behavior for the schedules in the Details view. </li><li><span class="Emphasis">Schedule Name</span>:&#160;The name of the schedule. </li><li><span class="Emphasis">Mode</span>:&#160;The current behavior of the schedule in the  schedule set. </li><li><span class="Emphasis">Summary</span>:&#160;A summary description of the schedule behavior. </li></ul></li>
+            <li><span class="Emphasis">Resolved Dates</span>:&#160;A listing of the resolved dates in the schedule set. The range for the resolved dates is from today’s date to ten years out. </li>
+        </ul>
+    </body>
+</html>

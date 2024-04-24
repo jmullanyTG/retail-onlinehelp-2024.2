@@ -1,0 +1,748 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" xml:lang="en-us">
+    <head>
+        <link href="../../Resources/TableStyles/standard.css" rel="stylesheet" MadCap:stylesheetType="table" /><title></title>
+    </head>
+    <body>
+        <h1>Assortment Rollup metric definitions</h1>
+        <p>After parameters are selected, click <span class="Emphasis">Execute</span> to return the following metrics:</p>
+        <p class="BasicNote">EOP and BOP values include Inter-Branch Transfers (IBT) for sites-in-cluster. Therefore, EOP and BOP values in all views and reports which use these metrics (such as the Sales Plan view and the Receipt Plan view) reflect values inclusive of IBT.</p>
+        <table style="width: 100%;margin-left: auto;margin-right: auto;mc-table-style: url('../../Resources/TableStyles/standard.css');" class="TableStyle-standard" cellspacing="0">
+            <col class="TableStyle-standard-Column-Column1" />
+            <col class="TableStyle-standard-Column-Column2" />
+            <thead>
+                <tr class="TableStyle-standard-Head-Header1">
+                    <th class="TableStyle-standard-HeadE-Column1-Header1">Metric</th>
+                    <th class="TableStyle-standard-HeadD-Column2-Header1">Description</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1"><span class="Emphasis">AUC</span>
+                    </td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">  Average unit cost price coming from the <span class="Emphasis">Sales Plan</span> view. This value matches the system AUC line unless a user has overridden the AUC in the <span class="Emphasis">Receipt Plan</span> view.</td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1"><span class="Emphasis">AUC % +/- LY</span>
+                    </td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">  Percentage increase or decrease of average unit cost price versus LY average unit cost price.</td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1"><span class="Emphasis">AUR</span>
+                    </td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">  The average unit retail of all products contained in a given aggregate level.</td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1"><span class="Emphasis">AUR % +/- LY</span>
+                    </td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">  Percentage increase or decrease of AUR versus last year AUR.</td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1"><span class="Emphasis">Home AUT</span>
+                    </td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">The average unit ticket price in Home Site currency of all products contained in a given aggregate level.</td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1"><span class="Emphasis">Blended AUT</span>
+                    </td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">The average unit ticket price blended from all sites’ currencies of all products contained in a given aggregate level.</td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1"><span class="Emphasis">Avg BOP Unit Cost</span>
+                    </td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">  Average cost of inventory per unit coming from the <span class="Emphasis">Sales Plan</span> view. This value matches the System Avg BOP Unit cost line unless a user has overridden the sales plan in the <span class="Emphasis">Sales Plan</span> view or receipt plan in the <span class="Emphasis">Receipt Plan</span> view.</td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1"><span class="Emphasis">Avg BOP Unit Cost </span>
+                    </td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">(Comparison)  Avg BOP Unit Cost of inventory coming from the selected comparison snapshot. This value includes any user overrides present at the time the snapshot was taken.</td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1"><span class="Emphasis">Avg BOP Unit Cost % +/- LY</span>
+                    </td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">  Percentage increase or decrease of Avg BOP Unit Cost versus LY Avg BOP Unit Cost.</td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1"><span class="Emphasis">Avg EOP Unit Cost</span>
+                    </td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">  Average cost of inventory per unit coming from the <span class="Emphasis">Sales Plan</span> view. This value matches the System Avg EOP Unit cost line unless a user has overridden the sales plan in the <span class="Emphasis">Sales Plan</span> view or receipt plan in the <span class="Emphasis">Receipt Plan</span> view.</td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1"><span class="Emphasis">Avg EOP Unit Cost % +/- LY</span>
+                    </td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">  Percentage increase or decrease of Avg EOP Unit Cost versus LY Avg EOP Unit Cost.</td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1"><span class="Emphasis">Avg EOP Unit Cost (Comparison)</span>
+                    </td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">  Avg EOP Unit Cost of inventory coming from the selected comparison snapshot. This value includes any user overrides present at the time the snapshot was taken.</td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1"><span class="Emphasis">BOP Cost</span>
+                    </td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1"> Beginning of Period cost of inventory coming from the <span class="Emphasis">Sales Plan</span> view. This value matches the system BOP Cost line unless a user has overridden the sales plan in the <span class="Emphasis">Sales Plan</span> view or receipt plan in the <span class="Emphasis">Receipt Plan</span> view.</td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1"><span class="Emphasis">BOP Cost % +/- LY</span>
+                    </td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">  Percentage increase or decrease of BOP Cost versus LY BOP Cost.</td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1"><span class="Emphasis">BOP Units</span>
+                    </td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">  Beginning of Period units of inventory coming from the <span class="Emphasis">Sales Plan</span> view. This value matches the system BOP Units line unless a user has overridden the sales plan in the <span class="Emphasis">Sales Plan</span> view or receipt plan in the <span class="Emphasis">Receipt Plan</span> view</td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1"><span class="Emphasis">BOP Units % +/- LY</span>
+                    </td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">  Percentage increase or decrease of BOP Units versus LY BOP Units.</td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1"><span class="Emphasis">BOP Units (Comparison)</span>
+                    </td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">  Beginning of Period units of inventory coming from the selected comparison snapshot. This value would include any overrides from the user at the time the snapshot was taken.</td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1"><span class="Emphasis">COGS</span>
+                    </td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">  Cost of sales coming from the <span class="Emphasis">Sales Plan</span> view. This value matches the system cost of sales line unless a user has overridden the sales plan in the <span class="Emphasis">Sales Plan</span> view.</td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1"><span class="Emphasis">COGS % +/- LY</span>
+                    </td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">  Percentage increase or decrease of cost of sales versus LY cost of sales.</td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1"><span class="Emphasis">Comparison AUC</span>
+                    </td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">  Average unit cost price coming from the selected comparison snapshot. This value includes any user overrides present at the time the snapshot was taken.</td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1"><span class="Emphasis">Comparison AUR</span>
+                    </td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">  The average unit retail of all products contained in a given aggregate level coming from the selected comparison snapshot.</td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1"><span class="Emphasis">Comparison Home AUT</span>
+                    </td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">The average unit ticket price in Home Site currency of all products contained in a given aggregate level from the selected comparison snapshot.</td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1"><span class="Emphasis">Comparison Blended AUT</span>
+                    </td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">The average unit ticket price blended for all site currencies of all products contained in a given aggregate level from the selected comparison snapshot.</td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1"><span class="Emphasis">Comparison BOP Cost</span>
+                    </td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1"> Beginning of Period Cost of inventory coming from the selected comparison snapshot. This value includes any user overrides present at the time the snapshot was taken.</td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1"><span class="Emphasis">Comparison COGS</span>
+                    </td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">  Cost of sales coming from the selected comparison snapshot. This value includes any user overrides present at the time the snapshot was taken.</td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1"><span class="Emphasis">Comparison EOP Cost</span>
+                    </td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1"> End of Period Cost of inventory coming from the selected comparison snapshot. This value includes any user overrides present at the time the snapshot was taken</td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1"><span class="Emphasis">Comparison Sales</span>
+                    </td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">  Sales coming from the selected comparison snapshot. This value includes any user overrides present at the time the snapshot was taken.</td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1"><span class="Emphasis">Comparison Sales Ex VAT</span>
+                    </td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">  Sales excluding value added tax coming from the selected comparison snapshot. This value includes any user overrides present at the time the snapshot was taken.</td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1"><span class="Emphasis">Comparison VAT Sales</span>
+                    </td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">  VAT Sales coming from the selected comparison snapshot. This value includes any user overrides present at the time the snapshot was taken.</td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1"><span class="Emphasis">EOP Cost</span>
+                    </td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1"> End of Period cost of inventory coming from the <span class="Emphasis">Sales Plan</span> view. This value matches the system EOP Cost line unless a user has overridden the sales plan in the <span class="Emphasis">Sales Plan</span> view or receipt plan in the <span class="Emphasis">Receipt Plan</span> view.</td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1"><span class="Emphasis">EOP Cost % +/- LY</span>
+                    </td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">  Percentage increase or decrease of EOP Cost versus LY EOP Cost.</td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1"><span class="Emphasis">EOP Units</span>
+                    </td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">  End of Period units of inventory coming from the <span class="Emphasis">Sales Plan</span> view. This value matches the system EOP Units line unless a user has overridden the sales plan in the <span class="Emphasis">Sales Plan</span> view or receipt plan in the <span class="Emphasis">Receipt Plan</span> view.</td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1"><span class="Emphasis">EOP Units % +/- LY</span>
+                    </td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">  Percentage increase or decrease of EOP Units versus LY EOP Units.</td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1"><span class="Emphasis">EOP Units (Comparison)</span>
+                    </td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">  End of Period units of inventory coming from the selected comparison snapshot. This value includes any user overrides present at the time the snapshot was taken.</td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1"><span class="Emphasis">Inventory Adjustment Cost</span>
+                    </td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1"> Planned/actual inventory adjustment at cost for the period. This value can add to or subtract inventory at cost from EOP Cost</td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1"><span class="Emphasis">Inventory Adjustment Units</span>
+                    </td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">Planned/actual inventory adjustment units for the period. This value can add to or subtract inventory units from EOP units.</td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1"><span class="Emphasis">LY AUC</span>
+                    </td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1"> Last year aggregated average unit cost price coming from the <span class="Emphasis">Sales Plan</span> view. This value could be a planned value or actualized value depending on the comparable time period last year.</td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1"><span class="Emphasis">LY AUR</span>
+                    </td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">  Last year average unit retail of all products contained in a given aggregate level.</td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1"><span class="Emphasis">LY Home AUT</span>
+                    </td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">Last year average unit ticket price in Home Site currency of all products contained in a given aggregate level.</td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1"><span class="Emphasis">LY Blended AUT</span>
+                    </td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">Last year average unit ticket price blended from all site currencies of all products contained in a given aggregate level.</td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1"><span class="Emphasis">LY Avg BOP Unit Cost</span>
+                    </td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1"> Last year Avg BOP unit cost of inventory coming from the <span class="Emphasis">Sales Plan</span> view. This value could be a planned value or actualized value depending on the comparable time period last year.</td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1"><span class="Emphasis">LY Avg EOP Unit Cost</span>
+                    </td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1"> Last year Avg EOP unit cost of inventory coming from the <span class="Emphasis">Sales Plan</span> view. This value could be a planned value or actualized value depending on the comparable time period last year.</td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1"><span class="Emphasis">LY BOP Cost</span>
+                    </td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">  Last year Beginning of Period cost of inventory coming from the <span class="Emphasis">Sales Plan</span> view. This value could be a planned value or actualized value depending on the comparable time period last year.</td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1"><span class="Emphasis">LY BOP Units</span>
+                    </td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">  Last year Beginning of Period units of inventory coming from the <span class="Emphasis">Sales Plan</span> view. This value could be a planned value or actualized value depending on the comparable time period last year.</td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1"><span class="Emphasis">LY COGS</span>
+                    </td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">  Last year cost of sales coming from the <span class="Emphasis">Sales Plan</span> view. This value could be a planned value or actualized value depending on the comparable time period last year.</td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1"><span class="Emphasis">LY EOP Cost</span>
+                    </td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">  Last year End of Period cost of inventory coming from the <span class="Emphasis">Sales Plan</span> view. This value could be a planned value or actualized value depending on the comparable time period last year.</td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1"><span class="Emphasis">LY EOP Units</span>
+                    </td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">  Last year End of Period units of inventory coming from the <span class="Emphasis">Sales Plan</span> view. This value could be a planned value or actualized value depending on the comparable time period last year.</td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1"><span class="Emphasis">LY Inventory Adjustment Cost</span>
+                    </td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1"> Last year planned/actual inventory adjustment at cost for the period. This value can add to or subtract inventory at cost from EOP Cost. </td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1"><span class="Emphasis">LY Inventory Adjustment Units</span>
+                    </td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">  Last year planned/actual inventory adjustment units for the period. This value can add to or subtract inventory units from EOP units.</td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1"><span class="Emphasis">LY Margin</span>
+                    </td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">  Last year margin coming from the <span class="Emphasis">Sales Plan</span> view. This value could be a planned value or actualized value depending on the comparable time period last year.</td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1"><span class="Emphasis">LY Margin %</span>
+                    </td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1"> Last year margin % coming from the <span class="Emphasis">Sales Plan</span> view. This value could be a planned value or actualized value depending on the comparable time period last year.</td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1"><span class="Emphasis">LY On Order AUC</span>
+                    </td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">  Last year average unit cost price of LY On Order Units coming from the <span class="Emphasis">Sales Plan</span> view.</td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1"><span class="Emphasis">LY On Order Cost</span>
+                    </td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1"> Last year receipt cost for receipt units for which orders have been submitted to external systems and for which order confirmations have been received. Relevant for planned values only in scenarios where planning is occurring further than 12 months out from the current date. Actual receipts delivered are actualized and displayed as LY Receipt Units.</td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1"><span class="Emphasis">LY On Order Units</span>
+                    </td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">  Last year receipt units for which orders have been submitted to external systems and for which order confirmations have been received. Relevant for planned values only in scenarios where planning is occurring further than 12 months out from the current date. Actual receipts delivered are actualized and displayed as LY Receipt Units.</td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1"><span class="Emphasis">LY Receipt AUC</span>
+                    </td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1"> Last year aggregated average unit cost price of receipts coming from the <span class="Emphasis">Sales Plan</span> view. This value could be a planned value or actualized value depending on the comparable time period last year.</td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1"><span class="Emphasis">LY Receipt Cost</span>
+                    </td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1"> Last year receipt cost coming from the <span class="Emphasis">Sales Plan</span> view. This value could be a planned value or actualized value depending on the comparable time period last year.</td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1"><span class="Emphasis">LY Receipt Units</span>
+                    </td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1"> Last year receipt units coming from the <span class="Emphasis">Sales Plan</span> view. This could be a planned value or actualized value depending on the comparable time period last year.</td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1"><span class="Emphasis">LY Sales</span>
+                    </td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">  Last year sales coming from the <span class="Emphasis">Sales Plan</span> view. This value could be a planned value or actualized value depending on the comparable time period last year.</td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1"><span class="Emphasis">LY Sales Build Ratio</span>
+                    </td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">Ratio of last year sales of current period versus last year sales of previous period.</td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1"><span class="Emphasis">LY Sales Ex VAT</span>
+                    </td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">  Last year sales excluding value added tax coming from the <span class="Emphasis">Sales Plan</span> view. This value could be a planned value or actualized value depending on the comparable time period last year.</td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1"><span class="Emphasis">LY Sales Units</span>
+                    </td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">  Last year sales units coming from the <span class="Emphasis">Sales Plan</span> view. This value could be a planned value or actualized value depending on the comparable time period last year.</td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1"><span class="Emphasis">LY Sales Units Build Ratio</span>
+                    </td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">Ratio of last year sales units of current period versus last year sales units of previous period.</td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1"><span class="Emphasis">LY Sellthrough</span>
+                    </td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">  Last year by period sellthrough percentage.&#160; (LY Sales Units/LY BOP Units).&#160; This is not a rolling calculation and looks at each period individually.</td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1"><span class="Emphasis">LY Shrink Cost</span>
+                    </td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">Amount of inventory at cost lost last year through theft, damages, spoilage, etc. that are planned or actual. LY Shrink cost is subtracted from LY EOP Cost.</td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1"><span class="Emphasis">LY Shrink Cost % of COGS</span>
+                    </td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">  Percentage of LY total COGS incurred from planned or actual LY shrink at cost.</td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1"><span class="Emphasis">LY Shrink Units</span>
+                    </td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">  Amount of inventory units lost last year through theft, damages, spoilage, etc. that are planned or actual. LY Shrink units are subtracted from LY EOP Units.</td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1"><span class="Emphasis">LY Shrink Units % of Sales Units</span>
+                    </td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">  Percentage of LY total sales units incurred from planned or actual LY shrink units.</td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1"><span class="Emphasis">LY Stock Cost to COGS</span>
+                    </td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">  Ratio expressing the relationship of Last year Stock Cost to Last Year COGS coming from the <span class="Emphasis">Sales Plan</span> view. This value could be a planned value or actualized value depending on the comparable time period last year.</td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1"><span class="Emphasis">LY Stock Units to Sales Units</span>
+                    </td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">Ratio expressing the relationship of Last year Stock Units to Last Year Sales Units coming from the <span class="Emphasis">Sales Plan</span> view. This value could be a planned value or actualized value depending on the comparable time period last year</td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1"><span class="Emphasis">LY VAT %</span>
+                    </td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1"> Last year’s value added tax rate applied to the revenue generated from an organization for same period last year.</td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1"><span class="Emphasis">LY VAT Sales</span>
+                    </td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">Amount of sales revenue generated last year through last year value added tax. </td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1"><span class="Emphasis">Margin</span>
+                    </td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">  Margin coming from the <span class="Emphasis">Sales Plan</span> view. This value matches the system margin line unless a user has overridden the sales plan in the <span class="Emphasis">Sales Plan</span> view or AUC in the <span class="Emphasis">Receipt Plan</span> view.</td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1"><span class="Emphasis">Margin %</span>
+                    </td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1"> Margin percentage coming from the <span class="Emphasis">Sales Plan</span> view. This value matches the system margin % line unless a user has overridden the sales plan in the <span class="Emphasis">Sales Plan</span> view or AUC in the <span class="Emphasis">Receipt Plan</span> view.</td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1"><span class="Emphasis">Margin % (Comparison)</span>
+                    </td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">  Margin percentage coming from the selected comparison snapshot. This value includes any user overrides present at the time the snapshot was taken.</td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1"><span class="Emphasis">Margin % +/- LY</span>
+                    </td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">  Percentage increase or decrease of margin versus LY margin.</td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1"><span class="Emphasis">Margin (Comparison)</span>
+                    </td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">  Margin coming from the selected comparison snapshot. This value includes any user overrides present at the time the snapshot was taken.</td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1"><span class="Emphasis">Margin Rate % +/- LY</span>
+                    </td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">  Percentage increase or decrease in margin % versus last year margin %.</td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1"><span class="Emphasis">Minimum Presentation</span>
+                    </td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">Number of units in aggregate bought for presentation.</td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1"><span class="Emphasis">On Order AUC</span>
+                    </td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1"> Average unit cost price of On Order Units coming from the <span class="Emphasis">Sales Plan</span> view.</td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1"><span class="Emphasis">On Order Cost</span>
+                    </td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">  Cost of receipt units for which orders have been submitted to external systems and for which order confirmations have been received.</td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1"><span class="Emphasis">On Order Cost % +/- LY</span>
+                    </td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">  Percentage increase or decrease of On Order Cost versus LY On Order Cost.</td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1"><span class="Emphasis">On Order Cost % +/- Receipt Cost</span>
+                    </td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">  Percentage increase or decrease of On order cost versus the receipt cost coming from <span class="Emphasis">Sales Plan</span> view.</td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1"><span class="Emphasis">On Order Past Due Cost</span>
+                    </td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">Cost of purchase orders not yet received but scheduled to be received in the recent past.</td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1"><span class="Emphasis">On Order Past Due Units</span>
+                    </td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">Purchase order units not yet received but scheduled to be received in the recent past.</td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1"><span class="Emphasis">On Order Units</span>
+                    </td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">  Receipt units for which orders have been submitted to external systems and for which order confirmations have been received.</td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1"><span class="Emphasis">On Order Units % +/- LY</span>
+                    </td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">  Percentage increase or decrease of On Order Units versus LY On Order Units.</td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1"><span class="Emphasis">On Order units var to Receipt Units</span>
+                    </td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">  The difference between planned receipt units from the <span class="Emphasis">Receipt Plan</span> view and On Order Units.</td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1"><span class="Emphasis">Receipt AUC</span>
+                    </td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">Average unit cost price of receipts coming from the <span class="Emphasis">Sales Plan</span> view. This value matches the system receipt AUC line unless a user has overridden the AUC in the <span class="Emphasis">Receipt Plan</span> view.</td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1"><span class="Emphasis">Receipt AUC % +/- LY</span>
+                    </td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">  Percentage increase or decrease of average unit cost price of receipts versus LY average unit cost price of receipts.</td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1"><span class="Emphasis">Receipt AUC (Comparison)</span>
+                    </td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">Average unit cost price of receipts coming from the selected comparison snapshot. This value includes any user overrides present at the time the snapshot was taken.</td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1"><span class="Emphasis">Receipt Cost</span>
+                    </td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">Receipt cost coming from the <span class="Emphasis">Sales Plan</span> view. This value matches the system Receipt Cost line unless a user has overridden the receipt plan in the <span class="Emphasis">Receipt Plan</span> view.</td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1"><span class="Emphasis">Receipt Cost (Comparison)</span>
+                    </td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">Receipt cost coming from the selected comparison snapshot. This value includes any user overrides present at the time the snapshot was taken.</td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1"><span class="Emphasis">Receipt Units</span>
+                    </td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">Receipt units coming from the <span class="Emphasis">Sales Plan</span> view. This value matches the system Receipt Units line unless a user has overridden the receipt plan in the <span class="Emphasis">Receipt Plan</span> view.</td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1"><span class="Emphasis">Receipt Units % +/- LY</span>
+                    </td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">  Percentage increase or decrease of Receipt Cost versus LY Receipt Cost.</td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1"><span class="Emphasis">Receipt Units % +/- LY</span>
+                    </td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">  Percentage increase or decrease of Receipt Units versus LY Receipt Units.</td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1"><span class="Emphasis">Receipt Units (Comparison)</span>
+                    </td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">Receipt units coming from the selected comparison snapshot. This value includes any user overrides present at the time the snapshot was taken.</td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1"><span class="Emphasis">Sales</span>
+                    </td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">  Sales coming from the <span class="Emphasis">Sales Plan</span> view. This value matches the system sales line unless a user has overridden the sales plan in the <span class="Emphasis">Sales Plan</span> view.</td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1"><span class="Emphasis">Sales % +/- LY</span>
+                    </td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">  Percentage increase or decrease of sales versus LY sales.</td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1"><span class="Emphasis">Sales Build Ratio</span>
+                    </td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">Ratio of sales of current period versus previous period sales.</td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1"><span class="Emphasis">Sales Ex VAT</span>
+                    </td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">Sales excluding value added tax coming from the <span class="Emphasis">Sales Plan</span> view. This value matches the system sales line unless a user has overridden the sales plan in the <span class="Emphasis">Sales Plan</span> view.</td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1"><span class="Emphasis">Sales Units</span>
+                    </td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">  Sales units coming from the <span class="Emphasis">Sales Plan</span> view. This value matches the system sales line unless a user has overridden the sales plan in the <span class="Emphasis">Sales Plan</span> view.&#160; </td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1"><span class="Emphasis">Sales Units % +/- LY</span>
+                    </td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">  Percentage increase or decrease of the sales units versus LY sales units.  </td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1"><span class="Emphasis">Sales Units (Comparison)</span>
+                    </td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">Sales units coming from the selected comparison snapshot. This value includes any user overrides present at the time the snapshot was taken.</td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1"><span class="Emphasis">Sales Units Build Ratio</span>
+                    </td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">Ratio of sales units of current period versus previous period sales units. </td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1"><span class="Emphasis">Sellthrough</span>
+                    </td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">  By period sell through percentage.&#160; (Sales Units/BOP Units). This is not a rolling calculation and looks at each period individually.</td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1"><span class="Emphasis">Shrink Cost</span>
+                    </td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1"> Amount of inventory at cost lost through theft, damages, spoilage, etc. that are planned or actual. Shrink Cost is subtracted from EOP Cost.</td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1"><span class="Emphasis">Shrink Cost % of COGS</span>
+                    </td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">  Percentage of total COGS incurred from planned or actual shrink at cost.</td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1"><span class="Emphasis">Shrink Units</span>
+                    </td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">  Amount of inventory units lost through theft, damages, spoilage, etc. that are planned or actual. Shrink units are subtracted from EOP units.</td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1"><span class="Emphasis">Shrink Units % of Sales Units</span>
+                    </td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">  Percentage of total sales units incurred from planned or actual shrink units.</td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1"><span class="Emphasis">Stock Cost to COGS</span>
+                    </td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">Ratio expressing the relationship of BOP Cost to COGS coming from the <span class="Emphasis">Sales Plan</span> view. This value matches the system Stock Cost to COGS line unless a user has overridden the sales plan in the <span class="Emphasis">Sales Plan</span> view or receipt plan in the <span class="Emphasis">Receipt Plan</span> view.</td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1"><span class="Emphasis">Stock Cost to COGS (Comparison)</span>
+                    </td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">Ratio expressing the relationship of BOP cost to COGS coming from the selected comparison snapshot. This value includes any user overrides present at the time the snapshot was taken.</td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1"><span class="Emphasis">Stock In Transit</span>
+                    </td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">Stock in-transit between sites within the retailer’s own network.</td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1"><span class="Emphasis">Stock In Transit Cost</span>
+                    </td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">Cost of stock in-transit between sites within the retailer’s own network.</td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1"><span class="Emphasis">Stock Units to Sales Units</span>
+                    </td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1"> Ratio expressing the relationship of BOP Units to Sales Units coming from the <span class="Emphasis">Sales Plan</span> view. This value matches the system Stock Units to Sales Units line unless a user has overridden the sales plan in the <span class="Emphasis">Sales Plan</span> view or receipt plan in the <span class="Emphasis">Receipt Plan</span> view.</td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1"><span class="Emphasis">Stock Units to Sales Units (Comparison)</span>
+                    </td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">Ratio expressing the relationship of BOP Units to Sales Units coming from the selected comparison snapshot. This value includes any user overrides present at the time the snapshot was taken.</td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1"><span class="Emphasis">Supplier Order Cost</span>
+                    </td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">External on order - cost of orders from suppliers not yet received. Calculation: Total Orders - IBT Orders.</td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1"><span class="Emphasis">Supplier Order Units</span>
+                    </td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">External on order - orders from suppliers not yet received. Calculation: Total Orders - IBT Orders.</td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1"><span class="Emphasis">System AUC</span>
+                    </td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">  Aggregated average unit cost price generated by smart start in target creation or from work done in the main planning view for all the variants/placeholders in the selected product filter.</td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1"><span class="Emphasis">System Avg BOP Unit Cost</span>
+                    </td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">  Average cost of inventory per unit generated by smart start in target creation or from work done in the main planning view for all the variants/placeholders in the product filter selected for this report.</td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1"><span class="Emphasis">System Avg EOP Unit Cost </span>
+                    </td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1"> Average cost of inventory per unit generated by smart start in target creation or from work done in the main planning view for all the variants/placeholders in the selected product filter.</td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1"><span class="Emphasis">System BOP Cost</span>
+                    </td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1"> Beginning of Period cost of inventory generated by smart start in target creation or from work done in the main planning view for all the variants/placeholders in the selected product filter.</td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1"><span class="Emphasis">System BOP Units</span>
+                    </td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">  Beginning of Period units of inventory generated by smart start in target creation or from work done in the main planning view for all the variants/placeholders in the selected product filter.</td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1"><span class="Emphasis">System COGS</span>
+                    </td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">  Cost of sales generated by smart start in target creation or from work done in the main planning view for all the variants/placeholders in the selected product filter.</td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1"><span class="Emphasis">System EOP Cost</span>
+                    </td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1"> End of Period cost of inventory generated by smart start in target creation or from work done in the main planning view for all the variants/placeholders in the selected product filter.</td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1"><span class="Emphasis">System EOP Units</span>
+                    </td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">  End of Period units of inventory generated by smart start in target creation or from work done in the main planning view for all the variants/placeholders in the selected product filter.</td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1"><span class="Emphasis">System Margin</span>
+                    </td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1"> Margin generated by smart start in target creation or from work done in the main planning view for all the variants/placeholders in the selected product filter.</td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1"><span class="Emphasis">System Margin %</span>
+                    </td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1"> Margin   percentage generated by smart start in target creation or from work done in the main planning view for all the variants/placeholders in the selected product filter.</td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1"><span class="Emphasis">System Receipt AUC</span>
+                    </td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1"> Aggregated average unit cost price of receipts generated by smart start in target creation or from work done in the main planning view for all the variants/placeholders in the selected product filter.</td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1"><span class="Emphasis">System Receipt Cost</span>
+                    </td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">Receipt cost generated by smart start in target creation or from work done in the main planning view for all the variants/placeholders in the selected product filter.</td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1"><span class="Emphasis">System Receipt Units</span>
+                    </td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">  Receipt units generated by smart start in target creation or from work done in the main planning view for all the variants/placeholders in the selected product filter.</td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1"><span class="Emphasis">System Sales</span>
+                    </td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">Sales generated by smart start in target creation or from work done in the main planning view for all the variants/placeholders in the selected product filter.</td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1"><span class="Emphasis">System Sales % +/- LY</span>
+                    </td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">  Percentage increase or decrease of the system sales versus LY sales.</td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1"><span class="Emphasis">System Sales Build Ratio</span>
+                    </td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">Ratio of system sales of current period versus previous period system sales.</td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1"><span class="Emphasis">System Sales Ex VAT</span>
+                    </td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">Sales excluding value added tax generated by smart start in target creation or from work done in the main planning view for all the variants/placeholders in the selected product filter.</td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1"><span class="Emphasis">System Sales Units</span>
+                    </td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">Sales units generated by smart start in target creation or from work done in the main planning view for all the variants/placeholders in the selected product filter.</td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1"><span class="Emphasis">System Sales Units % +/- LY</span>
+                    </td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">  Percentage increase or decrease of the system sales units versus LY sales units.</td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1"><span class="Emphasis">System Sales Units Build Ratio</span>
+                    </td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">Ratio of system sales units of current period versus previous period system sales units.</td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1"><span class="Emphasis">System Stock Cost to COGS</span>
+                    </td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">Ratio expressing the relationship of BOP Cost to COGS generated by smart start in target creation or from work done in the main planning view for all the variants/placeholders in the selected product filter.</td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1"><span class="Emphasis">System Stock Units to Sales Units</span>
+                    </td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">Ratio expressing the relationship of BOP Units to Sales Units generated by smart start in target creation or from work done in the main planning view for all the variants/placeholders in the selected product filter. </td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1"><span class="Emphasis">Total Order AUC</span>
+                    </td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">Average cost per unit of inbound orders for the period. Calculation: (Total Orders Cost / Total Orders Units)</td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1"><span class="Emphasis">Total Order Cost</span>
+                    </td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">Cost of inbound orders for the period. Calculation: (Total Orders Units * Total Orders AUC)</td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1"><span class="Emphasis">Total Order Units</span>
+                    </td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">Sum of all planned and confirmed incoming orders for the period. Calculation: (Receipt Units + Committed Units + On Order Units + On Order (Unknown) Units)</td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1"><span class="Emphasis">VAT %</span>
+                    </td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">Value added tax rate applied to the revenue generated from the items at a given level.</td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1"><span class="Emphasis">VAT % (Comparison)</span>
+                    </td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1"> VAT   percentage coming from the selected comparison snapshot. This value includes any user overrides present at the time the snapshot was taken.</td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyB-Column1-Body1"><span class="Emphasis">VAT Sales</span>
+                    </td>
+                    <td class="TableStyle-standard-BodyA-Column2-Body1">  Amount of sales revenue generated through VAT.</td>
+                </tr>
+            </tbody>
+        </table>
+    </body>
+</html>

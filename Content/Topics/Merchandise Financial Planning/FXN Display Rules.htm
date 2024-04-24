@@ -1,0 +1,303 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head>
+        <link href="../../Resources/TableStyles/standard.css" rel="stylesheet" MadCap:stylesheetType="table" />
+    </head>
+    <body>
+        <h1>How FX neutralization impacts calculations for historical and future periods</h1>
+        <p>In the following, the example metric used is <span class="Emphasis">Sales</span> and the example plan currency is <span class="Emphasis">USD</span>. However, the examples apply to all metrics that can be FX neutralized and all plan currencies. For a list of metrics, see <MadCap:xref href="FXN Visibility Control.htm">Metrics Impacted by FX Neutralization</MadCap:xref>.</p>
+        <h2>Historical periods</h2>
+        <p>If historical periods are brought back to display in MFP, the metrics function as follows:</p>
+        <ul>
+            <li>Sales = sum of sales using the historical period conversion rate</li>
+            <li>LY Sales (standard mode) = sum of sales using the historical period’s LY conversion rate</li>
+            <li>LLY Sales (standard mode) = sum of sales using the historical period’s LLY conversion rate</li>
+            <li>LY Sales (neutralized mode) = sum of sales using the historical period conversion rate</li>
+            <li>LLY Sales (neutralized mode) = sum of sales using the historical period conversion rate</li>
+        </ul>
+        <h3>Example: A channel with two sites operating in USD and EUR respectively in period 2021_wk10</h3>
+        <p style="font-weight: bold;">Historical sales by site and period:</p>
+        <table style="mc-table-style: url('../../Resources/TableStyles/standard.css');margin-left: 0;margin-right: auto;" class="TableStyle-standard" cellspacing="0">
+            <col class="TableStyle-standard-Column-Column1" />
+            <col class="TableStyle-standard-Column-Column2" style="width: 25%;" />
+            <col class="TableStyle-standard-Column-Column1" />
+            <col class="TableStyle-standard-Column-Column2" style="width: 25%;" />
+            <thead>
+                <tr class="TableStyle-standard-Head-Header1">
+                    <th class="TableStyle-standard-HeadE-Column1-Header1">Site</th>
+                    <th class="TableStyle-standard-HeadE-Column2-Header1">2021_wk10</th>
+                    <th class="TableStyle-standard-HeadE-Column1-Header1">2020_wk10</th>
+                    <th class="TableStyle-standard-HeadD-Column2-Header1">2019_wk10</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">
+                        <p>A</p>
+                    </td>
+                    <td class="TableStyle-standard-BodyE-Column2-Body1">
+                        <p>$1000</p>
+                    </td>
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">
+                        <p>$1200</p>
+                    </td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">
+                        <p>$900</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyB-Column1-Body1">
+                        <p>B</p>
+                    </td>
+                    <td class="TableStyle-standard-BodyB-Column2-Body1">
+                        <p>€1000</p>
+                    </td>
+                    <td class="TableStyle-standard-BodyB-Column1-Body1">
+                        <p>€1100</p>
+                    </td>
+                    <td class="TableStyle-standard-BodyA-Column2-Body1">
+                        <p>€850</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <p>Currency conversion rates for EUR to USD:</p>
+        <p>
+2019_wk10 = 1.10
+</p>
+        <p>2020_wk10 = 1.15
+</p>
+        <p>2021_wk10 = 1.17
+</p>
+        <p>2022_wk10 = 1.00 (current period)
+</p>
+        <p>The conversions when displaying 2021_wk10 are as follows:</p>
+        <table style="mc-table-style: url('../../Resources/TableStyles/standard.css');margin-left: 0;margin-right: auto;" class="TableStyle-standard" cellspacing="0">
+            <col class="TableStyle-standard-Column-Column1" style="width: 159px;" />
+            <col class="TableStyle-standard-Column-Column2" style="width: 17%;" />
+            <col class="TableStyle-standard-Column-Column1" style="width: 17%;" />
+            <col class="TableStyle-standard-Column-Column2" style="width: 17%;" />
+            <col class="TableStyle-standard-Column-Column1" style="width: 17%;" />
+            <col class="TableStyle-standard-Column-Column2" style="width: 17%;" />
+            <thead>
+                <tr class="TableStyle-standard-Head-Header1">
+                    <th class="TableStyle-standard-HeadE-Column1-Header1">Site</th>
+                    <th class="TableStyle-standard-HeadE-Column2-Header1">Sales</th>
+                    <th class="TableStyle-standard-HeadE-Column1-Header1">LY Sales (std)</th>
+                    <th class="TableStyle-standard-HeadE-Column2-Header1">LLY Sales (std)</th>
+                    <th class="TableStyle-standard-HeadE-Column1-Header1">LY Sales (FXN)</th>
+                    <th class="TableStyle-standard-HeadD-Column2-Header1">LLY Sales (FXN)</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">
+                        <p>A</p>
+                    </td>
+                    <td class="TableStyle-standard-BodyE-Column2-Body1">
+                        <p>$1000</p>
+                    </td>
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">
+                        <p>$1200</p>
+                    </td>
+                    <td class="TableStyle-standard-BodyE-Column2-Body1">
+                        <p>$900</p>
+                    </td>
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">
+                        <p>$1200</p>
+                    </td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">
+                        <p>$900</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">
+                        <p>B</p>
+                    </td>
+                    <td class="TableStyle-standard-BodyE-Column2-Body1">
+                        <p>€1000 x 1.17 = $1170</p>
+                    </td>
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">
+                        <p>€1100 x 1.15 = $1265</p>
+                    </td>
+                    <td class="TableStyle-standard-BodyE-Column2-Body1">
+                        <p>€850 x 1.10 = $935</p>
+                    </td>
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">
+                        <p>€1100 x 1.17 = $1287</p>
+                    </td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">
+                        <p>€850 x 1.17 = $995</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyB-Column1-Body1">
+                        <p>Total</p>
+                    </td>
+                    <td class="TableStyle-standard-BodyB-Column2-Body1">
+                        <p>$2170</p>
+                    </td>
+                    <td class="TableStyle-standard-BodyB-Column1-Body1">
+                        <p>$2465</p>
+                    </td>
+                    <td class="TableStyle-standard-BodyB-Column2-Body1">
+                        <p>$1835</p>
+                    </td>
+                    <td class="TableStyle-standard-BodyB-Column1-Body1">
+                        <p>$2487</p>
+                    </td>
+                    <td class="TableStyle-standard-BodyA-Column2-Body1">
+                        <p>$1895</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <p>The displayed values for Sales, LY Sales, and LLY Sales in standard mode are $2170, $2465, and $1835 respectively, and in neutralized mode are $2170, $2487, and $1895 respectively.</p>
+        <h2>Future periods</h2>
+        <p>If future periods are brought back to display in MFP, the metrics function as follows:</p>
+        <ul>
+            <li>Sales = planned value</li>
+            <li>LY Sales (standard mode)<ul><li>If the LY period is a past period (e.g. within 1 year of the current period) = sum of sales using the period’s LY conversion rate</li></ul><ul><li>If the LY period is a future period (e.g. after 1 year of the current period) = planned value</li></ul></li>
+            <li>LLY Sales (standard mode)<ul><li>If the LLY period is a past period (e.g. within the first 2 years of the current period) = sum of sales using the period’s LLY conversion rate</li></ul><ul><li>If the LY period is a future period (e.g. after the first 2 years of the current period) = planned value</li></ul></li>
+            <li>LY Sales (neutralized mode)<ul><li>If the LY period is a past period (e.g. within 1 year of the current period) = sum of sales using today’s conversion rate</li></ul><ul><li>If the LY period is a future period (e.g. after 1 year of the current period) = planned value</li></ul></li>
+            <li>LLY Sales (neutralized mode)<ul><li>If the LLY period is a past period (e.g. within the first 2 years of the current period) = sum of sales using today’s conversion rate</li></ul><ul><li>If the LY period is a future period (e.g. after the first 2 years of the current period) = planned value</li></ul></li>
+        </ul>
+        <h3>Example: A channel with two sites operating in USD and EUR respectively in period 2022_wk10</h3>
+        <p><span class="Emphasis">Historical sales by site and period:</span>
+        </p>
+        <table style="mc-table-style: url('../../Resources/TableStyles/standard.css');margin-left: 0;margin-right: auto;" class="TableStyle-standard" cellspacing="0">
+            <col class="TableStyle-standard-Column-Column1" style="width: 25%;" />
+            <col class="TableStyle-standard-Column-Column2" style="width: 25%;" />
+            <col class="TableStyle-standard-Column-Column1" style="width: 25%;" />
+            <col class="TableStyle-standard-Column-Column2" style="width: 25%;" />
+            <thead>
+                <tr class="TableStyle-standard-Head-Header1">
+                    <th class="TableStyle-standard-HeadE-Column1-Header1">Site</th>
+                    <th class="TableStyle-standard-HeadE-Column2-Header1">2022_wk10 (planned)</th>
+                    <th class="TableStyle-standard-HeadE-Column1-Header1">2021_wk10 (actualized)</th>
+                    <th class="TableStyle-standard-HeadD-Column2-Header1">2020_wk10 (actualized)</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">
+                        <p>A</p>
+                    </td>
+                    <td class="TableStyle-standard-BodyE-Column2-Body1">
+                        <p>N/A</p>
+                    </td>
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">
+                        <p>$1100</p>
+                    </td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">
+                        <p>$1000</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyB-Column1-Body1">
+                        <p>B</p>
+                    </td>
+                    <td class="TableStyle-standard-BodyB-Column2-Body1">
+                        <p>N/A</p>
+                    </td>
+                    <td class="TableStyle-standard-BodyB-Column1-Body1">
+                        <p>€1200</p>
+                    </td>
+                    <td class="TableStyle-standard-BodyA-Column2-Body1">
+                        <p>€1000</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <p>Currency conversion rates for EUR to USD:
+</p>
+        <p>2020_wk10 = 1.17
+</p>
+        <p>2021_wk10 = 1.12
+</p>
+        <p>2022_wk36 (aka current period) = 1.20
+</p>
+        <p>The conversions when displaying 2022_wk10 are as follows:</p>
+        <table style="mc-table-style: url('../../Resources/TableStyles/standard.css');margin-left: 0;margin-right: auto;" class="TableStyle-standard" cellspacing="0">
+            <col class="TableStyle-standard-Column-Column1" style="width: 156px;" />
+            <col class="TableStyle-standard-Column-Column2" style="width: 17%;" />
+            <col class="TableStyle-standard-Column-Column1" style="width: 17%;" />
+            <col class="TableStyle-standard-Column-Column2" style="width: 17%;" />
+            <col class="TableStyle-standard-Column-Column1" style="width: 17%;" />
+            <col class="TableStyle-standard-Column-Column2" style="width: 17%;" />
+            <thead>
+                <tr class="TableStyle-standard-Head-Header1">
+                    <th class="TableStyle-standard-HeadE-Column1-Header1">Site</th>
+                    <th class="TableStyle-standard-HeadE-Column2-Header1">Sales</th>
+                    <th class="TableStyle-standard-HeadE-Column1-Header1">LY Sales (std)</th>
+                    <th class="TableStyle-standard-HeadE-Column2-Header1">LLY Sales (std)</th>
+                    <th class="TableStyle-standard-HeadE-Column1-Header1">LY Sales (FXN)</th>
+                    <th class="TableStyle-standard-HeadD-Column2-Header1">LLY Sales (FXN)</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">
+                        <p>A</p>
+                    </td>
+                    <td class="TableStyle-standard-BodyE-Column2-Body1">
+                        <p>N/A</p>
+                    </td>
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">
+                        <p>$1100</p>
+                    </td>
+                    <td class="TableStyle-standard-BodyE-Column2-Body1">
+                        <p>$1000</p>
+                    </td>
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">
+                        <p>$1100</p>
+                    </td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">
+                        <p>$1000</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">
+                        <p>B</p>
+                    </td>
+                    <td class="TableStyle-standard-BodyE-Column2-Body1">
+                        <p>N/A</p>
+                    </td>
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">
+                        <p>€1200 x 1.12 = $1344</p>
+                    </td>
+                    <td class="TableStyle-standard-BodyE-Column2-Body1">
+                        <p>€1000 x 1.17 = $1170</p>
+                    </td>
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">
+                        <p>€1200 x 1.20 = $1440</p>
+                    </td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">
+                        <p>€1000 x 1.20 = $1200</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyB-Column1-Body1">
+                        <p>Total</p>
+                    </td>
+                    <td class="TableStyle-standard-BodyB-Column2-Body1">
+                        <p>$2500 (planned)</p>
+                    </td>
+                    <td class="TableStyle-standard-BodyB-Column1-Body1">
+                        <p>$2444</p>
+                    </td>
+                    <td class="TableStyle-standard-BodyB-Column2-Body1">
+                        <p>$2170</p>
+                    </td>
+                    <td class="TableStyle-standard-BodyB-Column1-Body1">
+                        <p>$2540</p>
+                    </td>
+                    <td class="TableStyle-standard-BodyA-Column2-Body1">
+                        <p>$2200</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <p>The displayed values for Sales, LY Sales, and LLY Sales in standard mode are $2500, $2444 and $2170 respectively, and in neutralized mode are $2500, $2540, and $2200 respectively.</p>
+    </body>
+</html>

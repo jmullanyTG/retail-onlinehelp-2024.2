@@ -1,0 +1,284 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head>
+        <link href="../../Resources/TableStyles/standard.css" rel="stylesheet" MadCap:stylesheetType="table" />
+        <link href="../../Resources/TableStyles/standard.css" rel="stylesheet" MadCap:stylesheetType="table" />
+    </head>
+    <body>
+        <h1>Policy task parameters</h1>
+        <p>Policy task parameters appear on two tabs: General and Policy.</p>
+        <h2>General tab parameters</h2>
+        <table style="mc-table-style: url('../../Resources/TableStyles/standard.css');" class="TableStyle-standard" cellspacing="0">
+            <col class="TableStyle-standard-Column-Column1" />
+            <col class="TableStyle-standard-Column-Column2" />
+            <thead>
+                <tr class="TableStyle-standard-Head-Header1">
+                    <th class="TableStyle-standard-HeadE-Column1-Header1">Parameter</th>
+                    <th class="TableStyle-standard-HeadD-Column2-Header1">Description </th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">Name</td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">The display name of the policy task.</td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">Description</td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">An optional description field.</td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">Filter</td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">The filter containing the items that the settings in the policy task will apply to.</td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">Default Task</td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">Whether the policy task is the default policy task for all items.</td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">Task Enabled</td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">Whether the task is enabled. If not enabled, it is not applied to items.</td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">Task Execution Order</td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">The order in which the task executes among all other active tasks. Execution order is important because tasks executed later in the order supersede those executed earlier. </td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">Task Available From</td>
+                    <td rowspan="2" class="TableStyle-standard-BodyD-Column2-Body1">
+                        Select these options to set start and end dates for tasks. The task is automatically enabled on the start date and disabled on the end date. 
+                    </td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">Task Available To</td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">
+                        <p>Task Available From Date</p>
+                    </td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">Select <span class="Emphasis">Task Enabled From</span> to enable this property.</td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyB-Column1-Body1">Task Available To Date</td>
+                    <td class="TableStyle-standard-BodyA-Column2-Body1">Select <span class="Emphasis">Task Enabled To</span> to enable this property.</td>
+                </tr>
+            </tbody>
+        </table>
+        <h2>Policy tab parameters</h2>
+        <p>Users are able to determine manual order policy and manual policy settings. </p>
+        <h3>Policy Task Actions</h3>
+        <p> The <span class="Emphasis">Policy Task Actions</span> section displays in the <span class="Emphasis">Add Policy Task</span> and <span class="Emphasis">Update Policy Task</span> windows.</p>
+        <p>
+            <img src="../../Resources/Images/Policy/Policy Indicators.png" class="LargeImages" />
+        </p>
+        <table style="mc-table-style: url('../../Resources/TableStyles/standard.css');" class="TableStyle-standard" cellspacing="0">
+            <col class="TableStyle-standard-Column-Column1" />
+            <col class="TableStyle-standard-Column-Column2" />
+            <thead>
+                <tr class="TableStyle-standard-Head-Header1">
+                    <th class="TableStyle-standard-HeadE-Column1-Header1">Parameter</th>
+                    <th class="TableStyle-standard-HeadD-Column2-Header1">Description </th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">Manual Order Policy Indicator</td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">Whether the Order Policy Type of items included in this task can be automatically changed by this or other policy tasks. 
+                        <ul><li><span class="Emphasis">Set All Items As Auto</span> - An item's Order Policy Type can be automatically changed by a policy task.</li><li><span class="Emphasis">Set All Items As Manual</span> - An item's Order Policy Type cannot be automatically changed by a policy task. It must be changed manually.</li><li><span class="Emphasis">Do Not Update</span> - Preserves the current setting of this property in each item. </li></ul></td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyB-Column1-Body1">Manual Policy Setting</td>
+                    <td class="TableStyle-standard-BodyA-Column2-Body1">Whether the policy settings of items included in this task can be automatically changed by this or other policy tasks. 
+                        <ul><li><span class="Emphasis">Set All Items As Auto</span> - An item's policy settings can be automatically changed by a policy task.</li><li><span class="Emphasis">Set All Items As Manual</span> - An item's policy settings cannot be automatically changed by a policy task. It must be changed manually.</li><li><span class="Emphasis">Do Not Update</span> - Preserves the current setting of this property in each item.
+				</li></ul></td>
+                </tr>
+            </tbody>
+        </table>
+        <h3>Policy section </h3>
+        <table class="TableStyle-standard" cellspacing="0" style="mc-table-style: url('../../Resources/TableStyles/standard.css');">
+            <col class="TableStyle-standard-Column-Column1" />
+            <col class="TableStyle-standard-Column-Column2" />
+            <thead>
+                <tr class="TableStyle-standard-Head-Header1">
+                    <th class="TableStyle-standard-HeadE-Column1-Header1">Parameter</th>
+                    <th class="TableStyle-standard-HeadD-Column2-Header1">Description</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyB-Column1-Body1">Order Policy Type</td>
+                    <td class="TableStyle-standard-BodyA-Column2-Body1">
+                        Sets whether and how order recommendations are generated for items in this task.
+						<p><img src="../../Resources/Images/Policy/Order Policy Types.png" class="LargeImages" /></p><ul><li><span class="Emphasis">[Do Not Set]</span>: Preserves an item's current Order Policy Type. Allows for non-order policy specific settings (order multiple) to be updated without disrupting the order policy driven behavior.</li><li><span class="Emphasis">Bin</span>: Applies a fixed-quantity order methodology to items (for example, if one is sold another one is ordered). Best suited for items with intermittent, low demand.  See, <MadCap:xref href="Bin Settings.htm">Configuring bin settings</MadCap:xref>.</li><li><span class="Emphasis">Non-Stocked</span>: Prevents replenishment recommendations for these items, except where customer orders cannot be filled with current stock on hand. See, <MadCap:xref href="Non Stocked Settings.htm">Configuring non-stocked settings</MadCap:xref>.</li><li><span class="Emphasis">Normal Stocked</span>: Items that require a demand, inventory, and replenishment plan. These items are everyday selling items which should be continually stocked and replenished. Order recommendations are generated for these items based on inventory policy and item-specific ordering criteria. See, <MadCap:xref href="Normal Stocked Settings.htm">Configuring normal stocked settings</MadCap:xref>.</li><li><span class="Emphasis">Redundant</span>: Items that are never likely to sell or be in demand. This classification prevents these items from being ordered.</li><li><span class="Emphasis">Showroom</span>: Items which are sold out of one location, but are by design fulfilled from another location. This can include display model items, catalog items, or items that are scheduled for delivery. See,  <MadCap:xref href="Configuring Demand Transference for Showroom Items.htm">Configuring demand transference for showroom items</MadCap:xref>.</li></ul></td>
+                </tr>
+            </tbody>
+        </table>
+        <h4>Setting which order policy types display</h4>
+        <p>The system policy <span class="Emphasis">Allowed Inventory Order Policies</span> defines which order policy types display. To review this system policy, navigate to Module: Inventory Policy. The system policy is configured using order policy indicators.</p>
+        <h4>Order policy indicator</h4>
+        <p>The order policy indicator corresponds to a single letter that identifies the policy type.</p>
+        <table class="TableStyle-standard" cellspacing="0" style="mc-table-style: url('../../Resources/TableStyles/standard.css');">
+            <col class="TableStyle-standard-Column-Column1" style="width: 33%;" />
+            <col class="TableStyle-standard-Column-Column2" style="width: 33%;" />
+            <thead>
+                <tr class="TableStyle-standard-Head-Header1">
+                    <th class="TableStyle-standard-HeadE-Column1-Header1">Order Policy Indicator ID</th>
+                    <th class="TableStyle-standard-HeadD-Column2-Header1">Order Policy Indicator Name</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1" style="text-align: center;">
+                         B 
+                    </td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">
+                         Bin 
+                    </td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1" MadCap:conditions="General.DoNotPublish">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1" style="text-align: center;">
+                         E 
+                    </td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">
+                         Economic Order Quantity 
+                    </td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1" style="text-align: center;">
+                        N 
+                    </td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">
+                         Non-Stocked 
+                    </td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1" style="text-align: center;">
+                         P 
+                    </td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">
+                         Normal Stocked 
+                    </td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1" style="text-align: center;">
+                         R 
+                    </td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">
+                         Redundant 
+                    </td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyB-Column1-Body1" style="text-align: center;">S</td>
+                    <td class="TableStyle-standard-BodyA-Column2-Body1">Showroom</td>
+                </tr>
+            </tbody>
+        </table>
+        <h3>Replenishment Strategy box</h3>
+        <p> This table describes all possible replacement strategy parameters. Not all of these parameters appear in a given policy task. The parameters that appear in a specific policy task are determined by the task's Order Policy Type.</p>
+        <p>
+            <img src="../../Resources/Images/Policy/Replenishment Strategy.png" class="LargeImages" />
+        </p>
+        <table class="TableStyle-standard" cellspacing="0" style="mc-table-style: url('../../Resources/TableStyles/standard.css');">
+            <col class="TableStyle-standard-Column-Column1" />
+            <col class="TableStyle-standard-Column-Column2" />
+            <thead>
+                <tr class="TableStyle-standard-Head-Header1">
+                    <th class="TableStyle-standard-HeadE-Column1-Header1">Parameter</th>
+                    <th class="TableStyle-standard-HeadD-Column2-Header1">Description </th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">Back Order Ratio</td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">The percentage of lost sales which are expected to result in a customer returning to purchase the item.</td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">Bin Min Units</td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">The minimum quantity of units required in the bin.</td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">Bin Max Units</td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">The maximum quantity of units allowed in the bin.</td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">Review Period Days</td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">The number of days between inventory reviews for this item. Inventory reviews determine whether the item needs to be re-ordered to comply with stocking parameters.</td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyB-Column1-Body1">Replenishment Cycle Days</td>
+                    <td class="TableStyle-standard-BodyA-Column2-Body1">The number of days that must pass between orders for this item. Must be greater than or equal to Review Period Days.</td>
+                </tr>
+            </tbody>
+        </table>
+        <h3>Safety Stock box<br /></h3>
+        <p>This table describes all possible safety stock parameters. Not all of these parameters appear in a given policy task. The parameters that appear in a specific policy task are determined by the task's Order Policy Type. </p>
+        <p>
+            <img src="../../Resources/Images/Policy/Safety Stock.png" class="LargeImages" />
+        </p>
+        <p class="BasicNote">System policy <span class="Emphasis">Max Safety Stock as Percent of Max Stock</span> caps safety stock quantities at a specified percentage of an item's <span class="Emphasis">Maximum Stock Units</span> value. Unit-based minimums (for example, Minimum Safety Stock Units) that exceed the Maximum Stock Units value are respected.</p>
+        <table class="TableStyle-standard" cellspacing="0" style="mc-table-style: url('../../Resources/TableStyles/standard.css');">
+            <col class="TableStyle-standard-Column-Column1" />
+            <col class="TableStyle-standard-Column-Column2" />
+            <thead>
+                <tr class="TableStyle-standard-Head-Header1">
+                    <th class="TableStyle-standard-HeadE-Column1-Header1">Parameter</th>
+                    <th class="TableStyle-standard-HeadD-Column2-Header1">Description </th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">Safety Stock Days</td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">
+                         A dynamic quantity based on a number of days forecast. As the number of days changes, so the safety stock requirements change. 
+                    </td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">Target Service Level</td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">
+                       A dynamic quantity based on a service level target. It is a percentage of the items that are fulfilled in a location out of the maximum demand.
+                    </td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyB-Column1-Body1">Minimum Safety Stock Units</td>
+                    <td class="TableStyle-standard-BodyA-Column2-Body1">A static quantity based on a minimum number of units as the safety stock.</td>
+                </tr>
+            </tbody>
+        </table>
+        <h3>Optimized Target Service Level using a Stock to Service (STS) calculation</h3>
+        <MadCap:snippetBlock src="../../Resources/Snippets/Stock To Service.flsnp" />
+        <h3>Returns box</h3>
+        <table class="TableStyle-standard" cellspacing="0" style="mc-table-style: url('../../Resources/TableStyles/standard.css');">
+            <col class="TableStyle-standard-Column-Column1" />
+            <col class="TableStyle-standard-Column-Column2" />
+            <thead>
+                <tr class="TableStyle-standard-Head-Header1">
+                    <th class="TableStyle-standard-HeadE-Column1-Header1">Parameter</th>
+                    <th class="TableStyle-standard-HeadD-Column2-Header1">Description </th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">Return Rate</td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">The percentage of items which are expected to be returned.</td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">Days Before Return</td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">
+                         The expected average number of days between the sale of an item and its return. 
+                    </td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">Reuse Rate</td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">
+                         The percentage of returned items that are expected to be salable stock again. 
+                    </td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyB-Column1-Body1">Days Before Reuse</td>
+                    <td class="TableStyle-standard-BodyA-Column2-Body1">
+                         The expected average number of days between an item being returned and it being considered salable stock again. 
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </body>
+</html>

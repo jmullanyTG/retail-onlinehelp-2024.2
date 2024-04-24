@@ -1,0 +1,97 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head>
+    </head>
+    <body>
+        <p>For a historical period of time, the Rationalization calculation gives an idea of what the most efficient number of variants would have been to reach a specific financial target. 
+</p>
+        <p>The primary mechanism used for this is a <span class="Emphasis">marginal return curve</span>. Given a large enough sample, across retailers, product types, time and geography marginal return curves are extremely stable and repeatable. It is possible to make modest accuracy gains by modeling the distribution of sales within an insular set of product and stores with a Poisson distribution, but for ease of both implementation and calculation, the marginal return curve is close enough. 
+</p>
+        <p>
+            <img src="../../Resources/Images/Assortment Planning/Marginal Return Curves.PNG" class="LargeImages" />
+        </p>
+        <p>The following are part of the Rationalization process:</p>
+        <h2>Data selection</h2>
+        <p>The explicit inputs for creating a Rationalization Scenario are the Target Segments, each being defined by a Target Filter, (optional) Supplemental Filter, Sales Basis (units/revenue), Sales Types, and location selection. 
+</p>
+        <p>Scenario level selections include Scenario Target, (optional) Plan Basis, and Window of Time. </p>
+        <p>
+If Supplemental Filter is set for a segment, the system uses this in place of the Target Filter to calculate marginal return curves. Sales data is then aggregated to variant level (style/color) by location and by period. 
+</p>
+        <h2>Data cleansing and deseasonalization</h2>
+        <p>Before calculating, several steps are taken to remove anomalies from the data that would skew subsequent calculations. The most common causes of inaccuracies when using historical sales to calculate future projections via a simple average are:</p>
+        <ul>
+            <li>The item wasn’t available for sale during part or all of the window of time</li>
+            <li>If averaging the entire window of time, zeros may be included</li>
+            <li>If averaging non-zero periods only, those values may not be representative of a true average period during the window of time</li>
+            <li>The item had inventory levels low enough to negatively impact sales</li>
+        </ul>
+        <p>During this phase, the system determines which variants in the data set were considered “active” during the specified comparison time frames for each segment.</p>
+        <h3>Fine tuning the output of the cleansing and deseasonalization phase</h3>
+        <p>The following steps fine tune the output of this phase.  </p>
+        <div class="Note_BasicNote">For Target Choice Count, the settings are designated at the Target Segment level, and the default values for the segments are specified by the relevant system policies located in <span class="Emphasis">Maintenance &gt; Policies &gt; Module: Target Choice Counts</span>.
+			 <p>For AP, the relevant system policies are located in <span class="Emphasis">Maintenance &gt; Policies &gt; Module: Assortment</span>.</p></div>
+        <p><span class="Emphasis">Remove Outliers</span>
+        </p>
+        <p>Prior to deseasonalizing the data, any extreme outliers on the low end of the data set are removed as these artificially deflate the deseasonalized average used in subsequent steps. To do this, a % of each variant’s maximum sales is removed.</p>
+        <ul>
+            <li><span class="Emphasis">Average Inclusion Threshold</span> Default set at 3%</li>
+        </ul>
+        <p><span class="Emphasis">Deseasonalize</span>
+        </p>
+        <p>Data is then adjusted by period, flattening the sales trend across the life cycle of each variant to allow for better comparison across time. This is de-seasonalization. To achieve this, the system:</p>
+        <ol>
+            <li>Sums variant sales by period</li>
+            <li>Calculates the median total sales across all periods and replaces any period totals which fall below a system policy defined % of the median, calculating a period to mean for each period based on the revised values, then</li>
+            <li>Divides each period’s revised sales by the period to mean.</li>
+        </ol>
+        <ul>
+            <li><span class="Emphasis">Median Period Total Threshold</span> Default set at 50%</li>
+        </ul>
+        <p>As the name suggests, this step attempts to remove seasonality from the chosen variants in the chosen window of time. This is done because the cleansing works at a Variant-Period level and, when comparing the figures, we do not want an unfair bias for certain periods. For example, we had a business where Christmas sales are far higher than any other period of the year, and we chose a scenario with a window of time which contains the Christmas period as well as "normal" periods, then the cleansing would remove some of the "normal" period data points.</p>
+        <p>Therefore, the deseasonalization increases any variant-period sales that may be understated, thus providing comparable data points across the chosen window of time. The system does this by first finding the total sales for each of the particular periods for all the chosen variants. The median of these by-period totals is then determined. If some of these by-period totals fall below the median multiplied by our cleansing factor Median Total Period Threshold, then those by-period totals will be set to the median multiplied by our cleansing factor Median Total Period Threshold.</p>
+        <p>The system now has the adjusted period total: the by-period totals that did not fall below the threshold will have an adjusted period total equal to its by-period total. Next it finds the average of the adjusted period totals and divides each individual adjusted period total by this average to find a factor.</p>
+        <p>Finally, all of our data points are divided by the calculated factor of the period to which it belongs thereby changing the actual data point but making all of the data points comparable across periods since the next cleansing steps (Active Variant Threshold and Variant Time on Offer Minimum) requires comparable data points in order to function as expected.</p>
+        <p><span class="Emphasis">Remove Abnormal Data Points</span>
+        </p>
+        <p>After deseasonalization, the average period sales for each variant is calculated, and then any periods that fall below a system policy defined percentage of this average is removed. This is done to account for periods where we can reasonably infer that the item’s inventory was no longer allowing an accurate gauge of its sales potential.</p>
+        <ul>
+            <li><span class="Emphasis">Active Variant Threshold Factor</span> Default set at 30%</li>
+        </ul>
+        <p class="BasicNote">Outliers with sales that are much higher than the rest of the dataset are not removed. This is to maintain consistency with logic used elsewhere within the ToolsGroup JustEnough suite of applications, including the Rate of Sale Calculator.</p>
+        <p><span class="Emphasis">Remove Variants With Insufficient Periods Remaining</span>
+        </p>
+        <p>After all anomalous periods have been cleansed, the number of periods remaining for each variant is calculated and variants without remaining periods greater than or equal to a system policy defined percentage of the window of time in the scenario are removed.</p>
+        <ul>
+            <li><span class="Emphasis">Active Variant Time on Offer Minimum</span>:  Default set to 31%.</li>
+        </ul>
+        <p class="Example">Given a period type of week and a window of time of one month, setting this policy to 31% eliminates any site level/variant that does not have at least 2 active selling periods registered.</p>
+        <h2>Building marginal return curves</h2>
+        <p>After data has been cleansed, the system calculates location/variant productivity by taking the average across the remaining periods. From here, two different marginal return curves are calculated.</p>
+        <h3>Inter-style marginal return curve</h3>
+        <p>The most important curve is the <span class="Emphasis">inter-style marginal return curve</span> (MRC). To calculate, the system orders productivity values for all variants from greatest to least, and divides each Nth entry by the (N-1)st entry, defining N = 1 as 1, to get the marginal value of each variant to the cluster.</p>
+        <p>When the target productivity is more than the productivity of the active variants, the marginal return curve must be extended.</p>
+        <p>This is tested for by determining the ratio of the target productivity divided by the average productivity of the active variants.</p>
+        <ul>
+            <li>If the ratio is less than or equal to 1, the curve does not require extension.</li>
+            <li>If the ratio is greater than 1, the curve is extended by creating an <span class="Emphasis">incremental marginal return curve</span> (IMRC), and then using the increments defined therein to determine the marginal return for variants beyond the number of currently active variants.</li>
+        </ul>
+        <p>The new IMRC is assumed to take the form of an exponentially decreasing function that is fitted using characteristics from the original marginal return curve.</p>
+        <p class="BasicNote">This may artificially overstate the marginal productivity of additional variants added to a segment. Originally, the extension was to hold the last calculated marginal value to project the curve out, but numerous situations were found where the final two values were very close in magnitude, causing very small subsequent marginal values. In general, this calculation is intended to be somewhat conservative when projecting over unknowns.</p>
+        <h3>Intra-style marginal return curve (intra-style MRC)</h3>
+        <p>The <span class="Emphasis">intra-style marginal return curve</span> is a supplemental curve used in tandem with the <span class="Emphasis">inter-style marginal return curve</span> (MRC) to assist in the determination of how placeholder items created during Smart Start should be grouped into collections. For example, crew neck tee in 5 colors or V-neck tee in 3 colors. This portion of the logic will only be relevant for scenarios created in the context of Assortment Planning.</p>
+        <p>In this case, the system indexes each variant according to its rank within its style (with the most productive variant ranking 1, the second ranking 2, etc.). The system then calculates each style’s MRC in the same manner as the Inter-style MRC, except it does not project beyond the calculated values. Once each style’s curve has been calculated, they are combined by taking the marginal value of each variant with similar indices and weighting their contribution by their productivity values.</p>
+        <p>When an index is reached for which there are no values, the same projection procedure used for Intra-style MRCs is used with the following difference: while the Inter-style MRC is entirely recalculated for all variants when extension is needed, the Intra-style curve retains the marginal return increment for existing variants and the exponential curve is only used for the additional variants that necessitated the extension.</p>
+        <div class="Note_BasicNote">Since Collections are an Assortment-Planning-specific organizational structure, this portion of the logic will only be relevant for scenarios created in the context of Assortment Planning.<p>If Collection Option is not set to Multiple Variants Per Collection, then the Intra-style MRC is not needed and is not calculated.</p></div>
+        <p>System policy <span class="Emphasis">Marginal Return Curve Extrapolation</span> sets the number of data points required in a given period for the system to use the original calculated Intra-style MRC in determining the number of recommended choices to assign to each recommended collection. If this minimum is not met, the system calculates a weighted curve based on the original intra-style marginal return curve and a curve calculated at a higher level of the product hierarchy to provide a more accurate recommendation.</p>
+        <h2>Determining recommended variant count</h2>
+        <p>The next step in the process is to generate the output of recommended variant count for each segment/location.</p>
+        <p>First, the system calculates LY Variant Productivity, expressed as the sum of the Active Variant productivity numbers. In conjunction with the Inter-style MRC, the system builds an Expected Volume Curve, which, given the count of LY Active Variants and the LY Variant Productivity, determines the expected volumes for each other variant count.</p>
+        <p>The system calculates the expected volume for the Nth variant count in the curve by taking the LY Variant Productivity and multiplying by the ratio of the entry corresponding to the LY Active Variants in the Inter-style MRC, and the Nth entry.</p>
+        <p class="BasicNote">If LY Active Variant count is 5, and LY Variant Productivity is $1,000, to calculate the expected volume for 4 variants, the system calculates the ratio of the 5th to 4th entries in the Intra-style MRC, and multiplies by $1,000.</p>
+        <p>Once the Expected Volume Curve has been generated, the recommended Variant Count is set equal to the greatest entry for which the expected volume is less than or equal to the TY Act New Sales volume for each segment/cluster.</p>
+        <h2>Determining collection/variant assignments</h2>
+        <p>Once the Interstyle and Intrastyle marginal return curves are calculated and the choice count has been determined, the final step is to determine the number of collections and the number of variants in each collection.</p>
+        <p>Assuming the user has selected the Collection Option Multiple Variants Per Collection, a marginal return matrix is calculated in which each entry is a product of the Interstyle and Intrastyle curves. The top N entries in the matrix are then chosen where N=choice count. The chosen entries then represent the number of collections and variants per collection. Each row represents a collection and each column represents a variant within that collection.</p>
+    </body>
+</html>

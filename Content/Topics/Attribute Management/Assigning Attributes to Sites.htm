@@ -1,0 +1,35 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" xml:lang="en-us">
+    <head><title></title>
+    </head>
+    <body>
+        <h1>Assigning attributes to sites</h1>
+        <p>Product attributes are assigned to sites using the <span class="Emphasis">Site Attribute Management</span> tab in Site Manager.</p>
+        <p>
+            <img src="../../Resources/Images/Attribute Management/Assigning Attributes to Sites.png" class="LargeImages" />
+        </p>
+        <p>Site Manager is structured and functions very similarly to Variant Manager. Specify a site filter or select specific sites from a site filter to create a document in which to work with those sites.</p>
+        <p>Select sites once a site manager document is open. Details for selected sites appear in the bottom section of the screen.</p>
+        <p>Various aspects of sites can be worked with within a Variant Manager document by clicking the appropriate tab in the <span class="Emphasis">Site</span> section. Click the <span class="Emphasis">Site Attribute Management</span> tab to assign or edit site attributes for selected sites.</p>
+        <p class="BasicNote">Both the upper and lower sections of the view can be toggled on and off by clicking the corresponding buttons in the upper right of the view.</p>
+        <h2>Functionality</h2>
+        <h3>Buttons</h3>
+        <p><span class="Emphasis">Parameters</span> - Shows or hides the Parameters area.</p>
+        <p><span class="Emphasis">Execute</span> - Updates the view according to the selected Site Hierarchy and the selected sites.</p>
+        <h3>Parameters</h3>
+        <p><span class="Emphasis">Site Hierarchy</span>: The site hierarchy for which to assign attributes.</p>
+        <p class="BasicNote">As it is possible to create alternate site hierarchies which contain the same sites, it is also possible to have different attributes assigned to a site across those hierarchies. Ensure the correct site hierarchy is selected before proceeding.</p>
+        <h3>Field descriptions</h3>
+        <ul>
+            <li><span class="Emphasis">Family Name</span>: The name of the attribute family.</li>
+            <li><span class="Emphasis">Family Description</span>: The description for the attribute family.</li>
+            <li><span class="Emphasis">Single Values</span>: The attribute value of the adjacent single-select attribute family for the selected sites. This field shows <span class="Emphasis">(Multi)</span> to indicate when sites are selected that have different attribute values assigned.</li>
+            <li><span class="Emphasis">Multiple Values</span>: The attribute values of the adjacent multi-select attribute family for the selected sites. When multiple sites are selected that have different attribute values assigned, this field shows the combination of all values present.</li>
+        </ul>
+        <h3>Data population</h3>
+        <p>The view populates with all attribute families that any of the selected sites is eligible for. Attribute values available for selection include all values that any of the selected sites is eligible for.</p>
+        <h3>Applying changes across multiple items </h3>
+        <p>&#160;When multiple sites are selected, any conflicts that exist between the applied values and the attribute value eligibility of the sites the change is being applied to are automatically resolved. 
+		<ul><li>Single-select attribute value changes are applied to all sites that are eligible for them. Ineligible sites remain unchanged.</li><li>Multi-select attribute value changes are applied additively to sites that are eligible for them. If only some of the applied values are eligible, those are applied. Ineligible sites remain unchanged.</li></ul></p>
+    </body>
+</html>

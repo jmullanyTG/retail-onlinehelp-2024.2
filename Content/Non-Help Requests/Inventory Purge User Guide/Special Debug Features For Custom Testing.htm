@@ -1,0 +1,107 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head>
+    </head>
+    <body>
+        <h1>Special Debug Features For Custom Testing</h1>
+        <p>The call-signature for each inventory.Purge% procedure includes <code>@Debug tinyint = NULL</code></p>
+        <p>Under normal circumstances, this parameter is omitted when running the utility from Job Manager.</p>
+        <p>For development, especially because the utility’s actions are destructive, several <code>@Debug</code> values are available.</p>
+        <h2>Cautionary Notes</h2>
+        <ol>
+            <li>
+                <p>It is <span class="EmphasisItalic">IMPOSSIBLE</span> to successfully run the utility under a SQL Session bounded by a <code>BEGIN TRANSACTION</code> and <code>ROLLBACK</code>.  This is because the Scheduler Service is run on the App Tier, and a SQL Transaction precludes correct functioning of the SQL-code interfacing with that Service.  The Scheduler initiates separate SPIDs in SQL for each of the four possible parallel queues.  This architecture means that any debug information or result-sets originated from the queued procedure code cannot be returned to the SQL Session initiating the Purge Utility.  To accommodate this, see Debug 254, below.</p>
+            </li>
+            <li>
+                <p>Batched <code>UPDATE</code> and <code>DELETE</code> loops may be changed using the <span class="Emphasis">optional</span> <code>@BatchSizeForDebug</code> parameter, which is a <code> tinyint</code> to preclude batch-size abuse!</p>
+            </li>
+            <li>
+                <p>When Debug 255 is used, <code>inventory.PurgeLog</code> Message content reporting the rows acted upon, will show a multiple of the debug batch size when batching has been overridden.  This is not a bug -- the utility does not waste resources attempting to quantify an exact row count for <span class="EmphasisItalic">REPORT-ONLY</span> executions.</p>
+            </li>
+        </ol>
+        <h2>Assumptions
+</h2>
+        <p>The person tasked with developing Custom code and testing it in the context of the Purge utility is assumed to be very knowledgeable with SSMS and T-SQL querying.  The narrative below will not accommodate those lacking such expertise.</p>
+        <h2>Usages and Sample Scripts</h2>
+        <h3>Debug 1</h3>
+        <p>The utility will run as if no debug setting were in use, meaning that destructive actions will occur.  Debug-oriented information in the form of Messages, Application Log entries, and intermediate result-sets will be exhibited.
+
+If executing the Controller, only Controller and Scheduler Interface debug information in the form of Messages and intermediate result-sets will be seen in SSMS.</p>
+        <p>The utility will run as if no debug setting were in use, meaning that destructive actions will occur.  Debug-oriented information in the form of Messages, Application Log entries, and intermediate result-sets will be exhibited.</p>
+        <h4>Debug A Single Batch</h4>
+        <p>If executing the Single Batch Handler, effectively simulating a single Scheduler-initiated SPID, we strongly recommend using the test script below, having first successfully run the Controller using Debug 254 (see below), and ensuring that the script is bounded by a <code>BEGIN TRAN</code> and <code>ROLLBACK</code>.  Messages and intermediate result-sets from the Inventory procedure, and those it calls, will be returned to SSMS.</p>
+        <p>The latter is strongly recommended as the way to test Custom Procedural Code, and Custom Step actions.</p>
+        <p>The person running the test will need to acquire a InventoryID from those under the Active Batch – use the <span class="EmphasisItalic">Monitoring</span> script above.  <span class="Emphasis">The script uses 255 because this script can be used for all</span> <code>@Debug</code> <span class="Emphasis">values when testing for a single Inventory.</span><![CDATA[  ]]><span class="Emphasis">Make sure to set this script’s</span> <code>@BatchSize_ThisRun</code> to the size reported in the Application Log, containing the string <code>Batches This Run</code>:</p>
+        <MadCap:codeSnippet>
+            <MadCap:codeSnippetCopyButton />
+            <MadCap:codeSnippetBody MadCap:useLineNumbers="False" MadCap:lineNumberStart="1" MadCap:continue="False" xml:space="preserve">BEGIN TRAN;
+
+DECLARE @Debug             tinyint  = 255 -- Use 255 FIRST, to get Row Counts and ensure Steps all get run.
+      , @Now               datetime = GETDATE()
+      , @RunID             int
+      , @BatchID           int      = 20
+      , @BatchSize_ThisRun int      = 4500;
+
+SELECT Now = @Now;
+
+SELECT @RunID = pr.RunID
+  FROM inventory.PurgeRun pr
+ WHERE pr.RowStatusID = 1;
+
+EXECUTE inventory.Purge_SingleBatchHandler @UserID = 1
+                                         , @RunID = @RunID
+                                         , @BatchID = @BatchID
+                                         , @ExecutionSequenceNumber = 1010
+                                         , @RunTerminationDateTime = '2050-01-01 00:00:00'
+                                         , @BatchSize_ThisRun = @BatchSize_ThisRun
+                                         , @Debug = @Debug;
+
+SELECT *
+  FROM inventory.PurgeRun pr
+ WHERE pr.RunID = @RunID;
+
+SELECT *
+  FROM inventory.PurgeRun_Batch prb
+ WHERE prb.RunID = @RunID
+ ORDER BY prb.BatchID;
+
+SELECT *
+  FROM inventory.PurgeRun_Batch_Step pbps
+ WHERE pbps.RunID = @RunID
+ ORDER BY pbps.BatchID
+        , pbps.ExecutionSequenceNumber;
+
+SELECT *
+  FROM inventory.PurgeLog
+ WHERE RunID = @RunID
+ ORDER BY RunID
+        , CreatedWhen
+        , SPID
+        , ExplicitUniquifier;
+
+SELECT tal.LogDate
+     , tal.LogText
+  FROM dbo.tbl_ApplicationLog tal WITH(NOLOCK)
+ WHERE tal.LogDate &gt;= @Now
+   AND tal.LogText LIKE N'%inventory.Purge%'
+ ORDER BY tal.ApplicationLogID;
+
+ROLLBACK;</MadCap:codeSnippetBody>
+        </MadCap:codeSnippet>
+        <h3>Debug 2</h3>
+        <p>Acts in the same way as Debug 1, but emits an informational message per loop of an <code>UPDATE</code> or <code>DELETE</code> DML operation.  <span class="Emphasis">Do not use this setting unless VERY LOW DATA VOLUMES are present, as SSMS can be overwhelmed!</span></p>
+        <h3>Debug 254</h3>
+        <p>This setting ensures execution of the utility’s pre-Scheduler code, but no items are sent to the Scheduler to process.
+
+</p>
+        <p>This mode sets up a Batch and all the Inventory and Step tables for a new run.  Upon completion, the content of those tables remains intact so that the Single Inventory Handler, as shown in the Debug 1 script above, replete with <code>BEGIN TRAN</code> and <code>ROLLBACK</code>, can be executed repetitively to test both Custom Steps and Custom Procedural Delete handlers.
+
+</p>
+        <p>The utility was developed using Debug 254 because it is non-destructive and facilitates the emission of detailed debug information.  It is <ins>THE</ins> recommended Custom development approach, followed by Debug 255, then Debug 1.</p>
+        <h3>Debug 255</h3>
+        <p>Execute the full utility, but in place of destructive DML being executed, and bypassing the called procedure within each Procedural Code Wrapper, the actions that will be taken are reported to the Application Log and are recorded in the <code>inventory.PurgeLog</code>.  The start and end date-time <span class="EmphasisItalic">progress</span> columns are updated but note the final few lines of the sample Debug 1 script, above.
+
+</p>
+        <p>We recommend that in a testing environment, for each run of the utility using Debug 255, the utility’s run-time tables be cleared out and the inventory.PurgeBatch table re-seeded.  Again, this was the approach taken during development of the utility, and is recommended.</p>
+    </body>
+</html>

@@ -1,0 +1,146 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head>
+        <link href="../../Resources/TableStyles/standard.css" rel="stylesheet" MadCap:stylesheetType="table" />
+    </head>
+    <body>
+        <h1>Pushing data from Assortment plans to Allocation strategies</h1>
+        <p>Users working within both Allocations and Assortment Planning can push Assortment plan data to Allocations. This
+significantly improves the alignment of Assortment and Allocation strategies within business teams.
+</p>
+        <h2>Determine a link items' eligibility
+</h2>
+        <p>
+The main entity used to link a placeholder and allocation strategy line is the Variant entity.  A placeholder and strategy line with the same variant can be linked with the following conditions.</p>
+        <h3>Allocation Strategy requirements</h3>
+        <ul>
+            <li>
+                <p>the strategy must already exist as strategies are not created by AP.</p>
+            </li>
+            <li>be assigned a variant<p class="BasicNote">In Allocations, multiple strategies can exist for a single variant, even though this is not standard behavior.  If this is the case, AP pushes assortment data to all variant strategies, duplicating data. </p></li>
+            <li>
+                <p>is a Level type strategy line, not a Group type</p>
+            </li>
+            <li>
+                <p>is Active</p>
+            </li>
+            <li>
+                <p>is not <span class="Emphasis">Replen</span> type</p>
+            </li>
+        </ul>
+        <h3>Placeholder requirements
+</h3>
+        <ul>
+            <li>
+                <p>be in Committed status
+
+ </p>
+            </li>
+            <li>
+                <p>have Phase In in the future</p>
+            </li>
+        </ul>
+        <h2>Linking placeholders and strategies
+</h2>
+        <p>In the <span class="Emphasis">Setting Source</span> field in the <span class="Emphasis">Allocation Strategy</span> grid, select <span class="Emphasis">Assortment Planning</span>.</p>
+        <p>
+Once <span class="Emphasis">Setting Source</span> is set to <span class="Emphasis">Assortment Planning</span> and all other eligibility requirements are met, then the checkbox in the <span class="Emphasis">Alloc Strategy</span> field in the main planning view displays a check mark.  This indicates a valid strategy exists that can be linked to the placeholder.  
+
+In the <span class="Emphasis">Status</span> field, set the placeholder status to <span class="Emphasis">Allocation</span>.  Upon saving, this establishes a formal link between the placeholder and strategy.
+
+</p>
+        <p>Allocation status considerations: 
+		</p>
+        <ul>
+            <li>
+                <p>Placeholders in <span class="Emphasis">Allocation</span> status behave the same way as in <span class="Emphasis">Committed</span> Status. All fields are still editable before phase in, and some fields are editable after phase in.
+</p>
+            </li>
+            <li>
+                <p>Filters can be created for items in <span class="Emphasis">Allocation</span> status.</p>
+            </li>
+            <li>
+                <p>
+A collection’s status is shown as the most advanced status for all placeholders in the collection.  <span class="Emphasis">Replen</span> is the most advanced followed by <span class="Emphasis">Allocation</span>, <span class="Emphasis">Committed</span>, <span class="Emphasis">Assigned</span>, <span class="Emphasis">Created</span>, <span class="Emphasis">Open</span>. For example, if a collection has placeholders in each status, the collection status is <span class="Emphasis">Replen</span>. If it has placeholders in all statuses but <span class="Emphasis">Replen</span>, then the status is <span class="Emphasis">Allocation</span>, and so on.</p>
+            </li>
+            <li>
+                <p>
+
+The status can be changed to <span class="Emphasis">Allocation</span> even if the <span class="Emphasis">Alloc Strategy</span> column is not checked. However, this operation is unnecessary as no Allocation Strategy exists. </p>
+            </li>
+        </ul>
+        <h2>Unlinking placeholders and strategies</h2>
+        <p>  
+
+Allocators can unlink strategies from AP pushes by setting <span class="Emphasis">Setting Source</span> back to <span class="Emphasis">Allocation</span>. This disables pushes for the matched placeholder.
+</p>
+        <h2>Pushing AP data to linked strategy lines in Allocations
+</h2>
+        <p>AP data is pushed to linked strategy lines by selecting the <span class="Emphasis">Push Allocations</span> option under <span class="Emphasis">Alloc</span> in the <span class="Emphasis">Process Queue</span> dropdown menu. The <span class="Emphasis">Process Queue</span> button is found in the toolbar of the main planning view.</p>
+        <p>The data push will queue for placeholders in <span class="Emphasis">Allocation</span> status currently visible in the main planning view at the time the push is initiated, but will include all data for those variants, whether or not it is currently shown.  </p>
+        <p>This means that if a variant is assorted to more than what is visible on the main planning view (i.e. other cluster sets or other placeholders mapped to the same variant excluded by current filters), that data will also push to the allocation strategy at the same time.  </p>
+        <p class="BasicNote">This breaches security for user rights, since it is possible that users without access to certain product/site levels will have the ability to push that data to Allocation. For example, a user only has access to the USA cluster set, and so only sees the placeholder’s USA assortment, but the variant is assorted to the CAN cluster set as well.  When the USA user clicks <span class="Emphasis">Push</span>, all data, including data for the Canada cluster sets, is pushed to the strategy.  A message displays indicating this case if it arises.
+
+</p>
+        <p>After a successful push, the <span class="Emphasis">Last Alloc Push</span> column displays the last push date and time.  The Notifications module notifies the user who initiated the push, as well as the user who last modified the strategy.
+</p>
+        <h2>Knowing when to push changes to Allocations<![CDATA[
+]]></h2>
+        <MadCap:snippetBlock src="../../Resources/Snippets/Alloc Status field status changes.flsnp" />
+        <p class="BasicNote">There is no scheduled AP to Allocations push in the standard application, but it can be built using the standard workflow queue task.</p>
+        <h2>What data is pushed
+</h2>
+        <MadCap:snippetBlock src="../../Resources/Snippets/Data pushed from AP to Allocations.flsnp" />
+        <h2>What data is not pushed to Allocations</h2>
+        <MadCap:snippetBlock src="../../Resources/Snippets/Data NOT pushed from AP to Allocations.flsnp" />
+        <h2>What data changes in Allocations
+
+</h2>
+        <ul>
+            <li>
+                <p>
+                    <span class="Emphasis">Location Strategy</span> is automatically set to <span class="Emphasis">(All)</span> meaning all sites.&#160;
+</p>
+                <ul>
+                    <li>
+                        <p>
+Even though the Location Strategy is all sites, not all sites will show in the <span class="Emphasis">Allocations Strategy Location Exception</span> view.&#160; Only the sites that are part of the selected Cluster Set / Cluster combinations display.
+
+</p>
+                    </li>
+                </ul>
+            </li>
+            <li>
+                <p>
+                    <span class="Emphasis">Demand Type</span> is set to <span class="Emphasis">Rate of Sale By Grade</span><![CDATA[
+
+]]></p>
+            </li>
+            <li>
+                <p>Included cluster sets / clusters is determined by variants’ assortments in AP
+
+</p>
+            </li>
+            <li>
+                <p>Site exclusions are copied from AP Location Exceptions
+</p>
+            </li>
+        </ul>
+        <p class="BasicNote">Any other information in the Allocation Strategy or Location Strategy outside of what is outlined here is left alone.</p>
+        <p>
+If an Allocator makes any changes to this, and a Planner pushes AP plan data again, all changes will be overwritten.
+
+</p>
+        <h2>Differences in ROS&#160;values between AP&#160;and Allocations</h2>
+        <p>ROS values may not exactly match between AP and Allocations, because each module uses the main denominators - site count and period count - slightly differently.</p>
+        <p>Cluster set / cluster definitions are defined by Snapshots in both modules.&#160; However, in AP, the snapshot in use is the valid snapshot effective during each period of the life of the item. Which site belongs to which cluster set / cluster can change over time.&#160; In Allocations, the snapshot in use is the one effective during the phase-in date of the strategy, meaning sites belong to only one cluster set / cluster.&#160; </p>
+        <p>This means that AP pushes ROS values for a blended cluster set / cluster definition across the life of the item, but Allocations uses that ROS to determine demand for the cluster set / cluster as defined at phase in, which could lead to under or over allocating.&#160; If this is not desired, the phase periods must be changed to match the effective cluster set snapshots.</p>
+        <h3>Site count</h3>
+        <h4>Closed sites</h4>
+        <p> In AP, a closed site is not included in site counts.&#160; In Allocations, it is included in initial display site counts, and further demand and allocation projection engines exclude closed sites during their processing.</p>
+        <h4>Site exclusions</h4>
+        <p>When a site is excluded in AP, ROS is scaled down using the % contribution of the excluded site, and this is the value displayed in AP.&#160; However, the displayed ROS value in the grid on the <span class="Emphasis">Allocate Cluster Rate of Sale</span> tab in Allocations does not include the site exclusion factor. It is the ROS as if all sites were participating.&#160; This is because the forecast mechanism takes site exclusions into account in its processing and scales the output appropriately.</p>
+        <h3>Period count</h3>
+        <p>AP uses calendars based on periods, and Allocations uses buckets.  If the two calendar systems are completely synchronized, then there should be no discrepancy in the period count divisor for ROS.  However, if there are differences, those differences are reflected in changed ROS values.</p>
+    </body>
+</html>

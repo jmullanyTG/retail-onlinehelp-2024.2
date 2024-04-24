@@ -1,0 +1,96 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head>
+        <link href="../../Resources/TableStyles/standard.css" rel="stylesheet" MadCap:stylesheetType="table" />
+        <link href="../../Resources/TableStyles/standard.css" rel="stylesheet" MadCap:stylesheetType="table" />
+    </head>
+    <body>
+        <h1>System Policies</h1>
+        <p>The following existing system policy was renamed</p>
+        <table style="width: 100%;margin-left: 0;margin-right: auto;mc-table-style: url('../../Resources/TableStyles/standard.css');" class="TableStyle-standard" cellspacing="0" MadCap:autosort="False">
+            <col class="TableStyle-standard-Column-Column1" style="width: 346px;" />
+            <col class="TableStyle-standard-Column-Column2" style="width: 346px;" MadCap:autosortPriority="0" MadCap:autosortDirection="ascending" />
+            <col class="TableStyle-standard-Column-Column1" style="width: 873px;" />
+            <thead>
+                <tr class="TableStyle-standard-Head-Header1">
+                    <th class="TableStyle-standard-HeadE-Column1-Header1">System Policy</th>
+                    <th class="TableStyle-standard-HeadE-Column2-Header1">System Policy Group</th>
+                    <th class="TableStyle-standard-HeadD-Column1-Header1">Updated Description</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyB-Column1-Body1">
+                         Assortment Engine DC-to-Store Lead Time  
+                        <p>is now</p><p>Assortment Engine DC-to-Cluster Lead Time</p></td>
+                    <td class="TableStyle-standard-BodyB-Column2-Body1">Engine: Commitments</td>
+                    <td class="TableStyle-standard-BodyA-Column1-Body1">Default Lead Time Days from the DC to the Cluster that will be used to calculate Next Order Date information.  This will be rounded to the nearest period.</td>
+                </tr>
+            </tbody>
+        </table>
+        <p>The following system policies have been added. </p>
+        <table style="width: 100%;margin-left: 0;margin-right: auto;mc-table-style: url('../../Resources/TableStyles/standard.css');" class="TableStyle-standard" cellspacing="0" MadCap:autosort="False">
+            <col class="TableStyle-standard-Column-Column1" style="width: 346px;" />
+            <col class="TableStyle-standard-Column-Column2" style="width: 346px;" MadCap:autosortPriority="0" MadCap:autosortDirection="ascending" />
+            <col class="TableStyle-standard-Column-Column1" style="width: 873px;" />
+            <thead>
+                <tr class="TableStyle-standard-Head-Header1">
+                    <th class="TableStyle-standard-HeadE-Column1-Header1">System Policy</th>
+                    <th class="TableStyle-standard-HeadE-Column2-Header1">System Policy Group</th>
+                    <th class="TableStyle-standard-HeadD-Column1-Header1">Description</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">Algorithm To Match Static Curve to Placeholder</td>
+                    <td class="TableStyle-standard-BodyE-Column2-Body1">Module: Assortment</td>
+                    <td class="TableStyle-standard-BodyD-Column1-Body1">
+                        This policy determines what mechanism is used to copy a placeholder from like style where the style has a static curve assigned.  The two options are: False - this will keep the same existing static curve that is already copied and assigned to the like style, True - Re-copy the original dynamic curve as a new static curve. 
+                        <p>When creating a new item via hindsight view the newly created item will now utilize the default seasonality curve assigned to the placeholder’s product hierarchy level or the default value of the pruduct/cluster</p></td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">Assortment Engine Supplier-to-DC Lead Time</td>
+                    <td class="TableStyle-standard-BodyE-Column2-Body1">Engine: Commitments</td>
+                    <td class="TableStyle-standard-BodyD-Column1-Body1">Default Lead Time Days from the Supplier to the DC that is used to determine eligible receipt dates.  This will be rounded to the nearest period.
+Default value is 7.</td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">Attribute Display</td>
+                    <td class="TableStyle-standard-BodyE-Column2-Body1">Module: Assortment</td>
+                    <td class="TableStyle-standard-BodyD-Column1-Body1">Determines which fields to show in the attributes columns. 0 - Description, 1 - Code, 2 - Code and Description</td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">Config: Code/Description Display</td>
+                    <td class="TableStyle-standard-BodyE-Column2-Body1">Module: Target Choice&#160;Count</td>
+                    <td class="TableStyle-standard-BodyD-Column1-Body1">
+                        This policy describes how to display properties that have a code and description option, like hierarchy levels or attributes.
+
+ 
+                        <p>The options are: </p><ul><li><p>
+
+Code
+
+</p></li><li><p>Description
+
+</p></li><li><p>Code (Description)
+ (e.g. COH001 (Auburn))</p></li><li><p>Description (Code)
+(e.g. Auburn (COH001))</p></li></ul><p>The default is <span class="Emphasis">Code</span>.</p></td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">Enable VAT Conversion In AUT Calculation</td>
+                    <td class="TableStyle-standard-BodyE-Column2-Body1">Module: Assortment</td>
+                    <td class="TableStyle-standard-BodyD-Column1-Body1">
+                         Determines whether to use VAT rate conversion steps when deriving currency-specific AUT values from the given home AUT value. 
+                        <p>The default is <span class="Emphasis">True</span>.</p></td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyB-Column1-Body1">Price Conversion Method</td>
+                    <td class="TableStyle-standard-BodyB-Column2-Body1">Module: Assortment</td>
+                    <td class="TableStyle-standard-BodyA-Column1-Body1">
+                         Determines which Price Conversion Method to use when deriving currency-specific AUT values from the given home AUT value. 1 - Will use the original Price Exception method only, 2 - Will use the Price Matrix method only, 3 - Will use neither method.</td>
+                </tr>
+            </tbody>
+        </table>
+        <p MadCap:conditions="General.DoNotPublish">The following system policies have been deprecated: </p>
+    </body>
+</html>

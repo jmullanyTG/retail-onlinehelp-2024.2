@@ -1,0 +1,47 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" xml:lang="en-us">
+    <head>
+        <title>
+        </title>
+    </head>
+    <body>
+        <h1>Configuring the export of promotions</h1>
+        <p>The <span class="Emphasis">Export Maintenance</span> view provides the ability to configure the Promotions export. The screen is grouped into two areas: <span class="Emphasis">Exportable Statuses</span> and <span class="Emphasis">Export Configuration</span>. <span class="Emphasis">Export Configuration</span> consists of the definition of the export process and which columns should be exported for each process.</p>
+        <p>
+            <img src="../../Resources/Images/Promotion Management/Export Maintenance.png" class="LargeImages" />
+        </p>
+        <h2>Exportable statuses</h2>
+        <p>When an export will occur is determined using the <span class="Emphasis">Exportable Statuses</span> grid. Only those Promotions and Events with a status that is considered exportable triggers an export. All statuses are dynamically displayed based on the statuses defined in the Workflow solution.</p>
+        <p>
+            <img src="../../Resources/Images/Promotion Management/Exportable Statuses.png" class="LargeImages" />
+        </p>
+        <p>To identify a status as exportable, select the checkbox in the <span class="Emphasis">Exportable</span> column of the status and click <span class="Emphasis">Save</span>.</p>
+        <h2>Export configuration</h2>
+        <p>Exports are configured by specifying the process used to export data in the Export Definition and, if necessary, the associated columns to be exported in Export Columns. All exports defined in Export Definition are run when an export is triggered.</p>
+        <h2>Create a new export configuration</h2>
+        <p>For information on creating an export configuration, see:</p>
+        <ul>
+            <li>
+                <p>
+                    <MadCap:xref href="../Promotion Management/Export definition.htm">Defining an export process for Promotion export</MadCap:xref>
+                </p>
+            </li>
+            <li>
+                <p>
+                    <MadCap:xref href="../Promotion Management/Export columns.htm">Creating an Export Configuration for Promotion export</MadCap:xref>
+                </p>
+            </li>
+        </ul>
+        <h2>Modify an export configuration</h2>
+        <p>Modifications can be made directly to the <span class="Emphasis">Export Definition</span> and <span class="Emphasis">Export Columns</span> grids. Click <span class="Emphasis">Save</span> above the applicable grid to save any modifications. Click <span class="Emphasis">Cancel</span> to discard any modifications. </p>
+        <p>To indicate an Export Definition is temporarily inactive, clear the <span class="Emphasis">Active Flag</span> column and click <span class="Emphasis">Save</span>.</p>
+        <h2>Delete an export configuration</h2>
+        <p>Deletions can be made directly to the <span class="Emphasis">Export Definition</span> and <span class="Emphasis">Export Columns</span> grids. Deleting a Export Definition row automatically deletes the associated columns in the <span class="Emphasis">Export Columns</span> grid.</p>
+        <h2 MadCap:conditions="General.ScreenOnly">Related topic</h2>
+        <ul MadCap:conditions="General.ScreenOnly">
+            <li>
+                <a href="../Promotion Management/Process Flow.htm">Promotion API Export Data Specification</a>
+            </li>
+        </ul>
+    </body>
+</html>

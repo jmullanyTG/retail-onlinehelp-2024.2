@@ -1,0 +1,47 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" xml:lang="en-us">
+    <head><title></title>
+    </head>
+    <body>
+        <h1>FC vs LY demand variance exceptions</h1>
+        <p>The FC vs LY Demand Variance exception flags level forecasts when the forecast (FC) for the next 3 periods is exceedingly above or below the item's sales history for the same periods last year (LY). </p>
+        <h2>Formula </h2>
+        <p>This exception is based on the variance in demand (calculated as a percentage) between the upcoming and last year periods. The formula for determining the percentage of demand variance is: </p><pre xml:space="preserve"><code>(Forecast - LY Demand History) / LY Demand History</code></pre>
+        <p>Where:</p>
+        <ul>
+            <li><pre><code>Forecast</code></pre>The sum of <span class="Emphasis">Effective Forecast</span> quantities for the upcoming number of periods (default is 3 periods).</li>
+            <li><pre><code>LY&#160;Demand History</code></pre> The sum of <span class="Emphasis">Total Sales</span> quantities for the same number of periods in the previous year (counted as 52 weeks prior to the upcoming periods).</li>
+        </ul>
+        <p>A positive value resulting from this calculation occurs when the forecast for the upcoming periods is greater than the demand for the same periods last year. A negative value occurs when the forecast for the upcoming periods is less than the demand for the same periods last year. </p>
+        <p>Whether the resulting value constitutes an exception depends on the variance threshold defined in the exception filters. </p>
+        <ul>
+            <li>The default number of periods examined for this exception is 3 and includes the current period. </li>
+            <li>If either the <pre><code>Forecast</code></pre>or <pre><code>LY Demand History</code></pre> value is equal to zero, the variance percentage will equal 100%. </li>
+        </ul>
+        <h2>Examples</h2>
+        <h3>Upcoming demand is too high</h3>
+        <p>This example shows an over-forecast exception, which is a forecast where the upcoming demand is determined to be too high when compared to the demand history for the same periods last year. </p>
+        <p>
+            <img src="../../Resources/Images/Exceptions/Forecasting/Example - ly over.png" class="LargeImages" />
+        </p>
+        <h3>Upcoming demand is too low</h3>
+        <p>This example shows an under-forecast exception, which is a forecast where the upcoming demand is determined to be too low when compared to the demand history for the same periods last year:</p>
+        <p>
+            <img src="../../Resources/Images/Exceptions/Forecasting/Example - ly under.png" class="LargeImages" />
+        </p>
+        <h2>Filter conditions</h2>
+        <p>To filter for forecasts with FC vs LY&#160;Demand <i>over-forecast</i> exceptions</p>
+        <p>Select the following from the <span class="Emphasis">Level Forecast Exceptions</span> field group:</p>
+        <ul>
+            <li><span class="Emphasis">Level Forecast Forecast LY Sales Ratio</span> is more or equal to <span class="Emphasis">3</span> (or whatever positive percentage value is to be the threshold).</li>
+            <li><span class="Emphasis">Level Forecast Reviewed</span> is <span class="Emphasis">False</span>.</li>
+        </ul>
+        <p>To filter for forecasts with FC vs LY&#160;Demand <i>under-forecast</i> exceptions</p>
+        <ul>
+            <li><span class="Emphasis">Level Forecast Forecast LY Sales Ratio</span> is smaller or equal to <span class="Emphasis">-0.75</span> (or whatever negative percentage value is to be the threshold).</li>
+            <li><span class="Emphasis">Level Forecast Reviewed</span> is <span class="Emphasis">False</span>.</li>
+        </ul>
+        <h2>Reviewing and resolving FC vs LY&#160;Demand exceptions</h2>
+        <p>For more information on how to review and resolve forecast exceptions, see <MadCap:xref href="Reviewing Forecast Exceptions.htm">Reviewing forecast exceptions</MadCap:xref>.</p>
+    </body>
+</html>

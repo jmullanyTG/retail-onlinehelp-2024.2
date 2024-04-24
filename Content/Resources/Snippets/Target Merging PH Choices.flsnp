@@ -1,0 +1,127 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head>
+    </head>
+    <body>
+        <p>The <span class="Emphasis">Target Choices By Update</span> view lets users select which segments and locations to view.  </p>
+        <p>
+            <img src="../Images/Target Choice Count/Target Choice By Update.png" class="LargeImages" />
+        </p>
+        <p>The toolbar has the following functionality:</p>
+        <ul>
+            <li>
+                <p><span class="Emphasis">Merge Choices</span>: Attempts to merge a choice from one update to a choice from another update, so that the two (or more) choices become a single, long-living choice entity.</p>
+                <ul>
+                    <li>
+                        <p>Choices from multiple updates can be selected at the same time.</p>
+                    </li>
+                    <li>
+                        <p>Only one choice (per segment) can be chosen per update, e.g. Choice A and Choice B from the same update cannot be merged together.</p>
+                    </li>
+                    <li>
+                        <p>Choices must span a continuous range of time, e.g. a choice from Update 1 and Update 3 cannot be merged unless a choice from Update 2 is also included.</p>
+                    </li>
+                    <li>
+                        <p>When choices are merged, the collection / choice in collection assignment of the first update is retained.</p>
+                    </li>
+                </ul>
+            </li>
+            <li>
+                <p><span class="Emphasis">Split Choice</span>: Splits any merges done on a choice back into separate results.  This operation can be done over several selected rows at once.</p>
+            </li>
+            <li>
+                <p><span class="Emphasis">Auto-Merge</span>: Attempts to automatically merge all choices for the selected rows' Collections and Choice In Collections.  e.g. if Collection 1, Choice 2 is chosen, then the system searches for any unmerged Collection 1 / Choice 2 choices across all updates and merge them together.  This operation can be done over several selected rows at once (e.g. select Collection 1 / Choice 1 - 5 and Collection 2 / Choice 1 - 4).</p>
+            </li>
+            <li>
+                <p><span class="Emphasis">Undo All</span>: Returns the screen to its original state. In other words, it splits all merges.</p>
+            </li>
+        </ul>
+        <p>The <span class="Emphasis">Scenario Summary</span> section shows aggregate metrics for all updates across the segments. </p>
+        <p>
+            <img src="../Images/Target Choice Count/Scenario Summary.png" class="LargeImages" />
+        </p>
+        <p> The metrics included are:</p>
+        <ul>
+            <li>
+                <p><span class="Emphasis">Pareto Choices</span>: A Pareto % of Comparison Active choices.  It is meant to be used as a guidepost for the scenario’s TY New choices. Ideally, the choice count for comparison and the current scenario should be aligned.</p>
+            </li>
+            <li>
+                <p><span class="Emphasis">TY Act New Choices</span>: The sum of all choices across all updates for the segment and location.</p>
+            </li>
+            <li>
+                <p><span class="Emphasis">Comparison Avg Periods in Phase</span>: The average span of time for which choices were active in comparison data.  It can be thought of as the average lifespan of historical items.  It can be used as a guidepost against the Avg Periods in Phase for the current scenario. In most cases, the two values should be similar.</p>
+            </li>
+            <li>
+                <p><span class="Emphasis">TY Act New Avg Periods in Phase</span>: The average span of time for which choices will be active in the current scenario.</p>
+            </li>
+        </ul>
+        <p>The Pareto % to use can be set in two place, via: </p>
+        <ul>
+            <li>
+                <p>system policy <span class="Emphasis">Rationalize: Pareto Threshold</span> which is the default value when set, or </p>
+            </li>
+            <li>
+                <p>the <span class="Emphasis">Segment Definitions</span> view.</p>
+                <p>
+                    <img src="../Images/Target Choice Count/Segment Definitions Pareto.png" class="LargeImages" />
+                </p>This threshold answers the question, “In history, what number of variants were required to achieve x% of the total target productivity?”  This is meant to be an estimate against which scenario results can be compared.  If the scenario were to achieve 95% of the target, how many total choices are necessary?</li>
+        </ul>
+        <p>The <span class="Emphasis">Update Refresh Rate</span> section shows aggregate metrics for each update.</p>
+        <p>
+            <img src="../Images/Target Choice Count/Update Refresh Rate.png" class="LargeImages" />
+        </p>
+        <p>This section displays:</p>
+        <ul>
+            <li>
+                <p><span class="Emphasis">TY Act New Choices</span>: the recommended and/or the user’s specified choices counts for the update</p>
+            </li>
+            <li>
+                <p><span class="Emphasis">New Choices In Update</span>, <span class="Emphasis">Update % New Choices</span>: of the TY Act New Choices count, how many are phasing in during this Update’s period of time</p>
+                <p class="BasicNote">This value is always 100% in the first update because all choices are first phasing in during this update.</p>
+            </li>
+            <li>
+                <p><span class="Emphasis">Ongoing Choices In Update</span>, <span class="Emphasis">Update % Ongoing Choices</span>: of the TY Act New Choices count, how many are continuing to be in phase from a previous Update</p>
+            </li>
+        </ul>
+        <p>The <span class="Emphasis">Sales By Update</span> provides the primary mechanism for joining results from separate updates together.  The action is done by clicking on rows.  Separate results for different updates can be clicked and then the view actions can be selected:</p>
+        <p>
+            <img src="../Images/Target Choice Count/Sales By Update.png" class="LargeImages" />
+        </p>
+        <ul>
+            <li>
+                <p><span class="Emphasis">Collection Num</span>: the Collection Number as defined by the rationalization Marginal Return Matrix.  This number series restarts for each Update (e.g. Update 1 has Collections 1 - 5, Update 2 has Collections 1 - 4)</p>
+            </li>
+            <li>
+                <p><span class="Emphasis">Unique Coll In Segment</span>: (hidden by default) the Collection Number made unique across the whole segment, continuing incrementing across Updates (e.g. Update 1 has Collections 1 - 5, Update 2 has Collections 6 - 9)</p>
+            </li>
+            <li>
+                <p><span class="Emphasis">Choice In Collection</span>: the numeric choice per collection</p>
+            </li>
+            <li>
+                <p><span class="Emphasis">Unique ID In Segment</span>: (hidden by default) the number counter for all choices across the whole segment</p>
+            </li>
+            <li>
+                <p><span class="Emphasis">Unique ID In Update</span>: (hidden by default) the number counter for all choices in an update, restarting from 1 for each update</p>
+            </li>
+            <li>
+                <p><span class="Emphasis">Locations</span>: comma-separated list of all locations to which the choice will be assorted</p>
+            </li>
+            <li>
+                <p><span class="Emphasis">Phase Periods</span>: the periods in which the choice will be in phase after Smart Start</p>
+            </li>
+            <li>
+                <p><span class="Emphasis">Update Rank</span>: the numerical order of results in each update, from strongest performer to least</p>
+            </li>
+            <li>
+                <p>Sales U / Sales $: the Target sales value for the choice</p>
+            </li>
+            <li>
+                <p>ROS U / ROS $ (hidden by default): the ROS values for the choice</p>
+            </li>
+        </ul>
+        <p>The <span class="Emphasis">Choice Phase Calendar</span> section has many of the same organizational fields as the <span class="Emphasis">Sales By Update</span> section.  This section shows a calendar representation of the phase dates for each choice.  To filter on “what choices are in phase during this week,” the text “In Phase” is provided.</p>
+        <p>
+            <img src="../Images/Target Choice Count/Choice Phase Calendar.png" class="LargeImages" />
+        </p>
+    </body>
+</html>

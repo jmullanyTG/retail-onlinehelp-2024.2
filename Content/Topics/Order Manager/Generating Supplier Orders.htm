@@ -1,0 +1,45 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head />
+    <body>
+        <h1>Generating supplier orders</h1>
+        <p>Supplier orders are orders the application recommends placing with suppliers to ensure there is enough inventory at sites to meet anticipated demand. In a typical supply chain, supplier orders are used to stock DCs. Distribution orders can then be generated to distribute inventory to stores.</p>
+        <p>For more information, see <MadCap:xref href="Generating Distribution Orders.htm">Generating distribution orders</MadCap:xref>.</p>
+        <h2>Setup</h2>
+        <p>The following objects should be set up before generating supplier orders:</p>
+        <ul>
+            <li>a filter that includes the items and sites to generate orders for.</li>
+            <li>the supply chain to use.</li>
+            <li>demand forecasts for the items to distribute.</li>
+            <li>stocking strategies for the items to distribute.</li>
+        </ul>
+        <h2>To generate a supplier order</h2>
+        <ol>
+            <li>From the <span class="Emphasis">Execute</span> tab, click <span class="Emphasis">Order Manager</span>.</li>
+            <li>In the Order toolbar, click <span class="Emphasis">Supplier</span>.</li>
+            <li>
+                <p>In the Items dialog box, select the filter with the items and sites to generate orders for.</p>
+            </li>
+            <li>
+                <p>In the <span class="Emphasis">Add Supplier Order</span> dialog box, enter the parameters for the order.</p>
+                <p>
+                    <img src="../../Resources/Images/Order Manager/Order Add Supplier Order.png" class="LargeImages" />
+                </p>
+            </li>
+            <li>
+                <p>Click <span class="Emphasis">Ok</span>.</p>
+                <p class="BasicNote">&#160;The recommended orders are calculated and display on the screen. Each row represents a separate recommended order, and contains basic details of the order.</p>
+                <p>
+                    <img src="../../Resources/Images/Order Manager/Order Supplier Result.png" class="LargeImages" />
+                </p>
+            </li>
+        </ol>
+        <p>Double-click rows to view the demand forecast, stocking strategy, stock holding projection, and other details that drove the order recommendation.</p>
+        <p class="BasicNote">Alternatively, click the <span class="Emphasis">Details</span> button to view or hide the details section.</p>
+        <p>
+            <img src="../../Resources/Images/Order Manager/Order Supplier Order Details.png" class="LargeImages" />
+        </p>
+        <h2>Results</h2>
+        <p>The order follows a company's authorization workflow. Once authorized,  the order is sent to an ERP for processing. </p>
+    </body>
+</html>

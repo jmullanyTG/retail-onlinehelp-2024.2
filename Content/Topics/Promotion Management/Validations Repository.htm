@@ -1,0 +1,102 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" xml:lang="en-us">
+    <head>
+        <link href="../../Resources/TableStyles/standard.css" rel="stylesheet" MadCap:stylesheetType="table" />
+        <title>
+        </title>
+    </head>
+    <body>
+        <h1>Validations Repository</h1>
+        <p>The <span class="Emphasis">Validation Repository</span> section displays all the validations available to be included in Validation sets. A validation cannot be deleted from the repository while it is being used in an active set.</p>
+        <p>
+            <img src="../../Resources/Images/Promotion Management/Validations library.png" class="LargeImages" />
+        </p>
+        <h2>Creating validation rules</h2>
+        <p>Within the <span class="Emphasis">Validations</span> tab, click <span class="Emphasis">New</span> in the <span class="Emphasis">Validation Repository</span> grid toolbar to create a new validation rule. Complete the required fields and click <span class="Emphasis">Save</span>.</p>
+        <h2>Modifying validation rules</h2>
+        <p>Modifications are made directly to the grid. </p>
+        <h2>Deleting validation rules</h2>
+        <ol>
+            <li>Select a validation in the <span class="Emphasis">Validation Repository</span> grid and click <span class="Emphasis">Delete</span>. </li>
+            <li>
+                <p>Click <span class="Emphasis">Yes</span> to confirm.</p>
+                <p class="BasicNote">&#160;The validation is removed from the grid.  </p>
+            </li>
+        </ol>
+        <h2>Field descriptions</h2>
+        <table class="TableStyle-standard" cellspacing="0" style="mc-table-style: url('../../Resources/TableStyles/standard.css');">
+            <thead>
+                <tr class="TableStyle-standard-Head-Header1">
+                    <th class="TableStyle-standard-HeadE-Column1-Header1">Field</th>
+                    <th class="TableStyle-standard-HeadD-Column2-Header1">Description</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">
+                        Name                    </td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">A descriptive label to summarize the purpose of the validation. This identifies the validation when creating validation sets.
+                    </td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">
+                        Description (Optional)
+                    </td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">A summary of the validation.
+                    </td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">Type                     </td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">
+                         When the validation will be run in relation to the calculation. Select the <span class="Emphasis">Post</span> option from the dropdown menu.
+<span class="Emphasis">Post</span> should be selected in all cases and will run the validation after price and cost retrieval and Calculations have been run.  
+                        <p class="BasicNote"><span class="Emphasis">Pre</span> and <span class="Emphasis">Both</span> are not yet available. They are to be developed as future functionality.              </p></td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">Level                     </td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">
+                        Select a level from the populated dropdown. All levels act on the Site Cluster level.
+                        <ul><li>Promotion Level – To be developed as future functionality. For now, selecting this option means that Calculations perform at the Promotion Group level.</li><li>Promotion Aggregate Level – Calculations perform at the Promotion Group level.</li><li>Group Level – Calculations perform at the Product Group level.</li><li>Product Level - Calculations perform at the Product level.</li></ul><ul><li>Item Level – Calculations perform at the Item Master Level.</li><li>Variant Level – Calculations perform at the Variant Level.</li></ul><h3>Product level definitions</h3><ul><li>Inventory – A product at a particular Site so it has a single price.</li><li>Item Master – A product across all Sites that may have different prices at different Sites. An Item Master may have a max price for example.</li><li><p>Variant – A variant of Item Masters based on a shared attribute i.e. size, color, style, etc. </p><p class="Example">Men’s Polo Shirts.</p></li></ul></td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">Group Type                    </td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">
+                        From the dropdown options, select one to identify which Group Association Type this validation will be run on:
+                        <ul><li>Buy Group - The validation only runs on the Buy Group.</li><li>Get Group - The validation only runs on the Get Group.</li><li><p>  Buy Get Group - The validation runs on both the Buy and Get Groups. </p><p class="BasicNote">This option should also be selected for all promotions that are not of the Buy Get type.</p></li></ul></td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">
+                        Method (Optional)
+                    </td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">
+                        The available methods (i.e. advanced processes applied at the database level) configured for use. Select a method to apply for the validation. This selection supersedes any formula.
+                    </td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">
+                        Formula (Required/Optional)
+                    </td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">A mathematical expression for the system to evaluate. Configured variables can be found in the right panel. This formula is used if the <span class="Emphasis">Method</span> column is blank.
+                    </td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">
+                        Severity                     </td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">
+                        Select a severity from the populated dropdown:
+                        <ul><li><span class="Emphasis">Information</span> and <span class="Emphasis">Warning</span> - the message displays but users can continue.</li><li><span class="Emphasis">Error</span> - the message displays and users are not allowed to continue. Corrections must be made.</li></ul></td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">Error Message                     </td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">
+                        Enter a message to display if the validation fails. 
+                    </td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyB-Column1-Body1">Is Verified</td>
+                    <td class="TableStyle-standard-BodyA-Column2-Body1">Whether a price calculation or validation has been verified. <span class="Emphasis">IsVerified</span> does not apply to Method-based Calculations or Validations.</td>
+                </tr>
+            </tbody>
+        </table>
+    </body>
+</html>

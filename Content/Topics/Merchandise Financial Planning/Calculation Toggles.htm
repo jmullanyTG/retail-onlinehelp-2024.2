@@ -1,0 +1,274 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" xml:lang="en-us">
+    <head>
+        <link href="../../Resources/TableStyles/standard.css" rel="stylesheet" MadCap:stylesheetType="table" /><title></title>
+    </head>
+    <body>
+        <h1>Calculation toggles pane</h1>
+        <p>The <span class="Emphasis">Calculation Toggles</span> pane is used to define which dependent metrics recalculate and which ones hold when changes are made. Users can click on the metrics and change the calculation settings using a dropdown list. </p>
+        <p class="BasicNote">Based on the planning method, Retail or Cost, some calculation toggles may not be available. This is due to the differences in how the calculation model must function together as a whole to properly balance within each method</p>
+        <p>
+            <img src="../../Resources/Images/MFP/Calculation Toggles Pane.png" class="LargeImages" />
+        </p>
+        <p>When alternate (non-default) calculation toggles are selected, they appear in darker gray for easy identification at a glance.</p>
+        <p class="BasicNote">Not all plannable metrics are shown in this view because not all plannable metrics have multiple calculation directions.</p>
+        <p>The <span class="Emphasis">Calculation Toggles</span> pane can be collapsed by clicking the arrow at the top left adjacent the view title. Once collapsed, the view is visible only as a tab at the right hand side of the screen and can be restored by clicking the arrow near the view title again.</p>
+        <h2>Notes</h2>
+        <ul>
+            <li>If a week's Markdown is changed, then that week's COGS holds but the following weeks to do not. </li>
+            <li>If a month's Markdown is changed, it spreads the change across the weeks. The first week in the month's COGS stays the same, but because the Markdowns changed, the first week's Sales Units and Total Original Retail change, which in turn changes EOP Units, EOP Cost, EOP Retail, and Markdown Cost. Because the first week's EOPs changed, the second week's BOPs changed. </li>
+            <li>COGS is based on the ratio between BOP Cost and BOP Retail, so it necessarily changes in the second week. Similarly in the third through nth weeks. Thus, the total COGS for the month changes.</li>
+            <li>Calculation toggles do not require saving to be in effect. The change is immediate once the selection is made.</li>
+        </ul>
+        <h2>Lock and spread related calculation toggles</h2>
+        <p>When the following checkboxes are checked, </p>
+        <p><span class="Emphasis">Remove Locks On Save</span>: all locks present in the current plan are removed whenever <span class="Emphasis">Save</span> is clicked in the main planning view.</p>
+        <p><span class="Emphasis">Remove Locks on Merge</span>: all locks present in the current plan are removed whenever the plan is merged into another plan manually or via the Approve action in the Financial Plan Maintenance dialog.</p>
+        <p><span class="Emphasis">Auto Lock On Cell Change</span>: each time the value of a sales-related metric is changed in the grid, the changed cell is automatically locked (and any related cells). </p>
+        <p>For more information, see <MadCap:xref href="Auto Lock on Cell Change.htm">Auto Lock on Cell Change</MadCap:xref>.</p>
+        <h2>Using calculation toggles to hold initial values</h2>
+        <p>Once the first metric is entered, subsequent metrics must be entered using calculation toggles which hold the value of the first. Once the initial values are entered, fine tune is easy if a user is mindful of the metrics the toggles use are holding and calculating. Becoming familiar with the available toggles before beginning planning ensures a smooth planning process. </p>
+        <p>Promotion markdown values actualize using the following calculation: <span class="Emphasis">Promotion Markdown = Total Original Retail - Total Revenue</span>.</p>
+        <p>
+            <img src="../../Resources/Images/MFP/HCDM Promo MD.PNG" class="LargeImages" />
+        </p>
+        <p>The value that displays represents the total of markdowns (both Permanent and Promotion). This is because it is not possible to reliably determine which portion of the value represents Permanent or Promotion markdowns from standard data imports. Actualized values for Permanent markdown metrics are zeros.</p>
+        <h2>Sales to Target BOP&#160;calculation toggle</h2>
+        <p>This toggle is especially useful when the organizational direction is that Target BOPs are held and cannot
+change without approval. In this situation, holding Target BOP can be set as the default.
+If the Target BOP is allowed to change, there may be situations where the stock for a certain product hierarchy
+cannot be acquired but it is desired to increase the Sales Plan. </p>
+        <p>Users can toggle the calculation as a one-off where
+the Target BOP holds resulting in Stock to Sales being a little faster.
+
+However, if changing Sales users must consider the calculation toggle settings for both the
+<span class="Emphasis">Sales</span> toggle and the <span class="Emphasis">Sales to Target BOP</span> toggle.</p>
+        <h3>Sales to Target BOP: HOLD Stock to Sales | CALC: Target BOP</h3>
+        <p class="BasicNote">The default calculation toggle for Sales to Target BOP.</p>
+        <p>
+            <img src="../../Resources/Images/MFP/Calc Toggle Sales to Target BOP Hold Stock to Sales.PNG" class="LargeImages" />
+        </p>
+        <h3>Sales to Target BOP: HOLD: Target BOP | CALC: Stock to Sales</h3>
+        <p class="BasicNote">The alternate calculation toggle for Sales to Target BOP.</p>
+        <p>
+            <img src="../../Resources/Images/MFP/Calc Toggle Sales to Target BOP Hold Target BOP.PNG" class="LargeImages" />
+        </p>
+        <h2>Calculation toggles</h2>
+        <p>Dynamic renaming of particular metrics is in place to support the use of these values in either a Retail or Wholesale context. When viewing:</p>
+        <ul>
+            <li>
+                <p>Wholesale channels only: <span class="Emphasis">Sales Units</span> is replaced with <span class="Emphasis">Booked Units</span>, <span class="Emphasis">AUR</span> is replaced with <span class="Emphasis">ASP</span>, and <span class="Emphasis">Total Original Retail</span> is replaced with <span class="Emphasis">Booked At Wholesale</span>.</p>
+            </li>
+            <li>
+                <p>Retail and Wholesale channels simultaneously: <span class="Emphasis">Sales Units</span> is replaced with <span class="Emphasis">Sales Units / Booked Units</span>, <span class="Emphasis">AUR</span> is replaced with <span class="Emphasis">AUR / ASP</span>, and <span class="Emphasis">Total Original Retail</span> is replaced with <span class="Emphasis">Total Original Retail / Booked At Wholesale</span>.</p>
+            </li>
+        </ul>
+        <table xmlns="http://www.w3.org/1999/xhtml" style="margin-left: 0;margin-right: auto;mc-table-style: url('../../Resources/TableStyles/standard.css');" class="TableStyle-standard" cellspacing="0">
+            <col class="TableStyle-standard-Column-Column1" xmlns="" style="width: 10%;" />
+            <col class="TableStyle-standard-Column-Column2" xmlns="" style="width: 10%;" />
+            <col class="TableStyle-standard-Column-Column1" xmlns="" style="width: 25%;" />
+            <col class="TableStyle-standard-Column-Column2" xmlns="" style="width: 25%;" />
+            <col class="TableStyle-standard-Column-Column1" xmlns="" style="width: 25%;" />
+            <thead xmlns="">
+                <tr class="TableStyle-standard-Head-Header1">
+                    <th class="TableStyle-standard-HeadE-Column1-Header1"> Metric</th>
+                    <th class="TableStyle-standard-HeadE-Column2-Header1">Direction</th>
+                    <th class="TableStyle-standard-HeadE-Column1-Header1">Dual Markdown</th>
+                    <th class="TableStyle-standard-HeadE-Column2-Header1">Cost</th>
+                    <th class="TableStyle-standard-HeadD-Column1-Header1">Retail</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">AUR</td>
+                    <td class="TableStyle-standard-BodyE-Column2-Body1">standard</td>
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">HOLD: Sales Units, COGS, IMU Retail, Markdowns (Perm) | CALC: Sales, Gross Margin, Gross Margin %, Markdowns (Promo)</td>
+                    <td class="TableStyle-standard-BodyE-Column2-Body1">HOLD: Sales Units, AUC, AUT | CALC: Sales, Markdowns, Gross Margin</td>
+                    <td class="TableStyle-standard-BodyD-Column1-Body1">HOLD: Sales Units, Markdowns (Perm) | CALC: Sales, Markdowns (Promo)</td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">AUR</td>
+                    <td class="TableStyle-standard-BodyE-Column2-Body1">alternate</td>
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">HOLD: Sales, IMU %, Markdowns | CALC: Sales Units, COGS, IMU Retail, Gross Margin, Gross Margin %</td>
+                    <td class="TableStyle-standard-BodyE-Column2-Body1">HOLD: Sales, AUC, AUT | CALC: Sales Units, COGS, IMU Retail, Gross Margin, Markdowns</td>
+                    <td class="TableStyle-standard-BodyD-Column1-Body1">HOLD: Sales, Markdowns | CALC: Sales Units</td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">Gross Margin %</td>
+                    <td class="TableStyle-standard-BodyE-Column2-Body1">standard</td>
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">HOLD: AUC | CALC: AUR</td>
+                    <td class="TableStyle-standard-BodyE-Column2-Body1">HOLD: AUC | CALC: AUR</td>
+                    <td style="background-color: #dcdcdc;" class="TableStyle-standard-BodyD-Column1-Body1">None</td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">Gross Margin %</td>
+                    <td class="TableStyle-standard-BodyE-Column2-Body1">alternate</td>
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">HOLD: AUR | CALC: AUC</td>
+                    <td class="TableStyle-standard-BodyE-Column2-Body1">HOLD: AUR | CALC: AUC</td>
+                    <td style="background-color: #dcdcdc;" class="TableStyle-standard-BodyD-Column1-Body1">None</td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">IMU %</td>
+                    <td class="TableStyle-standard-BodyE-Column2-Body1">standard</td>
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">HOLD: Sales, Sales Units, AUR, AUT, Markdowns | CALC: AUC, COGS, IMU Retail, Gross Margin, Gross Margin %</td>
+                    <td class="TableStyle-standard-BodyE-Column2-Body1">HOLD: Sales, Sales Units, AUC | CALC: AUT, IMU Retail, Markdowns</td>
+                    <td style="background-color: #dcdcdc;" class="TableStyle-standard-BodyD-Column1-Body1">None</td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">IMU %</td>
+                    <td class="TableStyle-standard-BodyE-Column2-Body1">alternate</td>
+                    <td style="background-color: #dcdcdc;" class="TableStyle-standard-BodyE-Column1-Body1">None</td>
+                    <td class="TableStyle-standard-BodyE-Column2-Body1">HOLD: Sales, Sales Units, AUT | CALC: AUC, COGS, IMU Retail, Gross Margin</td>
+                    <td style="background-color: #dcdcdc;" class="TableStyle-standard-BodyD-Column1-Body1">None</td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">Markdowns (Perm)</td>
+                    <td class="TableStyle-standard-BodyE-Column2-Body1">standard</td>
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">HOLD: Sales, Sales Units, AUR, COGS, IMU | CALC: Markdowns % of Sales (Perm)</td>
+                    <td class="TableStyle-standard-BodyE-Column2-Body1">HOLD: AUT, Sales, AUC | CALC: Sales Units, AUR, COGS, IMU Retail, Gross Margin</td>
+                    <td class="TableStyle-standard-BodyD-Column1-Body1">HOLD: Sales | CALC: Markdowns % of Sales (Perm)</td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">Markdowns (Perm)</td>
+                    <td class="TableStyle-standard-BodyE-Column2-Body1">alternate</td>
+                    <td style="background-color: #dcdcdc;" class="TableStyle-standard-BodyE-Column1-Body1">None</td>
+                    <td class="TableStyle-standard-BodyE-Column2-Body1">HOLD: AUT, Sales Units, AUC | CALC: Sales, AUR, Gross Margin, Markdowns % of Sales</td>
+                    <td style="background-color: #dcdcdc;" class="TableStyle-standard-BodyD-Column1-Body1">None</td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">Markdowns (Promo)</td>
+                    <td class="TableStyle-standard-BodyE-Column2-Body1">standard</td>
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">HOLD: Sales, Sales Units, AUR, AUT, AUC | CALC: Markdowns % of Sales (Promo)</td>
+                    <td style="background-color: #dcdcdc;" class="TableStyle-standard-BodyE-Column2-Body1">None</td>
+                    <td class="TableStyle-standard-BodyD-Column1-Body1">HOLD: Sales | CALC: Markdowns % of Sales (Promo)</td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">Sales</td>
+                    <td class="TableStyle-standard-BodyE-Column2-Body1">standard</td>
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">HOLD: AUR, IMU %, Markdowns (Perm) | CALC: Sales Units, COGS, IMU Retail, Gross Margin, Markdowns (Promo)</td>
+                    <td class="TableStyle-standard-BodyE-Column2-Body1">HOLD: AUR, AUC, AUT | CALC: Sales Units, COGS, IMU Retail, Gross Margin (Product)</td>
+                    <td class="TableStyle-standard-BodyD-Column1-Body1">HOLD: AUR, Markdowns (Perm) | CALC: Sales Units, AUC, COGS, Markdowns (Promo)</td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">Sales</td>
+                    <td class="TableStyle-standard-BodyE-Column2-Body1">alternate</td>
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">HOLD: Sales Units, COGS, IMU Retail, Markdowns (Perm) | CALC: AUR, Gross Margin, Markdowns (Promo)</td>
+                    <td class="TableStyle-standard-BodyE-Column2-Body1">HOLD: Sales Units, AUC, AUT | CALC: AUR, Markdowns, Gross Margin</td>
+                    <td class="TableStyle-standard-BodyD-Column1-Body1">HOLD: Sales Units, Markdowns (Perm) | CALC: AUR, AUC, COGS, Markdowns (Promo)</td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">Sales To Target BOP</td>
+                    <td class="TableStyle-standard-BodyE-Column2-Body1">standard</td>
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">HOLD: Stock to Sales | CALC: Target BOP</td>
+                    <td class="TableStyle-standard-BodyE-Column2-Body1">HOLD: Stock to Sales | CALC: Target BOP</td>
+                    <td class="TableStyle-standard-BodyD-Column1-Body1">HOLD: Stock to Sales | CALC: Target BOP</td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">Sales To Target BOP</td>
+                    <td class="TableStyle-standard-BodyE-Column2-Body1">alternate</td>
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">HOLD: Target BOP | CALC: Stock to Sales</td>
+                    <td class="TableStyle-standard-BodyE-Column2-Body1">HOLD: Target BOP | CALC: Stock to Sales</td>
+                    <td class="TableStyle-standard-BodyD-Column1-Body1">HOLD: Target BOP | CALC: Stock to Sales</td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">Sales Units</td>
+                    <td class="TableStyle-standard-BodyE-Column2-Body1">standard</td>
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">HOLD: AUR, IMU %, Markdowns (Perm) | CALC: Sales, COGS, IMU Retail, Gross Margin, Markdowns (Promo)</td>
+                    <td class="TableStyle-standard-BodyE-Column2-Body1">HOLD: AUR, AUC, AUT | CALC: Sales, COGS, Markdowns, IMU Retail, Gross Margin (Product)</td>
+                    <td class="TableStyle-standard-BodyD-Column1-Body1">HOLD: AUR, Markdowns (Perm) | CALC: Sales, AUC, COGS, Markdowns (Promo)</td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">Sales Units</td>
+                    <td class="TableStyle-standard-BodyE-Column2-Body1">alternate</td>
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">HOLD: Sales, IMU %, Markdowns | CALC: AUR, COGS, IMU Retail, Gross Margin, Gross Margin %</td>
+                    <td class="TableStyle-standard-BodyE-Column2-Body1">HOLD: Sales, AUC, AUT | CALC: AUR, COGS, IMU Retail, Gross Margin, Markdowns</td>
+                    <td class="TableStyle-standard-BodyD-Column1-Body1">HOLD: Sales, COGS, Markdowns | CALC: AUR, AUC</td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">Target Receipt AUC</td>
+                    <td class="TableStyle-standard-BodyE-Column2-Body1">standard</td>
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">HOLD: Target Receipt Retail, Target Receipt Units, Target Receipt AUT | CALC: Target Receipt Cost, IMU</td>
+                    <td class="TableStyle-standard-BodyE-Column2-Body1">HOLD: Target Receipt Retail, Target Receipt Units, Target Receipt AUT | CALC: Target Receipt Cost, IMU</td>
+                    <td class="TableStyle-standard-BodyD-Column1-Body1">HOLD: Target Receipt Retail, Target Receipt Units, Target Receipt AUT | CALC: Target Receipt Cost, IMU</td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">Target Receipt AUC</td>
+                    <td class="TableStyle-standard-BodyE-Column2-Body1">alternate</td>
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">HOLD: Target Receipt AUT, Target Receipt Cost | CALC: Target Receipt Retail, Target Receipt Units</td>
+                    <td class="TableStyle-standard-BodyE-Column2-Body1">HOLD: Target Receipt AUT, Target Receipt Cost | CALC: Target Receipt Retail, Target Receipt Units</td>
+                    <td class="TableStyle-standard-BodyD-Column1-Body1">HOLD: Target Receipt AUT, Target Receipt Cost | CALC: Target Receipt Retail, Target Receipt Units</td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">Target Receipt AUT</td>
+                    <td class="TableStyle-standard-BodyE-Column2-Body1">standard</td>
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">HOLD: Target Receipt Units, Target Receipt Cost | CALC: Target Receipt Retail, IMU, AUC</td>
+                    <td class="TableStyle-standard-BodyE-Column2-Body1">HOLD: Target Receipt Units, Target Receipt Cost | CALC: Target Receipt Retail, IMU, AUC</td>
+                    <td class="TableStyle-standard-BodyD-Column1-Body1">HOLD: Target Receipt Units, Target Receipt Cost | CALC: Target Receipt Retail, IMU, AUC</td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">Target Receipt AUT</td>
+                    <td class="TableStyle-standard-BodyE-Column2-Body1">alternate</td>
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">HOLD: Target Receipt Retail, Target Receipt AUC | CALC: Target Receipt Units, Target Receipt Cost</td>
+                    <td class="TableStyle-standard-BodyE-Column2-Body1">HOLD: Target Receipt Retail, Target Receipt AUC | CALC: Target Receipt Units, Target Receipt Cost</td>
+                    <td class="TableStyle-standard-BodyD-Column1-Body1">HOLD: Target Receipt Retail, Target Receipt AUC | CALC: Target Receipt Units, Target Receipt Cost</td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">Target Receipt Cost</td>
+                    <td class="TableStyle-standard-BodyE-Column2-Body1">standard</td>
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">HOLD: Target Receipt AUT, Target Receipt AUC | CALC: Target Receipt Retail, Target Receipt Units</td>
+                    <td class="TableStyle-standard-BodyE-Column2-Body1">HOLD: Target Receipt AUT, Target Receipt AUC | CALC: Target Receipt Retail, Target Receipt Units</td>
+                    <td class="TableStyle-standard-BodyD-Column1-Body1">HOLD: Target Receipt AUT, Target Receipt AUC | CALC: Target Receipt Retail, Target Receipt Units</td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">Target Receipt Cost</td>
+                    <td class="TableStyle-standard-BodyE-Column2-Body1">alternate</td>
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">HOLD: Target Receipt Retail, Target Receipt Units, Target Receipt AUT | CALC: Target Receipt AUC</td>
+                    <td class="TableStyle-standard-BodyE-Column2-Body1">HOLD: Target Receipt Retail, Target Receipt Units, Target Receipt AUT | CALC: Target Receipt AUC</td>
+                    <td class="TableStyle-standard-BodyD-Column1-Body1">HOLD: Target Receipt Retail, Target Receipt Units, Target Receipt AUT | CALC: Target Receipt AUC</td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">Target Receipt IMU %</td>
+                    <td class="TableStyle-standard-BodyE-Column2-Body1">standard</td>
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">HOLD: Target Receipt Units, Target Receipt Cost | CALC: Target Receipt Retail, Target Receipt AUT</td>
+                    <td class="TableStyle-standard-BodyE-Column2-Body1">HOLD: Target Receipt Units, Target Receipt Cost | CALC: Target Receipt Retail, Target Receipt AUT</td>
+                    <td class="TableStyle-standard-BodyD-Column1-Body1">HOLD: Target Receipt Units, Target Receipt Cost | CALC: Target Receipt Retail, Target Receipt AUT</td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">Target Receipt IMU %</td>
+                    <td class="TableStyle-standard-BodyE-Column2-Body1">alternate</td>
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">HOLD: Target Receipt Retail, Target Receipt Units, Target Receipt AUT | CALC: Target Receipt AUC, Target Receipt Cost</td>
+                    <td class="TableStyle-standard-BodyE-Column2-Body1">HOLD: Target Receipt Retail, Target Receipt Units, Target Receipt AUT | CALC: Target Receipt AUC, Target Receipt Cost</td>
+                    <td class="TableStyle-standard-BodyD-Column1-Body1">HOLD: Target Receipt Retail, Target Receipt Units, Target Receipt AUT | CALC: Target Receipt AUC, Target Receipt Cost</td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">Target Receipt Retail</td>
+                    <td class="TableStyle-standard-BodyE-Column2-Body1">standard</td>
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">HOLD: Target Receipt AUT, Target Receipt AUC | CALC: Target Receipt Units, Target Receipt Cost</td>
+                    <td class="TableStyle-standard-BodyE-Column2-Body1">HOLD: Target Receipt AUT, Target Receipt AUC | CALC: Target Receipt Units, Target Receipt Cost</td>
+                    <td class="TableStyle-standard-BodyD-Column1-Body1">HOLD: Target Receipt AUT, Target Receipt AUC | CALC: Target Receipt Units, Target Receipt Cost</td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">Target Receipt Retail</td>
+                    <td class="TableStyle-standard-BodyE-Column2-Body1">alternate</td>
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">HOLD: Target Receipt Units, Target Receipt AUC, Target Receipt Cost | CALC: Target Receipt AUT</td>
+                    <td class="TableStyle-standard-BodyE-Column2-Body1">HOLD: Target Receipt Units, Target Receipt AUC, Target Receipt Cost | CALC: Target Receipt AUT</td>
+                    <td class="TableStyle-standard-BodyD-Column1-Body1">HOLD: Target Receipt Units, Target Receipt AUC, Target Receipt Cost | CALC: Target Receipt AUT</td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">Target Receipt Units</td>
+                    <td class="TableStyle-standard-BodyE-Column2-Body1">standard</td>
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">HOLD: Target Receipt AUT, Target Receipt AUC | CALC: Target Receipt Retail, Target Receipt Cost</td>
+                    <td class="TableStyle-standard-BodyE-Column2-Body1">HOLD: Target Receipt AUT, Target Receipt AUC | CALC: Target Receipt Retail, Target Receipt Cost</td>
+                    <td class="TableStyle-standard-BodyD-Column1-Body1">HOLD: Target Receipt AUT, Target Receipt AUC | CALC: Target Receipt Retail, Target Receipt Cost</td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyB-Column1-Body1">Target Receipt Units</td>
+                    <td class="TableStyle-standard-BodyB-Column2-Body1">alternate</td>
+                    <td class="TableStyle-standard-BodyB-Column1-Body1">HOLD: Target Receipt Retail, Target Receipt Cost | CALC: Target Receipt AUT, Target Receipt AUC</td>
+                    <td class="TableStyle-standard-BodyB-Column2-Body1">HOLD: Target Receipt Retail, Target Receipt Cost | CALC: Target Receipt AUT, Target Receipt AUC</td>
+                    <td class="TableStyle-standard-BodyA-Column1-Body1">HOLD: Target Receipt Retail, Target Receipt Cost | CALC: Target Receipt AUT, Target Receipt AUC</td>
+                </tr>
+            </tbody>
+        </table>
+    </body>
+</html>

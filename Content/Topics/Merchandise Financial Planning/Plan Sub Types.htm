@@ -1,0 +1,161 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head>
+        <link href="../../Resources/TableStyles/standard.css" rel="stylesheet" MadCap:stylesheetType="table" />
+    </head>
+    <body>
+        <h1>Plan Sub Types</h1>
+        <p>  The two options for Plan Sub Type are Default and Original Plan. The distinction between the two choices lies in the treatment of periods that are in the past (e.g. last week and prior).</p>
+        <h2>Plan Sub Type notes</h2>
+        <ul>
+            <li>Master plans cannot be set to <span class="Emphasis">Original Plan</span> Sub Type. Master plans must always be <span class="Emphasis">Default</span>.  Their branches, however, can be either Sub Type.</li>
+            <li>The <span class="Emphasis">Original Plan</span> Sub Type is only available to Hybrid plan types.</li>
+            <li>Branches can be switched between <span class="Emphasis">Default</span> and <span class="Emphasis">Original Plan</span> throughout their life, if necessary.</li>
+            <li>Branches of various Sub Types can be Merged and Re-Seeded.  For <span class="Emphasis">Default</span> Sub Type plans, only future periods are allowed for these operations.  For <span class="Emphasis">Original Plan</span> Sub Type plans, all periods are allowed for these operations.</li>
+            <li>The Foreign Exchange Neutralization (FXN) functionality cannot be used in conjunction with an <span class="Emphasis">Original Plan</span> Sub Type.</li>
+        </ul>
+        <h2>Original Plan Sub Type populating On Order metrics</h2>
+        <p>The <span class="Emphasis">Original Plan</span> Sub Type populates the <span class="Emphasis">On Order</span> metrics as of the plan creation only, and holds those values (many with zeros) throughout. This is the case for all instances, including future dated OP plans (plans with the first period in the future). </p>
+        <p class="BasicNote">The <span class="Emphasis">On Order</span> metrics still update when a user re-seeds or merges plans of <span class="Emphasis">Original Plan</span> Sub Type.</p>
+        <h2>Characteristics of past periods in each Plan Sub Type</h2>
+        <p>  The characteristics of past periods in each Plan Sub Type are as follows:</p>
+        <p><span class="Emphasis">Default</span>:</p>
+        <ul>
+            <li>disable editability of metrics in past periods</li>
+            <li>formats cells within the past periods to signify past</li>
+            <li>surfaces actual values instead of plan values</li>
+        </ul>
+        <p><span class="Emphasis">Original Plan</span>
+        </p>
+        <ul>
+            <li>allow editability of metrics in past periods</li>
+            <li>cell formatting does not change between past and future periods</li>
+            <li>surfaces planned values in all periods</li>
+        </ul>
+        <p>The above descriptions define behavior for the base metrics (e.g. TY metrics).  LY metrics (and LLY metrics, if that is selected as the Comparison Type for display) DO actualize.  The behavior for LY and LLY metrics in both Default and Original Plan types is the same.</p>
+        <table style="mc-table-style: url('../../Resources/TableStyles/standard.css');margin-left: auto;margin-right: auto;" class="TableStyle-standard" cellspacing="0">
+            <col class="TableStyle-standard-Column-Column1" style="width: 16.5%;">
+            </col>
+            <col class="TableStyle-standard-Column-Column2" style="width: 16.5%;">
+            </col>
+            <col class="TableStyle-standard-Column-Column1" style="width: 16.5%;">
+            </col>
+            <col class="TableStyle-standard-Column-Column2" style="width: 16.5%;">
+            </col>
+            <col class="TableStyle-standard-Column-Column1" style="width: 16.5%;">
+            </col>
+            <col class="TableStyle-standard-Column-Column2" style="width: 16.5%;">
+            </col>
+            <thead>
+                <tr class="TableStyle-standard-Head-Header1">
+                    <th class="TableStyle-standard-HeadE-Column1-Header1">
+                        <p>Plan Sub Type</p>
+                    </th>
+                    <th class="TableStyle-standard-HeadE-Column2-Header1">
+                        <p>Metric Group</p>
+                    </th>
+                    <th class="TableStyle-standard-HeadE-Column1-Header1">
+                        <p>Periods In Next Year</p>
+                    </th>
+                    <th class="TableStyle-standard-HeadE-Column2-Header1">
+                        <p>Periods Beyond Next Year</p>
+                    </th>
+                    <th class="TableStyle-standard-HeadE-Column1-Header1">
+                        <p>Periods In Past Year</p>
+                    </th>
+                    <th class="TableStyle-standard-HeadD-Column2-Header1">
+                        <p>Periods Prior to Past Year</p>
+                    </th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">
+                        <p>Default</p>
+                    </td>
+                    <td class="TableStyle-standard-BodyE-Column2-Body1">
+                        <p>TY Metrics</p>
+                    </td>
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">
+                        <p>Plannable data</p>
+                    </td>
+                    <td class="TableStyle-standard-BodyE-Column2-Body1">
+                        <p>Plannable data</p>
+                    </td>
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">
+                        <p>Actualized data</p>
+                    </td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">
+                        <p>Actualized data</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">
+                        <p>Default</p>
+                    </td>
+                    <td class="TableStyle-standard-BodyE-Column2-Body1">
+                        <p>LY Metrics</p>
+                    </td>
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">
+                        <p>Actualized data</p>
+                    </td>
+                    <td class="TableStyle-standard-BodyE-Column2-Body1">
+                        <p>Planned data</p>
+                    </td>
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">
+                        <p>Actualized data</p>
+                    </td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">
+                        <p>Actualized data</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">
+                        <p>Original Plan</p>
+                    </td>
+                    <td class="TableStyle-standard-BodyE-Column2-Body1">
+                        <p>TY Metrics</p>
+                    </td>
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">
+                        <p>Plannable data</p>
+                    </td>
+                    <td class="TableStyle-standard-BodyE-Column2-Body1">
+                        <p>Plannable data</p>
+                    </td>
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">
+                        <p>Plannable data</p>
+                    </td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">
+                        <p>Plannable data</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyB-Column1-Body1">
+                        <p>Original Plan</p>
+                    </td>
+                    <td class="TableStyle-standard-BodyB-Column2-Body1">
+                        <p>LY Metrics</p>
+                    </td>
+                    <td class="TableStyle-standard-BodyB-Column1-Body1">
+                        <p>Actualized data</p>
+                    </td>
+                    <td class="TableStyle-standard-BodyB-Column2-Body1">
+                        <p>Planned data</p>
+                    </td>
+                    <td class="TableStyle-standard-BodyB-Column1-Body1">
+                        <p>Actualized data</p>
+                    </td>
+                    <td class="TableStyle-standard-BodyA-Column2-Body1">
+                        <p>Actualized data</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <h2>Verifying which plans are default and which are Original Plan</h2>
+        <p>The <span class="Emphasis">Plan Sub Type Name</span> column is an available column that supplements <span class="Emphasis">Plan Name</span>, <span class="Emphasis">Plan Description</span>, <span class="Emphasis">Plan Type Name</span>, and <span class="Emphasis">Plan Status Name</span>. The column allows users to quickly and easily see which plans are default and which are Original Plan.</p>
+        <p>
+            <img src="../../Resources/Images/MFP/Plan Sub Type Name column.png" class="LargeImages" />
+        </p>
+        <p><span class="Emphasis">Plan Sub Type Name</span> can be added using the <span class="Emphasis">Choose Column</span> option on the right-click menu.</p>
+    </body>
+</html>

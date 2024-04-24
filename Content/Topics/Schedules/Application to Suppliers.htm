@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" xml:lang="en-us">
+    <head><title></title>
+    </head>
+    <body>
+        <h1>Application to suppliers</h1>
+        <p>Schedules are applied to suppliers to help control ordering and delivery behavior. In the Supplier Manager, there are two schedules types by site: an ordering schedule and a delivery schedule. </p>
+        <p>How ordering and receiving schedules are applied to suppliers affect ordering behavior in different ways. Not all suppliers require specific schedule sets, but the schedule sets may be used to restrict how the Replenishment Engine processes order dates  when the desired behavior is to align ordering with logistical constraints. </p>
+        <p>The schedule types available to suppliers are:</p>
+        <ul>
+            <li><span class="Emphasis">Ordering Schedule</span>: determines the dates on which an order can be placed with a supplier. Ordering schedules does not control supplier shipping dates.</li>
+            <li><span class="Emphasis">Receiving Schedule</span>:&#160;determines the days on which a supplier is allowed to make a delivery to any location within the network. Receiving schedules must align with a site receiving schedule in order for the site to receive any stock. </li>
+        </ul>
+        <p>After a schedule set is created, it is applied to sites in Supplier Manager. Ordering and delivery schedules are assigned based on the available schedule sets. <MadCap:conditionalText MadCap:conditions="General.ScreenOnly">For details, see <MadCap:xref href="../Supplier Manager/Supplier Manager Overview.htm">Supplier Manager Overview</MadCap:xref>.</MadCap:conditionalText> <MadCap:conditionalText MadCap:conditions="General.PrintOnly">For more information, refer to the Supplier Manager User Guide.</MadCap:conditionalText></p>
+        <p MadCap:conditions="General.DoNotPublish">Schedule data is stored in the <span class="Emphasis">tbl_Supplier</span> table. Order schedule sets are stored in StockOrderAlamancID. Delivery schedule sets are stored in StockDeliveryAlmanacID. </p>
+    </body>
+</html>

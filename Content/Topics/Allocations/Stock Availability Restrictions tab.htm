@@ -1,0 +1,50 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" xml:lang="en-us">
+    <head><title></title>
+    </head>
+    <body>
+        <h1>Restricting stock availability</h1>
+        <p>Stock availability restrictions defined on the <span class="Emphasis">Stock Availability Restrictions</span> tab provide full control of the stock which is considered to be available for allocation.  Unselect stock on hand within a specific DC or on order within a specific PO if it should not be considered as eligible. All stock in all DCs (as defined by supply chain rules) and all incoming POs (as defined by supply chain rules) are considered to be eligible for allocation by default. </p>
+        <h2>Allocate Strategy Stock Availability Restrictions (DC) view</h2>
+        <p>Information related to the strategy stock is displayed in the Allocate Strategy Stock Availability Restrictions (DC) view and should be used as a driver in the decision to include or exclude the stock from the available pool. </p>
+        <ul>
+            <li><span class="Emphasis">Selected</span> – If checked, the stock on hand is considered to be “available” and will be included in the available stock calculations. </li>
+            <li><span class="Emphasis">Site Code</span> – The unique code identifying the site. All listed sites will be of “DC” type. </li>
+            <li><span class="Emphasis">Site Description</span> – The description of the site. </li>
+            <li><span class="Emphasis">Priority</span> – The global site priority of the DC. This is a read-only field and must be managed within Site Manager. Does not affect any calculations. </li>
+            <li><span class="Emphasis">Priority Group</span> – If in use, the associated priority group of the DC. This is a read-only field and must be managed within Site Manager. Does not affect any calculations.</li>
+            <li><span class="Emphasis">Available Push Quantity</span> – Stock on hand taking into account holdback quantity and/or percentage. Will display as “0” if the demand type is set to any value other than “total push”. </li>
+            <li><span class="Emphasis">Stock on Hand</span> – The stock on hand in the DC, inclusive of stock reserved. Reflective of actual stock on hand, and any orders within the available and late order windows.</li>
+        </ul>
+        <h2>Allocate Strategy Stock Availability Restrictions (PO + Breakdown) view</h2>
+        <p>Information related to the strategy stock is displayed in the Allocate Strategy Stock Availability Restrictions (PO + Breakdown) view and should be used as a driver in the decision to include or exclude the stock from the available pool. In order to be considered as actionable stock, the arrival date of the purchase order must fall within the window defined by the late orders window (days back) and available orders window (days forward) settings. These values may be set within System Policy. </p>
+        <h2>Purchase Orders (PO) view</h2>
+        <p>Displays the selectable purchase orders.</p>
+        <ul>
+            <li><span class="Emphasis">Selected</span> - If checked, the on order stock is considered to be “available” and will be included in the available stock calculations.</li>
+            <li><span class="Emphasis">PO #</span> - The purchase order number. Part of the supplier order header data. </li>
+            <li><span class="Emphasis">Destination DCs</span> – The inbound destination site or sites of the purchase order. If more than one destination is specified, the sites will be displayed in a comma separated list. </li>
+            <li><span class="Emphasis">PO Qty</span> – The outstanding on order quantity (in case of partially delivered purchase orders). </li>
+            <li><span class="Emphasis">PO Date</span> – The date on which the purchase order was placed. </li>
+            <li><span class="Emphasis">Receive No Earlier</span> – The receive no earlier date specified in the supplier order information. </li>
+            <li><span class="Emphasis">Receive No Later</span> – The receive no later date specified in the supplier order information. </li>
+            <li><span class="Emphasis">Contains Pre-Pack</span> – Will display a check mark if the purchase order contains any pre-pack stock. </li>
+        </ul>
+        <h2>Breakdown view</h2>
+        <p>Displays the Itemmaster/size level detail of the items contained within the purchase order.</p>
+        <ul>
+            <li><span class="Emphasis">Itemmaster Code</span> – The unique item code. </li>
+            <li><span class="Emphasis">Itemmaster Description</span> – The description of the item. </li>
+            <li><span class="Emphasis">Site Code</span> – The unique code for the site at which the purchase order stock is arriving. </li>
+            <li><span class="Emphasis">Site Description</span> – The description for the site at which the purchase order stock is arriving. </li>
+            <li><span class="Emphasis">Priority</span> – The global site priority for the destination site. This is a read-only field and must be managed within Site Manager. Does not affect any calculations.</li>
+            <li><span class="Emphasis">Priority Group</span> – If in use, the associated priority group of the DC. This is a read-only field and must be managed within Site Manager. Does not affect any calculations.</li>
+            <li><span class="Emphasis">Size Name</span> – The size name associated with the itemmaster. </li>
+            <li><span class="Emphasis">Size Type Name</span> – The size type associated with the size. </li>
+            <li><span class="Emphasis">Cost Per Unit</span> – The per unit cost, reflective of the cost for the itemmaster at the destination site, displayed in the currency of the destination site. </li>
+            <li><span class="Emphasis">Estimated Receipt Date</span> – The calculated estimated receipt date, defined as the PO order date, plus the lead time. This is only an estimate.</li>
+            <li><span class="Emphasis">Outstanding Qty</span> – The by size outstanding order quantity. </li>
+            <li><span class="Emphasis">Is Pre-Pack</span> – Will be checked if the listed size is a pre-pack item. </li>
+        </ul>
+    </body>
+</html>

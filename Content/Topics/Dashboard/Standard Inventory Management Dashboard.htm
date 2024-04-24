@@ -1,0 +1,78 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" xml:lang="en-us">
+    <head><title></title>
+    </head>
+    <body>
+        <h1>Standard inventory management dashboard</h1>
+        <p>The default dashboard covers basic inventory management metrics and may be actioned upon based on the presentation of certain exceptions. </p>
+        <p>The standard dashboard presents four widgets, all of which are designed to give an overview of their inventory situation and highlight any exceptions which may require the attention of the user.</p>
+        <p>
+            <img src="../../Resources/Images/Dashboard/Standard Inventory Management Dashboard.png" class="LargeImages" />
+        </p>
+        <h2>Setup of the standard dashboard</h2>
+        <p>Much of the setup of the standard dashboard is done within the <span class="Emphasis">Views</span> module. For overall help in using the <span class="Emphasis">Views</span> module, refer to the online help.</p>
+        <h2>Widget definitions</h2>
+        <h3>Inventory Status Over Time</h3>
+        <p>A line graph showing several series related to the value of different stock types over a selected period of time. </p>
+        <p><span class="Emphasis">Inventory status over time</span> helps users get a day/week/month at a glance of their stock status. This can bring any major fluctuations directly to their attention which may then be corrected through appropriate use of the maintenance screens in the Inventory Manager. </p>
+        <p>
+            <img src="../../Resources/Images/Dashboard/Inventory Status Over Time.png" class="LargeImages" />
+        </p>
+        <ul>
+            <li>
+                <p><span class="Emphasis">Availability %</span> - Percentage of items which are in stock versus the items which should be in stock. </p>
+                <p>For example, a 90% availability means that 90% of the preferred stock is actually on hand.</p>
+            </li>
+            <li><span class="Emphasis">Stock On Hand</span> – The value of stock on hand.</li>
+            <li><span class="Emphasis">Model Stock</span> – The value of the preferred model stock.</li>
+            <li><span class="Emphasis">Potential Stockout (POTSO)</span> – The value of the items at risk of being out of stock.</li>
+            <li><span class="Emphasis">Excess Stock</span> – The aggregated value of stock overages at all sites.</li>
+        </ul>
+        <h3>Stock Mix</h3>
+        <p>A pair of pie chart graphs depicting several measures broken down by contributions to both total item count and perceived value. </p>
+        <p>The <span class="Emphasis">Stock Mix</span> pie charts displays the percentages of stock which falls into the desired “normal” status and compares and contrasts the mix based on both item count and the value of the inventory. </p>
+        <p>
+            <img src="../../Resources/Images/Dashboard/Stock Mix.png" class="LargeImages" />
+        </p>
+        <ul>
+            <li><span class="Emphasis">Shortfall</span> – The difference between on hand and safety stock, if items fall under the safety stock levels (may not appear if no items are under safety stock level. </li>
+            <li><span class="Emphasis">Stock On Hand</span> – The value and quantity of on hand items.</li>
+            <li><span class="Emphasis">Model Stock</span> – The value and quantity of the preferred model stock.</li>
+            <li><span class="Emphasis">Potential Stockout (POTSO)</span> – The value and quantity of the items at risk of being out of stock.</li>
+            <li><span class="Emphasis">Excess Stock</span> – The aggregated value and quantity of stock overages at all sites.</li>
+        </ul>
+        <h3>Inventory Status By Priority</h3>
+        <p>A display of many important inventory metrics broken down by priority based on the Pareto classification of the items.</p>
+        <p><span class="Emphasis">Inventory Status By Priority</span> displays many important inventory metrics and break them down by priority based on the Pareto classification of the items. This is important in that it allows users to focus first on their “A” class items in case of need.</p>
+        <p>
+            <img src="../../Resources/Images/Dashboard/Inventory Status By Priority.png" />
+        </p>
+        <ul>
+            <li><span class="Emphasis">Item Count</span> – Number of items in this classification.</li>
+            <li><span class="Emphasis">Last Month Revenue</span> – The associated revenue from the items in this classification in the previous month.</li>
+            <li><span class="Emphasis">LY Revenue</span> - The associated revenue from the items in this classification in the previous year.</li>
+            <li><span class="Emphasis">Revenue Change</span> – Positive or negative percentage representing the change in revenue.</li>
+            <li><span class="Emphasis">Last Month Sales</span> – Volume of items sold in this classification in the previous month.</li>
+            <li><span class="Emphasis">Stock on Hand</span> – Value of stock on hand for the items in this classification.</li>
+            <li><span class="Emphasis">On Order</span> – Value of the on order items in this classification.</li>
+            <li><span class="Emphasis">Potential Stockout</span> – Value of the items in this classification potentially at risk of stocking out.</li>
+        </ul>
+        <h3><span class="Emphasis">Dashboard Action Items</span>
+        </h3>
+        <p>A display of the quantity of items (and their value) which fall into the defined exception filters in addition to an “Action” button which will launch and Inventory Manager view.</p>
+        <p>The <span class="Emphasis">Dashboard Action Items</span> widget displays the quantity of items (and their value) which fall into the defined exception filters. The <span class="Emphasis">Action</span> button contained within the <span class="Emphasis">More Detail</span> column launches an Inventory Manager view based on the associated exception filters, allowing users an opportunity to remedy any of the exceptions.</p>
+        <p>
+            <img src="../../Resources/Images/Dashboard/Dashboard Action Items.png" class="LargeImages" />
+        </p>
+        <ul>
+            <li><span class="Emphasis">Forecast Exceptions (Manual Forecasts)</span> - Items which have a manual forecast override in the near future.</li>
+            <li><span class="Emphasis">Forecast Exceptions (Model Fit Error)</span> - Items with a low forecast model fit (MAPE).</li>
+            <li><span class="Emphasis">On Order (Late)</span> – Items which are late and it may be necessary to contact the supplier regarding the delivery schedule.</li>
+            <li><span class="Emphasis">On Order (Normal)</span> – Items which are on order but within ordering exception tolerance. </li>
+            <li><span class="Emphasis">On Order (Surplus)</span> – Items which are on order but deemed to be surplus. It may be necessary to contact the supplier regarding the delivery schedule.</li>
+            <li><span class="Emphasis">Recommended Order (Normal)</span> – Items which should be ordered today.</li>
+            <li><span class="Emphasis">Recommended Order (Urgent)</span> – Items which should be ordered today and possibly expedited. </li>
+            <li><span class="Emphasis">Stock Exception (Excess)</span> – Items deemed to be in excess at certain sites and are candidates for redistribution.</li>
+        </ul>
+    </body>
+</html>

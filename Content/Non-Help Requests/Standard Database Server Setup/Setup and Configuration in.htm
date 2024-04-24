@@ -1,0 +1,312 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" xml:lang="en-us">
+    <head><title></title>
+        <link href="../../Resources/Stylesheets/Demand Management Standard Database Server Setup (Windows).doc.css" rel="stylesheet" />
+    </head>
+    <body>
+        <h1 class="Heading1">Setup and Configuration in Windows</h1>
+        <h2 class="Heading2">Base OS Configurations and Tweaks</h2>
+        <p>After the VM has launched, the first thing to do is to set the correct server timezone. Usually this is based upon Customer operating hours timezone. </p>
+        <p>Start Menu, type timedate.cpl , Right-click , Run as Administrator</p>
+        <p>
+            <img src="../../Resources/Images/Demand Management Standard Database Server Setup (Windows).doc/Setup and Configuration in.png" class="img_2" />
+        </p>
+        <p>Click the Change time zone button and select desired region. This automatically sets the correct datetime for this system.</p>
+        <p>
+            <img src="../../Resources/Images/Demand Management Standard Database Server Setup (Windows).doc/Setup and Configuration in_1.png" class="img_3" />
+        </p>
+        <p>Next, to change Windows Update settings to prevent patch system auto-restarts. Again, through the Local Group Policy Editor</p>
+        <p>Right-click Start Menu , click Run , type gpedit.msc , Click Run</p>
+        <p>Computer Configuration → Administrative Templates → Windows Components → Windows Update → Configure Windows Updates</p>
+        <p>For Windows Server 2012, 2012 R2, 2016 set Configure automatic updating to value 2 - Notify for download and notify for install</p>
+        <p>For Windows Server 2019 set Configure automatic updating to value 7 - Auto Download, Notify to install, Notify to Restart</p>
+        <p>
+            <img src="../../Resources/Images/Demand Management Standard Database Server Setup (Windows).doc/Setup and Configuration in_2.png" class="img_4" />
+        </p>
+        <p><span class="span_1">Optional Step:</span> To ensure that the system cannot be accidentally shut down or restarted by other users.</p>
+        <p>Right-click Start Menu , click Run , type gpedit.msc , Click Run</p>
+        <p>Enable this setting in Computer Configuration &gt; Administrative Templates &gt; Start Menu and Taskbar</p>
+        <p>
+            <img src="../../Resources/Images/Demand Management Standard Database Server Setup (Windows).doc/Setup and Configuration in_3.png" class="img_5" />
+        </p>
+        <p>Enable this setting in User Configuration &gt; Administrative Templates &gt; Start Menu and Taskbar</p>
+        <p>
+            <img src="../../Resources/Images/Demand Management Standard Database Server Setup (Windows).doc/Setup and Configuration in_4.png" class="img_6" />
+        </p>
+        <p>Remove all user groups (usually only two: Administrators and Backup Users) from </p>
+        <p>Computer Configuration &gt; Windows Settings &gt; Security Settings &gt; Local Policies &gt; User Rights Assignment</p>
+        <p>
+            <img src="../../Resources/Images/Demand Management Standard Database Server Setup (Windows).doc/Setup and Configuration in_5.png" class="img_7" />
+        </p>
+        <p>At this stage, as this is a manual setup, now is a good time to update the entire system with latest patches and hotfixes. Other setup tasks below can be carried out whilst this happens in the background.</p>
+        <p>
+            <img src="../../Resources/Images/Demand Management Standard Database Server Setup (Windows).doc/Setup and Configuration in_6.png" class="img_8" />
+        </p>
+        <p>Next, to set Virtual Memory Settings.</p>
+        <p>Start Menu &gt; System</p>
+        <p>
+            <img src="../../Resources/Images/Demand Management Standard Database Server Setup (Windows).doc/Setup and Configuration in_7.png" class="img_9" />
+        </p>
+        <p>Click Advanced System Settings</p>
+        <p>In System Properties, click the Advanced tab. Then click the Settings button in Performance section.</p>
+        <p>
+            <img src="../../Resources/Images/Demand Management Standard Database Server Setup (Windows).doc/Setup and Configuration in_8.png" class="img_10" />
+        </p>
+        <p>Click the Advanced tab in Performance Options.</p>
+        <p>Click the Change button in Virtual Memory section.</p>
+        <p>
+            <img src="../../Resources/Images/Demand Management Standard Database Server Setup (Windows).doc/Setup and Configuration in_9.png" class="img_11" />
+        </p>
+        <p>Click the System managed size radio button whilst C: volume is selected. </p>
+        <p>
+            <img src="../../Resources/Images/Demand Management Standard Database Server Setup (Windows).doc/Setup and Configuration in_10.png" class="img_12" />
+        </p>
+        <p>Click the Set button. Click OK.</p>
+        <h2 class="Heading2"><a name="Create"></a>Create Service Accounts</h2>
+        <p>Note: The following section is kept for historical purposes but TG prefers not to create a separate account to run the SQL Services. The default Service Accounts are now used for appropriate SQL Services.</p>
+        <p style="font-style: italic;">Now, to create an SQL service user. Head into the Local Users and Groups MMC console</p>
+        <p style="font-style: italic;">Right-click Start Menu , click Run , type lusrmgr.msc , Click Run</p>
+        <p style="font-style: italic;">Create a new local user named SQLService , create a secure password (15+ chars is good)</p>
+        <p style="font-style: italic;">Important: Click the Password never expires option</p>
+        <p>
+            <img src="../../Resources/Images/Demand Management Standard Database Server Setup (Windows).doc/Setup and Configuration in_11.png" class="img_13" />
+        </p>
+        <p style="font-style: italic;">Add the new SQLService user into local Administrators group</p>
+        <p>
+            <img src="../../Resources/Images/Demand Management Standard Database Server Setup (Windows).doc/Setup and Configuration in_12.png" class="img_14" />
+        </p>
+        <p>We now need to grant this user the ability to Lock pages in memory.</p>
+        <p>Open Local Group Policy Editor</p>
+        <p>Right-click Start Menu , click Run , type gpedit.msc , Click Run</p>
+        <p>Add this user into the policy </p>
+        <p>Computer Configuration → Windows Settings → Security Settings → Local Policies → User Rights Assignment → Lock pages in memory</p>
+        <p>Add the SQLService user here.</p>
+        <p>
+            <img src="../../Resources/Images/Demand Management Standard Database Server Setup (Windows).doc/Setup and Configuration in_13.png" class="img_15" />
+        </p>
+        <h2 class="Heading2">Open ports in Windows Firewall</h2>
+        <p>Next step is to pre-emptively open the system firewall to allow SQL and SFTP connections. Head to the Windows Firewall - Windows Defender Firewall with Advanced Security</p>
+        <p>Create a new Inbound rule for TCP 1433 using Powershell (Admin). </p>
+        <MadCap:codeSnippet>
+            <MadCap:codeSnippetCopyButton />
+            <MadCap:codeSnippetBody MadCap:useLineNumbers="False" MadCap:lineNumberStart="1" MadCap:continue="False" xml:space="preserve">New-NetFirewallRule -DisplayName "Allow Inbound Port 1433 (SQL)" -Direction Inbound -LocalPort 1433 -Protocol TCP -Action Allow</MadCap:codeSnippetBody>
+        </MadCap:codeSnippet>
+        <p>Create another Inbound rule for TCP 22, 2222 using Powershell (Admin).</p>
+        <MadCap:codeSnippet>
+            <MadCap:codeSnippetCopyButton />
+            <MadCap:codeSnippetBody MadCap:useLineNumbers="False" MadCap:lineNumberStart="1" MadCap:continue="False" xml:space="preserve">New-NetFirewallRule -DisplayName "Allow Inbound Port 22,2222 (SFTP)" -Direction Inbound -LocalPort 22,2222 -Protocol TCP -Action Allow</MadCap:codeSnippetBody>
+        </MadCap:codeSnippet>
+        <h2 class="Heading2">Create Volume and File System - TempDB</h2>
+        <p>At this stage, we can start creating disk volumes. First, TempDB. </p>
+        <p>Create a new folder ‘startup' in root of C:\ </p>
+        <p>Next, create two new files: disk_init.wsf and tempdb_init.bat</p>
+        <p>
+            <img src="../../Resources/Images/Demand Management Standard Database Server Setup (Windows).doc/Setup and Configuration in_14.png" class="img_16" />
+        </p>
+        <p>Edit tempdb_init.bat , append the following and save the file.</p>
+        <MadCap:codeSnippet>
+            <MadCap:codeSnippetCopyButton />
+            <MadCap:codeSnippetBody MadCap:useLineNumbers="False" MadCap:lineNumberStart="1" MadCap:continue="False" xml:space="preserve">net stop "SQLSERVERAGENT"
+net stop "MSSQLSERVER"
+
+diskpart /s C:\startup\disk_init.wsf
+mkdir D:\TempDB\
+icacls D:\TempDB /grant "Everyone":(OI)(CI)F
+
+net restart "MSSQLSERVER"
+net start "SQLSERVERAGENT"</MadCap:codeSnippetBody>
+        </MadCap:codeSnippet>
+        <p>Edit disk_init.wsf , append the following, <span class="span_1">depending on the number of local NVMe disks that are attached to the system</span>, and save the file.</p>
+        <p>For four (4) local NVMe disks:</p>
+        <MadCap:codeSnippet>
+            <MadCap:codeSnippetCopyButton />
+            <MadCap:codeSnippetBody MadCap:useLineNumbers="False" MadCap:lineNumberStart="1" MadCap:continue="False" xml:space="preserve">rescan
+list disk
+select disk 0
+clean
+convert dynamic
+select disk 1
+clean
+convert dynamic
+select disk 2
+clean
+convert dynamic
+select disk 3
+clean
+convert dynamic
+create volume stripe disk=0,1,2,3
+assign letter=t
+format fs=ntfs label=TempDB unit=65536 quick</MadCap:codeSnippetBody>
+        </MadCap:codeSnippet>
+        <p>For three (3) local NVMe disks:</p>
+        <MadCap:codeSnippet>
+            <MadCap:codeSnippetCopyButton />
+            <MadCap:codeSnippetBody MadCap:useLineNumbers="False" MadCap:lineNumberStart="1" MadCap:continue="False" xml:space="preserve">rescan
+list disk
+select disk 0
+clean
+convert dynamic
+select disk 1
+clean
+convert dynamic
+select disk 2
+clean
+convert dynamic
+create volume stripe disk=0,1,2
+assign letter=t
+format fs=ntfs label=TempDB unit=65536 quick</MadCap:codeSnippetBody>
+        </MadCap:codeSnippet>
+        <p>For two (2) local NVMe disks:</p>
+        <MadCap:codeSnippet>
+            <MadCap:codeSnippetCopyButton />
+            <MadCap:codeSnippetBody MadCap:useLineNumbers="False" MadCap:lineNumberStart="1" MadCap:continue="False" xml:space="preserve">rescan
+list disk
+select disk 0
+clean
+convert dynamic
+select disk 1
+clean
+convert dynamic
+create volume stripe disk=0,1
+assign letter=t
+format fs=ntfs label=TempDB unit=65536 quick</MadCap:codeSnippetBody>
+        </MadCap:codeSnippet>
+        <p>For one (1) local NVMe disk:</p>
+        <MadCap:codeSnippet>
+            <MadCap:codeSnippetCopyButton />
+            <MadCap:codeSnippetBody MadCap:useLineNumbers="False" MadCap:lineNumberStart="1" MadCap:continue="False" xml:space="preserve">rescan
+list disk
+select disk 0
+clean
+convert dynamic
+create volume simple disk=0
+assign letter=t
+format fs=ntfs label=TempDB unit=65536 quick</MadCap:codeSnippetBody>
+        </MadCap:codeSnippet>
+        <p>Remember to add these into metadata tags</p>
+        <p>windows-startup-script-cmd c:\startup\tempdb_init.bat</p>
+        <p>
+            <img src="../../Resources/Images/Demand Management Standard Database Server Setup (Windows).doc/Setup and Configuration in_15.png" class="img_17" />
+        </p>
+        <p>Run the ‘tempdb_init.bat’ script (as an Administrator) to successfully create the TempDB volume.</p>
+        <p class="p_2"><u>Alternative Step: Creating TempDB using Windows Storage Pools</u>
+        </p>
+        <p>Head to Server Manager &gt; File and Storage Services &gt; Storage Pools</p>
+        <p>Right-click in an empty area and select New Storage Pool.</p>
+        <p>
+            <img src="../../Resources/Images/Demand Management Standard Database Server Setup (Windows).doc/Setup and Configuration in_16.png" class="img_18" />
+        </p>
+        <p>Name it TempDB</p>
+        <p>Click Next &gt;</p>
+        <p>
+            <img src="../../Resources/Images/Demand Management Standard Database Server Setup (Windows).doc/Setup and Configuration in_17.png" class="img_19" />
+        </p>
+        <p>Now to nominate the physical disks required for this Storage Pool. Click the Chassis column header. This orders the disks by attached order. Select all NVMe disks. Click Next &gt;</p>
+        <p>
+            <img src="../../Resources/Images/Demand Management Standard Database Server Setup (Windows).doc/Setup and Configuration in_18.png" class="img_20" />
+        </p>
+        <p>Click through the Confirmation and Results dialog windows to create a new virtual disk.</p>
+        <p>Name it TempDB</p>
+        <p>Click Next &gt;</p>
+        <p>
+            <img src="../../Resources/Images/Demand Management Standard Database Server Setup (Windows).doc/Setup and Configuration in_19.png" class="img_21" />
+        </p>
+        <p>In the Enclosure Awareness dialog, make sure that Enable enclosure awareness is disabled.</p>
+        <p>Click Next &gt;</p>
+        <p>
+            <img src="../../Resources/Images/Demand Management Standard Database Server Setup (Windows).doc/Setup and Configuration in_20.png" class="img_22" />
+        </p>
+        <p>In the Storage Layout dialog, select Simple </p>
+        <p>Click Next &gt;</p>
+        <p>
+            <img src="../../Resources/Images/Demand Management Standard Database Server Setup (Windows).doc/Setup and Configuration in_21.png" class="img_22" />
+        </p>
+        <p>In the Provisioning dialog , select Fixed </p>
+        <p>Click Next &gt;</p>
+        <p>
+            <img src="../../Resources/Images/Demand Management Standard Database Server Setup (Windows).doc/Setup and Configuration in_22.png" class="img_23" />
+        </p>
+        <p>In the Size dialog , select Maximum size</p>
+        <p>Click Next &gt;</p>
+        <p>
+            <img src="../../Resources/Images/Demand Management Standard Database Server Setup (Windows).doc/Setup and Configuration in_23.png" class="img_21" />
+        </p>
+        <p>Click through the Confirmation and Results dialog windows to create a new volume.</p>
+        <p>In the Server and Disk dialog , select the newly created virtual disk</p>
+        <p>Click Next &gt;</p>
+        <p>
+            <img src="../../Resources/Images/Demand Management Standard Database Server Setup (Windows).doc/Setup and Configuration in_24.png" class="img_22" />
+        </p>
+        <p>In the Drive Letter or Folder dialog , assign Drive letter T to the volume</p>
+        <p>Click Next &gt;</p>
+        <p>
+            <img src="../../Resources/Images/Demand Management Standard Database Server Setup (Windows).doc/Setup and Configuration in_25.png" class="img_23" />
+        </p>
+        <p>In the File System Settings dialog, ensure that 64K is chosen as the Allocation unit size.</p>
+        <p>Name the volume TempDB</p>
+        <p>Click Next &gt;</p>
+        <p>
+            <img src="../../Resources/Images/Demand Management Standard Database Server Setup (Windows).doc/Setup and Configuration in_26.png" class="img_23" />
+        </p>
+        <p>Click through the Confirmation and Results dialog windows to finish creating the entire storage pool.</p>
+        <p>The remaining volumes now need to be created.</p>
+        <h2 class="Heading2">Create Volume and File System - SQL Data</h2>
+        <p>To create the <b>SQL Data</b> volume</p>
+        <p>Head into the Computer Management MMC console.</p>
+        <p>Right-click Start menu , click Run , type compmgmt.msc , Click Run or press Enter</p>
+        <p>Click on Disk Management in left-hand side menu</p>
+        <p>Find the correct volume intended for SQL Data. Right-click this and select New Simple Volume…</p>
+        <p>
+            <img src="../../Resources/Images/Demand Management Standard Database Server Setup (Windows).doc/Setup and Configuration in_27.png" class="img_24" />
+        </p>
+        <p>Important: This volume needs to be formatted as NTFS with an Allocation unit size of 32K</p>
+        <p>
+            <img src="../../Resources/Images/Demand Management Standard Database Server Setup (Windows).doc/Setup and Configuration in_28.png" class="img_25" />
+        </p>
+        <p>Label the new volume Data1</p>
+        <p>Assign Drive letter M:</p>
+        <h2 class="Heading2">Create Volume and File System - SQL Logs</h2>
+        <p>To create the <b>Logs</b> volume</p>
+        <p>Repeat the same process above, but label the new volume Logs</p>
+        <p>Assign Drive letter L:</p>
+        <h2 class="Heading2">Create Volume and File System - SQL Backups</h2>
+        <p>To create the <b>SQLBackups</b> volume</p>
+        <p>Repeat the same process above, but keep Allocation unit size as Default and label the new volume SQLBackups</p>
+        <p>Assign Drive letter G:</p>
+        <p>
+            <img src="../../Resources/Images/Demand Management Standard Database Server Setup (Windows).doc/Setup and Configuration in_29.png" class="img_25" />
+        </p>
+        <h2 class="Heading2">Create Database File Folders</h2>
+        <p>Create the following folders across all new drive volumes</p>
+        <p>
+		M:\SQLData\</p>
+        <p>
+		M:\SQLData\System\</p>
+        <p>
+		M:\SSASData\</p>
+        <p>
+		L:\SQLLogs\</p>
+        <p>		L:\SQLLogs\System\</p>
+        <p>		L:\SSASLogs</p>
+        <p>
+		D:\TempDB\</p>
+        <p>
+		G:\SQLBackups\</p>
+        <p>
+		G:\HSLogs\</p>
+        <p>
+		G:\SFTP_Root</p>
+        <p>
+		G:\LogShippingComplete\ (Only required if Customer uses Log Shipping type deployment)</p>
+        <p>
+		G:\LogShippingInput\ (Only required if Customer uses Log Shipping type deployment)</p>
+        <h3 class="Heading3">Important Folder-naming Convention for JE Databases</h3>
+        <p>To more-easily manage the Hekaton artifacts that come into play with memory optimized table-variable parameters, we use a folder-per-database convention.</p>
+        <p>Thus, immediately before RESTORE of a JE Database, whether Empty, or from Production, create a database-named folder as in the examples below, for a fictitious database named <b>JE_Solution</b>:</p>
+        <p>M:\SQLData\JE_Solution\</p>
+        <p>L:\SQLLogs\JE_Solution\</p>
+        <p>G:\SQLBackups\&lt;Machine_Name&gt;\JE_Solution\</p>
+        <p>G:\SQLBackups\&lt;Machine_Name&gt;\JE_Solution\SEED\ For the .bak file that seed the database.</p>
+        <p><b>Note:</b> This convention applies equally to Development DB Servers (in R&amp;D), and Staging DB Servers (per Customer).</p>
+    </body>
+</html>

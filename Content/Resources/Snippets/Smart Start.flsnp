@@ -1,0 +1,101 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head>
+        <link href="../TableStyles/standard.css" rel="stylesheet" MadCap:stylesheetType="table" />
+    </head>
+    <body>
+        <p>If Target Choice Counts is used within the Assortment Planning tool, scenarios can be used to create a foundation for assortment plans through a process called Smart Start.
+</p>
+        <p>After a scenario has been rationalized,  Smart Start option is available. On Smart Start, placeholder items are generated for each segment/cluster based on the following:</p>
+        <ul>
+            <li>TY Act New Choices &amp; TY Act New AUR</li>
+            <li>The results of the Inter and Intra-style marginal return curves</li>
+            <li>The Collection Option of each segment</li>
+            <li>The configuration of choices to clusters within each segment</li>
+            <li>The default minimum presentation, seasonality curve, curve mode, periods of supply, rec var min, rec size min, size curve, periods before phase in, flow cadence, min stk/sales, and shrink % of sales </li>
+        </ul>
+        <p>Given these factors, a fully defined sales plan is generated  for each placeholder item, including rates of sale, total sales, sales by period, receipt units and flow strategy. Users can proceed straight to the assignment of actual variants and placing buys or use the main planning view and its supporting modules to perform additional analysis and fine tuning before proceeding.</p>
+        <p class="BasicNote">If a second user attempts to Smart Start scenarios at the same time, the second process holds until the first one finishes. This is transparent to both users aside from an apparent lag in processing time compared to normal for the user initiating the second Smart Start.</p>
+        <h2>Prerequisites to using Smart Start</h2>
+        <p>To use Target Creation in Smart Start, the assortment plan must be fully configured. The plan must have Cluster Sets, defaults. and <span class="Emphasis">Seed</span> has been run to capture historical items.</p>
+        <h3>Stages to using Smart Start</h3>
+        <ul>
+            <li>Create a Target Scenario</li>
+            <li>Define Target Segments</li>
+            <li>Calculate the scenario</li>
+            <li>Adjust plan targets</li>
+            <li>Rationalize the scenario</li>
+            <li>Smart Start the scenario</li>
+            <li>Review the results</li>
+        </ul>
+        <h2>Overlapping scenarios </h2>
+        <p>If the intersection of product and site hierarchies and time of a scenario being Smart Started overlaps any part of another scenario that has already been Smart Started, then the following warning displays:</p>
+        <p>
+            <img src="../../Resources/Images/Assortment Planning/Smart Start.png" style="width: 533px;height: 209px;" />
+        </p>
+        <p>Proceeding deletes any placeholders in <span class="Emphasis">Open</span> status. This is because the sales volume those areas account for within the business have already been accounted for in the overall assortment plan and the system is attempting to prevent over-buying.</p>
+        <h3>Example</h3>
+        <p>A Smart Start exists for <span class="Emphasis">Mens Tops, US Retail, 4th Quarter</span> and all generated placeholders are in Open status. </p>
+        <p>If a new scenario is created, <span class="Emphasis">Mens Short Sleeved Tees, for US Retail – Southeast District, for December only</span>, then all placeholders for the first scenario are deleted and replaced by those generated for the new scenario. </p>
+        <p>This is because the new scenario contains portions of the sales volume that was accounted for in the first scenario. </p>
+        <h2>Placeholder to cluster assortment</h2>
+        <p>Because all placeholders created for a given segment are assumed to be shared among all clusters assigned to that segment, the system is able to create a desirable tiering strategy based on the descending number of new choices set in the Smart Started scenario for each cluster.</p>
+        <p class="Example">A segment with 3 clusters and new choice counts of 4, 3, and 2, respectively. The system generates 4 placeholder items for the segment and assort them to the clusters as follows:</p>
+        <table style="mc-table-style: url('../../Resources/TableStyles/standard.css');" class="TableStyle-standard" cellspacing="0">
+            <thead>
+                <tr class="TableStyle-standard-Head-Header1">
+                    <th class="TableStyle-standard-HeadE-Column1-Header1">Placeholder Rank</th>
+                    <th class="TableStyle-standard-HeadE-Column2-Header1">Cluster A</th>
+                    <th class="TableStyle-standard-HeadE-Column1-Header1">Cluster B</th>
+                    <th class="TableStyle-standard-HeadD-Column2-Header1">Cluster C</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">Mens Top # 1</td>
+                    <td style="text-align: center;" class="TableStyle-standard-BodyE-Column2-Body1">X</td>
+                    <td style="text-align: center;" class="TableStyle-standard-BodyE-Column1-Body1">X</td>
+                    <td style="text-align: center;" class="TableStyle-standard-BodyD-Column2-Body1">X</td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">Mens Top # 2</td>
+                    <td style="text-align: center;" class="TableStyle-standard-BodyE-Column2-Body1">X</td>
+                    <td style="text-align: center;" class="TableStyle-standard-BodyE-Column1-Body1">X</td>
+                    <td style="text-align: center;" class="TableStyle-standard-BodyD-Column2-Body1">X</td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">Mens Top # 3</td>
+                    <td style="text-align: center;" class="TableStyle-standard-BodyE-Column2-Body1">X</td>
+                    <td style="text-align: center;" class="TableStyle-standard-BodyE-Column1-Body1">X</td>
+                    <td style="text-align: center;" class="TableStyle-standard-BodyD-Column2-Body1">
+                        <p style="margin-bottom: 0pt;text-align: center;">&#160;</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyB-Column1-Body1">Mens Top # 4</td>
+                    <td style="text-align: center;" class="TableStyle-standard-BodyB-Column2-Body1">X</td>
+                    <td style="text-align: center;" class="TableStyle-standard-BodyB-Column1-Body1">
+                        <p style="margin-bottom: 0pt;text-align: center;">&#160;</p>
+                    </td>
+                    <td style="text-align: center;" class="TableStyle-standard-BodyA-Column2-Body1">
+                        <p style="margin-bottom: 0pt;text-align: center;">&#160;</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <h2>Initial receipt plans</h2>
+        <p>The system calculates an optimized receipt flow strategy by cluster using:</p>
+        <ul>
+            <li> the rates of sale assigned to each placeholder from the Marginal Return Curve Matrix, and</li>
+            <li>the default seasonality curve, minimum presentation, and other receipt planning parameters set for the relevant level of the product hierarchy. </li>
+        </ul>
+        <h3>Saving time by setting up default parameters</h3>
+        <p>Setting up default parameters before Smart Starting a scenario saves time and the effort of manually setting parameters later for each placeholder/cluster combination.</p>
+        <h2>Reconciling Smart Start output back to scenarios</h2>
+        <p>The sum of the Ttl Sls $ and Ttl Sls U in the main planning view for the placeholders generated by Smart Starting a scenario should be equal to the sum of TY Act New Sales $ or U for the scenario. </p>
+        <p>These sums may also tie back to the Scenario Target minus the TY C/O Sales $ or U, but because TY Act New Sales $ and U can be edited by users and do not have to tie back to 100% of the Scenario Target, if overrides are made to these metrics, they will not likely tie to the output of Smart Start.</p>
+        <h2>Markdown dates</h2>
+        <p>When smart starting a scenario and phase dates are automatically created from the scenario's plan dates, the Markdown Date is automatically created by backing the Number of Markdown Periods out from the phase out date. </p>
+        <p>For example, if the scenario is from weeks 1 - 10, and the default is 5 weeks, then Markdown is automatically set to week 6.</p>
+    </body>
+</html>

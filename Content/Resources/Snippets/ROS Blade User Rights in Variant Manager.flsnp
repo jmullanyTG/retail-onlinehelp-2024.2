@@ -1,0 +1,10 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head>
+    </head>
+    <body>
+        <h2>User Rights for the Rate of Sale (ROS) blade in Variant Manager</h2>
+        <p>The User Rights for the ROS&#160;blade includes a variety of edit and read-only access rights that can be assigned from one user to another. </p>
+        <p>This is especially important for businesses with different levels of users, where some users are regular users that simply manage and view Rate of Sales across different variants and inventories. On the other hand, there are power users or admin users that are in charge of editing and updating several variants based on their demand plan. By having specific user rights available for this blade, it allows for better management of access for each user.</p>
+    </body>
+</html>

@@ -1,0 +1,67 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" xml:lang="en-us">
+    <head>
+        <link href="../../Resources/TableStyles/standard.css" rel="stylesheet" MadCap:stylesheetType="table" /><title></title>
+    </head>
+    <body>
+        <h1>Creating an export configuration for Promotion export</h1>
+        <p>After an export process is defined, create an export configuration to define the export columns to be included in the <span class="Emphasis">Export Columns</span> grid. The columns configured are associated to the specific row selected in the <span class="Emphasis">Export Definition</span> grid.</p>
+        <p>For more information on defining an export process, see <MadCap:xref href="Export definition.htm">Defining an export process for Promotion export</MadCap:xref>.</p>
+        <p>
+            <img src="../../Resources/Images/Promotion Management/Export columns.png" class="LargeImages" />
+        </p>
+        <p>To create an export configuration:</p>
+        <ol>
+            <li>
+                <p>Click <span class="Emphasis">New</span> in the <span class="Emphasis">Export Columns</span> grid.</p>
+            </li>
+            <li>
+                <p>Fill in the required columns.</p>
+            </li>
+            <li>
+                <p> Click <span class="Emphasis">Save</span>.</p>
+            </li>
+        </ol>
+        <h2>Export Columns field definitions</h2>
+        <table class="TableStyle-standard" cellspacing="0" style="mc-table-style: url('../../Resources/TableStyles/standard.css');">
+            <thead>
+                <tr class="TableStyle-standard-Head-Header1">
+                    <th class="TableStyle-standard-HeadE-Column1-Header1">Field</th>
+                    <th class="TableStyle-standard-HeadD-Column2-Header1">Description</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">
+                        Level </td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">
+                        Select the level of data to export from the dropdown list (e.g. Group, Item, etc.)
+                    </td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">
+                        Column </td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">
+                        The list refreshes based on the selection in the <span class="Emphasis">Level</span> column. Select the column to be exported.
+                    </td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">
+                       Include In Export (Optional)
+                    </td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">
+                        Select this column to indicate that the column should be exported.
+<p>To indicate an Export Column is temporarily inactive, clear the <span class="Emphasis">Include in Export</span> column and click <span class="Emphasis">Save</span>.</p></td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyB-Column1-Body1">
+                       Description (Optional)
+                    </td>
+                    <td class="TableStyle-standard-BodyA-Column2-Body1">
+                       Enter a summary of the data to be exported.
+                        <p class="BasicNote">For Promotions exports, Header columns 'ExportBatchID', 'PromotionID', 'PriceClusterID', 'PromotionName', 'PromotionStartDate' and 'PromotionEndDate' are always included.</p></td>
+                </tr>
+            </tbody>
+        </table>
+    </body>
+</html>

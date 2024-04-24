@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head>
+    </head>
+    <body>
+        <h1>Execution</h1>
+        <p>The utility utilizes the Job Manager, and the Scheduler Service.</p>
+        <h2>Job Manager</h2>
+        <p>A weekly task that runs the Purge Controller process, with optional management parameters, is present in skeleton form in the deployed database.  Until a customer is comfortable with the normal duration of the purge activities, we recommend limiting the execution time to perhaps 120 minutes.  Removal of this limitation is expected because any impact on normal business activities has been mitigated by the design internals.</p>
+        <p>A further ad-hoc task to <span class="EmphasisItalic">Stop Inventory Purge Immediately</span> supports that explicit function.</p>
+        <p>An <span class="EmphasisItalic">Abandon Run</span> ad-hoc Job Task is provided in case it is needed.</p>
+        <h2>Scheduler Service</h2>
+        <p>Explicit processing queues have been assigned to the Inventory Purge.  They are limited to four in number.  At any time, only one Batch per queue may be being acted upon.  No Inventory and no Batch is ever acted upon by more than one queue concurrently, or by multiple queues in the process of the utility’s execution.</p>
+        <p>By implication, the Scheduler Service being active, and accepting requests, are the two prerequisites to successful executions of this utility.  There are occasions when the Service is active but for some reason it is not accepting requests.  Both outage situations require investigation.</p>
+    </body>
+</html>

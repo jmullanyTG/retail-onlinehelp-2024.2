@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head />
+    <body>
+        <h1>Editing  a status permission blacklist</h1>
+        <p>To edit a status permission blacklist:</p>
+        <ol>
+            <li>Navigate to the Workflow Manager screen.</li>
+            <li>Select the workflow that contains the permissions to be edited.</li>
+            <li>In the Design pane, select the status whose permission blacklist is to be edited.</li>
+            <li>
+                In the <span class="Emphasis">Status Permission Blacklist</span>, select the permissions to be edited and click <span class="Emphasis">Edit</span>. 
+                <p><img src="../../Resources/Images/Workflow Manager/Permissions Edit.png" class="LargeImages" /></p><p>In this example, the Edit Price Action and Delete Price Action user rights are selected.</p><p>For more information, see <MadCap:xref href="Status Permission Blacklist.htm">Status State Permission Blacklist</MadCap:xref>.</p></li>
+            <li>   In the <span class="Emphasis">Remove User Rights</span> dialog box, do the following:
+                <ol style="list-style-type: lower-alpha;"><li><p>Select the user right and status state combinations for which permissions will be customized. </p><p>In this example,  only  customize the edit and delete permissions for validated price actions.</p><p><img src="../../Resources/Images/Workflow Manager/Remove User Rights Status Planning.png" class="LargeImages" /></p></li><li>Select the roles and users from which rights will be removed.<![CDATA[
+						]]><p>In this example, only users with Administrator or ToolsGroup JustEnough Advanced user roles will be able to edit or delete  price actions that are in the Ready for Approval status and have been validated.</p><p><img src="../../Resources/Images/Workflow Manager/Remove Role User.png" class="LargeImages" /></p></li><li>Click <span class="Emphasis">Save</span>. The Status Permission Blacklist is updated.  <p><img src="../../Resources/Images/Workflow Manager/Permissions Save.png" class="LargeImages" /></p><p>In this example, the blue user icon  indicates that the <span class="Emphasis">Allow Deleting of Price Cluster</span> right is removed when a price action is in the Validated state during this status.</p></li></ol></li>
+        </ol>
+        <p class="BasicNote">Alternatively, click on a user icon to view or edit permissions for that specific user right and status state combination.</p>
+    </body>
+</html>

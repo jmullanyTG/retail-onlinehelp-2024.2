@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" xml:lang="en-us">
+    <head><title></title>
+    </head>
+    <body>
+        <h1>Minimum and maximum stocking strategies</h1>
+        <p>Through settings, such as weeks of cover (WOC), safety stock units, minimum stock per size, and maximum stock, users can create ceilings and floors to stocking strategies. However, users should be careful when changing values in these fields because these values affect the allocation volumes. </p>
+        <p>Maximum stock is a by period stock holding constraint. Allocation recommendations based on normal demand will not be created if the proposed order and the projected stock on hand at the store exceed the maximum stock. Maximum stock constraints will be exceeded by unconstrained stock minimums. </p>
+        <p class="BasicNote">If capacity and stock maximums are a legitimate concern, consider eliminating weeks of cover from the strategies.  </p>
+        <p>Safety stock units and minimum stock per size are a unit based minimum that always violate maximums or other constraints such as maximum stock. </p>
+        <p>WOC is a days based safety stock value (displayed and entered as <span class="Emphasis">weeks</span>). As such, the resolved effective units value varies based on projected demand. It can be capped so as not to exceed the maximum stock using system policy <span class="Emphasis">Allocations Max Safety Stock as Percent of Max Stock</span>. The value in the system policy sets a percentage of maximum stock which acts as a cap for the WOC/SS days value. </p>
+    </body>
+</html>

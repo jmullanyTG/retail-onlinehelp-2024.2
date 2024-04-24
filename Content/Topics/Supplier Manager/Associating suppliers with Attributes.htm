@@ -1,0 +1,40 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head>
+    </head>
+    <body>
+        <h1>Associating suppliers with Attributes</h1>
+        <p>An import associates suppliers with Attributes. The import fields are:</p>
+        <ul>
+            <li>
+                <p>ConstructionCode</p>
+            </li>
+            <li>
+                <p>SupplierCode</p>
+            </li>
+            <li>
+                <p>Ranking</p>
+            </li>
+            <li>
+                <p>ActiveFlag</p>
+            </li>
+        </ul>
+        <p>A construction code can be associated with multiple suppliers. For example, if the construction code is <span class="Emphasis">SHIRT</span> then there can be multiple suppliers that can manufacture construction code <span class="Emphasis">SHIRT</span>.
+
+While the construction code is very specific, the actual supplier constraint is an Attribute which can be any Attribute. </p>
+        <p>Ranking is the list of suppliers that sets the order in which suppliers are used before consuming the next supplier’s capacity. It is possible to have different rankings per construction type. For example, for shirts, supplier A is  ranked 1 and supplier B is ranked 2. Whereas, for ties supplier B is ranked 1 and supplier B is ranked 2. </p>
+        <p>Each supplier can have multiple construction types and multiple construction groups associated with them. For example,</p>
+        <ul>
+            <li>
+                <p>Supplier 1: (V-necks, T-shirts, and Tank Tops)</p>
+            </li>
+            <li>
+                <p>Supplier 2: (T-shirts, Dress-shirts, and Collar Shirts)</p>
+            </li>
+        </ul>
+        <p>Construction type can be based on any finite capacity such as material, machinery, time required to complete manufacture of required amount of items, and so on. Said another way, construction type is something associated with the constraint that a supplier has in terms of the material, fabric or other factor related to the ability to actually run the production of the product and what limitations the supplier has.</p>
+        <p class="BasicNote">System policy <span class="Emphasis">Supplier Constraint: Construction Type</span> (Module: Order Manager) defines which Attribute to use for supplier constraint.</p>
+        <p>Should a product not have an Attribute associated with it then macro, <span class="Emphasis">Apply Supplier Production Limitation</span>, available for Supplier orders in Order Manager will not be applied and supply will not be constrained. The macro requires a product’s Attribute to be associated with a construction type in order to constrain by that construction type. Without that association, there is no link to the particular macro and supply cannot be constrained.</p>
+        <p class="BasicNote">The Attribute needs to be set prior to actually creating purchase orders.</p>
+    </body>
+</html>

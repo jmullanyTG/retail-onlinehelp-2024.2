@@ -1,0 +1,82 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" xml:lang="en-us">
+    <head><title></title>
+    </head>
+    <body>
+        <h1>Collection and placeholder overview</h1>
+        <p>The main planning view in Assortment Planning (AP) is used to visualize plans by line. Plans can be managed at multiple levels whether the exact items to be ordered are known. Users can:</p>
+        <ul>
+            <li>
+                <p> assort items to site clusters</p>
+            </li>
+            <li>
+                <p>build sales plans via rate of sale, total sales, or total targeted buy quantity in both revenue and units</p>
+            </li>
+            <li>
+                <p>plan receipt flow strategy, </p>
+            </li>
+            <li>
+                <p>and manage sales and inventory plans pre- or in-season by period. </p>
+            </li>
+        </ul>
+        <p>The following are some key concepts to be aware of when working within the main planning view:</p>
+        <ul>
+            <li><span class="Emphasis">Placeholders and Variants</span> – whether the plan is seeded via the Smart Start process or lines are manually added to the plan, placeholder items are the starting point. Placeholders act as slots into which actual styles (Variants) can be placed. All aspects of a plan can be managed regardless of whether variants are attached to placeholders. </li>
+            <li><span class="Emphasis">Assigning Variants</span> – AP can accept an external data feed from a Product Lifecycle Management (PLM) or similar system to define variants. When this feed is configured, assigning variants is as simple as dragging and dropping them from the Style Bank. Additionally, if the integrated PLM can send product attribute information attached to the variant data, those attributes are passed on to placeholders to which those variants are assigned.</li>
+            <li>
+                <p><span class="Emphasis">Placeholders and Collections</span> – it is possible to plan at either the placeholder (style-color) or collection (style) level by using the view  for each. While the most typical case for planning in Collection view is to plan multiple colors of the same style together, AP does not restrict collections to this configuration. Collections can be comprised of multiple styles within the same product level or even across product levels.</p>
+            </li>
+        </ul>
+        <p>Collections comprised of styles that cross multiple product levels may not be visible in their entirety to all users, based on their product hierarchy permissions. In this scenario, users view and work with the portion of the collection to which they have appropriate permissions.</p>
+        <ul>
+            <li><span class="Emphasis">Clusters versus Sites</span> – to maximize system performance, AP was designed to operate primarily at the site cluster level rather than the site level. However, it is still possible to make site level product exclusions, saving the effort of having to create custom clusters every time there is a scenario where a particular variant should not be assorted to specific locations within existing clusters. For more information, see <MadCap:xref href="Manage Locations dialog.htm">Managing locations in clusters to which a placeholder is assorted</MadCap:xref>.</li>
+            <li>
+                <p><span class="Emphasis">Calculation Model</span> – the Line Visualization calculation model is built on single directional locking calculations that change all dependent metrics and balance to all levels of the plan regardless of which level they were changed at. In most cases, the effects of changes are immediately visible without having to save them first. However, there are some calculations (such as when <span class="Emphasis">Home AUT</span> (average unit ticket), phase in, or phase out are changed) that require background processing and saving to complete. </p>
+                <p>Prior to saving, the application locks  any metrics for the placeholder or collection that are dependent upon changes already made. The locks are indicated by a red or pink conditional format to the line, depending on the row color:</p>
+                <p>
+                    <img src="../../Resources/Images/Assortment Planning/Locking Placeholders.png" class="LargeImages" />
+                </p>
+                <p>In this state, metrics can continue to be unlocked without saving. All metrics are unlocked after clicking <span class="Emphasis">Save</span>.</p>
+            </li>
+            <li>
+                <p><a name="Tracking"></a> <span class="Emphasis">Tracking Against Ordering Deadlines</span></p>
+                <p>As one of the primary purposes of AP is planning future orders so it is essential to track products to order against relevant deadlines. Once commitment orders are generated for products within a plan, the workflow attached to those orders drives key dates in the ordering process. The dates are tracked through <span class="Emphasis">Order Manager</span> and the <span class="Emphasis">Assortment Upcoming Commitments Dashboard</span>. </p>
+                <p>Prior to commitments being created, AP reads default lead times by product hierarchy level and suppliers associated with variants to provide visibility to initial order due dates. The following needs to be set up to benefit from this information:</p>
+                <ul>
+                    <li><span class="Emphasis">Default Lead Time Days by Product Hierarchy Level</span>: accessible via Defaults within the Manage Assortment Plans dialog, the <span class="Emphasis">Lead Time Days</span> field sets generic lead time days by product hierarchy level.</li>
+                </ul>
+            </li>
+            <p>
+                <img src="../../Resources/Images/Assortment Planning/AP Defaults Grid.png" class="LargeImages" />
+            </p>
+            <p>The setting determines the number of days before a receipt date an order must be placed to arrive on time when there is no variant specific supplier lead time available, either because no variant is assigned to a given placeholder or because the assigned variant doesn’t have a supplier and lead time associated. For more information on setting defaults, see <MadCap:xref href="Managing Plans and Set Defaults.htm">Managing Assortment Plans and setting plan defaults</MadCap:xref>. </p>
+            <li><span class="Emphasis">Variant Supplier Assignments</span>: provided supplier information has been imported, variant supplier assignments can be set through Variant Manager (<span class="Emphasis">Management &gt; Variant Manager</span>).</li>
+            <p>
+                <img src="../../Resources/Images/Assortment Planning/Variant Supplier Assignments.png" class="LargeImages" />
+            </p>
+            <p>The <span class="Emphasis">Supplier Code / Lead Time</span> field can be used to select from available suppliers for variants listed in the active Variant Manager Document. The system uses the lead time days associated with the selected supplier to determine the number of days prior to a receipt date when that variant is assigned to a placeholder within AP.</p>
+            <p class="BasicNote">As with other fields in Variant Manager, the <span class="Emphasis">Supplier Code / Lead Time</span> field can be set for multiple variants at once by using <span class="Emphasis">CTRL + Click</span> or <span class="Emphasis">Shift + Click</span> to select the desired variant lines then using the <span class="Emphasis">right click &gt; Multiple Changes</span> functionality.</p>
+            <li>
+                <p><span class="Emphasis">Actualization</span> – because AP is an in-season planning tool and a pre-season tool, as periods within a plan pass, plan values are replaced by actual values during regularly scheduled system processes. As this occurs, certain plan metrics and functions are locked for placeholders whose life cycles intersect with actualized periods:</p>
+                <ul>
+                    <li>
+                        <p>Collection % Contribution, Ttl Buy $, Ttl Buy U, Min Pres, AUT, and AUC will not be directly editable</p>
+                        <ul>
+                            <li>Collection % Contribution, Ttl Buy $ and U can still be impacted by changes to ROS $, ROS U, Ttl Sls $, Ttl Sls U, and S/T %.</li>
+                            <li>
+                                <p>AUT can still be changed via the AUT side view, though changes can only be made to non-actualized periods. In the main planning and cluster set views, AUT displays the weighted average of AUT values for all periods, both actualized and future, beneath.</p>
+                            </li>
+                            <li>
+                                <p>AUC can still be indirectly impacted through the Receipt AUC of planned future receipts, as well as the cost of on order units and actual receipt units. In the main planning and cluster set views, AUC will display the weighted average of AUC values for all periods, both actualized and future, beneath.</p>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+                <ul>
+                    <li>The <span class="Emphasis">Split</span> function  which splits placeholders into two or more placeholders with shorter lifespans is disabled.</li>
+                </ul>
+            </li>
+            <p>Additionally, for metrics that remain editable, constraints are put in place to prevent users from making changes that cause sales to drop below actualized totals. If a user attempts to make a change that would violate this, they receive an error and changed metrics revert to their previous values.</p>
+        </ul>
+    </body>
+</html>

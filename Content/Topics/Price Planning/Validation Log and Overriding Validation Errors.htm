@@ -1,0 +1,326 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" xml:lang="en-us">
+    <head>
+        <link href="../../Resources/TableStyles/standard.css" rel="stylesheet" MadCap:stylesheetType="table" /><title></title>
+    </head>
+    <body>
+        <h1>Validation icons, the validation log, and overriding validation errors</h1>
+        <p>The system returns messages indicating if a Price Action has successfully complied with Validation rules. Validation Severity failure icons on the <span class="Emphasis">Price Actions</span> grid provide convenient indicators of whether a Price Action is validated or not while. </p>
+        <p>To display the <span class="Emphasis">Validation Log</span>, double-click the Validation Severity failure icon in the <span class="Emphasis">Validation</span> field on the <span class="Emphasis">Price Actions</span>, Variant Summary, Items, or Item Location grids.</p>
+        <h2>Overriding a validation failure</h2>
+        <p>The ability to override Validation failures reduces the amount of time Merchant Managers spend reviewing Validation failures.  To override a Validation failure, select the <span class="Emphasis">Override</span> checkbox and click <span class="Emphasis">Ok</span>.</p>
+        <p>&#160;Overriding a Validation failure causes the system to update any higher level affected by the Price Action’s worst case Validation Severity up to the Site Cluster, Price Action and Plan levels (these levels will still display worst case aggregation, meaning that while an override might be made, if there is another ‘worst’ case (error) the higher levels will not be updated):</p>
+        <ul>
+            <li>If the override is at the Inventory level, then the system will update the Inventory Manager, Variant, Site Cluster, Plan, and Action Header level, if appropriate.</li>
+            <li>If the override is at the Item Master level, then the system will update the Variant, Site Cluster, Plan, and Action&#160;Header level, if appropriate.</li>
+            <li>If the override is at the Variant level, then the system will update the Site Cluster, Plan, and Action Header level, if appropriate.</li>
+        </ul>
+        <h2>Order of validation severity levels</h2>
+        <p>The order of the Validation Severity levels (from best to worst) is as follows:</p>
+        <ul>
+            <li>Validated</li>
+            <li>
+                <p>Reviewed</p>
+                <ul>
+                    <li>Information Overridden</li>
+                    <li>Warning Overridden</li>
+                    <li>Error Overridden</li>
+                </ul>
+            </li>
+            <li>Information Provided</li>
+            <li>Warning Found</li>
+            <li>Error Encountered</li>
+        </ul>
+        <h2>Rules governing the recalculation and revalidation of a price action</h2>
+        <p>When recalculating and revalidating a Price Action, the system will:</p>
+        <ul>
+            <li>keep the Validation severity state when the Validation failure matches the previous failure (an Error remains an Error, a Warning remains a Warning, and so on).</li>
+            <li>update the Validation severity state if the Validation failure does not match the previous failure (an Error becomes a Warning, A Warning becomes an Error, and so on).</li>
+            <li>discard the Validation severity state if the Validation no longer fails (an Error is now Validated, a Warning is now Validated, and so on).</li>
+        </ul>
+        <h2>Validation severity icons</h2>
+        <p>The following are the Validation Severity icons for failures not yet reviewed:</p>
+        <table style="mc-table-style: url('../../Resources/TableStyles/standard.css');" class="TableStyle-standard" cellspacing="0">
+            <col class="TableStyle-standard-Column-Column1" />
+            <col class="TableStyle-standard-Column-Column2" />
+            <thead>
+                <tr class="TableStyle-standard-Head-Header1">
+                    <th class="TableStyle-standard-HeadE-Column1-Header1">Validation Severity icon</th>
+                    <th class="TableStyle-standard-HeadD-Column2-Header1">Description</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">
+                        <img src="../../Resources/Images/Price Planning/information icon.png" class="LargeImages" />
+                    </td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">Information Provided</td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">
+                        <img src="../../Resources/Images/Price Planning/warning icon.png" class="LargeImages" />
+                    </td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">Warning Encountered</td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyB-Column1-Body1">
+                        <img src="../../Resources/Images/Price Planning/error icon.png" class="LargeImages" />
+                    </td>
+                    <td class="TableStyle-standard-BodyA-Column2-Body1">Error Found</td>
+                </tr>
+            </tbody>
+        </table>
+        <p>The following are the Validation Severity icons for failures that have been reviewed:</p>
+        <table style="mc-table-style: url('../../Resources/TableStyles/standard.css');" class="TableStyle-standard" cellspacing="0">
+            <col class="TableStyle-standard-Column-Column1" />
+            <col class="TableStyle-standard-Column-Column2" />
+            <thead>
+                <tr class="TableStyle-standard-Head-Header1">
+                    <th class="TableStyle-standard-HeadE-Column1-Header1">Validation Severity Icon</th>
+                    <th class="TableStyle-standard-HeadD-Column2-Header1">Description</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">
+                        <img src="../../Resources/Images/Price Planning/information reviewed icon.png" class="LargeImages" />
+                    </td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">Information Reviewed</td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">
+                        <img src="../../Resources/Images/Price Planning/warning reviewed.png" class="LargeImages" />
+                    </td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">Warning Reviewed</td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyB-Column1-Body1">
+                        <img src="../../Resources/Images/Price Planning/error reviewed.png" class="LargeImages" />
+                    </td>
+                    <td class="TableStyle-standard-BodyA-Column2-Body1">Error Reviewed</td>
+                </tr>
+            </tbody>
+        </table>
+        <h2>Viewing validation messages in the Price Actions grid</h2>
+        <p>As per the following examples, hovering a mouse over the Validation Severity failure icon displays a validation message:</p>
+        <h3>Validation failure</h3>
+        <p>
+            <img src="../../Resources/Images/Price Planning/Validation Log Hover Message.png" class="LargeImages" />
+        </p>
+        <h3>Validation failure has been reviewed</h3>
+        <p>
+            <img src="../../Resources/Images/Price Planning/Validation Log Hover Message Reviewed.png" class="LargeImages" />
+        </p>
+        <p>The Validation Log provides messages based on failed validations configured in the <span class="Emphasis">Price Strategy</span> screen. Depending on where the Validation Log is displayed, the results are filtered as appropriate. The Validation Log can viewed from any <span class="Emphasis">Price Actions</span> grid (Price Action Header, Summary, Item and Item Location). Double-click on the icon in the <span class="Emphasis">Validation</span> column in the <span class="Emphasis">Price Actions</span> grid. </p>
+        <p class="BasicNote"> A failed validation that has been reviewed is now considered no longer failed and will be considered for export. Also, not all Validations can be overridden. The ability to override is based on system configuration which in turn is based on a review of the customer’s business process.</p>
+        <h2>Validation log </h2>
+        <p>The Validation Log has advanced filtering that lets users review and mark as reviewed validation failure records allowing Promotions to continue to downstream systems. The Validation Log does not limit the number of records to be returned.</p>
+        <p>Product Validation failures are filtered based on where the Validation log originated:</p>
+        <table style="width: 100%;margin-left: auto;margin-right: auto;mc-table-style: url('../../Resources/TableStyles/standard.css');" class="TableStyle-standard" cellspacing="0">
+            <col class="TableStyle-standard-Column-Column1" />
+            <col class="TableStyle-standard-Column-Column2" />
+            <thead>
+                <tr class="TableStyle-standard-Head-Header1">
+                    <th class="TableStyle-standard-HeadE-Column1-Header1">Level</th>
+                    <th class="TableStyle-standard-HeadD-Column2-Header1">Filter</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">Price Action</td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">All Site Cluster Validation failures, at the Inventory level, for ALL Site Clusters</td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">Site Cluster</td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">All Variant's Item Master's Inventory Validation failures for the specific Site Cluster</td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">Variant</td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">All associated Item Masters' Inventory Validation failures for the specific Site Cluster</td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">Item Master</td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">All associated Inventory Validation failures for the specific Site Cluster</td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyB-Column1-Body1">Inventory</td>
+                    <td class="TableStyle-standard-BodyA-Column2-Body1">Validation failures for the specific Site Cluster</td>
+                </tr>
+            </tbody>
+        </table>
+        <p> Additionally, Validation Severity failure icons indicate the current State of the Price Action:</p>
+        <p>
+            <img src="../../Resources/Images/Price Planning/Validation Log.png" class="LargeImages" />
+        </p>
+        <p>If a user with the appropriate User Right overrides a Validation failure, then the Validation Severity failure icon refreshes to indicate the failure has been reviewed.</p>
+        <p class="BasicNote"> Overrides can only happen during configuration for certain Price Action Statuses and specified Validation States.</p>
+        <h3>Field descriptions</h3>
+        <table style="width: 100%;margin-left: auto;margin-right: auto;mc-table-style: url('../../Resources/TableStyles/standard.css');" class="TableStyle-standard" cellspacing="0">
+            <col class="TableStyle-standard-Column-Column1" />
+            <col class="TableStyle-standard-Column-Column2" />
+            <thead>
+                <tr class="TableStyle-standard-Head-Header1">
+                    <th class="TableStyle-standard-HeadE-Column1-Header1">Field</th>
+                    <th class="TableStyle-standard-HeadD-Column2-Header1">Description</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">Location Name</td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">The Product Location.</td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">Validation Message</td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">The Validation Failure message describing why the validation failed.</td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">Override Date</td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">This field is populated with the current DateTime stamp if and when the override is saved.</td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">Override User</td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">This field is populated with the ID&#160;of the user performing the override if and when the override is saved.</td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyB-Column1-Body1">Override</td>
+                    <td class="TableStyle-standard-BodyA-Column2-Body1"> By default, the <span class="Emphasis">Override</span> checkbox is unchecked.<p> Only users with User Right <span class="Emphasis">Override Validation Failures</span> are able to select the <span class="Emphasis">Override</span> checkbox:<ul><li>during the Price Action’s Status and specified State (Information, Warning, Error), if controlled by Workflow, or</li><li>if not controlled by Workflow the user has the User Right globally.</li></ul></p></td>
+                </tr>
+            </tbody>
+        </table>
+        <h2>Advanced Validation Log</h2>
+        <p>Reduce the number of records that need evaluating by evaluating Pricing Validation failures at a Variant and Site level. To enable this functionality, system policy <span class="Emphasis">Advanced Validation Log</span> needs to be set to True.</p>
+        <p class="BasicNote">If a plan’s Product Pricing Level is set to <span class="Emphasis">Variant Site Plan</span>, then system policy <span class="Emphasis">Advanced Validation Log</span> is ignored and the Advanced Validation log displays regardless.</p>
+        <p>If a plan’s Product Pricing Level is set to <span class="Emphasis">Item Site Plan</span>, then system policy <span class="Emphasis">Advanced Validation Log</span> is evaluated and the system displays either the default or advanced validation log.</p>
+        <table style="width: 100%;margin-left: auto;margin-right: auto;mc-table-style: url('../../Resources/TableStyles/standard.css');" class="TableStyle-standard" cellspacing="0">
+            <col class="TableStyle-standard-Column-Column1" />
+            <col class="TableStyle-standard-Column-Column2" />
+            <thead>
+                <tr class="TableStyle-standard-Head-Header1">
+                    <th class="TableStyle-standard-HeadE-Column1-Header1">Field</th>
+                    <th class="TableStyle-standard-HeadD-Column2-Header1">Description</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">Validation Status icon </td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">
+                        <ul>
+                            <li>Variant level - Displays aggregated worst validation failure severity of an associated Inventory</li>
+                            <li>Site level - Displays validation level failure severity</li>
+                        </ul>
+                    </td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">Override Checkbox</td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">
+                        Displays for both Variant and Inventory records when configured for Override:
+                        <ul><li>If an override is set at the Variant level, the system will override for all associated Sites</li><li>If an override is set to all Sites, the system will apply at the Variant level</li></ul></td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">Variant </td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">Displays for an Inventory level Validation failure</td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">Item Master</td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">Suppressed</td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">Location Code\Name</td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">Displays for any Inventory level Validation failure. The system will only display a Site once, per Variant, if multiple Item Masters exist within the Variant that fails.</td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">Validation Message</td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">Displays for the Inventory level failure at the Variant</td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">Override Date</td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">
+                        <ul>
+                            <li>Populated at the Variant level if overridden at the Variant level</li>
+                            <li>Populated at the individual Inventory (Site) level if overridden at the Inventory level<ul><li>If all Sites are overridden explicitly, the system will not populate at the Variant level</li></ul></li>
+                        </ul>
+                    </td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyB-Column1-Body1">Override User</td>
+                    <td class="TableStyle-standard-BodyA-Column2-Body1">
+                        <ul>
+                            <li>Populated at the Variant level if overridden at the Variant level</li>
+                            <li>Populated at the individual Inventory (Site) level if overridden at the Inventory level<ul><li>If all Sites are overridden explicitly, system will not populate at the Variant level</li></ul></li>
+                        </ul>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <h2> Exporting price actions that have a validation severity type of error</h2>
+        <p>The system does not allow Price Actions with a failed Validation Severity type of Error to be exported. Price Actions with Validation failures of severity type Error are exportable to downstream systems (such as reporting, ERP, POS) when all Validation failures of severity type Error have been overridden.</p>
+        <p>The following validation states can be exported:</p>
+        <table style="mc-table-style: url('../../Resources/TableStyles/standard.css');" class="TableStyle-standard" cellspacing="0">
+            <col class="TableStyle-standard-Column-Column1" />
+            <col class="TableStyle-standard-Column-Column2" />
+            <thead>
+                <tr class="TableStyle-standard-Head-Header1">
+                    <th class="TableStyle-standard-HeadE-Column1-Header1">Validation Severity ID</th>
+                    <th class="TableStyle-standard-HeadD-Column2-Header1">Description</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">
+                        <img src="../../Resources/Images/Price Planning/validated icon.png" class="LargeImages" />
+                    </td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">Validated</td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">
+                        <img src="../../Resources/Images/Price Planning/information icon.png" class="LargeImages" />
+                    </td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">Information Provided</td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">
+                        <img src="../../Resources/Images/Price Planning/warning icon.png" class="LargeImages" />
+                    </td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">Warning Encountered</td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">
+                        <img src="../../Resources/Images/Price Planning/information reviewed icon.png" class="LargeImages" />
+                    </td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">Information Reviewed</td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">
+                        <img src="../../Resources/Images/Price Planning/warning reviewed.png" class="LargeImages" />
+                    </td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">Warning Reviewed</td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyB-Column1-Body1">
+                        <img src="../../Resources/Images/Price Planning/error reviewed.png" class="LargeImages" />
+                    </td>
+                    <td class="TableStyle-standard-BodyA-Column2-Body1">Error Reviewed</td>
+                </tr>
+            </tbody>
+        </table>
+        <p>The following validation states cannot be exported:</p>
+        <table style="mc-table-style: url('../../Resources/TableStyles/standard.css');" class="TableStyle-standard" cellspacing="0">
+            <col class="TableStyle-standard-Column-Column1" />
+            <col class="TableStyle-standard-Column-Column2" />
+            <thead>
+                <tr class="TableStyle-standard-Head-Header1">
+                    <th class="TableStyle-standard-HeadE-Column1-Header1">Validation Severity ID</th>
+                    <th class="TableStyle-standard-HeadD-Column2-Header1">Description</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyB-Column1-Body1">
+                        <img src="../../Resources/Images/Price Planning/error icon.png" class="LargeImages" />
+                    </td>
+                    <td class="TableStyle-standard-BodyA-Column2-Body1">Error Found</td>
+                </tr>
+            </tbody>
+        </table>
+    </body>
+</html>

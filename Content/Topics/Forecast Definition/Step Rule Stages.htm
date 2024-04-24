@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" xml:lang="en-us">
+    <head><title></title>
+    </head>
+    <body>
+        <h1>Step rule stages</h1>
+        <p>There are three stages within the order of operations in which a step rule may be applied. This varies depending on the rule and the intention. It is important to understand the steps preceding and following the step rules to properly locate a step rule within the order of operations.</p>
+        <h2>Backtrack</h2>
+        <p>Backtrack (backcast) is the first step taken once the preliminary definitions have been established. Backtrack is a process by which the engine applies its forecasting method to a point earlier in the series. Backtrack will be optimistic (best case) of the forecast. Backtrack will look to the historical series, apply a forecast and then comparisons can be made to the actual data points further along in the series. Backtrack will self-correct to better align with the known historical data points.</p>
+        <h3>Example</h3>
+        <p>Forecasting beyond the current month (November) backtrack will look at a data point ten months ago (January) and then see how accurately the forecast would have predicted the known data point five months later (June).</p>
+        <h2>Simulation</h2>
+        <p>Simulation runs concurrently in the order of operations with Backtrack and is effected by the same prerequisites in the order of operations. Simulation is very similar to Backtrack with the discernible difference that simulation will not self-correct. Any errors with the forecast will therefore compound. Simulation can be described as pessimistic (worst case) of the forecast.</p>
+        <h2>Forecast</h2>
+        <p>The forecast step is the point in the order of operations in which the step rules are applied and the actual forecast tournament is run.</p>
+    </body>
+</html>

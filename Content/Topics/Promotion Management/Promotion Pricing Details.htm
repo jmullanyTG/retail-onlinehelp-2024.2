@@ -1,0 +1,326 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd"
+      xml:lang="en-us"
+      MadCap:lastBlockDepth="8"
+      MadCap:lastHeight="3811"
+      MadCap:lastWidth="1044">
+   <head>
+      <link href="../../Resources/TableStyles/standard.css"
+            rel="stylesheet"
+            MadCap:stylesheetType="table"/>
+      <title/>
+   </head>
+   <body>
+      <h1>Promotion pricing details defaults</h1>
+      <p>The following table can be used to configure the standard promotion strategies.</p>
+      <p class="BasicNote"> The promotion pricing details may vary from these defaults due to implementation requirements.</p>
+      <table class="TableStyle-standard"
+             cellspacing="0"
+             style="mc-table-style: url('../../Resources/TableStyles/standard.css');">
+         <thead>
+            <tr class="TableStyle-standard-Head-Header1">
+               <th class="TableStyle-standard-HeadE-Column1-Header1">Promotion Pricing Output Set</th>
+               <th class="TableStyle-standard-HeadD-Column2-Header1">Configuration</th>
+            </tr>
+         </thead>
+         <tbody>
+            <tr class="TableStyle-standard-Body-Body1">
+               <td class="TableStyle-standard-BodyE-Column1-Body1">
+                  <p>EDLP</p>
+               </td>
+               <td class="TableStyle-standard-BodyD-Column2-Body1">
+                  <ul>
+                     <li>HighestRetailPrice (Read Only)</li>
+                     <li>LowestRetailPrice (Read Only)</li>
+                     <li>HighestPromotionPrice (Read Only)</li>
+                     <li>LowestPromotionPrice (Read Only)</li>
+                  </ul>
+               </td>
+            </tr>
+            <tr class="TableStyle-standard-Body-Body1">
+               <td class="TableStyle-standard-BodyE-Column1-Body1">
+                  <p>Fixed</p>
+               </td>
+               <td class="TableStyle-standard-BodyD-Column2-Body1">
+                  <ul>
+                     <li>PromotionPrice (Write Enabled) – Group Level, Item Level, Variant Level</li>
+                     <li>HighestPromotionPrice (Read Only)</li>
+                     <li>LowestPromotionPrice (Read Only)</li>
+                     <li>HighestRetailPrice (Read Only)</li>
+                     <li>LowestRetailPrice (Read Only)</li>
+                  </ul>
+               </td>
+            </tr>
+            <tr class="TableStyle-standard-Body-Body1">
+               <td class="TableStyle-standard-BodyE-Column1-Body1">
+                  <p>Amount Off</p>
+               </td>
+               <td class="TableStyle-standard-BodyD-Column2-Body1">
+                  <ul>
+                     <li>DollarDiscount (Write Enabled) – Group Level, Item Level, Variant Level</li>
+                     <li>HighestDollarDiscount (Read Only)</li>
+                     <li>LowestDollarDiscount (Read Only)</li>
+                     <li>HighestPromotionPrice (Read Only)</li>
+                     <li>LowestPromotionPrice (Read Only)</li>
+                     <li>HighestRetailPrice (Read Only)</li>
+                     <li>LowestRetailPrice (Read Only)</li>
+                  </ul>
+               </td>
+            </tr>
+            <tr class="TableStyle-standard-Body-Body1">
+               <td class="TableStyle-standard-BodyE-Column1-Body1">
+                  <p>Percent Off</p>
+               </td>
+               <td class="TableStyle-standard-BodyD-Column2-Body1">
+                  <ul>
+                     <li>PercentDiscount (Write Enabled) – Group Level, Item Level, Variant Level</li>
+                     <li>HighestPercentDiscount (Read Only)</li>
+                     <li>LowestPercentDiscount (Read Only)</li>
+                     <li>HighestPromotionPrice (Read Only)</li>
+                     <li>LowestPromotionPrice (Read Only)</li>
+                     <li>HighestRetailPrice (Read Only)</li>
+                     <li>LowestRetailPrice (Read Only)</li>
+                  </ul>
+               </td>
+            </tr>
+            <tr class="TableStyle-standard-Body-Body1">
+               <td class="TableStyle-standard-BodyE-Column1-Body1">
+                  <p>Multi Buy</p>
+               </td>
+               <td class="TableStyle-standard-BodyD-Column2-Body1">
+                  <ul>
+                     <li>TotalPromotionalPrice (Read Only)</li>
+                     <li>MultiBuyQuantity (Read Only)</li>
+                     <li>HighestRetailPrice (Read Only)</li>
+                     <li>LowestRetailPrice (Read Only)</li>
+                     <li>HighestPromotionPrice (Read Only)</li>
+                     <li>LowestPromotionPrice (Read Only)</li>
+                  </ul>
+                  <p class="BasicNote">Multi Buy Promotion Strategies do not allow overrides since it would not be possible to accurately calculate a product’s promotion price if one or more products in the Promotion had an override.</p>
+               </td>
+            </tr>
+            <tr class="TableStyle-standard-Body-Body1">
+               <td class="TableStyle-standard-BodyE-Column1-Body1">
+                  <p>BOGO AA Free</p>
+               </td>
+               <td class="TableStyle-standard-BodyD-Column2-Body1">
+                  <ul>
+                     <li>BuyQuantity (Write Enabled) – Group Level, Item Level, Variant Level</li>
+                     <li>GetQuantity (Write Enabled) – Group Level, Item Level, Variant Level</li>
+                     <li>HighestRetailPrice (Read Only)</li>
+                     <li>LowestRetailPrice (Read Only)</li>
+                     <li>HighestPromotionPrice (Read Only)</li>
+                     <li>LowestPromotionPrice (Read Only)</li>
+                  </ul>
+               </td>
+            </tr>
+            <tr class="TableStyle-standard-Body-Body1">
+               <td class="TableStyle-standard-BodyE-Column1-Body1">
+                  <p>BOGO AB Free</p>
+               </td>
+               <td class="TableStyle-standard-BodyD-Column2-Body1">
+                  <ul>
+                     <li>BuyQuantity (Write Enabled) – Group Level, Item Level, Variant Level</li>
+                     <li>GetQuantity (Write Enabled) – Group Level, Item Level, Variant Level</li>
+                     <li>HighestRetailPrice (Read Only)</li>
+                     <li>LowestRetailPrice (Read Only)</li>
+                     <li>HighestPromotionPrice (Read Only)</li>
+                     <li>LowestPromotionPrice (Read Only)</li>
+                  </ul>
+               </td>
+            </tr>
+            <tr class="TableStyle-standard-Body-Body1">
+               <td class="TableStyle-standard-BodyE-Column1-Body1">
+                  <p>BOGO AA Amount Off</p>
+               </td>
+               <td class="TableStyle-standard-BodyD-Column2-Body1">
+                  <ul>
+                     <li>BuyQuantity (Write Enabled) – Group Level, Item Level, Variant Level</li>
+                     <li>GetQuantity (Write Enabled) – Group Level, Item Level, Variant Level</li>
+                     <li>BogoDollarDiscount (Write Enabled) – Group Level, Item Level, Variant Level</li>
+                     <li>HighestRetailPrice (Read Only)</li>
+                     <li>LowestRetailPrice (Read Only)</li>
+                     <li>HighestPromotionPrice (Read Only)</li>
+                     <li>LowestPromotionPrice (Read Only)</li>
+                     <li>HighestDollarDiscount (Read Only)</li>
+                     <li>LowestDollarDiscount (Read Only)</li>
+                  </ul>
+               </td>
+            </tr>
+            <tr class="TableStyle-standard-Body-Body1">
+               <td class="TableStyle-standard-BodyE-Column1-Body1">
+                  <p>BOGO AB Amount Off</p>
+               </td>
+               <td class="TableStyle-standard-BodyD-Column2-Body1">
+                  <ul>
+                     <li>BuyQuantity (Write Enabled) – Group Level, Item Level, Variant Level</li>
+                     <li>GetQuantity (Write Enabled) – Group Level, Item Level, Variant Level</li>
+                     <li>BogoDollarDiscount (Write Enabled) – Group Level, Item Level, Variant Level</li>
+                     <li>HighestRetailPrice (Read Only)</li>
+                     <li>LowestRetailPrice (Read Only)</li>
+                     <li>HighestPromotionPrice (Read Only)</li>
+                     <li>LowestPromotionPrice (Read Only)</li>
+                     <li>HighestDollarDiscount (Read Only)</li>
+                     <li>LowestDollarDiscount (Read Only)</li>
+                  </ul>
+               </td>
+            </tr>
+            <tr class="TableStyle-standard-Body-Body1">
+               <td class="TableStyle-standard-BodyE-Column1-Body1">
+                  <p>BOGO AA Percent Off </p>
+               </td>
+               <td class="TableStyle-standard-BodyD-Column2-Body1">
+                  <ul>
+                     <li>BuyQuantity (Write Enabled) – Group Level, Item Level, Variant Level</li>
+                     <li>GetQuantity (Write Enabled) – Group Level, Item Level, Variant Level</li>
+                     <li>BogoPercentDiscount (Write Enabled) – Group Level, Item Level, Variant Level</li>
+                     <li>HighestRetailPrice (Read Only)</li>
+                     <li>LowestRetailPrice (Read Only)</li>
+                     <li>HighestPromotionPrice (Read Only)</li>
+                     <li>LowestPromotionPrice (Read Only)</li>
+                     <li>HighestPercentDiscount (Read Only)</li>
+                     <li>LowestPercentDiscount (Read Only)</li>
+                  </ul>
+               </td>
+            </tr>
+            <tr class="TableStyle-standard-Body-Body1">
+               <td class="TableStyle-standard-BodyE-Column1-Body1">
+                  <p>BOGO AB Percent Off</p>
+               </td>
+               <td class="TableStyle-standard-BodyD-Column2-Body1">
+                  <ul>
+                     <li>BuyQuantity (Write Enabled) – Group Level, Item Level, Variant Level</li>
+                     <li>GetQuantity (Write Enabled) – Group Level, Item Level, Variant Level</li>
+                     <li>BogoPercentDiscount (Write Enabled) – Group Level, Item Level, Variant Level</li>
+                     <li>HighestRetailPrice (Read Only)</li>
+                     <li>LowestRetailPrice (Read Only)</li>
+                     <li>HighestPromotionPrice (Read Only)</li>
+                     <li>LowestPromotionPrice (Read Only)</li>
+                     <li>HighestPercentDiscount (Read Only)</li>
+                     <li>LowestPercentDiscount (Read Only)</li>
+                  </ul>
+               </td>
+            </tr>
+            <tr class="TableStyle-standard-Body-Body1">
+               <td class="TableStyle-standard-BodyE-Column1-Body1">
+                  <p>Multi Buy Amount Off</p>
+               </td>
+               <td class="TableStyle-standard-BodyD-Column2-Body1">
+                  <ul>
+                     <li>MultiBuyQuantity (Read Only)</li>
+                     <li>DollarDiscount (Read Only)</li>
+                     <li>HighestRetailPrice (Read Only)</li>
+                     <li>LowestRetailPrice (Read Only)</li>
+                     <li>HighestPromotionPrice (Read Only)</li>
+                     <li>LowestPromotionPrice (Read Only) </li>
+                  </ul>
+                  <p class="BasicNote">Multi Buy Promotion Strategies do not allow overrides since it would not be possible to accurately calculate a product’s promotion price if one or more products in the Promotion had an override.</p>
+               </td>
+            </tr>
+            <tr class="TableStyle-standard-Body-Body1">
+               <td class="TableStyle-standard-BodyE-Column1-Body1">
+                  <p>Multi Buy Percent Off</p>
+               </td>
+               <td class="TableStyle-standard-BodyD-Column2-Body1">
+                  <ul>
+                     <li>MultiBuyQuantity (Read Only)</li>
+                     <li>PercentDiscount (Read Only)</li>
+                     <li>HighestRetailPrice (Read Only)</li>
+                     <li>LowestRetailPrice (Read Only)</li>
+                     <li>HighestPromotionPrice (Read Only)</li>
+                     <li>LowestPromotionPrice (Read Only) </li>
+                  </ul>
+                  <p class="BasicNote">Multi Buy Promotion Strategies do not allow overrides since it would not be possible to accurately calculate a product’s promotion price if one or more products in the Promotion had an override.</p>
+               </td>
+            </tr>
+            <tr class="TableStyle-standard-Body-Body1">
+               <td class="TableStyle-standard-BodyE-Column1-Body1">
+                  <p>BOGO AA Promo Price</p>
+               </td>
+               <td class="TableStyle-standard-BodyD-Column2-Body1">
+                  <ul>
+                     <li>BuyQuantity (Write Enabled) – Group Level, Item Level, Variant Level</li>
+                     <li>GetQuantity (Write Enabled) – Group Level, Item Level, Variant Level</li>
+                     <li>BogoPromotionPrice (Write Enabled) – Group Level, Item Level, Variant Level</li>
+                     <li>HighestRetailPrice (Read Only)</li>
+                     <li>LowestRetailPrice (Read Only)</li>
+                     <li>HighestPromotionPrice (Read Only)</li>
+                     <li>LowestPromotionPrice (Read Only)</li>
+                  </ul>
+               </td>
+            </tr>
+            <tr class="TableStyle-standard-Body-Body1">
+               <td class="TableStyle-standard-BodyE-Column1-Body1">
+                  <p>BOGO AB Promo Price</p>
+               </td>
+               <td class="TableStyle-standard-BodyD-Column2-Body1">
+                  <ul>
+                     <li>BuyQuantity (Write Enabled) – Group Level, Item Level, Variant Level</li>
+                     <li>GetQuantity (Write Enabled) – Group Level, Item Level, Variant Level</li>
+                     <li>BogoPromotionPrice (Write Enabled) – Group Level, Item Level, Variant Level</li>
+                     <li>HighestRetailPrice (Read Only)</li>
+                     <li>LowestRetailPrice (Read Only)</li>
+                     <li>HighestPromotionPrice (Read Only)</li>
+                     <li>LowestPromotionPrice (Read Only)</li>
+                  </ul>
+               </td>
+            </tr>
+            <tr class="TableStyle-standard-Body-Body1">
+               <td class="TableStyle-standard-BodyE-Column1-Body1">
+                  <p>Spend X Get Amount Discount</p>
+               </td>
+               <td class="TableStyle-standard-BodyD-Column2-Body1">
+                  <ul>
+                     <li>HighestRetailPrice (Read Only)</li>
+                     <li>LowestRetailPrice (Read Only)</li>
+                  </ul>
+               </td>
+            </tr>
+            <tr class="TableStyle-standard-Body-Body1">
+               <td class="TableStyle-standard-BodyE-Column1-Body1">
+                  <p>Spend X Get Percent Discount</p>
+               </td>
+               <td class="TableStyle-standard-BodyD-Column2-Body1">
+                  <ul>
+                     <li>HighestRetailPrice (Read Only)</li>
+                     <li>LowestRetailPrice (Read Only)</li>
+                  </ul>
+               </td>
+            </tr>
+            <tr class="TableStyle-standard-Body-Body1">
+               <td class="TableStyle-standard-BodyE-Column1-Body1">
+                  <p>Spend X Get Multi Points</p>
+               </td>
+               <td class="TableStyle-standard-BodyD-Column2-Body1">
+                  <ul>
+                     <li>HighestRetailPrice (Read Only)</li>
+                     <li>LowestRetailPrice (Read Only)</li>
+                  </ul>
+               </td>
+            </tr>
+            <tr class="TableStyle-standard-Body-Body1">
+               <td class="TableStyle-standard-BodyE-Column1-Body1">
+                  <p>Spend X Get Points</p>
+               </td>
+               <td class="TableStyle-standard-BodyD-Column2-Body1">
+                  <ul>
+                     <li>HighestRetailPrice (Read Only)</li>
+                     <li>LowestRetailPrice (Read Only)</li>
+                  </ul>
+               </td>
+            </tr>
+            <tr class="TableStyle-standard-Body-Body1">
+               <td class="TableStyle-standard-BodyB-Column1-Body1">
+                  <p>Spend X Get Gift Card</p>
+               </td>
+               <td class="TableStyle-standard-BodyA-Column2-Body1">
+                  <ul>
+                     <li>HighestRetailPrice (Read Only)</li>
+                     <li>LowestRetailPrice (Read Only)</li>
+                  </ul>
+               </td>
+            </tr>
+         </tbody>
+      </table>
+   </body>
+</html>

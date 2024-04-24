@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<CatapultTarget
+  Version="2"
+  Comment="MadCap HTML5 Target"
+  Type="WebHelp2"
+  Destinations=""
+  GlossaryTermConversion="marked"
+  MoveOutputContentToRoot="true"
+  SkinComponents=""
+  EnableResponsiveOutput="true"
+  MasterPage="/Content/Resources/MasterPages/Standard.flmsp"
+  ResultsPerPage="10"
+  ConditionTagExpression="include[General.ScreenOnly] exclude[General.DoNotPublish or General.PrintOnly] "
+  DefaultUrl="/Content/Home.htm"
+  MasterStylesheet="/Content/Resources/Stylesheets/ToolsGroup.css"
+  MasterStylesheetOverride="false"
+  TabletBreakpoint="1270"
+  PreCompileScaledImages="true"
+  GenerateWebSafeImages="false"
+  WebSafeFileExtension="png"
+  ExcludeUnreferencedContent="true"
+  UseDeviceWidth="false"
+  MobileBreakpoint="1269"
+  DisableAutoSync="true"
+  TopNavTocPath="true"
+  EquationsOutputType="PNG"
+  EmbedImages="true"
+  MasterToc="/Project/TOCs/Help Center TOC.fltoc"
+  Skin="/Project/Skins/HTML5 - Top Navigation.flskn">
+  <PrintedOutput
+    CollapseMargins="true"
+    GenerateTOCProxy="false"
+    GenerateIndexProxy="true"
+    GenerateGlossaryProxy="false"
+    OutputFormat="docx" />
+  <Destinations> </Destinations>
+  <Variables> <Variable
+      Name="Variables/BookVersion">2024.2</Variable> <Variable
+      Name="Variables/BookSubTitle">User Guide</Variable><Variable
+      Name="Variables/BookTitle">JustEnough</Variable> </Variables>
+</CatapultTarget>

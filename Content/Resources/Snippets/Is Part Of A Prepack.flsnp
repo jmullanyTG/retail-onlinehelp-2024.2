@@ -1,0 +1,9 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head>
+    </head>
+    <body>
+        <h3>Returning only items which are or are not part of a prepack.</h3>
+        <p>Users can search for or filter out inventory that is part of a prepack, as a child item or parent item, using the filter labeled <span class="Emphasis">Is Part Of A Prepack</span> (group <span class="Emphasis">Inventory Prepack Information</span>) which is available for the Inventory entity type.</p>
+    </body>
+</html>

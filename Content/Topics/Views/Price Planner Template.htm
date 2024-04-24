@@ -1,0 +1,58 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head>
+        <link href="../../Resources/TableStyles/standard.css" rel="stylesheet" MadCap:stylesheetType="table" />
+    </head>
+    <body>
+        <h1>Adding custom views to the Price Manager Planning tab </h1>
+        <p>For Variant by Site plans, custom views can be added as tabs on the <span class="Emphasis">Planning</span> view. A View Collection Set, View, and Widget (all three are labeled <span class="Emphasis">Price Planner Template</span>) are used to create custom views. A stored procedure can be used for reference to build widgets.</p>
+        <p class="BasicNote">System policy <span class="Emphasis">Price Planner View Collection Set</span> must be set to the View Collection Set ID. When the system policy  is set to a valid View Collection Set ID, then that associated View is visible as a tab on the <span class="Emphasis">Planning</span> view next to the <span class="Emphasis">Site Detail</span> tab. When the system policy isn’t set, the tab is not visible.</p>
+        <p>
+            <img src="../../Resources/Images/Price Planning/Custom view added to Planning tab.png" class="LargeImages" />
+        </p>
+        <h2>Accessing the Price Planner Template screen</h2>
+        <p>This screen can be accessed by
+
+navigating to System Utilities &gt; Views &gt; Price Manager &gt; Price Manager Template.</p>
+        <h2>Creating custom views</h2>
+        <p>For more information, see <MadCap:xref href="Creating Custom Views.htm">Creating custom views.</MadCap:xref></p>
+        <h2>Parameters</h2>
+        <p>The View Collection Set is passed the following parameters:</p>
+        <table style="width: 100%;margin-left: auto;margin-right: auto;mc-table-style: url('../../Resources/TableStyles/standard.css');" class="TableStyle-standard" cellspacing="0">
+            <col class="TableStyle-standard-Column-Column1" />
+            <col class="TableStyle-standard-Column-Column2" />
+            <thead>
+                <tr class="TableStyle-standard-Head-Header1">
+                    <th class="TableStyle-standard-HeadE-Column1-Header1">Parameter</th>
+                    <th class="TableStyle-standard-HeadD-Column2-Header1">Description</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">@iUserID</td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">The user using price planner.</td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">@iConfigID</td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">The currently selected price plan.</td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">@iFilterMasterID</td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">The selected filter in price planner, if Show Plan, Show All Sites, or Null is checked, then no filter is passed in.</td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">@ShowMissingPrice1</td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">The value of the <span class="Emphasis">Show Missing Price 1</span> checkbox.</td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">@ShowMissingPrice2</td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">The value of the <span class="Emphasis">Show Missing Price 2</span> checkbox.</td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyB-Column1-Body1">@iVariantID</td>
+                    <td class="TableStyle-standard-BodyA-Column2-Body1">The selected variant of in the variant grid.</td>
+                </tr>
+            </tbody>
+        </table>
+    </body>
+</html>

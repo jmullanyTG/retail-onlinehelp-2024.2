@@ -1,0 +1,48 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" xml:lang="en-us">
+    <head><title></title>
+    </head>
+    <body>
+        <h1>Excluding or re-including sites and site clusters in a pricing plan</h1>
+        <p> Sites can be excluded from or re-included in plans even after price actions have been created. This does not change existing price actions. However, new price actions will have the sites excluded or re-included.</p>
+        <p>To include or exclude sites or site clusters in a pricing plan, navigate to the <span class="Emphasis">Sites</span> pane on the plan’s <span class="Emphasis">Information</span> tab. </p>
+        <p>
+            <img src="../../Resources/Images/Price Planning/Site Clusters Add_Remove.png" class="LargeImages" />
+        </p>
+        <p>The checkbox in the <span class="Emphasis">Inactive</span> field is unselected by default meaning the&#160;site or site cluster is included. Excluded sites or site clusters are marked by a strikethrough. </p>
+        <p>
+            <img src="../../Resources/Images/Price Planning/Site Clusters Excluded.png" class="LargeImages" />
+        </p>
+        <p>Once <span class="Emphasis">Save</span> is clicked, the plan's start date is evaluated (displayed in the <span class="Emphasis">Start Date</span> field) to determine if a new site cluster set snapshot exists. If a new site cluster set snapshot does not exist, then any inclusions or exclusions of sites and site clusters are saved to the plan.</p>
+        <p>If a new site cluster set snapshot does exist, then a message dialog displays to inform that an updated site cluster set exists and will be loaded. Once <span class="Emphasis">Ok</span> is clicked, the Site Cluster grid is refreshed with the site cluster set snapshot applicable to the plan’s start date and exclusions and re-inclusions must be re-selected.</p>
+        <p MadCap:conditions="General.ScreenOnly">For more information on Snapshots, see <MadCap:xref href="../Merchandise Financial Planning/Plan Creation Management.htm">Creating and Managing Financial Plans</MadCap:xref>.</p>
+        <p MadCap:conditions="General.PrintOnly">For more information on Snapshots, refer to the online help.</p>
+        <h2>Excluding sites and site clusters</h2>
+        <p>In the <span class="Emphasis">Sites</span> grid:</p>
+        <ol>
+            <li>
+                <p>Select the checkbox in the <span class="Emphasis">Inactive</span> field by the name of the site cluster to be excluded or select checkboxes within a site cluster to exclude particular sites. </p>
+            </li>
+            <li>
+                <p>Click <span class="Emphasis">Save</span>. </p>
+                <p>The screen automatically refreshes and the names of excluded sites and site clusters are denoted by a strikethrough.</p>
+                <p> There must be at least one site and site cluster included in a plan. Therefore, the following message displays if there is an attempt to exclude all site clusters.</p>
+                <p>
+                    <img src="../../Resources/Images/Price Planning/Site Cluster Exclusion Dialog.png" class="LargeImages" />
+                </p>
+                <p>Clicking <span class="Emphasis">Ok</span> closes the dialog and refreshes the screen.</p>
+            </li>
+        </ol>
+        <h2>Re-including sites and site clusters</h2>
+        <p>In the <span class="Emphasis">Sites</span> grid:</p>
+        <ol>
+            <li>
+                <p>Select the checked checkbox by the name of the excluded site clusters (indicated by a strikethrough) to be re-included or select checkboxes within a site cluster to re-include particular sites. </p>
+            </li>
+            <li>
+                <p>Click <span class="Emphasis">Save</span>.</p>
+                <p>The screen automatically refreshes and the names of the re-included sites and site clusters are no longer denoted by a strikethrough.</p>
+            </li>
+        </ol>
+    </body>
+</html>

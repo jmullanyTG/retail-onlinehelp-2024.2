@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<CatapultVariableSet>
+  <Variable
+    Name="BookTitle"
+    Comment=""
+    EvaluatedDefinition="SET IN TARGET">SET IN TARGET</Variable>
+  <Variable
+    Name="BookSubTitle"
+    Comment=""
+    EvaluatedDefinition="SET IN TARGET">SET IN TARGET</Variable>
+  <Variable
+    Name="BookVersion"
+    Comment=""
+    EvaluatedDefinition="SET IN TARGET">SET IN TARGET</Variable>
+  <Variable
+    Name="Current_Year"
+    Comment=""
+    Type="DateTime"
+    LastUpdated="2019-04-10T14:20:26.7851347-04:00"
+    EvaluatedDefinition="yyyy">yyyy</Variable>
+</CatapultVariableSet>

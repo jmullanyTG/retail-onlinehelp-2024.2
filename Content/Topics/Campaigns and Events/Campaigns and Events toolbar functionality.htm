@@ -1,0 +1,163 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" xml:lang="en-us">
+    <head>
+        <link href="../../Resources/TableStyles/standard.css" rel="stylesheet" MadCap:stylesheetType="table" /><title></title>
+    </head>
+    <body>
+        <h1>Campaign and Events toolbar functionality</h1>
+        <p>User Rights and Event Workflow permissions determine which buttons are available.</p>
+        <p>
+            <img src="../../Resources/Images/Events/Toolbar functionality.png" class="LargeImages" />
+        </p>
+        <h2>Functionality</h2>
+        <table style="mc-table-style: url('../../Resources/TableStyles/standard.css');" class="TableStyle-standard" cellspacing="0">
+            <col style="width: 15%;" class="TableStyle-standard-Column-Column1" />
+            <col style="width: 85%;" class="TableStyle-standard-Column-Column2" />
+            <thead>
+                <tr class="TableStyle-standard-Head-Header1">
+                    <th class="TableStyle-standard-HeadE-Column1-Header1">Button</th>
+                    <th class="TableStyle-standard-HeadD-Column2-Header1">Description</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">
+                        Save
+                    </td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">Saves any changes that have been made to the Event Information screen.
+                    </td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">
+                        Clone
+                    </td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">Creates a copy of the current Event. All associated Promotions are duplicated for the new Event.
+                    </td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">
+                        Edit Header
+                    </td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">
+                        Provides access to modify Event Header details including Campaign, Workflow, Ad Dates and Sale Dates.
+                    </td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">
+                        Change Status
+                    </td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">
+                        Provides access to change the Event Status based on the associated Workflow. Access depends on the Event Workflow Transition Rights configuration. For more information, see <a href="Event status change.htm">Event Status Change</a>.
+                    </td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">
+                        Slot Set: New
+                    </td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">Appends a new Slot Set to the Event using the default Slot Set Template defined in the Event Global Policies. The Slot Set is also appended to the first Event Composition.
+                        <p class="BasicNote">The label for this button changes depending on the Event Type’s configuration.</p></td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">
+                        Slot Set: Delete
+                    </td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">Removes the selected Slot Set from the Event. All Promotions that were placed on the Slot Set are disassociated from the Event but not deleted.
+                        <p class="BasicNote">The label for this button changes depending on the Event Type’s configuration.</p></td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td colspan="2" class="TableStyle-standard-BodyD-Column1-Body1">
+                        <p colspan="2">The following functionality is disabled when a Promotion with a privacy option of Private is selected.</p>
+                        <p colspan="2" class="BasicNote">Remove All will only be applied to Promotions that the logged in user has access to.</p>
+                        <p colspan="2">
+                            <img src="../../Resources/Images/Events/Buttons_Promotion.png" class="LargeImages" />
+                        </p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">New
+                    </td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">
+                        A Slot must have Geographies available and the logged-in user must have the appropriate Workflow permissions and rights. Clicking <span class="Emphasis">New</span> opens the <span class="Emphasis">Create New Promotion</span> wizard. For more information, see <a href="Create a new Promotion.htm">Create a New Promotion.</a></td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">Remove
+                    </td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">(Enabled if a Promotion is selected in the Slot Set.) Removes only the selected Promotion from the Slot. Any other Promotions are still associated with the Slot. A different Promotion can be added to the newly open Geographies in the Slot.
+                    </td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">Remove All
+                    </td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">(Enabled if a Promotion is selected in the Slot Set.) Removes all Promotions from the Slot. The Slot is open after this action.
+                    </td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">Unassign
+                    </td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">(Enabled if a Promotion is selected in the Slot Set.) The Promotion from an assigned Slot to the Unassigned Position 0. The Promotion moves to Slot 0 and is still associated with the Slot Set.
+                    </td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">
+                        View
+                    </td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">
+                        (Enabled if a Promotion is selected in the Slot Set.) Click on this button to view the Promotion in Promotion Manager. The Promotion can be modified with the appropriate rights. Changes reflect in the Event after the Slot Set is refreshed.
+                    </td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyB-Column1-Body1">
+                        Content
+                    </td>
+                    <td class="TableStyle-standard-BodyA-Column2-Body1">
+                        For any Promotion in an Event, it is possible to modify the content and associated images using the Content Editor. For more information, see <a href="Content Editor.htm">Content Editor</a>.
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <h2>Event toolbar buttons</h2>
+        <table style="mc-table-style: url('../../Resources/TableStyles/standard.css');" class="TableStyle-standard" cellspacing="0">
+            <col class="TableStyle-standard-Column-Column1" />
+            <col class="TableStyle-standard-Column-Column2" />
+            <thead>
+                <tr class="TableStyle-standard-Head-Header1">
+                    <th class="TableStyle-standard-HeadE-Column1-Header1">Action</th>
+                    <th class="TableStyle-standard-HeadD-Column2-Header1">Description</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">
+                        List
+                    </td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">
+                        Displays Slot Sets in a grid format. For more information, see <a href="Configuring slot sets.htm">List</a>.
+                    </td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">
+                        Layout
+                    </td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">
+                        Displays the layout with images and formatted text. For more information, see <a href="Layout.htm">Layout</a>.
+                    </td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">
+                        Versions
+                    </td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">View all versions of the Slot Set that may occur due to variations in Promotions, Content or Pricing for one or more Geographies. For more information, see <a href="Versions.htm">Versions</a>.
+                    </td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyB-Column1-Body1">
+                        Views
+                    </td>
+                    <td class="TableStyle-standard-BodyA-Column2-Body1">
+                        Displays a customized area at the bottom of the screen that is configured for the Event Type.
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </body>
+</html>

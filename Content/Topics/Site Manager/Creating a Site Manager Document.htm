@@ -1,0 +1,116 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head>
+        <link href="../../Resources/TableStyles/standard.css" rel="stylesheet" MadCap:stylesheetType="table" /><title></title>
+    </head>
+    <body>
+        <h1>Creating and reviewing site manager documents</h1>
+        <p>From Site Manager, create and review site manager documents to manage sites.</p>
+        <h2>To create a site manager document</h2>
+        <ol>
+            <li>
+                <p>From the Management tab, click <span class="Emphasis">Site Manager</span>. </p>
+                <p>The <span class="Emphasis">Items</span> window displays.</p>
+            </li>
+            <li>
+                <p>Select the filter that contains the sites you want to manage and click <span class="Emphasis">Ok</span>. </p>
+                <p>The <span class="Emphasis">Site Manager Document</span> view displays.</p>
+            </li>
+            <li>
+                <p>In the <span class="Emphasis">Columns</span> toolbar, click <span class="Emphasis">Choose</span>.</p>
+                <p>
+                    <img src="../../Resources/Images/Site Manager/Site Manager Document screen.png" class="LargeImages" />
+                </p>
+            </li>
+            <li>
+                <p>Select additional fields to display and click <span class="Emphasis">Ok</span>. </p>
+                <p>The Site Manager Document displays. </p>
+            </li>
+        </ol>
+        <h2>Filtering sites to match specific criteria</h2>
+        <p>Metadata is used to filter sites matching specific criteria. This metadata appears as fields in the grid in the Site Manager Document view.</p>
+        <h2>Exception filters</h2>
+        <p>Metadata can be used to create exception filters that identify sites in need of additional configuration, such as sites that:</p>
+        <ul>
+            <li>have not yet been assigned to a site cluster.</li>
+            <li>
+                <p>do not appear in any Allocation location strategies.</p>
+                <p>
+                    <MadCap:conditionalText MadCap:conditions="General.ScreenOnly">For more information  on filtering sites in location strategies, see <MadCap:xref href="../Allocations/Allocation Overview.htm">Allocations overview</MadCap:xref>.</MadCap:conditionalText>
+                    <MadCap:conditionalText MadCap:conditions="General.PrintOnly">For more information on filtering sites in location strategies, refer to the Allocations User Guide.</MadCap:conditionalText>
+                </p>
+            </li>
+            <li>have not been added to a supply chain. </li>
+        </ul>
+        <h2>Reviewing site manager documents</h2>
+        <p>Click the <span class="Emphasis">Details</span> button to review individual sites in the grid.</p>
+        <p>
+            <img src="../../Resources/Images/Site Manager/Site Manager site document.png" class="LargeImages">
+            </img>
+        </p>
+        <p>For more information, see <MadCap:xref href="Site Manager Document Details.htm">Site manager document detail pane</MadCap:xref>.</p>
+        <h2>Field descriptions</h2>
+        <p>
+            <table style="margin-left: 0;margin-right: auto;mc-table-style: url('../../Resources/TableStyles/standard.css');" class="TableStyle-standard" cellspacing="0">
+                <col class="TableStyle-standard-Column-Column1" style="width: 271px;" />
+                <col class="TableStyle-standard-Column-Column2" />
+                <thead>
+                    <tr class="TableStyle-standard-Head-Header1">
+                        <th class="TableStyle-standard-HeadE-Column1-Header1">Field</th>
+                        <th class="TableStyle-standard-HeadD-Column2-Header1">Description</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr class="TableStyle-standard-Body-Body1">
+                        <td class="TableStyle-standard-BodyE-Column1-Body1"><span class="Emphasis">Site Code</span>
+                        </td>
+                        <td class="TableStyle-standard-BodyD-Column2-Body1">
+                               The numeric site code of the selected site. 
+                            </td>
+                    </tr>
+                    <tr class="TableStyle-standard-Body-Body1">
+                        <td class="TableStyle-standard-BodyE-Column1-Body1"><span class="Emphasis">Site Name</span>
+                        </td>
+                        <td class="TableStyle-standard-BodyD-Column2-Body1">The name of the selected site.</td>
+                    </tr>
+                    <tr class="TableStyle-standard-Body-Body1">
+                        <td class="TableStyle-standard-BodyE-Column1-Body1"><span class="Emphasis">Priority</span>
+                        </td>
+                        <td class="TableStyle-standard-BodyD-Column2-Body1">
+                            The priority of an item (days, years, etc.). 
+                            </td>
+                    </tr>
+                    <tr class="TableStyle-standard-Body-Body1">
+                        <td class="TableStyle-standard-BodyE-Column1-Body1"><span class="Emphasis">Priority Group</span>
+                        </td>
+                        <td class="TableStyle-standard-BodyD-Column2-Body1">
+                             Associated priority group used to resolve shortfall situations. These groups can be used to protect a specific set of sites before referring to global priority to resolve shortfall situations. Takes precedence over global priority. 
+                        </td>
+                    </tr>
+                    <tr class="TableStyle-standard-Body-Body1">
+                        <td class="TableStyle-standard-BodyE-Column1-Body1"><span class="Emphasis">Currency</span>
+                        </td>
+                        <td class="TableStyle-standard-BodyD-Column2-Body1">The currency applied to the site.</td>
+                    </tr>
+                    <tr class="TableStyle-standard-Body-Body1">
+                        <td class="TableStyle-standard-BodyE-Column1-Body1"><span class="Emphasis">Channel Code</span>
+                        </td>
+                        <td class="TableStyle-standard-BodyD-Column2-Body1">The channel code where an item is sold, such as retail, outlet, e-commerce, no channel.</td>
+                    </tr>
+                    <tr class="TableStyle-standard-Body-Body1">
+                        <td class="TableStyle-standard-BodyE-Column1-Body1"><span class="Emphasis">Channel Description</span>
+                        </td>
+                        <td class="TableStyle-standard-BodyD-Column2-Body1">The channel description.</td>
+                    </tr>
+                    <tr class="TableStyle-standard-Body-Body1" MadCap:conditions="General.DoNotPublish">
+                        <td class="TableStyle-standard-BodyB-Column1-Body1"><span class="Emphasis">Current Site Comparative Syte</span>
+                        </td>
+                        <td class="TableStyle-standard-BodyA-Column2-Body1">
+                               The status of each site (comparative or non-comparative) for the current period. 
+                                <p class="BasicNote">If a site does not have a comparative status for this period, this value is blank.</p></td>
+                    </tr>
+                </tbody>
+            </table>
+        </p>
+    </body>
+</html>

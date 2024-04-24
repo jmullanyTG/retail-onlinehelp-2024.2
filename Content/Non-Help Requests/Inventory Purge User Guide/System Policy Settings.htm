@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head>
+    </head>
+    <body>
+        <h1>System Policy Settings</h1>
+        <p>There are three system policy tokens specific to the Inventory Purge utility.</p>
+        <h2>Inventory.PurgeLimitPerRun</h2>
+        <p>In order to minimize duration, 20 Batches of 4,500 Inventories (maximum default 90,000 Inventories) can be purged in a single run.  The Purge enforces this limit, irrespective of any blunt-force effort to increase it.  The value can be raised or lowered at will within the range of 1 through 20.</p>
+        <h2>Inventory.PurgeDeadlockRetryLimit</h2>
+        <p>Given the parallel execution nature of the utility, we seek to minimize the possibility of having to stop the process due to excessive SQL Server DEADLOCK occurrences, measured against what could be a very low standard setting of 3 retries.  The Purge Utility is set to retry up to 30 times.  Lowering this count is deemed detrimental and unnecessary.  It can be raised at will.</p>
+        <h2>Inventory.PurgeRetentionDays</h2>
+        <p>It is incumbent upon the implementation team to adjust this value at will.  The data retained are the Purge table content, starting at inventory.Purge_Run, and affecting each child table, and is for an entire Run, irrespective of the earliest start date-time of any Purge Step -- retention starts from the date-time the Run was last modified.</p>
+    </body>
+</html>

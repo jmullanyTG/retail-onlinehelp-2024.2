@@ -1,0 +1,12 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head />
+    <body>
+        <h1>Configuring engine chains</h1>
+        <p>The engine chains can be configured using the <span class="Emphasis">Configure Engine Chain</span> view. This view allows someone with the correct permissions to enable or disable the engine chains.</p>
+        <p>Enabling the engine chains changes the logic in SQL to route to different procedures that create the proper engine chain tasks for each of the engines that are part of that engine, and calls the appropriate engine chain endpoint on the Compute Manager. </p>
+        <p>In the case of Allocations, when the <span class="Emphasis">AllocationLogisticProjection</span> (ALP) engine chain is enabled, the call from the UIL to the Calculate procedure reroutes to use the ALP Calculate procedure instead. The procedure uses different engine subtypes for the engine chain.</p>
+        <p>Disabling the engine chains allows the data to be run on the engine as they are currently implemented. Engine Chaining does not affect previously created jobs or tasks in Job Manager that may be run nightly or weekly unless they call the specific Calculate procedures as part of the task. The logic for those jobs and tasks can be changed to utilize engine chaining if it is needed.</p>
+        <p>To configure an engine chain, navigate to <span class="Emphasis">System Utilities</span> &gt; <span class="Emphasis">Views</span> &gt; <span class="Emphasis">Maintenance</span> &gt; <span class="Emphasis">Configure Engine Chain</span>.</p>
+    </body>
+</html>

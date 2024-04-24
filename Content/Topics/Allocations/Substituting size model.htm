@@ -1,0 +1,32 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" xml:lang="en-us">
+    <head>
+        <title>
+        </title>
+    </head>
+    <body>
+        <h1>Substituting size models</h1>
+        <p>To substitute one site’s curve for another:</p>
+        <ol>
+            <li>Select the size model header to make substitutions in from the list in the top area of the <span class="Emphasis">Size Models</span> Screen.
+				</li>
+            <li>Ensure the <span class="Emphasis">Override Allowed?</span> field is checked.
+				</li>
+            <li>
+                <p>In the bottom grid, select a site from the dropdown menu in the <span class="Emphasis">Override Site</span> field of the site whose curve is to be overridden.</p>
+                <p>
+                    <img src="../../Resources/Images/Allocation Size/Making Size Curve Substitutions_2.png" class="LargeImages" />
+                </p>
+            </li>
+            <li> Click <span class="Emphasis">Save</span>.
+			<p class="BasicNote">Sites that have an Override Site assigned and saved do not appear for selection in the <span class="Emphasis">Override Site</span> dropdown menu. To clear the Override Site prior to saving, select the dropdown entry with a blank Site ID and No Substitution in the Description.</p></li>
+        </ol>
+        <h2>Contribution values of the overridden site’s size model</h2>
+        <p>The contribution values of the overridden site’s size model will match those of the override Site. The <span class="Emphasis">Clear Override</span> field is conditionally formatted <span style="font-weight: bold;color: #E36C0A;">orange</span>, indicating an override has been made.</p>
+        <p>
+            <img src="../../Resources/Images/Allocation Size/Making Size Curve Substitutions_3.png" class="LargeImages" />
+        </p>
+        <p class="BasicNote">
+            <span class="Emphasis">Is Eligible?</span> settings for the Override Site are also copied. An error displays when trying to assign an Override Site to a site that is already being used as an Override Site. This is done to prevent circular or difficult to follow logic with the curves being substituted.</p>
+    </body>
+</html>

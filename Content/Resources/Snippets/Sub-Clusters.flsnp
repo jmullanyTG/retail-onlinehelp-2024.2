@@ -1,0 +1,14 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head>
+    </head>
+    <body>
+        <p>Store cluster sets can be graded and clustered (ABC) based on sales performance and then sub-clustered by a site-specific Lookup attribute type (such as cold, hot, warm), including user defined attributes. This gives users the ability to make adjustments to phase periods based on site attributes.</p>
+        <p class="BasicNote">Whether an attribute is item or site specific is a property managed in Attribute Manager.</p>
+        <p>If system policy <span class="Emphasis">Cluster Set Allow Sub Cluster</span> (Module: Cluster Site Manager) is set to <span class="Emphasis">True</span> then sub-clustering is enabled in the Site Clustering module. </p>
+        <p>
+            <ins>The <span class="Emphasis">Sub Clustering Attribute</span> field displays in the <span class="Emphasis">Add Cluster Set</span> and <span class="Emphasis">Update Cluster Set</span> screens but only when <span class="Emphasis">Assortment</span> is the only module selected in the <span class="Emphasis">Module</span> field. </ins>
+        </p>
+        <p class="BasicNote">The ability to select and maintain sub-clusters requires user right <span class="Emphasis">Allow Sub Cluster to be Maintained</span> (Right Group: Cluster Site Manager).</p>
+    </body>
+</html>

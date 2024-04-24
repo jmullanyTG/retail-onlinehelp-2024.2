@@ -1,0 +1,57 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" xml:lang="en-us">
+    <head>
+        <title>
+        </title>
+    </head>
+    <body>
+        <h1>Curves tab field and functionality reference</h1>
+        <h2>Toolbar functionality</h2>
+        <p>
+            <span class="Emphasis">Details</span>: Toggles the build and period to mean y-axes.</p>
+        <p>
+            <span class="Emphasis">Filter configuration</span>:
+
+Displays all available groups (item master, inventory, and site) for inclusion. The order setting allows users to effectively construct their hierarchy (product, site, etc.) and include the appropriate values for the curve filters. </p>
+        <p>
+            <span class="Emphasis">Tag configuration</span>: Curve tags are used to give the individual curves searchable attributes. Curve tags can be added or removed within the <span class="Emphasis">Maintain Curve Tags</span> wizard.</p>
+        <h2>Curves section</h2>
+        <p>
+            <span class="Emphasis">Tags</span>: A dropdown list of filters that allows users to select particular curves to view.</p>
+        <h3>Field descriptions</h3>
+        <ul>
+            <li>
+                <span class="Emphasis">Name</span> – The name for the individual curve. Can be concatenated out of several associated tags. </li>
+            <li>
+                <span class="Emphasis">Generation Type</span> – The method by which the curve was generated. <ul><li><span class="Emphasis">Manual Curve</span> – Values must be entered manually when creating a manual curve. A default value can be specified to set the scale. </li><li><span class="Emphasis">Specified Conditions</span> – A generated curve using a selected data sample.</li></ul></li>
+            <li>
+                <p>
+                    <span class="Emphasis">Bucket Type</span> – The type of time period used for the x-axis. </p>
+                <p class="BasicNote">Bucket types can be daily, weekly, or monthly, but should be selected to support the data. </p>
+            </li>
+            <li>
+                <span class="Emphasis">Start Date</span> – The effective start date for the sample. </li>
+            <li>
+                <span class="Emphasis">End Data</span> – The effective end date for the sample. </li>
+            <li>
+                <span class="Emphasis">Number of Periods</span> – The number of periods contained in the curve. </li>
+        </ul>
+        <h2>Curve Details section</h2>
+        <p>The Curve Details section provides a graphical representation of the curve series values and a grid view. </p>
+        <p>Series values in the curve details display  in a graphical format and in a grid. </p>
+        <ul>
+            <li>
+                <span class="Emphasis">Bucket</span> – Associated time period (buckets) for the x-axis of the line graph display in the grid. </li>
+            <li>
+                <span class="Emphasis">Calculated</span> – The system generated value for each period within the curve. </li>
+            <li>
+                <span class="Emphasis">Effective</span> – Manual adjustments are  represented as a value in the <span class="Emphasis">Effective</span> series which can be compared to the static values in the <span class="Emphasis">Calculated</span> series. </li>
+            <li>
+                <span class="Emphasis">Build</span> – Represents a multiplier for the period value’s relationship to the previous period value. This lets users see how drastically the curve values change. This is not applicable to the first period point in the curve (anchor point).</li>
+            <li>
+                <span class="Emphasis">Contribution %</span> - A percentage for each period of the representative value of the effective value when compared to the whole (e.g. a flat line curve with 10 periods would have a contribution of 10% for each period).</li>
+            <li>
+                <span class="Emphasis">Period to Mean</span> – The period to mean y-axis shows a graphical representation of the distance to the mean by period. </li>
+        </ul>
+    </body>
+</html>

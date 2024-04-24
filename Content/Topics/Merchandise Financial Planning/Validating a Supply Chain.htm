@@ -1,0 +1,47 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head />
+    <body>
+        <h1>Validating a supply chain</h1>
+        <p>A valid supply chain can be used to split inventory among DCs. For a supply chain to be valid, the sites and DCs in the supply chain must match the sites and DCs in the plan, and all sites in the supply chain must have a DC as their primary source. </p>
+        <p>Only supply chains for master plans can be selected and validated. To see whether the supply chain defined for a master plan is valid, validate it from the <span class="Emphasis">Maintain Financial Plan</span> window. For convenience, the result is passed down to its branch plans.</p>
+        <h2>Viewing supply chain status within the Financial Plan Maintenance window</h2>
+        <ol>
+            <li>Navigate to <span class="Emphasis">Plan &gt; Merchandise Financial Planning</span>.</li>
+            <li>Click <span class="Emphasis">Manage</span> on the Financial Planning toolbar.</li>
+            <li> Select a plan. </li>
+        </ol>
+        <p>The <span class="Emphasis">Stock Split Supply Chain</span> and <span class="Emphasis">Supply Chain Status</span> fields appear in the <span class="Emphasis">Settings</span> tab. </p>
+        <p>(If a branch plan was selected, these values are inherited from its master plan.)</p>
+        <p>If the supply chain is not valid (because it has not been defined or has errors), its status value is colored red in the plan's <span class="Emphasis">Settings/General</span> tab. 
+		</p>
+        <p>
+            <img src="../../Resources/Images/MFP/Supply Chain status red.png" class="LargeImages" />
+        </p>
+        <h2>To validate a supply chain:</h2>
+        <ol>
+            <li>From the Financial Planning toolbar, click <span class="Emphasis">Manage</span>.</li>
+            <li>
+                <p>In the <span class="Emphasis">Financial Plan Maintenance</span> window, select a master plan and click <span class="Emphasis">Edit</span>.</p>
+                <p>The <span class="Emphasis">Maintain Financial Plan</span> window displays.</p>
+            </li>
+            <li>
+                <p>Navigate to <span class="Emphasis">Supply Chain Status</span> field in the <span class="Emphasis">General</span> tab. </p>
+            </li>
+            <li>
+                <p>Click the check mark on the right-side of the <span class="Emphasis">Supply Chain Status</span> field to validate the supply chain.</p>
+                <p>
+                    <img src="../../Resources/Images/MFP/status validate.png" class="LargeImages" />
+                </p>
+                <p>The result of the validation appears in the <span class="Emphasis">Supply Chain Status</span> field.</p>
+            </li>
+        </ol>
+        <h2>Results</h2>
+        <ul>
+            <li>If the Supply Chain Status value is Valid, the supply chain is used to split inventory among DCs.</li>
+            <li>
+                <p>If the Supply Chain Status value is  <span class="Emphasis">Unknown</span> or <span class="Emphasis">Invalid</span>, inventory is split generically  among DCs.</p>
+            </li>
+        </ul>
+    </body>
+</html>

@@ -1,0 +1,39 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head />
+    <body>
+        <h1>Assortment Out-of-Tier Report view (not available in Collection view)</h1>
+        <p> For a selected placeholder with sales or stock at a non-assorted site, the <span class="Emphasis">Assortment Out-of-Tier Report</span> view can be used to drill down further into the data. The  <span class="Emphasis">Assortment Out-of-Tier Report</span> view can still display data even when the <span class="Emphasis">OOT&#160;Sales</span> and <span class="Emphasis">OOT Stock</span> fields are not marked. This is because the threshold for sales or stock was not met or exceeded.</p>
+        <p class="BasicNote">Thresholds for sales and stock at non-assorted sites are set in the <span class="Emphasis">Assortment Plan Defaults</span> tab. </p>
+        <p>The report displays the placeholder’s sales and stock data that correspond to the selected <span class="Emphasis">Window of Time</span>, how much is in which cluster, and what the percentage is for non-assorted sites. </p>
+        <p class="BasicNote">Metrics are actualized values (for example: using ActualSalesUnits versus TotalSalesUnits) so they may not match totals in the main planning view.</p>
+        <p>The <span class="Emphasis">Assortment Out-of-Tier Report</span> view is displayed or hidden in Placeholder view using the <span class="Emphasis">View Selection</span> dropdown menu. The report is only visible for one placeholder at a time. If multiple placeholders are selected in the main planning view, the report resolves only for the placeholder that has focus.</p>
+        <p>
+            <img src="../../Resources/Images/Assortment Planning/Assortment OOT report.PNG" class="LargeImages" />
+        </p>
+        <MadCap:snippetBlock src="../../Resources/Snippets/Viewing Attributes as Columns.flsnp" />
+        <h2>View layout</h2>
+        <p>The <span class="Emphasis">Assortment Out-of-Tier Report</span> view has four sections.</p>
+        <h3>Assortment Inventory Report section</h3>
+        <p>The <span class="Emphasis">Assortment Inventory Report</span> section uses the cluster snapshot date selected in the <span class="Emphasis">Cluster Snapshot Date</span> parameter.</p>
+        <h3>Out of Tier Sites section</h3>
+        <p>This section returns sales units for the period of actualization. Multiple sites can be selected to show sales history data and cluster candidates.</p>
+        <p>
+            <img src="../../Resources/Images/Assortment Planning/OOT Sites Multi Select.png" class="LargeImages" />
+        </p>
+        <h3>Sales History section</h3>
+        <p>The <span class="Emphasis">Sales History</span> section can be modified to show sales units at week level by right-clicking within the section and selecting <span class="Emphasis">Setup</span>.</p>
+        <p>
+            <img src="../../Resources/Images/Assortment Planning/OOT Report Dashboard Designer.png" class="LargeImages" />
+        </p>
+        <h3>Cluster Candidates section</h3>
+        <p>The <span class="Emphasis">Cluster Candidates</span> section uses the cluster snapshot date selected in the <span class="Emphasis">Cluster Snapshot Date</span> parameter.
+The grid lists the cluster sets and cluster set clusters the listed sites could belong to.</p>
+        <p MadCap:conditions="General.DoNotPublish">Cluster candidates- Example, let's say SiteID 123 belongs to Cluster Set 1 / Cluster 1, and also could be part of Cluster Set 12 / Cluster 2, and also could be part of Cluster Set 876 / Cluster 3
+The totals SOH is from ALL the OOT sites that belong to 1 / 1, and the total that belong to 12 / 2, and the total that belong to 876 / 3
+
+those cluster set / clusters may or may not contain the same numbers of sites, some overlap, some not
+
+</p>
+    </body>
+</html>

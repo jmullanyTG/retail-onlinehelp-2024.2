@@ -1,0 +1,60 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head>
+        <link href="../../Resources/TableStyles/standard.css" rel="stylesheet" MadCap:stylesheetType="table" />
+    </head>
+    <body>
+        <h1>Price Manager</h1>
+        <p>There are two sets of permissions within Price Planning. One set not affected by a Price Action Status (i.e. global), the other affected by status. Below is a list of global permissions and  purpose. Permissions can be configured using the <span class="Emphasis">Maintenance  &gt;  Users</span> menu action.</p>
+        <table class="TableStyle-standard" cellspacing="0" style="mc-table-style: url('../../Resources/TableStyles/standard.css');">
+            <col class="TableStyle-standard-Column-Column1" />
+            <col class="TableStyle-standard-Column-Column2" />
+            <thead>
+                <tr class="TableStyle-standard-Head-Header1">
+                    <th class="TableStyle-standard-HeadE-Column1-Header1">Right</th>
+                    <th class="TableStyle-standard-HeadD-Column2-Header1">Description</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">Access to Price Planning</td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">View the Price Planning module, via <span class="Emphasis">Influence &gt; Price and Markdown</span> menu action, and all Pricing Plans and Actions configured.
+                    </td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">
+                        Access to Price Planning Configuration 
+                    </td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">View the Price Planning configuration screen: Rounding Rules, Variables, Calculations, Validations, Strategies and Status. 
+                    </td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">Allow Override of Validation Failures</td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">Mark the override checkbox, for a failed Price Validation (i.e. Information, Warning, Error), in the Price Validation Log. Overriding a Price Validation error replaces the Validation failure severity icon with a Reviewed icon to indicate that a failure exists but has already been 'approved'.</td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">Create/Edit a Pricing Plan</td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">Create and edit start date, add or remove products and sites, etc. associated to a pricing plan.
+                    </td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">Delete a Pricing Plan</td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">
+                       Delete pricing plans. Plans cannot be deleted if there are associated price actions. 
+                    </td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">Create a Pricing Action</td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">
+                     Create price actions which set pricing for site products. 
+                    </td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyB-Column1-Body1">Emergency Pricing Action</td>
+                    <td class="TableStyle-standard-BodyA-Column2-Body1">Modify a pricing plan start date and price action start date to occur tomorrow. By default, the plan start date and associated price action start dates are restricted by the number of days, from today, configured in system policy <span class="Emphasis">Plan Start Date Number Of Days Out</span> (Module:Price Manager).
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </body>
+</html>

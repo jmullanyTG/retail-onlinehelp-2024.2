@@ -1,0 +1,35 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head>
+    </head>
+    <body>
+        <h1>Calculating lost sales for web stores without SOH</h1>
+        <p>Lost sales for both physical and web-based stores that maintain their own stock on hand (SOH) is calculated using the store's SOH. This isn't possible for web-based stores which do not maintain their own SOH. In this case, the SOH of the primary source site is used to calculate lost sales. </p>
+        <p>Sites accumulate lost sales for a period if:</p>
+        <ul>
+            <li>
+                <p>there is a proper supply chain</p>
+            </li>
+            <li>
+                <p>the primary source site has zero historical SOH</p>
+            </li>
+            <li>
+                <p>the site has a positive effective forecast</p>
+            </li>
+            <li>
+                <p>lost sale is greater than forecast sales.</p>
+            </li>
+        </ul>
+        <p>To select a site that needs the SOH of the primary source site to be used, check the checkbox in the <span class="Emphasis">Calculate Lost Sales Using Source Site?</span> field in the Site Manager Document grid and click <span class="Emphasis">Save</span>. </p>
+        <p>
+            <img src="../../Resources/Images/Site Manager/Calculate Lost Sales Using Source Site.PNG" class="LargeImages">
+            </img>
+        </p>
+        <p>This field does not display by default. To add this field, click <span class="Emphasis">Choose</span> on the Site Manager Document toolbar and include the <span class="Emphasis">Calculate Lost Sales Using Source Site?</span> option from the <span class="Emphasis">Site Lost Sales</span> metadata group. </p>
+        <p>A filter can be created to display only those sites that are using the primary source site to calculate lost sales.</p>
+        <p>
+            <img src="../../Resources/Images/Site Manager/Calculate Lost Sales Using Source Site Filter.PNG" class="LargeImages" />
+        </p>
+        <p>The default supply chain that is used is configured using a nightly task or by setting a default using system policy <span class="Emphasis">Supply Chain Default Active Supply Chain ID</span> (Module: Supply Chain). A supply chain specific to web stores that do not maintain their own SOH&#160;can be set. </p>
+    </body>
+</html>

@@ -1,0 +1,71 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" xml:lang="en-us">
+    <head>
+        <title>
+        </title>
+    </head>
+    <body>
+        <h1>System policies used to support adaptive allocations </h1>
+        <p>System policies are used to support Adaptive Allocations. Certain policies are shared with Allocations and others are exclusive to functions within Adaptive Allocations. All policies will need to be configured before operating Adaptive Allocations. </p>
+        <table style="mc-table-style: url('../../Resources/TableStyles/standard.css');margin-left: auto;margin-right: auto;width: 100%;" class="TableStyle-standard" cellspacing="0">
+            <col style="width: 170px;" class="TableStyle-standard-Column-Column1" />
+            <col class="TableStyle-standard-Column-Column2" />
+            <thead>
+                <tr class="TableStyle-standard-Head-Header1">
+                    <th class="TableStyle-standard-HeadE-Column1-Header1">System policy</th>
+                    <th class="TableStyle-standard-HeadD-Column2-Header1">Description</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">Accounting Type</td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">This policy appears in the <span class="Emphasis">General</span> section as it is a global default for ToolsGroup JustEnough implementation. This will determine the accounting method of stock valuation used for the organization (cost or retail). Within Adaptive Allocations, this will determine if price values or cost values are used for target to unit conversion.</td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">Average Inclusion Threshold</td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">Default value for average inclusion threshold, which is the percentage of a variant's maximum sales which must be met for a period to be considered in the de-seasonalization process.  Periods of sales for the variant below the threshold will be removed before de-seasonalization. Defaults to 3%.</td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">Active Variant Threshold Factor</td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">Default value for active variant threshold factor, which is the percentage of a variant's de-seasonalized average sales which must be met for that period to be considered "Active". Defaults to 0.</td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">Active Variant Time on Offer Minimum</td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">Default value for active variant time on offer minimum, which is the percentage of the scenario time frame during which an item must have been on offer in order for it to be considered "Active". Defaults to 30%.</td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">Calendar</td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">Calendar used within the module. Defaults to “1” (default calendar).</td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">Cost Type</td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">The cost type value used when determining the inventory level target to units conversion factor. Defaults to “1” (default cost).</td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">Currency</td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">Default base currency for display within the module.</td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">Item Master Hierarchy</td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">Identifier for the product hierarchy used within the module. Should be configured as part of the initial solution design.</td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">Maximum Pick Ratio Default</td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">Defines the maximum pick ratio if it is not supplied at within the scenario. Defaults to “2”.</td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">Minimum Pick Ratio Default</td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">Defines the minimum pick ratio if it is not supplied at within the scenario. Defaults to “0.5”.</td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">Period Type</td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">The period type (day, week, month) used within the module. It is highly recommended to keep this setting consistent with the period type used within Allocations. Defaults to “2” (week).</td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyB-Column1-Body1">Price Type</td>
+                    <td class="TableStyle-standard-BodyA-Column2-Body1">The price type value used when determining the inventory level target to units conversion factor. Defaults to “1” (default price).</td>
+                </tr>
+            </tbody>
+        </table>
+    </body>
+</html>

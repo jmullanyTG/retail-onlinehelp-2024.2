@@ -1,0 +1,46 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head />
+    <body>
+        <h1>Clustering algorithms: K-Means and K-Medoids</h1>
+        <p>One of the most common points of contention in the clustering process is determining which clustering algorithm, K-Means or K-Medoids, yields the most accurate results. This decision depends on the nature of the specific data used to calculate the desired cluster sets. Consider the following when making this decision.</p>
+        <ul>
+            <li><span class="Emphasis">Performance:</span> the K-Means algorithm requires fewer iterations to resolve than K-Medoids does, which means reduced time required to calculate (and re-calculate) cluster sets created via this method. If a business requires a large number of cluster sets and/or those cluster sets need to be updated frequently, this may be a point of differentiation when making a choice</li>
+            <li><span class="Emphasis">Data Anomalies:</span> the K-Medoids algorithm is considered to be more responsive to data with a high degree of noise and/or outliers than K-Means. Whether K-Medoids returns a more accurate result than K-Means is entirely dependent on the data returned by the specified criteria. To illustrate this point, see the following example*:</li>
+        </ul>
+        <p>
+            <img src="../../Resources/Images/Cluster Site Manager/Practical Application.png" class="LargeImages" />
+        </p>
+        <p>* The illustration was prepared with the Java applet, E.M. Mirkes,&#160;<a href="http://www.math.le.ac.uk/people/ag153/homepage/KmeansKmedoids/Kmeans_Kmedoids.html">K-means and K-medoids: applet</a>. University of Leicester, 2011.</p>
+        <p>Figures 1a) to 1f) display the iterations of the K-Means algorithm on a particular data set, where figures 2a) to 2h) display the iterations of the K-Medoids algorithm on the same set. In this case, K-Means  ignores the clear differentiation of the two groups in the lower half of the grid, whereas K-Medoids provides the more accurate solution. This difference occurs because K-Means estimates the ideal positioning of arbitrary centroids to define clusters, whereas K-Medoids uses actual data points in the set as medoids to define its clusters. Not every data set has such a clear-cut differentiation of groups. In some cases, the accuracy of one method over the other can be subjective.</p>
+        <div class="Note_BasicNote">
+            <p>The correct structuring of cluster sets is essential to getting the most out of the Assortment Planning solution. Before creating cluster sets for use with Assortment Planning, review the following:</p>
+            <ul>
+                <li>
+                    <MadCap:xref href="Cluster Site Manager Overview.htm">Site clustering overview</MadCap:xref>
+                </li>
+                <li>
+                    <MadCap:xref href="Viewing Cluster Set Snapshots or Templates.htm">Viewing a cluster set snapshot or template</MadCap:xref>
+                </li>
+            </ul>
+        </div>
+        <p class="p">When finished, consider the following questions before creating the ideal cluster sets:</p>
+        <h2>At what level of a business is there the greatest variation in performance among stores? </h2>
+        <p>To answer this question, analyze how stores rank with selected criteria at multiple levels.</p>
+        <ol>
+            <li>Create several groups of cluster sets. Start as high as the total company for all products and stores, and build out groups  to the lowest proposed level. Use the same classification and attribute settings for each group.</li>
+            <li>
+                <p>Compare the store rankings for each subsequent cluster set to the top level set and compare how different the lower level results are against the top level results and determine if the variation at each level is significant enough to warrant the additional complexity. </p>
+                <p>Here are a few examples of how to approach this:</p>
+            </li>
+            <ul>
+                <li>By store, calculate the number of cluster sets at each level that assign that store to each classification, sum the cluster sets which classification assignment deviates from the top level assignment. Compare each level by sum or average deviations to identify the level at which additional complexity ceases to cause significant increase.</li>
+                <li>Calculate the number of deviations in classification assignment from the top level, by store, for each cluster set level, and compare each level by sum or average deviations to identify the level at which additional complexity ceases to cause significant increase.<p class="Caution">When using the sum of deviations by level, depending on the nature of the underlying data used in calculation of  cluster sets, the tendency is for lower levels to yield greater sums because of the increase in the number of cluster sets.</p></li>
+            </ul>
+        </ol>
+        <h2>Can the organization handle planning at this level of detail without significant impact to current ordering time lines?</h2>
+        <p>Can the team realistically support analyzing at that level of detail. The number of proposed cluster sets should be grouped into areas that could be managed by a single individual. </p>
+        <p>If this number is greater than the number of people on the team, weigh the perceived benefit of planning at the proposed level against the cost of hiring more personnel. </p>
+        <p>If the cost of changing the team to suit the greater level of detail is greater than the expected return, compromise by examining the other levels and identifying one that is feasible.</p>
+    </body>
+</html>

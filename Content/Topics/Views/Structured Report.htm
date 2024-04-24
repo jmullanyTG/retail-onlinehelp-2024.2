@@ -1,0 +1,47 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" xml:lang="en-us">
+    <head>
+        <title>
+        </title>
+    </head>
+    <body>
+        <h1>Structured report</h1>
+        <ul>
+            <li>
+                <span class="Emphasis">WidgetTypeID = 7</span>
+            </li>
+        </ul>
+        <p>The structured reports widget give power users an opportunity to make WinForms like reports. These can mimic applications such as Microsoft Word and allow for advanced reporting.</p>
+        <h2>General tab</h2>
+        <MadCap:snippetBlock src="../../Resources/Snippets/Widget General Section.flsnp" />
+        <h2>Report Data Selection tab</h2>
+        <p>The <span class="Emphasis">Report Data Selection</span> tab determines how data is brought into the widget. </p>
+        <ul>
+            <li>
+                <span class="Emphasis">SQL Connection Type</span>: Choosing a SQL connection type tells the widget from which database to return the data. </li>
+            <li>
+                <span class="Emphasis">Operations Database</span>: The normal database containing most of the current and operational data. This is the selection for most applications. </li>
+            <li>
+                <span class="Emphasis">Warehouse Database</span>: If configured, the warehouse database may function as a container for archived data. Selecting the warehouse database to return data to a widget</li>
+            <li>
+                <span class="Emphasis">Method</span>: The dropdown returns every SQL stored procedure listed in <span class="Emphasis">tbl_Common_StoredProcedureLookup</span>, which should be representative of every stored procedure in the database. This is the procedure which executes when the <span class="Emphasis">Execute</span> button is pressed on the widget (when parameters are present) or which returns the data to the widget (i.e. a SELECT statement).</li>
+            <li>
+                <span class="Emphasis">Method Parameters</span>: Upon selection of the stored procedure, the <span class="Emphasis">Method Parameters</span> window populates with the required parameters for the procedure. These parameters vary greatly depending on the requirements of the stored procedure. </li>
+            <li>
+                <span class="Emphasis">Method Parameter Name</span>: The name of the required parameter as specified in the stored procedure. </li>
+            <li>
+                <span class="Emphasis">Parameter</span>: The selected parameter entry to be passed. These can be selected from the list of parameters detailed in the <span class="Emphasis">Maintain parameters</span> section.</li>
+            <li>
+                <span class="Emphasis">Maintain Parameters</span>: Displays the <span class="Emphasis">Select Parameter</span> window with all available parameters. </li>
+            <li>
+                <span class="Emphasis">Default Value</span>: If any, the default value passed to the parameter. </li>
+        </ul>
+        <h2>Report designer</h2>
+        <p>The <span class="Emphasis">Report Designer</span> will look familiar to Microsoft Office users as it features many of the same concepts used within that suite to build reports. </p>
+        <p>
+            <img src="../../Resources/Images/Views/Report Designer.png" class="LargeImages">
+            </img>
+        </p>
+        <p>The fields available for reporting depend on the method selected to return data. </p>
+    </body>
+</html>

@@ -1,0 +1,12 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head>
+    </head>
+    <body>
+        <h2>Selective creation of site (store)-level MFP plans</h2>
+        <p>When creating plans in MFP, users can decide which levels of the location hierarchy should be included in the plan. In general, the recommendation is to not plan at the lowest level (aka Store or Site) as that level of granularity is generally not needed. Also, if the plan is established at the site-level, all MFP data must be stored at that level. This results in large amounts of data to be saved and reduced performance within MFP.</p>
+        <p>However, MFP plans can be created at the site-level, if the user desires. With data requirements and performance speed in mind, focused store plans should only be created for specific (limited) sites.</p>
+        <h2>Using sites (store)-level MFP plans to create site clusters</h2>
+        <p>If a focused site-level store plan has been created, those site-level planned attributes can be used within Site Clustering, specifically Sales Units or Sales Revenue. This allows the machine-learning algorithms within Site Clustering to reference site-level planned data to create clusters. Creating site clusters based on site-level planned data supports clustering based on <i>planned</i> MFP-site performance, rather than <i>historical</i> site performance.</p>
+    </body>
+</html>

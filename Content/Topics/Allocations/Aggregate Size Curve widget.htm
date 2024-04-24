@@ -1,0 +1,48 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head>
+        <link href="../../Resources/TableStyles/standard.css" rel="stylesheet" MadCap:stylesheetType="table" />
+    </head>
+    <body>
+        <h1>Aggregate Size Curves across all sites</h1>
+        <p> Aggregate Size Curves are reviewed and manipulated in the <span class="Emphasis">Size Models</span> screen. Aggregate Size Curves display in the middle grid.</p>
+        <p class="BasicNote">To edit an Aggregate Size Curve, check the <span class="Emphasis">Override Allowed?</span> checkbox in the top grid and click <span class="Emphasis">Save</span>.</p>
+        <p>
+            <img src="../../Resources/Images/Allocation Size/Aggregate Size Curve widget.png" class="LargeImages" />
+        </p>
+        <p>The grid has two fields <span class="Emphasis">Contribution</span> and <span class="Emphasis">Original Contribution Quantity</span>.</p>
+        <h2>Aggregate Size Curve fields</h2>
+        <p class="BasicNote">Changes to site-level curves (eligibility, percent values) do not impact the aggregate curve.</p>
+        <table style="width: 100%;margin-left: 0;margin-right: auto;mc-table-style: url('../../Resources/TableStyles/standard.css');" class="TableStyle-standard" cellspacing="0">
+            <col class="TableStyle-standard-Column-Column1" />
+            <col class="TableStyle-standard-Column-Column2" />
+            <thead>
+                <tr class="TableStyle-standard-Head-Header1">
+                    <th class="TableStyle-standard-HeadE-Column1-Header1">Field</th>
+                    <th class="TableStyle-standard-HeadD-Column2-Header1">Definition</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1"><span class="Emphasis">Contribution</span>
+                    </td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">Editable. The percent contribution by size across all sites. The total must add up to 100%. If not, corrections are automatically done to ensure this when the user clicks <span class="Emphasis">Save</span>.</td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyB-Column1-Body1"><span class="Emphasis">Original Contribution Quantity</span>
+                    </td>
+                    <td class="TableStyle-standard-BodyA-Column2-Body1">
+                        Read-only. The original quantity by size across all sites. This value does not respond to changes of <span class="Emphasis">Is Eligible?</span> or <span class="Emphasis">Contribution</span>.
+                        </td>
+                </tr>
+            </tbody>
+        </table>
+        <h3>Selecting aggregate size curves in Assortment Planning</h3>
+        <p>System policy <span class="Emphasis">Use Size Curve By Site</span> controls whether Assortment Planning uses the by-site curves or aggregate curve.  This is utilized in three places:</p>
+        <ul>
+            <li>In Size Break calculations in AP orders in Order Manager</li>
+            <li>In Pack Type calculations</li>
+            <li>In supersessions, if only some of the inventories for Old Variant are mapped to inventories for New Variant, and the supersession quantities need to be % split.</li>
+        </ul>
+    </body>
+</html>

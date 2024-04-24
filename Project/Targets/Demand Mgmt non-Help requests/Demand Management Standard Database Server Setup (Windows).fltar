@@ -1,0 +1,41 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<CatapultTarget
+  Version="2"
+  Comment="For Printed Manuals"
+  Type="PDF"
+  Destinations=""
+  MasterToc="/Project/TOCs/Non-Help requests/Demand Management Standard Database Server Setup (Windows).fltoc"
+  PatchHeadingLevels="true"
+  InjectBookHeadings="true"
+  RemoveImagesFromHeadings="true"
+  EmbedImages="true"
+  ConditionTagExpression="include[General.PrintOnly], exclude[General.DoNotPublish or General.ScreenOnly]"
+  DisableAutoSync="true">
+  <PrintedOutput
+    CollapseMargins="true"
+    GenerateTOCProxy="true"
+    GenerateIndexProxy="false"
+    GenerateGlossaryProxy="false"
+    ExpandingTextConversion="expand"
+    PopupConversion="expand"
+    GeneratePDF="false"
+    DisableMasterPageUsage="true"
+    OutputFormat="docx" />
+  <Variables> <Variable
+      Name="Variables/BookVersion">June 28, 2023</Variable> <Variable
+      Name="Variables/BookSubTitle">Windows</Variable><Variable
+      Name="Variables/BookTitle">Demand Management - Standard Database Server Setup  (Windows)</Variable> </Variables>
+  <Destinations>
+    <Destination
+      Link="/Project/Destinations/PDF Output.fldes"
+      Publish="true" />
+  </Destinations>
+  <PDF
+    Tagged="true"
+    PageMode="UseNone"
+    PageLayout="OneColumn"
+    CollapsedBookmarks="true"
+    ConvertBookmarks="true" />
+  <DocumentProperties
+    Author="" />
+</CatapultTarget>

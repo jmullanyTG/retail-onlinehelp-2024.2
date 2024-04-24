@@ -1,0 +1,106 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" xml:lang="en-us">
+    <head>
+        <link href="../../Resources/TableStyles/standard.css" rel="stylesheet" MadCap:stylesheetType="table" /><title></title>
+    </head>
+    <body>
+        <h1>Standardized jobs</h1>
+        <p>Standardized jobs are found in Job Manager and are used to organize user and system jobs into daily, nightly, and weekend batches, according to the estimated workload. Historical logs that are no longer relevant  (cleanup) can be cleared and a  process  priority determined. </p>
+        <p>For more information see,</p>
+        <ul>
+            <li>
+                <p> <MadCap:xref href="Cleanup.htm">Clearing historical logs</MadCap:xref></p>
+            </li>
+            <li>
+                <p>
+                    <MadCap:xref href="Optimization Tuning.htm">Optimization tuning</MadCap:xref>
+                </p>
+            </li>
+        </ul>
+        <h2>Standardized job types</h2>
+        <h3>Daily job</h3>
+        <p>Daily batches with low workload run during daytime business hours. For example, Monday through Friday from 7am to 6pm.</p>
+        <h3>Nightly job</h3>
+        <p>Batches with medium workload run overnight after business hours. For example, Monday through Friday from 6pm to 11pm.</p>
+        <h3>Weekend job</h3>
+        <p>Batches with heavy workload run during the weekend.  For example, Saturday  from 3am to 11pm.</p>
+        <h2>Viewing standardized jobs</h2>
+        <p>Select a job in the <span class="Emphasis">Navigation</span> pane. The job’s details display in the right pane.</p>
+        <p>
+            <img src="../../Resources/Images/Workload Queue Manager/Standardized jobs.png" class="LargeImages" />
+        </p>
+        <h2>Configuring job tasks</h2>
+        <p>For convenience and to take advantage of parallel processing capabilities, configure daily, nightly, and weekly standard job tasks to include all or specific process types (forecasts, price actions, etc.).</p>
+        <ol>
+            <li>
+                <p>Select a job in the <span class="Emphasis">Navigation</span> pane.</p>
+            </li>
+            <li>Make the necessary changes in the right pane.</li>
+            <li>Click <span class="Emphasis">Save</span>.
+				<p><img src="../../Resources/Images/Workload Queue Manager/Standardized jobs Method Parameters.png" class="LargeImages" /></p></li>
+        </ol>
+        <h2>Method parameter definitions</h2>
+        <table class="TableStyle-standard" cellspacing="0" style="mc-table-style: url('../../Resources/TableStyles/standard.css');">
+            <col class="TableStyle-standard-Column-Column1" />
+            <col class="TableStyle-standard-Column-Column2" style="width: 15%;" />
+            <col class="TableStyle-standard-Column-Column1" style="width: 60%;" />
+            <thead>
+                <tr class="TableStyle-standard-Head-Header1">
+                    <th class="TableStyle-standard-HeadE-Column1-Header1">Method Parameter Name</th>
+                    <th class="TableStyle-standard-HeadE-Column2-Header1">Default Value</th>
+                    <th class="TableStyle-standard-HeadD-Column1-Header1">Description</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">@bDebug</td>
+                    <td class="TableStyle-standard-BodyE-Column2-Body1">False</td>
+                    <td class="TableStyle-standard-BodyD-Column1-Body1">Required.&#160;Whether the system should provide additional logging information.</td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">@bEnforceWorkLimit</td>
+                    <td class="TableStyle-standard-BodyE-Column2-Body1">True</td>
+                    <td class="TableStyle-standard-BodyD-Column1-Body1">
+                        Required. Whether the system adheres to the <span class="Emphasis">Maximum Server Work Threshold</span> system policy.  
+                        <ul><li>If set to <span class="Emphasis">True</span> and the amount of work meets or exceeds the threshold set in the policy, any un-processed job tasks will go into delay&#160;cycles until the amount of work returns below the threshold value. </li></ul></td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">@bNightly</td>
+                    <td class="TableStyle-standard-BodyE-Column2-Body1">False</td>
+                    <td class="TableStyle-standard-BodyD-Column1-Body1">Required. Whether the job task processes only nightly jobs.</td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">@ParallelBatching</td>
+                    <td class="TableStyle-standard-BodyE-Column2-Body1">False</td>
+                    <td class="TableStyle-standard-BodyD-Column1-Body1">
+                         Required. Applicable only when multiple job tasks are configured for a processing period (daily, nightly, or weekend). 
+                        <ul><li>If set to <span class="Emphasis">True</span>,  all job tasks work on  the same job until it is completed. Then, the job tasks move on to the next job in the queue.</li><li>If set to <span class="Emphasis">False</span>,each job task works on distinct jobs. </li><li>All job tasks must have the same value (True or False).</li></ul></td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">@bWeekly</td>
+                    <td class="TableStyle-standard-BodyE-Column2-Body1">False</td>
+                    <td class="TableStyle-standard-BodyD-Column1-Body1">Required. Whether the job task processes only weekend jobs.</td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">@iProcessTypeID</td>
+                    <td class="TableStyle-standard-BodyE-Column2-Body1">&#160;</td>
+                    <td class="TableStyle-standard-BodyD-Column1-Body1">
+                         Optional. Specifies the type of jobs that this job task will run. Leave this value blank to run all job types. Otherwise, enter one of the following values: 
+                        <ul><li><span class="Emphasis">1</span> - Inventory Forecast</li><li><span class="Emphasis">2</span> - Level Forecast</li><li><span class="Emphasis">3</span> - Group Forecast</li><li><span class="Emphasis">4</span> - Replenish Inventory</li><li><span class="Emphasis">5 </span>- Assortment Receipt Plan</li><li><span class="Emphasis">6 </span>- Adaptive Allocations</li><li><span class="Emphasis">7</span> - Assortment Prepack</li><li><span class="Emphasis">8</span> - Allocations</li><li><span class="Emphasis">9</span> - Replenish Set</li><li><span class="Emphasis">10</span> - Price Manager</li></ul></td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">@iUserID</td>
+                    <td class="TableStyle-standard-BodyE-Column2-Body1">1</td>
+                    <td class="TableStyle-standard-BodyD-Column1-Body1">
+                         Optional. The integer ID&#160;of the user that the job task will run as if the job process is submitted without an identified user. This user must have all necessary access rights to complete the work for the @iProcessTypeID value. 
+                        <p>Default value is the IOAdmin ID. </p></td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyB-Column1-Body1">@nMarshalID</td>
+                    <td class="TableStyle-standard-BodyB-Column2-Body1">&#160;</td>
+                    <td class="TableStyle-standard-BodyA-Column1-Body1">Required. Unique ID&#160;value for this job task. To ensure accurate processing and logging, this value must be unique across all job tasks. Include this ID value in the job name. For example, "Workload Queue Parallel - Nightly - <span class="Emphasis">1</span>".</td>
+                </tr>
+            </tbody>
+        </table>
+    </body>
+</html>

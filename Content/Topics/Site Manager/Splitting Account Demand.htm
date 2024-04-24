@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head>
+    </head>
+    <body>
+        <h1>Setting default contributions (split percentage) for suppliers</h1>
+        <p>The <span class="Emphasis">Site Account Source Site Contribution</span> blade displays a cross product of items in the hierarchy and all DCs. The blade displays, as a calculated percentage, the default contribution of each DC with the calculation being performed by new job task <span class="Emphasis">Calculate Source Site Percent Contribution for Accounts</span> which looks at an account’s sales history (customer orders). Users can use the <span class="Emphasis">Site Account Source Site Contribution</span> blade to refine contribution percentages as an override to set what percentage of an account’s projected stock each DC should hold. Overwritten values take priority over the calculated percentage.</p>
+        <p>
+            <img src="../../Resources/Images/Site Manager/Site Account Source Site Contribution.PNG" class="LargeImages" />
+        </p>
+        <p>After a user enters a value in the <span class="Emphasis">Override</span> field and clicks <span class="Emphasis">Save</span>, the <span class="Emphasis">Clear Override</span> field for that row is formatted orange. The <span class="Emphasis">Clear Override</span> functionality clears overrides for all the DCs for the item. When overrides are cleared the default contribution percentage is used.</p>
+        <p class="BasicNote">If 10,000 units have a 50/50 split between 2 DCs out of a total of 4 DCs, then 5,000 units are sent to each of the 2 DCs.</p>
+        <p>System policy <span class="Emphasis">Site Wholesale Account Distribution: ItemMaster Hierarchy ID</span> defines the hierarchy used.</p>
+    </body>
+</html>

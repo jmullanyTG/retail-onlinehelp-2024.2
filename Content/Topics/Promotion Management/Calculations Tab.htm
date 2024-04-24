@@ -1,0 +1,115 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" xml:lang="en-us">
+    <head>
+        <link href="../../Resources/TableStyles/standard.css" rel="stylesheet" MadCap:stylesheetType="table" />
+        <title>
+        </title>
+    </head>
+    <body>
+        <h1>Calculations</h1>
+        <p>Calculations and groups of calculations are created using the <span class="Emphasis">Calculations</span> tab. Calculations are mathematical formulas that can be applied to promotions to produce all the relevant information needed to display and export the promotion as well as update the database tables. The calculations and groups of calculations are applied to a Promotion Strategy. </p>
+        <p class="Important">If new calculations are required or calculations need to be changed,  contact ToolsGroup JustEnough Professional Services or Support.</p>
+        <p>
+            <img src="../../Resources/Images/Promotion Management/Promotion Calculations.png" class="LargeImages" />
+        </p>
+        <h2>Creating calculations</h2>
+        <p> Within the <span class="Emphasis">Calculations</span> tab, click <span class="Emphasis">New</span> on the <span class="Emphasis">Calculation Repository</span> grid toolbar to create a new promotion calculation. Complete the required fields and click <span class="Emphasis">Save</span>.</p>
+        <h2>Modifying calculations</h2>
+        <p>Modifications are made directly in the <span class="Emphasis">Calculation Repository</span> grid. Click <span class="Emphasis">Save</span> to save modifications or click <span class="Emphasis">Cancel</span> to discard modifications. Existing promotions referencing modified calculations must either be recalculated manually or by an overnight process.</p>
+        <h2>Deleting calculations</h2>
+        <p>Select a calculation in the <span class="Emphasis">Calculation Repository</span> grid and click <span class="Emphasis">Delete</span>. </p>
+        <h2>Field descriptions</h2>
+        <table class="TableStyle-standard" cellspacing="0" style="mc-table-style: url('../../Resources/TableStyles/standard.css');">
+            <thead>
+                <tr class="TableStyle-standard-Head-Header1">
+                    <th class="TableStyle-standard-HeadE-Column1-Header1">Field</th>
+                    <th class="TableStyle-standard-HeadD-Column2-Header1">Description</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">
+                        Name                     </td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">
+                        A descriptive label to summarize the purpose of the calculation. This identifies the calculation when creating calculation sets.
+                    </td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1"> Description                    </td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">
+                        An optional summary of the calculation.
+                    </td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1" MadCap:conditions="">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">Type                     </td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">
+                        When the calculation runs in relation to the retrieval of any dynamic item, retail, or cost updates to the promotion. Select the <span class="Emphasis">Post</span> option from the dropdown menu.
+                        <ul><li>Pre - To be developed as future functionality.</li><li>Post - This should be selected in all cases and will run the calculation after price and cost retrieval.</li><li>Both - To be developed as future functionality.</li></ul></td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">
+                        Method (Optional)
+                    </td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">
+                        The dropdown is populated by the available methods (i.e. advanced processes applied at the database level) configured for use. &#160;
+                        Select a method to apply for the calculation. This supersedes any value entered in the <span class="Emphasis">Aggregation Type Name</span>, <span class="Emphasis">Formula</span> and <span class="Emphasis">Rounding Set</span> fields.
+                    </td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">
+                        Level                     </td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">
+                        Select a level from the dropdown. All levels act on the Site Cluster level.
+                        <ul><li>Promotion Level – To be developed as future functionality. For now, selecting this option means that calculations will be performed at the Promotion Group level.</li><li>Promotion Aggregate Level – calculations perform at the Promotion Group level.</li><li>Group Level – calculations perform at the Product Group level.</li><li>Item Level – calculations perform at the Item Master Level.</li><li>Variant Level – calculations perform at the Variant Level.</li></ul><h3>Product levels definitions</h3><ul><li>Inventory – A product at a particular site so it has a single price.</li><li>Item Master – A product across all sites that may have different prices at different sites. An Item Master may have a max price for example.</li><li>
+                                Variant – A variant of Item Masters based on a shared attribute i.e. size, color, style, etc. For example, Mens Polo Shirts.
+                                </li></ul></td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">
+                        Group Type                     </td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">
+                        From the dropdown options, select one to identify which Group Association Type this calculation runs on:
+                        <ul><li>Buy Group - The calculation only runs on the Buy Group.</li><li>Get Group - The calculation only runs on the Get Group.</li><li>
+                                Buy Get Group - The calculation runs on both the Buy and Get Groups. 
+                                <p class="BasicNote">This option should also be selected for all Promotion Types that are not of the Buy Get type.</p></li></ul></td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">
+                        Calculation </td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">
+                        The dropdown is populated with database fields where the resulting value of the calculation will be stored.
+                    </td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">
+                        Aggregation Type (Optional)
+                    </td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">
+                        Select an aggregation calculation from the populated dropdown. This overrides the <span class="Emphasis">Formula</span> field if specified.
+                        <ul><li>AVG - Average all results.</li><li>Calculate - Runs what is specified in the <span class="Emphasis">Formula</span> column.</li><li>MAX - The maximum value of all results.</li><li>MIN - The minimum value of all results.</li><li>SUM - Total all results.</li><li>MIN no 0 - The minimum value of all results, not including zero values.</li></ul></td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">
+                        Formula (Optional)
+                    </td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">
+                        Enter a mathematical formula for the calculation. Any valid SQL statement can be used if all fields exist in the Promotion Price Output standard or custom table structure. This formula is used only if the <span class="Emphasis">Method</span> and <span class="Emphasis">Aggregation Type Name</span> columns are blank or if Aggregation is set to <span class="Emphasis">Calculate</span>.
+                    </td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">
+                         Rounding Set  (Optional)
+                    </td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">
+                        Select from the configured list of Standard or Price Ending Rounding Rules to apply to the calculation. Rounding Sets can always be assigned but are only applied when the calculation Field is of a valid numeric data type (Float, Numeric, and Decimal) and when the Method is blank. 
+                        For more information, see <MadCap:xref href="Rounding Rules (Promotions).htm">Rounding rules</MadCap:xref>.
+                    </td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyB-Column1-Body1">Is Verified</td>
+                    <td class="TableStyle-standard-BodyA-Column2-Body1">Whether a price calculation or validation has been verified. <span class="Emphasis">IsVerified</span> does not apply to Method-based Calculations or Validations.</td>
+                </tr>
+            </tbody>
+        </table>
+    </body>
+</html>

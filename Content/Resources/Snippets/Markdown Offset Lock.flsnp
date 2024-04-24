@@ -1,0 +1,14 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head>
+    </head>
+    <body>
+        <p>This helps users accurately plan the entire life of the item including markdowns. The standard default mode keeps the markdown and phase out dates independent of each other. Locked mode cannot be enabled on an item with infinite phase out.</p>
+        <p>The new mode is set at the placeholder level.</p>
+        <ul>
+            <li>If Markdown date changes, Phase Out also changes to keep the specified number of periods between them.</li>
+            <li>If Phase Out changes, then Markdown date also changes to keep the specified number of periods between them.</li>
+            <li>If markdown falls outside of phase in/out window, or in the past, then the default is ignored and the lock-step mode is disabled. Date selectors will take into account the lock step / default range so that the user cannot select themselves into a contradictory state.</li>
+        </ul>
+    </body>
+</html>

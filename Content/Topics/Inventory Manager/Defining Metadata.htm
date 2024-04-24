@@ -1,0 +1,34 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" xml:lang="en-us">
+    <head><title></title>
+    </head>
+    <body>
+        <h1>Defining metadata</h1>
+        <p>The data from the created view needs to be referenced by field for the filtering machinery to recognize and return it. This reference exists in <span class="Emphasis">tbl_Common_Filter_MetaViewData</span> and should be populated by the initialization (INIT) procedure which was created to accompany the view. </p>
+        <ul>
+            <li><span class="Emphasis">FilterTypeID</span> - Primary key referenced on <span class="Emphasis">tbl_FilterType</span>. </li>
+            <li><span class="Emphasis">ViewColumn</span> -  The column name as it appears in the referenced table or view within <span class="Emphasis">tbl_FilterType</span>. </li>
+            <li><span class="Emphasis">TableName</span> -  The name of the table or view which contains the data.</li>
+            <li><span class="Emphasis">TableColumn</span> -  The column name as it appears in the referenced table or view within the <span class="Emphasis">TableName</span> field.</li>
+            <li><span class="Emphasis">FriendlyName</span> -  The friendly name as it appears within the application UI, before any translations. This is the name referenced within product documentation. </li>
+            <li><span class="Emphasis">VisibleFlag</span> -  Determines if the field is visible within the UI. May be set to 0 and used by filtering only. </li>
+            <li><span class="Emphasis">Updateable</span> - If set to 1, the field is write enabled for users. </li>
+            <li><span class="Emphasis">LookupField</span> - If the field is a Lookup field, the string value must be entered in this column. Can be used to refer an ID column to a description column. </li>
+            <li><span class="Emphasis">Aggregatable</span> - The aggregation type for the field. <ul><li><span class="Emphasis">0</span> -  None</li><li><span class="Emphasis">1</span> -  Sum</li><li><span class="Emphasis">2</span> -  Average </li><li><span class="Emphasis">3 </span> - Max</li><li><span class="Emphasis">4</span> -  Min</li><li><span class="Emphasis">5 </span> - Count</li><li><span class="Emphasis">6</span> -  Custom</li><li><span class="Emphasis">7</span> -  Custom Distinct Sum</li><li><span class="Emphasis">8</span> -  Custom Distinct Average</li><li><span class="Emphasis">9</span> -  Custom Distinct Count</li></ul></li>
+        </ul>
+        <ul>
+            <li><span class="Emphasis">Priority</span> -  The inherited priority for the field. If more than one priority should be applied, separate row entries must be made. Priority 1 inherits priority 0 abilities. <ul><li><span class="Emphasis">0</span> -  Filtering</li><li><span class="Emphasis">1</span> - User Interface</li></ul></li>
+        </ul>
+        <ul>
+            <li><span class="Emphasis">UpdateTableName</span> - If the value may be updated, the name of the write-back destination must be specified. </li>
+            <li><span class="Emphasis">ExpressionColumnFlag</span> - If the column is an expression column, set to 1.</li>
+            <li><span class="Emphasis">ExpressionColumnString</span> - The expression to be used. </li>
+            <li><span class="Emphasis">ColumnFormatStringFlag</span> -  If active, adheres to standard format string for UI presentation. </li>
+            <li><span class="Emphasis">ColumnFormatString</span> - Standard format string for UI presentation.</li>
+            <li><span class="Emphasis">ParentTableColumn</span> - Used to assist with Lookup data related to trees. </li>
+            <li><span class="Emphasis">AplyUserItemAssignOnLookupDataFlag</span> - If selected, applies user assign logic to Lookups. </li>
+            <li><span class="Emphasis">LookupFlag</span> -  If selected, identifies a Lookup. </li>
+        </ul>
+        <p>&#160;</p>
+    </body>
+</html>

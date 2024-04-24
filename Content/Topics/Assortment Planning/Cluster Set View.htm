@@ -1,0 +1,386 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" xml:lang="en-us">
+    <head>
+        <link href="../../Resources/TableStyles/standard.css" rel="stylesheet" MadCap:stylesheetType="table" /><title></title>
+    </head>
+    <body>
+        <h1>Cluster Sets view </h1>
+        <p> The <span class="Emphasis">Cluster Sets</span> view contains all the essential metrics for building sales plans and the functionality to make Cluster Set or Cluster level changes to the single placeholder or collection selected in the main planning view.</p>
+        <p>
+            <img src="../../Resources/Images/Assortment Planning/Cluster Set View.png" class="LargeImages" />
+        </p>
+        <p class="BasicNote">The <span class="Emphasis">Cluster Sets</span> view is displayed or hidden in Placeholder view using the <span class="Emphasis">View Selection</span> dropdown menu.</p>
+        <h2>Creating preferred layouts within the Cluster Sets view</h2>
+        <p>Clicking on the <span class="Emphasis">Fields</span> button displays a screen similar to the standard <span class="Emphasis">Fields Customization</span> screen. The only difference is that the filter, row, and column sections are absent. This is because only the data items can be amended.</p>
+        <p>
+            <img src="../../Resources/Images/Assortment Planning/Cluster Sets Fields Customization.PNG" class="LargeImages">
+            </img>
+        </p>
+        <p>Users can move fields between the <span class="Emphasis">Data Area</span> and <span class="Emphasis">None Area</span> to show or hide fields. Both sections are multi-select enabled to allow for bulk editing. </p>
+        <p>
+            <img src="../../Resources/Images/Assortment Planning/Cluster Sets Layouts.png" class="LargeImages" />
+        </p>
+        <p>When a desired layout has been achieved, users can right-click in the Cluster Sets grid and select <span class="Emphasis">Save Layout</span>. The original or another layout can be selected using the appropriate right-click menu option.</p>
+        <h2>Sub clustering by attribute for placeholders and collections</h2>
+        <p>Sub clustering by attribute allows for clusters to be created which support clustering by grade and sub clustering by climate. For example, swimwear might have an earlier phase-in date for Warm stores than for Cold stores. To avoid having to update the phase-in date for A-Warm, B-Warm, C-Warm, etc. one at a time the <span class="Emphasis">Sub Cluster</span> field can be used at an aggregated level (for example, update the phase-in date for all Warm stores at once). </p>
+        <p class="BasicNote">The <span class="Emphasis">Sub Cluster</span> field is best placed in the <span class="Emphasis">Column Area</span> of the grid.</p>
+        <p>
+            <img src="../../Resources/Images/Assortment Planning/Sub Cluster Cold Warm.PNG" class="LargeImages">
+            </img>
+        </p>
+        <p>The ability to bulk edit across sub clusters supports user stories such as defining phase dates by sub cluster attribute at an aggregate level, rather than for each cluster-sub cluster at a time. Values are apportioned and pushed down according to existing rules within the system. Editability is as per the existing rules.</p>
+        <p>The value that displays in the <span class="Emphasis">Sub Cluster</span> field is the value selected in the <span class="Emphasis">Sub Clustering Attribute</span> field in the <span class="Emphasis">Add Cluster Set</span> or <span class="Emphasis">Update Cluster Set</span> screens within the Site Clustering module. This field displays <span class="Emphasis">N/A</span> if the cluster does not have a sub-cluster.</p>
+        <p class="BasicNote">For more information,<MadCap:conditionalText MadCap:conditions="General.ScreenOnly"> see <MadCap:xref href="../Cluster Site Manager/Configuring sub-clusters.htm">Configuring sub-clusters.</MadCap:xref></MadCap:conditionalText><MadCap:conditionalText MadCap:conditions="General.PrintOnly"> refer to the Site Clustering User Guide.</MadCap:conditionalText></p>
+        <p>The <span class="Emphasis">Cluster Sets</span> view responds to the selection of multiple placeholders or placeholder collections in the main planning view. To facilitate this functionality, three fields can be used to identify the placeholders selected:</p>
+        <ul>
+            <li>
+                <p><span class="Emphasis">Placeholder ID</span>
+                </p>
+            </li>
+            <li>
+                <p><span class="Emphasis">PH Code</span>
+                </p>
+            </li>
+            <li>
+                <p><span class="Emphasis">PH Desc</span>
+                </p>
+            </li>
+        </ul>
+        <p class="BasicNote">In the <span class="Emphasis">Collection</span> view these fields are the corresponding Placeholder Collection identifiers.</p>
+        <p>These fields are best used in the <span class="Emphasis">Row Area</span> and are most useful when showing multiple placeholders at once. For example, users can view values at a more aggregated level across multiple placeholders / clusters.</p>
+        <h2>Visibility to actual ROS and how aligned sales plans are with actual sales</h2>
+        <p>The ROS&#160;metric reflects a combination of actual and planned sales in a single ROS&#160;metric. The following metrics split actual and planned sales out. This provides better visibility to the actual ROS for  active sites and how aligned sales plans are with actual sales. </p>
+        <ul>
+            <li>Reg Ftr Site Count, Reg Ftr ROS ($), Reg Ftr ROS (U), Reg Ftr Site ($), Reg Ftr Site (U), Reg Ftr AUR ($), Act ROS ($), Act ROS (U)</li>
+            <li>SPV ROS ($), SPV ROS (U), SPV Sales ($), SPV Sales (U)</li>
+        </ul>
+        <p class="BasicNote">Changes that cause Total Sales Units to change cascade down to the Regular Future figures as well.</p>
+        <table style="width: 100%;mc-table-style: url('../../Resources/TableStyles/standard.css');margin-left: 0;margin-right: auto;" class="TableStyle-standard" cellspacing="0">
+            <col class="TableStyle-standard-Column-Column1" />
+            <col class="TableStyle-standard-Column-Column2" />
+            <thead>
+                <tr class="TableStyle-standard-Head-Header1">
+                    <th class="TableStyle-standard-HeadE-Column1-Header1">Abbreviation</th>
+                    <th class="TableStyle-standard-HeadD-Column2-Header1">Description</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">ROS</td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">Rate of Sale</td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">Reg Ftr</td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">Regular Future, as in the ROS for the portion of the sales plan that is pre-markdown (e.g. Regular) and is non-actualized.</td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">Act</td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">Actualized, as in the ROS for the portion of the sales plan that has already happened.</td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyB-Column1-Body1">SPV</td>
+                    <td class="TableStyle-standard-BodyA-Column2-Body1">Sales Plan View, as in the ROS for the sales plan inclusive of overrides made in the Sales Plan or Top Down Core Plan (TDCP) views.</td>
+                </tr>
+            </tbody>
+        </table>
+        <h2>Wholesale related metrics</h2>
+        <p>The following wholesale related metrics are available in the main planning view and the Cluster Sets, Sales Plan, Receipt Plan, and Top Down Core Plan views:</p>
+        <table style="width: 100%;">
+            <col />
+            <col />
+            <tbody>
+                <tr>
+                    <td>
+                        <ul>
+                            <li>
+                                <p>Discount %</p>
+                            </li>
+                            <li>
+                                <p>At Once ($)</p>
+                            </li>
+                            <li>
+                                <p>At Once (U)</p>
+                            </li>
+                            <li>
+                                <p>Cancel %</p>
+                            </li>
+                            <li>
+                                <p>Bookings Cancelled ($)</p>
+                            </li>
+                            <li>
+                                <p>Bookings Cancelled (U)</p>
+                            </li>
+                            <li>
+                                <p>Bookings Placed ($)</p>
+                            </li>
+                            <li>
+                                <p>Bookings Placed (U)</p>
+                            </li>
+                        </ul>
+                    </td>
+                    <td>
+                        <ul>
+                            <li>
+                                <p>Bookings Shipped ($)</p>
+                            </li>
+                            <li>
+                                <p>Bookings Shipped (U)</p>
+                            </li>
+                            <li>
+                                <p>Sell Out ($)</p>
+                            </li>
+                            <li>
+                                <p>Sell Out (U)</p>
+                            </li>
+                            <li>
+                                <p>Bookings Shipped/Sell Out Var</p>
+                            </li>
+                            <li>
+                                <p>Bookings Shipped/Sell Out Var %</p>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <p>
+            <img src="../../Resources/Images/Assortment Planning/Wholesale Metrics MPV.png" class="LargeImages">
+            </img>
+        </p>
+        <h3>Metric notes</h3>
+        <p>For plans with:</p>
+        <ul>
+            <li>
+                <p>wholesale lines - Sales, Sls and AUR renamed to Bookings, BK and ASP.</p>
+                <p>
+                    <img src="../../Resources/Images/Assortment Planning/Wholesale Lines Only Naming.png" class="LargeImages" />
+                </p>
+            </li>
+            <li>
+                <p>mixed wholesale and retail - Sales, Sls and AUT renamed to Sales/Bookings, Sls/Bk and AUR/ASP.</p>
+                <p>
+                    <img src="../../Resources/Images/Assortment Planning/Wholesale Lines Metric Renaming.png" class="LargeImages" />
+                </p>
+            </li>
+        </ul>
+        <h3>Editability</h3>
+        <ul>
+            <li>
+                <p>Discount %, At Once $/U, Cancel %, Cancelled $/U are all editable when the line is a wholesale line or have an underlying Cluster Set that is wholesale.</p>
+            </li>
+            <li>
+                <p>All the wholesale fields are non-editable if the line does not have any Wholesale Cluster Sets.</p>
+            </li>
+            <li>
+                <p>Cancel %, Cancelled $/U are non-editable after actualization begins.</p>
+            </li>
+        </ul>
+        <p>The <span class="Emphasis">Wholesale</span> check box is purely informational and indicates a line is wholesale.</p>
+        <h3>Calculations</h3>
+        <p>Amending:</p>
+        <ul>
+            <li>
+                <p>At Once $ recalculates At Once U and vice versa.</p>
+            </li>
+            <li>
+                <p>Cancel % recalculates Cancelled $ and Cancelled U</p>
+            </li>
+            <li>
+                <p>Cancelled $ recalculates Cancelled U and Cancelled %</p>
+            </li>
+            <li>
+                <p>Cancelled U recalculates Cancelled $ and Cancelled %</p>
+            </li>
+            <li>
+                <p>Blended AUT recalculates Cancelled $</p>
+            </li>
+        </ul>
+        <p>Any amendment that affects Sales Units and/or Total Bookings recalculates Cancelled U and Cancelled %.</p>
+        <h2>Metrics</h2>
+        <ul>
+            <li>
+                <p><span class="Emphasis">Actual First Sale</span>: Read-only and displays in date format. This field only populates after the actualization of an initial sale.&#160;If the number of days to actualize does not reach as far back as the Phase In date, then the value displayed in this field may not be accurate. </p>
+                <p>This field will not populate if the Placeholder is no longer being updated with actualized values. </p>
+                <p class="BasicNote">The value in this field depends on the value set for existing system policy <span class="Emphasis">Assortment days history to actualize</span>.</p>
+            </li>
+            <li>
+                <p class="p"><span class="Emphasis">Actual First Sale Period</span>: The period where the first sale actualized.</p>
+            </li>
+            <li>
+                <p><span class="Emphasis">Additional Buy (Additional Buy Units)</span>: The quantity of additional non-sales and non-min pres units to buy for the cluster set/cluster. The primary function of this field is to show discrepancies between the sum of Ttl Sls U and (Min Pres * Site Count) and Ttl Buy U that can occur because of the ability to directly edit S/T %. </p>
+                <p>To remove unwanted excess units and rebalance a cluster set/cluster’s sales plan, zero this field out and click <span class="Emphasis">Save</span>.</p>
+                <ul>
+                    <li><span class="Emphasis">Calculation</span>: (Ttl Buy U – Ttl Sls U – (Min Pres * Site Count))</li>
+                </ul>
+            </li>
+            <li>
+                <p><span class="Emphasis">AUC (Average Unit Cost)</span>: The average unit cost price for the cluster set/cluster. Displays the weighted average of AUC values for all periods, both actualized and future, beneath.  </p>
+                <p class="BasicNote">AUC is not directly editable once a placeholder has begun to actualize (current date is greater than Phase In date).</p>
+            </li>
+            <li>
+                <p><span class="Emphasis">AUR (Average Unit Retail)</span>: The average unit retail price for the cluster set/cluster.</p>
+                <p>Because of the potential for multiple currencies, VAT (value added tax) rates, and promotional participation to vary by site within a single cluster, AUR is not directly editable and is only changed as a result of changes to Home AUT, Phase In, Phase Out, and promotion applications. Details for this calculation are available in a supplemental MS Excel model.</p>
+                <ul>
+                    <li><span class="Emphasis">Calculation</span>: (Ttl Sls $ / Ttl Sls U)</li>
+                </ul>
+            </li>
+            <li>
+                <p><span class="Emphasis">AUR ex VAT</span>: Average retail (selling) price excluding VAT per unit for the placeholder item.</p>
+                <ul>
+                    <li><span class="Emphasis">Calculation</span>: AUR / (1 + VAT %)</li>
+                </ul>
+            </li>
+            <li><span class="Emphasis">Home AUT (Average Unit Ticket)</span>: The average unit ticket price for the cluster set/cluster in home currency. Displays the weighted average of Home AUT values for all future periods beneath. Home AUT is assumed to be inclusive of the Home Site’s VAT and is treated as such for all dependent calculations. <p>Because of the potential for multiple currencies, VAT (value added tax) rates, and promotional participation to vary by site within a single cluster, changes to Home AUT require saving to properly calculate the effects on the rest of the plan for a given placeholder/collection. Details for this calculation are available in a supplemental MS Excel model.</p><p>Period level changes to Home AUT can be made in Sales Plan view.</p><ul><li><p>Blended AUT (Blended Average Unit Ticket) and AUR (average unit retail) being an outcome of the calculation mentioned above is not directly editable.</p></li></ul><p class="BasicNote">If <span class="Emphasis">Import Config</span> setting <span class="Emphasis"> AUT for planned periods</span> is set to 2 (AUT is only managed through imports), then Home AUT is read-only for Placeholders with a status of Assigned, Committed, Replen, and Allocate. For placeholders with a status of Open and Created, Home AUT&#160;is editable. </p></li>
+            <li>
+                <p><span class="Emphasis">Blended AUT</span> (Blended Average Unit Ticket): The average unit ticket price for the cluster set/cluster, accounting for all price conversions across different currencies and countries within the cluster. Displays the weighted average of Blended AUT values for all periods, both actualized and future, beneath. Blended AUT is derived from Home AUT in future periods, but it comes from provided sales history for actualized periods. Blended AUT is assumed to be inclusive of VATs for all sites within the cluster and is treated as such for all dependent calculations.</p>
+                <p>Blended AUT incorporates each of the following, all of which are individually controlled via system policy:</p>
+                <ul>
+                    <li>VAT Rate differences between the Home Site and sites within each cluster</li>
+                    <li>Price Exception factors</li>
+                    <li>Price Matrix conversions</li>
+                    <li><span class="Emphasis">Calculation</span>: (Ttl Sls / Ttl Sls U).</li>
+                </ul>
+            </li>
+            <li>
+                <p><span class="Emphasis">Curve Mode</span>: The mode of the selected Seasonality Curve. </p>
+                <ul>
+                    <li><span class="Emphasis">Static</span>: The selected curve is applied exactly as it exists at the time of application and the cluster set/cluster’s curve will not change if changes are made to the curve, whether manually in the Curves module or through dynamic recalculation. </li>
+                    <li><span class="Emphasis">Dynamic</span>: Changes made to the curve  push down to the cluster set/cluster via automated system processes and the dependent sales plans recalculate when those changes are pushed.</li>
+                </ul>
+            </li>
+            <li>
+                <p><span class="Emphasis">Gross Margin %</span>: An editable value that adjusts the Receipt AUC metric to allow this margin to be achieved. Coloring rules follow the Receipt AUC pattern. The gross margin percentage for the cluster set/cluster</p>
+                <ul>
+                    <li><span class="Emphasis">Calculation</span>: (AUR ex VAT – AUC) / AUR ex VAT</li>
+                </ul>
+            </li>
+            <li>
+                <p><span class="Emphasis">Markdown Curve</span>: The curve applied to the cluster set/cluster. Used to break down Ttl Sls $ and Ttl Sls U by period in Sales Plan View. Curves must be generated with the Enhanced Filter type to be eligible for use within Assortment Planning and selectable here. For more information, see <MadCap:xref href="Sales Plan View.htm">Sales Plan View</MadCap:xref>. </p>
+                <p class="BasicNote">Click the ellipsis (<img src="../../Resources/Images/Assortment Planning/Ellipsis Launch Curve Selection Screen.png" class="IconInline" />) within the cell to launch the <span class="Emphasis">Curve Selection</span> screen. For more information, see <MadCap:xref href="Curve Selection Screen.htm">Curve Selection Screen</MadCap:xref>.</p>
+            </li>
+            <li>
+                <p><span class="Emphasis">Markdown Date</span>: The markdown date for the cluster set/cluster. Selections are limited to periods from Phase In through Phase Out. A markdown date tells the system which period to stop respecting the various constraints utilized in the Receipt Plan supporting view including Min Pres. </p>
+                <p>Min Pres drops to zero in the period specified by <span class="Emphasis">Markdown Date</span> when viewing the by-period plan for the cluster set/cluster in Sales Plan or Receipt Plan view. </p>
+                <p class="BasicNote">The markdown date can be pushed by changing Phase In or Phase Out. </p>
+            </li>
+            <li>
+                <p><span class="Emphasis">Min Pres (Minimum Presentation)</span>: The desired minimum presentation stock per site for the cluster set/cluster. This represents additional non-sales units to be purchased for the cluster set/cluster to maintain adequate stock for presentation within each store.</p>
+                <ul>
+                    <li><span class="Emphasis">Calculation</span>: SUM (cluster site count * cluster min pres – for all clusters within a set) / cluster set Site Count (yields a weighted average) or (cluster site count * cluster min pres) for single clusters</li>
+                </ul>
+            </li>
+            <li>
+                <p><span class="Emphasis">Phase In Date</span>: The phase in date for the cluster set/cluster. If set, selections limit to periods prior to Phase Out.</p>
+                <p class="BasicNote">Defaults to the earliest non-actualized period within the Window of Time in the data selection parameters.</p>
+            </li>
+            <li>
+                <p><span class="Emphasis">Phase Out Date</span>: The phase out date for the cluster set/cluster. If set, the selections limit to periods after Phase In. For placeholders/collections of Replen Status, Phase Out dates are derived from the maximum Phase Out date set in the Forecasting module for all relevant inventories. </p>
+                <p class="BasicNote">Defaults to the last period within the Window of Time in the data selection parameters.</p>
+            </li>
+            <li><span class="Emphasis">Planned Phase In</span>: Editable with the date chosen by clicking in the field and selecting a date from a calendar. </li>
+            <li><span class="Emphasis">Receipt ($)</span>: The Sum of Receipt Cost from Receipt Plan view for the placeholder/collection at cluster level. This is included as a comparison of the actual receipt plan to the estimated Ttl Buy $ in Cluster Set View.</li>
+            <li><span class="Emphasis">Receipt (U)</span>: The sum of Receipt Units from Receipt Plan view for the placeholder/collection at cluster level. This is included as a comparison of the actual receipt plan to the estimated Ttl Buy U in Cluster Set View.</li>
+            <li><span class="Emphasis">Reg S/T %</span>: Read-only. The calculation is Reg SPV Sales U / Ttl Orders U.</li>
+            <li>
+                <p><span class="Emphasis">Retrend</span>: (Visible when View Style <span class="Emphasis">Rate of Sale</span> is selected) The fields for Retrend metrics populate only after the selection of the <span class="Emphasis">Retrend</span> option in the <span class="Emphasis">Process Queue</span> section of the main planning view toolbar. The following display the results and status of the Retrend operation:</p>
+                <ul>
+                    <li>
+                        <p>Retrend ROS ($)</p>
+                    </li>
+                </ul>
+                <ul>
+                    <li>
+                        <p>Retrend ROS (U)</p>
+                    </li>
+                </ul>
+                <ul>
+                    <li>
+                        <p>Retrend Ftr ROS ($)</p>
+                    </li>
+                </ul>
+                <ul>
+                    <li>
+                        <p>Retrend Ftr ROS (U)</p>
+                    </li>
+                </ul>
+                <ul>
+                    <li>
+                        <p>Retrend Status (showing a status of either Clean or Dirty)</p>
+                    </li>
+                </ul>
+                <p>An additional metric, <span class="Emphasis">Last Retrend Date</span>, displays the date the Retrend operation was last performed. </p>
+                <p class="BasicNote">There are Notifications for Retrend submission status in the Inbox/process queue .</p>
+            </li>
+            <li>
+                <p><span class="Emphasis">Reviewed?</span>: Mark that a placeholder has been reviewed and that commitments are ready to be generated. Checked means all underlying Cluster Set, Clusters have been reviewed. Unchecked means that none have been reviewed and Indeterminate means a mix of reviewed and non-reviewed at the underlying level. </p>
+                <p class="BasicNote">This field is visible when system policy <span class="Emphasis">Require Placeholder Review before Commitment Generation</span> is set to <span class="Emphasis">True</span>. </p>
+            </li>
+            <li>
+                <p><span class="Emphasis">ROS $ (Rate of Sale Revenue)</span>: The rate of sale (average sales per site per period) in revenue for the cluster set/cluster.</p>
+                <ul>
+                    <li><span class="Emphasis">Calculation</span>: (Ttl Sls $ / No. Periods / Site Count)</li>
+                </ul>
+            </li>
+            <li>
+                <p><span class="Emphasis">ROS U (Rate of Sale Units)</span>: The rate of sale (average sales per site per period) in units for the cluster set/cluster.</p>
+                <ul>
+                    <li><span class="Emphasis">Calculation</span>: (Ttl Sls U / No. Periods / Site Count)</li>
+                </ul>
+            </li>
+            <li>
+                <p><span class="Emphasis">S/T % (Sell-Through Percentage)</span>: Sets the target sell-through percentage for the cluster set/cluster. Changes to this metric alter Ttl Sls U in relation to Ttl Buy U to achieve the entered S/T %.</p>
+                <ul>
+                    <li><span class="Emphasis">Calculation</span>: (Ttl Sls U / Ttl Buy U)</li>
+                </ul>
+            </li>
+            <li><span class="Emphasis">S/T % Delta</span>: Compares the targeted sell through rate against the actual.  The calculation is (Target S/T % - S/T %) / (S/T %).</li>
+            <li><span class="Emphasis">S/T %</span>: Read-only. Compares the lifetime sales for the item against the lifetime orders.
+
+Calculation: (SPV Sls U / Ttl Orders U)</li>
+            <li>
+                <p><span class="Emphasis">Site Count (Active)</span>: The average total site count and the average active site count (in parenthesis) of the cluster set/cluster between Phase In and Phase Out. Typically, this metric is a static whole number that equates to the sum of the sites in the cluster set or cluster. However, when multiple cluster set snapshots are present during a placeholder or collection’s life, it is possible for site count by cluster to vary over time which necessitates the need for an average count.</p>
+                <p>
+                    <img src="../../Resources/Images/Assortment Planning/Site Count Active Metric.png" class="LargeImages" />
+                </p>
+            </li>
+            <li>
+                <p><span class="Emphasis">SPV Diff ($)</span>, <span class="Emphasis">SPV Diff ($) %</span>, <span class="Emphasis">SPV Diff (U)</span>, <span class="Emphasis">SPV Diff (U) %</span>: The difference between SPV Sales and SPV Diff ($) Sales.</p>
+            </li>
+            <li><span class="Emphasis">SPV Sales ($)</span>: The sum of all sales for the placeholder or collection in Sales Plan view. Provided for easy comparison to the plan at the placeholder or collection level.</li>
+            <li>
+                <p><span class="Emphasis">SPV Sales (U)</span>: The sum of all sales Units for the placeholder or collection in Sales Plan view. Provided for easy comparison to the plan at the placeholder or collection level. </p>
+            </li>
+            <li><span class="Emphasis">Target S/T %</span>: Editable, has no calculation effect or relationship.  User can enter a target sell through value to compare against the calculated S/T %.</li>
+            <li>
+                <p><span class="Emphasis">Ttl Buy $ (Total Buy Cost Value)</span>: Editable. The total buy in revenue for the cluster set/cluster. Changes to this metric directly affect the cluster set/cluster sales plan.</p>
+                <ul>
+                    <li><span class="Emphasis">Calculation</span>: (Ttl Sls U + (Min Pres * Site Count) + Additional Buy) * AUC</li>
+                </ul>
+            </li>
+            <li>
+                <p><span class="Emphasis">Ttl Buy U (Total Buy Units)</span>: The total buy in revenue for the cluster set/cluster. Changes to this metric directly affect the cluster set/cluster sales plan.</p>
+                <ul>
+                    <li><span class="Emphasis">Calculation</span>: (Ttl Sls U + (Min Pres * Site Count) + Additional Buy)</li>
+                </ul>
+            </li>
+            <li>
+                <p><span class="Emphasis">Ttl Sls $ (Total Sales Revenue)</span>: The total sales revenue for the cluster set/cluster from Phase In through Phase Out.</p>
+                <ul>
+                    <li><span class="Emphasis">Calculation</span>: (ROS $ * No. Periods * Site Count)</li>
+                </ul>
+            </li>
+            <li>
+                <p><span class="Emphasis">Ttl Sls U (Total Sales Units)</span>: The total sales units for the cluster set/cluster from Phase In through Phase Out.</p>
+                <ul>
+                    <li><span class="Emphasis">Calculation</span>: (ROS U * No. Periods * Site Count)</li>
+                </ul>
+            </li>
+            <li>
+                <p><span class="Emphasis">Units Per Location</span>: The average units per location for a cluster set/cluster based on Ttl Buy U and Site Count.</p>
+                <ul>
+                    <li><span class="Emphasis">Calculation</span>: (Ttl Buy U / Site Count)</li>
+                </ul>
+            </li>
+        </ul>
+    </body>
+</html>

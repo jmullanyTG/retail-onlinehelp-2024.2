@@ -1,0 +1,396 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd"
+      MadCap:lastBlockDepth="5"
+      MadCap:lastHeight="2541"
+      MadCap:lastWidth="1277">
+   <head>
+      <link href="../../Resources/TableStyles/standard.css"
+            rel="stylesheet"
+            MadCap:stylesheetType="table"/>
+   </head>
+   <body>
+      <h1>Adjusted ROS sample scenario</h1>
+      <p>To illustrate at a high level how an adjusted ROS is calculated, consider the following scenario.</p>
+      <p>A scenario includes three products sold over 10 weeks. The scenario has the following values:</p>
+      <table style="mc-table-style: url('../../Resources/TableStyles/standard.css');margin-left: 0;margin-right: auto;"
+             class="TableStyle-standard"
+             cellspacing="0">
+         <col class="TableStyle-standard-Column-Column1" style="width: 134px;"/>
+         <col class="TableStyle-standard-Column-Column2" style="width: 207px;"/>
+         <col class="TableStyle-standard-Column-Column1" style="width: 211px;"/>
+         <col class="TableStyle-standard-Column-Column2" style="width: 211px;"/>
+         <col class="TableStyle-standard-Column-Column1" style="width: 211px;"/>
+         <col class="TableStyle-standard-Column-Column2" style="width: 211px;"/>
+         <thead>
+            <tr class="TableStyle-standard-Head-Header1">
+               <th class="TableStyle-standard-HeadE-Column1-Header1">Max Price</th>
+               <th class="TableStyle-standard-HeadE-Column2-Header1">Min Price</th>
+               <th class="TableStyle-standard-HeadE-Column1-Header1">Min Weekly Sales</th>
+               <th class="TableStyle-standard-HeadE-Column2-Header1">Days From Phase In</th>
+               <th class="TableStyle-standard-HeadE-Column1-Header1">Include Inner Zeros</th>
+               <th class="TableStyle-standard-HeadD-Column2-Header1">Include Values Outside Phase In/Out</th>
+            </tr>
+         </thead>
+         <tbody>
+            <tr class="TableStyle-standard-Body-Body1">
+               <td class="TableStyle-standard-BodyB-Column1-Body1">4</td>
+               <td class="TableStyle-standard-BodyB-Column2-Body1">0.5</td>
+               <td class="TableStyle-standard-BodyB-Column1-Body1">1</td>
+               <td class="TableStyle-standard-BodyB-Column2-Body1">42</td>
+               <td class="TableStyle-standard-BodyB-Column1-Body1">See below</td>
+               <td class="TableStyle-standard-BodyA-Column2-Body1">See below</td>
+            </tr>
+         </tbody>
+      </table>
+      <p>Separately, only product 3 has defined phase dates.</p>
+      <table style="margin-left: 0;margin-right: auto;mc-table-style: url('../../Resources/TableStyles/standard.css');"
+             class="TableStyle-standard"
+             cellspacing="0">
+         <col class="TableStyle-standard-Column-Column1" style="width: 211px;"/>
+         <col class="TableStyle-standard-Column-Column2" style="width: 211px;"/>
+         <col class="TableStyle-standard-Column-Column1" style="width: 211px;"/>
+         <thead>
+            <tr class="TableStyle-standard-Head-Header1">
+               <th class="TableStyle-standard-HeadE-Column1-Header1">Product</th>
+               <th class="TableStyle-standard-HeadE-Column2-Header1">Phase In Date</th>
+               <th class="TableStyle-standard-HeadD-Column1-Header1">Phase Out Date</th>
+            </tr>
+         </thead>
+         <tbody>
+            <tr class="TableStyle-standard-Body-Body1">
+               <td class="TableStyle-standard-BodyE-Column1-Body1">1</td>
+               <td class="TableStyle-standard-BodyE-Column2-Body1">Not defined</td>
+               <td class="TableStyle-standard-BodyD-Column1-Body1">Not defined</td>
+            </tr>
+            <tr class="TableStyle-standard-Body-Body1">
+               <td class="TableStyle-standard-BodyE-Column1-Body1">2</td>
+               <td class="TableStyle-standard-BodyE-Column2-Body1">Not defined</td>
+               <td class="TableStyle-standard-BodyD-Column1-Body1">Not defined</td>
+            </tr>
+            <tr class="TableStyle-standard-Body-Body1">
+               <td class="TableStyle-standard-BodyB-Column1-Body1">3</td>
+               <td class="TableStyle-standard-BodyB-Column2-Body1">1</td>
+               <td class="TableStyle-standard-BodyA-Column1-Body1">3</td>
+            </tr>
+         </tbody>
+      </table>
+      <p> The scenario returns the following raw data: </p>
+      <table style="margin-left: 0;margin-right: auto;mc-table-style: url('../../Resources/TableStyles/standard.css');"
+             class="TableStyle-standard"
+             cellspacing="0">
+         <col class="TableStyle-standard-Column-Column1" style="width: 211px;"/>
+         <col class="TableStyle-standard-Column-Column2" style="width: 211px;"/>
+         <col class="TableStyle-standard-Column-Column1" style="width: 211px;"/>
+         <col class="TableStyle-standard-Column-Column2" style="width: 211px;"/>
+         <thead>
+            <tr class="TableStyle-standard-Head-Header1">
+               <th class="TableStyle-standard-HeadE-Column1-Header1">Product</th>
+               <th class="TableStyle-standard-HeadE-Column2-Header1">Week</th>
+               <th class="TableStyle-standard-HeadE-Column1-Header1">Sale Quantity</th>
+               <th class="TableStyle-standard-HeadD-Column2-Header1">Price Per Unit</th>
+            </tr>
+         </thead>
+         <tbody>
+            <tr class="TableStyle-standard-Body-Body1">
+               <td class="TableStyle-standard-BodyE-Column1-Body1">1</td>
+               <td class="TableStyle-standard-BodyE-Column2-Body1">1</td>
+               <td class="TableStyle-standard-BodyE-Column1-Body1">5</td>
+               <td class="TableStyle-standard-BodyD-Column2-Body1">2</td>
+            </tr>
+            <tr class="TableStyle-standard-Body-Body1">
+               <td class="TableStyle-standard-BodyE-Column1-Body1">1</td>
+               <td class="TableStyle-standard-BodyE-Column2-Body1">2</td>
+               <td class="TableStyle-standard-BodyE-Column1-Body1">1</td>
+               <td class="TableStyle-standard-BodyD-Column2-Body1">6</td>
+            </tr>
+            <tr class="TableStyle-standard-Body-Body1">
+               <td class="TableStyle-standard-BodyE-Column1-Body1">1</td>
+               <td class="TableStyle-standard-BodyE-Column2-Body1">3</td>
+               <td class="TableStyle-standard-BodyE-Column1-Body1">1</td>
+               <td class="TableStyle-standard-BodyD-Column2-Body1">1</td>
+            </tr>
+            <tr class="TableStyle-standard-Body-Body1">
+               <td class="TableStyle-standard-BodyE-Column1-Body1">1</td>
+               <td class="TableStyle-standard-BodyE-Column2-Body1">4</td>
+               <td class="TableStyle-standard-BodyE-Column1-Body1">1</td>
+               <td class="TableStyle-standard-BodyD-Column2-Body1">1</td>
+            </tr>
+            <tr class="TableStyle-standard-Body-Body1">
+               <td class="TableStyle-standard-BodyE-Column1-Body1">1</td>
+               <td class="TableStyle-standard-BodyE-Column2-Body1">5</td>
+               <td class="TableStyle-standard-BodyE-Column1-Body1">1</td>
+               <td class="TableStyle-standard-BodyD-Column2-Body1">1</td>
+            </tr>
+            <tr class="TableStyle-standard-Body-Body1">
+               <td class="TableStyle-standard-BodyE-Column1-Body1">1</td>
+               <td class="TableStyle-standard-BodyE-Column2-Body1">6</td>
+               <td class="TableStyle-standard-BodyE-Column1-Body1">1</td>
+               <td class="TableStyle-standard-BodyD-Column2-Body1">1</td>
+            </tr>
+            <tr class="TableStyle-standard-Body-Body1">
+               <td class="TableStyle-standard-BodyE-Column1-Body1">1</td>
+               <td class="TableStyle-standard-BodyE-Column2-Body1">7</td>
+               <td class="TableStyle-standard-BodyE-Column1-Body1">0</td>
+               <td class="TableStyle-standard-BodyD-Column2-Body1">1</td>
+            </tr>
+            <tr class="TableStyle-standard-Body-Body1">
+               <td class="TableStyle-standard-BodyE-Column1-Body1">1</td>
+               <td class="TableStyle-standard-BodyE-Column2-Body1">8</td>
+               <td class="TableStyle-standard-BodyE-Column1-Body1">0</td>
+               <td class="TableStyle-standard-BodyD-Column2-Body1">1</td>
+            </tr>
+            <tr class="TableStyle-standard-Body-Body1">
+               <td class="TableStyle-standard-BodyE-Column1-Body1">1</td>
+               <td class="TableStyle-standard-BodyE-Column2-Body1">9</td>
+               <td class="TableStyle-standard-BodyE-Column1-Body1">0</td>
+               <td class="TableStyle-standard-BodyD-Column2-Body1">1</td>
+            </tr>
+            <tr class="TableStyle-standard-Body-Body1">
+               <td class="TableStyle-standard-BodyE-Column1-Body1">1</td>
+               <td class="TableStyle-standard-BodyE-Column2-Body1">10</td>
+               <td class="TableStyle-standard-BodyE-Column1-Body1">0</td>
+               <td class="TableStyle-standard-BodyD-Column2-Body1">1</td>
+            </tr>
+            <tr class="TableStyle-standard-Body-Body1">
+               <td class="TableStyle-standard-BodyE-Column1-Body1">2</td>
+               <td class="TableStyle-standard-BodyE-Column2-Body1">1</td>
+               <td class="TableStyle-standard-BodyE-Column1-Body1">0</td>
+               <td class="TableStyle-standard-BodyD-Column2-Body1">1</td>
+            </tr>
+            <tr class="TableStyle-standard-Body-Body1">
+               <td class="TableStyle-standard-BodyE-Column1-Body1">2</td>
+               <td class="TableStyle-standard-BodyE-Column2-Body1">2</td>
+               <td class="TableStyle-standard-BodyE-Column1-Body1">1</td>
+               <td class="TableStyle-standard-BodyD-Column2-Body1">1</td>
+            </tr>
+            <tr class="TableStyle-standard-Body-Body1">
+               <td class="TableStyle-standard-BodyE-Column1-Body1">2</td>
+               <td class="TableStyle-standard-BodyE-Column2-Body1">3</td>
+               <td class="TableStyle-standard-BodyE-Column1-Body1">1</td>
+               <td class="TableStyle-standard-BodyD-Column2-Body1">1</td>
+            </tr>
+            <tr class="TableStyle-standard-Body-Body1">
+               <td class="TableStyle-standard-BodyE-Column1-Body1">2</td>
+               <td class="TableStyle-standard-BodyE-Column2-Body1">4</td>
+               <td class="TableStyle-standard-BodyE-Column1-Body1">0</td>
+               <td class="TableStyle-standard-BodyD-Column2-Body1">1</td>
+            </tr>
+            <tr class="TableStyle-standard-Body-Body1">
+               <td class="TableStyle-standard-BodyE-Column1-Body1">2</td>
+               <td class="TableStyle-standard-BodyE-Column2-Body1">5</td>
+               <td class="TableStyle-standard-BodyE-Column1-Body1">1</td>
+               <td class="TableStyle-standard-BodyD-Column2-Body1">1</td>
+            </tr>
+            <tr class="TableStyle-standard-Body-Body1">
+               <td class="TableStyle-standard-BodyE-Column1-Body1">2</td>
+               <td class="TableStyle-standard-BodyE-Column2-Body1">6</td>
+               <td class="TableStyle-standard-BodyE-Column1-Body1">1</td>
+               <td class="TableStyle-standard-BodyD-Column2-Body1">1</td>
+            </tr>
+            <tr class="TableStyle-standard-Body-Body1">
+               <td class="TableStyle-standard-BodyE-Column1-Body1">2</td>
+               <td class="TableStyle-standard-BodyE-Column2-Body1">7</td>
+               <td class="TableStyle-standard-BodyE-Column1-Body1">0</td>
+               <td class="TableStyle-standard-BodyD-Column2-Body1">1</td>
+            </tr>
+            <tr class="TableStyle-standard-Body-Body1">
+               <td class="TableStyle-standard-BodyE-Column1-Body1">2</td>
+               <td class="TableStyle-standard-BodyE-Column2-Body1">8</td>
+               <td class="TableStyle-standard-BodyE-Column1-Body1">0</td>
+               <td class="TableStyle-standard-BodyD-Column2-Body1">1</td>
+            </tr>
+            <tr class="TableStyle-standard-Body-Body1">
+               <td class="TableStyle-standard-BodyE-Column1-Body1">2</td>
+               <td class="TableStyle-standard-BodyE-Column2-Body1">9</td>
+               <td class="TableStyle-standard-BodyE-Column1-Body1">0</td>
+               <td class="TableStyle-standard-BodyD-Column2-Body1">1</td>
+            </tr>
+            <tr class="TableStyle-standard-Body-Body1">
+               <td class="TableStyle-standard-BodyE-Column1-Body1">2</td>
+               <td class="TableStyle-standard-BodyE-Column2-Body1">10</td>
+               <td class="TableStyle-standard-BodyE-Column1-Body1">0</td>
+               <td class="TableStyle-standard-BodyD-Column2-Body1">1</td>
+            </tr>
+            <tr class="TableStyle-standard-Body-Body1">
+               <td class="TableStyle-standard-BodyE-Column1-Body1">3</td>
+               <td class="TableStyle-standard-BodyE-Column2-Body1">1</td>
+               <td class="TableStyle-standard-BodyE-Column1-Body1">0</td>
+               <td class="TableStyle-standard-BodyD-Column2-Body1">1</td>
+            </tr>
+            <tr class="TableStyle-standard-Body-Body1">
+               <td class="TableStyle-standard-BodyE-Column1-Body1">3</td>
+               <td class="TableStyle-standard-BodyE-Column2-Body1">2</td>
+               <td class="TableStyle-standard-BodyE-Column1-Body1">0</td>
+               <td class="TableStyle-standard-BodyD-Column2-Body1">1</td>
+            </tr>
+            <tr class="TableStyle-standard-Body-Body1">
+               <td class="TableStyle-standard-BodyE-Column1-Body1">3</td>
+               <td class="TableStyle-standard-BodyE-Column2-Body1">3</td>
+               <td class="TableStyle-standard-BodyE-Column1-Body1">0</td>
+               <td class="TableStyle-standard-BodyD-Column2-Body1">1</td>
+            </tr>
+            <tr class="TableStyle-standard-Body-Body1">
+               <td class="TableStyle-standard-BodyE-Column1-Body1">3</td>
+               <td class="TableStyle-standard-BodyE-Column2-Body1">4</td>
+               <td class="TableStyle-standard-BodyE-Column1-Body1">1</td>
+               <td class="TableStyle-standard-BodyD-Column2-Body1">1</td>
+            </tr>
+            <tr class="TableStyle-standard-Body-Body1">
+               <td class="TableStyle-standard-BodyE-Column1-Body1">3</td>
+               <td class="TableStyle-standard-BodyE-Column2-Body1">5</td>
+               <td class="TableStyle-standard-BodyE-Column1-Body1">0</td>
+               <td class="TableStyle-standard-BodyD-Column2-Body1">1</td>
+            </tr>
+            <tr class="TableStyle-standard-Body-Body1">
+               <td class="TableStyle-standard-BodyE-Column1-Body1">3</td>
+               <td class="TableStyle-standard-BodyE-Column2-Body1">6</td>
+               <td class="TableStyle-standard-BodyE-Column1-Body1">0</td>
+               <td class="TableStyle-standard-BodyD-Column2-Body1">1</td>
+            </tr>
+            <tr class="TableStyle-standard-Body-Body1">
+               <td class="TableStyle-standard-BodyE-Column1-Body1">3</td>
+               <td class="TableStyle-standard-BodyE-Column2-Body1">7</td>
+               <td class="TableStyle-standard-BodyE-Column1-Body1">0</td>
+               <td class="TableStyle-standard-BodyD-Column2-Body1">1</td>
+            </tr>
+            <tr class="TableStyle-standard-Body-Body1">
+               <td class="TableStyle-standard-BodyE-Column1-Body1">3</td>
+               <td class="TableStyle-standard-BodyE-Column2-Body1">8</td>
+               <td class="TableStyle-standard-BodyE-Column1-Body1">0</td>
+               <td class="TableStyle-standard-BodyD-Column2-Body1">1</td>
+            </tr>
+            <tr class="TableStyle-standard-Body-Body1">
+               <td class="TableStyle-standard-BodyE-Column1-Body1">3</td>
+               <td class="TableStyle-standard-BodyE-Column2-Body1">9</td>
+               <td class="TableStyle-standard-BodyE-Column1-Body1">0</td>
+               <td class="TableStyle-standard-BodyD-Column2-Body1">2</td>
+            </tr>
+            <tr class="TableStyle-standard-Body-Body1">
+               <td class="TableStyle-standard-BodyE-Column1-Body1">3</td>
+               <td class="TableStyle-standard-BodyE-Column2-Body1">10</td>
+               <td class="TableStyle-standard-BodyE-Column1-Body1">0</td>
+               <td class="TableStyle-standard-BodyD-Column2-Body1">1</td>
+            </tr>
+            <tr class="TableStyle-standard-Body-Body1">
+               <td class="TableStyle-standard-BodyB-Column1-Body1">
+                  <span class="Emphasis">TOTAL</span>
+               </td>
+               <td class="TableStyle-standard-BodyB-Column2-Body1">
+                  <span class="Emphasis">30</span>
+               </td>
+               <td class="TableStyle-standard-BodyB-Column1-Body1">
+                  <span class="Emphasis">15</span>
+               </td>
+               <td class="TableStyle-standard-BodyA-Column2-Body1"> </td>
+            </tr>
+         </tbody>
+      </table>
+      <h2>First stage</h2>
+      <p>The calculation first  removes data points that violate the parameters set in the scenario. For product 1 in week 2, the price per unit exceeds the value for <span class="Emphasis">Max Price</span>. The sale quantity for week 2 is adjusted to 0.</p>
+      <p>Where, <span class="Emphasis">Include Inner Zeros</span> = Include and <span class="Emphasis">Include Values Outside Phase In/Out</span> = Include:</p>
+      <table style=" margin-right: auto;mc-table-style: url('../../Resources/TableStyles/standard.css');"
+             class="TableStyle-standard"
+             cellspacing="0">
+         <col class="TableStyle-standard-Column-Column1" style="width: 211px;"/>
+         <col class="TableStyle-standard-Column-Column2" style="width: 211px;"/>
+         <col class="TableStyle-standard-Column-Column1" style="width: 211px;"/>
+         <thead>
+            <tr class="TableStyle-standard-Head-Header1">
+               <th class="TableStyle-standard-HeadE-Column1-Header1">Sale Quantity Total</th>
+               <th class="TableStyle-standard-HeadE-Column2-Header1">Week Count</th>
+               <th class="TableStyle-standard-HeadD-Column1-Header1">Adjusted ROS</th>
+            </tr>
+         </thead>
+         <tbody>
+            <tr class="TableStyle-standard-Body-Body1">
+               <td class="TableStyle-standard-BodyB-Column1-Body1">14</td>
+               <td class="TableStyle-standard-BodyB-Column2-Body1">30</td>
+               <td class="TableStyle-standard-BodyA-Column1-Body1">0.466666667</td>
+            </tr>
+         </tbody>
+      </table>
+      <h2>Second stage</h2>
+      <p>The system then determines the time frame to use for each product. First, the system looks for defined phase dates. </p>
+      <p>Only product 3 has a phase in (week 1) and a phase out (week 3) defined. </p>
+      <p>Product 1 and product 2 have no defined phase dates. The first and last weeks with a sale are used for these two products.</p>
+      <p>An additional criterion is <span class="Emphasis">Days From Phase In</span>. If set, the upper boundary or last week to be considered is determined by the value of <span class="Emphasis">Days From Phase In</span>.</p>
+      <p class="Example">In this example scenario <span class="Emphasis">Days From Phase In</span> is set to 42 which means the weeks taken into consideration is 6 weeks from the first week of sale (42 days / 7 weeks). Thus, for product 2 the weeks taken into consideration would be weeks 2 to 7 inclusive.</p>
+      <p class="p">Thus, for the 3 products the algorithm uses the following time frames:</p>
+      <table style="margin-left: 0;margin-right: auto;mc-table-style: url('../../Resources/TableStyles/standard.css');"
+             class="TableStyle-standard"
+             cellspacing="0">
+         <col class="TableStyle-standard-Column-Column1" style="width: 211px;"/>
+         <col class="TableStyle-standard-Column-Column2" style="width: 211px;"/>
+         <col class="TableStyle-standard-Column-Column1" style="width: 211px;"/>
+         <thead>
+            <tr class="TableStyle-standard-Head-Header1">
+               <th class="TableStyle-standard-HeadE-Column1-Header1">Product</th>
+               <th class="TableStyle-standard-HeadE-Column2-Header1">From week...</th>
+               <th class="TableStyle-standard-HeadD-Column1-Header1">To week...</th>
+            </tr>
+         </thead>
+         <tbody>
+            <tr class="TableStyle-standard-Body-Body1">
+               <td class="TableStyle-standard-BodyE-Column1-Body1">1</td>
+               <td class="TableStyle-standard-BodyE-Column2-Body1">1</td>
+               <td class="TableStyle-standard-BodyD-Column1-Body1">6</td>
+            </tr>
+            <tr class="TableStyle-standard-Body-Body1">
+               <td class="TableStyle-standard-BodyE-Column1-Body1">2</td>
+               <td class="TableStyle-standard-BodyE-Column2-Body1">2</td>
+               <td class="TableStyle-standard-BodyD-Column1-Body1">7</td>
+            </tr>
+            <tr class="TableStyle-standard-Body-Body1">
+               <td class="TableStyle-standard-BodyB-Column1-Body1">3 (Phase dates defined)</td>
+               <td class="TableStyle-standard-BodyB-Column2-Body1">1</td>
+               <td class="TableStyle-standard-BodyA-Column1-Body1">3</td>
+            </tr>
+         </tbody>
+      </table>
+      <h2>Final adjusted ROS</h2>
+      <p>Include Inner zeros = Yes, Include Values Outside Phase In/Out = No</p>
+      <table style="mc-table-style: url('../../Resources/TableStyles/standard.css');margin-left: 0;margin-right: auto;"
+             class="TableStyle-standard"
+             cellspacing="0">
+         <col class="TableStyle-standard-Column-Column1" style="width: 211px;"/>
+         <col class="TableStyle-standard-Column-Column2" style="width: 211px;"/>
+         <col class="TableStyle-standard-Column-Column1" style="width: 211px;"/>
+         <thead>
+            <tr class="TableStyle-standard-Head-Header1">
+               <th class="TableStyle-standard-HeadE-Column1-Header1">Sale Quantity Total</th>
+               <th class="TableStyle-standard-HeadE-Column2-Header1">Week Count</th>
+               <th class="TableStyle-standard-HeadD-Column1-Header1">Adjusted ROS</th>
+            </tr>
+         </thead>
+         <tbody>
+            <tr class="TableStyle-standard-Body-Body1">
+               <td class="TableStyle-standard-BodyB-Column1-Body1">13</td>
+               <td class="TableStyle-standard-BodyB-Column2-Body1">15</td>
+               <td class="TableStyle-standard-BodyA-Column1-Body1">0.866666667</td>
+            </tr>
+         </tbody>
+      </table>
+      <p>Include Inner Zeros = No, Include Values Outside Phase In/Out = No</p>
+      <table style="mc-table-style: url('../../Resources/TableStyles/standard.css');margin-left: 0;margin-right: auto;"
+             class="TableStyle-standard"
+             cellspacing="0">
+         <col class="TableStyle-standard-Column-Column1" style="width: 211px;"/>
+         <col class="TableStyle-standard-Column-Column2" style="width: 211px;"/>
+         <col class="TableStyle-standard-Column-Column1" style="width: 211px;"/>
+         <thead>
+            <tr class="TableStyle-standard-Head-Header1">
+               <th class="TableStyle-standard-HeadE-Column1-Header1">Sale Quantity Total</th>
+               <th class="TableStyle-standard-HeadE-Column2-Header1">Week Count</th>
+               <th class="TableStyle-standard-HeadD-Column1-Header1">Adjusted ROS</th>
+            </tr>
+         </thead>
+         <tbody>
+            <tr class="TableStyle-standard-Body-Body1">
+               <td class="TableStyle-standard-BodyB-Column1-Body1">13</td>
+               <td class="TableStyle-standard-BodyB-Column2-Body1">9</td>
+               <td class="TableStyle-standard-BodyA-Column1-Body1">1.444444444</td>
+            </tr>
+         </tbody>
+      </table>
+   </body>
+</html>

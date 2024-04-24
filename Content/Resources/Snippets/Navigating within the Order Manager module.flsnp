@@ -1,0 +1,157 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head>
+        <link href="../TableStyles/standard.css" rel="stylesheet" MadCap:stylesheetType="table" />
+    </head>
+    <body>
+        <p>Use the <span class="Emphasis">Navigation</span> pane on the left side of the Order Manager screen to view and work with  order documents. The convenient folder system also helps organize orders as they move through the various stages of the ordering process.</p>
+        <p>
+            <img src="../../Resources/Images/Order Manager/Navigation.png" class="LargeImages" />
+        </p>
+        <p>Within the <span class="Emphasis">Navigation</span> pane, right-click to display a context menu.</p>
+        <h2>Removing filters from the Document list</h2>
+        <p>To remove a filter that has been applied to the document list, click the <img src="../Images/Order Manager/Remove Filter Icon.png" class="IconInline" /> button  at the top of the <span class="Emphasis">Navigation</span> pane. This button is only enabled when a filter is applied.</p>
+        <h2> Filtering order documents</h2>
+        <p>To apply Inventory or Variant type filters to search for orders containing specific site-item combinations on the Order Document list, click the <span class="Emphasis">Filter</span> button <img src="../Images/Order Manager/Filter icon.png" class="IconInline" />  at the top of the <span class="Emphasis">Navigation</span> pane.</p>
+        <p>To create, import, update, delete, or export s filter, click the <img src="../Images/Order Manager/Manage Filter Icon.png" class="IconInline" /> icon on the Filter window.</p>
+        <h3>Item Selection window</h3>
+        <p>To display the <span class="Emphasis">Item Selection</span> window, click  <span class="Emphasis">Select only some items from the current filter</span> Filter window.</p>
+        <p>
+            <img src="../../Resources/Images/Order Manager/Filtering the document list.png" class="LargeImages" />
+        </p>
+        <p>The <span class="Emphasis">Item Selection</span> window displays all variants returned by the criteria in the selected filter. To select the desired variants to include in the document, click the corresponding check boxes in the <span class="Emphasis">Selected</span> column.</p>
+        <p>
+            <img src="../../Resources/Images/Order Manager/Select only some items from the current filter.png" class="LargeImages" />
+        </p>
+        <p>Alternatively, click the following buttons at the top of the Navigation pane to select items:</p>
+        <ul>
+            <li>
+                <img src="../Images/Assortment Planning/Nav Pane All Rows Highlighted.png" class="IconInline" />: selects all rows currently highlighted</li>
+            <li>
+                <img src="../Images/Assortment Planning/Nav Pane Deselect Highlighted Rows.png" class="IconInline" />: de-selects all rows currently highlighted</li>
+            <li>
+                <img src="../Images/Assortment Planning/Nav Pane Select All Rows.png" class="IconInline" />: selects all rows</li>
+            <li>
+                <img src="../Images/Assortment Planning/Nav Pane Deselect All Rows.png" class="IconInline" />: de-selects all rows</li>
+        </ul>
+        <p>To filter the list, type a search word in the Filter row for any column.</p>
+        <p>
+            <img src="../../Resources/Images/Order Manager/Start With Field.png" class="LargeImages" />
+        </p>
+        <p>To select additional columns to include in the Item Selection view to provide additional context for determining which products are desired, click <span class="Emphasis">Choose Column(s)</span>. The <span class="Emphasis">Choose Fields</span> window displays.</p>
+        <p>
+            <img src="../../Resources/Images/Order Manager/Choose Fields dialog.png" class="LargeImages" />
+        </p>
+        <h2>Order status in Order Manager</h2>
+        <table style="width: 100%;mc-table-style: url('../../Resources/TableStyles/standard.css');" class="TableStyle-standard" cellspacing="0">
+            <col class="TableStyle-standard-Column-Column1" />
+            <col class="TableStyle-standard-Column-Column2" />
+            <thead>
+                <tr class="TableStyle-standard-Head-Header1">
+                    <th class="TableStyle-standard-HeadE-Column1-Header1">Status</th>
+                    <th class="TableStyle-standard-HeadD-Column2-Header1">Description</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">Workspace
+					</td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">
+						Initial status. Order documents that are not currently in one of the other document statuses.
+					<ul><li><span class="Emphasis">Private</span>: Orders set to Private that were created by the current user.</li><li><span class="Emphasis">Public</span>: Orders set to Public for which the user has sufficient permissions to view.</li><li><span class="Emphasis">Shared</span>: Orders set to Shared and the current user was included in the approved user list.</li></ul></td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">Authorized
+					</td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">Order documents authorized by the current user.
+					<p>Depending on user access and rights based on the active workflow for an order document, a user can authorize and confirm that no further changes are required to the order and that the order is ready for upload to external systems. </p></td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">Forwarded
+					</td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">Orders that have been forwarded either by or to the current user. In Order Manager, order documents can be forwarded to other users for review and approval. 
+					<ul><li><span class="Emphasis">Inbox</span>: Orders forwarded from others to the current user.</li><li><span class="Emphasis">Outbox</span>: Orders forwarded by the current user to others.</li></ul></td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">Pre-Authorized
+					</td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">
+						Orders pre-authorized by the current user. Depending on user access and rights based on the active workflow for an order document, a user can pre-authorize, locking the order document from further changes.
+				
+						<p class="BasicNote">Pre-authorization is provided in Order Manager more for the reservation of stock for orders that will ship to sites. Pre-authorization in the context of commitment orders does not reserve any inventory because the inventory has not been ordered. If pre-authorization is not desired within a user workflow, the rights to pre-authorization can be removed at each node of the relevant workflow for all users in Workflow Manager.
+					</p></td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">Rejected
+					</td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">Previously rejected orders that were forwarded by the current user. Orders forwarded to others for approval can be rejected, indicating that changes are required. </td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">Uploaded
+					</td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">Order documents authorized by the current user that were successfully uploaded to external systems.
+					</td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">Upload Failed
+					</td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">Order documents authorized by the current user that experienced a failure during the upload process.</td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">Upload Verified
+					</td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">Order documents authorized by the current user for which confirmation has been received of upload from external systems.
+				<p>The order document can be transitioned in one of two ways after an upload is verified:
+					<ul><li>back to Workspace.</li><li>to the last folder the order was in prior to being Authorized.</li></ul></p><p>Additionally, the order document can be routed in one of two ways after an upload is verified:<ul><li>to the user who created the order.</li><li>to the user who authorized order.</li></ul></p></td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyB-Column1-Body1">Uploading
+					</td>
+                    <td class="TableStyle-standard-BodyA-Column2-Body1">Orders that are currently being uploaded and have been authorized by the current user. Based on the configuration and schedule of order uploads, authorized orders are uploaded to the external systems that process purchase order management. </td>
+                </tr>
+            </tbody>
+        </table>
+        <h2>Order types in Order Manager</h2>
+        <table style="width: 100%;mc-table-style: url('../../Resources/TableStyles/standard.css');" class="TableStyle-standard" cellspacing="0">
+            <col class="TableStyle-standard-Column-Column1" />
+            <col class="TableStyle-standard-Column-Column2" />
+            <thead>
+                <tr class="TableStyle-standard-Head-Header1">
+                    <th class="TableStyle-standard-HeadE-Column1-Header1">Type</th>
+                    <th class="TableStyle-standard-HeadD-Column2-Header1">Description</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">Supplier</td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">Places orders from suppliers for items that are in demand planning.</td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">Distribution</td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">Places transfers orders from the warehouse for items that are in demand planning.</td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">From Strategy</td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">Based on allocation.</td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyB-Column1-Body1">Ad Hoc</td>
+                    <td class="TableStyle-standard-BodyA-Column2-Body1">Used to manually create an order.</td>
+                </tr>
+            </tbody>
+        </table>
+        <h2>Navigation pane positioning and viewing options</h2>
+        <h3>Auto-hide</h3>
+        <p>To hide the <span class="Emphasis">Navigation</span> pane, click the <img src="../Images/Assortment Planning/Nav Pane Pin.png" class="IconInline" /> (pin) icon on the top of the <span class="Emphasis">Navigation</span> pane. The <span class="Emphasis">Navigation</span> pane moves to a tab on the left side of the screen.</p>
+        <p>To restore the <span class="Emphasis">Navigation</span> pane to its default position, hover over or click the tab, then click the pin icon to dock the pane.</p>
+        <p>
+            <img src="../Images/Order Manager/Pin Icon.png" class="LargeImages" />
+        </p>
+        <h3>Manual docking</h3>
+        <p>The <span class="Emphasis">Navigation</span> pane can be docked on the left or right side of the screen. To do so, left-click, hold and drag the Navigation header area. The pane temporarily becomes a floating window.</p>
+        <p>Drag the pane to the right or left side of the screen. </p>
+        <p>
+            <img src="../Images/Order Manager/Manual Docking.png" class="LargeImages" />
+        </p>
+    </body>
+</html>

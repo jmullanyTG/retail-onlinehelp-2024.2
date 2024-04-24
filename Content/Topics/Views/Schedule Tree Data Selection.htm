@@ -1,0 +1,37 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" xml:lang="en-us">
+    <head>
+        <title>
+        </title>
+    </head>
+    <body>
+        <h1>Schedule tree data selection</h1>
+        <p>The data selection tab will determine how data is brought into the widget. This data specifically pertains to the schedule tree.</p>
+        <ul>
+            <li>
+                <span class="Emphasis">SQL Connection Type </span>- Choosing an SQL connection type tells the widget from which database to return the data. </li>
+            <ul>
+                <li>
+                    <span class="Emphasis">Operations Database</span> - The normal database containing most of the current and operational data for ToolsGroup JustEnough. This is the selection for most applications. </li>
+                <li>
+                    <span class="Emphasis">Warehouse Database</span> - If configured, the warehouse database can function as a container for archived data. Select the warehouse database to return data to a widget</li>
+            </ul>
+        </ul>
+        <ul>
+            <li>
+                <span class="Emphasis">Method</span> - The method dropdown returns every SQL stored procedure listed in <span class="Emphasis">tbl_Common_StoredProcedureLookup</span>, which should be representative of every stored procedure in the database. This is the procedure which will execute when the <span class="Emphasis">Execute</span> button is pressed on the widget (when parameters are present) or which returns the data to the widget (i.e. a SELECT statement).</li>
+            <li>
+                <span class="Emphasis">Method Parameters</span> - Upon selection of the stored procedure, the <span class="Emphasis">Method Parameters</span> window populates with the required parameters for the procedure. These parameters vary greatly depending on the requirements of the stored procedure. </li>
+            <ul>
+                <li>
+                    <span class="Emphasis">Method Parameter Name</span> - The name of the required parameter as specified in the stored procedure. </li>
+                <li>
+                    <span class="Emphasis">Parameter</span> - The selected parameter entry to be passed. These can be selected from the list of parameters detailed in the <span class="Emphasis">Maintain Parameters</span> section.</li>
+                <li>
+                    <span class="Emphasis">Maintain Parameters</span> - Displays the <span class="Emphasis">Select Parameter</span> window, displaying all available parameters. More details can be found in the <span class="Emphasis">Maintain Parameters</span> section.</li>
+                <li>
+                    <span class="Emphasis">Default Value</span> - The default value, if any, passed to the parameter. </li>
+            </ul>
+        </ul>
+    </body>
+</html>

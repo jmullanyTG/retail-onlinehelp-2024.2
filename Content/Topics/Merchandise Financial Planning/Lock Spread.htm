@@ -1,0 +1,68 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" xml:lang="en-us">
+    <head>
+        <link href="../../Resources/TableStyles/standard.css" rel="stylesheet" MadCap:stylesheetType="table" /><title></title>
+    </head>
+    <body>
+        <h1>Locking sales and dependent metrics</h1>
+        <p>Users can lock sales and dependent metrics at multiple levels of the product/site hierarchies and time concurrently using the lock and spread functionality. Lock and spread functionality is the ability to lock period metrics and either make changes at lower levels, constraining to the higher locked value, or make changes at higher levels and push the values down to only the unlocked lower levels. Locks at both aggregate and lower levels can be combined to allow for precise fine tuning of the plan without ending up in an endless circle of changes, trying to reach a desired outcome.</p>
+        <h2>Changing product and channel selections</h2>
+        <p>A lock on a product or channel persists if product and channel selections change as long as the aggregate level remains the same. If the aggregate level changes, then the locks are removed. Returning to the original product or channel selection and aggregate level displays the original locks.</p>
+        <h2>Cell locks</h2>
+        <p>A cell is the intersection at the most granular level the product, channel, and time dimensions. Locking a cell creates a cell lock. The locked cell is highlighted in the grid with a different color from the blue unlocked cells.  </p>
+        <p class="BasicNote"> If all levels beneath an aggregate level are locked, the aggregate level is locked by default.</p>
+        <p>
+            <img src="../../Resources/Images/MFP/Locked Cell.png" class="LargeImages" />
+        </p>
+        <h2>Aggregate locks</h2>
+        <p>Aggregate locks are locks engaged at levels above the lowest level in the current view. Depending on the configuration of a view, it is possible to have multiple aggregate level locks engaged beneath a higher aggregate level, such as multiple month level locks beneath a grand total for all time shown in the view. Aggregate locks are indicated in a different color. </p>
+        <p>
+            <img src="../../Resources/Images/MFP/Locked Aggregate.png" class="LargeImages" />
+        </p>
+        <h2> Viewing lock details</h2>
+        <p>Whenever a cell lock or aggregate lock is created, an entry appears in the <span class="Emphasis">Locks on Selected Data</span> section detailing the product, channel, and time levels where the lock exists. The <span class="Emphasis">Lock Name</span> field also indicates whether the lock is a cell lock or aggregate lock. Clicking the <span class="Emphasis">Remove</span> button  removes the corresponding lock in the Pivot Grid.</p>
+        <p>
+            <img src="../../Resources/Images/MFP/Locks on Selected Data.png" class="LargeImages" />
+        </p>
+        <h2>Converted aggregate locks</h2>
+        <p>In the Product and Channel dimensions, it is quite possible to have an aggregate lock which is not in the hierarchy. If another Product or Channel metric is added, then the aggregate lock becomes a converted aggregate lock. The conversion occurs because the aggregate lock cannot be represented on the screen anymore. As the selection has changed so the Pivot Grid cannot determine a sum total line to put the aggregate lock on and thus redefines the lock as a converted aggregate lock. In the grid, the aggregate lock now displays as separate cell locks over the cells that made up the original aggregate lock and the word Converted is prepended to the lock name in the Locks on Selected Data section.</p>
+        <p>Individual cells that form part of the converted aggregate lock can be unlocked. If one of the cell locks in the grid that comprise the converted aggregate lock is unlocked, then the converted aggregate lock is deleted and the remaining cells become regular cell locks.</p>
+        <p class="BasicNote">Removing the new metric reverses the conversion and the three cell locks are replaced by the aggregate lock.</p>
+        <h3>Example</h3>
+        <p>The total for the products in week 42 is locked. </p>
+        <p>
+            <img src="../../Resources/Images/MFP/Locked Aggregate weekly total.png" class="LargeImages" />
+        </p>
+        <p>The aggregate lock is redefined as a converted aggregate lock if another product metric is added. </p>
+        <p>
+            <img src="../../Resources/Images/MFP/Lock converted.png" class="LargeImages" />
+        </p>
+        <h2>Toolbar functionality</h2>
+        <table style="width: 100%;margin-left: auto;margin-right: auto;mc-table-style: url('../../Resources/TableStyles/standard.css');" class="TableStyle-standard" cellspacing="0">
+            <col class="TableStyle-standard-Column-Column1" />
+            <col class="TableStyle-standard-Column-Column2" />
+            <thead>
+                <tr class="TableStyle-standard-Head-Header1">
+                    <th class="TableStyle-standard-HeadE-Column1-Header1">Button</th>
+                    <th class="TableStyle-standard-HeadD-Column2-Header1">Description</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">Unlock</td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">Unlocks selected cells and dependent cells, making them  editable and able to be changed based on changes made elsewhere in the view.</td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">Lock</td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">Locks selected cells and dependent cells from being edited or changed based on changes made elsewhere in the view.</td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyB-Column1-Body1">Remove All Locks</td>
+                    <td class="TableStyle-standard-BodyA-Column2-Body1">
+                       Removes all locks from the current view including those listed in the aggregate lock pane regardless of whether they are visible or not. 
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </body>
+</html>

@@ -1,0 +1,50 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head>
+        <link href="../TableStyles/standard.css" rel="stylesheet" MadCap:stylesheetType="table" />
+    </head>
+    <body>
+        <p>There is an optional integration (via a Webhook) with a Stock to Service (STS) calculation that defines the right level of inventory based on historical and forecast sales data. This STS calculation is an analytical curve developed by TG Service Optimizer 99+ (SO99+) affecting the <span class="Emphasis">safety stock days</span> of applied inventories. </p>
+        <p class="BasicNote">Users can easily view how different target service levels affect inventory Safety Stock days by navigating to the <span class="Emphasis">Stock to Service</span> blade in Inventory Manager and reviewing the <span class="Emphasis">Stock to Service Curve</span> graph. For more information, see <MadCap:xref href="../../Topics/Inventory Manager/Stock To Service Blade.htm">Stock to Service blade</MadCap:xref>.</p>
+        <p>This calculation is in addition to TG JE's target service level calculation and applies to all previous order policy types that use Target Service Level such as Normal Stock and Redundant order policy types. This affects normal and redundant stocks because it targets safety stock which can be set in either Policy on a filter of items, or it could be set on individual inventories in Inventory Manager and Policy Information (via the <span class="Emphasis">Policy Information</span> blade).</p>
+        <p>The STS calculation is a change from a fixed stock service level to an optimized service level. The result is that the Target Service Level itself can automatically change between 0% to 99% service level in accordance with policy restrictions causing the actual achievable service level to differ from a user's input due to constraints. </p>
+        <p>
+
+		For example, a user inputs a desired service level of 90% in the <span class="Emphasis">Target Service Level</span> field on the Inventory Manager screen. However, maximum stock is set in such a way that the maximum possible service level achievable is 75%. In this scenario, the value in the <span class="Emphasis">Target Service Level</span> field automatically adjusts to 75%. The automatic adjustment prevents any false expectation on a user's part that they are satisfying a 90% service level when the maximum achievable is 75%. This automatic adjustment occurs in near real-time giving quick and clear visibility that a setting is preventing the desired Target Service Level which is not as easy to see with a Policy Task.</p>
+        <p>However, if an Inventory Planning Policy batch process has been configured as part of a policy task, then the automatic adjustment to an achievable service level, that is different from the user's input, occurs when the batch process is run and may not be immediately visible. When the batch process runs depends on all the policy tasks that were set up. The Policy Task only runs when started by a nightly job or from the Policy module when the user clicks <span class="Emphasis">Execute</span>.</p>
+        <h3>Constraint example</h3>
+        <p>For inventory with no sales history or forecast, regardless of the values input in the UI, the system would automatically set demand parameters at 0 for the inventory and the calculated Target Service Level at 0% since there is nothing to satisfy.</p>
+        <h3>Enabling Stock to Service</h3>
+        <p>Enabling the Stock to Service functionality requires an API key and URL from ToolsGroup Professional Services. Once configured, users must configure system policy labeled <span class="Emphasis">Safety Stock Calculation Type</span>.</p>
+        <p>The configuration options for system policy <span class="Emphasis">Safety Stock Calculation Type</span> are: </p>
+        <table style="width: 100%;margin-left: auto;margin-right: auto;mc-table-style: url('../../Resources/TableStyles/standard.css');" class="TableStyle-standard" cellspacing="0">
+            <col class="TableStyle-standard-Column-Column1" />
+            <col class="TableStyle-standard-Column-Column2" />
+            <thead>
+                <tr class="TableStyle-standard-Head-Header1">
+                    <th class="TableStyle-standard-HeadE-Column1-Header1">Option</th>
+                    <th class="TableStyle-standard-HeadD-Column2-Header1">Description</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">Standard</td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">The original and simplest safety stock days calculation. (Equivalent to <span class="Emphasis">Use New Safety Stock Calculation</span> being set to false.)</td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">Advanced</td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">The second iteration of safety stock days calculation. (Equivalent to <span class="Emphasis">Use New Safety Stock Calculation</span> being set to true.)</td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyB-Column1-Body1">Stock to Service</td>
+                    <td class="TableStyle-standard-BodyA-Column2-Body1">Use TG SO99’s Stock-to-Service curve calculation</td>
+                </tr>
+            </tbody>
+        </table>
+        <h3>Mandatory weekly task</h3>
+        <p>A weekly mandatory task <span class="Emphasis">(RP) (Weekly) Calculate Stock to Service Network Forecast</span> must be configured to enable the STS curve calculation.</p>
+        <p class="BasicNote">This task is only required when SO99 is implemented.</p>
+        <h2>Negative Safety Stock Days</h2>
+        <p>TG JE does not handle negative Safety Stock Days or Service Levels. With STS functionality, it is possible to get negative Safety Stock Days with certain criteria, in these cases negative safety Stock Days are converted to 0 (zero).</p>
+    </body>
+</html>

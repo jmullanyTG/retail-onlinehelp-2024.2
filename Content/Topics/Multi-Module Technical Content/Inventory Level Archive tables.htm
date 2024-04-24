@@ -1,0 +1,95 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head>
+        <link href="../../Resources/TableStyles/standard.css" rel="stylesheet" MadCap:stylesheetType="table" />
+    </head>
+    <body>
+        <h1>Inventory Level Archive (ILA) data stores</h1>
+        <h2>Reducing performance consequences and storage costs of real-time data aggregation </h2>
+        <h3>Assortment Planning and Merchandise Financial Planning (MFP)</h3>
+        <p>Throughout ToolsGroup JustEnough modules, in particular planning modules, it is useful to have a record of what stock units were on hand in stores for dates in the past. This gives insight into stock holding history for comparison and lets users know what the most recent stock position was as of last week, so that future weeks' stock positions can be calculated based off demand and receipt plans.</p>
+        <p>This data store is referred to within ToolsGroup JustEnough as an Inventory Level Archive (ILA) and there can be performance consequences and storage costs when the ILA data store contains too much history for too many items. This is particularly true for large-volume customers where repeated aggregation of static ILA data is time-consuming and the volume of data itself consumes considerable space.</p>
+        <p>The variant-location ILA aggregate reduces the incidence of real-time aggregation, thus, reducing performance consequences and storage costs of repeated aggregation of static ILA data.</p>
+        <p>The Assortment Planning and Merchandise Financial Planning modules do not need stock on hand history at such a granular level as SKU-location. Variant-location is perfectly sufficient for these modules. By summing up the SKU-location level ILA table into a variant-location ILA aggregate, systems can reduce storage space in their databases and reduce performance time when modules use the aggregated data store rather than the detailed one.</p>
+        <h3>Configuring which ILA data store to use</h3>
+        <p>The source of stock on hand data to use during actualization must be configured. </p>
+        <p>Merchandise Financial Planning system policy <span class="Emphasis">Stock On Hand Actualization Source</span> and AP Import Config metric <span class="Emphasis">EOP / BOP Values</span> determine the source of stock on hand data to use during actualization. By default, the system policy is set to <span class="Emphasis">Inventory</span> and the Import Config metric to <span class="Emphasis">Inventory Level Archive</span> with the data source being a SKU-location level ILA table. Setting the system policy to <span class="Emphasis">Variant</span> or the Import Config metric to <span class="Emphasis">Variant-Site Level Archive</span> lets customers take advantage of a variant-location ILA aggregate for the relevant module.</p>
+        <h3>Upgrading from a previous version</h3>
+        <p>If upgrading from a previous version, there is no need to re-import data for the aggregation to run. Simply run the aggregation as a one-off after the upgrade to establish an aggregate ILA. Afterwards, whenever new imports are run, the newly imported values will be maintained going forward (assuming the system policy is set to <span class="Emphasis">Variant</span> or the Import Config metric to<span class="Emphasis"> Variant-Site Level Archive</span>).</p>
+        <p>However, data can be re-imported if desired. There does not yet exist a direct import into the variant-location ILA aggregate table. Only the existing SKU-location ILA import continues to exist. This import has been changed to append processing to automatically cache imported SKU-location data into the variant-location aggregate. However, in order for the automatic caching to occur, the system policy needs to be set to <span class="Emphasis">Variant</span> or the Import Config metric needs to be set to <span class="Emphasis">Variant-Site Level Archive</span>.</p>
+        <p class="BasicNote">It is strongly suggested to break the initial data import into smaller pieces, rather than trying to import all the data at once. This helps minimize the risk of the import failing.</p>
+        <h3>Impact to historical EOP values of changing the data source</h3>
+        <p>Historical EOP values can vary slightly depending on whether the data source is the SKU-location level ILA or the variant-location ILA aggregate. The difference has to do with how the system looks backwards over time to find the stock on hand for an item.</p>
+        <p>In the following example,  the recorded EOP for the period wk08 (which is from 17 February to 23 February) differs slightly between the SKU-location level ILA and the variant-location ILA.</p>
+        <h4>Example</h4>
+        <p><span class="Emphasis">SKU-location level ILA</span>
+        </p>
+        <p>Assume the following records exist in the SKU-location level ILA:</p>
+        <table style="mc-table-style: url('../../Resources/TableStyles/standard.css');margin-left: auto;margin-right: auto;width: 99%;" class="TableStyle-standard" cellspacing="0">
+            <col style="width: 50%;" class="TableStyle-standard-Column-Column1" />
+            <col style="width: 50%;" class="TableStyle-standard-Column-Column2" />
+            <thead>
+                <tr class="TableStyle-standard-Head-Header1">
+                    <th class="TableStyle-standard-HeadE-Column1-Header1">Period</th>
+                    <th class="TableStyle-standard-HeadD-Column2-Header1">EOP Units</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1" style="text-align: center;">1 February</td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1" style="text-align: center;">100</td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1" style="text-align: center;">4 February</td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1" style="text-align: center;">120</td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1" style="text-align: center;">9 February</td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1" style="text-align: center;">130</td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyB-Column1-Body1" style="text-align: center;">28 February</td>
+                    <td class="TableStyle-standard-BodyA-Column2-Body1" style="text-align: center;">90</td>
+                </tr>
+            </tbody>
+        </table>
+        <p>Currently in MFP and AP, there is no look back period when using SKU-location ILA data for historical stock on hand values. An ILA record between 17 February and 23 February is queried and the last record is chosen. Since there is no record in these dates, EOP is reported as 0 units.</p>
+        <p><span class="Emphasis">Variant-location ILA</span>
+        </p>
+        <p>The dates used for variant-location ILA data is regulated by the system policies that maintain SKU-location ILA data (by default, the calendar used for data retention is to keep daily records for a month, weekly records for 2 years, and monthly data beyond that). Further, when variant-location ILA data is populated, it uses a look-back period to find the last record present for an inventory, not just the last record to occur within the week or month. Thus, weekly records are created, and a record for 23 February is created. The result is the records in the variant-location ILA aggregate will look more like this:</p>
+        <table class="TableStyle-standard" style="mc-table-style: url('../../Resources/TableStyles/standard.css');margin-left: auto;margin-right: auto;width: 99%;" cellspacing="0">
+            <col style="width: 50%;" class="TableStyle-standard-Column-Column1" />
+            <col style="width: 50%;" class="TableStyle-standard-Column-Column2" />
+            <thead>
+                <tr class="TableStyle-standard-Head-Header1">
+                    <th class="TableStyle-standard-HeadE-Column1-Header1">Period</th>
+                    <th class="TableStyle-standard-HeadD-Column2-Header1">EOP Units</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1" style="text-align: center;">2 February</td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1" style="text-align: center;">100</td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1" style="text-align: center;">9 February</td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1" style="text-align: center;">130</td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1" style="text-align: center;">16 February</td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1" style="text-align: center;">130</td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1" style="text-align: center;">23 February</td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1" style="text-align: center;">130</td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyB-Column1-Body1" style="text-align: center;">28 February</td>
+                    <td class="TableStyle-standard-BodyA-Column2-Body1" style="text-align: center;">90</td>
+                </tr>
+            </tbody>
+        </table>
+        <p>In this scenario, the look-back logic used to populate variant-location ILA data means that there is a weekly record to be found by MFP or AP when looking for an EOP value. A record is found in the period between 17 February and 23 February, so the application will report 130 EOP units.</p>
+        <p>Thus, it can be expected that historical EOP values will likely be higher when Variant mode is enabled for SOH actualization, because it is accounting for data that was previously omitted.</p>
+    </body>
+</html>

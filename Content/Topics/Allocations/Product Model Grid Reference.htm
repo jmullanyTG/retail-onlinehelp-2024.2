@@ -1,0 +1,63 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" xml:lang="en-us">
+    <head><title></title>
+    </head>
+    <body>
+        <h1>Product Model screen fields and descriptions</h1>
+        <p>Product models are built using calculation parameters and product based (item master) filters. </p>
+        <ul>
+            <li><span class="Emphasis">Product Model</span> – The name for the product model. </li>
+            <li><span class="Emphasis">Product Model Description</span> – Optional description for the product model. </li>
+            <li><span class="Emphasis">Hierarchy</span> - An item master level hierarchy filter. Specifies which hierarchy to use.</li>
+            <li><span class="Emphasis">Model Time Frame Selection</span> – The applied time frame for model calculation.  A time frame must be defined for each product model. Click in this field to select a time frame. For more information, <MadCap:conditionalText MadCap:conditions="General.ScreenOnly">see <MadCap:xref href="../Time Frame/Selecting a Time Frame.htm">Selecting a time frame</MadCap:xref>. </MadCap:conditionalText><MadCap:conditionalText MadCap:conditions="General.PrintOnly">refer to the Time Frames User Guide.</MadCap:conditionalText></li>
+            <li><span class="Emphasis">Model Metric</span> – Defines the measure used to calculate the model. For more information, see <span class="Emphasis">Types of model metric</span>.</li>
+        </ul>
+        <ul>
+            <li><span class="Emphasis">Include Inner zeros</span> – When selected inner zeros are retained versus being discarded during the calculations for Sales History.</li>
+            <li><span class="Emphasis">Include Lost Sales</span> – When selected Lost Sales Quantity is added to Sales History. Selecting this checkbox potentially prevents a situation where a store is out of stock and negatively affects the product model.</li>
+            <li>
+                <p><span class="Emphasis">Model Type</span> - Model Type may be static or dynamic.</p>
+                <ul>
+                    <li>
+                        <p>Dynamic – calculates the contribution down to the Store and Level ID for the Hierarchy ID</p>
+                    </li>
+                    <li>
+                        <p>Static – calculates the contribution only down to the store.</p>
+                    </li>
+                </ul>
+            </li>
+            <li><span class="Emphasis">Sales Type</span> – Included sales types (listed in sales history by type) for model creation. Clicking within the field and selecting the ellipsis displays a dialog that allows for the including and excluding of sales types. Right-click within the dialog's column header field to display a dropdown menu with additional options.
+               <p> <img src="../../Resources/Images/Allocations/Sales Type Friendly Name.png" class="LargeImages" /></p><p>For customers that use non-standard sales types in the Product Model grid, a column hidden by default provides an additional user friendly Sales Type description. To display, right-click in the column header fields in the <span class="Emphasis">Excluded</span> and <span class="Emphasis">Included</span> sections and select <span class="Emphasis">Column Chooser</span> from the dropdown menu. </p><p><img src="../../Resources/Images/Allocations/Sales Type Friendly Name Field.png" class="LargeImages"></img></p></li>
+            <li><span class="Emphasis">Product Selection</span> – Product selection is built off of a product specific (item master) filter. These filters may be built using the  Filter Manager to incorporate the desired items used to build the model. </li>
+            <li><span class="Emphasis">Default Product Selection</span> – A supplemental filter to ensure that product models do not have “zero” values for a store. Should be set to a high enough level of the product hierarchy to ensure that values are present, or all item masters. </li>
+            <li><span class="Emphasis">Access Level</span> – Access levels determine which users may use or edit the model. </li>
+            <li><span class="Emphasis">User Select</span> – Displays the specific users for a <span class="Emphasis">Shared</span> access level product model. </li>
+            <li><span class="Emphasis">Created</span> – Revision history metric showing the creation date of the model.</li>
+            <li><span class="Emphasis">Created By</span> – User ID of the model creator. </li>
+            <li><span class="Emphasis">Last Updated</span> – Revision history metric showing the date of the most recent revision. </li>
+            <li><span class="Emphasis">Updated By</span> – User ID of the most recent editor. </li>
+        </ul>
+        <h2>Types of model metric</h2>
+        <h3>History Related Metrics</h3>
+        <p> Uses Sales History by Type Data. The time frame should be in the past.</p>
+        <ul>
+            <li><span class="Emphasis">Units</span> – Uses Sales Quantity Field</li>
+            <li><span class="Emphasis">Revenue</span> – Uses Total Revenue Field</li>
+            <li><span class="Emphasis">Margin</span> – Uses Total Revenue minus Total Cost Fields</li>
+        </ul>
+        <h3>Hybrid Plan Related Metrics</h3>
+        <p>Uses Financial Plan or Snapshot Hybrid Detail Plan. The time frame should be in the future.</p>
+        <ul>
+            <li><span class="Emphasis">Plan Revenue</span> – The fields are dependent on Sales Types and there are many permutations but consists of Sales related fields.</li>
+            <li><span class="Emphasis">Plan Units</span> –The fields are dependent on Sales Types and there are many permutations that use Sales Units related fields.</li>
+            <li><span class="Emphasis">Plan Receipts</span> – Uses Target Receipt Units Field.</li>
+        </ul>
+        <h3>Inventory Forecast Related Metrics</h3>
+        <p>The time frame should be in the future.</p>
+        <ul>
+            <li><span class="Emphasis">Forecast Units</span> – Uses Effective Forecast Field</li>
+            <li><span class="Emphasis">Forecast Revenue</span> – Uses Sales Value (Effective Forecast times Price Value) Fields</li>
+            <li><span class="Emphasis">Forecast Margin</span> – Uses Sales Value minus Cost Value (Effective Forecast times Cost Value) formula</li>
+        </ul>
+    </body>
+</html>

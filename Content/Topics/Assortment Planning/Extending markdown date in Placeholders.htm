@@ -1,0 +1,138 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head>
+        <link href="../../Resources/TableStyles/standard.css" rel="stylesheet" MadCap:stylesheetType="table" />
+    </head>
+    <body>
+        <h1>Extending the markdown date in placeholders</h1>
+        <p> For placeholders with a defined markdown date, a regular ROS is calculated for the period from the phase-in date to the beginning of the markdown period. A markdown ROS&#160;is calculated for the period from the start of the markdown to the phase-out date.  </p>
+        <p>If the markdown date is extended, then both the original regular ROS and original markdown ROS hold and apply to the new  extended regular period and the new markdown period. Whatever the regular ROS&#160;was by week by number of weeks is applied to the new weeks that used to be markdown and are now regular.</p>
+        <p>This change is illustrated in the following tables:</p>
+        <h2>Plan totals</h2>
+        <table style="mc-table-style: url('../../Resources/TableStyles/standard.css');margin-left: 0;margin-right: auto;" class="TableStyle-standard" cellspacing="0">
+            <col class="TableStyle-standard-Column-Column1" />
+            <col class="TableStyle-standard-Column-Column2" style="width: 25%;" />
+            <col class="TableStyle-standard-Column-Column1" />
+            <col class="TableStyle-standard-Column-Column2" style="width: 25%;" />
+            <thead>
+                <tr class="TableStyle-standard-Head-Header1">
+                    <th class="TableStyle-standard-HeadE-Column1-Header1" colspan="2">Original plan</th>
+                    <th class="TableStyle-standard-HeadD-Column1-Header1" colspan="2">Markdown date extended</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">Phase In</td>
+                    <td class="TableStyle-standard-BodyE-Column2-Body1">week 10</td>
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">Phase In</td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">week 10</td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">MD Date</td>
+                    <td class="TableStyle-standard-BodyE-Column2-Body1">week 19</td>
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">MD Date</td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">week 23</td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">Phase Out</td>
+                    <td class="TableStyle-standard-BodyE-Column2-Body1">week 23</td>
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">Phase Out</td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">week 27</td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">Total Sales</td>
+                    <td class="TableStyle-standard-BodyE-Column2-Body1">1300</td>
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">Total Sales</td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">1744</td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">Reg Sales</td>
+                    <td class="TableStyle-standard-BodyE-Column2-Body1">1000</td>
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">Reg Sales</td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">1444</td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">MD Sales</td>
+                    <td class="TableStyle-standard-BodyE-Column2-Body1">300</td>
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">MD Sales</td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">300</td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">Total ROS</td>
+                    <td class="TableStyle-standard-BodyE-Column2-Body1">5.46</td>
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">Total ROS</td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">5.70</td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">Reg ROS</td>
+                    <td class="TableStyle-standard-BodyE-Column2-Body1">6.54</td>
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">Reg ROS</td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">6.54</td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyB-Column1-Body1">MD ROS</td>
+                    <td class="TableStyle-standard-BodyB-Column2-Body1">3.53</td>
+                    <td class="TableStyle-standard-BodyB-Column1-Body1">MD ROS</td>
+                    <td class="TableStyle-standard-BodyA-Column2-Body1">3.53</td>
+                </tr>
+            </tbody>
+        </table>
+        <h2>ROS&#160;by period</h2>
+        <table style="mc-table-style: url('../../Resources/TableStyles/standard.css');margin-left: 0;margin-right: auto;" class="TableStyle-standard" cellspacing="0">
+            <col class="TableStyle-standard-Column-Column1" />
+            <col class="TableStyle-standard-Column-Column2" style="width: 25%;" />
+            <col class="TableStyle-standard-Column-Column1" />
+            <col class="TableStyle-standard-Column-Column2" style="width: 25%;" />
+            <thead>
+                <tr class="TableStyle-standard-Head-Header1">
+                    <th class="TableStyle-standard-HeadE-Column1-Header1" colspan="2">Original plan with markdown date defined at week 19 </th>
+                    <th class="TableStyle-standard-HeadD-Column1-Header1" colspan="2">Markdown date extended to week 23</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">Period</td>
+                    <td class="TableStyle-standard-BodyE-Column2-Body1">ROS</td>
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">Period</td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">ROS </td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">week 10 - week 18</td>
+                    <td class="TableStyle-standard-BodyE-Column2-Body1">111</td>
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">week 10 - week 22</td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">111</td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">week 19</td>
+                    <td class="TableStyle-standard-BodyE-Column2-Body1">100</td>
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">week 23</td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">100</td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">week 20</td>
+                    <td class="TableStyle-standard-BodyE-Column2-Body1">80</td>
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">week 24</td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">80</td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">week 21</td>
+                    <td class="TableStyle-standard-BodyE-Column2-Body1">60</td>
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">week 25</td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">60</td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">week 22</td>
+                    <td class="TableStyle-standard-BodyE-Column2-Body1">40</td>
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">week 26</td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">40</td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyB-Column1-Body1">week 23</td>
+                    <td class="TableStyle-standard-BodyB-Column2-Body1">20</td>
+                    <td class="TableStyle-standard-BodyB-Column1-Body1">week 27</td>
+                    <td class="TableStyle-standard-BodyA-Column2-Body1">20</td>
+                </tr>
+            </tbody>
+        </table>
+    </body>
+</html>

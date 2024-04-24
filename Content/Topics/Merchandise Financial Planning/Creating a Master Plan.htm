@@ -1,0 +1,230 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head>
+        <link href="../../Resources/TableStyles/standard.css" rel="stylesheet" MadCap:stylesheetType="table" />
+    </head>
+    <body>
+        <h1>Creating a master plan</h1>
+        <p>The first action when working in the <span class="Emphasis">Financial Plan Maintenance</span> view is to create a master plan.&#160; A master plan is a Financial Plan that is considered to be the single version of the truth.&#160; Master plans should be used as approved plans within the planning process.&#160; Master plans contain historic and plan periods.&#160; Historic periods represent what actually happened within the business and plan periods are the approved plans for future periods.&#160; </p>
+        <p class="BasicNote">In managing a Master plan it is recommended that a super user or system administrator has control over this feature.</p>
+        <h2>To create a master plan:</h2>
+        <ul>
+            <li>Click the <span class="Emphasis">New</span> button on the toolbar.
+				<p><img src="../../Resources/Images/MFP/New Master Plan.png" class="LargeImages" /></p><p>The <span class="Emphasis">Maintain Financial Plan</span> window displays with tabs available for creating a new plan.</p><p><img src="../../Resources/Images/MFP/Maintain Financial Plan screen - NEW.png" class="LargeImages" /></p><p>When the screen is completed, click <span class="Emphasis">Ok</span> to create the plan based on all the criteria that was defined in the  tabs contained in the <span class="Emphasis">Maintain Financial Plan</span> window that display when creating plans.&#160; New plans display automatically.</p></li>
+        </ul>
+        <h2>To edit a master plan:</h2>
+        <ul>
+            <li>Click the <span class="Emphasis">Edit</span> button on the toolbar.</li>
+            <p>The <span class="Emphasis">Maintain Financial Plan</span> window displays with tabs available for editing an existing plan.</p>
+            <p>
+                <img src="../../Resources/Images/MFP/Maintain Financial Plan screen - EDIT.png" class="LargeImages" />
+            </p>
+        </ul>
+        <h2>Initializing a plan</h2>
+        <p>To initialize a plan, click the <span class="Emphasis">Initialize</span> icon in the header of the <span class="Emphasis">Financial Plan Maintenance</span> view. The <span class="Emphasis">Financial Plan Maintenance</span> view displays and the plan is assigned the status of <span class="Emphasis">Initialized</span>.</p>
+        <h2>Tab descriptions</h2>
+        <h3>General tab</h3>
+        <p>The <span class="Emphasis">General</span> tab is used to configure the master plan's name and description, plan type, currency to work with, data values, calendar to plan with, the level of the calendar, and start period.&#160; These general settings form the basis of the structure of the master plan.&#160; </p>
+        <p><span class="Emphasis">Name</span>:&#160; The name of the plan</p>
+        <p><span class="Emphasis">Description</span>:&#160; What the plan is and any other important information about the plan that may be important to the user group.</p>
+        <p><span class="Emphasis">Plan Type</span>:&#160;The metric set and calculations that will make up the master plan.</p>
+        <ul>
+            <li><span class="Emphasis">Hybrid Cost-Based Plan</span>: This plan provides the ability to plan by Channel/location groups at defined levels of the product hierarchy.&#160; This plan contains the ability to plan sales, cost of sales, margin, inventory, receipts, and open to buy to support the budgeting process.&#160; This plan is for clients who value their inventory at cost.</li>
+            <li>
+                <p><span class="Emphasis">Hybrid Cost Dual-Markdown Plan (HCDM)</span>: This plan type allows organizations to plan their permanent and promotional markdowns separately. Promotional markdowns are tied directly to Promotional Sales and reduce AUR for periods in which they are realized, impacting margin through that reduction. Conversely, because markdown sales do not necessarily occur in the same period in which the actual markdowns are taken, Permanent Markdowns are managed strictly as a percentage of sales, and are subtracted directly from the Maintained Margin value for the period in which they occur. </p>
+                <p>In this plan type, average unit cost (AUC) and average unit ticket (AUT) do not typically change from period to period because of changes to the sales plan. AUC changes as a result of incoming receipts or other changes to the inventory mix. AUT only changes if the user changes it directly or indirectly, through a change in IMU %.</p>
+            </li>
+            <li>
+                <p><span class="Emphasis">Hybrid Retail Dual-Markdown Plan (HRDM)</span>: Behaves in the same way as the Hybrid Cost Dual-Markdown plan type. This new plan type applies a Cumulative Markup (CMU) percentage to retail values to determine margin, cost of goods sold, and ending inventory for cost. This allows planning teams to focus on retail values and AUR while the CMU drives the efficiency and accuracy of financial plans.</p>
+                <p>As the name implies, there are two markdown metrics in the HRDM plan. The Markdowns (Perm) and Markdowns (Promo) fields are enabled for the Hybrid Retail Dual Markdown plan type, as well as the Markdowns (Total) field. All are plannable.</p>
+                <h4>Hybrid Retail Dual Markdown plan-specific metrics</h4>
+                <p>There are Current plan year, Comparison, and LY versions of all of the below metrics. The only user-editable metric described below is the <span class="Emphasis">Season Begin</span> metric.</p>
+                <table style="width: 100%;margin-left: 0;margin-right: auto;mc-table-style: url('../../Resources/TableStyles/standard.css');" class="TableStyle-standard" cellspacing="0">
+                    <col class="TableStyle-standard-Column-Column1" />
+                    <col class="TableStyle-standard-Column-Column2" />
+                    <thead>
+                        <tr class="TableStyle-standard-Head-Header1">
+                            <th class="TableStyle-standard-HeadE-Column1-Header1">Metric Name</th>
+                            <th class="TableStyle-standard-HeadD-Column2-Header1">Calculation and Notes</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr class="TableStyle-standard-Body-Body1">
+                            <td class="TableStyle-standard-BodyE-Column1-Body1">Season Begin</td>
+                            <td class="TableStyle-standard-BodyD-Column2-Body1">
+                                <ul>
+                                    <li>
+                                        <p>
+                         No calculation. </p>
+                                    </li>
+                                    <li>
+                                        <p>If enabled by a system policy, this metric is only editable by users in the Administrators role.</p>
+                                    </li>
+                                    <li>
+                                        <p>The <span class="Emphasis">Season Begin</span> metric is always editable and never actualizes. </p>
+                                    </li>
+                                    <li>
+                                        <p>When a time-aggregate is modified (e.g. a month or quarter), the first period within the aggregate is modified while the other periods are left alone. </p>
+                                    </li>
+                                    <li>
+                                        <p>When <span class="Emphasis">Season Begin</span> is changed, the change is applied to the same period for the whole plan, including product and channel hierarchy levels that are not selected. </p>
+                                    </li>
+                                </ul>
+                            </td>
+                        </tr>
+                        <tr class="TableStyle-standard-Body-Body1">
+                            <td class="TableStyle-standard-BodyD-Column1-Body1" colspan="2">
+                                <p colspan="2"><span class="Emphasis">Season-To-Date Metrics GAFS (Goods Available For Sale) metrics</span>
+                                </p>
+                                <p>Season-To-Date metrics recalculate from each Season Begin period, even if that period is actualized.</p>
+                            </td>
+                        </tr>
+                        <tr class="TableStyle-standard-Body-Body1">
+                            <td class="TableStyle-standard-BodyE-Column1-Body1">GAFS Sellthrough %</td>
+                            <td class="TableStyle-standard-BodyD-Column2-Body1">
+IF(Season-To-Date GAFS Units = 0, 0, Sales Units / Season-To-Date GAFS Units ) * 100</td>
+                        </tr>
+                        <tr class="TableStyle-standard-Body-Body1">
+                            <td class="TableStyle-standard-BodyE-Column1-Body1">Season-To-Date GAFS Cost</td>
+                            <td class="TableStyle-standard-BodyD-Column2-Body1">BOP Cost from Season Begin + cumulative season-to-date Target Receipt Cost + cumulative season-to-date Inventory Adjustment Total Cost</td>
+                        </tr>
+                        <tr class="TableStyle-standard-Body-Body1">
+                            <td class="TableStyle-standard-BodyE-Column1-Body1">Season-To-Date GAFS Retail</td>
+                            <td class="TableStyle-standard-BodyD-Column2-Body1">BOP Retail from Season Begin + cumulative season-to-date Target Receipt Retail + cumulative season-to-date Inventory Adjustment Total Retail</td>
+                        </tr>
+                        <tr class="TableStyle-standard-Body-Body1">
+                            <td class="TableStyle-standard-BodyE-Column1-Body1">Season-To-Date GAFS Units</td>
+                            <td class="TableStyle-standard-BodyD-Column2-Body1">BOP Cost from Season Begin + cumulative season-to-date Target Receipt Units + cumulative season-to-date Inventory Adjustment Total Units</td>
+                        </tr>
+                        <tr class="TableStyle-standard-Body-Body1">
+                            <td class="TableStyle-standard-BodyE-Column1-Body1">Season to Date GAFS CMU%</td>
+                            <td class="TableStyle-standard-BodyD-Column2-Body1">(Season to Date GAFS Retail - Season to Date GAFS Cost ) / Season to Date GAFS Retail</td>
+                        </tr>
+                        <tr class="TableStyle-standard-Body-Body1">
+                            <td class="TableStyle-standard-BodyD-Column1-Body1" colspan="2">
+                                <p colspan="2"><span class="Emphasis">Default GAFS (Goods Available For Sale) metrics</span>
+                                </p>
+                                <p>The Default GAFS metrics have the same formula as Season-To-Date GAFS metrics. Where they differ, is that: Season-To-Date metrics calculate from the Season Begin period, even if that period is in the past. Default metrics calculate from the last actualized EOP value.</p>
+                            </td>
+                        </tr>
+                        <tr class="TableStyle-standard-Body-Body1">
+                            <td class="TableStyle-standard-BodyE-Column1-Body1">
+                        Default GAFS CMU% 
+                        <p>(Goods Available For Sale)</p></td>
+                            <td class="TableStyle-standard-BodyD-Column2-Body1">IF(Season-To-Date GAFS Retail = 0, 0, ( Season-To-Date GAFS Retail - Default GAFS Cost ) / (Season-To-Date GAFS Retail))</td>
+                        </tr>
+                        <tr class="TableStyle-standard-Body-Body1">
+                            <td class="TableStyle-standard-BodyB-Column1-Body1">Default GAFS Cost</td>
+                            <td class="TableStyle-standard-BodyA-Column2-Body1">Period of Season Begin: BOP Cost + Inventory Adjustment Total Cost Rest of season: (previous period Season-To-Date GAFS Retail * (1 - EOP CMU % )) + current week Inventory Adjustment Total Cost</td>
+                        </tr>
+                    </tbody>
+                </table>
+                <h4>Metrics disabled in Hybrid Retail Dual Markdown plans</h4>
+                <p>AUT and IMU% are both not editable in the HRDM plan type, because their formulae have changed. AUT is now equivalent to BOP AUR, and IMU% is equivalent to BOP Markup %. Both are now automatically calculated. Thus, the IMU % calculation toggle is disabled in HRDM.</p>
+            </li>
+        </ul>
+        <p><span class="Emphasis">Plan Sub Type</span>: The two options for Plan Sub Type are <span class="Emphasis">Default</span> and <span class="Emphasis">Original Plan</span>. For more information, see <MadCap:xref href="Plan Sub Types.htm">Plan Sub Types</MadCap:xref>.</p>
+        <p><span class="Emphasis">Plan Currency</span>: The base currency to work with.</p>
+        <p><span class="Emphasis">Management Type</span>: Set to <span class="Emphasis">Manual</span> by default. This field can be edited after the creation of a Master or Branch plan and can be updated as and when required. Additionally, Master and Branch plans can have different Management Types.</p>
+        <table style="mc-table-style: url('../../Resources/TableStyles/standard.css');margin-left: auto;margin-right: auto;" class="TableStyle-standard" cellspacing="0">
+            <col class="TableStyle-standard-Column-Column1" style="width:15%;" />
+            <col class="TableStyle-standard-Column-Column2" style="width:85%;" />
+            <thead>
+                <tr class="TableStyle-standard-Head-Header1">
+                    <th class="TableStyle-standard-HeadE-Column1-Header1">Type</th>
+                    <th class="TableStyle-standard-HeadD-Column2-Header1">Description</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">Open </td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">The plan can be modified both by imports and within the application. A “last in” rule is used here. If an import runs after user modifications are made, the imported values overwrite the user values, and vice versa. If values are intended to be locked for UI or import modifications only, the Management Type should be changed.
+                        </td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">Manual</td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">The plan can only be modified through the application. This plan is not a valid destination data set for imports.                        <p>If an import post runs for a plan of type Manual, then the plan is not affected and an error displays.</p></td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyB-Column1-Body1">Import</td>
+                    <td class="TableStyle-standard-BodyA-Column2-Body1">The plan can only be modified through imports.</td>
+                </tr>
+            </tbody>
+        </table>
+        <p>Further, actualized values can be imported via the API import process.  If a historical period is provided, it must either be: a) for a master plan, or b) for an Original Plan (OP) branch plan type.  Historical data is not valid for Default typed branches. Such data is discarded with a warning in import logs.  
+
+</p>
+        <p>Note that some consideration must be paid between timing API imports and MFP maintenance. If the API import runs and imports actualized data for the last 4 weeks, but then the default MFP maintenance runs for the last 8 weeks, then all of the values imported in the first step is zeroed out and replaced with whatever values are found in the other standard data feeds (sales history, inventory history, etc).  Some care needs to be taken to set up and sequence imports and maintenance so that the desired plans, metrics, and periods have data maintained by the desired feed.</p>
+        <p class="BasicNote">When import posts run for plans of type Import, hierarchy levels are automatically added to the plan based on the import data. If desired, the API can be run in Window mode, deleting all existing data in a plan and re-loading it from the import data.</p>
+        <p><span class="Emphasis">Seed Type</span>:&#160; Defines how future periods in the plan are seeded for the metrics offered within the plan type that has been selected.&#160;There are three standard seeding options to choose from.&#160;Seed Types cannot be combined to seed future periods when creating the plan.</p>
+        <ul>
+            <li><span class="Emphasis">Historic Sales LY</span>: Seeds future periods with sales, sales units, and average unit retail from last year’s comparable periods.</li>
+            <li><span class="Emphasis">Historic Sales LLY</span>:&#160;Seeds future periods with sales, sales units, and average unit retail from two years ago comparable periods.</li>
+            <li><span class="Emphasis">Forecasted Sales</span>: Seeds future periods with sales units that are coming from the forecast module.&#160; Sales are derived by multiplying the forecasted sales units times the average unit retail from last year’s comparable periods.</li>
+        </ul>
+        <p class="Important">Regardless of the selected Seed Type, metrics that would be seeded with negative values based on the available data indicated by that type are seeded with zeros instead.</p>
+        <p><span class="Emphasis">Calendar</span>: The NRF retail planning calendar used in the master plan.&#160;  Users can select a <span class="Emphasis">4-4-5</span> calendar or <span class="Emphasis">4-5-4</span> calendar.&#160; It is possible to import custom calendars during implementation of this module if necessary.</p>
+        <p><span class="Emphasis">Calendar Level</span>:&#160; The lowest level of time used in the master plan.&#160; There are three standard options: Year, Month, and Week. Most plans created in this module go to the Month or Week level.</p>
+        <p><span class="Emphasis">Start Period</span>:&#160; The first period contained within the plan.&#160; This can be a historical period or future period. </p>
+        <p><span class="Emphasis">Stock Split Factor Type</span>: (Only available at the Master Level. This functionality is not available at the Branch level). The default is <span class="Emphasis">Legacy MFP</span>. Lets users select a custom DC split factor. Custom stock splits are editable. Legacy types are read-only.</p>
+        <p><span class="Emphasis">Stock Split Supply Chain</span>: The supply chain used to determine how inventory is split among DCs. (The <span class="Emphasis">Supply Chain Status</span> field indicates whether the supply chain is valid for use with this plan.)</p>
+        <p><span class="Emphasis">Stock Split Sales Types</span>: The sales types to consider when apportioning stock to DCs.</p>
+        <p><span class="Emphasis">Supply Chain Status</span>: Whether the supply chain is valid. (For more information, see <a href="Validating a Supply Chain.htm">Validating a Supply Chain</a>.)</p>
+        <p><span class="Emphasis">Owner</span>:&#160;&#160; Disabled until the plan is created.&#160; Once the plan is created the system displays the name of the user who created the plan.</p>
+        <p><span class="Emphasis">Creation Date</span>:&#160; Disabled until the plan is created.&#160; Once the plan is created the system displays the date the plan was created.</p>
+        <p><span class="Emphasis">Status</span>:&#160;&#160; Disabled until the plan is created.&#160; Once the plan is created the system displays the status the plan is in.&#160; Plan status is covered in the Plan approval section of this document.</p>
+        <h3>Product tab</h3>
+        <p> Product hierarchical structures contained within plans are defined in the <span class="Emphasis">Product</span> tab.&#160; The product hierarchy levels selected define the levels users can work with. </p>
+        <p>
+            <img src="../../Resources/Images/MFP/Product tab layout.PNG" class="LargeImages" />
+        </p>
+        <h4>Tab layout</h4>
+        <p>Plan levels are selected in the top section of the screen. Users determine which categories are within the master plan in the bottom section. </p>
+        <h3>Channel tab</h3>
+        <p> Location hierarchical structures contained within plans are defined in the <span class="Emphasis">Channel</span> tab.&#160; The location hierarchy levels selected define the levels users can work with.</p>
+        <p>
+            <img src="../../Resources/Images/Wholesale Planning/View Wholesale Accounts Maintain Financial Plan.PNG" class="LargeImages" />
+        </p>
+        <p>The top section of the screen is where the plan levels are selected.&#160;The bottom section is where users determine which channels are contained within the master plan. </p>
+        <p class="BasicNote">For information relating to adding <span class="Emphasis">Wholesale</span> to the hierarchy, see <MadCap:xref href="Including A Wholesale Channel In Hierarchy.htm">Including Wholesale In Channel Hierarchy</MadCap:xref>.</p>
+        <h3>User Access tab</h3>
+        <p>The <span class="Emphasis">User Access</span> tab is used to define user and role access permissions.&#160; In the bottom section, setting up the permissions requires that the user navigate through three tabs: <span class="Emphasis">Product</span>, <span class="Emphasis">Channel</span>, <span class="Emphasis">Merge Measure Set</span>.&#160;</p>
+        <p>
+            <img src="../../Resources/Images/MFP/User Access tab.PNG" class="LargeImages" />
+        </p>
+        <p>Access permissions by channel are defined in the <span class="Emphasis">Channel</span> tab. In the <span class="Emphasis">Merge Measure Sets</span> tab, measure sets can be merged into the Master Plan from a branch that belongs to that master plan.&#160; Measure sets are defined in the Header Area controls section.&#160;</p>
+        <h3>View Collection tab</h3>
+        <p>The <span class="Emphasis">View Collection</span> tab defines the collection of metrics that are contained within the plan as well as the collection of metrics that are contained within any snapshot taken of the plan.&#160; </p>
+        <p>View collections are set up by clicking <span class="Emphasis">Add</span> for both the top and bottom window. Upon clicking <span class="Emphasis">Add</span>, select the Plan Type and View Collection set that is to be associated with the plan.&#160; </p>
+        <p class="Important">View collection sets defined in this tab are inherited by default by any Branch plans created from a Master plan. If the same view collection sets assigned to a Master plan are required for use in Branch plans beneath it, this section can be left blank. Changes to this section must only be made if different view collection sets are required.</p>
+        <p>
+            <img src="../../Resources/Images/MFP/View Collection tab.PNG" class="LargeImages" />
+        </p>
+        <h3>Supply Chain Errors</h3>
+        <p> The <span class="Emphasis">Supply Chain Errors</span> tab displays any errors that were detected during validation. To fix errors, edit the supply chain and re-validate the supply chain. </p>
+        <p>
+            <img src="../../Resources/Images/MFP/Supply Chain Errors.png" class="LargeImages" />
+        </p>
+        <p>For more information, see <MadCap:xref href="Validating a Supply Chain.htm">Validating a Supply Chain</MadCap:xref>.</p>
+        <p class="BasicNote">The Master Financial Plan that has been created updates to <span class="Emphasis">Created</span> state.&#160; This means the plan is ready to be initialized.&#160; Initializing the master plan  populates all the measures defined for historical and future periods.&#160; A plan must be initialized to view and work with the Master Plan.</p>
+        <h3>DC Stock Split Factor tab</h3>
+        <p>The<span class="Emphasis"> DC Stock Split Factor</span> tab screen shows how the Cluster Set Clusters are being serviced by multiple DCs. A pivot grid displays with fields by DC, cluster set, and cluster. </p>
+        <h3>Changing the percentage of receipts a DC receives</h3>
+        <p>
+To change the percentage:
+
+</p>
+        <ol>
+            <li>Select the appropriate field within the grid.
+</li>
+            <li>Click the dropdown arrow to display a calculator.
+</li>
+            <li>Choose the new percentage.
+</li>
+            <li>Click <span class="Emphasis">Save</span>.
+
+</li>
+        </ol>
+        <p>The figures displayed in the grid automatically recalculate.</p>
+    </body>
+</html>

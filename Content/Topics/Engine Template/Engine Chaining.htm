@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+   <head/>
+   <body>
+      <h1>Engine chaining</h1>
+      <p>Engine Chaining is used to process one set of data through different calculation engines by chaining them together with the Compute Manager. The engine chain is predefined in SQL by the engine type, engine subtype, engine configuration, and the engine chain configuration. The engine chains can be enabled or disabled in the <span class="Emphasis">Configure Engine Chain</span> view. </p>
+      <p>There are three engine chains that can be enabled, but only two are functional. The <span class="Emphasis">ForecastReplenish</span> (FR) and <span class="Emphasis">AllocationLogisticProjection</span> (ALP)  chains are by default set to disabled, but can be enabled using the <span class="Emphasis">Configure Engine Chains</span> view.</p>
+      <p>When running an engine chain through the Compute Manager, it will spawn multiple threaded managers to handle the work between the two engines. A new Chain controller function has been added to the workflow of the Compute Manager to call a SQL procedure that will facilitate when items are completed between engines and mark them for the next engine in the chain to begin processing. This procedure should be appended with ChainXML and added to the engine configuration located in [dbo].[tbl_Common_EngineConfig] in SQL for the engine chain subtype.</p>
+      <p>The following is an example of an engine chain startup with two manager thread pools is shown:</p>
+      <p>
+         <img src="../../Resources/Images/Engine Template/Example of an engine chain startup.png"
+              class="LargeImages"/>
+      </p>
+      <p>Some engine chains may be configured to run as a one-to-one, one-to-many, many-to-many, or many-to-one chain for the items to process. </p>
+      <p>An example of a many-to-one engine chain is the ALP chain which can process both Group and Non-Group Allocation Strategies at the same time and converge the item list to the Logistic engine. This is controlled by the ChainXML which marks the items in the next engine in the chain as ready.</p>
+      <h2>Forecast Replenish (FR)</h2>
+      <p>If the Forecast Before Replenish engine chain is enabled, it performs an Inventory Forecast (subtype 51) before an Inventory Replenish (subtype 251). The settings on the Inventory Replenish are determined by the task template. The settings for the inventory forecast are shown as an engine task prompt that the user can fill in with their settings. </p>
+      <p>As the inventory forecasts are being completed in the first part of the engine chain, they are marked as ready for the second part of the engine chain. Since Inventory Replenish runs items based on the item master and not inventory, all of the Inventories for that item master must be marked as completed before the Replenish engine can begin working on those items. If there are inventories in that item master that were not part of the forecast engine run, they will be marked as completed in the replenish engine regardless.</p>
+      <p>Throughout the process of calculating the items through the FR engine chain, you will see logging like this in the broker that contains the status of the thread pools for each of the engines running. You can identify which ones they are by looking at the engine sub types for the engine chain as defined in [dbo].[tbl_Common_EngineChainConfiguration].</p>
+      <p>
+         <img src="../../Resources/Images/Engine Template/Example of log showing status  of thread pools.png"
+              class="LargeImages"/>
+      </p>
+      <h2>Allocation Reprojection (AR)</h2>
+      <p>The NonGroup Allocation then Reprojection engine chain is not fully implemented and is disabled.</p>
+      <h2>Allocation LogisticProjection (ALP)</h2>
+      <p>When the Allocation, Logistic, then Projection engine chain is enabled, the procedure usp_Allocate_Engine_Calculate redirects its call to usp_Allocate_Engine_ALPChain_Calculate with the same inputs and processes the AllocateStrategyID using the ALP chain. There are three parts to this chain:</p>
+      <ul>
+         <li> Allocations (both group and non-group)</li>
+         <li>Logistic</li>
+         <li>Projection</li>
+      </ul>
+      <p>The allocation portion of the engine chain has engines with subtype 254 (nongroup) and 256 (group). The logistic portion has an engine subtype of 651, and the projection portion has an engine subtype of 255.</p>
+      <p>If calling the procedure usp_Allocate_Engine_ALPChain_Calculate manually, you can mix group and nongroup AllocateStrategyIDs together and the ChainXML for those engine subtypes will correctly mark the items in the Logistic part of the chain as ready to run.</p>
+      <p class="Important">There is no task template to be created for this engine chain. All of the tasks and their task details are created by the appropriate Calculate procedures for the engines.</p>
+      <h2>Engine chain replays</h2>
+      <p>When saving a replay for an engine chain, there will be multiple replays that will be created by the compute manager. Each engine will create its own replay that contains its own separate list of items that it was inputted for processing. Currently there is no way to save the replays for only one of the engines in the chain.</p>
+      <h3>Sending emails with replays</h3>
+      <p>If sending an email with the replay, the subject of the email will be in the following format:</p>
+      <p>[Engine Chain Short Name] ([Chain Order]) Engine Chain Replay – [Engine Sub Type Name] ([Engine Type Name]) – Company: [Company Name] <i>([Machine Name])</i>
+      </p>
+      <p>For example:</p>
+      <p>ALP (1) Engine Chain Replay – Allocation (Replenish) – Company: 20193 (APP-20193)</p>
+      <p>ALP (2) Engine Chain Replay – Allocation (Logistic) – Company: 20193 (APP-20193)</p>
+      <p>ALP (3) Engine Chain Replay – Projection (Replenish) – Company: 20193 (APP-20193)</p>
+      <p>The file names for the corresponding replays will be in the following format:</p>
+      <p>[Engine Chain Short Name]_[Chain Order]_[Engine Sub Type Name]_[Engine Type Name]_[Replay Date]_[Partial RunID GUID].zip</p>
+      <p>For example:</p>
+      <p>ALP_1_Allocation_Replenish_2019_09_05_0b017314.zip</p>
+      <p>ALP_2_Allocation_Logistic_2019_09_05_0b017314.zip</p>
+      <p>ALP_3_Projection_Replenish_2019_09_05_0b017314.zip</p>
+   </body>
+</html>

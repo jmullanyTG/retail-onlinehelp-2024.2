@@ -1,0 +1,156 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head>
+        <link href="../../Resources/TableStyles/standard.css" rel="stylesheet" MadCap:stylesheetType="table" />
+    </head>
+    <body>
+        <h1>Creating and using AI curve sets</h1>
+        <p>The <span class="Emphasis">AI Curve Sets</span> screen has two primary functions: the generation of Seasonal Curves from a customer’s database of sales histories and the assignment of these curves to levels.</p>
+        <p>Curve Sets provide a more automated and intelligent way of selecting and assigning seasonal sales curves for specific SKU-locations. Existing data can be better utilized to assist with selection and assignment of seasonal curves using Curve Sets.</p>
+        <p>Historical information can be leveraged  from across the database to isolate the most common annual sales behaviors, determine for each item which of these trajectories is most likely the best match, and employ said shapes in generating sales forecasts.</p>
+        <p>Leveraging the whole database to make a forecast, rather than just an individual item’s history, can greatly enhance accuracy. Improvements should be expected for items with short life cycles, high intermittency, or where long range forecasts are desired.</p>
+        <p class="BasicNote">The AI Curve Sets functionality is in addition to the standard curve functionality called Manual Curves. The AI Curve Sets functionality exists in parallel and either or both can be used. When forecasting, if an item has both a Manual Curve and an AI Curve, the Manual Curve takes precedence.</p>
+        <h2>System policies</h2>
+        <p>The following table describes the seasonal curve related system policies.</p>
+        <table style="width: 100%;margin-left: auto;margin-right: auto;mc-table-style: url('../../Resources/TableStyles/standard.css');" class="TableStyle-standard" cellspacing="0">
+            <col class="TableStyle-standard-Column-Column1" />
+            <col class="TableStyle-standard-Column-Column2" />
+            <thead>
+                <tr class="TableStyle-standard-Head-Header1">
+                    <th class="TableStyle-standard-HeadE-Column1-Header1">System Policy</th>
+                    <th class="TableStyle-standard-HeadD-Column2-Header1">Description</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">Day to Ignore</td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">
+                        Day of year to ignore. Because 365 % (52*7) = 1 (e.g. 52 standard weeks leaves one extra day a year), one day must be ignored. This should be a day that is not a holiday, part of a regular sales event (e.g. back to school), or otherwise particularly important. 
+                        <p>When pulling sales histories into standard years to make or assign Seasonal Curves, this day is ignored. When translating a seasonal curve into a regular bucket or period, the value for this day is assumed to be the average of the weeks on either side. Defaults to 160. Must be between 1 and 365. </p><p>To preserve 7-sequential-day rule, this is rounded down to nearest mod 7 + 1 if its modulus with 7 is not already 1.</p></td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">Day to Ignore Leap Year</td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">Similar to the above, the day is adjusted using modulus-7 = 2, so that if the day is not already day-2 of a curve-week, it is adjusted to the next week's Day-2, bounded by the 366-day leap-year limit.</td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyB-Column1-Body1">Include Returns</td>
+                    <td class="TableStyle-standard-BodyA-Column2-Body1">Whether to include returns as negative sales or ignore them, in curve generation and assignment. Even if returns are included, seasonal curves are never allowed to have negative values.</td>
+                </tr>
+            </tbody>
+        </table>
+        <h2>Accessing the AI Curve Sets screen</h2>
+        <p>To access the <span class="Emphasis">AI Curve Sets</span> screen:</p>
+        <ul>
+            <li>Navigate to <span class="Emphasis">Execute &gt; Curves</span> and select the <span class="Emphasis">AI Curve Sets</span> tab.</li>
+        </ul>
+        <h2>AI Curve Sets</h2>
+        <p>AI Curve Sets analyze historic sales data to generate Seasonal Curves, as defined by specified parameters. Curve Sets are generated based on the forecast leveling hierarchy specified in the system policy <span class="Emphasis">Level Forecast Hierarchy</span>.</p>
+        <p>Once a set is generated, each level in the hierarchy is assigned to a curve in the set based on its sales history.</p>
+        <p class="BasicNote">Assignment of levels not used in generation happens during a weekly task.</p>
+        <p>
+            <img src="../../Resources/Images/Curves/AI Curve Sets screen.PNG" class="LargeImages" />
+        </p>
+        <p>The core idea  is that  a small number of Seasonal Curves, generally 5-20, are generated. These curves represent the most common sales trends of products in the customer’s history. For example, products that sell well in the spring and summer but have zero sales in the winter, products with mostly flat sales except a significant Christmas spike, products that sell consistently all year long, and so on. Each level in the forecasting hierarchy is then assigned to one of these curves, and all inventories in that level use the curve as well. When forecasting, the new or revised methods assume the shape of future sales roughly follow the assigned curve.</p>
+        <p>Additionally, Seasonal Curves can be used to provide likely shapes to new items which lack sales history, and more broadly in other parts of retail planning</p>
+        <h2>Creating AI Curve Sets</h2>
+        <ol>
+            <li>Click <span class="Emphasis">New</span> on the AI Curve Set toolbar.</li>
+            <li>Complete the fields as required in the <span class="Emphasis">AI Curve Set Maintenance</span> window.</li>
+            <li>
+                <p>Click <span class="Emphasis">Ok</span> when finished.</p>
+                <p>The AI Curve Set is created.</p>
+            </li>
+            <li>
+                <p>To build a candidate curve, click the <span class="Emphasis">Generate Candidate Curves</span> button.</p>
+            </li>
+            <li>
+                <p>Select <span class="Emphasis">Yes</span> in the confirmation dialog.</p>
+                <p class="BasicNote">Once the curves are generated, navigate to the <span class="Emphasis">Candidate Curves</span> tab in the lower box to see the curves. These are candidate curves, and can’t be used for forecasting. At this point, change the parameters of the set with the <span class="Emphasis">Edit</span> button and regenerate the curves until a satisfactory set is achieved.</p>
+            </li>
+            <li>
+                <p>Once a satisfactory set is achieved, click the <span class="Emphasis">Promote Candidate Curves</span> button to make the set permanent.</p>
+                <p>At this point, levels that were used in the generation of the curve set are assigned.</p>
+            </li>
+            <li>
+                <p>Click <span class="Emphasis">Activate Curve Set</span> to make the Curve Set the forecasting set.</p>
+                <p class="BasicNote">Only one Curve Set can be used to forecast.</p>
+            </li>
+        </ol>
+        <h2>Regenerating Curve Sets</h2>
+        <p>Regenerating a Curve Set (or more precisely, promoting a new set of candidate curves in a set which already has a promoted set) will result in losing all existing curve assignments for that set. It is advised to instead build a new set when changes are desired (e.g. in a yearly re-build of the sets).</p>
+        <h2>Notes</h2>
+        <p>The hyperparameters (<span class="Emphasis">Number of Curves</span>, <span class="Emphasis">Min Sales Weeks For Inclusion</span>, and <span class="Emphasis">Smoothing Window</span>) present a tradeoff between precision and accuracy. Increasing smoothing generally results in more accurate forecasts, but loses precision on things like Christmas spikes and short life cycle items. </p>
+        <p>A higher Curve Count can result in better curves for customers with many variable but internally regular sales patterns, but is also likely to pick up on non-representative behavior. In general, the more levels used to generate each curve (i.e. higher customer database size to curve count ratio) and the more smoothing applied, the higher the accuracy. But of course, that also means curves will be aggregate averages and provide fewer specific insights.</p>
+        <h3>Level forecast hierarchies with no sales</h3>
+        <p>A default curve is assigned if a level has no sales. When a default curve is assigned, the next review date is shorter than the normal curve assignment.</p>
+        <h2>Field descriptions</h2>
+        <table style="width: 100%;margin-left: auto;margin-right: auto;mc-table-style: url('../../Resources/TableStyles/standard.css');" class="TableStyle-standard" cellspacing="0">
+            <col class="TableStyle-standard-Column-Column1" />
+            <col class="TableStyle-standard-Column-Column2" />
+            <thead>
+                <tr class="TableStyle-standard-Head-Header1">
+                    <th class="TableStyle-standard-HeadE-Column1-Header1">Field</th>
+                    <th class="TableStyle-standard-HeadD-Column2-Header1">Description</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">Name</td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">The name of the Curve Set. </td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">Description</td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">A description of the Curve Set.</td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">Active</td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">A flag indicating which Curve Set is used for forecasting. Only one Curve Set can be active. Which field is flagged changes when the <span class="Emphasis">Activate Curve Set</span> button is pressed.</td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">Hierarchy</td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">The hierarchy the Curve Set uses. Only the primary level forecast hierarchy can be used (e.g. the one set in the system policy <span class="Emphasis">Level Forecast Hierarchy</span>).</td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">Start Date</td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">
+                         The start date of the sample. It is recommended that this be the earliest start date of sales history, or immediately after the Covid-19 pandemic is no longer a significant factor. It is also recommended this and End Date be the main ones adjusted when looking for the most desirable curves. 
+                        <p>The sample period between start and end dates must contain at least 54 weeks (378 days), but more would be better.</p><p>It is recommended to avoid setting the sample period to include time affected by broad-spectrum market disruptions such as  the Covid-19 pandemic. This should absolutely be avoided for customers who do not use the Disaster Sales Modeling functionality. Otherwise, the generated curves will predict annual pandemic behaviors. If theoretical sales have been created by the customer, this time window should still be avoided but it won’t be catastrophic if not.</p></td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">End Date</td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">The end date of the sample. It is recommended that this be set to immediately before market disruptions such as the Covid-19 pandemic began effecting sales, or to the present date if start date is set to after Covid.</td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">Number of Curves</td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">
+                        The number of curves to be generated in the set. 
+                        <p class="BasicNote">For optimal analysis, 5 to 20 curves is recommended.</p></td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">Include Lost Sales</td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">Whether to consider lost sales when making and assigning curves. It is recommended to follow the existing strategy for lost sales. </td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">Min Sales Weeks For Inclusion</td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">
+                        The minimum number of sales weeks an item must have to be considered during curve generation (all items with history will eventually be assigned, but only those with sufficient data will be used to build curves). The recommended setting to 5. 
+                        <p class="BasicNote">Customers focused on very short life cycle items might consider setting to a lower value. Customers with a leveling hierarchy that leaves levels highly intermittent might wish to set higher. </p></td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">Smoothing Window</td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">
+                        How much to smooth curves. This is rounded up to the nearest odd number if an even one is chosen. Smoother curves are generally more accurate, especially if there is high intermittency, but tend to lose resolution on things like the Christmas spike and short life cycle items. The recommended setting to 7.
+                        <p> If curve count and/or min weekly sales is large, this can be safely lowered, though again accuracy might be lost.</p></td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">Has Candidate Curves</td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">Whether a Curve Set has existing candidate curves. Initially, this field is not flagged. This field is flagged when the candidate generation task completes. The field resets to not flagged when the curves are promoted.</td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyB-Column1-Body1">Level Assignment &#160;State</td>
+                    <td class="TableStyle-standard-BodyA-Column2-Body1">The percent of levels in the hierarchy with sales history which are assigned. When a candidate set is promoted, this will be the levels used in generation. </td>
+                </tr>
+            </tbody>
+        </table>
+    </body>
+</html>

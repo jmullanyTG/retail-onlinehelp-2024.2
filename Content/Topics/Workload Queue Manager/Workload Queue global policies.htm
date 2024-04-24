@@ -1,0 +1,127 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" xml:lang="en-us">
+    <head>
+        <link href="../../Resources/TableStyles/standard.css" rel="stylesheet" MadCap:stylesheetType="table" /><title></title>
+    </head>
+    <body>
+        <h1>Workload Queue system policies</h1>
+        <p>System policies are configured by Professional Services and must not be modified without assistance from Professional Services or Support. </p>
+        <h2>Accessing Workload Queue system policies</h2>
+        <p>Navigate to Maintenance &gt; Policies.</p>
+        <h2>Types of Workload Queue system policies</h2>
+        <p>There are three types of system policies: General, Expiration, and Retention.</p>
+        <h3>General policies</h3>
+        <table class="TableStyle-standard" cellspacing="0" style="mc-table-style: url('../../Resources/TableStyles/standard.css');">
+            <thead>
+                <tr class="TableStyle-standard-Head-Header1">
+                    <th class="TableStyle-standard-HeadE-Column1-Header1">Policy Name</th>
+                    <th class="TableStyle-standard-HeadD-Column2-Header1">Description</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">
+                       Default Batch Size 
+                    </td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">
+                     The default work size, if not specified or defined for the process type (Assortment Planning, Inventory Forecast, etc.) 
+                    </td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">
+                        Default Queue Marshall Delay Time 
+                    </td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">
+                     The number of seconds the system waits before checking for new batches to prioritize and place on the queue if the last check did not find anything. 
+                    </td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">
+                      Maximum Server Work Threshold 
+                    </td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">
+                  The maximum work threshold (estimated work per item * estimate item count) the server can handle across all process types before downgrading batches marked as Synchronous to Immediate. 
+                        <p class="BasicNote">Ensure this setting does not conflict with defined thresholds.</p></td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyB-Column1-Body1">
+                        <p>Maximum Synchronous Threshold</p>
+                    </td>
+                    <td class="TableStyle-standard-BodyA-Column2-Body1">
+                      The maximum work threshold (estimated work per item * estimate item count) the server will use when allowed for a process type to apply Synchronous priority to a batch.  
+                        <p>When process types that are submitted in batches and are above the Maximum Synchronous, threshold is prioritized as the configured Priority threshold settings. </p><p>The Synchronous threshold works in conjunction with Maximum Server threshold across all process types.</p></td>
+                </tr>
+            </tbody>
+        </table>
+        <h3>Expiration policies</h3>
+        <table class="TableStyle-standard" cellspacing="0" style="mc-table-style: url('../../Resources/TableStyles/standard.css');">
+            <thead>
+                <tr class="TableStyle-standard-Head-Header1">
+                    <th class="TableStyle-standard-HeadE-Column1-Header1">Policy Name</th>
+                    <th class="TableStyle-standard-HeadD-Column2-Header1">Description</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">
+                       Default Expiration Time 
+                    </td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">
+                        Daily queued tasks expire when they are moved from the active queue to archive without being processed. 
+                        <ul><li>Priority: Immediate, ASAP, Low Priority</li></ul></td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">
+                     Default Nightly Expiration Time 
+                    </td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">
+                      Nightly queued tasks expire when they are moved from the active queue to history list without being processed. 
+                        <ul><li>Priority: Nightly</li></ul></td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyB-Column1-Body1">
+                        Default Weekend Expiration Time 
+                    </td>
+                    <td class="TableStyle-standard-BodyA-Column2-Body1">
+                        Weekly queued tasks expire when they are moved from the active queue to history list without being processed. 
+                        <ul><li>Priority: Weekend</li></ul></td>
+                </tr>
+            </tbody>
+        </table>
+        <h3>Retention policies</h3>
+        <table class="TableStyle-standard" cellspacing="0" style="mc-table-style: url('../../Resources/TableStyles/standard.css');">
+            <thead>
+                <tr class="TableStyle-standard-Head-Header1">
+                    <th class="TableStyle-standard-HeadE-Column1-Header1">Policy Name</th>
+                    <th class="TableStyle-standard-HeadD-Column2-Header1">Description</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">
+                  Default Queue Log Retained Days 
+                    </td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">
+                       The number of days the data in the Queue_Log table is stored after the Batch has been completed. Statuses are: Expired, Failed, or Removed. 
+                    </td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">
+                    Default Queued Archive Retained Days 
+                    </td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">
+                        The number of days the data in the Queued_Archive table is stored after the Batch has been completed. Statuses are:&#160;Expired, Failed, or Removed. 
+                    </td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyB-Column1-Body1">
+                   Default Queued Items Retained Days 
+                    </td>
+                    <td class="TableStyle-standard-BodyA-Column2-Body1">
+                     The number of days the data in the Queued_Items table is stored after the Batch has been completed. Statuses are: Expired, Failed, or Removed. 
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </body>
+</html>

@@ -1,0 +1,37 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" xml:lang="en-us">
+    <head>
+        <title>
+        </title>
+    </head>
+    <body>
+        <h1>Forecast policy maintenance</h1>
+        <p>Forecast policy maintenance views are used to manage settings related to forecasting that are specified by inventory. The functionality in these views are incorporated into the Forecast solution on the System Utilities tab. </p>
+        <h2>Forecast Effective Priority Maintenance view</h2>
+        <p>The <span class="Emphasis">Forecast Effective Priority Maintenance</span> view is used to specify the priority and resolution when there are multiple potential answers for which demand signal source should be in effect. </p>
+        <p>
+            <img src="../../Resources/Images/Administrator Panel/Forecast_Effective_Priority_Maintenance_view.png" class="LargeImages" />
+        </p>
+        <h3>Forecast View Config Details section</h3>
+        <ul>
+            <li>
+                <span class="Emphasis">Database View</span>: the name of the database object that controls how forecast data is returned and consumed. </li>
+            <li>
+                <span class="Emphasis">BOM</span>: the <span class="Emphasis">BOM</span> (Bill of Materials) field must be checked if the BOM forecasts should be considered. If selected, BOM forecasts  display in the <span class="Emphasis">Forecast Type</span> dropdown menu in the <span class="Emphasis">Forecast View Config Priorities</span> section. </li>
+        </ul>
+        <h3>Forecast View Config Priorities section</h3>
+        <p>The values displayed in this section are based on the parameters selected in the <span class="Emphasis">Forecast View Config Details</span> section. New entry lines can be added for each forecast type to be considered.</p>
+        <ul>
+            <li>
+                <span class="Emphasis">Forecast Type</span>: the forecast types to be considered. </li>
+            <li>
+                <span class="Emphasis">Priority</span>: priority ranking of the selected forecast type. </li>
+        </ul>
+        <p>Any changes made within the view must be saved before updates are made. </p>
+        <h2>Forecast Phase Time Frame Maintenance view</h2>
+        <p>An effective forecast series can be linked to a time frame to create a very specific phase period or periods. This allows for non-contiguous (Multi-Phasic) forecast series through configuration of schedule based time frames. An inventory filter can be selected and a time frame applied where applicable. </p>
+        <p>
+            <img src="../../Resources/Images/Administrator Panel/Forecast_Phase_Time_Frame_Maintenance_view.png" class="LargeImages" />
+        </p>
+    </body>
+</html>

@@ -1,0 +1,61 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" xml:lang="en-us">
+    <head><title></title>
+    </head>
+    <body>
+        <h1>Best practices in promotions planning</h1>
+        <p style="font-size: 12pt;">Promotions Planning is designed to provide  a great deal of flexibility when modeling promotional effects for products within plans. However, there are best practices that can maintain a high level of efficiency and help users get the most out of this area of Assortment Planning.</p>
+        <h2>Using defined promotions as templates </h2>
+        <p>As promotions do not have ties to specific products or levels of the site hierarchy, the same basic promotion can be used repeatedly for other areas of the business.</p>
+        <p>
+            <img src="../../Resources/Images/Assortment Planning/Defined Promotions Grid.png" class="LargeImages" />
+        </p>
+        <p>In the above example, the same base promotion has been applied to three distinct product areas, including different cluster sets, and start and end dates.</p>
+        <p>The same AUR effect and behavior is applied to all applications. Aside from that, as long as applications occur within the eligibility start and end dates (or the <span class="Emphasis">Is Always Eligible?</span> option is checked), users retain a great deal of flexibility with the specifics of how the promotion is applied to each area.</p>
+        <p>This same methodology is mirrored to an extent within the details of each application as well. Start and end dates, final indices, Hold Sales options, and even participation in the promotion application can be varied at the placeholder/cluster level. Making use of the ability to make changes at the application and detail levels helps minimize the number of promotions users need to create and maintain.</p>
+        <h2>Using the Is Always Eligible? option</h2>
+        <p>The <span class="Emphasis">Is Always Eligible?</span> option ensures that multiple frequently used standard promotions are always available for selection.</p>
+        <p>
+            <img src="../../Resources/Images/Assortment Planning/Is Always Eligible Field.png" class="LargeImages" />
+        </p>
+        <p>For example, where <span class="Emphasis">20% off</span> promotions are frequently used. In the above example, one promotion with a <span class="Emphasis">20% off Promotion Discount</span> with <span class="Emphasis">Is Always Eligible?</span> checked is created. </p>
+        <p>Users can then apply that promotion with different final indices to different products and site hierarchy levels without ever have to specify or extend eligibility start or end dates or create duplicate promotions to achieve the same effect.</p>
+        <h2>Using promotion behavior to minimize the number of promotions and applications needed</h2>
+        <p> Organizations that plan frequent promotional activity can use the <span class="Emphasis">Behavior</span> functionality to minimize the number of promotions and applications needed to achieve the desired results. Consider the following example:</p>
+        <p>
+            <img src="../../Resources/Images/Assortment Planning/Promotion Example.png" style="width: 625px; height: 152px;" class="LargeImages" />
+        </p>
+        <p>Because of the way non-stacking promotions work, they have the ability to override other promotions that have already been applied if their <span class="Emphasis">AUR Effect</span> yields a lower price. </p>
+        <p>Above, even though there are two promotions already in effect for weeks 6-8, <span class="Emphasis">Promo 3</span> automatically takes precedence over them because it yields a lower AUR. Thus, there is no need to make any adjustments to <span class="Emphasis">Promo 1</span> or <span class="Emphasis">Promo 2</span>. Users can layer on <span class="Emphasis">Promo 3</span> with a non-stacking behavior. </p>
+        <p>Once <span class="Emphasis">Promo 2</span> and <span class="Emphasis">Promo 3</span> have ended, <span class="Emphasis">Promo 1</span> applies with its 20% off effect for weeks 9 and 10. Lastly, even though <span class="Emphasis">Promo 1</span> lasts through week 12, the global <span class="Emphasis">Promo 4</span> with its supersede behavior overrides <span class="Emphasis">Promo 1</span> for weeks 11 and 12 without necessitating any change to <span class="Emphasis">Promo 1</span>.</p>
+        <h2>Holding sales versus not holding sales</h2>
+        <p>The <span class="Emphasis">Hold Sales</span> option allows users to choose whether a given promotion application can change the overall magnitude of a product’s sales plan or simply shift the magnitude of sales in each period while still adhering to the original sales plan. </p>
+        <h3>An example of the Hold Sales option unchecked</h3>
+        <p>Prior to the activation of the promotion application, a product has a <span class="Emphasis">Ttl Sls (U)</span> of 33,881 over its life and a <span class="Emphasis">ROS U</span> of 200.48 per site per period:</p>
+        <p>
+            <img src="../../Resources/Images/Assortment Planning/Hold_Sales_option_1.png" class="LargeImages" />
+        </p>
+        <p>After activation of the promotion application, which has a Final Index of 1.5 on each cluster, the <span class="Emphasis">Ttl Sales (U)</span> has increased to 41,963 and <span class="Emphasis">ROS U</span> to 248.30. This is because the <span class="Emphasis">Hold Sales</span> option is not checked for either cluster the product is assorted to allowing the overall sales plan to increase.</p>
+        <p>
+            <img src="../../Resources/Images/Assortment Planning/Hold_Sales_option_2.png" class="LargeImages" />
+        </p>
+        <h3>An example of the Hold Sales option checked</h3>
+        <p>The following shows the sales units by period for a product prior to the promotion application being activated. The Promotion Index for each period included in the promotion (wk06 – wk12) is set to 1.00, indicating no change.</p>
+        <p>
+            <img src="../../Resources/Images/Assortment Planning/Hold_Sales_option_3.png" style="width: 634px; height: 143px;" class="LargeImages" />
+        </p>
+        <p>After the promotion application has been activated, but because <span class="Emphasis">Hold Sales</span> is checked for both clusters, <span class="Emphasis">Ttl Sales (U)</span> and <span class="Emphasis">ROS U</span> remain the same as before. </p>
+        <p>
+            <img src="../../Resources/Images/Assortment Planning/Hold_Sales_option_4.png" style="width: 634px; height: 180px;" class="LargeImages" />
+        </p>
+        <p>However, after activation the <span class="Emphasis">Promotion Index</span> for the promotional periods is 1.50 and the sales per period has increased during the promotional periods and decreased in the non-promotional periods, compared to before the promotion application was activated.</p>
+        <p>
+            <img src="../../Resources/Images/Assortment Planning/Promotion Index.png" style="width: 634px; height: 140px;" class="LargeImages" />
+        </p>
+        <h2>Using promotional metadata for product filter creation</h2>
+        <p>Information about promotions created within Assortment Planning can be used as a quick way to create product filters for the items to which a particular promotion or promotion application has been applied. To do this, select one of the available fields beneath the <span class="Emphasis">Assortment Promotions</span> heading in the <span class="Emphasis">Filter Condition</span> dialog:</p>
+        <p>
+            <img src="../../Resources/Images/Assortment Planning/Promotion Metadata Filter.png" class="LargeImages" />
+        </p>
+    </body>
+</html>

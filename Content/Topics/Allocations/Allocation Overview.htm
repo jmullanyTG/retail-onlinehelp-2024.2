@@ -1,0 +1,38 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" xml:lang="en-us">
+    <head><title></title>
+    </head>
+    <body>
+        <h1>Allocations Overview</h1>
+        <p>The Allocations solution contains a workflow to execute orders for the transfer of merchandise throughout the supply chain at a level above item master (defined as variant).</p>
+        <h2>Components of an allocation</h2>
+        <p>There are a few building blocks for Allocations to determine the demand or need of a store. The main components to help calculate the demand for a store are product model, size model, location strategy, and sales curve. </p>
+        <h3>Product model</h3>
+        <p>Product model provides the contribution values to help determine the percent of contribution that each site in the Location Strategy should receive of the total demand. For more information, see <MadCap:xref href="Product Model.htm">Product Model</MadCap:xref>.</p>
+        <h3>Size model</h3>
+        <p>Size model provides the value to further break down the store demand from product model by size. There can only be one size type defined per size model. For more information, see <MadCap:xref href="Size models field reference.htm">Size Models</MadCap:xref>.</p>
+        <h3>Location strategy</h3>
+        <p>Location strategy provides the sites that will always be considered when calculating demand. Excluding sites can influence other site’s demand. </p>
+        <div class="Note_BasicNote">
+            <p>The following system policies determine if demand is shifted:</p>
+            <ul>
+                <li>
+                    <p class="note"><span class="Emphasis">Forecast - Total Available Quantity - Include All Sites</span>
+                    </p>
+                </li>
+                <li>
+                    <p class="note"><span class="Emphasis">Forecast - Total Sales Quantity - Include All Sites</span>
+                    </p>
+                </li>
+            </ul>
+            <p> Setting to <span class="Emphasis">Yes</span> includes all location strategy sites and setting to <span class="Emphasis">No</span> only includes eligible location strategy sites. </p>
+        </div>
+        <p>Phase in and phase out overrides can influence demand. For more information, see <MadCap:xref href="Location Strategy.htm">Location Strategy</MadCap:xref>.</p>
+        <h2>Demand type and phase in/out</h2>
+        <p>Demand type and phase in/out are also components but are part of the allocation strategy.</p>
+        <h3>Demand type</h3>
+        <p>Demand Type determines how the system calculates total demand which is always calculated from Phase In to Phase Out even if the Phase In Date has passed. For more information, see <MadCap:xref href="Allocation Strategy grid field reference.htm">Allocation Strategy grid field reference</MadCap:xref>.</p>
+        <h3>Sales curve</h3>
+        <p>After the size demand is determined for a site the sales curve provides the information to see how to spread the size demand by bucket.</p>
+    </body>
+</html>

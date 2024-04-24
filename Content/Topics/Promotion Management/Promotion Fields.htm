@@ -1,0 +1,123 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head>
+        <link href="../../Resources/TableStyles/standard.css" rel="stylesheet" MadCap:stylesheetType="table" />
+    </head>
+    <body>
+        <h1>Promotion fields </h1>
+        <p>The <span class="Emphasis">Promotion Fields</span> tab in the <span class="Emphasis">Promotion Configuration</span> screen simplifies promotion implementations. The screen displays all columns that can be used in a calculation or validation formula. Users can regard this screen as a single source of truth that provides an extremely simple way of reviewing the valid columns and their settings for promotions.</p>
+        <p>Technical Services Consultants can:</p>
+        <ul>
+            <li> configure new fields for Promotion PriceOutput tables</li>
+            <li>avoid missing important tables, and </li>
+            <li>map multiple Price and Cost types to columns.</li>
+        </ul>
+        <p>
+            <img src="../../Resources/Images/Promotion Management/Promotion Fields tab.PNG" class="LargeImages" />
+        </p>
+        <h2>Adding fields</h2>
+        <ol>
+            <li>Click <span class="Emphasis">New</span> to add a new row in the grid.</li>
+            <li>
+                <p>Select the various configuration options.</p>
+            </li>
+            <li>
+                <p>Click <span class="Emphasis">Save</span>.</p>
+                <p>The Add update procedure creates the column in the Output tables.</p>
+            </li>
+        </ol>
+        <h2>Modifying fields</h2>
+        <p>Only the following fields can be updated for existing rows:</p>
+        <ul>
+            <li><span class="Emphasis">Friendly Name</span>
+            </li>
+            <li><span class="Emphasis">Description</span>
+            </li>
+            <li><span class="Emphasis">Display Format</span>
+            </li>
+            <li><span class="Emphasis">Read Only</span>
+            </li>
+        </ul>
+        <p>Otherwise, fields need to be deleted and a new one created. It is the user's responsibility to clean up the data in the database.</p>
+        <h2>Field descriptions</h2>
+        <table style="width: 100%;margin-left: auto;margin-right: auto;mc-table-style: url('../../Resources/TableStyles/standard.css');" class="TableStyle-standard" cellspacing="0">
+            <col class="TableStyle-standard-Column-Column1" />
+            <col class="TableStyle-standard-Column-Column2" />
+            <thead>
+                <tr class="TableStyle-standard-Head-Header1">
+                    <th class="TableStyle-standard-HeadE-Column1-Header1">Field</th>
+                    <th class="TableStyle-standard-HeadD-Column2-Header1">Description</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">Name</td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">
+                       User entered name for a new column. 
+                        <p class="BasicNote">Spaces, illegal characters, etc. are stripped out. </p></td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">Friendly Name</td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">System generated name</td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">Description</td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">Optional description</td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">Type</td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">The type of input: Cost, Price, or User.</td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">Price / Cost Type</td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">
+                        The price type. 
+                        <p> If the price type is Price or Cost, then <span class="Emphasis">Has Min Max</span>, <span class="Emphasis">Has Override</span>, and <span class="Emphasis">Strategy Input</span> are pre-configured and read-only.</p></td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">Data Type</td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">
+                      If the price type is Price or Cost, then the data type is always Float. 
+                    </td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">Has Min Max</td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">Only supports the INT and decimal data types. Attempting to create a field with any other data type displays an error message.</td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">Has Override</td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">
+                         If checked, the writeback creates an _Override column along with the Fieldname column.  
+                        <p class="Example">A user enters <span class="Emphasis">NewColumn</span> and checks <span class="Emphasis">Has Override</span>. The writeback creates two columns: NewColumn and NewColumn_Override.</p></td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">Strategy Input</td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">
+                      Creates a column that can be used in a Promotion Strategy's V-Grid. 
+ 
+                        <p class="Example">A new column, <span class="Emphasis">Limit</span>, is entered and <span class="Emphasis">Strategy Input</span> is checked. The writeback creates that column, but also create an entry in priceclusterStrategy group tables making it eligible to be added as a User entered field.</p></td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">Is Custom</td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">If checked, signifies the field was created via the <span class="Emphasis">Promotion Configuration</span> view.</td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">Read Only</td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">If checked, the field is read-only.</td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">Display Format</td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">Applicable for numeric fields only.</td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1" MadCap:conditions="General.DoNotPublish">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">Default Value</td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">&#160;</td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1" MadCap:conditions="General.DoNotPublish">
+                    <td class="TableStyle-standard-BodyB-Column1-Body1">Notes</td>
+                    <td class="TableStyle-standard-BodyA-Column2-Body1">&#160;</td>
+                </tr>
+            </tbody>
+        </table>
+    </body>
+</html>

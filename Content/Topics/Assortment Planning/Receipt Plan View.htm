@@ -1,0 +1,672 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" xml:lang="en-us">
+    <head>
+        <link href="../../Resources/TableStyles/standard.css" rel="stylesheet" MadCap:stylesheetType="table" /><title></title>
+    </head>
+    <body>
+        <h1>Receipt Plan view</h1>
+        <p>The ideal receipt strategy for items to be purchased can be identified using the <span class="Emphasis">Receipt Plan</span> view. Functionality includes the ability to:</p>
+        <ul>
+            <li>set constraints, such as minimum Periods of Supply</li>
+            <li>
+                <p> define the periods in which receipts are allowed to arrive and how many receipts are needed</p>
+                <p class="BasicNote">This can be overridden in the <span class="Emphasis">Receipt Periods</span> view. The <span class="Emphasis">Receipt Periods</span> view provides an aggregate level view for specifying if particular periods are or are not flow dates for all items in a particular level of the product hierarchy. See <MadCap:xref href="Managing Plans and Set Defaults.htm#Receipt">Receipt Periods</MadCap:xref>.</p>
+            </li>
+            <li>send commitment orders to  Order Manager for final processing, review, approval, and submission to external systems.</li>
+        </ul>
+        <p>
+            <img src="../../Resources/Images/Assortment Planning/Receipt Plan View.png" class="LargeImages" />
+        </p>
+        <h2>Toolbar functionality</h2>
+        <p><span class="Emphasis">Parameters</span>: Displays or hides the parameters pane at the top of the view. </p>
+        <table style="width: 100%;margin-left: auto;margin-right: auto;mc-table-style: url('../../Resources/TableStyles/standard.css');" class="TableStyle-standard" cellspacing="0">
+            <col class="TableStyle-standard-Column-Column1">
+            </col>
+            <col class="TableStyle-standard-Column-Column2">
+            </col>
+            <thead>
+                <tr class="TableStyle-standard-Head-Header1">
+                    <th class="TableStyle-standard-HeadE-Column1-Header1">Parameter</th>
+                    <th class="TableStyle-standard-HeadD-Column2-Header1">Description</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyB-Column1-Body1"><span class="Emphasis">View Mode</span>
+                    </td>
+                    <td class="TableStyle-standard-BodyA-Column2-Body1">
+                        The view mode for receipt plan view:
+                        <ul><li><span class="Emphasis">Total Company</span>: the revenue and unit metrics as total company values – meaning the total volume for all sites contained in whatever level the Pivot Grid is aggregated to</li><li><span class="Emphasis">Average Store</span>: the revenue and unit metrics as average store values – meaning the per site volume for the number of sites contained in whatever level the Pivot Grid is aggregated to.
+			</li></ul></td>
+                </tr>
+            </tbody>
+        </table>
+        <p><span class="Emphasis">Execute</span>: Refreshes the view. This is not typically necessary, as the view refreshes on its own when a new placeholder or collection is selected in the main planning view, when changes are applied, and when the view mode changes.</p>
+        <h2>Other options</h2>
+        <ul>
+            <li><span class="Emphasis">Save</span>: Saves all changes</li>
+            <li><span class="Emphasis">Cancel</span>: Cancels all changes and reverts them to their previously saved values</li>
+            <li><span class="Emphasis">Export</span>: Exports and saves the pivot grid in many common formats including Microsoft Excel and Adobe PDF</li>
+            <li><span class="Emphasis">Open</span>: Opens the pivot grid in many common formats including Microsoft Excel and Adobe PDF and does not require a save prior to viewing</li>
+            <li><span class="Emphasis">Graph</span>: Graphs the selected data in the view</li>
+            <li>
+                <p><span class="Emphasis">Fields</span>: Allows the user to customize the field layout for the view. Custom layouts can be saved and restored by right-clicking in the Pivot Grid and selecting Save Layout or Restore Layout, respectively.</p>
+            </li>
+        </ul>
+        <h2>System policies</h2>
+        <p>A number of system policies affect the output of the Receipt Planning Engine. These system policies are managed in <span class="Emphasis">Maintenance &gt; Policies</span>. However, this should not be done without the assistance of a technical consultant. Possible exceptions are:</p>
+        <p><span class="Emphasis">Assortment Engine DC-to-Cluster Lead Time</span>: This setting determines the Default Lead Time Days from the DC to the Cluster that will be used to calculate Next Order Date information.  This will be rounded to the nearest period.</p>
+        <p>When the engine is calculating receipts, this setting essentially determines the range of periods it must consider to meet the defined constraints for a given period. See examples for Periods of Supply and Min Stk to Sales below for details.</p>
+        <p><span class="Emphasis">Assortment Engine Supplier-to-DC Lead Time</span>: Sets the Default Lead Time Days from the Supplier to the DC that is used to determine eligible receipt dates.  This will be rounded to the nearest period.
+Default value is 7.</p>
+        <p><span class="Emphasis">Allow Receipts After Markdown</span>: When set to <span class="Emphasis">False</span> (default), the Receipt Plan only considers the regular portion of the Sales plan and ignores the markdown phase of the plan. Set the system policy to <span class="Emphasis">True</span> if additional stock should be ordered beyond the planned markdown date.</p>
+        <p class="BasicNote">If system policy<span class="Emphasis"> Editibility of Receipt AUC</span> is set to 2 (AUC is only managed through imports), then AUC is read-only for Placeholders with a status of Assigned, Committed, Replen, and Allocate. For placeholders with a status of Open and Created, AUC&#160;is editable. </p>
+        <h2>Restricting roles from changing plans in the Receipt Plan view</h2>
+        <MadCap:snippetBlock src="../../Resources/Snippets/Read Write Access To Sales Plans Overrides.flsnp" />
+        <h2>Fractional values in quantity fields, recalculation, and rounding</h2>
+        <p>If a fractional value is entered in a quantity field (in any way), the recalculation step does the following:</p>
+        <ul>
+            <li>
+                <p>values below 1 and above 0 round to 1, otherwise standard rounding rules apply.</p>
+                <p class="BasicNote">In the UI, values appear to round to 0 but after the calculation (when the SQL Server pivot recalculates) such values round up to 1.</p>
+                <p>
+                    <img src="../../Resources/Images/Assortment Planning/Fractional Values Rounding 0 to 1.png" class="LargeImages" style="width: 882px;height: 220px;" />
+                </p>
+            </li>
+            <li>
+                <p>for values entered at an aggregated level, a rounded split ensures that all values are whole numbers and that the total is split (for example, a value of 41 entered at the top level splits to 11 - 10 - 10 - 10).</p>
+                <p>
+                    <img src="../../Resources/Images/Assortment Planning/Fractional Values Aggregates.png" class="LargeImages" style="width: 882px;height: 220px;" />
+                </p>
+            </li>
+        </ul>
+        <h2>Modifying receipt planning constraints for multiple Placeholders </h2>
+        <p>Multiple Placeholders can be selected in the main planning view and their receipt planning constraints modified in the <span class="Emphasis">Receipt Plan</span> view. However, if multiple Placeholders are selected, then the <span class="Emphasis">Assortment Receipt Plan</span> section in the <span class="Emphasis">Receipt Plan</span> view is greyed out. </p>
+        <p>After editing the constraints for multiple Placeholders, create Commitments by clicking <span class="Emphasis">Create Commitments</span>. For more information, see <MadCap:xref href="#CreatingCommitments">Creating commitments</MadCap:xref>.</p>
+        <p> To restore default constraints, select the individual Placeholders one at a time in the main planning view.</p>
+        <p>
+            <img src="../../Resources/Images/Assortment Planning/Receipt Plan Greyed Out.PNG" class="LargeImages" />
+        </p>
+        <h2>Recalculating receipts for multiple Placeholders with a Receipt Status of Dirty</h2>
+        <p>To recalculate multiple Placeholders with a <span class="Emphasis">Receipt Status</span> of <span class="Emphasis">Dirty</span>:</p>
+        <ol>
+            <li>In the main planning view, select multiple Placeholders with a <span class="Emphasis">Receipt Status</span> of <span class="Emphasis">Dirty</span>.</li>
+            <li>
+                <p>In the Receipt Plan view, click <span class="Emphasis">Recalculate Receipts</span>.</p>
+                <p>The <span class="Emphasis">Receipt Status</span> for the selected Placeholders updates to <span class="Emphasis">Clean</span>.</p>
+            </li>
+        </ol>
+        <h2>Recalculating Receipt plans without Dirty status</h2>
+        <p>
+Users can click the <span class="Emphasis">Recalculate Receipts</span> button when selected on a single placeholder and rerun the receipt engine, even if the status is not <span class="Emphasis">Dirty</span>.</p>
+        <h3>Editable metrics</h3>
+        <p>Denoted by light blue row coloration, these are the only metrics that are editable in Receipt Plan view. All other metrics are calculations or reads from other sources. </p>
+        <p>Changing Minimum Presentation in this view updates Min Pres in the Main Planning and Cluster Set views, and in Sales Plan View.</p>
+        <p class="BasicNote">Changing Receipt Units in this view does not update metrics in the Main Planning or Cluster Set views. This is by design. Receipts are suggested in Assortment Planning via a complex algorithm considering sales and all user-specified constraints. As sales are considered in the output already, to update <span class="Emphasis">Ttl Buy U</span> would cause the sales plan to change. This might potentially invalidate the results of the receipt calculation. However, it updates Receipt Units in Sales Plan view, as will changing Receipt AUC.</p>
+        <h3>Calculations</h3>
+        <p>Receipt plans are calculated via the Receipt Planning Engine, which uses a complex algorithm to determine the optimal receipt flow based on sales and minimum presentation by period and user-defined constraints. As a result, system receipt recommendations require a user action to recalculate rather than recalculating dynamically as changes are made in the user interface. </p>
+        <p>Recalculation can be done either:</p>
+        <ul>
+            <li> for the selected placeholder or collection only by clicking <span class="Emphasis">Recalculate Receipts</span> in this view, or </li>
+            <li>for all placeholders/collections that require recalculation by clicking <span class="Emphasis">Recalculate</span> in the main planning view header area.</li>
+        </ul>
+        <h3>Receipt Planning Engine outputs</h3>
+        <p>The <span class="Emphasis">System Receipt Units</span> and <span class="Emphasis">Ideal EOP Units</span> metrics are outputs of the Receipt Planning Engine, which must be re-run when any of the inputs it considered change. These fields are conditionally formatted any time a change is made that could invalidate the results of the last engine run. Changes to sales, min pres, shrink, inventory adjustments, or receipt constraints all fall into this category.</p>
+        <p>
+            <img src="../../Resources/Images/Assortment Planning/Receipt Plan Engine Output Formatting.png" class="LargeImages" />
+        </p>
+        <h3>Plan Horizon versus Receipt Planning Engine Horizon</h3>
+        <p>If the Plan Horizon, set at the time of plan creation, extends beyond the receipt planning engine horizon for a given item, data that extends past the receipt engine horizon appears in blue italics with zero values. See example in <span class="Emphasis">Plan Horizon vs. Replen Forecast Horizon</span> below.</p>
+        <h3>Understanding receipt engine recommendations</h3>
+        <p>The following metrics surface diagnostic information in the Receipt Plan view to better explain why the receipt engine recommended the quantities it did.</p>
+        <table style="width: 100%;margin-left: 0;margin-right: auto;mc-table-style: url('../../Resources/TableStyles/standard.css');" class="TableStyle-standard" cellspacing="0">
+            <col class="TableStyle-standard-Column-Column1" />
+            <col class="TableStyle-standard-Column-Column2" />
+            <thead>
+                <tr class="TableStyle-standard-Head-Header1">
+                    <th class="TableStyle-standard-HeadE-Column1-Header1">Metric</th>
+                    <th class="TableStyle-standard-HeadD-Column2-Header1">Description</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1"><span class="Emphasis">System Demand</span>
+                    </td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">The demand signal, derived from Sales Units, that the engine uses when considering a receipt plan.  It is inclusive of constraints, like lead time.
+</td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1"><span class="Emphasis">System Unconstrained Demand</span>
+                    </td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">The demand signal, derived from Sales Units, that the engine uses to generate the System Demand series.  It does not incorporate constraints.</td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1"><span class="Emphasis">System Inbound Units</span>
+                    </td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">The aggregation of all metrics that indicate what stock is already on hand or will shortly be available.  It includes On Order data, stock in transit, receipts already delivered in the current period, user-specified receipts for future periods, and the portions of DC stock allocated to the cluster.</td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyB-Column1-Body1"><span class="Emphasis">System Lost Sales</span>
+                    </td>
+                    <td class="TableStyle-standard-BodyA-Column2-Body1">The lost sales quantity as calculated by the receipt process.</td>
+                </tr>
+            </tbody>
+        </table>
+        <h3>Placeholders and collections in Replen status</h3>
+        <p>When a placeholder or collection is in <span class="Emphasis">Replen</span> status, all relevant data is pulled to form its sales plan from the <span class="Emphasis">Forecasts</span> module. Users should be aware of the following differences in this view when dealing with Replen items:</p>
+        <p><span class="Emphasis">Read Only</span>: All normally editable metrics in Receipt Plan view become read-only being populated directly from aggregated replenishment forecast data.</p>
+        <p><span class="Emphasis">Receipt Constraints</span>: All receipt related constraints are managed within the <span class="Emphasis">Forecasts</span> module. Thus, receipt constraints in Assortment Planning for placeholders and collections with a status of <span class="Emphasis">Replen</span> are cleared. With a change of status to something other than <span class="Emphasis">Replen</span>, the default constraints assigned to any corresponding product level is reinstated.</p>
+        <p><span class="Emphasis">Receipt Periods</span>: For placeholders and collections with a status of <span class="Emphasis">Replen</span>, the necessary orders to support forecasted sales are generated from the <span class="Emphasis">Forecasts</span> module and sent to Order Manager for processing. Users do not need to set receipt periods in this view the way they do for non-Replen items. Receipt Periods are set automatically based on when the generated orders are scheduled to arrive.</p>
+        <p><span class="Emphasis">Plan Horizon vs. Replen Forecast Horizon</span>: If the Plan Horizon, set at the time of plan creation, extends beyond the replenishment forecast horizon for a given item, the system conditionally formats the periods that go beyond the replenishment forecast as shown below to draw the user’s attention to this. These periods also display zeros for the metrics being read from replenishment data, as no forecast exists:</p>
+        <p>
+            <img src="../../Resources/Images/Assortment Planning/Receipt Plan Horizon Blue Formatting.png" class="LargeImages" />
+        </p>
+        <h2>Working with receipt plans</h2>
+        <h3>Recalculating receipts</h3>
+        <p>Selecting the <span class="Emphasis">Recalculate Receipts</span> button re-runs the Receipt Planning Engine for the selected placeholder or collection and populates the <span class="Emphasis">System Receipt Units</span> and <span class="Emphasis">Ideal EOP Units</span> fields with the results. </p>
+        <p class="BasicNote">For more information regarding receipt plan default constraints, see <MadCap:xref href="Managing Plans and Set Defaults.htm#Defaults">Defaults </MadCap:xref>.</p>
+        <p> Receipt recalculations require complex calculations and are sent to the Workload Queue module for scheduling and processing. Though receipts are recalculated immediately, they can be deferred for later calculation based on the number of placeholders requiring recalculation and other jobs currently in the queue. Placeholders awaiting recalculation are locked and conditionally formatted to indicate this.</p>
+        <p>Receipts for placeholders/collections in Replen status are calculated in the Forecasts module and read in, thus they will never appear “Dirty” and will not be recalculated when this button is clicked. Instead, the following displays:</p>
+        <p>
+            <img src="../../Resources/Images/Assortment Planning/Placeholder Managed by Replenishment.png" class="LargeImages" />
+        </p>
+        <p>All changes to plans, including changes made to constraints in the Receipt Plan supporting view, must be saved prior to recalculating receipts or they will not be taken into account by the Receipt Engine.</p>
+        <h3><a name="CreatingCommitments"></a>Creating commitments</h3>
+        <p>The <span class="Emphasis">Create Commitments</span> button sends receipt plan details for all defined Receipt Periods in the current view provided:</p>
+        <ol>
+            <li> The <span class="Emphasis">Commit</span> checkbox for the period is checked, and </li>
+            <li>There is a positive Receipt Units quantity in the period.
+				<p>Since orders for placeholders and collections in <span class="Emphasis">Replen</span> status are generated in the <span class="Emphasis">Forecasts</span> module, it is not necessary to create commitment orders for them in Assortment Planning, thus no commitment orders are generated for such items when this button is clicked. Instead, the following message displays:</p><p><img src="../../Resources/Images/Assortment Planning/Placeholder Managed by Replenishment.png" class="LargeImages" /></p><p>If no receipt plans are found that meet the above criteria, the following message displays:</p><p><img src="../../Resources/Images/Assortment Planning/No Records To Process For Commitments Warning.png" class="LargeImages" /></p></li>
+        </ol>
+        <h4>Grouping commitments</h4>
+        <MadCap:snippetBlock src="../../Resources/Snippets/Commitments by Group.flsnp" />
+        <h3>Restoring default constraints</h3>
+        <p>Default constraints for both placeholders and placeholder clusters can be restored by selecting the <span class="Emphasis">Restore Default Constraints</span> button. </p>
+        <p class="BasicNote">As part of restoring the default constraints involves resetting the receipt periods for the placeholder/collection, receipts are automatically recalculated as part of this process. Therefore, using this function has the side-effect of marking the placeholder/collection in question Clean in the Receipt Status field of the main planning view.</p>
+        <h2>Assortment Receipt Plan Constraints Placeholder grid</h2>
+        <ul>
+            <li>
+                <p><span class="Emphasis">Receipt Variant Minimum</span>: Sets the minimum total order quantity including all cluster level orders for a variant in a given period</p>
+                <p class="Example">I have a Receipt Variant Minimum of 1000. In the following table, this constraint is not met in Wk 0 but is met in Wk 3:</p>
+                <table style="mc-table-style: url('../../Resources/TableStyles/standard.css');" class="TableStyle-standard" cellspacing="0">
+                    <thead>
+                        <tr class="TableStyle-standard-Head-Header1">
+                            <th class="TableStyle-standard-HeadE-Column1-Header1">Period</th>
+                            <th class="TableStyle-standard-HeadE-Column2-Header1">Wk 0</th>
+                            <th class="TableStyle-standard-HeadE-Column1-Header1">Wk 1</th>
+                            <th class="TableStyle-standard-HeadE-Column2-Header1">Wk 2</th>
+                            <th class="TableStyle-standard-HeadD-Column1-Header1">Wk 3</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr class="TableStyle-standard-Body-Body1">
+                            <td class="TableStyle-standard-BodyE-Column1-Body1">
+                                <p>A</p>
+                            </td>
+                            <td class="TableStyle-standard-BodyE-Column2-Body1">
+                                <p>200</p>
+                            </td>
+                            <td class="TableStyle-standard-BodyE-Column1-Body1">
+                                <p>&#160;</p>
+                            </td>
+                            <td class="TableStyle-standard-BodyE-Column2-Body1">
+                                <p>&#160;</p>
+                            </td>
+                            <td class="TableStyle-standard-BodyD-Column1-Body1">
+                                <p>300</p>
+                            </td>
+                        </tr>
+                        <tr class="TableStyle-standard-Body-Body1">
+                            <td class="TableStyle-standard-BodyE-Column1-Body1">
+                                <p>B</p>
+                            </td>
+                            <td class="TableStyle-standard-BodyE-Column2-Body1">
+                                <p>300</p>
+                            </td>
+                            <td class="TableStyle-standard-BodyE-Column1-Body1">
+                                <p>&#160;</p>
+                            </td>
+                            <td class="TableStyle-standard-BodyE-Column2-Body1">
+                                <p>&#160;</p>
+                            </td>
+                            <td class="TableStyle-standard-BodyD-Column1-Body1">
+                                <p>300</p>
+                            </td>
+                        </tr>
+                        <tr class="TableStyle-standard-Body-Body1">
+                            <td class="TableStyle-standard-BodyB-Column1-Body1">
+                                <p>C</p>
+                            </td>
+                            <td class="TableStyle-standard-BodyB-Column2-Body1">
+                                <p>400</p>
+                            </td>
+                            <td class="TableStyle-standard-BodyB-Column1-Body1">
+                                <p>&#160;</p>
+                            </td>
+                            <td class="TableStyle-standard-BodyB-Column2-Body1">
+                                <p>&#160;</p>
+                            </td>
+                            <td class="TableStyle-standard-BodyA-Column1-Body1">
+                                <p>400</p>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+                <p>The following message displays if this constraint is not met when attempting to create Commitments:</p>
+                <p>
+                    <img src="../../Resources/Images/Assortment Planning/Commitment Warning.png" style="width: 439px;height: 206px;" />
+                </p>
+                <p><span class="Emphasis">Yes</span> overrides the constraint and creates the commitment orders in the current view. <span class="Emphasis">No</span> cancels commitment order creation.</p>
+            </li>
+            <li>
+                <p><span class="Emphasis">Receipt Size Minimum</span>: Sets the minimum total order quantity (including all cluster level orders) for a variant in a given period as a function of the number of sizes present in the Size Curve attached to the variant</p>
+                <p class="Example">I have a Receipt Size Minimum of 200 and a Size Curve of S, M, L, XL, XXL assigned to the variant being ordered. In the following table, this constraint is not met in Wk 0 but is met in Wk 3:</p>
+                <table style="mc-table-style: url('../../Resources/TableStyles/standard.css');margin-left: 0;margin-right: auto;" class="TableStyle-standard" cellspacing="0">
+                    <col class="TableStyle-standard-Column-Column1" style="width: 20%;" />
+                    <col class="TableStyle-standard-Column-Column2" style="width: 20%;" />
+                    <col class="TableStyle-standard-Column-Column1" style="width: 20%;" />
+                    <col class="TableStyle-standard-Column-Column2" style="width: 20%;" />
+                    <col class="TableStyle-standard-Column-Column1" style="width: 20%;" />
+                    <thead>
+                        <tr class="TableStyle-standard-Head-Header1">
+                            <th class="TableStyle-standard-HeadE-Column1-Header1">Period</th>
+                            <th class="TableStyle-standard-HeadE-Column2-Header1">Wk 0</th>
+                            <th class="TableStyle-standard-HeadE-Column1-Header1">Wk 1</th>
+                            <th class="TableStyle-standard-HeadE-Column2-Header1">Wk 2</th>
+                            <th class="TableStyle-standard-HeadD-Column1-Header1">Wk 3</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr class="TableStyle-standard-Body-Body1">
+                            <td class="TableStyle-standard-BodyE-Column1-Body1">
+                                <p>A</p>
+                            </td>
+                            <td class="TableStyle-standard-BodyE-Column2-Body1">
+                                <p>200</p>
+                            </td>
+                            <td class="TableStyle-standard-BodyE-Column1-Body1">
+                                <p>&#160;</p>
+                            </td>
+                            <td class="TableStyle-standard-BodyE-Column2-Body1">
+                                <p>&#160;</p>
+                            </td>
+                            <td class="TableStyle-standard-BodyD-Column1-Body1">
+                                <p>300</p>
+                            </td>
+                        </tr>
+                        <tr class="TableStyle-standard-Body-Body1">
+                            <td class="TableStyle-standard-BodyE-Column1-Body1">
+                                <p>B</p>
+                            </td>
+                            <td class="TableStyle-standard-BodyE-Column2-Body1">
+                                <p>300</p>
+                            </td>
+                            <td class="TableStyle-standard-BodyE-Column1-Body1">
+                                <p>&#160;</p>
+                            </td>
+                            <td class="TableStyle-standard-BodyE-Column2-Body1">
+                                <p>&#160;</p>
+                            </td>
+                            <td class="TableStyle-standard-BodyD-Column1-Body1">
+                                <p>300</p>
+                            </td>
+                        </tr>
+                        <tr class="TableStyle-standard-Body-Body1">
+                            <td class="TableStyle-standard-BodyB-Column1-Body1">
+                                <p>C</p>
+                            </td>
+                            <td class="TableStyle-standard-BodyB-Column2-Body1">
+                                <p>400</p>
+                            </td>
+                            <td class="TableStyle-standard-BodyB-Column1-Body1">
+                                <p>&#160;</p>
+                            </td>
+                            <td class="TableStyle-standard-BodyB-Column2-Body1">
+                                <p>&#160;</p>
+                            </td>
+                            <td class="TableStyle-standard-BodyA-Column1-Body1">
+                                <p>400</p>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+                <p class="BasicNote">The same message as shown for <span class="Emphasis">Receipt Size Minimum</span> displays if this constraint is not met when attempting to Create Commitments within the Receipt Plan supporting view.</p>
+            </li>
+            <li>
+                <p><span class="Emphasis">Var Order Multiple</span>: Sets the number by which receipt quantities generated by the Recalculate Receipts functions in the main planning view and <span class="Emphasis">Receipt Plan</span> views will be evenly divisible by. Persists in orders generated from assortment plans within Order Manager.<MadCap:conditionalText MadCap:conditions="General.ScreenOnly"> For more information, see:</MadCap:conditionalText></p>
+                <ul MadCap:conditions="General.ScreenOnly">
+                    <li> <MadCap:xref href="Order Document Details Break By Size.htm">Order document details – break by size </MadCap:xref></li>
+                    <li>
+                        <MadCap:xref href="Order Document Details Prepack.htm">Order Document details – Prepack tab</MadCap:xref>
+                    </li>
+                </ul>
+                <p class="BasicNote">Defaults to the plan default value set for the product hierarchy level assigned to the selected placeholder.</p>
+                <p class="Important">The system will always round up to meet Order Multiple constraints to ensure that the base sales plan on which the receipt plan is built will always be satisfied</p>
+                <div class="Note_BasicNote">
+                    <p class="p">The following is a common example in businesses where very small parts are sold individually but it is not practical to ship them that way. </p>
+                    <p class="p">A sales plan of 241 units for weeks 1-4 and an Order Multiple of 50 set.</p>
+                    <p class="p">The system yields a receipt quantity of 250 units which is the lowest multiple of 50 that satisfies the entire sales plan.</p>
+                </div>
+            </li>
+        </ul>
+        <h2>Assortment Receipt Plan Constraints grid</h2>
+        <ul>
+            <li><span class="Emphasis">Periods of Supply</span>: Sets the periods of supply (period type as defined by the current assortment plan) for the placeholder or collection as a minimum stock constraint for receipt engine outputs. Actual by period constraint is defined as the sales planned for this many periods forward from a given period. This setting interacts with the system policy <span class="Emphasis">Assortment Engine Lead Time</span>.
+			<div class="Note_BasicNote"><p><span class="Emphasis">Assortment Engine Lead Time</span> is set to 7 days and <span class="Emphasis">Periods of Supply</span> is set to 2. A receipt is to arrive in week 1. </p><p class="p">For this constraint to be considered fulfilled for week 1, the period must end with at least 60 units of inventory on hand to cover weeks 2 and 3. The lead time of 7 days stipulates that stock being received in given week cannot be used to cover the sales planned in that week. Thus, <span class="Emphasis">Periods of Supply</span> begins calculating need at week 2 rather than week 1.</p></div><table style="mc-table-style: url('../../Resources/TableStyles/standard.css');margin-left: 0;margin-right: auto;" class="TableStyle-standard" cellspacing="0"><col class="TableStyle-standard-Column-Column1" style="width: 20%;" /><col class="TableStyle-standard-Column-Column2" style="width: 20%;" /><col class="TableStyle-standard-Column-Column1" style="width: 20%;" /><col class="TableStyle-standard-Column-Column2" style="width: 20%;" /><col class="TableStyle-standard-Column-Column1" style="width: 20%;" /><thead><tr class="TableStyle-standard-Head-Header1"><th class="TableStyle-standard-HeadE-Column1-Header1">Period</th><th class="TableStyle-standard-HeadE-Column2-Header1">Wk 0</th><th class="TableStyle-standard-HeadE-Column1-Header1">Wk 1</th><th class="TableStyle-standard-HeadE-Column2-Header1">Wk 2</th><th class="TableStyle-standard-HeadD-Column1-Header1">Wk 3</th></tr></thead><tbody><tr class="TableStyle-standard-Body-Body1"><td class="TableStyle-standard-BodyE-Column1-Body1"><p>A</p></td><td class="TableStyle-standard-BodyE-Column2-Body1"><p>200</p></td><td class="TableStyle-standard-BodyE-Column1-Body1"><p>&#160;</p></td><td class="TableStyle-standard-BodyE-Column2-Body1"><p>&#160;</p></td><td class="TableStyle-standard-BodyD-Column1-Body1"><p>300</p></td></tr><tr class="TableStyle-standard-Body-Body1"><td class="TableStyle-standard-BodyE-Column1-Body1"><p>B</p></td><td class="TableStyle-standard-BodyE-Column2-Body1"><p>300</p></td><td class="TableStyle-standard-BodyE-Column1-Body1"><p>&#160;</p></td><td class="TableStyle-standard-BodyE-Column2-Body1"><p>&#160;</p></td><td class="TableStyle-standard-BodyD-Column1-Body1"><p>300</p></td></tr><tr class="TableStyle-standard-Body-Body1"><td class="TableStyle-standard-BodyB-Column1-Body1"><p>C</p></td><td class="TableStyle-standard-BodyB-Column2-Body1"><p>400</p></td><td class="TableStyle-standard-BodyB-Column1-Body1"><p>&#160;</p></td><td class="TableStyle-standard-BodyB-Column2-Body1"><p>&#160;</p></td><td class="TableStyle-standard-BodyA-Column1-Body1"><p>400</p></td></tr></tbody></table></li>
+            <li>
+                <p><span class="Emphasis">Periods Before Phase In</span>: Sets the default number of periods prior to Phase In date that initial receipt quantities for the placeholder or collection should be scheduled to be received</p>
+                <p class="Example">A  placeholder with a Phase In date of wk 4 and a Periods Before Phase In of 2. The default calculated initial receipt for the placeholder is in wk 2.</p>
+            </li>
+            <li>
+                <p><span class="Emphasis">Flow Period Frequency</span>: Sets the default number of periods between receipt dates calculated by the receipt planning engine.</p>
+                <div class="Note_BasicNote">
+                    <p>A placeholder with a Phase In date of wk 3, a Periods Before Phase In of 2, and a Flow Cadence of 4.</p>
+                    <p class="p"> 3 receipts will occur in wk 1, wk 7, and wk 11. This is because <span class="Emphasis">Periods Before Phase In</span> ensures product can be in stores by the Phase In date. Thus, the first flow date is considered to be the Phase In date for the purposes of receipt engine calculation.</p>
+                </div>
+            </li>
+            <li>
+                <p><span class="Emphasis">Min Stk/Sales (Minimum Stock to Sales)</span>: Sets the minimum stock to sales ratio for the placeholder or collection as a minimum stock constraint for receipt engine outputs. Actual by period constraint is defined as the sales planned for a given period multiplied by the constraint value (period sales of 10 * Min Stk/Sls of 4 = EOP stock requirement of 40).</p>
+            </li>
+            <li>
+                <p><span class="Emphasis">Shrink % of Sales</span>: Sets the anticipated shrink units per period as a percentage of planned period sales units for the placeholder or collection as a minimum stock constraint for receipt engine outputs.</p>
+                <p class="Example">A period with planned sales of 500 units and a Shrink % of Sales of 2.00% must have an EOP units of at least 10 for this constraint to be satisfied for the period.</p>
+            </li>
+            <li><span class="Emphasis">Min Stock to Sales</span>: Editable to 2 decimal places where it can be changed. The minimum stock to sales ratio as a constraint for the receipt engine outputs.</li>
+            <li><span class="Emphasis">Target S/T %</span>: Editable, has no calculation effect or relationship.  The user can enter their target sell through value to compare against the calculated S/T %.</li>
+            <li><span class="Emphasis">S/T %</span>: read-only. Percentage (10.1%). Compares the lifetime sales for the item against the lifetime orders.
+
+Calculation: (SPV Sls U / Ttl Orders U).</li>
+            <li><span class="Emphasis">Recalc Receipts</span>: Sets whether <span class="Emphasis">System Receipt Units</span> and <span class="Emphasis">Ideal EOP Units</span> recalculate for the placeholder or collection when <span class="Emphasis">Recalculate Receipts</span> in <span class="Emphasis">Receipt Plan</span> view or <span class="Emphasis">Recalculate</span> in the main planning view is clicked.</li>
+            <li><span class="Emphasis">Hold Receipts</span>: Whether the current total Receipt Units for the placeholder or collection can change to accommodate Placeholder Cluster Constraints upon recalculation.
+If unchecked, the system calculates the receipt strategy to meet the specified constraints for as long as possible without increasing Receipt Units by moving receipt units forward in time.<p class="BasicNote">If unchecked, there will be scenarios where the system cannot satisfy user defined constraints for the life of the item within the cluster.</p></li>
+            <li>
+                <p><span class="Emphasis">Min Pres Multiplier</span>: Multiplies the minimum presentation units quantity passed into the receipt engine by the value entered in this field for the number of weeks specified in <span class="Emphasis">Min Pres Multiplier No of Periods</span>.</p>
+                <p><span class="Emphasis">Min Pres Multiplier</span> and <span class="Emphasis">Min Pres Multiplier No of Periods</span> together have an effect on the receipt plan by weighting stock received toward the beginning of the receipt plan according to the values set.</p>
+                <p class="Example"><span class="Emphasis">Min Pres Multiplier</span> is set at 2.5 and <span class="Emphasis">Min Pres Multiplier No of Periods</span> is set to 5. If the minimum presentation is 15, then the minimum presentation is raised to 37.5 for the first 5 weeks.</p>
+            </li>
+            <li>
+                <p><span class="Emphasis">Min Pres Multiplier No of Periods</span>: The number of periods that the multiplier is in effect from the phase-in date. A value of zero means effectively there is no multiplier. Once the number of periods has expired the minimum presentation values return to the original value.</p>
+                <p>As the item starts actualizing, the number of periods declines until it is zero. Therefore, if the multiplier is to be used over the first 3 periods of a receipt plan, then:</p>
+                <ul>
+                    <li>Before phase in, wk1, wk2, and wk3 all use the multiplier.</li>
+                    <li>When wk1 is actualized and the current week is wk2, then wk2 and wk3 will use the multiplier.</li>
+                    <li>When wk2 is actualized and the current week is wk3, only wk3 will use the multiplier.</li>
+                    <li>When it is wk4 or later, the multiplier is no longer used, even though 3 periods continues to be the <span class="Emphasis">Min Pres Multiplier No of Periods</span> value set.</li>
+                </ul>
+            </li>
+            <li><span class="Emphasis">New Site Min Pres Multiplier</span>: This value is applied against the minimum presentation for only the site count with new store openings. </li>
+            <li><span class="Emphasis">New Site Multiplier Number of Periods</span>: Applies only to the site count of new store openings. </li>
+        </ul>
+        <h2>Assortment Receipt Plan grid</h2>
+        <h3><a name="Metrics"></a>Metrics that account for stock in transit </h3>
+        <p>In Assortment Planning,  Total Order metrics are inclusive of supplier orders and internal stock movements (also known as Inter-Branch Transfers or IBT). The <span class="Emphasis">Assortment Receipt Plan</span> grid has metrics that differentiate between inbound supplier orders and IBT orders providing visibility to these components. </p>
+        <p>Additionally, On Order metrics provide visibility to supplier orders that have been sent to the supplier (<span class="Emphasis">Committed</span>), received back from the supplier as confirmed (<span class="Emphasis">Confirmed</span>), or if there's an unknown status (<span class="Emphasis">Unknown</span>).</p>
+        <p class="p">The <span class="Emphasis">Past Due</span> metrics provide visibility to orders that were expected to be receipted in the recent past. Past Due is broken out to provide visibility to all orders that are past due as well as current. These metrics provide visibility to where stock is, whether it's late or on time, whether it's moving inside the channel, etc.</p>
+        <p>These metrics are available in some or all of the following: <span class="Emphasis">Receipt Plan</span> view, <span class="Emphasis">Sales Plan</span> view, <span class="Emphasis">Assortment Rollup</span> view, and the <span class="Emphasis">Reconciliation Report</span>.</p>
+        <h3>Inter-Branch Transfer (IBT) metrics</h3>
+        <p>Separate Cost fields exist for each of the different On Order Unit metrics in <span class="Emphasis">Receipt Plan</span> view. For example, <span class="Emphasis">Committed On Order Units</span>, <span class="Emphasis">Committed On Order Cost</span>. </p>
+        <MadCap:snippetBlock src="../../Resources/Snippets/EOP BOP metrics include IBT.flsnp" />
+        <table style="mc-table-style: url('../../Resources/TableStyles/standard.css');margin-left: 0;margin-right: auto;" class="TableStyle-standard" cellspacing="0">
+            <col class="TableStyle-standard-Column-Column1" style="width: 10%;">
+            </col>
+            <col class="TableStyle-standard-Column-Column2" style="width: 10%;">
+            </col>
+            <col class="TableStyle-standard-Column-Column1" style="width: 20%;">
+            </col>
+            <col class="TableStyle-standard-Column-Column2" style="width: 15%;">
+            </col>
+            <col class="TableStyle-standard-Column-Column1" style="width: 45%;">
+            </col>
+            <thead>
+                <tr class="TableStyle-standard-Head-Header1">
+                    <th class="TableStyle-standard-HeadE-Column1-Header1">Order status</th>
+                    <th class="TableStyle-standard-HeadE-Column2-Header1">Metric status</th>
+                    <th class="TableStyle-standard-HeadE-Column1-Header1">Receipt Plan view metric</th>
+                    <th class="TableStyle-standard-HeadE-Column2-Header1">Other Reports metric</th>
+                    <th class="TableStyle-standard-HeadD-Column1-Header1">Expanded Explanation</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">Committed</td>
+                    <td class="TableStyle-standard-BodyE-Column2-Body1">Existing</td>
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">
+                        Committed On Order 
+                        </td>
+                    <td class="TableStyle-standard-BodyE-Column2-Body1">On Order</td>
+                    <td class="TableStyle-standard-BodyD-Column1-Body1">Order exists in ToolsGroup JustEnough Order Management data but not in externally supplied Supplier Order data</td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">Committed Past Due</td>
+                    <td class="TableStyle-standard-BodyE-Column2-Body1">New</td>
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">Committed On Order Past Due</td>
+                    <td class="TableStyle-standard-BodyE-Column2-Body1">On Order Past Due</td>
+                    <td class="TableStyle-standard-BodyD-Column1-Body1">Committed, but order receipt period was prior to current period</td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">Confirmed</td>
+                    <td class="TableStyle-standard-BodyE-Column2-Body1">Renamed</td>
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">
+                      Confirmed On Order 
+                        </td>
+                    <td class="TableStyle-standard-BodyE-Column2-Body1">On Order</td>
+                    <td class="TableStyle-standard-BodyD-Column1-Body1">Order exists in both ToolsGroup JustEnough Order Manager and externally supplied Supplier Order data, with matching UUID</td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">Confirmed Past Due</td>
+                    <td class="TableStyle-standard-BodyE-Column2-Body1">New</td>
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">Confirmed On Order Past Due</td>
+                    <td class="TableStyle-standard-BodyE-Column2-Body1">On Order Past Due</td>
+                    <td class="TableStyle-standard-BodyD-Column1-Body1">Confirmed, but order receipt period was prior to current period</td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">Unknown</td>
+                    <td class="TableStyle-standard-BodyE-Column2-Body1">Existing</td>
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">
+                        On Order (Unknown) 
+                        </td>
+                    <td class="TableStyle-standard-BodyE-Column2-Body1">On Order</td>
+                    <td class="TableStyle-standard-BodyD-Column1-Body1">Order exists only in externally supplied Supplier Order data, not in ToolsGroup JustEnough Order Management data</td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">Unknown Past Due</td>
+                    <td class="TableStyle-standard-BodyE-Column2-Body1">New</td>
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">On Order Past Due (Unknown)</td>
+                    <td class="TableStyle-standard-BodyE-Column2-Body1">On Order Past Due</td>
+                    <td class="TableStyle-standard-BodyD-Column1-Body1">Unknown, but order receipt period was prior to current period</td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyB-Column1-Body1">Stock In Transit</td>
+                    <td class="TableStyle-standard-BodyB-Column2-Body1">New</td>
+                    <td class="TableStyle-standard-BodyB-Column1-Body1">Stock In Transit (Unknown)</td>
+                    <td class="TableStyle-standard-BodyB-Column2-Body1">Stock In Transit</td>
+                    <td class="TableStyle-standard-BodyA-Column1-Body1">Owned stock moving between internal sites</td>
+                </tr>
+            </tbody>
+        </table>
+        <h3>Accounting for stock in transit within clusters</h3>
+        <p>The <span class="Emphasis">Stock In Transit to Clusters Units</span> and <span class="Emphasis">Stock In Transit to Clusters Cost</span> metrics allow BOP to be better understood by actual stock on hand components and stock in transit components.</p>
+        <p><span class="Emphasis">Stock In Transit to Cluster</span> is stock in transit to stores within a cluster specifically whereas <span class="Emphasis">Total Stock In Transit</span> is stock in transit to any locale in the network, store or DC). Metric  
+
+<span class="Emphasis">Stock In Transit to DCs Split</span> is the difference between the two.</p>
+        <h4>Committed On Order Units</h4>
+        <p>Units for which commitment orders have been created but which do not have corresponding confirmed purchase orders. Auto-populated when commitments are created for periods having Receipt Units. This fields reads from commitment orders for the corresponding variant/cluster/period in Order Manager. Receipt units for a given period are transitioned out of Receipt Units to Committed Units when commitments are created for that period.</p>
+        <p class="Important">Commitment Units can be automatically decremented based on the presence of confirmed On Order Units but only if the <span class="Emphasis">Import Config</span> setting <span class="Emphasis">Order Units</span> for planned periods  is set to Variant Orders and ToolsGroup JustEnough has integrated with an ERP/POM system capable of returning order data with the UUIDs ToolsGroup JustEnough generates for each order sent. If this is not the case, a custom procedure is needed to appropriately decrement Commitment Units and avoid duplication of units with On Order (Unknown) Units (where purchase order units the system is unable to tie to specific commitment orders populate).</p>
+        <h4>Confirmed On Order Units</h4>
+        <p>Confirmed units on order for the period. Calculation: (purchase order units not yet received but scheduled for the period)</p>
+        <p class="BasicNote">When the <span class="Emphasis">Import Config</span> setting <span class="Emphasis">Order Units</span> for planned periods is set to Variant Orders and ToolsGroup JustEnough has integrated with an ERP/POM system capable of returning order data with the UUIDs ToolsGroup JustEnough generates for each order sent, this field populates with confirmed purchase order quantities by variant/cluster/period and decrement Committed Units accordingly. Where the system policy is set to Inventory Orders and/or external systems are NOT able to return UUIDs by order, purchase order units will appear in the On Order (Unknown) field.</p>
+        <h4>On Order Units (Unknown)</h4>
+        <p> Confirmed units on order for the period which cannot be matched to specific variant/cluster commitment orders. Calculation: (unlinked purchase order units not yet received but scheduled for the period)</p>
+        <p class="BasicNote">On Order (Unknown) units split across applicable clusters using the same splitting logic as discussed  in EOP Units.</p>
+        <p class="Important">See <span class="Emphasis">Committed On Order Units</span> above.</p>
+        <h4>Stock In-Transit Units (Unknown)</h4>
+        <p rowspan="4">Stock in-transit between sites within the retailer’s own network.</p>
+        <h3 rowspan="4">Ship from Store</h3>
+        <p rowspan="4">For the same period last year, the following metrics are suffixed with <span class="Emphasis">LY</span>.</p>
+        <table style="width: 100%;margin-left: 0;margin-right: auto;mc-table-style: url('../../Resources/TableStyles/standard.css');" class="TableStyle-standard" cellspacing="0">
+            <col class="TableStyle-standard-Column-Column1" />
+            <col class="TableStyle-standard-Column-Column2" />
+            <thead>
+                <tr class="TableStyle-standard-Head-Header1">
+                    <th class="TableStyle-standard-HeadE-Column1-Header1">Metric</th>
+                    <th class="TableStyle-standard-HeadD-Column2-Header1">Description</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1"><span class="Emphasis">Ship from Store %</span>
+                    </td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">Read-only and populated from the corresponding metric in the <span class="Emphasis">Sales Plan</span> view. 
+                        <p>The calculation is 
+						(Fulfillment Sales Units - Sales Units) / Sales Units</p></td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1"><span class="Emphasis">Ship from Store Retail</span>
+                    </td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1"><span class="Emphasis">Calculation</span>: Sales * Ship From Store %</td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1"><span class="Emphasis">Ship from Store Units</span>
+                    </td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1"><span class="Emphasis">Calculation</span>: Sales Units * Ship From Store %</td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyB-Column1-Body1"><span class="Emphasis">Ship from Store Cost</span>
+                    </td>
+                    <td class="TableStyle-standard-BodyA-Column2-Body1"><span class="Emphasis">Calculation</span>: COGS * Ship From Store %</td>
+                </tr>
+            </tbody>
+        </table>
+        <p rowspan="4">For more information, see <MadCap:xref href="Ship from Store.htm">Ship from Store (SFS) example</MadCap:xref>.</p>
+        <h3 rowspan="4">Other metrics</h3>
+        <ul>
+            <li><span class="Emphasis">BOP Units</span>: Planned/actual beginning of period inventory units <span class="Emphasis">Calculation</span>: (Previous Period EOP)</li>
+            <li><span class="Emphasis">Commit?</span>: Sets the periods for which to create commitment orders when Create Commitments is clicked. This field is checked by default for checked Receipt Periods and cannot be checked for periods where Receipt Period is not checked.</li>
+            <li>
+                <p><span class="Emphasis">Cumulative % of Total Receipt Units</span> and <span class="Emphasis">Cumulative % of Total System Receipt Units</span>: Two read-only informational metrics that provide visibility to receipt penetration distribution. </p>
+                <p>These metrics can be used in conjunction with the <span class="Emphasis">Max # Rcpt Pds</span> metric.</p>
+                <p class="BasicNote">Any desired changes to receipt quantities must be done through existing means (e.g. min pres, min stock to sales, user override receipts)</p>
+            </li>
+            <li>
+                <p><span class="Emphasis">Effective Forecast Units</span>: The effective forecast units for weekly period/bucket types for future periods only. </p>
+                <p class="BasicNote">System policy <span class="Emphasis">Show Effective Forecast Units in Receipt Plan View</span> must be set to <span class="Emphasis">True</span> to display unit values other than 0. </p>
+            </li>
+            <li>
+                <p><span class="Emphasis">EOP Units</span>: Planned/actual end of period inventory units.  Calculation: (BOP Units – Sales Units + Total Orders – Shrink Units + Inventory Adjustment Units). </p>
+                <p>Clicking the <span class="Emphasis">Recalculate Receipts</span> button when selected on a single placeholder reruns the receipt engine, even if the status is not <span class="Emphasis">Dirty</span>.</p>
+                <p>The Assortment Planning module allows for complete configurability in sales plans and receipt plans independently.  However, if the two plans are not fully synchronized, this can lead to a situation where the receipt plan does not generate enough stock on hand to support the sales plan.  This can happen if there is insufficient lead time to support the sales plan, the markdown date comes too early, or receipt constraints are not sufficient.</p>
+                <p>The value in the <span class="Emphasis">EOP Units</span> field is formatted with red text to better bring to the attention of users that there are negative values.</p>
+                <p>
+                    <img src="../../Resources/Images/Assortment Planning/EOP Field Formatting &amp; Behaviour.png" class="LargeImages" />
+                </p>
+                <h3>Stock on hand plan goes negative at some point in the future</h3>
+                <p>A health check shows if the stock on hand plan goes negative at some point in the future of the plan. This check is only validated against the override <span class="Emphasis">EOP Units</span> value (i.e. incorporating user overrides of sales and receipts), and it only looks for negative values during the regular period of the item. Therefore, it is not a concern for an item to have negative SOH during the markdown portion of the lifecycle. The following is an example of the health error details:</p>
+                <p>
+                    <img src="../../Resources/Images/Assortment Planning/Health Error Code Stock On Hand Negative.PNG" class="LargeImages" />
+                </p>
+                <h3>Ensuring future recommended orders are sufficient for ideal EOP quantities</h3>If an override receipt value exists in a period, that period becomes ineligible for system recommended receipts and system receipt units is zero.
+				<h3>EOP Units of the last actualized period</h3><p>For placeholders/collections for which inventory exists in a DC, the <span class="Emphasis">EOP Units</span> of the last actualized period includes a portion of available DC on-hand split out per the following logic:</p><p>Calculation: (Cluster Previous Period EOP Units + Cluster Future Total Orders  – Cluster Future Planned Sales Units) / SUM(Cluster Previous Period EOP Units + Cluster Future Total Orders – Cluster Future Planned Sales Units for all clusters) * DC on-hand units</p><p class="BasicNote">While there is an inherent degree of potential inaccuracy in splitting DC on-hand inventory via this method, this was a conscious design decision to assume optimal distribution of available inventory based on future demand by cluster, as the alternative of including complete supply chain logic would have had a significant impact on the performance of the system.</p></li>
+            <li>
+                <p><span class="Emphasis">Ideal EOP Units</span>: System recommended EOP units for the period. Calculation: Receipt Planning Engine</p>
+            </li>
+            <li>
+                <p><span class="Emphasis">Inventory Adjustment Units</span>: Planned/actual inventory adjustment units for the period. Calculation: From Sales Plan view</p>
+            </li>
+            <li><span class="Emphasis">Max # Rcpt Pds</span>:    Sets the maximum number of receipt periods for Placeholders. This is useful in scenarios where only a specific number of deliveries of a Placeholder or Variant is desired. For example, if only 2 deliveries are wanted (i.e. the initial delivery and then the balance received in 1 subsequent flow), then <span class="Emphasis">Max # Rcpt Pds</span> would be set to 2.<p class="BasicNote">Default values can be set at the product hierarchy level.</p><h3>Functionality notes</h3><ul><li><p>Existing receipt period eligibility continues to function as designed and could result in more than the specified value in <span class="Emphasis">Max # Rcpt Pds</span>.</p></li><li><p>Default hierarchy receipt period Flow and No Flow designations take priority over the defined maximum number of periods.</p></li><li><p>Periods expressly defined as a receipt period within the default hierarchy are still eligible as receipt periods regardless of the defined number of maximum receipt periods at the Placeholder level. Also, receipt periods can still be selected or deselected within the Receipt Plan view.</p></li></ul><h3>Calculations</h3><p>When calculating or recalculating receipts, the <span class="Emphasis">Max # Rcpt Pds</span> metric is considered and the engine suggests the defined number of receipt periods.</p><p>The receipt flow eligibility metrics (<span class="Emphasis">Flow Period Frequency</span>, <span class="Emphasis">Max # Rcpt Pds</span>) are considered by the engine when <span class="Emphasis">Recalculate Receipts</span> is clicked. 	The flows are recalculated, and any user-opted-in and user-opted-out flow periods remain as selected or deselected.</p><p class="BasicNote">A value of zero in <span class="Emphasis">Max # Rcpt Pds</span> causes this constraint to be ignored. Zero does not result in generating zero receipts. </p><h3>Formatting</h3><p>The formatting for the Receipt Period metric reflects that there can be more receipt periods than the default.</p><table style="width: 100%;margin-left: 0;margin-right: auto;mc-table-style: url('../../Resources/TableStyles/standard.css');" class="TableStyle-standard" cellspacing="0"><col class="TableStyle-standard-Column-Column1" /><col class="TableStyle-standard-Column-Column2" /><thead><tr class="TableStyle-standard-Head-Header1"><th class="TableStyle-standard-HeadE-Column1-Header1">Color</th><th class="TableStyle-standard-HeadD-Column2-Header1">Description</th></tr></thead><tbody><tr class="TableStyle-standard-Body-Body1"><td class="TableStyle-standard-BodyE-Column1-Body1">Green</td><td class="TableStyle-standard-BodyD-Column2-Body1">User opted-in or opted-out flow period</td></tr><tr class="TableStyle-standard-Body-Body1"><td class="TableStyle-standard-BodyE-Column1-Body1">Blue</td><td class="TableStyle-standard-BodyD-Column2-Body1">Editable non-flow period</td></tr><tr class="TableStyle-standard-Body-Body1"><td class="TableStyle-standard-BodyB-Column1-Body1">Red</td><td class="TableStyle-standard-BodyA-Column2-Body1">User opted-in period that exceeds the maximum number of receipt periods</td></tr></tbody></table></li>
+            <li>
+                <p><span class="Emphasis">Minimum Presentation</span>: Minimum units required to maintain floor presentation for each site selling the item</p>
+                <p>Calculation: From Receipt Plan. The <span class="Emphasis">Mkdn Date</span> metric in the Main Planning and Cluster Set views interacts with Min Pres to set the period in which the system should stop respecting it. If <span class="Emphasis">Mkdn date</span> is set for the placeholder or cluster, Minimum Presentation drops to zero from the corresponding period forward.</p>
+            </li>
+            <li><span class="Emphasis">On Order Exception</span>: The difference between internal commitments and external orders.
+<p>Calculation: Commitment Quantity - ERP On Order Quantity</p><p class="BasicNote">Negative numbers indicate that the actual on order quantity is less than the committed quantity.</p></li>
+            <li><span class="Emphasis">Order By Date</span>: Read-only date that displays the order deadline for the corresponding Receipt Period/Units based on assigned default lead times. Essentially, the first day of the receipt period minus Default Lead Days from the main planning view.</li>
+            <li>
+                <p><span class="Emphasis">Receipt AUC</span>: Sets the average cost per unit for receipts in the period</p>
+                <h3>Reviewing cost components of Receipt AUC </h3>
+                <p><span class="Emphasis">Receipt AUC</span> is a single metric without individual components. The following metrics provide greater visibility to the cost components that comprise <span class="Emphasis">Receipt AUC</span>:</p>
+                <ul>
+                    <li>
+                        <p>Discount %</p>
+                    </li>
+                    <li>
+                        <p>Duty %</p>
+                        <p class="BasicNote">If system policy <span class="Emphasis">Variant Level Duty Percentage</span> is set to <span class="Emphasis">True</span>, then the duty percentage is from the Variant record. If the system policy is set to <span class="Emphasis">False</span>, the duty percentage is from the Supplier record. There is no visible difference within the Receipt Plan. Only the data source is changed. Having the duty percentage at the Variant level allows different Variants from the same supplier to be defined with different duty percentages.</p>
+                    </li>
+                    <li>
+                        <p>Freight %</p>
+                    </li>
+                    <li>
+                        <p>Landed Cost</p>
+                    </li>
+                    <li>
+                        <p>Supplier Cost</p>
+                    </li>
+                </ul>
+                <p><span class="Emphasis">Discount %</span> is editable. <span class="Emphasis">Landed Cost</span> is calculated using the other 4 metrics. The remaining 4 metrics are read-only and informational. The metric <span class="Emphasis">Receipt AUC</span> remains unchanged. Any changes to <span class="Emphasis">Receipt AUC</span> that are desired need to be copied into the existing receipt AUC metric.</p>
+                <p class="BasicNote">System policy <span class="Emphasis">Cost Type for Supplier Variant Cost</span> must be defined with the Cost Type associated
+with the supplier variant cost.</p>
+            </li>
+            <li>
+                <p><span class="Emphasis">Receipt Cost</span>: Planned/actual cost of receipts for the period</p>
+                <p>Calculation: (Receipt Units * Receipt AUC)</p>
+            </li>
+            <li>
+                <p><span class="Emphasis">Receipt Period</span>: Sets the periods in which receipts can occur. If <span class="Emphasis">Flow Cadence</span> is set, recalculating receipts will also check the appropriate Receipt Periods based on the defined frequency. </p>
+                <p>When receipts are recalculated, the engine output respects Receipt Periods and only suggest receipts in periods that are checked. Users cannot enter Receipt Units in periods where Receipt Period is unchecked.   </p>
+            </li>
+            <li>
+                <p><span class="Emphasis">Receipt Units</span>: Planned/actual receipt units for the period. Defaults to the system generated quantity unless a user has manually entered a quantity and saved.</p>
+                <p>Calculation: System Receipt Units – Committed Units – On Order Units – On Order (Unknown) Units</p>
+                <p>Once a commitment order has been created, the quantity that was in this field moves into the Committed Units field indicating that an order has been generated for the planned quantity. As the order moves through the commitment process, the units will transition or On Order Units (or On Order (Unknown) Units) and then ultimately show again as receipt units when the period in question actualizes, provided the units were actually received in that period. This ensures that units for the same order are not double-counted as they move through the process.</p>
+                <p>Once the above transition occurs, it is still possible to add more Receipt Units to this field and place subsequent commitment orders for them as needed. The additional quantity can be entered and <span class="Emphasis">Create Commitments</span> clicked. This can happen automatically as the sales plan changes as a result of receipt plan recalculations.  Each individual order contributes to the totals shown and is tracked and transitioned through the applicable fields individually.</p>
+                <p class="BasicNote">Entering Receipt Units at the Grand Total level in this view is a quick way to balance a receipt plan to the Ttl Buy U in the Main Planning and/or Cluster Set views if desired. Aggregate the pivot grid to the desired level by removing fields as needed (i.e. Cluster Set, Cluster, Style, etc.) and enter the Ttl Buy U value in the Grand Total column at the far right. The structure of the receipt plan, including flow dates and % to total of receipt units by period, is respected while the system balances the period level entries to match the new Grand Total.</p>
+            </li>
+            <li>
+                <p><span class="Emphasis">Sales Units</span>: Planned/actual sales units for the period. This field reads from Sales Units (user, not system) in <span class="Emphasis">Sales Plan</span> view.</p>
+                <p>Calculation: (Sales / AUR)</p>
+            </li>
+            <li>
+                <p><span class="Emphasis">Shrink Units</span>: Planned/actual shrink units for the period.</p>
+                <p>Calculation: From Sales Plan view</p>
+            </li>
+            <li>
+                <p><span class="Emphasis">Site Count</span>: Count of all sites the placeholder or collection is assorted to at whatever level the pivot grid is aggregated to for the period. This number can vary by period if multiple cluster set snapshots are effective during the life of the placeholder or collection.</p>
+                <div class="Note_BasicNote">The site count does not necessarily tell if new sites opened or closed during the period. For example, changes may be due to sites moving in or out of a cluster or, if there are two periods where the site count is consistent, there might be an opening and closing in the same week. To verify, review site information in the <span class="Emphasis">Site Manager</span> and <span class="Emphasis">Site Clustering</span> solutions.</div>
+            </li>
+            <li>
+                <p><span class="Emphasis">Stock Units to Sales Units</span>: Ratio expressing the relationship of BOP Units to Sales Units.</p>
+                <p>Calculation: (BOP Units / Sales Units)</p>
+            </li>
+            <li>
+                <p><span class="Emphasis">System Receipt Units</span>: The system recommended receipt units for the period.</p>
+                <p>When set to <span class="Emphasis">False</span> (default), system policy <span class="Emphasis">Allow Receipts After Markdown</span> prevents the system from ordering additional stock past the planned markdown date. The default is <span class="Emphasis">False</span>. Set the system policy to <span class="Emphasis">True</span> if additional stock should be ordered beyond the planned markdown date.</p>
+                <p>Calculation: Receipt Planning Engine</p>
+                <p class="BasicNote">This metric seeds System Receipt Units in Sales Plan view as well.</p>
+            </li>
+            <li>
+                <p><span class="Emphasis">Supplier Order Cost</span>: External on order - cost of orders from suppliers not yet received. The calculation is: Committed + Confirmed + Unknown Units On Order (Total Orders - Inter-Branch Transfers)</p>
+            </li>
+            <li>
+                <p><span class="Emphasis">Supplier Order Units</span>: External on order - orders from suppliers not yet received. The calculation is: Committed + Confirmed + Unknown Units On Order (Total Orders - Inter-Branch Transfers)</p>
+            </li>
+            <li>
+                <p><span class="Emphasis">Total Orders AUC</span>: Average cost per unit of inbound orders for the period.</p>
+                <p>Calculation: (Total Orders Cost / Total Orders Units)</p>
+            </li>
+            <li>
+                <p><span class="Emphasis">Total Orders Cost</span>: Cost of inbound orders for the period.</p>
+                <p>Calculation: (Total Orders Units * Total Orders AUC)</p>
+            </li>
+            <li>
+                <p><span class="Emphasis">Total Orders Units</span>: Sum of all planned and confirmed incoming orders for the period.</p>
+                <p>Calculation: (Receipt Units + Committed Units + On Order Units + On Order (Unknown) Units)</p>
+            </li>
+            <li>
+                <p MadCap:conditions="General.DoNotPublish"><span class="Emphasis">Total Orders Less Receipts Cost</span>:</p>
+            </li>
+            <li>
+                <p MadCap:conditions="General.DoNotPublish"><span class="Emphasis">Total Orders Less Receipts Units</span>:</p>
+            </li>
+        </ul>
+    </body>
+</html>

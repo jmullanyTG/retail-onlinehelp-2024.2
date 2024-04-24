@@ -1,0 +1,30 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head />
+    <body>
+        <h1>Prepack engine formulas</h1>
+        <h2>Allocation Settings</h2>
+        <p>The engine will perform some limited operations to these inputs so they are within reason for the engine.</p>
+        <p>
+            <img src="../../Resources/Images/Order Manager/Prepack Engine Allocation Settings Formula.PNG" />
+        </p>
+        <h2>Prepack Settings</h2>
+        <p>The engine will perform some limited operations to these inputs so they are within reason for the engine.</p>
+        <p style="text-align: left;">
+            <img src="../../Resources/Images/Order Manager/Prepack Engine Prepack Settings Formula.png" />
+        </p>
+        <h2>Genetic Settings</h2>
+        <p>The engine will perform some limited operations to these inputs so they are within reason for the engine.</p>
+        <p style="text-align: left;">
+            <img src="../../Resources/Images/Order Manager/Prepack Engine Gettings Settings Formula.png" />
+        </p>
+        <h2>Error Calculation</h2>
+        <p>The engine will perform an error calculation to determine how close it is during each generation to finding a value that is closest to the constraints it was given.</p>
+        <p>
+            <img src="../../Resources/Images/Order Manager/Prepack Engine Error Calculation Formula.png" />
+        </p>
+        <h2>Calculation considerations</h2>
+        <p>The input settings dictate how the packs are generated along with how long the calculations will take. Typically, the population size along with termination generations, max generations, termination threshold, and the number of prepacks will linearly scale with time on the calculations in the engine. Setting these values very high may give the best solution, but may take a considerable amount of time to accomplish. There are also many numbers of acceptable answers that can exist within those inputted settings and the engine may not pick the most optimal answer even though it was given plenty of time and computation power to do so.</p>
+        <p>The overage and underage weights will affect the outcome based on how close to the optimal answer users want to be. If there are many sites in the calculation with all containing varying amounts of need for each size, one pack may not be able to completely satisfy the overage and underage weightings.</p>
+    </body>
+</html>

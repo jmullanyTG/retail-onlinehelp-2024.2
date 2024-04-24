@@ -1,0 +1,161 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head>
+        <link href="../TableStyles/standard.css" rel="stylesheet" MadCap:stylesheetType="table" />
+    </head>
+    <body>
+        <table style="width: 100%;margin-left: auto;margin-right: auto;mc-table-style: url('../TableStyles/standard.css');" class="TableStyle-standard" cellspacing="0">
+            <col class="TableStyle-standard-Column-Column1" />
+            <col class="TableStyle-standard-Column-Column2" />
+            <thead>
+                <tr class="TableStyle-standard-Head-Header1">
+                    <th class="TableStyle-standard-HeadE-Column1-Header1">System Policy</th>
+                    <th class="TableStyle-standard-HeadD-Column2-Header1">Description</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">Active Variant Threshold Factor</td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">Target Creation - Calculation and Rationalization Processes.  Percentage of a variant's deseasonalized average sales that must be met for that period to be considered "Active".  Formatted as a decimal (e.g. 0.3 = 30%). Recommended setting: 0.3.</td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">Active Variant Time On Offer Minimum</td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">Target Creation - Rationalization Process.  Percentage of the scenario time frame that an item must have been on offer  to be considered "Active".  Formatted as a decimal (e.g. 0.31 = 31%). Recommended setting: 0.31.</td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">Average Inclusion Threshold</td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">Target Creation - Calculation and Rationalization Processes.  Percentage of a variant's maximum sales that must be met for a period to be considered in the deseasonalization process.  Periods of sales for the variant below the threshold will be removed before deseasonalization.  Formatted as a decimal (e.g. 0.03 = 3%). Recommended setting: 0.03.</td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">Calculate: Cluster Set Snapshots for Comparison Data</td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">Target Creation - Calculation and Rationalization Processes.  Indicates what time period of cluster set snapshots to use for Comparison metrics.  A value of True (1) will use the snapshot active during the comparison time frame.  A value of False (0) will use the cluster set snapshot active during the last period of the selected Window of Time for the scenario.</td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">Calculate: Target Filter Item Master Group</td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">Target Creation - Calculation and Rationalization Processes.  Indicates which Item Master Group should be used to additionally filter placeholders in use by cluster.  A value of 0 indicates this feature is not in use.  The value should be 1 - 20 for an ItemMasterGroup 1 - 20 selection, or 21 for Variant, 22 for Style, and 23 for Color.</td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">Calculate: User Values in Carryover Data</td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">Target Creation - Calculation Processes.  Reference sales override values for Carryover Sales in Target Creation for future periods</td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">Cleanse: Active Variant Threshold Factor</td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">Target Creation - Calculation and Rationalization Processes.  Percentage of a variant's deseasonalized average sales that must be met for that period to be considered "Active".  Formatted as a decimal (e.g. 0.3 = 30%).</td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">Cleanse: Active Variant Time On Offer Minimum</td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">Target Creation - Rationalization Process.  Percentage of the scenario time frame that an item must have been on offer for in order to considered "Active".  Formatted as a decimal (e.g. 0.31 = 31%).</td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">Cleanse: Active Variant Total Minimum</td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">
+                        Target Creation - Calculation and Rationalization Processes.  Percentage of the average all active variants' total sales that must be met for a variant to be considered "Active".  Formatted as a decimal (e.g. 0.1 = 10%). 
+                        </td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">Cleanse: Average Inclusion Threshold
+</td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">Target Creation - Calculation and Rationalization Processes.  Percentage of a variant's maximum sales that must be met for a period to be considered in the deseasonalization process.  Periods of sales for the variant below the threshold will be removed before deseasonalization.  Formatted as a decimal (e.g. 0.03 = 3%).
+</td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">Cleanse: Median Period Total Threshold
+</td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">Target Creation - Calculation and Rationalization Processes.  Percentage of a periods's median sales that must be met for a period total to be considered in the deseasonalization process.  Periods with total sales below the threshold will be overwritten with the percentage of the median.  Formatted as a decimal (e.g. 0.5 = 50%).
+</td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">Config: Calendar</td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">The ID of the Calendar to use when creating scenarios in standalone mode (this property will be superceded by the Assortment Plan property if used in the context of AP).</td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">Config: Code/Description Display</td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">
+                        This policy describes how to display properties that have a code and description option, like hierarchy levels or attributes.
+
+ 
+                        <p>The options are: </p><ul><li><p>
+
+Code
+
+</p></li><li><p>Description
+
+</p></li><li><p>Code (Description)
+
+</p></li><li><p>Description (Code)
+
+</p></li></ul><p>The default is <span class="Emphasis">Code</span>.</p></td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">Config: Currency</td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">The ID of the Currency to use when creating scenarios in standalone mode (this property will be superceded by the Assortment Plan property if used in the context of AP).</td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">Config: Period Type</td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">The ID of the Period Type to use when creating scenarios in standalone mode (this property will be superceded by the Assortment Plan property if used in the context of AP).
+</td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">Config: Product Hierarchy</td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">The ID of the Variant hierarchy to use when creating scenarios in standalone mode (this property will be superceded by the Assortment Plan property if used in the context of AP).</td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">Config: Rationalize ViewCollectionSet UUID</td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">The identifier (UUID) of the ViewCollectionSet that will be the primary UI within the module.
+
+</td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">Config: Site Aggregation</td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">The level to which the geographical dimension should be aggregated.  The choices are Cluster (aggregate to cluster set / cluster level), Site (aggregate to site), and Level (aggregate to lowest hierarchy level).  If choosing Cluster, cluster sets must be configured in the Site Clustering module.
+</td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">Config: Site Hierarchy</td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">The ID of the Site hierarchy to use when creating scenarios in standalone mode (this property will be superceded by the Assortment Plan property if used in the context of AP).</td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">Config: Target ViewCollectionSet UUID</td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">The identifier (UUID) of the ViewCollectionSet that will be the primary UI within the module.</td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">Default: Use Cluster Constraint</td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">
+                       The default value for the property Use Cluster Constraint when segments are created.
+                        </td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">Maintenance: Days To Keep Deleted Data</td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">The maximum number of days that deleted data will be held (hidden) in the database.  Set a lower number for more aggressive deleting and more space conservation.
+</td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">Marginal Return Curve Extrapolation</td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">Target Creation - Rationalization Process.  Integer representing the minimum number of data points required in a given period for the system to use the original calculated intra-style marginal return curve in determining the number of recommended choices to assign to each recommended collection. If this minimum is not met, the system will calculate a weighted curve based on the original intra-style marginal return curve and a curve calculated at a higher level of the product hierarchy to provide a more accurate recommendation. Recommended setting: 12.</td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">Median Period Total Threshold</td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">Target Creation - Calculation and Rationalization Processes.  Percentage of a period's median sales that must be met for a period total to be considered in the deseasonalization process.  Periods with total sales below the threshold will be overwritten with the percentage of the median.  Formatted as a decimal (e.g. 0.5 = 50%). Recommended setting: 0.5.</td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">Rationalize: Marginal Return Curve Extrapolation</td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">Target Creation - Rationalization Process.  Integer representing the minimum number of data points required in a given period for the system to use the original calculated intra-style marginal return curve in determining the number of recommended choices to assign to each recommended collection. If this minimum is not met, the system will calculate a weighted curve based on the original intra-style marginal return curve and a curve calculated at a higher level of the product hierarchy to provide a more accurate recommendation.</td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">Rationalize: Pareto Threshold</td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">Target Creation - Rationalization Process.  When Comparison Active variants are sorted by productivity in descending order, the variant that causes the cumulative sum to meet this percent of total is the Pareto Choice Count.  For example, if the Pareto Threshold is 95%, and when rationalizing, the 37th variant has a cumulative productivity that is 95.4% of total productivity, the system will determine 37 as the Pareto Choice Count. Formatted as a decimal (e.g. 0.95 = 95%).</td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">Target Filter Item Master Group</td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">
+                       Target Creation - Calculation and Rationalization Processes.  Indicates which Item Master Group should be used to additionally filter placeholders in use by cluster.  A value of 0 indicates this feature is not in use.  The value should be 1 - 20 for an ItemMasterGroup, or 21 for Variant, 22 for Style, and 23 for Color. 
+                    </td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyB-Column1-Body1">Use  Comparison Cluster Set Snapshots for Comparison Data</td>
+                    <td class="TableStyle-standard-BodyA-Column2-Body1">Target Creation - Calculation and Rationalization Processes. Indicates what time period of cluster set snapshots to use for Comparison metrics. A value of True (1) will use the snapshot active during the comparison time frame. A value of False (0) will use the cluster set snapshot active during the last period of the selected Window of Time for the scenario.</td>
+                </tr>
+            </tbody>
+        </table>
+    </body>
+</html>

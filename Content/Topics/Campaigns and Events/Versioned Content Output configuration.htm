@@ -1,0 +1,76 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" xml:lang="en-us">
+    <head>
+        <link href="../../Resources/TableStyles/standard.css" rel="stylesheet" MadCap:stylesheetType="table" /><title></title>
+    </head>
+    <body>
+        <h1>Versioned content output </h1>
+        <p>Users with administrative rights can version the composition of any Versioned Content Export file. The settings used to export versioned content for use with Adobe InDesign or other creative layout applications are located in the <span class="Emphasis">Versioned Content Output Configuration</span> tab. </p>
+        <p>To access the <span class="Emphasis">Versioned Content Output File Export Settings</span> tab, open an Event and navigate to <span class="Emphasis">Event Workbench &gt; Output</span>.</p>
+        <p>
+            <img src="../../Resources/Images/Events/Non Export Prefix Issue.PNG" class="LargeImages" />
+        </p>
+        <h2>Versioned content output file export settings</h2>
+        <p>The settings of the output file are configured in the <span class="Emphasis">Versioned Content Output File Export Settings tab</span>. These settings are configured by Professional Services and should not be modified without assistance from ToolsGroup JustEnough Professional Services or Support.</p>
+        <table class="TableStyle-standard" cellspacing="0" style="mc-table-style: url('../../Resources/TableStyles/standard.css');">
+            <thead>
+                <tr class="TableStyle-standard-Head-Header1">
+                    <th class="TableStyle-standard-HeadE-Column1-Header1">Field</th>
+                    <th class="TableStyle-standard-HeadD-Column2-Header1">Description</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">
+                       Output Root
+                    </td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">
+                        The root destination directory for exported output files. Subfolders are created for the Event and its associated Slot Sets. The output files are stored under the Slot Set subfolders.
+                    </td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">
+                        Image DTP Path Attribute
+                    </td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">
+                      The repository attribute that will be exported for every Image in an Event.
+                    </td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">
+                       Non-Export Prefix
+                    </td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">
+                       Specifies a Slot Set prefix that identifies that the Slot Set should not be included in the output file. This should not be set to any value that is likely to be used in Slot Set naming.
+                    </td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">
+                       Database
+                    </td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">
+                       This setting is used to connect to the database during the export process.
+                    </td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyB-Column1-Body1">
+                       DBServer Name
+                    </td>
+                    <td class="TableStyle-standard-BodyA-Column2-Body1">
+                      This setting is used to connect to the database during the export process.
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <h2>Fields included in the output file</h2>
+        <p>The fields to be included in the output file are configured  by Professional Services and should not be modified without assistance from ToolsGroup JustEnough Professional Services or Support.</p>
+        <p>
+            <img src="../../Resources/Images/Events/Versioned Content Output file configuration.png" class="LargeImages" />
+        </p>
+        <p>There are multiple rows identified with the Source Type <span class="Emphasis">System</span> that are required to ensure the desktop publishing software plugin works properly. They are displayed for informational purposes only and cannot be modified. The remaining rows can be configured for the plugin to populate desktop publishing software as needed or additional rows can be added.</p>
+        <h2>Issues with versioning content ouput</h2>
+        <p>If versioning is not happening for a Slot Set, the <span class="Emphasis">Non-Export Prefix</span> setting could be the source of the problem. This setting checks the Slot Set Name to see if it starts with the designated prefix, and excludes it from version calculations if it does. If Slot Sets are not getting versioned even though they should, checking this setting may reveal that this is the case because of how the Slot Set is named, or a bad prefix value for the setting. 
+		</p>
+        <p>If the prefix is not to be used the easiest way to ensure it will not interfere with versioning is set the value to <span class="Emphasis">Export all Slot Sets</span> (which must be manually keyed).</p>
+    </body>
+</html>

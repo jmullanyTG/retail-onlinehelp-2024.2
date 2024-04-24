@@ -1,0 +1,12 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head />
+    <body>
+        <h1>FX neutralization</h1>
+        <p>One of the central tenets in MFP is that there is a source of truth number for each period.  For example, Week 27 of 2022 sold X dollars, no matter whether this metric is displayed as sales for 2022_wk27, LY sales for 2023_wk27, or LLY sales for 2024_wk27.  </p>
+        <p>FX neutralization breaks this tenet. There is no source of truth for what a period sold when this feature is enabled.  The value shown depends on the conversion rate used at the time, so the same metric represented multiple times on the screen will display differently.</p>
+        <p>Comparing LY FX neutralized metrics over time loses meaning, because different conversion rates are used over time.  For example, if the channel sold €1000 in two consecutive weeks, but the first week uses 1.15 conversion rate and the second uses 1.10, then the values displayed will be $1150 and $1100, which will make it appear as if there was a difference in sales over time, when there wasn’t.  While the effect of conversion rate is neutralized when comparing Sales to LY Sales within a single week, it is not neutralized when comparing week to neighboring week.</p>
+        <p>Implementing this functionality comes with performance and data storage costs.  While every effort was made to minimize these costs, much more data is cached, and there are small performance hits during weekly maintenance, Initialize / Seed / Re-seed / Merge operations, and monthly processing.  These costs are unavoidable, as the breaking of the “single source of truth” paradigm requires the system to cache and look up not just one copy of a metric value for a period, but several copies with different conversion rates applied.</p>
+        <MadCap:miniTocProxy style="mc-toc-depth: 1;" />
+    </body>
+</html>

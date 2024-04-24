@@ -1,0 +1,197 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" xml:lang="en-us">
+    <head>
+        <link href="../../Resources/TableStyles/standard.css" rel="stylesheet" MadCap:stylesheetType="table" /><title></title>
+    </head>
+    <body>
+        <h1>Defined Promotions section </h1>
+        <p>
+            <img src="../../Resources/Images/Assortment Planning/Defined Promotions Section.png" class="LargeImages" />
+        </p>
+        <p>When there are active applications for a given promotion, all fields are locked for editing except <span class="Emphasis">Name</span>, <span class="Emphasis">Description</span>, <span class="Emphasis">Privacy</span>, and <span class="Emphasis">Sharing Settings</span>. Promotions with active applications are conditionally formatted with bold text with locked fields also being italicized.</p>
+        <p>
+            <img src="../../Resources/Images/Assortment Planning/Promotion with Active Applications Bolded.png" class="LargeImages" />
+        </p>
+        <h2>Toolbar buttons</h2>
+        <table style="mc-table-style: url('../../Resources/TableStyles/standard.css');margin-left: auto;margin-right: auto;" class="TableStyle-standard" cellspacing="0">
+            <col class="TableStyle-standard-Column-Column1" style="width: 146px;" />
+            <col class="TableStyle-standard-Column-Column2" />
+            <thead>
+                <tr class="TableStyle-standard-Head-Header1">
+                    <th class="TableStyle-standard-HeadE-Column1-Header1">Button</th>
+                    <th class="TableStyle-standard-HeadD-Column2-Header1">Description</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1"><span class="Emphasis">New</span>
+                    </td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">Adds a new line in which the user can define a new promotion.</td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1"><span class="Emphasis">Delete</span>
+                    </td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">
+                         Removes the selected promotion from the list of defined promotions. 
+                        <p>Users are not asked to confirm deletion of promotions, so be certain the promotion should be deleted.</p></td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1"><span class="Emphasis">Fields</span>
+                    </td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">Opens the <span class="Emphasis">Customization</span> dialog in which users can drag fields to or from the tab’s header area and this dialog to customize the view. Custom layouts can be saved or restored by right-clicking in the grid and selecting Save Layout or Restore Layout, respectively.</td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1"><span class="Emphasis">Save</span>
+                    </td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">Saves all newly created promotions and changes or deletions of existing promotions made since the last save.</td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyB-Column1-Body1"><span class="Emphasis">Cancel</span>
+                    </td>
+                    <td class="TableStyle-standard-BodyA-Column2-Body1">Removes all newly created promotions and undoes deletions and change of existing promotions&#160;made since the last save.</td>
+                </tr>
+            </tbody>
+        </table>
+        <h2>Grid fields</h2>
+        <ul>
+            <li><span class="Emphasis">Name</span>: The name for the promotion</li>
+            <li><span class="Emphasis">Description</span>: The description for the promotion</li>
+            <li>
+                <p><span class="Emphasis">Privacy</span>: The user access settings for the promotion</p>
+                <ul>
+                    <li><span class="Emphasis">Public</span>: everyone with access to Promotions can edit this promotion</li>
+                    <li><span class="Emphasis">Private</span>: only the user who created this promotion can edit this promotion</li>
+                    <li><span class="Emphasis">Shared</span>: only specified users with access to Promotions can edit this promotion</li>
+                </ul>
+            </li>
+            <li><span class="Emphasis">Sharing Settings</span>: The specific users to grant permission to edit this promotion. Only valid when Privacy is set to Shared.</li>
+            <li><span class="Emphasis">Type</span>: The type for the promotion. Promotion types are defined during product implementation. In this version of Promotions, types are informational only and do not affect the promotion definition or the way it is applied.</li>
+        </ul>
+        <ul>
+            <li>
+                <p><span class="Emphasis">AUR Effects</span>: Only one AUR effect from the below list can be applied to a given promotion. On setting one of the following, the other fields are grayed out and made inactive but can be made active again by clearing the value from the field set.</p>
+                <p>
+                    <img src="../../Resources/Images/Assortment Planning/AUR Effects.png" class="LargeImages" />
+                </p>
+                <table style="width: 100%;margin-left: auto;margin-right: auto;mc-table-style: url('../../Resources/TableStyles/standard.css');" class="TableStyle-standard" cellspacing="0">
+                    <col class="TableStyle-standard-Column-Column1" />
+                    <col class="TableStyle-standard-Column-Column2" />
+                    <thead>
+                        <tr class="TableStyle-standard-Head-Header1">
+                            <th class="TableStyle-standard-HeadE-Column1-Header1">Option</th>
+                            <th class="TableStyle-standard-HeadD-Column2-Header1">Description</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr class="TableStyle-standard-Body-Body1">
+                            <td class="TableStyle-standard-BodyE-Column1-Body1"><span class="Emphasis">Replacement AUR</span>
+                            </td>
+                            <td class="TableStyle-standard-BodyD-Column2-Body1">An explicit new AUR to be assigned to all placeholder/clusters the promotion is applied to.</td>
+                        </tr>
+                        <tr class="TableStyle-standard-Body-Body1">
+                            <td class="TableStyle-standard-BodyE-Column1-Body1"><span class="Emphasis">Promotion Discount ($)</span>
+                            </td>
+                            <td class="TableStyle-standard-BodyD-Column2-Body1">The amount by which the AUR of placeholder/clusters the promotion is applied to is decreased.</td>
+                        </tr>
+                        <tr class="TableStyle-standard-Body-Body1">
+                            <td class="TableStyle-standard-BodyB-Column1-Body1"><span class="Emphasis">Promotion Discount (%)</span>:</td>
+                            <td class="TableStyle-standard-BodyA-Column2-Body1">Sets a percentage by which the AUR of the placeholder/clusters the promotion is applied to is decreased.</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </li>
+            <li>
+                <p><span class="Emphasis">Global</span>: Whether the promotion is a global promotion or not. Global promotions gain the added behavior option of Supersede.</p>
+                <p>Aside from the above, the global promotion designation is purely informational. While global promotions are typically applied to all products or large section of the product hierarchy, this is not required.</p>
+            </li>
+            <li><span class="Emphasis">Exclusion Filter</span>: A product filter of placeholders to exclude from any applications of the promotion. Clicking in this field displays the <span class="Emphasis">Items</span> dialog in which the product filter to be used is set. Once an exclusion filter is set the field cannot be blanked out. To avoid using an exclusion filter after one is set, define a filter with no criteria so it returns no items and assign that (nothing is excluded from the promotion).</li>
+            <p>
+                <img src="../../Resources/Images/Assortment Planning/AP Items filter dialog.png" class="LargeImages" />:</p>
+            <p class="BasicNote">Any items that belong to an exclusion filter or their sales plans do not fall within the eligibility period if one is set are not modifiable within the <span class="Emphasis">Promotion Detail View</span> tab.</p>
+            <p>
+                <table style="width: 100%;margin-left: auto;margin-right: auto;mc-table-style: url('../../Resources/TableStyles/standard.css');" class="TableStyle-standard" cellspacing="0">
+                    <col class="TableStyle-standard-Column-Column1" style="width: 166px;" />
+                    <col class="TableStyle-standard-Column-Column2" />
+                    <thead>
+                        <tr class="TableStyle-standard-Head-Header1">
+                            <th class="TableStyle-standard-HeadE-Column1-Header1">Option</th>
+                            <th class="TableStyle-standard-HeadD-Column2-Header1">Description</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr class="TableStyle-standard-Body-Body1">
+                            <td class="TableStyle-standard-BodyE-Column1-Body1">
+                                <img src="../../Resources/Images/Assortment Planning/Hammer Filter Icon.png" class="LargeImages" />
+                            </td>
+                            <td class="TableStyle-standard-BodyD-Column2-Body1">Launches the <span class="Emphasis">Maintain Filters</span> dialog where users can create new product filters, edit, delete, or export existing product filters, and import product filter files.</td>
+                        </tr>
+                        <tr class="TableStyle-standard-Body-Body1">
+                            <td class="TableStyle-standard-BodyE-Column1-Body1"><span class="Emphasis">Cancel</span>
+                            </td>
+                            <td class="TableStyle-standard-BodyD-Column2-Body1">Closes the product filter selection dialog without setting or changing the product filter selection.</td>
+                        </tr>
+                        <tr class="TableStyle-standard-Body-Body1">
+                            <td class="TableStyle-standard-BodyB-Column1-Body1"><span class="Emphasis">Ok</span>
+                            </td>
+                            <td class="TableStyle-standard-BodyA-Column2-Body1">Sets or changes the product filter selection.</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </p>
+        </ul>
+        <ul>
+            <li>
+                <p><span class="Emphasis">Behavior</span>: Sets the stacking behavior for the promotion.</p>
+                <table style="width: 100%;margin-left: auto;margin-right: auto;mc-table-style: url('../../Resources/TableStyles/standard.css');" class="TableStyle-standard" cellspacing="0">
+                    <col class="TableStyle-standard-Column-Column1" style="width: 155px;" />
+                    <col class="TableStyle-standard-Column-Column2" />
+                    <thead>
+                        <tr class="TableStyle-standard-Head-Header1">
+                            <th class="TableStyle-standard-HeadE-Column1-Header1">Option</th>
+                            <th class="TableStyle-standard-HeadD-Column2-Header1">Description</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr class="TableStyle-standard-Body-Body1">
+                            <td class="TableStyle-standard-BodyE-Column1-Body1"><span class="Emphasis">Stacking</span>
+                            </td>
+                            <td class="TableStyle-standard-BodyD-Column2-Body1">All stacking promotions that are active in a given period combine their effects. Promotional stacking is always applied in order depending on the type of AUR effect assigned to each: New AUR, % Off, $ Off.</td>
+                        </tr>
+                        <tr class="TableStyle-standard-Body-Body1">
+                            <td class="TableStyle-standard-BodyE-Column1-Body1"><span class="Emphasis">Non-Stacking</span>:</td>
+                            <td class="TableStyle-standard-BodyD-Column2-Body1"> Non-stacking promotions operate on best-deal logic meaning the resulting AURs of applied promotions are compared and the one with the lowest AUR is applied.</td>
+                        </tr>
+                        <tr class="TableStyle-standard-Body-Body1">
+                            <td class="TableStyle-standard-BodyB-Column1-Body1"><span class="Emphasis">Supersede</span>
+                            </td>
+                            <td class="TableStyle-standard-BodyA-Column2-Body1">The supersede behavior is only valid for Global promotions. When set, supersede promotions are applied in place of any others applied during a given period regardless of whether their resulting AURs are lower.</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </li>
+        </ul>
+        <p><span class="Emphasis">Example</span>:</p>
+        <p>If 3 promotions are applied for a period, 2 stacking, and one non-stacking, as in the table below:</p>
+        <p>
+            <img src="../../Resources/Images/Assortment Planning/Promotions View_1.png" class="LargeImages" />
+        </p>
+        <p>All stacking promotions are grouped together and treated as one. In this case, <span class="Emphasis">Promo 1</span> is considered first, since it is a <span class="Emphasis">New AUR</span> promotion, followed by <span class="Emphasis">Promo 2</span>, which takes an additional 20% off the $18 result after <span class="Emphasis">Promo 1</span>. This result is compared to the result of <span class="Emphasis">Promo 3</span>, which is still lower than the result of <span class="Emphasis">Promo 1</span> and <span class="Emphasis">Promo 2</span>, so <span class="Emphasis">Promo 3</span> is ultimately applied</p>
+        <ul>
+            <li>
+                <p><span class="Emphasis">Final Index</span>: The promotional index for the promotion. Changing the Final Index at this level only affects newly created Promotion Applications. Existing applications are not changed.</p>
+            </li>
+            <li>
+                <p><span class="Emphasis">Is Always Eligible?</span>: Whether the promotion is a standing promotion with no limits on when it can be applied: Checking this clears and locks <span class="Emphasis">Eligibility Start Date</span> and <span class="Emphasis">Eligibility End Date</span> for the promotion.</p>
+            </li>
+            <li>
+                <p><span class="Emphasis">Eligibility Start Date</span>: The start date (as a period) for the time frame during which the promotion can be applied. Start dates at the Promotion Application and Application Details levels cannot be set prior to this date. </p>
+            </li>
+            <li>
+                <p><span class="Emphasis">Eligibility End Date</span>: The end date (as a period) for the time frame during which the promotion can be applied. End dates at the Promotion Application and Application Details levels cannot be set after this date.</p>
+            </li>
+            <li><span class="Emphasis">Created By</span>: The user name of the creator of the promotion.</li>
+            <li><span class="Emphasis">Create Date</span>: The date the promotion was created.</li>
+            <li><span class="Emphasis">Apply to Markdown Periods</span>: When checked, prevents promotions from being applied to any markdown periods.</li>
+        </ul>
+    </body>
+</html>

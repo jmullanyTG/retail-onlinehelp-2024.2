@@ -1,0 +1,24 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head>
+    </head>
+    <body>
+        <p>To prevent a role, such as Buyer, from changing sales plans or receipt plans in the <span class="Emphasis">Top Down Core Plan</span> view, <span class="Emphasis">Sales Plan</span> view, and <span class="Emphasis">Receipt Plan</span> view, the role's access must be read-only.</p>
+        <p>To change the role's access rights, navigate to <span class="Emphasis">System Utilities &gt; Views &gt; View Collection Sets</span> and select:</p>
+        <ul>
+            <li>
+                <p><span class="Emphasis">Assortment Top Down Core Plan</span>
+                </p>
+            </li>
+            <li>
+                <p><span class="Emphasis">Assortment Receipt Plan</span>
+                </p>
+            </li>
+            <li>
+                <p><span class="Emphasis">Assortment Sales Plan</span>
+                </p>
+            </li>
+        </ul>
+        <p>For each View Collection, click <span class="Emphasis">Edit</span>, and deselect the relevant <span class="Emphasis">Write Access</span> checkboxes in the <span class="Emphasis">User Access Rights</span> section.</p>
+    </body>
+</html>

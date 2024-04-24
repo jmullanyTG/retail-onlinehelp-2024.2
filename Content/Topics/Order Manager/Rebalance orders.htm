@@ -1,0 +1,123 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head>
+        <link href="../../Resources/TableStyles/standard.css" rel="stylesheet" MadCap:stylesheetType="table" />
+    </head>
+    <body>
+        <h1>Generating rebalance orders</h1>
+        <p>A rebalance order is a redistribution order that is run between distribution centers (DCs). These orders pull excess or leftover stock from a DC and redistribute the stock to a DC with unfulfilled sub-branch demand. </p>
+        <p>Rebalance orders are primarily filter driven to determine eligible items. After the desired Inventories have been selected, the quantities to rebalance are driven by the source stock selection options.</p>
+        <p class="BasicNote">Rebalance orders can only be run across a sibling level tier within the normal supply chain (that is a DC may not redistribute to a store, as that is a normal distribution. A store may not redistribute to a DC as that is a reconsolidation action. To resolve these tiers, the Replenish Engine references the default supply chain defined using system policy <span class="Emphasis">Default Supply Chain</span> (which is of type site/supplier).</p>
+        <h2>Setup</h2>
+        <p>The following objects must be set up before generating a distribution order:</p>
+        <ul>
+            <li>a filter that includes the items and/or sites to distribute.</li>
+            <li>the supply chain to use.</li>
+            <li>demand forecasts for the items to distribute.</li>
+            <li>stocking strategies for the items to distribute.</li>
+        </ul>
+        <h2>To generate a rebalance an order for an item</h2>
+        <ol>
+            <li>
+                <p>From the <span class="Emphasis">Execute</span> tab, click <span class="Emphasis">Order Manager</span>. </p>
+                <p>The Navigation menu displays.</p>
+            </li>
+            <li>
+                <p>In the Order toolbar, click <span class="Emphasis">Rebalance</span>. </p>
+                <p>The <span class="Emphasis">Items</span> window displays.</p>
+            </li>
+            <li>
+                <p>From the <span class="Emphasis">Filter</span> field, select the  filter with the items and sites to be included.</p>
+                <p>The <span class="Emphasis">Add Rebalance Order: Rebalance</span> window displays.</p>
+                <p>
+                    <img src="../../Resources/Images/Order Manager/Add Rebalance Order.PNG" class="LargeImages" />
+                </p>
+            </li>
+            <li>
+                <p>Select:</p>
+                <ul>
+                    <li>the item to be rebalanced from the <span class="Emphasis">Supply Chain</span> dropdown menu.</li>
+                    <li>the Source Stock.</li>
+                    <li>
+                        <p>what type of orders to rebalance (for example: <span class="Emphasis">Today's Orders</span>, <span class="Emphasis">This Week's Orders</span>).</p>
+                        <p class="BasicNote">If more than one source stock is selected, the minimum value (including zero) is considered when building the rebalance order. As such, it is best practice to select a single source stock per rebalance order.</p>
+                    </li>
+                </ul>
+            </li>
+            <li>
+                <p>Click <span class="Emphasis">Ok</span>. </p>
+                <p>The recommended orders are calculated and display on the screen. Each row represents a different recommended order and contains basic details of the order. </p>
+            </li>
+        </ol>
+        <p>Once a rebalance order has been generated, double-click rows to view the demand forecast, stocking strategy, stock holding projection, and other details that drove the order recommendation.</p>
+        <h2>Rebalance order wizard field descriptions</h2>
+        <table style="width: 100%;margin-left: auto;margin-right: auto;mc-table-style: url('../../Resources/TableStyles/standard.css');" class="TableStyle-standard" cellspacing="0">
+            <col class="TableStyle-standard-Column-Column1" />
+            <col class="TableStyle-standard-Column-Column2" />
+            <thead>
+                <tr class="TableStyle-standard-Head-Header1">
+                    <th class="TableStyle-standard-HeadE-Column1-Header1">Field</th>
+                    <th class="TableStyle-standard-HeadD-Column2-Header1">Description</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">Source</td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">System supplied information used to create the order header document.</td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">Workflow</td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">Once created, the workflow attached to order header. Defaults to “normal”, which follows the standard order document approval workflow.</td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">Name</td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">The name of the order document. Pre-populates with <span class="Emphasis">Rebalance</span>. If unchanged, is appended with the user name of the creator and the date and time of creation.</td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">Description</td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">Optional description for the order document.</td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">Owner</td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">The user name associated with the creation of the order document.</td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">Security</td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">
+                         The security setting for the order document: 
+                        <ul><li>Public - Visible and editable to all users.</li><li>Private - Visible only to the document owner and system administrator accounts.</li><li>Shared - Visible and editable to only the specified users in the shared list.</li></ul></td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">Supply Chain</td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">The supply chain used to determine stock transfer links. This supply chain must be of redistribution type (the selection options will be filtered to only include the correct type of supply chain). A redistribution supply chain may be configured within Supply Chain Manager.  </td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">Source Stock</td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">
+                        The source stock is used to determine eligibility within the filter and the quantity of stock to be rebalanced.  
+                        <ul><li><span class="Emphasis">Leftover</span> – Quantity of stock on hand in a store (controlled by site type) if today is on or beyond the planned phase-out date. Specific to Allocations and based on the allocations default supply chain.</li><li><span class="Emphasis">Projected Leftover</span> – Projected quantity of stock on hand in a store (controlled by site type) at the end of the horizon period (accounts for customer orders beyond the phase-out period). Specific to Allocations and based on the default supply chain. Projected leftover is inclusive of leftover.</li><li><span class="Emphasis">Excess</span> – Excess stock quantity defined as stock on hand greater than LT + SS + RC. Specific to Replenishment.</li><li><span class="Emphasis">Excess for Redistribution</span> – Excess stock quantity defined as stock on hand greater than LT + SS + RC + a factor as a function of forecast quantity. Specific to Replenishment.</li></ul></td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">This Week’s Orders</td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">Selects the time frame context for the engine orders. If selected, returns orders for the current week.</td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">Today’s Orders</td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">Selects the time frame context for the engine orders. If selected, returns orders for today. </td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">Future Recommended Orders</td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">Selects the time frame context for the engine orders. If selected, returns orders for the specified time frame in the context of orders placed or orders delivered. </td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">Use Pre-Calculated Orders</td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">If selected, creates the order document with the most recently cached order values for the selected inventories. These may be from an overnight task run or from a user driven action. If this is unselected, a Replenish Engine calculation runs creating the order document. </td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyB-Column1-Body1">Exclude Uploaded Orders</td>
+                    <td class="TableStyle-standard-BodyA-Column2-Body1">If selected, any uploaded orders within the filter context will not be included within the order document. </td>
+                </tr>
+            </tbody>
+        </table>
+    </body>
+</html>

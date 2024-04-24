@@ -1,0 +1,33 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head>
+    </head>
+    <body>
+        <h1>Strategy Activation view</h1>
+        <p>The <span class="Emphasis">Strategy Activation</span> view is a single column pivot grid that can be used to create Allocation Strategies and start working on them before starting to allocate. Use the <span class="Emphasis">Item Filter</span> dropdown field to filter which variants (style/color) to display. </p>
+        <p class="BasicNote">Assigned permissions determine which channels a logged-in user can activate. For the site based permissions, if the logged-in user has permission for at least one site, then they have permission to the entire channel (i.e. see the entire column for that channel). If all the sites belong in only one channel, then only one column displays.</p>
+        <p>Allocation Strategies that have already been created are check marked in the <span class="Emphasis">Activate?</span> column and grayed out. Existing strategies cannot be deleted in the <span class="Emphasis">Strategy Activation</span> view. (There is an existing nightly job that deprecates strategies.)</p>
+        <p>
+            <img src="../../Resources/Images/Allocations/Strategy Active view.PNG" class="LargeImages" />
+        </p>
+        <p>The cells for Channels that have not been activated against a particular variant are formatted white with the checkboxes in the <span class="Emphasis">Activate?</span>&#160;field being unchecked. To activate a Channel, select the <span class="Emphasis">Activate?</span>&#160;checkbox and click <span class="Emphasis">Save</span>. The <span class="Emphasis">Strategy Activation</span> view automatically refreshes and the cell is formatted to indicate the strategy has been created.</p>
+        <p>
+            <img src="../../Resources/Images/Allocations/Strategy Activation Creation.PNG" class="LargeImages" />
+        </p>
+        <p>Multiple Channels can be selected to activate against the same variant.</p>
+        <h2>Reviewing the newly created strategy</h2>
+        <p>Note the Level ID and navigate to the <span class="Emphasis">Allocation Strategy</span> view to see the newly created strategy in the <span class="Emphasis">Allocation Strategy</span> grid.</p>
+        <p>
+            <img src="../../Resources/Images/Allocations/Strategy Activation Ecom example.PNG" class="LargeImages" />
+        </p>
+        <p>Newly created strategies have an Exception Status of <span class="Emphasis">Missing Configuration</span>. Clicking <span class="Emphasis">View</span> in the <span class="Emphasis">Exception Status</span> field displays the <span class="Emphasis">Allocations Strategy Exceptions</span> dialog. To resolve, select the <span class="Emphasis">Calculate Allocation</span> checkbox and click <span class="Emphasis">Execute</span>.</p>
+        <p>
+            <img src="../../Resources/Images/Allocations/Allocation Strategy Exceptions Blank.PNG" class="LargeImages" />
+        </p>
+        <h2>Related strategies</h2>
+        <p>The related strategies are reviewed using the <span class="Emphasis">Strategy Relations</span> blade.</p>
+        <p>
+            <img src="../../Resources/Images/Allocations/Strategy Activation Creation Retail.PNG" class="LargeImages" />
+        </p>
+    </body>
+</html>

@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" xml:lang="en-us">
+    <head><title></title>
+    </head>
+    <body>
+        <h1>Constraint logic</h1>
+        <p>As order lines are determined to be eligible for constraint, the relative amount to which they are constrained varies based on several factors including order multiple, the calculated constraint window, and the calculated fixed constraint package unit. </p>
+        <ul>
+            <li><span class="Emphasis">Order Multiple</span> – The order multiple value as specified in inventory policy. </li>
+            <li><span class="Emphasis">Calculated Constraint Window</span> – A sampled period of time within which order recommendations are considered to be adjustable based on constraint logic. The calculated constraint window is determined as (LT + RC + SS days x2). </li>
+            <li><span class="Emphasis">Fixed Constraint Package Unit</span> – The quantum number of units by which a constraint adjustment may be made (either up, or down). This is largely applicable to monetary (i.e. cost or price) based constraint adjustments. </li>
+        </ul>
+        <p class="Example">If unit cost is $10 and order multiple is 6, then adjustments must be made with “$60 worth of items” as the adjustment increment. </p>
+        <p>As the constraint logic loops through each iteration, when constraint related adjustments are made, a flag internal to the logic updates denoting that the order line has been constrained within the loop/iteration. </p>
+        <p>If additional constraining is required and it does not find an order line which is eligible, then all flags reset to eligible. If on the following iteration it cannot find any eligible order lines, then the constraint logic terminates. </p>
+    </body>
+</html>

@@ -1,0 +1,91 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" xml:lang="en-us">
+    <head>
+        <title>
+        </title>
+    </head>
+    <body>
+        <h1>Creating and maintaining attribute families</h1>
+        <p>The <span class="Emphasis">Attribute Families</span> section in the <span class="Emphasis">Attribute Management</span> screen allows for the creation and maintenance of attribute families. Each attribute family contains attributes that pertain to that family and can be imported from host systems if available.</p>
+        <p>The <span class="Emphasis">Attribute Management</span> screen contains two sections: <span class="Emphasis">Attribute Families</span> and <span class="Emphasis">Attribute Values</span>.</p>
+        <p>
+            <img src="../../Resources/Images/Attribute Management/Attribute Management Screen Layout.png" class="LargeImages" />
+        </p>
+        <h2>Parameters</h2>
+        <p>There are two parameters:</p>
+        <p>
+            <span class="Emphasis">Entity Type</span>: Which attribute families are returned based on the attribute families which are associated with the entity. Only attribute families that are associated with the chosen entity are returned.</p>
+        <p>Attribute values can be assigned by entity and there are seven entities to which they can be assigned</p>
+        <ul>
+            <li>
+                <span class="Emphasis">Inventory</span> – Item/location level for attributes that relate to an item at a specific location.</li>
+            <li>
+                <span class="Emphasis">Item master</span> – Item across all locations for attributes that are the same for each item across all locations.</li>
+            <li>
+                <span class="Emphasis">Site</span> – Site based attributes that can be specified at a site level.</li>
+            <li>
+                <span class="Emphasis">Supplier</span> - Supplier specific attributes</li>
+            <li>
+                <span class="Emphasis">Customer</span> – Attributes specific to customers.</li>
+            <li>
+                <span class="Emphasis">Variant</span> – Attributes that are applied to the defined variant. A variant is grouping of items for which plans are created and maintained. An example of this is a style and color. Variants are used to define real products in assortment planning.</li>
+            <li>
+                <span class="Emphasis">Variant Placeholder</span> – Variant placeholders are created in Assortment Planning to allow users to generate a plan for a variant that does not exist yet in any external system. Attributes can therefore be assigned to the variant placeholders before they become real variants.</li>
+        </ul>
+        <p>
+            <span class="Emphasis">Attribute Sets</span>: Returns the sets users want to assign attribute families to. Allows users to bring back multiple attribute sets at a time.</p>
+        <p class="BasicNote"> Newly created Attribute Sets do not immediately appear for selection in this dropdown if they are for the currently selected entity type. To refresh the dropdown and show new sets, select a different entity type then select the entity type of the new set once more.</p>
+        <h2>Attribute Families section</h2>
+        <p>The <span class="Emphasis">Attribute Families</span> section has columns that define how attributes can be assigned and which families are available in the appropriate sets.</p>
+        <p>
+            <img src="../../Resources/Images/Attribute Management/Attribute Families Widget.png" class="LargeImages" />
+        </p>
+        <ul>
+            <li>
+                <span class="Emphasis">Family Name</span> – A descriptive name for the family of attributes.</li>
+            <li>
+                <span class="Emphasis">Family Description</span> – A description of the attribute family and the attributes it contains.</li>
+            <li>
+                <span class="Emphasis">Entity types</span> – The entity types selection restricts the data entities to which the attributes within the family can be applied.
+		 <p class="Important">The Variant type must be assigned for an attribute family to be definable on variants. The Variant Placeholder entity type must be assigned for an attribute family to be definable for placeholders within Assortment Planning.</p><p class="BasicNote">By only assigning the Variant Placeholder entity type to a family, that family is not assignable to variants and is exclusively used within Assortment Planning. This is useful in organizations where a master data team defines the primary attributes but there are others that users within the merchandising team wish to assign while planning.</p></li>
+            <li>
+                <p>
+                    <span class="Emphasis">Data Type</span> - The associated data type.</p>
+            </li>
+            <li>
+                <p>
+                    <span class="Emphasis">Allow Multiple Values</span> – Whether users can select multiple attributes from a family to assign to an entity.</p>
+                <p>If an attribute type is converted from allowing multiple values to a single value only, then the following message displays warning that all the previous values saved for the attribute are deleted.</p>
+                <p>
+                    <img src="../../Resources/Images/Attribute Management/Deleting Multiple Values.PNG" class="LargeImages" />
+                </p>
+            </li>
+            <li>
+                <p>
+                    <span class="Emphasis">AP Updates Variants</span> – Whether changes are allowed in Assortment Planning to attributes attached to assigned variants. If checked, the corresponding attribute families are editable in Assortment Planning for placeholders with assigned variants, and any changes made to them update the assigned variant’s attributes. Unchecked means the corresponding attribute families are grayed out and read-only in Assortment Planning for placeholders with assigned variants.</p>
+                <p>
+                    <img src="../../Resources/Images/Attribute Management/AP Updates Variants.png" class="LargeImages" />
+                </p>
+                <p class="BasicNote">This setting displays if system policy <span class="Emphasis">Update Variant Attribute Values In Assortment Planning</span> is set to <span class="Emphasis">True</span> and is only valid for attribute families with the Variant Entity Type assigned. <MadCap:conditionalText MadCap:conditions="General.PrintOnly">For more information, refer to the Assortment Planning User Guide. </MadCap:conditionalText><MadCap:conditionalText MadCap:conditions="General.ScreenOnly">For more information, see <MadCap:xref href="../Assortment Planning/Attributes View.htm">Attributes view</MadCap:xref>.</MadCap:conditionalText></p>
+            </li>
+            <li>
+                <span class="Emphasis">Attribute Set Assignment</span> – The attribute sets selected in the filter described above will dynamically form columns which users can check to specify whether an attribute family is available for that set.</li>
+        </ul>
+        <h2>Attribute Values section</h2>
+        <p>On selecting the attribute family from the widget above, the <span class="Emphasis">Attribute Values</span> widget updates. </p>
+        <p>
+            <img src="../../Resources/Images/Attribute Management/Attribute Values Section.png" class="LargeImages" />
+        </p>
+        <p>The <span class="Emphasis">Attribute Values</span> widget allows users to create new widgets that have not been imported from a host system.</p>
+        <ul>
+            <li>
+                <span class="Emphasis">Value Code</span> – A unique code that identifies the attribute value.</li>
+            <li>
+                <span class="Emphasis">Value Description</span> – The value description describes the attribute value.</li>
+            <li>
+                <span class="Emphasis">Value External ID</span> – (read-only) Populates with attribute values from external systems. Users may not edit attribute values on imported data.</li>
+            <li>
+                <span class="Emphasis">Behavior</span> – For each attribute set to which the attribute value may be assigned, there are three behaviors for the value:<ul><li>Blank/None – Users cannot select this attribute value to assign to a product associated with the attribute set.</li><li><span class="Emphasis">Allowed</span> – The attribute value is allowed to be set against a product associated with the attribute set.</li><li><span class="Emphasis">Default</span> – The attribute value or values (if multi values are allowed) that will default against any product associated with the attribute set.</li></ul></li>
+        </ul>
+    </body>
+</html>

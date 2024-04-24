@@ -1,0 +1,92 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" xml:lang="en-us">
+    <head>
+        <link href="../../Resources/TableStyles/standard.css" rel="stylesheet" MadCap:stylesheetType="table" />
+        <title>
+        </title>
+    </head>
+    <body>
+        <h1>Creating new content versions</h1>
+        <p>Content versions are created using the <span class="Emphasis">Content Versions</span> tab of the <span class="Emphasis">Content Manager Configuration</span> window. </p>
+        <ul>
+            <li>To associate a new or modified content version with a promotion in an event that is currently in planning, first remove the promotion from the event slot and then add the promotion to the event again to reference the new content version. Any prior modifications to event specific content will be lost.</li>
+            <li>Promotions added to events after a new content version is created automatically inherit the new content version.</li>
+        </ul>
+        <h2>Creating new versions</h2>
+        <ol>
+            <li>Select the <span class="Emphasis">Content Versions</span> tab.</li>
+            <li> Click <span class="Emphasis">New</span>.</li>
+            <li>
+                <p>In the <span class="Emphasis">New Content Version</span> dialog box, enter values as required.</p>
+            </li>
+            <li>
+                <p>Click <span class="Emphasis">Ok</span>.</p>
+            </li>
+        </ol>
+        <h2>Editing content versions</h2>
+        <ol>
+            <li>
+                <p> In the <span class="Emphasis">Content Versions</span> tab, select the content version to modify. </p>
+                <p>
+                    <img src="../../Resources/Images/Content Manager/Edit Content Version dialog.png" class="LargeImages" />
+                </p>
+            </li>
+            <li>
+                <p>Click <span class="Emphasis">Edit</span> to open the <span class="Emphasis">Edit Content Version</span> dialog box.</p>
+            </li>
+            <li>
+                <p>Modify values as desired.</p>
+            </li>
+            <li>
+                <p>Click <span class="Emphasis">Ok</span>.</p>
+            </li>
+        </ol>
+        <h1>Field descriptions</h1>
+        <table class="TableStyle-standard" cellspacing="0" style="mc-table-style: url('../../Resources/TableStyles/standard.css');">
+            <col class="TableStyle-standard-Column-Column1" />
+            <col class="TableStyle-standard-Column-Column2" />
+            <thead>
+                <tr class="TableStyle-standard-Head-Header1">
+                    <th class="TableStyle-standard-HeadE-Column1-Header1">Field</th>
+                    <th class="TableStyle-standard-HeadD-Column2-Header1">Description</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">
+                         Content Version Name 
+                    </td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">
+                         A descriptive label to summarize the purpose of the Content Version. This identifies the Content Version for Promotion Content. 
+                    </td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">
+                        Default Content Version 
+                         
+                    </td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">
+                        If this checkbox is selected, the new content version  is the default content version. If selected, the new content version automatically includes all geographies when saved. When a promotion is added to a Slot, if there are any Geographies that are not associated with a specific Content Version, they are assigned the default Content Version. 
+                    </td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">
+                         Description 
+                    </td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">
+                        Optional.  
+                    </td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">Clusters pane</td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">In the <span class="Emphasis">Selected</span> column, select the site clusters to assign to the content version.</td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyB-Column1-Body1">Content Field pane</td>
+                    <td class="TableStyle-standard-BodyA-Column2-Body1">
+                       In the <span class="Emphasis">Display</span> column, select the content fields to assign to the content version. It is possible to:<ul><li>set the order in which selected content fields display by dragging them up or down the list.</li><li><p>control edit permissions for a content field by double-clicking in a selected row and using the <span class="Emphasis">Remove User Access</span> window.</p><p class="BasicNote">Users and roles listed in the <span class="Emphasis">Keep Role\User</span> access list can edit this field. Those in the <span class="Emphasis">Remove Role\User</span> access list can see the field but not edit it (it is read-only). </p></li></ul></td>
+                </tr>
+            </tbody>
+        </table>
+    </body>
+</html>

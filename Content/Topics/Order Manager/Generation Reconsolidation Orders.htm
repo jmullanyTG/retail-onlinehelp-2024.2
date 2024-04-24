@@ -1,0 +1,72 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head>
+        <link href="../../Resources/TableStyles/standard.css" rel="stylesheet" MadCap:stylesheetType="table" />
+    </head>
+    <body>
+        <h1>Generating reconsolidation orders</h1>
+        <p>Reconsolidation orders pull excess or leftover stock from stores, back to a distribution center through a semi-automated process. Reconsolidation recommendations can be made based on similar criteria to redistribution and rebalance orders.</p>
+        <p>Reconsolidation orders recommend a stock transfer up one level in the specified supply chain. This can be used to recall stock at the end of a season or reconsolidate excess stock back to a distribution center, if the stock is unwanted at a store.</p>
+        <p>If more than one source stock is selected, the minimum value (including zero) is considered as the eligible stock quantity when the reconsolidation order is built. If a source stock is selected with a zero value for the inventory, the reconsolidation run will not return a recommendation for that inventory.</p>
+        <p>As best practice, select a single source stock per reconsolidation order.</p>
+        <h2>To execute a reconsolidation order</h2>
+        <ol>
+            <li>In the Order toolbar, click <span class="Emphasis">Reconsolidation</span>. <p>The <span class="Emphasis">Items</span> window displays.</p><p><img src="../../Resources/Images/Order Manager/Reconsolidation-Filter.png" class="LargeImages" /></p></li>
+            <li>From the <span class="Emphasis">Filter</span> field, select the filter with the eligible items to be included in the reconsolidation order.</li>
+            <li>
+                <p>
+                 Click <span class="Emphasis">Ok</span>. </p>
+                <p>The <span class="Emphasis">Add Reconsolidation Order: Reconsolidation</span> window displays.</p>
+                <p>
+                    <img src="../../Resources/Images/Order Manager/Add Reconsolidation Order Window.png" class="LargeImages" /></p>
+            </li>
+            <li>
+                <p>Click <span class="Emphasis">Ok</span>. </p>
+            </li>
+        </ol>
+        <h3>Fields and descriptions</h3>
+        <table style="width: 100%;mc-table-style: url('../../Resources/TableStyles/standard.css');margin-left: 0;margin-right: auto;" class="TableStyle-standard" cellspacing="0">
+            <col class="TableStyle-standard-Column-Column1" />
+            <col class="TableStyle-standard-Column-Column2" />
+            <thead>
+                <tr class="TableStyle-standard-Head-Header1">
+                    <th class="TableStyle-standard-HeadE-Column1-Header1">Field</th>
+                    <th class="TableStyle-standard-HeadD-Column2-Header1">Description</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">Source</td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">System generated information used to create the order header document</td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">Workflow</td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">The workflow attached to the order header. Defaults to <span class="Emphasis">Normal</span> following the standard order document approval workflow. </td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">Name</td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">The name of the order document. This field pre-populates with <span class="Emphasis">Reconsolidation</span>. If this is not changed, it is appended with the user name of the creator and the date and time at the time of creation. </td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">Description</td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">Optional description for the order document. </td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">Owner</td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">The user name associated with the creation of the order document. </td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">Security</td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">
+                        The security setting for the order document. 
+                        <ul><li><span class="Emphasis">Public</span>: visible and editable to all users.</li><li><span class="Emphasis">Private</span>: visible only to the document owner and system administrator accounts.</li><li><span class="Emphasis">Shared</span>: visible and editable to only the specified users in the shared list.</li></ul></td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyB-Column1-Body1">Source Stock</td>
+                    <td class="TableStyle-standard-BodyA-Column2-Body1">Determines eligibility in the filter and the quantity of stock to be reconsolidated. 
+                        <ul><li><span class="Emphasis">Leftover</span>: the quantity of stock on hand in a store (controlled by site type) if today is on or beyond the planned phase-out date. Specific to allocations and based on the allocations default supply chain.</li><li><span class="Emphasis">Projected Leftover</span>: the projected quantity of stock on hand in a store (controlled by site type) at the end of the horizon period (accounts for customer orders beyond the phase-out period). Specific to allocations and based on the default supply chain. Projected leftover is inclusive of leftover.</li></ul></td>
+                </tr>
+            </tbody>
+        </table>
+    </body>
+</html>

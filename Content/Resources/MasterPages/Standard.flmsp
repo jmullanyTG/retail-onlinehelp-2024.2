@@ -1,0 +1,37 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:lastBlockDepth="5" MadCap:lastHeight="329" MadCap:lastWidth="485">
+	<head>
+		<!-- Global site tag (gtag.js) - Google Analytics -->
+		<script async="" src="https://www.googletagmanager.com/gtag/js?id=UA-176555275-1">
+		</script>
+		<script>
+			window.dataLayer = window.dataLayer || [];
+			function gtag(){dataLayer.push(arguments);}
+			gtag('js', new Date());
+
+			gtag('config', 'UA-176555275-1');
+		</script>
+		<!-- End Google Analytics -->
+		<link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400" rel="stylesheet" />
+	</head>
+	<body>
+		<div class="StandardSearchBar">
+			<MadCap:searchBarProxy data-mc-skin="/Project/Skins/StandardPageSearchBar.flskn" />
+		</div>
+		<div class="StandardBody">
+			<div class="StandardBreadcrumbs">
+			
+				<MadCap:breadcrumbsProxy />
+			</div>
+			<div class="Row-StandardMasterPage">
+				<div>
+					<MadCap:menuProxy style="mc-context-sensitive: True;mc-include-parent: True;mc-include-siblings: True;mc-include-children: True;" data-mc-skin="/Project/Skins/NavigationMenu.flskn" /> 
+				</div>
+				<div>   
+					<MadCap:bodyProxy />
+				</div>
+			</div>
+		</div>
+		<MadCap:snippetBlock src="../Snippets/html-page-footer.flsnp" />
+	</body>
+</html>

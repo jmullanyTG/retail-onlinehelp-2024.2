@@ -1,0 +1,38 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" xml:lang="en-us">
+    <head><title></title>
+    </head>
+    <body>
+        <h1>Media Manager Overview</h1>
+        <p>Media Manager supports the management of product media such as images for the marketing and advertising teams. Digital assets are managed from a centralized dashboard including product images, manufacturer logos, and icons. The digital assets can be used for display in different channels. Thumbnails, low and high resolution images, and print-ready images are supported.</p>
+        <p>
+            <img src="../../Resources/Images/Media Manager/Media Manager Overview.png" class="LargeImages" />
+        </p>
+        <p>To access this solution, click <span class="Emphasis">Media</span> on the <span class="Emphasis">Management</span> tab.</p>
+        <h2>File Storage API</h2>
+        <p>The File Storage API can handle Uniform Resource Identifiers (URI) allowing for the import and usage within ToolsGroup JustEnough of a user's images. Users need to supply the image name, image file extension type, and the image's URL. </p>
+        <p>Additionally, Repository Manager can accept URIs and pass the images to File Store API for storage and usage. For Repository Manager, users need to provide the name of the file the image should be stored in. </p>
+        <p>There is a check to verify if the image's URL has changed and whenever the image is accessed past a specified amount of time.
+
+When the URL is changed for the document ID, the cache of the image is cleared and re-imported.</p>
+        <h3>Supported image file extension types:</h3>
+        <ul>
+            <li>
+                <p>BMP</p>
+            </li>
+            <li>
+                <p>GIF</p>
+            </li>
+            <li>
+                <p>JPG</p>
+            </li>
+            <li>
+                <p>JPEG</p>
+            </li>
+            <li>
+                <p>PNG</p>
+            </li>
+        </ul>
+        <p class="BasicNote">Non-image files are not supported. Attempts to import unsupported files are blocked and a warning to users is generated.</p>
+    </body>
+</html>

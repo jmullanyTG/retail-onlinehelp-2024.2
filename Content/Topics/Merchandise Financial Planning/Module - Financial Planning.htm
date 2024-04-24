@@ -1,0 +1,163 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head>
+        <link href="../../Resources/TableStyles/standard.css" rel="stylesheet" MadCap:stylesheetType="table" />
+    </head>
+    <body>
+        <h1>System policies related to the financial planning module</h1>
+        <table class="TableStyle-standard" cellspacing="0" style="mc-table-style: url('../../Resources/TableStyles/standard.css');margin-left: 0;margin-right: auto;" MadCap:autosort="False">
+            <col class="TableStyle-standard-Column-Column1" MadCap:autosortPriority="0" MadCap:autosortDirection="ascending" />
+            <col class="TableStyle-standard-Column-Column2" />
+            <thead>
+                <tr class="TableStyle-standard-Head-Header1">
+                    <th class="TableStyle-standard-HeadE-Column1-Header1">System Policy</th>
+                    <th class="TableStyle-standard-HeadD-Column2-Header1">Description</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1" style="font-weight: normal;">Approved Snapshot Retention Days
+</td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">How many days approved snapshots are kept in the system. Default = 720.</td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1" style="font-weight: normal;">DC Stock Include Pending</td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">Whether to reduce DC Available On Hand by Pending stock.</td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1" style="font-weight: normal;">DC Stock Include Reserved</td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">Whether to include Reserved stock in the EOP Units DC Split and DC Available On Hand metrics.</td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1" style="font-weight: normal;">DC Stock Splits future number of periods
+</td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">Number of periods forward from the current period to determine % DC stock splits by channel. Default = 8.</td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1" style="font-weight: normal;">Deleted Plan Retention Days
+</td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">
+                        How many days plans are kept in the system after being deleted (closed). Default = 0. 
+                    </td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1" style="font-weight: normal;">Enable FX Neutralization in MFP</td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">This policy enables or disables currency neutralization functionality. Default(False)</td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1" style="font-weight: normal;">Enable VAT in MFP
+</td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">
+                         Whether to use VAT. This should only be set once during implementation. Default = False. 
+                        <ul><li>True = Use VAT</li><li>False = Do not use VAT</li></ul></td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1" style="font-weight: normal;">Financial Plan Master Plan Max Future Days
+</td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">Number of days forward to populate the master plan where periods exist. Start date being the start of the current period. Default = 720.</td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1" style="font-weight: normal;">Forecast Source</td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">
+                     Dictates which source of Forecast data to use - Inventory forecasts or aggregated level forecasts.  
+                        <p class="BasicNote">Level data should be chosen to expedite performance, but only if forecast jobs are set up to maintain hierarchy level data.</p></td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1" style="font-weight: normal;">Include DC&#160;Stock Split into EOP / BOP</td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">Whether to include DC stock, which is split into channels during actualization, into the rolling EOP / BOP calculations.</td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">Include On Order in EOP / BOP</td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">
+                         Whether to include On Order and On Order Past Due into the rolling EOP / BOP calculations.
+ 
+                        <p><span class="Emphasis">NOTES</span>:</p><ul><li><p>If enabled, the following period BOP includes the On Order (under the assumption that it will be received as ordered).</p></li><li><p>Enable if the On Order is reliable, and also, the Target Receipt value does NOT include the On Order (or it will be double counted).</p></li></ul></td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1" style="font-weight: normal;">Inventory is Shared
+</td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">
+                         Whether or not DC inventory is shared among all channels. (Are receipts planned for specific channels or not?) Default = False. 
+                        <ul><li>True = Share DC&#160;inventory across channels.</li><li>False = Do not share DC&#160;inventory across channels.</li></ul></td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1" style="font-weight: normal;">MFP Plan Size Threshold</td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">Set an arbitrary size threshold for comparison to a PlanID's number of Product/Channel/Period combinations.  Exceeding the threshold will result in running the process in the WorkManager Queue.</td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">MFP Restrict Editability To Admin</td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">Restrict the editability of the following metrics to users in the Administrators group: Shrink % Of Sales, Target Receipt Freight, Season Begin.  A value of <span class="Emphasis">True</span> requires users to be administrators. A value of <span class="Emphasis">False</span> allows editability of these metrics for all users.</td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1" style="font-weight: normal;">Multi Plan Seeding Merging
+</td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">
+                      Whether to allow seeding or merging from other plans. Default = False. 
+                        <ul><li>True = Allow seeding and merging from other plans.</li><li>False = Do not allow seeding and merging from other plans.</li></ul></td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1" style="font-weight: normal;">Open Multiple Plans
+</td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">This policy enables or disables the ability to open multiple plans. Default(True)</td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1" style="font-weight: normal;">Planning VAT Rate Product Hierarchy ID
+</td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">Product Hierarchy ID to use for planning VAT rates.</td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">Product Parameter Sort</td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">
+                       Determine the sorting order of the Product hierarchy dropdown, by Code or Description. 
+                        </td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1" style="font-weight: normal;">Run module in Debug mode
+</td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">
+                        Whether or not to run Financial Planning module procedures in debug mode.  
+                        <ul><li>0 = do not run in debug mode.</li><li>1 = print records to application log.</li><li>2 = return immediate results sets. This mode must be run through development tools; it will fail if run through the UI. </li></ul></td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1" style="font-weight: normal;">Save the LLY data for hybrid financial plans
+</td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">
+                       For hybrid financial plans, whether or not to save LLY&#160;data is saved on initialize and during maintenance. 
+                        <ul><li>True = LLY&#160;data  is saved on initialize and during maintenance.</li><li>False = LLY&#160;data is not saved.</li></ul></td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1" style="font-weight: normal;">Snapshot ViewCollectionSetID
+</td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">Thee ViewCollectionSetID for the snapshots view collection set.</td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1" style="font-weight: normal;">SqlServerPivotGrid Recommended Maximum number of SQL Data Rows
+</td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">Recommended maximum number of rows to return for any SQL Server Pivot Grid. If exceeded, a warning message is displayed in the UI. Default=2250.</td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1" style="font-weight: normal;">Stock On Hand Actualization Batch Size</td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">This policy only applies to the Hybrid Retail plan type, when calculating Target BOP Cost during weekly maintenance.  This policy determines which calculation direction should be used when COGS recalculates: hold Target Stock Cost to COGS and calculate Target BOP Cost (value of True), or hold Target BOP Cost and calculate Target Stock Cost to COGS (value of False).</td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1" style="font-weight: normal;">Stock On Hand Actualization Source</td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">
+                        Dictates which source of stock on hand data to use during actualization - Inventory level data, or aggregated Variant level data.  Variant level data should be chosen to expedite performance, but only if maintenance or imports are set up to maintain Variant-level data.<MadCap:conditionalText MadCap:conditions="General.ScreenOnly"> For more information, see <MadCap:xref href="../Multi-Module Technical Content/Inventory Level Archive tables.htm">Inventory Level Archive (ILA) data stores</MadCap:xref>.</MadCap:conditionalText></td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1" style="font-weight: normal;">Target BOP Calc Direction For Maintenance</td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">Use tbl_SupplierReceipts solely for historic receipts in MFP and not a combination of tbl_SupplierReceipts, tbl_SupplierOrderHeader and tbl_SupplierOrderLine.</td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1" MadCap:conditions="General.DoNotPublish">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1" style="font-weight: normal;">Use Hybrid Markdowns and COGS in Retail accounting method</td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">Enable Hybrid Markdowns In Retail Accounting. Permanent, Promo and Hybrid Markdowns and COGS fields will be displayed.</td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyB-Column1-Body1" style="font-weight: normal;">Use Supplier Receipts Only for Historic Receipts
+</td>
+                    <td class="TableStyle-standard-BodyA-Column2-Body1">Use <span class="Emphasis">tbl_SupplierReceipts</span> solely for historic receipts in MFP and not a combination of <span class="Emphasis">tbl_SupplierReceipts</span>, <span class="Emphasis">tbl_SupplierOrderHeader</span>, and <span class="Emphasis">tbl_SupplierOrderLine</span>.</td>
+                </tr>
+            </tbody>
+        </table>
+    </body>
+</html>

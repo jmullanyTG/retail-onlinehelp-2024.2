@@ -1,0 +1,68 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head>
+    </head>
+    <body>
+        <p>Users can specify which clusters and cluster sets should always have more choices than others by defining a nested relationship for assortment choice counts. To configure which clusters will have more choices than others, click the <span class="Emphasis">Cluster Config</span> button on the toolbar to display the <span class="Emphasis">Target Item Master Group Cluster Configuration</span> screen. The hierarchical configuration can be at the cluster level or at the cluster set level or both, depending on how users create segments and clusters.</p>
+        <p>
+            <img src="../Images/Target Choice Count/Target Creation Cluster Configuration.PNG" class="LargeImages" />
+        </p>
+        <p>The <span class="Emphasis">Cluster Containment Configuration</span> and <span class="Emphasis">Cluster Set Containment Configuration</span> sections allow users to specify which cluster sets and/or clusters should always have more choices than others.
+</p>
+        <p>In the above screen shot,   
+
+</p>
+        <ul>
+            <li>
+                <p><span class="Emphasis">Cluster A</span> will have more choices than <span class="Emphasis">Cluster B</span>, which will have more choices than <span class="Emphasis">Cluster C</span>.
+</p>
+            </li>
+            <li>
+                <p>
+the <span class="Emphasis">Retail Cluster</span> set will always have more choices than the <span class="Emphasis">E-Com Cluster</span> set, which will have more choices than the <span class="Emphasis">Outlet Cluster Set</span>. </p>
+            </li>
+        </ul>
+        <p>If clusters:</p>
+        <ul>
+            <li>
+                <p>are unique across cluster sets (e.g. cluster <span class="Emphasis">E-Com</span> only occurs in <span class="Emphasis">E-Com Cluster Set</span> or cluster <span class="Emphasis">A</span> only occurs in <span class="Emphasis">Retail Cluster Set</span>), then it is sufficient to use the <span class="Emphasis">Cluster Containment Configuration</span> section only.</p>
+            </li>
+            <li>
+                <p>are not hierarchical in nature (e.g. clusters are Warm Weather versus Cold Weather or East Coast versus West Coast), then use <span class="Emphasis">Cluster Set Containment Configuration</span> only.</p>
+            </li>
+            <li>
+                <p>are repeated in cluster sets, and cluster sets have some hierarchical nature to them (e.g. <span class="Emphasis">Retail Cluster Set</span> and <span class="Emphasis">Outlet Cluster Set</span> both contain <span class="Emphasis">A</span>,<span class="Emphasis"> B</span>, and <span class="Emphasis">C</span> clusters), then use both sections as they can be used jointly.</p>
+            </li>
+        </ul>
+        <p class="BasicNote">The two configuration sets can be used jointly or separately. </p>
+        <p>
+When cluster or cluster set constraints are configured, the <span class="Emphasis">Target New Choices</span> and <span class="Emphasis">Results Matrix</span> tabs load in the same order as the constraint configuration. The highest-level parent will be on the left, descending down to the lowest-level child on the right.</p>
+        <p class="BasicNote">For an example of how Cluster Containment works, see <MadCap:xref href="../../Topics/Assortment Planning/Cluster Containment Example.htm">Cluster containment example</MadCap:xref>.</p>
+        <h2>Configuring Cluster Containment</h2>
+        <ol>
+            <li>
+                <p> Click the down arrow in the <span class="Emphasis">Assortment Plan</span> field to select a plan.</p>
+            </li>
+            <li>
+                <p>Click <span class="Emphasis">Execute</span>.</p>
+            </li>
+            <li>
+                <p>In the Cluster Containment Configuration section, click <span class="Emphasis">New</span>.</p>
+                <p>A new blank row is appended.</p>
+            </li>
+            <li>
+                <p>Click within the <span class="Emphasis">Parent Cluster</span> and <span class="Emphasis">Child Cluster</span> fields to select clusters from a dropdown list.</p>
+            </li>
+            <li>
+                <p>Click <span class="Emphasis">Save</span>.</p>
+            </li>
+        </ol>
+        <h3>Using cluster containment configurations in scenarios</h3>
+        <p>To use a cluster containment configuration in a scenario, select the checkbox in the <span class="Emphasis">Use Cluster Constraint</span> field in the segment configuration section.</p>
+        <p>
+            <img src="../Images/Target Choice Count/Use Cluster Constraint.png" class="LargeImages" />
+        </p>
+        <p>This checkbox can be selected when Target Creation is accessed via the Assortment Planning module, or when in standalone Target Choice Count mode with <span class="Emphasis">Cluster</span> as the specified Site Aggregation Level.</p>
+        <p class="BasicNote">System policy <span class="Emphasis">Default: Use Cluster</span> Constraint determines whether the <span class="Emphasis">Use Cluster Constraint</span> field is checked or unchecked when new segments are created or generated.</p>
+    </body>
+</html>

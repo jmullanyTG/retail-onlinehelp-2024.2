@@ -1,0 +1,156 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" xml:lang="en-us">
+    <head>
+        <link href="../../Resources/TableStyles/standard.css" rel="stylesheet" MadCap:stylesheetType="table" /><title></title>
+    </head>
+    <body>
+        <h1>Creating a new filter</h1>
+        <p>New filters are created using the <span class="Emphasis">Filters</span> module and wherever filters can be selected in other modules. The process is the same except that an Entity type must be selected when creating filters in the <span class="Emphasis">Filters</span> module.</p>
+        <p>When creating filters in other modules, the entity type is pre-defined based on the current context. For example, when creating a new filter in the Supplier module, the Entity type is pre-defined as <span class="Emphasis">Supplier</span>.</p>
+        <h2>Creating filters in the Filters module</h2>
+        <ol>
+            <li>Open the <span class="Emphasis">Maintain Filters</span>dialog.  </li>
+            <li>Choose one of the following:
+				<ul><li><span class="Emphasis">Create a New Filter</span>,  click <span class="Emphasis">Ok</span>,  and select the entity type. </li><li><span class="Emphasis">Clone from Existing Filter</span> , click <span class="Emphasis">Ok</span>, and edit the filter details, criteria, and conditions.</li></ul></li>
+            <li>Click <span class="Emphasis">Ok</span> to save the new filter.</li>
+        </ol>
+        <h2>Creating filters in other modules</h2>
+        <p>Filters can be created in other modules without having to switch to the <span class="Emphasis">Filters</span> screen.</p>
+        <ol>
+            <li>
+                <p>Click the <span class="Emphasis">Maintain</span> (<img src="../../Resources/Images/Filters/Maintain Button.png" class="IconInline" />) button next to the filter list. </p>
+                <p>
+                    <img src="../../Resources/Images/Filters/Creating a New Filter.png" class="LargeImages" />
+                </p>
+                <p>The <span class="Emphasis">Maintain Filters</span> window displays.</p>
+            </li>
+            <li>Choose one of the following:
+				<ul><li><span class="Emphasis">Create a New Filter</span>,  click <span class="Emphasis">Ok</span>,  and select the entity type. </li><li><span class="Emphasis">Clone from Existing Filter</span> , click <span class="Emphasis">Ok</span>, and edit the filter details, criteria, and conditions.</li></ul></li>
+            <li>Click <span class="Emphasis">Ok</span> to save the new filter.</li>
+        </ol>
+        <h3>About cloned filters</h3>
+        <p>Cloned filters have the default name: <code>Cloned From: &lt;cloned filter name&gt;</code>. Edit this name as desired. Cloned filters inherit the entity type of the filter they are cloned from.</p>
+        <h3>About entity types </h3>
+        <p>Filters are distinguished by the type of entity they support (inventory, site, supplier, etc.). Because different entity types are used for different functionality and analysis throughout the system, the filters that support this functionality and analysis are also based on entity type. </p>
+        <p>When selecting filters, only the filters created for the applicable entity type are available for selection. </p>
+        <p class="Example">When selecting a site filter in the Site Manager screen, only site filters are listed and not inventory filters, supplier filters, etc.  </p>
+        <p>The entity type of the filter can be manually selected when creating filters in the Filters screen. In all other locations, the entity type is pre-defined based on the context of the location. </p>
+        <p>For example,  the entity type of a new filter is pre-defined as <span class="Emphasis">Site</span> for filters created in a site filter selection screen.</p>
+        <p>The following filter entity types are available:</p>
+        <table class="TableStyle-standard" cellspacing="0" style="mc-table-style: url('../../Resources/TableStyles/standard.css');">
+            <col class="TableStyle-standard-Column-Column1" />
+            <col class="TableStyle-standard-Column-Column2" />
+            <thead>
+                <tr class="TableStyle-standard-Head-Header1">
+                    <th class="TableStyle-standard-HeadE-Column1-Header1">Entity Type</th>
+                    <th class="TableStyle-standard-HeadD-Column2-Header1">Description</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">Inventory</td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">Item-site combination. A common filter that will drill down to the lowest level in most instances.</td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">ItemMaster</td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">
+                        The item across all sites. 
+                    </td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">Site </td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">
+                        Any location that is capable of holding inventory. 
+                    </td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">Supplier </td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">
+                        Outside entities that supply the business with inventory. 
+                    </td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">Customer </td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">Any outside entity that is buying or receiving inventory. </td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">Promotion </td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">
+                      Promotions as created and maintained in the Promotions solution.
+                    </td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1" MadCap:conditions="">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">KeyItem</td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">Deprecated.</td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">Event </td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">
+                       Events as created and maintained in the Events solution.
+                    </td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1" MadCap:conditions="">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">KeyItem Variant</td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">Deprecated.</td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">File </td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">
+                       Used for repository files. Not to be confused with assembly files used to operate the ToolsGroup JustEnough client.
+                    </td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">ItemMaster Group </td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">
+                        Used in Content Manager to filter ItemMaster groups.
+                    </td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">CustomerInventory </td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">
+                        Do not use.
+                    </td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">Variant </td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">Used in Allocations and Assortment Planning.</td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">Variant Group </td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">
+                      Used in Content Manager to filter variant groups.
+                    </td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">Variant Placeholder</td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">
+                        Used in Assortment Planning.
+                    </td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">Variant Site</td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">Used in the Price Manager module.</td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">Variant Customer</td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">Used in the Variant Customer Manager module.</td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyB-Column1-Body1">Causal</td>
+                    <td class="TableStyle-standard-BodyA-Column2-Body1">
+                         Used in the Causals module. This allows users to create a filter using Causal metadata, including Causal types:
+
+ 
+                        <ul><li>Causal
+</li><li>Event
+</li><li>Information Causal</li><li>Manual Causal
+</li></ul></td>
+                </tr>
+            </tbody>
+        </table>
+        <h3>Rebuilding filter caches</h3>
+        <p>When a new filter is created, its cache is built immediately.</p>
+        <p>In most instances, rebuilding filter caches is an extremely important task and should be run on a daily basis. This can take a considerable amount of time during the overnight run depending on the volume of data and the number of filters that need to be rebuilt.</p>
+        <p class="Caution">Custom code must no longer reference tbl_FilterCache because population of tbl_FilterCache is optional when filters are rebuilt.</p>
+    </body>
+</html>

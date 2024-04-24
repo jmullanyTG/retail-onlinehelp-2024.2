@@ -1,0 +1,102 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head />
+    <body>
+        <h1>Setting supplier-to-DC-to-store supply chains</h1>
+        <p>A supplier-to-DC-to-store supply chain involves external suppliers delivering to distribution centers (DCs) which then distribute stock to stores. </p>
+        <p>All sites (stores and DCs) are on the same level in the supply chain hierarchy, and the parent source for each site is the external supplier. </p>
+        <p>To create a supplier to DC to store supply chain, it is necessary to organize the stores under their regional DCs in the hierarchy, with each store having a DC as its parent source.</p>
+        <p>After that, it is necessary to choose a second DC to be an alternate source for a store.</p>
+        <p>With a supplier to DC to store supply chain, the system:</p>
+        <ol style="list-style-type: lower-alpha;">
+            <li>calculates projected demand versus projected stock on hand for each item at each store.</li>
+            <li>calculates stock needed in each DC to meet the demand of stores stocked from that DC.</li>
+            <li>generates orders from external suppliers as needed to stock the DCs with enough inventory to meet the collective store demand.</li>
+            <li>generates distribution orders to deliver the right amount of inventory from DCs to stores to meet each store's projected demand.</li>
+        </ol>
+        <h2>Creating the initial supply chain</h2>
+        <ol>
+            <li>
+                <p>Click <span class="Emphasis">New</span> on the toolbar. </p>
+                <p>The <span class="Emphasis">Create Supply Chain</span> window displays.</p>
+            </li>
+            <li>
+                <p>Enter a name for the supply chain and select <span class="Emphasis">Site/Supplier</span> as the supply chain type.</p>
+                <p>
+                    <img src="../../Resources/Images/Supply Chain/Supply Chain create.png" class="LargeImages" />
+                </p>
+            </li>
+            <li>
+                <p>Click <span class="Emphasis">Ok</span>. </p>
+                <p>The supply chain appears on the <span class="Emphasis">Supply Chain</span> screen. </p>
+                <p>In the <span class="Emphasis">Hierarchy</span> pane, the organization is flat (stores and DCs are on the same level). </p>
+                <p>
+                    <img src="../../Resources/Images/Supply Chain/Hierarchy pane.png" class="LargeImages" />
+                </p>
+            </li>
+            <li>
+                <p>Click the <span class="Emphasis">Switch View</span> button to change the hierarchy view to a grid.</p>
+                <p>
+                    <img src="../../Resources/Images/Supply Chain/Switch View Button.png" class="LargeImages" />
+                </p>
+            </li>
+            <li>
+                <p> Right-click on a column header and select <span class="Emphasis">Column Chooser</span> to add the <span class="Emphasis">Channel Description</span>, <span class="Emphasis">Country Description</span>, and <span class="Emphasis">Site Region Description</span> columns to the grid.</p>
+            </li>
+            <li>
+                <p>Filter the <span class="Emphasis">Channel Description</span> column for the desired channel. </p>
+                <p>
+                    <img src="../../Resources/Images/Supply Chain/Filter Columns.png" class="LargeImages" />
+                </p>
+            </li>
+            <li>
+                <p>Filter the <span class="Emphasis">Country Description</span> column as required.</p>
+            </li>
+            <li>Right-click in the grid and select <span class="Emphasis">Select All</span> to select all stores.</li>
+            <li>
+                <p>Right-click in the <span class="Emphasis">Parent Site</span> column and select <span class="Emphasis">Multiple Changes</span>. </p>
+                <p>The <span class="Emphasis">Multi Data Change Form For Column Parent Site</span> window displays.</p>
+            </li>
+            <li>
+                <p> Select a DC in the <span class="Emphasis">New Value</span> field and click <span class="Emphasis">Save</span>. </p>
+            </li>
+            <li>
+                <p>Click <span class="Emphasis">Save</span>In the <span class="Emphasis">Supply Chain</span> toolbar.</p>
+                <p>The <span class="Emphasis">Hierarchy</span> grid now shows the DC as the new parent site for stores. </p>
+                <p>
+                    <img src="../../Resources/Images/Supply Chain/Updated Hierarchy Grid.png" class="LargeImages" />
+                </p>
+            </li>
+            <li>Continue changing inventory sources for other regions until all stores have their primary DC as their inventory source.</li>
+        </ol>
+        <h2>Defining alternate sources for stores</h2>
+        <ol>
+            <li>
+                <p>In the <span class="Emphasis">Hierarchy</span> panel, select a store.</p>
+                <p>The details of the store display in the right pane.</p>
+            </li>
+            <li>
+                <p>In the <span class="Emphasis">Alternate Source</span> section, find the DC and enter <span class="Emphasis">2</span> in the <span class="Emphasis">Priority</span> column.</p>
+                <p>
+                    <img src="../../Resources/Images/Supply Chain/Alternate Source Section.png" class="LargeImages" />
+                </p>
+            </li>
+            <li>
+                <p>Click <span class="Emphasis">Save</span>.</p>
+                <p>The DC is now set as the second source of inventory for the store.</p>
+                <p>
+                    <img src="../../Resources/Images/Supply Chain/Second Source Of Inventory.png" class="LargeImages" />
+                </p>
+            </li>
+            <li>Continue assigning alternate sources for other stores.</li>
+            <li>Click <span class="Emphasis">Reprocess</span> to process the saved changes and rebuild the supply chain.</li>
+        </ol>
+        <h2>Related topics</h2>
+        <ul>
+            <li><a href="Managing Supply Chains.htm">Managing supply chains</a>
+            </li>
+            <li><a href="Supply Chain Overview.htm">Supply chain overview</a>
+            </li>
+        </ul>
+    </body>
+</html>

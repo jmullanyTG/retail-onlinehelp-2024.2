@@ -1,0 +1,35 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" xml:lang="en-us">
+    <head><title></title>
+    </head>
+    <body>
+        <h1>Choice counts</h1>
+        <p>Choice counts help determine the quantity of picks available to each store when meeting their allocation volumes. The choice count is determined by selectively sampling historical sales data. Choice count models are built to sample sales history based on a filter of items, a time frame, sales types, and then removing disqualified sales periods. </p>
+        <h2>Choice Count screen</h2>
+        <p>Choice count models can be created and configured for consumption during the scenario plan building phase within the choice count model grid.</p>
+        <p>
+            <img src="../../Resources/Images/Adaptive Allocations/Choice_Counts_view.png" class="LargeImages" />
+        </p>
+        <p>New plans are created by selecting <span class="Emphasis">New</span>. Fill in all fields before saving. The access level defaults to <span class="Emphasis">Public</span> unless otherwise specified. </p>
+        <p>Choice count models (even linked choice count models) can be deleted for users with appropriate permissions by highlighting row and selecting <span class="Emphasis">Delete</span>.</p>
+        <p class="BasicNote">The <span class="Emphasis">Choice Count</span> screen can be undocked and realigned or moved to a secondary monitor by clicking and dragging the tab to the desired location. </p>
+        <h3>Fields</h3>
+        <ul>
+            <li><span class="Emphasis">Choice Count Model Name</span> – The unique name for the choice count model. Used to look-up choice count models within the scenario plan configuration screen.</li>
+            <li><span class="Emphasis">Choice Count Model Description</span> – An optional description for the choice count model. </li>
+            <li><span class="Emphasis">Product Filter</span> – The filter of items  used to calculate the choice count. Though not required, a more consistent result is expected if this filter has some relevance to the product selection used within demand plan generation. </li>
+            <li><span class="Emphasis">Time Frame</span> – The time frame used to sample sales history. </li>
+            <li><span class="Emphasis">Sales Volume % of Max Threshold</span> – The percentage of the maximum sales volume of the sample which must be met for a selling period to be included. For more information, see <MadCap:xref href="Sales Volume of Max Threshold.htm">Sales Volume % of Max Threshold </MadCap:xref>.</li>
+            <li>
+                <p><span class="Emphasis">Active Variant Threshold Factor</span> – The percent of each store-variant’s average sales which will set the minimum threshold for de-seasonalized values. This value is available for use when calculating longer sales periods with highly seasonal products within the sample, but is otherwise not applicable to many common Adaptive Allocations scenarios. </p>
+                <p>The default value for this threshold is <span class="Emphasis">0</span>. This field is hidden by default. Use the Choose Columns functionality to display this field. For more information, see <MadCap:xref href="Active Variant Threshold Factor_1.htm">Active Variant Threshold Factor</MadCap:xref>.</p>
+            </li>
+            <li><span class="Emphasis">Minimum % of Selling Periods Threshold</span> – Defines the percentage of periods within the sample to have recorded a sale for the variant to be considered a part of the choice count model. Setting this to a high value eliminates low selling periods for variants which may have set late or had stock-out related issues. For more information, see <MadCap:xref href="Minimum of Selling Periods Threshold.htm">Minimum % of Selling Periods Threshold</MadCap:xref>.</li>
+            <li><span class="Emphasis">Sales Types</span> – The sales types included in the sampling. Options include regular, promotion, markdown, and all supersession sales types (should be used for modeled stores and new products).</li>
+            <li><span class="Emphasis">Access Level</span> – Used to define user access to the choice count model. This controls its visibility in this screen as well as restrict its selection for use within a scenario plan. <ul><li><span class="Emphasis">Public</span> – Available to all users within the application. </li><li><span class="Emphasis">Private</span> – Available only to the creator.</li><li><span class="Emphasis">Shared</span> – Available to only specific users. </li></ul></li>
+        </ul>
+        <ul>
+            <li><span class="Emphasis">User Select</span> – If set to a shared access level, the list of shared users. </li>
+        </ul>
+    </body>
+</html>

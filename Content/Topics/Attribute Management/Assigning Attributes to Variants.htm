@@ -1,0 +1,49 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" xml:lang="en-us">
+    <head><title></title>
+    </head>
+    <body>
+        <h1>Assigning attributes to variants</h1>
+        <p>Product attributes can be assigned to variants through the <span class="Emphasis">Variant Manager</span> module.</p>
+        <p>
+            <img src="../../Resources/Images/Attribute Management/Assigning Attributes to Variants.png" class="LargeImages" />
+        </p>
+        <p>On launching <span class="Emphasis">Variant Manager</span>, a filter selection dialog appears allowing users to specify a filter of variants. The <span class="Emphasis">Variant Manager Document</span> screen displays once a filter has been selected.</p>
+        <p>
+            <img src="../../Resources/Images/Attribute Management/Variant Manager Document screen.png" class="LargeImages" />
+        </p>
+        <p>Once a variant manager document is open, users can select variants in the grid section of the document. Details for the selected variants appear in the <span class="Emphasis">Variant</span> section. </p>
+        <p>Users can work with a variety of aspects of variants within a variant manager document by clicking the appropriate tab. To assign or edit product attributes for selected variants, click the <span class="Emphasis">Variant Attribute Management</span> tab.</p>
+        <p class="BasicNote">Both the upper and lower sections of the view can be displayed or hidden by clicking the corresponding <span class="Emphasis">Grid</span> and <span class="Emphasis">Details</span> buttons in the upper right of the view.</p>
+        <h2>Variant Attribute Management tab</h2>
+        <h3>Functionality</h3>
+        <p><span class="Emphasis">Parameters</span>: Shows or hides the parameters area.</p>
+        <p><span class="Emphasis">Execute</span>: Updates the view according to the selected Variant Hierarchy and the variants selected in the grid section.</p>
+        <h3>Parameters</h3>
+        <p><span class="Emphasis">Variant Hierarchy</span>: The variant hierarchy for which to assign attributes.</p>
+        <p class="BasicNote">Because it is possible to create alternate variant hierarchies which contain the same variants, it is also possible to have different attributes assigned to a variant across those hierarchies. Ensure the correct variant hierarchy is selected before proceeding.</p>
+        <h3>Field descriptions</h3>
+        <ul>
+            <li><span class="Emphasis">Family Name</span>: The name of the attribute family</li>
+            <li><span class="Emphasis">Family Description</span>: The description for the attribute family</li>
+            <li><span class="Emphasis">Single Values</span>: The attribute value of the adjacent single-select attribute family for the selected variants. When variants are selected that have different attribute values assigned, this field shows <span class="Emphasis">(Multi)</span> to indicate this.</li>
+            <li><span class="Emphasis">Multiple Values</span>: The attribute values of the adjacent multi-select attribute family for the selected variants. When multiple variants are selected that have different attribute values assigned, this field shows the combination of all values present.</li>
+        </ul>
+        <h3>Data Population</h3>
+        <p>The view populates with all attribute families that any of the selected variants is eligible for. Attribute values available for selection include all values that any of the selected variants is eligible for.</p>
+        <h3>Applying Changes Across Multiple Items</h3>
+        <p>When multiple variants are selected in the Grid section, any conflicts that exist between the applied values and the attribute value eligibility of the variants the change is being applied to are automatically resolved.</p>
+        <ul>
+            <li>Single-select attribute value changes are applied to all variants that are eligible for them. Ineligible variants remain unchanged</li>
+            <li>Multi-select attribute value changes are applied additively to variants that are eligible for them. If only some of the applied values are eligible, those will be applied. Ineligible variants remain unchanged</li>
+        </ul>
+        <h3>Dual-directional Attribute Flow</h3>
+        <p>Depending on where attributes are assigned (to placeholders in Assortment Planning or to variants in Variant Manager) attributes are transferred when a variant is assigned to a placeholder.</p>
+        <h3>Assigning a variant</h3>
+        <p>Any product attributes attached to the variant are transferred to the placeholder. Any attributes that were already assigned to the placeholder but do not conflict with the variant attributes (i.e. single-select families that the variant already had assigned) remain on the placeholder and are transferred to the variant.</p>
+        <h3>Attribute changes in Assortment Planning</h3>
+        <p>Any changes made to placeholder attributes in Assortment Planning are transferred to the assigned variant for the product hierarchy assigned to the active assortment plan. They are not transferred to other placeholders that variant is assigned to.</p>
+        <h3>Attribute changes in Variant Manager</h3>
+        <p>Changes made to variant attributes in Variant Manager are transferred to all placeholders that variant is currently assigned to across all existing assortment plans that have the selected Variant Hierarchy assigned.</p>
+    </body>
+</html>

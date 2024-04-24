@@ -1,0 +1,99 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" xml:lang="en-us">
+    <head>
+        <link href="../../Resources/TableStyles/standard.css" rel="stylesheet" MadCap:stylesheetType="table" />
+        <title>
+        </title>
+    </head>
+    <body>
+        <h1>Reconciliation Report parameters</h1>
+        <p>The Reconciliation Report is controlled by eight parameters:</p>
+        <p>
+            <img src="../../Resources/Images/Assortment Planning/Reconciliation Parameters.png" class="LargeImages" />
+        </p>
+        <h2>Parameters</h2>
+        <table style="width: 100%;margin-left: auto;margin-right: auto;mc-table-style: url('../../Resources/TableStyles/standard.css');" class="TableStyle-standard" cellspacing="0">
+            <col class="TableStyle-standard-Column-Column1" />
+            <col class="TableStyle-standard-Column-Column2" />
+            <thead>
+                <tr class="TableStyle-standard-Head-Header1">
+                    <th class="TableStyle-standard-HeadE-Column1-Header1">Parameter</th>
+                    <th class="TableStyle-standard-HeadD-Column2-Header1">Description</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">
+                        <span class="Emphasis">Product</span>
+                    </td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">
+                         Filter based product selection.
+ 
+                        <p>Care must be taken to use filters judiciously while comparing to MFP to get an apples-to-apples comparison. </p><p>
+For example, if a hierarchy in MFP is configured as Company &gt; Dept &gt; Cat, and a filter is selected that contains the hierarchy selection of Company &gt; Mens &gt; Shirts, then placeholders for Mens Shirts and the MFP plan data for Mens Shirts are returned and are comparable. 
+
+</p><p>However, if a filter is selected that is configured as Color = Blue, and there are blue items in Mens Shirts, Mens Pants, Womens Shirts, and Womens Pants, then the AP lines show totals for all blue items across those categories, but MFP data is unable to constrain on only blue items, so MFP data shows total: Mens Shirts + Mens Pants + Womens Shirts + Womens Pants. </p><p>This must be kept in mind when choosing a filter for use when running the Reconciliation report against MFP.                    </p></td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">
+                        <span class="Emphasis">Site Hierarchy</span>
+                    </td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">
+                        The level of the common site hierarchy between Comparison Plan 1 and Comparison Plan 2 at which to compare the reconciliation metrics.
+                    </td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">
+                        <span class="Emphasis">Cluster Sets</span>
+                    </td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">
+                        The cluster sets to include in the current view.
+                        <p class="BasicNote">While cluster sets are not explicitly part of the Site Hierarchy, they are directly related, in that cluster sets in a given assortment plan must be contained within a single lowest level of that hierarchy. Therefore, the Cluster Set dropdown populates with the cluster sets contained beneath the selected Site Hierarchy levels.</p></td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">
+                        <span class="Emphasis">Window of Time</span>
+                    </td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">
+                        The window of time to compare for Comparison Plan 1 and Comparison Plan 2.
+                        <p>The selected time frame must be a contiguous range of periods. If not, the window of time used is defined by the first and last selected periods</p></td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">
+                        <span class="Emphasis">Comparison Type 1</span>
+                    </td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">
+                      
+                        The plan or snapshot type of Comparison Plan 1 – either Assortment Plan or Merchandise Financial Plan. Plans and snapshots are split out as separate lines. 
+                        <p><img src="../../Resources/Images/Assortment Planning/Reconcilation Report Plan and Snapshot Lines.png" class="LargeImages" /> </p><p>Merchandise Financial plans display in the same tree grid as the <span class="Emphasis">Financial Plan Maintenance</span> view.</p><p>Merchandise Financial plan snapshots show in a hierarchy view, with the parent plans shown. The Master and Branch plans are prepended with <span class="Emphasis">Plan</span> and the actual snapshots underneath listed alphabetically and prepended with <span class="Emphasis">Snapshot</span>. </p><p>Sorting snapshots by name allows organizations to provide user direction on the naming convention to use to achieve desired sorting results. For example:</p><ul><li><p>YYYY-MM-DD (Product Hierarchy) Description</p></li><li><p>(Product Hierarchy) YYYY-MM-DD Description</p></li><li><p>Plan Year (Product Hierarchy)</p></li></ul><p>Two of the same AP Comparison Type can be selected at once. While the utility of this is limited when comparing the one available AP plan to itself, it is more useful when comparing two AP snapshots. There is a limitation that disallows users from selecting 2 MFP plans or snapshots to compare to each other.</p><p class="BasicNote">This selection determines how the variance measures are calculated in the report.&#160; For example, if the assortment plan is selected as Comparison type 1 and the financial plan is selected as Comparison type 2, the assortment plan is the first variable in the calculation that determines the variance.</p></td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">
+                        <span class="Emphasis">Comparison Plan 1</span>
+                    </td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">The first plan or snapshot to compare in the view.</td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">
+                        <span class="Emphasis">Comparison Type 2</span>
+                    </td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">
+                        The plan or snapshot type of Comparison Plan 2 – either Assortment Plan or Merchandise Financial Plan.
+Plans and snapshots are split out as separate lines.                         <p class="BasicNote">This selection determines how the variance measures are calculated in the report.&#160; For example, if the assortment plan is selected as Comparison type 2 and the financial plan is selected as Comparison type 1, the assortment plan is the second variable in the calculation that determines the variance.</p></td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">
+                        <span class="Emphasis">Comparison Plan 2</span>
+                    </td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">The first plan or snapshot to compare in the view.</td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyB-Column1-Body1">
+                        <span class="Emphasis">Display Currency</span>
+                    </td>
+                    <td class="TableStyle-standard-BodyA-Column2-Body1">(defaults to the Home Currency for the active Assortment Plan) The currency to display for all revenue based fields in the view.</td>
+                </tr>
+            </tbody>
+        </table>
+    </body>
+</html>

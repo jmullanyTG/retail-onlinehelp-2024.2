@@ -1,0 +1,140 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" xml:lang="en-us">
+    <head>
+        <link href="../../Resources/TableStyles/standard.css" rel="stylesheet" MadCap:stylesheetType="table" />
+        <title>
+        </title>
+    </head>
+    <body>
+        <h1>Currency exchange rates</h1>
+        <p>The <span class="Emphasis">Currency Exchange Rates</span> view is used to maintain both global exchange rates and time-based exchange rates from and to all currencies defined within ToolsGroup JustEnough. At a minimum, exchange rates should be maintained globally for a single base currency, being the home currency used in the assortment plans and as many other currencies as are assigned to the sites within the cluster sets in those plans.</p>
+        <p>
+            <img src="../../Resources/Images/Currency and VAT Management/Currency Exchange Rates.png" class="LargeImages" />
+        </p>
+        <p>This screen can be accessed by navigating to <span class="Emphasis">System Utilities &gt; Views &gt; Currency &gt; Currency Exchange Rates</span>.</p>
+        <h2>Doing business in one currency only</h2>
+        <p>If the company only does business in a single currency, then  set a single conversion entry in the <span class="Emphasis">Currency From</span> and <span class="Emphasis">Currency To</span> fields with a Conversion Factor of 1 to indicate no change.</p>
+        <h2>Parameters</h2>
+        <table style="width: 100%;margin-left: auto;margin-right: auto;mc-table-style: url('../../Resources/TableStyles/standard.css');" class="TableStyle-standard" cellspacing="0">
+            <col class="TableStyle-standard-Column-Column1" />
+            <col class="TableStyle-standard-Column-Column2" />
+            <thead>
+                <tr class="TableStyle-standard-Head-Header1">
+                    <th class="TableStyle-standard-HeadE-Column1-Header1">Field</th>
+                    <th class="TableStyle-standard-HeadD-Column2-Header1">Description</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">
+                        <span class="Emphasis">Currency From</span>
+                    </td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">Sets the original currencies to be worked with.</td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyB-Column1-Body1">
+                        <span class="Emphasis">Currency To</span>
+                    </td>
+                    <td class="TableStyle-standard-BodyA-Column2-Body1">Sets the  currencies to be converted to.</td>
+                </tr>
+            </tbody>
+        </table>
+        <h2>Toolbar buttons</h2>
+        <table style="width: 100%;margin-left: auto;margin-right: auto;mc-table-style: url('../../Resources/TableStyles/standard.css');" class="TableStyle-standard" cellspacing="0">
+            <col class="TableStyle-standard-Column-Column1" />
+            <col class="TableStyle-standard-Column-Column2" />
+            <thead>
+                <tr class="TableStyle-standard-Head-Header1">
+                    <th class="TableStyle-standard-HeadE-Column1-Header1">Button</th>
+                    <th class="TableStyle-standard-HeadD-Column2-Header1">Description</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">
+                        <span class="Emphasis">Parameters</span>
+                    </td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">Shows or hides the <span class="Emphasis">Parameters</span> area of the view.</td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyB-Column1-Body1">
+                        <span class="Emphasis">Execute</span>
+                    </td>
+                    <td class="TableStyle-standard-BodyA-Column2-Body1">Updates the view with a conversion factor grid for the <span class="Emphasis">Currency From</span> and <span class="Emphasis">Currency To</span> selections.</td>
+                </tr>
+            </tbody>
+        </table>
+        <h2>Default Currency Exchange Rates tab</h2>
+        <p>This tab allows the user to manipulate the field layout by dragging and dropping fields in the Filter, Row, Column, and Data areas of the grid.</p>
+        <p>
+            <img src="../../Resources/Images/Currency and VAT Management/Default Currency Exchange Rates.png" class="LargeImages" />
+        </p>
+        <h3>Functionality</h3>
+        <ul>
+            <li>
+                <span class="Emphasis">Export</span>: Exports and saves the Pivot Grid in different formats including Microsoft Excel and Adobe PDF.</li>
+            <li>
+                <span class="Emphasis">Open</span>: Opens the Pivot Grid in different formats including Microsoft Excel and Adobe PDF (this does not require saving prior to viewing in the desired format).</li>
+            <li>
+                <span class="Emphasis">Graph</span>: Displays a graph and any selected data series.</li>
+            <p>
+                <img src="../../Resources/Images/Currency and VAT Management/Default Currency Exchange Rates with graph.png" class="LargeImages" />
+            </p>
+            <li>
+                <span class="Emphasis">Fields</span>: launches the <span class="Emphasis">Fields Customization</span> dialog with two tabs. Each tab contains a search bar to more quickly locate fields. The fields that display is limited to only those containing the entered text.<ul><li><p><span class="Emphasis">Simple</span> tab: Fields can be dragged and dropped between Filter, Row, Column, and Data areas of the Pivot Grid.</p><p class="BasicNote">Dragging fields to the None area hides them in the layout.</p></li><li><p><span class="Emphasis">Advanced tab</span>: Manipulate the layout by selecting the desired location of each field from the Pivot Area dropdowns next to each. An Index can be specified within each area  to define the order in which the fields display.</p></li></ul></li>
+        </ul>
+        <MadCap:snippetBlock src="../../Resources/Snippets/Custom Pivot Grid Layouts.flsnp" />
+        <h2>Restoring layouts</h2>
+        <p>Restore a custom layout by right-clicking anywhere in the Pivot Grid, choosing <span class="Emphasis">Restore Layout</span>, and selecting the layout to restore.</p>
+        <ul>
+            <li>
+                <span class="Emphasis">Save</span>: Saves changes made to conversion factors in the current view.</li>
+            <li>
+                <span class="Emphasis">Cancel</span>: Reverts all changes to conversion factors in the current view.</li>
+            <li>
+                <span class="Emphasis">From Currency Description</span>: Description of the <span class="Emphasis">From</span> Currency.</li>
+            <li>
+                <span class="Emphasis">From Currency Code</span>: Unique system code for the <span class="Emphasis">From</span> Currency.</li>
+            <li>
+                <span class="Emphasis">To Currency Description</span>: Description of the <span class="Emphasis">To</span> Currency.</li>
+            <li>
+                <span class="Emphasis">To Currency Code</span>: Unique system code for the <span class="Emphasis">To</span> Currency.</li>
+            <li>
+                <p>
+                    <span class="Emphasis">Conversion Factor</span>: Sets the exchange rate from the currencies. </p>
+                <p class="BasicNote">Setting a Conversion Factor of 1 indicates no change.			</p>
+            </li>
+        </ul>
+        <h2>Temporal Currency Exchange Rates tab</h2>
+        <p>This tab allows users to enter exchange rate changes with specific start- and end dates. This is useful for planning for future economic fluctuations without having to alter the default exchange rates. <span class="Emphasis">Temporal Currency Exchange Rates</span> supersede rates entered on the <span class="Emphasis">Default</span> tab for the time frames in which they are active.</p>
+        <p>
+            <img src="../../Resources/Images/Currency and VAT Management/Temporary Currency Exchange Rates.png" style="width: 634px; height: 229px;" class="LargeImages" />
+        </p>
+        <ul>
+            <li>
+                <span class="Emphasis">New</span>: Adds a new line for entering a temporal exchange rate.</li>
+            <li>
+                <span class="Emphasis">Delete</span>: Deletes the selected temporal exchange rate lines. <p class="Important">Users are not asked to confirm deletion of temporal exchange rates.</p></li>
+            <li>
+                <span class="Emphasis">Fields</span>: Opens the <span class="Emphasis">Customization</span> dialog in which users can drag fields to or from the tab’s header area and this dialog to customize the view.</li>
+            <p class="BasicNote">Custom layouts can be saved or restored by right-clicking in the Pivot Grid and selecting <span class="Emphasis">Save Layout</span> or <span class="Emphasis">Restore Layout</span>, respectively.</p>
+            <li>
+                <span class="Emphasis">Save</span>: Saves all new temporal exchange rate lines and changes made to existing lines.</li>
+            <li>
+                <span class="Emphasis">Cancel</span>: Removes all new temporal exchange rate lines and reverts all changes since the last save.</li>
+            <li>
+                <span class="Emphasis">Currency From</span>: The currency to convert from for the line.</li>
+            <li>
+                <span class="Emphasis">Currency To</span>: The currency to convert to for the line.</li>
+            <li>
+                <span class="Emphasis">Start Date</span>: The start date for the temporal currency conversion.
+			<p class="BasicNote">Creating temporal currency conversions in the past does not have any effect on actualized periods.</p></li>
+            <li>
+                <span class="Emphasis">End Date</span>: (not required) The end date for the temporal currency conversion.
+				<p class="BasicNote">Not setting an end date for a conversion means it will persist into the future until one is set or another conversion is entered in the future. This effectively makes the end date for the conversion the day prior to the start date of the new conversion</p></li>
+            <li>
+                <span class="Emphasis">Conversion Factor</span>: Sets the exchange rate from the <span class="Emphasis">From Currency</span> to the <span class="Emphasis">To Currency</span>.
+			<p class="Example">A Conversion Factor of .88 from USD (US Dollars) to GBP (UK Pounds) means a sale of $1,000 USD buys £888.</p></li>
+        </ul>
+    </body>
+</html>

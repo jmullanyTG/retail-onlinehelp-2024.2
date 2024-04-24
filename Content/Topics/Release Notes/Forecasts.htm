@@ -1,0 +1,274 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head>
+        <link href="../../Resources/TableStyles/standard.css" rel="stylesheet" MadCap:stylesheetType="table" />
+    </head>
+    <body>
+        <h1>Forecasts</h1>
+        <h2>Forecasting cost and retail ticket price </h2>
+        <p>Planners can now use two new series, <span class="Emphasis">Forecast Cost</span> and <span class="Emphasis">Forecast Retail</span>, to forecast the cost and retail ticket price of selected inventory. The result is insight into the profitability of future sales originally priced in different currencies. The cost and retail of the inventory is calculated using the default cost and retail price of the inventory. Pricing displays in the planner's system or home currency. Currency conversion  is automatic and is defined by existing system policy <span class="Emphasis">Currency ID</span> (Engine: Replenish). </p>
+        <p class="BasicNote">If system policy <span class="Emphasis">Currency ID</span> is set to <span class="Emphasis">1</span>, then currency conversion does not take place.</p>
+        <p>
+            <img src="../../Resources/Images/Demand Forecasting/Currency Metrics.PNG" class="LargeImages" />
+        </p>
+        <p>The two series appear as color coded lines in the graph with the data being from the currently selected inventory in the Forecast view.</p>
+        <p>Currency values are greater than unit values; where 1 unit can correspond to a high currency value (e.g. 1 unit = $100) If both unit and currency forecast data series are selected, the unit values on the graph appear stacked across the bottom of the graph. This is because the y-axis is extended to display the currency values. A best practice is to select either units or currency forecast series when viewing values in the graph. This will apply the appropriate scale to the y-axis for proper viewing. </p>
+        <h3>Series Name: Forecast Cost</h3>
+        <p>Color: Blue</p>
+        <p>Calculation: Forecasted units * cost of the unit in the system currency</p>
+        <p>Example: 
+
+Inventory ID 1 - Effective Forecast (note this takes into account profiles, level breakdown, manual forecast, etc.)</p>
+        <table style="mc-table-style: url('../../Resources/TableStyles/standard.css');margin-left: 0;margin-right: auto;width: 100%;" class="TableStyle-standard" cellspacing="0">
+            <col class="TableStyle-standard-Column-Column1" style="width: 20%;" />
+            <col class="TableStyle-standard-Column-Column2" style="width: 20%;" />
+            <col class="TableStyle-standard-Column-Column1" style="width: 20%;" />
+            <col class="TableStyle-standard-Column-Column2" style="width: 20%;" />
+            <col class="TableStyle-standard-Column-Column1" style="width: 20%;" />
+            <thead>
+                <tr class="TableStyle-standard-Head-Header1">
+                    <th class="TableStyle-standard-HeadE-Column1-Header1">Bucket ID</th>
+                    <th class="TableStyle-standard-HeadE-Column2-Header1">Effective Forecast Qty </th>
+                    <th class="TableStyle-standard-HeadE-Column1-Header1">Default Cost</th>
+                    <th class="TableStyle-standard-HeadE-Column2-Header1">Currency Conversion</th>
+                    <th class="TableStyle-standard-HeadD-Column1-Header1">Expected Results</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td rowspan="1" colspan="1" class="TableStyle-standard-BodyE-Column1-Body1">
+                        <p>1</p>
+                    </td>
+                    <td rowspan="1" colspan="1" class="TableStyle-standard-BodyE-Column2-Body1">
+                        <p>5</p>
+                    </td>
+                    <td rowspan="1" colspan="1" class="TableStyle-standard-BodyE-Column1-Body1">
+                        <p>$4.00</p>
+                    </td>
+                    <td rowspan="1" colspan="1" class="TableStyle-standard-BodyE-Column2-Body1">
+                        <p>2</p>
+                    </td>
+                    <td rowspan="1" colspan="1" class="TableStyle-standard-BodyD-Column1-Body1">
+                        <p>CA$40</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td rowspan="1" colspan="1" class="TableStyle-standard-BodyE-Column1-Body1">
+                        <p>2</p>
+                    </td>
+                    <td rowspan="1" colspan="1" class="TableStyle-standard-BodyE-Column2-Body1">
+                        <p>10</p>
+                    </td>
+                    <td rowspan="1" colspan="1" class="TableStyle-standard-BodyE-Column1-Body1">
+                        <p>$4.00</p>
+                    </td>
+                    <td rowspan="1" colspan="1" class="TableStyle-standard-BodyE-Column2-Body1">
+                        <p>1</p>
+                    </td>
+                    <td rowspan="1" colspan="1" class="TableStyle-standard-BodyD-Column1-Body1">
+                        <p>CA$40</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td rowspan="1" colspan="1" class="TableStyle-standard-BodyB-Column1-Body1">
+                        <p>3</p>
+                    </td>
+                    <td rowspan="1" colspan="1" class="TableStyle-standard-BodyB-Column2-Body1">
+                        <p>15</p>
+                    </td>
+                    <td rowspan="1" colspan="1" class="TableStyle-standard-BodyB-Column1-Body1">
+                        <p>$4.00</p>
+                    </td>
+                    <td rowspan="1" colspan="1" class="TableStyle-standard-BodyB-Column2-Body1">
+                        <p>1</p>
+                    </td>
+                    <td rowspan="1" colspan="1" class="TableStyle-standard-BodyA-Column1-Body1">
+                        <p>CA$60</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <p>Level ID = 1 and contains Inventory ID 1, 2, 3</p>
+        <table style="mc-table-style: url('../../Resources/TableStyles/standard.css');margin-left: 0;margin-right: auto;width: 100%;" class="TableStyle-standard" cellspacing="0">
+            <col class="TableStyle-standard-Column-Column1" style="width: 16.6%;" />
+            <col class="TableStyle-standard-Column-Column2" style="width: 16.6%;" />
+            <col class="TableStyle-standard-Column-Column1" style="width: 16.6%;" />
+            <col class="TableStyle-standard-Column-Column2" style="width: 16.6%;" />
+            <col class="TableStyle-standard-Column-Column1" style="width: 16.6%;" />
+            <col class="TableStyle-standard-Column-Column2" style="width: 16.6%;" />
+            <thead>
+                <tr class="TableStyle-standard-Head-Header1">
+                    <th class="TableStyle-standard-HeadE-Column1-Header1">
+                        <p>Inventory ID </p>
+                    </th>
+                    <th class="TableStyle-standard-HeadE-Column2-Header1">
+                        <p>Bucket ID </p>
+                    </th>
+                    <th class="TableStyle-standard-HeadE-Column1-Header1">
+                        <p>Effective Forecast Qty </p>
+                    </th>
+                    <th class="TableStyle-standard-HeadE-Column2-Header1">
+                        <p>Default Cost</p>
+                    </th>
+                    <th class="TableStyle-standard-HeadE-Column1-Header1">
+                        <p>Currency Conversion</p>
+                    </th>
+                    <th class="TableStyle-standard-HeadD-Column2-Header1">
+                        <p>Expected Values</p>
+                    </th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td rowspan="1" colspan="1" class="TableStyle-standard-BodyE-Column1-Body1">
+                        <p>1</p>
+                    </td>
+                    <td rowspan="1" colspan="1" class="TableStyle-standard-BodyE-Column2-Body1">
+                        <p>1</p>
+                    </td>
+                    <td rowspan="1" colspan="1" class="TableStyle-standard-BodyE-Column1-Body1">
+                        <p>5</p>
+                    </td>
+                    <td rowspan="1" colspan="1" class="TableStyle-standard-BodyE-Column2-Body1">
+                        <p>$4.00</p>
+                    </td>
+                    <td rowspan="1" colspan="1" class="TableStyle-standard-BodyE-Column1-Body1">
+                        <p>2</p>
+                    </td>
+                    <td rowspan="1" colspan="1" class="TableStyle-standard-BodyD-Column2-Body1">
+                        <p>CA$40</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td rowspan="1" colspan="1" class="TableStyle-standard-BodyE-Column1-Body1">
+                        <p>1</p>
+                    </td>
+                    <td rowspan="1" colspan="1" class="TableStyle-standard-BodyE-Column2-Body1">
+                        <p>2</p>
+                    </td>
+                    <td rowspan="1" colspan="1" class="TableStyle-standard-BodyE-Column1-Body1">
+                        <p>10</p>
+                    </td>
+                    <td rowspan="1" colspan="1" class="TableStyle-standard-BodyE-Column2-Body1">
+                        <p>$4.00</p>
+                    </td>
+                    <td rowspan="1" colspan="1" class="TableStyle-standard-BodyE-Column1-Body1">
+                        <p>1</p>
+                    </td>
+                    <td rowspan="1" colspan="1" class="TableStyle-standard-BodyD-Column2-Body1">
+                        <p>CA$40</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td rowspan="1" colspan="1" class="TableStyle-standard-BodyE-Column1-Body1">
+                        <p>1</p>
+                    </td>
+                    <td rowspan="1" colspan="1" class="TableStyle-standard-BodyE-Column2-Body1">
+                        <p>3</p>
+                    </td>
+                    <td rowspan="1" colspan="1" class="TableStyle-standard-BodyE-Column1-Body1">
+                        <p>15</p>
+                    </td>
+                    <td rowspan="1" colspan="1" class="TableStyle-standard-BodyE-Column2-Body1">
+                        <p>$4.00</p>
+                    </td>
+                    <td rowspan="1" colspan="1" class="TableStyle-standard-BodyE-Column1-Body1">
+                        <p>1</p>
+                    </td>
+                    <td rowspan="1" colspan="1" class="TableStyle-standard-BodyD-Column2-Body1">
+                        <p>CA$60</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td rowspan="1" colspan="1" class="TableStyle-standard-BodyE-Column1-Body1">
+                        <p>2</p>
+                    </td>
+                    <td rowspan="1" colspan="1" class="TableStyle-standard-BodyE-Column2-Body1">
+                        <p>1</p>
+                    </td>
+                    <td rowspan="1" colspan="1" class="TableStyle-standard-BodyE-Column1-Body1">
+                        <p>50</p>
+                    </td>
+                    <td rowspan="1" colspan="1" class="TableStyle-standard-BodyE-Column2-Body1">
+                        <p>CA$5.00</p>
+                    </td>
+                    <td rowspan="1" colspan="1" class="TableStyle-standard-BodyE-Column1-Body1">
+                        <p>1</p>
+                    </td>
+                    <td rowspan="1" colspan="1" class="TableStyle-standard-BodyD-Column2-Body1">
+                        <p>CA$250</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td rowspan="1" colspan="1" class="TableStyle-standard-BodyB-Column1-Body1">
+                        <p>2</p>
+                    </td>
+                    <td rowspan="1" colspan="1" class="TableStyle-standard-BodyB-Column2-Body1">
+                        <p>3</p>
+                    </td>
+                    <td rowspan="1" colspan="1" class="TableStyle-standard-BodyB-Column1-Body1">
+                        <p>100</p>
+                    </td>
+                    <td rowspan="1" colspan="1" class="TableStyle-standard-BodyB-Column2-Body1">
+                        <p>CA$5.00</p>
+                    </td>
+                    <td rowspan="1" colspan="1" class="TableStyle-standard-BodyB-Column1-Body1">
+                        <p>1</p>
+                    </td>
+                    <td rowspan="1" colspan="1" class="TableStyle-standard-BodyA-Column2-Body1">
+                        <p>CA$500</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <p>Expected Level Results for Level ID 1 </p>
+        <table style="mc-table-style: url('../../Resources/TableStyles/standard.css');margin-left: 0;margin-right: auto;width: 50%;" class="TableStyle-standard" cellspacing="0">
+            <col class="TableStyle-standard-Column-Column1" style="width: 50%;" />
+            <col class="TableStyle-standard-Column-Column2" style="width: 50%;" />
+            <thead>
+                <tr class="TableStyle-standard-Head-Header1">
+                    <th class="TableStyle-standard-HeadE-Column1-Header1">
+                        <p>Bucket ID </p>
+                    </th>
+                    <th class="TableStyle-standard-HeadD-Column2-Header1">
+                        <p>Expected Results</p>
+                    </th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td rowspan="1" colspan="1" class="TableStyle-standard-BodyE-Column1-Body1">
+                        <p>1</p>
+                    </td>
+                    <td rowspan="1" colspan="1" class="TableStyle-standard-BodyD-Column2-Body1">
+                        <p>CA$290</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td rowspan="1" colspan="1" class="TableStyle-standard-BodyE-Column1-Body1">
+                        <p>2</p>
+                    </td>
+                    <td rowspan="1" colspan="1" class="TableStyle-standard-BodyD-Column2-Body1">
+                        <p>CA$40</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td rowspan="1" colspan="1" class="TableStyle-standard-BodyB-Column1-Body1">
+                        <p>3</p>
+                    </td>
+                    <td rowspan="1" colspan="1" class="TableStyle-standard-BodyA-Column2-Body1">
+                        <p>CA$560</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <h3>Series Name: Forecast Retail 
+
+</h3>
+        <p>Color: Green
+</p>
+        <p>Calculation: Forecasted units * retail of the unit in the system currency<![CDATA[
+
+]]></p>
+    </body>
+</html>

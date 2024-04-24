@@ -1,0 +1,38 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" xml:lang="en-us">
+    <head><title></title>
+    </head>
+    <body>
+        <h1>Promotions screen parameters</h1>
+        <p>The following parameters and toolbar options are available within the <span class="Emphasis">Assortment Promotion</span> tab and the <span class="Emphasis">Promotion Detail View</span> tab.</p>
+        <h2>Toolbar options</h2>
+        <p><span class="Emphasis">Parameters</span>: Shows or hides the Parameters area of the view.</p>
+        <p><span class="Emphasis">Execute</span>: Updates the <span class="Emphasis">Defined Promotions</span>, <span class="Emphasis">Promotion Application</span>, and <span class="Emphasis">Promotion Application Details</span> sections of the view based on the selected view parameters.</p>
+        <h2>Parameters</h2>
+        <h3>Product</h3>
+        <p>A product filter for the current view.</p>
+        <ul>
+            <li>
+                <img src="../../Resources/Images/Assortment Planning/View Parameters.png" class="IconInline" />&#160; Launches the Filter Conditions dialog allowing users to edit the criteria for the selected filter prior to executing it. The option also exists to create a new filter from the adjusted criteria.</li>
+            <li>
+                <img src="../../Resources/Images/Assortment Planning/View Parameters_1.png" class="IconInline" />&#160; Launches the Maintain Filter dialog, allowing users to create or import a new filter, or update, delete, or export an existing filter.</li>
+        </ul>
+        <p class="BasicNote">Promotions are not tied to any group of products or product hierarchy levels. The Product selection only affects the Promotion Applications shown and products listed in the Promotion Application Details.</p>
+        <p>Given sufficient permissions, users can create promotion applications for products that aren’t included in the criteria specified by the selected product filter which causes them to disappear from the current view after clicking <span class="Emphasis">Execute</span>. To view them, change the filter selection or adjust the filter’s criteria to include them again.</p>
+        <h2>Site Hierarchy</h2>
+        <p>The levels of the current Plan’s Site Hierarchy to include in the current view.</p>
+        <p class="BasicNote">Similar to Product, Promotions are not tied to any Site Hierarchy levels. Site Hierarchy selection drives the Cluster Sets available for inclusion in the view. In turn, this affects the Promotion Applications shown and the clusters shown in the Promotion Application Details section. </p>
+        <h2>Cluster Sets</h2>
+        <p>The cluster sets to include in the current view. </p>
+        <p>The cluster sets listed include all default and additionally available cluster sets for the product level selected in the <span class="Emphasis">Product</span> parameter. While cluster sets are not explicitly part of the Site Hierarchy they are directly related in that cluster sets in a given assortment plan must be contained within a single lowest level of that hierarchy. Therefore, the <span class="Emphasis">Cluster Set</span> dropdown populates with the cluster sets contained beneath the selected Site Hierarchy levels.</p>
+        <p class="BasicNote">Promotions are not tied to Cluster Sets directly. Cluster Set selection only affects the Promotion Applications shown and clusters listed in the Promotion Application Details.</p>
+        <h2>Window of Time</h2>
+        <p>The window of time to display in the current view. Any promotion or promotion application whose life cycle intersects with any part of the selected time frame displays in the view.</p>
+        <p class="Important">The selected time frame must be a contiguous range of periods otherwise the window of time defined by the first and last selected periods is used.</p>
+        <h2>Display Currency</h2>
+        <p>The currency to display for all revenue based fields in the view. This parameter defaults to the Home Currency for the active Assortment Plan.</p>
+        <h2>Show Completed?</h2>
+        <p>Whether promotions whose end dates have passed will be displayed in the view.</p>
+        <p class="BasicNote">Because the <span class="Emphasis">Window of Time</span> selection returns all promotions whose eligibility time frame or start and end dates intersect with any part of the range selected, this is useful for quickly hiding promotions that have already passed without adjusting the <span class="Emphasis">Window of Time</span> selection.</p>
+    </body>
+</html>

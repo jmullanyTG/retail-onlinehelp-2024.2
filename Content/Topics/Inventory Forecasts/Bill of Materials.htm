@@ -1,0 +1,35 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head>
+    </head>
+    <body>
+        <h1>Bill of Materials</h1>
+        <p>The way the Bill of Materials (BOM) functionality is implemented in TG&#160;JE only affects forecasting. The assembly item forecast is pushed down to the components of the BOM, based on the Ratio (units of component per assembly) and the lead time defined in the component configuration. </p>
+        <p class="BasicNote">Components are defined in the <span class="Emphasis">Bill of Materials - Item Manager</span> view (Views module) while the actual BOM assemblies are created and viewed using the <span class="Emphasis">Bill Of Materials Maintenance</span> view. Both views are located in the Views module. </p>
+        <p>If configuring BOM, make sure the <span class="Emphasis">BOM</span> checkbox is selected in the <span class="Emphasis">Forecast Effective Priority Maintenance</span> view. For more information on this view, <MadCap:conditionalText MadCap:conditions="General.ScreenOnly">see <MadCap:xref href="../Administrator Panel/Forecast Policy Maintenance.htm">Forecast policy maintenance</MadCap:xref>.</MadCap:conditionalText><MadCap:conditionalText MadCap:conditions="General.PrintOnly">refer to the Administrator Panel User Guide.</MadCap:conditionalText></p>
+        <p>
+            <img src="../../Resources/Images/Demand Forecasting/Forecast Effective Priority Maintenance BOM Selected.png" class="LargeImages" />
+        </p>
+        <p>The following is an example of an assembly BOMP1 composed of 2 parts BOMC1 with 1 unit and BOMC2 with 2 units. Though BOMC1 and BOMC2 are parts of an assembly they are also sold independently.</p>
+        <p class="p">
+            <img src="../../Resources/Images/Demand Forecasting/Bill of Materials Maintenance View.png" class="LargeImages" />
+        </p>
+        <p>Within the Inventory Forecast module, the effective forecasts for both the assembly and components displays as follows:
+
+</p>
+        <h3>Assembly item BOMP1</h3>
+        <p>
+            <img src="../../Resources/Images/Demand Forecasting/Effective Forecast BOM Assembly.png" class="LargeImages" />
+        </p>
+        <p>BOMP1 does not display a Dependent Forecast. </p>
+        <h3>Component item BOMC1</h3>
+        <p>
+            <img src="../../Resources/Images/Demand Forecasting/Effective Forecast BOM Component One.png" class="LargeImages" />
+        </p>
+        <p>The BOMP1 forecast is visible as the <span class="Emphasis">Dependent Forecast</span> series with the Parent (BOMP1) forecast from Week 27 being effective in Week 26 of the component. There is an offset of the forecast by 7 days (Lead time). </p>
+        <h3>Component item BOMC2</h3>
+        <p>
+            <img src="../../Resources/Images/Demand Forecasting/Effective Forecast BOM Component Two.png" class="LargeImages" /> </p>
+        <p>The BOMP1 forecast is visible as the <span class="Emphasis">Dependent Forecast</span> series with the Parent (BOMP1) forecast from Week 27 being effective in Week 26 of the component. In this case, the quantity is double as it takes 2 units of BOMC2 to create 1 unit of BOMP1. There is an offset of the forecast by 7 days (Lead time). </p>
+    </body>
+</html>

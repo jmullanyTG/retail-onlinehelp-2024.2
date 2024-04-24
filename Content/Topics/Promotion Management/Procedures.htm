@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd"
+      xml:lang="en-us">
+   <head>
+      <title/>
+   </head>
+   <body>
+      <h1>Procedures</h1>
+      <h2>export.Promotion_Export_Promotions_API</h2>
+      <p>Reads Config tables and generates API Payload</p>
+      <h3>Called by:</h3>
+      <p>export. Promotion_Extract_Wrapper</p>
+      <h3>Parameters:</h3>
+      <p>Parameters may be passed in directly or read from table export.Promotion_Export_Parameters</p>
+      <p>@iExportID int – Passed in by Wrapper procedure</p>
+      <p>@iExportBatchID int – Passed in by Wrapper procedure</p>
+      <p>@bDebug tinyint – Passed in by Wrapper procedure </p>
+      <h2>dbo. usp_API_Export_Promotions</h2>
+      <p>Will load Promotion API table with requested Pages</p>
+      <h3>Called by:</h3>
+      <p>API Process </p>
+      <h3>Parameters:</h3>
+      <p>@iUserID int (Passed in from Wrapper Procedure)</p>
+      <p>@iExportBatchID int (Passed in from Wrapper Procedure)</p>
+      <p>@iEventID int (Passed in from Wrapper Procedure) </p>
+   </body>
+</html>

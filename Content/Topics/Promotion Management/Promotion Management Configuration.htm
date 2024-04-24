@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" xml:lang="en-us">
+    <head><title></title>
+    </head>
+    <body>
+        <h1>Promotion management configuration </h1>
+        <p>It is almost impossible to provide an out-of-the-box configuration that would work for all customers in terms of promotion strategies, price calculations, validations, and customer specific fields. The <span class="Emphasis">Promotion Configuration</span> tool is used to tailor the system to meet each customer’s specific needs.&#160; The smaller configurable elements are combined into one promotion strategy configuration which drives the calculations and validations for each promotion type.</p>
+        <p>
+            <img src="../../Resources/Images/Promotion Management/Promotion Management Configuration.png" class="LargeImages" />
+        </p>
+        <h2>Building valid SQL statements as formulas while setting up calculations or validations </h2>
+        <p>The <span class="Emphasis">Calculations</span> and <span class="Emphasis">Validations</span> tabs include formula verification functionality. The functionality prevents the building of harmful SQL statements (DROP TABLE, DELETE, etc.) as formulas while setting up calculations or validations.</p>
+        <p>Fields used in formulas are restricted to standard promotion fields, and any custom fields defined by the customer, and need to be enclosed in square brackets within the formula. A list of predefined statements and operators, such as those in mathematical functions, dictates allowed formula construction. If poorly formed or malicious formulas for calculations or validations are submitted through the UI or API, then a message displays indicating that the formula did not meet the standards set in place. Poorly formed or malicious formulas cannot be saved to prevent them from being used in any sort of calculations or validations. </p>
+    </body>
+</html>

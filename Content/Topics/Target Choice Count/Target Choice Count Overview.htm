@@ -1,0 +1,95 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head>
+        <link href="../../Resources/TableStyles/standard.css" rel="stylesheet" MadCap:stylesheetType="table" />
+    </head>
+    <body>
+        <h1>Target Choice Count Overview</h1>
+        <p><span class="Emphasis">Target Choice Count</span> is a standalone version of the Target Creation functionality found within Assortment Planning (AP). The main differences between <span class="Emphasis">Target Choice Count</span> and AP is that for <span class="Emphasis">Target Choice Count</span>, the settings come from system policies and the Variant entity is being used. For AP, the settings come from the AP plan and it is the Variant Placeholder entity being used.</p>
+        <p class="BasicNote">While this capability is included within the standard Assortment Planning solution, Target Choice Count can be licensed separately. This gives customers the ability to take advantage of intelligent recommendations when creating assortments even if they do not use the Assortment Planning module.</p>
+        <p>The main view is read-only. Changes are made by selecting the <span class="Emphasis">Edit</span> button and using the <span class="Emphasis">Edit Target Scenario</span> screen to make desired changes.</p>
+        <p>
+            <img src="../../Resources/Images/Target Choice Count/Target Choice Count screen.PNG" class="LargeImages" />
+        </p>
+        <p>Traditional planning tools are typically rigid in the way users are allowed to plan: by product and site hierarchy only. This has led to many retailers attempting to gain detail by further extending their hierarchies, but this approach still does not offer true flexibility to adjust strategy as often as desired based on the changing needs of the business. 
+</p>
+        <p>Target Choice Count offers the ability to segment hierarchy levels by a wide array of product attributes, both qualitative and quantitative, and then further subdivide and define plan targets and desired new choice counts all the way down to a site group, cluster, or site level.
+</p>
+        <p>Target Creation allows for:
+ </p>
+        <ul>
+            <li>creating scenarios in as simple or complex as manner as desired.</li>
+            <li>
+linking scenarios to existing merchandise financial plans, or basing plan targets on specified historical period.</li>
+            <li>
+defining business segments by product hierarchy or based on innumerable variables defined through product filters.</li>
+            <li>
+modeling new areas of business, adjusting percent contributions and planning targets at aggregate or more granular levels through the Pivot Grid functionality, and calculating recommended new choice counts based on targets through Rationalization (a marginal return curve calculation that suggests optimal assortment breadth and depth based on cleansed historical data).
+</li>
+        </ul>
+        <h2>Parameters</h2>
+        <p>Use the following parameters to filter the displayed Targets:</p>
+        <table style="width: 100%;margin-left: auto;margin-right: auto;mc-table-style: url('../../Resources/TableStyles/standard.css');" class="TableStyle-standard" cellspacing="0">
+            <col class="TableStyle-standard-Column-Column1" />
+            <col class="TableStyle-standard-Column-Column2" />
+            <thead>
+                <tr class="TableStyle-standard-Head-Header1">
+                    <th class="TableStyle-standard-HeadE-Column1-Header1">Parameter</th>
+                    <th class="TableStyle-standard-HeadD-Column2-Header1">Description</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">Product Hierarchy</td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">The product hierarchy levels a Target Creation scenario must contain to be shown in the Target Creation Scenarios section. Selectable levels are based on the intersection of the product hierarchy assigned to the current assortment plan and the product hierarchy permissions of the active user.</td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">Site Hierarchy</td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">The site hierarchy levels a Target Creation scenario must contain to be shown in the Target Creation Scenarios section. Selectable levels are based on the intersection of the site hierarchy assigned to the current assortment plan and the site hierarchy permissions of the active user.</td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">Window of Time</td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">
+                        The window of time a scenario must intersect with to be shown in the Target Creation Scenarios section. Selectable periods are based on those configured in the system down to the Period set for the current assortment plan. 
+                        <MadCap:snippetBlock src="../../Resources/Snippets/Floor Set Update More Information.flsnp" /><p class="BasicNote">For more information, see <MadCap:xref href="Target Floor Set Updates TCC.htm">Creating floor set updates for varying time frames</MadCap:xref>.</p></td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyB-Column1-Body1">Display Currency</td>
+                    <td class="TableStyle-standard-BodyA-Column2-Body1">The currency to display for all revenue based fields in the view. Defaults to the Home Currency for the active Assortment Plan.</td>
+                </tr>
+            </tbody>
+        </table>
+        <h2>Toolbar and grid functionality</h2>
+        <ul>
+            <li><span class="Emphasis">New</span>: Launches the <span class="Emphasis">Target Creation (New)</span> window to create a new scenario.</li>
+            <li>
+                <p><span class="Emphasis">Copy</span>: Launches the <span class="Emphasis">Edit Target Scenario</span> window. </p>
+            </li>
+            <li>
+                <p><span class="Emphasis">Edit</span>: Launches the <span class="Emphasis">Edit Target Creation</span> window which displays the selected scenario’s details in the left pane. All fields are editable in scenarios of status Created, Calculated, or Rationalized.</p>
+            </li>
+            <li><span class="Emphasis">Delete</span>: Deletes the selected Target Scenario.</li>
+            <li>
+                <p><span class="Emphasis">Compare</span>: Launches the <span class="Emphasis">Target Comparison</span> window used to compare scenarios.</p>
+                <p>
+                    <img src="../../Resources/Images/Target Choice Count/Target Choice Comparison screen.PNG" class="LargeImages">
+                    </img>
+                </p>
+                <ul>
+                    <li>Standard  pivot grid functionality, including the ability to graph selected data elements and Export or Open analysis in a variety of popular formats, including Microsoft Excel and Adobe PDF.</li>
+                    <li>
+                        <p>Site count is a SUM across cluster sets and clusters, but an AVERAGE across segments and scenarios.</p>
+                    </li>
+                    <li>Only prerequisite for scenario comparison is that scenarios be in <span class="Emphasis">Calculated</span> or <span class="Emphasis">Rationalized</span> status.</li>
+                </ul>
+            </li>
+            <li>
+                <p><span class="Emphasis">Smart Start</span>: If Target Choice Counts is used within AP, scenarios can be used to create a foundation for assortment plans through a process called Smart Start.
+For more information on Smart Start,<MadCap:conditionalText MadCap:conditions="General.ScreenOnly"> see <MadCap:xref href="../Assortment Planning/Smart Start.htm">Smart Start </MadCap:xref>.</MadCap:conditionalText><MadCap:conditionalText MadCap:conditions="General.PrintOnly"> refer to the Assortment Planning User Guide.</MadCap:conditionalText></p>
+            </li>
+            <li>
+                <p><span class="Emphasis">Cluster Config</span>:  Launches the Target Configuration screen allowing users to determine which clusters should always have more choices than others. For more information, see <MadCap:xref href="Target Choice Count Cluster Configuration.htm">Target Choice Count Cluster Configuration</MadCap:xref>.</p>
+            </li>
+        </ul>
+    </body>
+</html>

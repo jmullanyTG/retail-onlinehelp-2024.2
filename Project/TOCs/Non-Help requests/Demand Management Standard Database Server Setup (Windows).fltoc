@@ -1,0 +1,47 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<CatapultToc
+  Version="1">
+  <TocEntry
+    Title="[%=System.LinkedTitle%]"
+    Link="/Content/Resources/Global/PrintCover Title Only.htm" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd"
+    conditions="General.PrintOnly"
+    StartSection="false"
+    BreakType="chapter"
+    PageNumberReset="reset"
+    PageNumber="1"
+    PageLayout="/Content/Resources/PageLayouts/FrontMatter.flpgl"
+    PageType="title"
+    ReplaceMergeNode="false" />
+  <TocEntry
+    Title="[%=System.LinkedTitle%]"
+    Link="/Content/Resources/Global/copyright.htm" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd"
+    conditions="General.PrintOnly"
+    StartSection="false"
+    BreakType="pageLayout" />
+  <TocEntry
+    Title="[%=System.LinkedTitle%]"
+    Link="/Content/Resources/Global/Table of Contents.htm" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd"
+    conditions="General.PrintOnly"
+    StartSection="false"></TocEntry>
+  <TocEntry
+    Title="Demand Management - Standard Database Server Setup (Windows)"
+    Link="/Content/Non-Help Requests/Standard Database Server Setup/Demand Management Standard.htm"
+    BreakType="pageLayout"
+    StartSection="false"
+    PageLayout="/Content/Resources/PageLayouts/Default.flpgl"></TocEntry>
+  <TocEntry
+    Title="Deploy and Setup in GCP"
+    Link="/Content/Non-Help Requests/Standard Database Server Setup/Deploy and Setup in GCP.htm" />
+  <TocEntry
+    Title="Deploy and Setup in Azure"
+    Link="/Content/Non-Help Requests/Standard Database Server Setup/Deploy and Setup in Azure.htm" />
+  <TocEntry
+    Title="Setup and Configuration in Windows"
+    Link="/Content/Non-Help Requests/Standard Database Server Setup/Setup and Configuration in.htm" />
+  <TocEntry
+    Title="Setup and Configuration for MS SQL Server"
+    Link="/Content/Non-Help Requests/Standard Database Server Setup/Setup and Configuration for.htm" />
+  <TocEntry
+    Title="Final Configuration Steps"
+    Link="/Content/Non-Help Requests/Standard Database Server Setup/Final Configuration Steps.htm" />
+</CatapultToc>

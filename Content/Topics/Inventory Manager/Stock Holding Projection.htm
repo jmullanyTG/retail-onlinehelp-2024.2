@@ -1,0 +1,146 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" xml:lang="en-us">
+    <head>
+        <link href="../../Resources/TableStyles/standard.css" rel="stylesheet" MadCap:stylesheetType="table" /><title></title>
+    </head>
+    <body>
+        <h1>Stock Holding Projection</h1>
+        <p>Stock holding projection describes what the physical stock level will be at any point in time. The stock level only increases once the stock is received at the destination location which is why the projection is based on estimated receipt date. This is completely true for supplier orders for the first point of entry of stock into the supply chain.</p>
+        <p>For DC to store or any other stock transfer within the supply chain, the first point is still valid for the destination site. However, the source location will have its SOH decreased at the sending location order date at the source by the transfer amount. </p>
+        <p>There is then an inbound stock quantity for this transfer which should be a separate measure. This is typically a separate quantity as different organizations have different rules as to who owns this stock while it is in transit. Having a separate inbound stock quantity gives the flexibility to add it to the source or the destination SOH when reporting on stock holding within the supply chain.</p>
+        <p class="BasicNote"> The ability to configure a series’ color requires user right <span class="Emphasis">Allow Stock Projection Series Configuration</span>.</p>
+        <p>
+            <img src="../../Resources/Images/Inventory Manager/Stock Holding Projection.png" class="LargeImages" />
+        </p>
+        <p>The <span class="Emphasis">Stock Holding Projection</span> tab displays the familiar sawtooth diagram which is key throughout the inventory planning process. The colors of the various available series within the graph can be selected from a color palette.</p>
+        <p class="BasicNote">System policy <span class="Emphasis">Stock Projection Graph Series</span> (Module: Inventory Manager) controls which series are visible in the Stock Holding projection graph.</p>
+        <p>An <span class="Emphasis">Advanced Calculate</span> button displays when the item is a Replenishment item. </p>
+        <p class="BasicNote">This button requires User Right <span class="Emphasis">Allow Stock Projection Calculation Using Advanced Calc</span>. </p>
+        <p>A status bar displays additional metadata based on the row selection or cells within a row. Certain cells within a row can be highlighted or a whole row to view the sum, average, count, minimum, and maximum values in the status bar at the bottom of the grid. To display the status bar, right-click in the grid and select the <span class="Emphasis">Status Bar</span> menu option.</p>
+        <h2>Allocation versus replenishment projections</h2>
+        <p>The <span class="Emphasis">Stock Holding Projection</span> tab displays allocation- or replenishment-related projections depending on whether the selected item is managed by the Allocations module or the Demand&#160;Forecasting/Inventory Planning/Replenishment suite (Replenishment, for short).</p>
+        <p>If both the Allocations module and the Replenishment suite are enabled, the <span class="Emphasis">Allocation Strategy Selection</span> field in the <span class="Emphasis">Allocation Strategy</span> screen sets whether an item is managed by Allocations or Replenishment. The <span class="Emphasis">Execution Process</span> column can be added to the Inventory Manager view to see which process manages each item. Its read-only values are <span class="Emphasis">Allocations engine</span> or <span class="Emphasis">Replenishment engine</span>.</p>
+        <h2>Metric overview</h2>
+        <table style="margin-left: 0;margin-right: auto;mc-table-style: url('../../Resources/TableStyles/standard.css');" class="TableStyle-standard" cellspacing="0">
+            <col class="TableStyle-standard-Column-Column1" style="width: 77px;" />
+            <col class="TableStyle-standard-Column-Column2" style="width: 380px;" />
+            <col class="TableStyle-standard-Column-Column1" style="width: 537px;" />
+            <thead>
+                <tr class="TableStyle-standard-Head-Header1">
+                    <th class="TableStyle-standard-HeadE-Column1-Header1">Metric </th>
+                    <th class="TableStyle-standard-HeadE-Column2-Header1">Definition</th>
+                    <th class="TableStyle-standard-HeadD-Column1-Header1">Business Value</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">
+                        Lost Sales
+                    </td>
+                    <td class="TableStyle-standard-BodyE-Column2-Body1">
+                        Calculated missed sales opportunities based on potential out of stocks
+                    </td>
+                    <td class="TableStyle-standard-BodyD-Column1-Body1">Gives allocators an idea of missed sales opportunities as a result of potential out of stock situations. This is the system’s best estimate of foregone and missed sales.
+                    </td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">
+                        Optimal Allocation
+                    </td>
+                    <td class="TableStyle-standard-BodyE-Column2-Body1">
+                        Total Recommended Allocation - constrained by available inventory and any user specified constraints – includes any recommended safety stock.</td>
+                    <td class="TableStyle-standard-BodyD-Column1-Body1">
+                        Based on all user specified constraints, the system recommends an optimal allocation value to allocators.
+                    </td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">
+                        Receipts
+                    </td>
+                    <td class="TableStyle-standard-BodyE-Column2-Body1">
+                        Actual Orders received in stores
+                    </td>
+                    <td class="TableStyle-standard-BodyD-Column1-Body1">
+                        Users can see how much stock stores have received.
+                    </td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">
+                        Recommended Safety Stock
+                    </td>
+                    <td class="TableStyle-standard-BodyE-Column2-Body1">
+                        Safety Stock Rollup (Safety Stock Units or WOC by store – sum of the greater of the two by size/store). The value can change each week as it represents the portion of the allocation that covers safety stock.
+                    </td>
+                    <td class="TableStyle-standard-BodyD-Column1-Body1">
+                        Based on the calculation, this value is the recommended value for safety stock as part of the allocation.
+                    </td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">
+                        Reserved Stock
+                    </td>
+                    <td class="TableStyle-standard-BodyE-Column2-Body1">
+                        Any stock which has been reserved and is not available for allocation
+                    </td>
+                    <td class="TableStyle-standard-BodyD-Column1-Body1">
+                        Reserved stock (whether for specific events or purposes, new stores or items, etc.) and not available to allocate.
+                    </td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">
+                        Site Count
+                    </td>
+                    <td class="TableStyle-standard-BodyE-Column2-Body1">
+                        Total store count in Location Strategy (DC not included)
+                    </td>
+                    <td class="TableStyle-standard-BodyD-Column1-Body1">
+                        Based on the configured location strategy, allocators can see how many sites are included within the allocation roll-up.
+                    </td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">
+                        Stock On Hand
+                    </td>
+                    <td class="TableStyle-standard-BodyE-Column2-Body1">
+                        Beginning of Week SOH – actual for past and current weeks, projected OH for future weeks
+                    </td>
+                    <td class="TableStyle-standard-BodyD-Column1-Body1">Allocators will know what the stock on hand at each site is.
+                    </td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">
+                        Supplier Orders
+                    </td>
+                    <td class="TableStyle-standard-BodyE-Column2-Body1">
+                        Total Orders (Receipts + In Transit)
+                    </td>
+                    <td class="TableStyle-standard-BodyD-Column1-Body1">
+                        Allocators can know what stock will be received from supplier orders giving them a good idea of incoming orders at the source-site level.
+                    </td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">
+                        Total Actionable Stock
+                    </td>
+                    <td class="TableStyle-standard-BodyE-Column2-Body1">
+                        Displays for both stores and DCs but is more meaningful for DCs. Reflects the Available to Allocate in the beginning of the current week. For stores, this number matches the Stock on Hand field. For DCs, this number can differ from SOH if there is pending stock (i.e. an allocations has been created against the DC inventory).
+                    </td>
+                    <td class="TableStyle-standard-BodyD-Column1-Body1">
+                        Total Actionable is the maximum value that Available to Allocate should be and is exclusive of constraints. This gives allocators a good idea of how much stock they will be able to allocate.
+                    </td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyB-Column1-Body1">
+                        Unit Sales (actual)
+                    </td>
+                    <td class="TableStyle-standard-BodyB-Column2-Body1">
+                        Actual Sales Quantity by week – will display historically
+                    </td>
+                    <td class="TableStyle-standard-BodyA-Column1-Body1">
+                        Allocators will be able to see their actual historic sales.
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </body>
+</html>

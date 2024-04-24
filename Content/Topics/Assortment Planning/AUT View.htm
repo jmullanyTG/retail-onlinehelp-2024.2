@@ -1,0 +1,70 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" xml:lang="en-us">
+    <head>
+        <link href="../../Resources/TableStyles/standard.css" rel="stylesheet" MadCap:stylesheetType="table" /><title></title>
+    </head>
+    <body>
+        <h1>AUT view</h1>
+        <p MadCap:conditions="General.DoNotPublish">Deprecated 2021.4</p>
+        <p>The AUT view is used to make period level changes to an average unit ticket price (AUT) for the purpose of planning mid-season permanent price adjustments. This view can be used to make such changes even after a placeholder or collection has begun to actualize.</p>
+        <p class="BasicNote">If system policy<span class="Emphasis"> Editability of AUT</span> is set to 2 (AUT is only managed through imports), then AUT is read-only for Placeholders with a status of Assigned, Committed, Replen, and Allocate. For placeholders with a status of Open and Created, AUT&#160;is editable. </p>
+        <h2>Conditional formatting</h2>
+        <p>The fields in the grid automatically format. Once a markdown date is applied black text refreshes to red text.</p>
+        <h2>Toolbar options</h2>
+        <p>The following toolbar options are available:</p>
+        <table style="width: 100%;margin-left: auto;margin-right: auto;mc-table-style: url('../../Resources/TableStyles/standard.css');" class="TableStyle-standard" cellspacing="0">
+            <col class="TableStyle-standard-Column-Column1" />
+            <col class="TableStyle-standard-Column-Column2" />
+            <thead>
+                <tr class="TableStyle-standard-Head-Header1">
+                    <th class="TableStyle-standard-HeadE-Column1-Header1">Option</th>
+                    <th class="TableStyle-standard-HeadD-Column2-Header1">Description</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1"><span class="Emphasis">Export</span>
+                    </td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">Exports and saves the Pivot Grid in many common formats including Microsoft Excel and Adobe PDF.</td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1"><span class="Emphasis">Open</span>
+                    </td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">
+                        Opens the Pivot Grid in many common formats including Microsoft Excel and Adobe PDF – does not require save prior to viewing in the desired format.
+                    </td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1"><span class="Emphasis">Graph</span>
+                    </td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">Graphs the selected data in the view.</td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1"><span class="Emphasis">Fields</span>
+                    </td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">
+                        Allows the user to customize the field layout for the view.
+                        <p class="BasicNote">Custom layouts can be saved and restored by right-clicking in the Pivot Grid and selecting Save Layout or Restore Layout, respectively.</p></td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1"><span class="Emphasis">Save</span>
+                    </td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">
+                        Saves all AUT changes made since the last Apply and initiates recalculation of blended AUR values for the selected placeholder.
+                        <p class="BasicNote">Placeholder/collection level AUT calculates as a weighted average based on sales units of the periods in the phase window for each cluster.</p></td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyB-Column1-Body1"><span class="Emphasis">Cancel</span>
+                    </td>
+                    <td class="TableStyle-standard-BodyA-Column2-Body1">Cancels all changes and reverts them to previously saved values.</td>
+                </tr>
+            </tbody>
+        </table>
+        <h2>Data fields</h2>
+        <ul>
+            <li><span class="Emphasis">Period</span>: The period being changed. This aligns with the period type for the current assortment plan.</li>
+            <li><span class="Emphasis">Cluster Set</span>: The cluster set containing the cluster to be changed.</li>
+            <li><span class="Emphasis">Cluster</span>: The cluster to be changed.</li>
+        </ul>
+    </body>
+</html>

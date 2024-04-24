@@ -1,0 +1,29 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" xml:lang="en-us">
+    <head><title></title>
+    </head>
+    <body>
+        <h1>Method surveys</h1>
+        <p>Method surveys are yes or no questions that are applied to a forecast to determine its viability. These method surveys are a very simple way to fail a forecasting method that would likely yield an impractical result. The result of a series rule will be true or false. </p>
+        <p>An example of a method survey would be to check if there are enough data points to fill in the specified number of periods for a moving average to be run. If users ask for three data points and there are only two, then the method survey will fail the method.</p>
+        <p>There are several surveys that may be added to a forecasting method. Within each survey, the survey stage (either Pre-Survey or Post-Survey) must be set. Also, each individual rule will have a set of default parameters and several additional parameters that may be included to further customize the survey, and by extension the forecast.</p>
+        <p class="BasicNote">An optional one-off survey labeled <span class="Emphasis">8 weeks</span> is possible. This survey fails the method if there are eight weeks or less of data. The expression <span class="Emphasis">HistoryMax &lt; 9</span> presents all that there is to this survey rule.</p>
+        <h2>Trend survey</h2>
+        <p>The <span class="Emphasis">Trend Survey</span> returns a false result (thus failing the method) if the method is looking for a trend and the data does not show a big enough trend. Default included parameters for this survey are <span class="Emphasis">HistoryAvg</span> and <span class="Emphasis">HistorySlope</span>.</p>
+        <h2>Seasonal trend survey</h2>
+        <p>The <span class="Emphasis">Seasonal Trend Survey</span> returns a true or false after determining if the data shows a big enough seasonal trend. It uses the default included parameter of <span class="Emphasis">HistorySeasonalPercent</span>. If it shows more than a 20% change, it is determined to be big enough.</p>
+        <h2>Seasonal survey</h2>
+        <p>The <span class="Emphasis">Seasonal Survey</span> rule only passes a seasonal forecasting method if there are sufficient data points to justify using it. It requires that <span class="Emphasis">HistoryNumPoints</span> minus <span class="Emphasis">HistoryZerosBetweenSales</span> minus <span class="Emphasis">HistoryTrailingZeros</span> is greater than <span class="Emphasis">Seasonality</span>.</p>
+        <h2>Intermittent survey</h2>
+        <p>The <span class="Emphasis">Intermittent Survey</span> rule fails an intermittent method if there are not enough zero points. It’s measured by adding the <span class="Emphasis">HistoryZerosBetweenSales</span> to the <span class="Emphasis">HistoryTrailingZeros</span> and seeing if it is greater than 0.6 x <span class="Emphasis">Seasonality</span>. This will easily fail most intermittent methods for non-intermittent data.</p>
+        <h2>Linear regression survey</h2>
+        <p>The <span class="Emphasis">Linear Regression Survey</span> rule is used to fail the linear regression method. If the <span class="Emphasis">HistoryStd</span> divided by the <span class="Emphasis">HistoryAvg</span> is less than 0.5, then the method fails.</p>
+        <h2>Too intermittent survey</h2>
+        <p>The <span class="Emphasis">Too Intermittent Survey</span> rule fails several methods if the data is too intermittent. This is measured using the parameters <span class="Emphasis">HistoryZerosBetweenSales</span>, <span class="Emphasis">HistoryNumPoints</span>, <span class="Emphasis">HistoryTrailingZeros</span>, and <span class="Emphasis">HistoryLeadingZeros</span>.</p>
+        <h2>Trend points</h2>
+        <p><span class="Emphasis">Trend Points</span> is another survey used to fail any method looking for a trend. Unlike <span class="Emphasis">Trend Survey</span>, this survey rule measures the number of data points instead of the slope of the data. The default included parameters are <span class="Emphasis">HistoryNumPoints</span>, <span class="Emphasis">HistoryLeadingZeros</span>, and <span class="Emphasis">Seasonality</span>.</p>
+        <h2>Reasonable survey</h2>
+        <p>The <span class="Emphasis">Reasonable Survey</span> is a very important survey rule. This survey fails a method if the results are determined to be beyond the realm of realistic possibilities. </p>
+        <p><span class="Emphasis">Reasonable Survey</span> should almost always be included in the post-survey for all forecasting methods. If it is not included (or the parameters are changed in the expression) it should only be done if it is intended to see what the forecasting engine can do when it doesn’t need to return a reasonable result. The reasonable survey looks at the history to gather <span class="Emphasis">ForecastSeasonalPercent</span>.</p>
+    </body>
+</html>

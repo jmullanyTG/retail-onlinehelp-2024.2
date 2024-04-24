@@ -1,0 +1,68 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" xml:lang="en-us">
+    <head>
+        <link href="../../Resources/TableStyles/standard.css" rel="stylesheet" MadCap:stylesheetType="table" /><title></title>
+    </head>
+    <body>
+        <h1>Method step rules</h1>
+        <p>A step rule modifies a step, which is a single data point. This is used to disregard any outliers or anomalous data points when calculating forecasts.</p>
+        <p>The available step rules are identical to the series rules (with the exception of <span class="Emphasis">Grubbs</span> and <span class="Emphasis">Fill In</span> and the addition of the Period Trend Rate Limiter). However, they are applied to any single point in the selected stage (Backtrack, Simulation, Forecast). </p>
+        <table style="width: 100%;margin-left: 0;margin-right: auto;mc-table-style: url('../../Resources/TableStyles/standard.css');" class="TableStyle-standard" cellspacing="0">
+            <col class="TableStyle-standard-Column-Column1" />
+            <col class="TableStyle-standard-Column-Column2" />
+            <col class="TableStyle-standard-Column-Column1" />
+            <thead>
+                <tr class="TableStyle-standard-Head-Header1">
+                    <th class="TableStyle-standard-HeadE-Column1-Header1">Step Rule</th>
+                    <th class="TableStyle-standard-HeadE-Column2-Header1">Configuration</th>
+                    <th class="TableStyle-standard-HeadD-Column1-Header1">Parameter</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1"><span class="Emphasis">Trend Limiter</span>
+                    </td>
+                    <td class="TableStyle-standard-BodyE-Column2-Body1">The explicit limiting of the data trend. </td>
+                    <td class="TableStyle-standard-BodyD-Column1-Body1"><span class="Emphasis">StepTrendLimit</span>
+                    </td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1"><span class="Emphasis">Trend Rate Limiter</span>
+                    </td>
+                    <td class="TableStyle-standard-BodyE-Column2-Body1">The dampening of the trend over time. This step rule must be coupled with the Trend processor, which itself calculates the Slope  as an independent process. </td>
+                    <td class="TableStyle-standard-BodyD-Column1-Body1"><span class="Emphasis">StepTrendPercentRateLimit</span>
+                    </td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1"><span class="Emphasis">Percent Bias</span>
+                    </td>
+                    <td class="TableStyle-standard-BodyE-Column2-Body1"> Adds or removes percent bias to the data series.</td>
+                    <td class="TableStyle-standard-BodyD-Column1-Body1"><span class="Emphasis">StepPercentBias</span>
+                    </td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1"><span class="Emphasis">Min</span>
+                    </td>
+                    <td class="TableStyle-standard-BodyE-Column2-Body1">The absolute minimum for the data series.</td>
+                    <td class="TableStyle-standard-BodyD-Column1-Body1"><span class="Emphasis">StepMin</span>
+                    </td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1"><span class="Emphasis">Max</span>
+                    </td>
+                    <td class="TableStyle-standard-BodyE-Column2-Body1">The absolute maximum for the data series.</td>
+                    <td class="TableStyle-standard-BodyD-Column1-Body1"><span class="Emphasis">StepMax</span>
+                    </td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyB-Column1-Body1"><span class="Emphasis">Period Trend Rate Limiter</span>
+                    </td>
+                    <td class="TableStyle-standard-BodyB-Column2-Body1">Applies a period-on-period rate limit on trends. This step rule must be used with an exponential smoothing method where the method itself calculates the Slope. </td>
+                    <td class="TableStyle-standard-BodyA-Column1-Body1"><span class="Emphasis">StepTrendPercentRateLimit</span>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <MadCap:miniTocProxy style="mc-toc-depth: 1;" />
+    </body>
+</html>

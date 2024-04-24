@@ -1,0 +1,28 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" xml:lang="en-us">
+    <head><title></title>
+    </head>
+    <body>
+        <h1>Debugging the draft engine</h1>
+        <p>The <span class="Emphasis">Save Replay</span> button can be added to the Scenario Plan screen UI through a User Right if it becomes necessary to debug the draft engine.</p>
+        <p>Replay recipients are configured in the <span class="Emphasis">Replay Email Recipients</span> system policy. Email addresses are separated by either comma separated email addresses or a file path destination (located on the services tier machine). </p>
+        <table style="width: 100%;margin-left: auto;margin-right: auto;mc-table-style: url('../../Resources/TableStyles/standard.css');" class="TableStyle-standard" cellspacing="0">
+            <col class="TableStyle-standard-Column-Column1" />
+            <col class="TableStyle-standard-Column-Column2" />
+            <thead>
+                <tr class="TableStyle-standard-Head-Header1">
+                    <th class="TableStyle-standard-HeadE-Column1-Header1">System Policy</th>
+                    <th class="TableStyle-standard-HeadD-Column2-Header1">Description</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyB-Column1-Body1"><span class="Emphasis">Replay Email Recipients</span> (Engine.ReplayDestinations)</td>
+                    <td class="TableStyle-standard-BodyA-Column2-Body1">
+                        The email addresses which will receive the engine execution input data. 
+                        <p class="Important">This should only be used for debugging purposes as it has a severe performance impact.</p></td>
+                </tr>
+            </tbody>
+        </table>
+    </body>
+</html>

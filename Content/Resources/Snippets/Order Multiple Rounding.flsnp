@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head>
+    </head>
+    <body>
+        
+		The rounding rules used to determine how order quantities that do not precisely align with the order multiple should be rounded up or down. 
+	 
+        <ul><li><span class="BodyWord">Up</span>: rounds up to the nearest order multiple.
+		</li><li><span class="BodyWord">Down</span>: rounds down to the nearest order multiple.
+		</li><li><span class="BodyWord">Nearest</span>:&#160;rounds to the nearest order multiple (round natural). </li><li><span class="BodyWord">
+		Down Protected</span>:&#160;rounds down, unless the action of rounding creates a projected lost sale, in which case it will round up.</li><li><![CDATA[ 
+		]]><span class="BodyWord">Nearest Protected</span>: rounds nearest (natural), unless the action of rounding creates a projected lost sale, in which case it will round up. This is the recommended setting. 
+</li></ul></body>
+</html>

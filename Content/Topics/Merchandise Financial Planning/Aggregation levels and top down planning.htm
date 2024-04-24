@@ -1,0 +1,28 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head>
+    </head>
+    <body>
+        <h1>Aggregation levels and top down planning</h1>
+        <p>Users can experience a slowdown when working with large volumes of data, whether it consists of many months, channels, product categories, or a combination of all these. </p>
+        <p>Aggregation levels limit the number of data rows the system must work with and display by pre-aggregating data below the selected level. In a top down planning environment, these can be utilized to great advantage by taking a tiered approach to working on plans:</p>
+        <p class="BasicNote">For more information regarding the <span class="Emphasis">Product Agg Level</span> parameter, see <MadCap:xref href="Parameters.htm">Plan parameters</MadCap:xref>.</p>
+        <p>
+            <img src="../../Resources/Images/MFP/Prod Agg Level.png" class="LargeImages">
+            </img>
+        </p>
+        <p>In the above example with the <span class="Emphasis">Product Agg Level</span> set to <span class="Emphasis">Category</span>, the <span class="Emphasis">Product Level Description</span> pivot field shows Watches (5/5). This indicates there are 5 Brands beneath the Watches product category and the view is currently aggregating data from all of them.</p>
+        <p>
+            <img src="../../Resources/Images/MFP/Prod Agg Level Unchecked.png" class="LargeImages">
+            </img>
+        </p>
+        <p>By unchecking one of the brands in the <span class="Emphasis">Product</span> parameter dropdown and re-executing the view, the <span class="Emphasis">Product Level Description</span> now reads Watches (4/5). This indicates data for only 4 of the 5 total levels is aggregated in the view.</p>
+        <p>
+            <img src="../../Resources/Images/MFP/Prod Agg level Brand.png" class="LargeImages">
+            </img>
+        </p>
+        <p>By adopting a systematic approach, an optimal system performance can be maintained while working on progressively more granular levels of the plan. In the above example, the aggregation level has changed to <span class="Emphasis">Brand</span> so work can be performed on the details of each brand beneath the Watch category.</p>
+        <h3>Constraining changes at the brand level</h3>
+        <p>To constrain changes made at the <span class="Emphasis">Brand</span> level to the values planned at the <span class="Emphasis">Category</span> level, users can employ locking functionality before delving into deeper levels of the plan. For more information, see <MadCap:xref href="Lock Spread.htm">Locking sales and dependent metrics</MadCap:xref>.</p>
+    </body>
+</html>

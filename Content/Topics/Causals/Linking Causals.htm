@@ -1,0 +1,172 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" xml:lang="en-us">
+    <head>
+        <link href="../../Resources/TableStyles/standard.css" rel="stylesheet" MadCap:stylesheetType="table" />
+        <title>
+        </title>
+    </head>
+    <body>
+        <h1>Linking causals using Causal Manager blades</h1>
+        <p>Causals are created based on supplied weather lift factor per product segment.  Inventories can then be linked to these product segments allowing the weather lift factors in the causals to be considered as part of the inventories demand forecast.</p>
+        <h2>Inventory Links</h2>
+        <p>Click <span class="Emphasis">Add</span> to display the Items filter dialog. The grid populates once a filter is selected. Multiple rows can be selected within the <span class="Emphasis">Inventory</span> grid which displays the inventory links for the selected inventories. </p>
+        <p class="Important">If the items do not display in the grid, items with a mismatched bucket type to that of the causal have been selected.</p>
+        <p>
+            <img src="../../Resources/Images/Causals/Inventory Links.png" class="LargeImages" />
+        </p>
+        <p class="p">Clicking  <span class="Emphasis">View</span> opens an <span class="Emphasis">Inventory Manager Document</span>   with more details. Within <span class="Emphasis">Inventory Manager</span>, the selection from the <span class="Emphasis">Causal Manager</span> module can be viewed by navigating to the <span class="Emphasis">Forecast Viewer</span> blade. The <span class="Emphasis">Forecast Viewer</span> displays the inventory links and forecasts. </p>
+        <p>To remove items in a filter from a causal, select the items and click the <span class="Emphasis">Remove</span> button. </p>
+        <h2>Item Master Links</h2>
+        <p>The Item Master Link links the causal to an item master and applies it across all sites. </p>
+        <p class="Important">If the items do not display in the grid, the items have a mismatched bucket type to that of the causal.</p>
+        <p>
+            <img src="../../Resources/Images/Causals/Item Master Links.png" class="LargeImages" />
+        </p>
+        <p class="BasicNote">For more information on a specific item, select the item and click <span class="Emphasis">View</span> to open the Inventory Manager Document.</p>
+        <h2>Filter links</h2>
+        <p>The most common way to apply causals is to link them to a filter. These filters must be created using the <span class="Emphasis">Filter</span> module, and then linked in the <span class="Emphasis">Causal Manager</span> module. Inventory, item master, site, and variant filters can be linked to a causal.</p>
+        <p>Selecting a filter links all items contained within a filter to the specific causal. This is especially helpful with dynamic filters, as the items contained within the filter can change over time. </p>
+        <p class="Important">If the items are not appearing in the grid, the items have a mismatched bucket type to that of the causal.</p>
+        <ol>
+            <li>Navigate to the <span class="Emphasis">Filter Links</span> tab.</li>
+            <li>Click <span class="Emphasis">Add</span>.
+			</li>
+            <li>Select the appropriate Filter Entity Type.
+			<p><img src="../../Resources/Images/Causals/Add Filter Link.PNG" class="LargeImages"></img></p></li>
+            <li>Click <span class="Emphasis">Ok</span>.</li>
+        </ol>
+        <p class="BasicNote">Inventory, item master, site, and variant entity filters can be linked with the actual causal link applying at the constituent inventory level. </p>
+        <p>Selected items from the filter can be removed from the causal link by highlighting them and pressing the <span class="Emphasis">Remove</span> button. </p>
+        <p class="BasicNote">For more information on a specific item, highlight the item and click <span class="Emphasis">View</span> to open the Inventory Manager document.</p>
+        <h2>Level Links</h2>
+        <p>With <span class="Emphasis">Level Links</span>, causals are applied to a value in the pre-configured level of the product and location hierarchies, as specified in Level Forecasting. </p>
+        <p>
+            <img src="../../Resources/Images/Causals/Level Links.png" class="LargeImages">
+            </img>
+        </p>
+        <p>The values are limited to those contained in the configured level. </p>
+        <h2>Signal Subscriptions</h2>
+        <p>The <span class="Emphasis">Signal Subscriptions</span> blade displays the available External Signal subscriptions and the current subscription status. This blade is primarily informational. </p>
+        <h4>Requirements to view the Signal Subscriptions blade</h4>
+        <p>The following  is required to be able to view this blade:</p>
+        <ul>
+            <li>
+                <p>Right (Right Group: External Signals) <span class="Emphasis">Allow Access to Signal Subscriptions</span></p>
+            </li>
+            <li>System policy (Module: External Signals) <span class="Emphasis">Display Signal Subscriptions Tab in Causal Manager?</span> (set to <span class="Emphasis">True</span>)</li>
+        </ul>
+        <h3>Field definitions</h3>
+        <table style="width: 100%;margin-left: 0;margin-right: auto;mc-table-style: url('../../Resources/TableStyles/standard.css');" class="TableStyle-standard" cellspacing="0">
+            <col class="TableStyle-standard-Column-Column1" />
+            <col class="TableStyle-standard-Column-Column2" />
+            <thead>
+                <tr class="TableStyle-standard-Head-Header1">
+                    <th class="TableStyle-standard-HeadE-Column1-Header1">Field</th>
+                    <th class="TableStyle-standard-HeadD-Column2-Header1">Definitions</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">Signal Source</td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">The name of the signal subscription.</td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">Description</td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">The nature of the data being supplied through the subscription.</td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">Subscribed</td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">Whether currently subscribed.</td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyB-Column1-Body1">Manage</td>
+                    <td class="TableStyle-standard-BodyA-Column2-Body1">A URL link that when clicked opens a browser to a page that allows the user to request sales information for the subscription.</td>
+                </tr>
+            </tbody>
+        </table>
+        <h2>Weather Signals </h2>
+        <p>The <span class="Emphasis">Weather Signals</span> blade is specific to the Planalytics weather trends subscription. Only the Segments that the customer has a subscription for display.  The blade displays the status of product Segments and Markets for the subscription. It also allows the administrator of the subscription to set which subscribed Segments and Markets will be used to generate causals.</p>
+        <p>
+            <img src="../../Resources/Images/Causals/Weather Signals blade.png" class="LargeImages">
+            </img>
+        </p>
+        <p>Selecting a segment in the left grid displays the markets available to it in the right grid. Checking or unchecking the <span class="Emphasis">Create Causal</span> checkbox determines whether Causals for the segments and markets are created in response to the incoming data.</p>
+        <p>Checking or unchecking <span class="Emphasis">Create Causal</span> in the segment grid automatically selects all the segment’s available markets. Particular markets can then be unselected if Causals are not wanted for them. Unchecking the Segment or Market checkboxes prevents future causals from being created for those Segment/Market combinations.</p>
+        <p>The bottom graph displays Planalytics weather trend data for the currently selected product Segment and Market for the next 14 days.</p>
+        <h4>Requirements to view or edit the Weather Signals blade</h4>
+        <p>The following is required to be able to view or edit this blade:</p>
+        <ul>
+            <li>
+                <p>Right (Right Group: External Signals) <span class="Emphasis">Allow Access to Weather Signals</span></p>
+            </li>
+            <li>
+                <p>Right (Right Group: External Signals) <span class="Emphasis">Allow Editing of Weather Signals</span></p>
+            </li>
+            <li>System policy (Module: External Signals) <span class="Emphasis">Display Weather Signals Tab in Causal Manager?</span>  (set to <span class="Emphasis">True</span>)</li>
+        </ul>
+        <h3>Segment grid field definitions</h3>
+        <table style="width: 100%;margin-left: 0;margin-right: auto;mc-table-style: url('../../Resources/TableStyles/standard.css');" class="TableStyle-standard" cellspacing="0">
+            <col class="TableStyle-standard-Column-Column1" />
+            <col class="TableStyle-standard-Column-Column2" />
+            <thead>
+                <tr class="TableStyle-standard-Head-Header1">
+                    <th class="TableStyle-standard-HeadE-Column1-Header1">Field</th>
+                    <th class="TableStyle-standard-HeadD-Column2-Header1">Definitions</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">Segment</td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">The name of each product segment.</td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">Create Causal</td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">A checkbox that indicates if a causal is being created for the Segment. The default is checked (a causal will be created).</td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyB-Column1-Body1">Last Modified Date</td>
+                    <td class="TableStyle-standard-BodyA-Column2-Body1">The date of the last change to the Segment.</td>
+                </tr>
+            </tbody>
+        </table>
+        <h3>Market grid field definitions</h3>
+        <table style="width: 100%;margin-left: 0;margin-right: auto;mc-table-style: url('../../Resources/TableStyles/standard.css');" class="TableStyle-standard" cellspacing="0">
+            <col class="TableStyle-standard-Column-Column1" />
+            <col class="TableStyle-standard-Column-Column2" />
+            <thead>
+                <tr class="TableStyle-standard-Head-Header1">
+                    <th class="TableStyle-standard-HeadE-Column1-Header1">Field</th>
+                    <th class="TableStyle-standard-HeadD-Column2-Header1">Definitions</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">Market</td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">The name of each Market.</td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">Create Causal</td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">A checkbox that indicates if a causal is being created for the Market. The default is checked (a causal will be created).</td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1" MadCap:conditions="">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">Last Modified By</td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">The name of the last user to make a change to the Market setting.</td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyB-Column1-Body1">Last Modified Date</td>
+                    <td class="TableStyle-standard-BodyA-Column2-Body1">The date of the last change to the Market.</td>
+                </tr>
+            </tbody>
+        </table>
+        <h2>Planalytics Variant Segment Link</h2>
+        <p>Variants are subscribed to Segments using the  <span class="Emphasis">Planalytics Variant Segment Link</span> blade. To populate the grid, select a Variant Filter and click <span class="Emphasis">Execute</span>. Segments can be added or updated using the dropdown in the <span class="Emphasis">Segment</span> field. Select a blank Segment to clear the field. Only subscribed segments assigned to the logged-in user display and a segment cannot be removed once added.
+</p>
+        <p class="BasicNote">
+Causals only affect the Variants that are assigned to a segment. </p>
+        <p>
+            <img src="../../Resources/Images/Causals/Planalytics Variant Segment Link blade.png" class="LargeImages">
+            </img>
+        </p>
+        <p class="BasicNote">The Segment data is provided by Planalytics.</p>
+    </body>
+</html>

@@ -1,0 +1,432 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head>
+        <link href="../../Resources/TableStyles/standard.css" rel="stylesheet" MadCap:stylesheetType="table" />
+        <link href="../../Resources/TableStyles/standard.css" rel="stylesheet" MadCap:stylesheetType="table" />
+    </head>
+    <body>
+        <h1>Assortment Plan Defaults tab</h1>
+        <p>
+            <img src="../../Resources/Images/Assortment Planning/Manage Assortment Defaults screen.png" class="LargeImages" />
+        </p>
+        <h2>Accessing the Assortment Plan Default tabs</h2>
+        <ul>
+            <li>From the Assortment Planning module, click <span class="Emphasis">Manage</span>  and select <span class="Emphasis">Defaults</span> on the <span class="Emphasis">Manage Assortment Plans</span> screen.</li>
+        </ul>
+        <h2>Updating multiple rows simultaneously</h2>
+        <p>
+            <img src="../../Resources/Images/Assortment Planning/MultiSelect Editing.PNG" class="LargeImages" />
+        </p>
+        <ol>
+            <li>Select a row and press <span class="Emphasis">Shift</span>.</li>
+            <li>Click on all the rows to be updated or select a row further down the list to highlight a range of rows.</li>
+            <li>Right-click in the field to be updated and choose <span class="Emphasis">Multiple Changes</span> from the menu.</li>
+            <li>Choose the appropriate value.</li>
+            <li>Click <span class="Emphasis">Ok</span>.</li>
+            <li>Click <span class="Emphasis">Save</span>.</li>
+        </ol>
+        <h2>Accounting for new store openings through the life of items  
+
+</h2>
+        <p>Two metrics account for new store openings through the life of items.  The metrics are:</p>
+        <ul>
+            <li><span class="Emphasis">New Site Min Pres Multiplier</span>
+            </li>
+            <li><span class="Emphasis">New Site Multiplier Number of Periods</span>
+            </li>
+        </ul>
+        <p>This  functionality increases the safety stock (Minimum Presentation or Minimum Display) at particular points during the life of the item by front loading or ordering more stock earlier to account for new store openings.  The increase in safety stock occurs at each flow date, instead of at the beginning of the life of the item.  Additionally, instead of applying a multiplier for all sites, a multiplier is only applied for the count of new sites.
+
+</p>
+        <p class="Important">To function as designed and apply the multiplier for the count of new sites only, it is crucial that the <span class="Emphasis">Date Opened</span> and <span class="Emphasis">Date Closed</span> fields be accurate within Site Manager.</p>
+        <h2>Field descriptions</h2>
+        <p><span class="Emphasis">Path Code</span>: The code for the corresponding level of the product hierarchy assigned to the current plan.</p>
+        <p><span class="Emphasis">Path Description</span>: The full description of the product hierarchy path corresponding to the Path Code of the product hierarchy assigned to the current plan.</p>
+        <p><span class="Emphasis">Cluster Sets</span>: The default cluster sets assigned to new placeholders generated within the specified level of the product hierarchy. Also, sets (along with <span class="Emphasis">Additional Allowed Cluster Sets</span>) the cluster sets that will be available in the <span class="Emphasis">Cluster Sets</span> parameter when the associated product level is chosen. Available choices are only cluster sets which have been snapshotted and passed validation for use within the current assortment plan.</p>
+        <p>The following message displays upon clicking <span class="Emphasis">Save</span> when users attempt to assign multiple cluster sets containing overlapping sites to a single level of the product hierarchy:</p>
+        <p>
+            <img src="../../Resources/Images/Assortment Planning/Overlapping Site Assignments Warning.png" class="LargeImages" />
+        </p>
+        <p><span class="Emphasis">Additional Allowed Cluster Sets</span>: Sets (along with  <span class="Emphasis">Cluster Sets</span>) the cluster sets that will be available in the <span class="Emphasis">Cluster Sets</span> parameter when the associated product level is chosen. Cluster sets selected here are not automatically assigned to new placeholders. Available choices are only cluster sets which have been snapshotted and passed validation for use within the current assortment plan. </p>
+        <p> If users attempt to assign multiple cluster sets containing overlapping sites to a single level of the product hierarchy, an error message appears.</p>
+        <p><span class="Emphasis">Minimum Presentation</span>: Sets the minimum presentation stock in units per site for a given period within the current assortment plan.</p>
+        <p class="BasicNote">This setting persists across time for any periods for which <span class="Emphasis">Minimum Presentation</span> has not been set in the <span class="Emphasis">Assortment Plan Defaults By Time</span> tab, with values entered there acting as overrides to this value.</p>
+        <p><span class="Emphasis">Seasonality Curve</span>: Sets the default seasonality curve applied to placeholder instances generated within the specified level of the product hierarchy.</p>
+        <p class="BasicNote">Only curves of the Manual or Specified Conditions Using Enhanced Filtering types are available for selection within  Assortment Planning.</p>
+        <p><span class="Emphasis">Curve Mode</span>: Sets the mode of the seasonality curve being applied to a placeholder:</p>
+        <ul>
+            <li><span class="Emphasis">Static</span>: The selected curve is applied exactly as it exists at the time of application and the placeholder’s curve will not change if changes are made to the curve, whether manually in the Curves module or through dynamic recalculation. Think of this as making a copy of the applied curve</li>
+            <li><span class="Emphasis">Dynamic</span>: Changes made to the curve are pushed down to the placeholder and the dependent sales plans recalculates when those changes are pushed.</li>
+        </ul>
+        <p><span class="Emphasis">Lead Time Days</span>: The number of days prior to a given receipt date that an order must be placed to arrive on time. </p>
+        <p> Used to calculate Next Order Date in the main planning and <span class="Emphasis">Receipt Plan</span> views and <span class="Emphasis">Due Date</span> in the <span class="Emphasis">Assortment Upcoming Commitments</span> report for placeholders belonging to the corresponding product hierarchy level for which commitment orders have not been created and which either don’t have variants assigned or their assigned variants lack supplier association.                       </p>
+        <p><span class="Emphasis">Number of Markdown Periods</span>: The time frame for the markdown date to phase out date. </p>
+        <MadCap:snippetBlock src="../../Resources/Snippets/Number of Markdown Periods.flsnp" />
+        <p><span class="Emphasis">Margin</span> Read-only. The gross margin percentage for the placeholder. The calculation is: ((AUR ex VAT / (1 + VAT %)) – AUC) / (AUR ex VAT / 1 + VAT %).</p>
+        <p><span class="Emphasis">ROS $:</span> Read-only. The current ROS $ for the placeholder. Blank for new placeholders.</p>
+        <p><span class="Emphasis">ROS U</span>: Read-only. The current ROS U for the placeholder. Blank for new placeholders.</p>
+        <p><span class="Emphasis">Ttl Sls $:</span> Read-only. The current total sales revenue planned for the placeholder. Blank for new placeholders.</p>
+        <p><span class="Emphasis">Ttl Sls U</span>: Read-only. The current total sales units planned for the placeholder. Blank for new placeholders.</p>
+        <p><span class="Emphasis">S/T %:</span> Read-only. The target sell-through percentage for the placeholder.</p>
+        <p><span class="Emphasis">Calculation</span>: (Ttl Sls U / Ttl Buy U)</p>
+        <p><span class="Emphasis">Home AUT</span>: Editable currency ($10.01) The home currency AUT (average unit ticket) for the placeholder. If a <span class="Emphasis">Map From</span> is specified, then AUT is set to that of the selected variant.</p>
+        <p class="BasicNote">AUT is assumed to be inclusive of the Home Site VAT rate for the purpose of all calculations within Assortment Planning. For companies in which VAT is not in play for the home currency assigned to the active assortment plan, no special actions are required as long as the associated VAT % is set to zero. Alternatively, the system policy that enables the use of VAT in AUT calculations can be disabled. <MadCap:conditionalText MadCap:conditions="General.ScreenOnly">For more information, see <MadCap:xref href="../Currency and VAT Management/Currency and VAT Management Overview.htm">Currency and VAT Management Overview</MadCap:xref>.</MadCap:conditionalText><MadCap:conditionalText MadCap:conditions="General.PrintOnly">For more information, refer to the Currency and VAT Management User Guide. </MadCap:conditionalText></p>
+        <p><span class="Emphasis">AUR</span>: Read-only. The average unit retail price for the placeholder.</p>
+        <p><span class="Emphasis">Markdown Sales Plan Factor</span>: The ratio between pre-markdown and post-markdown sales. This is used to calculate the post-markdown sales.</p>
+        <p><span class="Emphasis">Markdown Offset Lock</span>: Links the markdown and phase out dates to each other so that they work dependently on each other. </p>
+        <MadCap:snippetBlock src="../../Resources/Snippets/Markdown Offset Lock.flsnp" />
+        <p><span class="Emphasis">Periods of Supply</span>: The periods of supply (period type as defined by the current assortment plan) for placeholders as a minimum stock constraint for receipt engine outputs within the <span class="Emphasis">Receipt Plan</span> supporting view on the main planning view.</p>
+        <p>    Actual by period constraint is defined as the sales planned for this many periods forward from a given period.</p>
+        <p class="BasicNote">This setting interacts with the system policy <span class="Emphasis">Assortment Engine DC-to-Cluster Lead Time</span> (Maintain &gt; Policies &gt; Engine: Commitments).</p>
+        <p class="Example"><span class="Emphasis">Assortment Engine DC-to-Cluster Lead Time</span> is set to 7 days. <span class="Emphasis">Periods of Supply</span> is set to 2 with a user planning a receipt to arrive in Wk 1. </p>
+        <p>For this constraint to be considered fulfilled for Wk 1, the period must end with at least 60 units of inventory on hand to cover weeks 2 and 3. The lead time of 7 days stipulates that stock being received in given week cannot be used to cover the sales planned in that week. Thus, Periods of Supply begins calculating need at Wk 2 rather than Wk 1.</p>
+        <table style="mc-table-style: url('../../Resources/TableStyles/standard.css');" class="TableStyle-standard" cellspacing="0">
+            <thead>
+                <tr class="TableStyle-standard-Head-Header1">
+                    <th class="TableStyle-standard-HeadE-Column1-Header1">Period</th>
+                    <th class="TableStyle-standard-HeadE-Column2-Header1">Wk 0</th>
+                    <th class="TableStyle-standard-HeadE-Column1-Header1">Wk 1</th>
+                    <th class="TableStyle-standard-HeadE-Column2-Header1">Wk 2</th>
+                    <th class="TableStyle-standard-HeadD-Column1-Header1">Wk 3</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">
+                        <p>Sales Units</p>
+                    </td>
+                    <td class="TableStyle-standard-BodyE-Column2-Body1">
+                        <p>0</p>
+                    </td>
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">
+                        <p>20</p>
+                    </td>
+                    <td class="TableStyle-standard-BodyE-Column2-Body1">
+                        <p>30</p>
+                    </td>
+                    <td class="TableStyle-standard-BodyD-Column1-Body1">
+                        <p>30</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">
+                        <p>Receipt Units</p>
+                    </td>
+                    <td class="TableStyle-standard-BodyE-Column2-Body1">
+                        <p>0</p>
+                    </td>
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">
+                        <p>50</p>
+                    </td>
+                    <td class="TableStyle-standard-BodyE-Column2-Body1">
+                        <p>0</p>
+                    </td>
+                    <td class="TableStyle-standard-BodyD-Column1-Body1">
+                        <p>0</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyB-Column1-Body1">
+                        <p>EOP Units</p>
+                    </td>
+                    <td class="TableStyle-standard-BodyB-Column2-Body1">
+                        <p>20</p>
+                    </td>
+                    <td class="TableStyle-standard-BodyB-Column1-Body1">
+                        <p>60</p>
+                    </td>
+                    <td class="TableStyle-standard-BodyB-Column2-Body1">
+                        <p>30</p>
+                    </td>
+                    <td class="TableStyle-standard-BodyA-Column1-Body1">
+                        <p>0</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <p><span class="Emphasis">Rec Var Min (Receipt Variant Minimum)</span>: The minimum total order quantity (including all cluster level orders) for a variant in a given period. This is used in the <span class="Emphasis">Receipt Plan</span> view.</p>
+        <p class="Example">For a Rec Var Min of 1000, this constraint is considered not met in Wk 0 but met in Wk 3 in the table below:</p>
+        <table style="mc-table-style: url('../../Resources/TableStyles/standard.css');" class="TableStyle-standard" cellspacing="0">
+            <thead>
+                <tr class="TableStyle-standard-Head-Header1">
+                    <th class="TableStyle-standard-HeadE-Column1-Header1">Period</th>
+                    <th class="TableStyle-standard-HeadE-Column2-Header1">Wk 0</th>
+                    <th class="TableStyle-standard-HeadE-Column1-Header1">Wk 1</th>
+                    <th class="TableStyle-standard-HeadE-Column2-Header1">Wk 2</th>
+                    <th class="TableStyle-standard-HeadD-Column1-Header1">Wk 3</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">
+                        <p>A</p>
+                    </td>
+                    <td class="TableStyle-standard-BodyE-Column2-Body1">
+                        <p>200</p>
+                    </td>
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">
+                        <p>&#160;</p>
+                    </td>
+                    <td class="TableStyle-standard-BodyE-Column2-Body1">
+                        <p>&#160;</p>
+                    </td>
+                    <td class="TableStyle-standard-BodyD-Column1-Body1">
+                        <p>300</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">
+                        <p>B</p>
+                    </td>
+                    <td class="TableStyle-standard-BodyE-Column2-Body1">
+                        <p>300</p>
+                    </td>
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">
+                        <p>&#160;</p>
+                    </td>
+                    <td class="TableStyle-standard-BodyE-Column2-Body1">
+                        <p>&#160;</p>
+                    </td>
+                    <td class="TableStyle-standard-BodyD-Column1-Body1">
+                        <p>300</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyB-Column1-Body1">
+                        <p>C</p>
+                    </td>
+                    <td class="TableStyle-standard-BodyB-Column2-Body1">
+                        <p>400</p>
+                    </td>
+                    <td class="TableStyle-standard-BodyB-Column1-Body1">
+                        <p>&#160;</p>
+                    </td>
+                    <td class="TableStyle-standard-BodyB-Column2-Body1">
+                        <p>&#160;</p>
+                    </td>
+                    <td class="TableStyle-standard-BodyA-Column1-Body1">
+                        <p>400</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <p>The following message displays if this constraint is not met when attempting to Create Commitments within the Receipt Plan supporting view:</p>
+        <p>
+            <img src="../../Resources/Images/Assortment Planning/Commitment Warning.png" style="width: 434px;height: 204px;" />
+        </p>
+        <p><span class="Emphasis">Yes</span> overrides the constraint and creates the commitment orders in the current view. <span class="Emphasis">No</span> cancels commitment order creation.</p>
+        <p><span class="Emphasis">Rec Size Min (Receipt Size Minimum)</span>: The minimum total order quantity (including all cluster level orders) for a variant in a given period as a function of the number of sizes present in the Size Curve attached to the variant. Used in the <span class="Emphasis">Receipt Plan</span> view.</p>
+        <p class="Example">For a Rec Size Min of 200 and a Size Curve of S, M, L, XL, XXL assigned to the variant being ordered. This constraint is considered NOT met in Wk 0 but met in Wk 3 in the table below:</p>
+        <p>The same message as shown for Rec Var Min displays if this constraint is not met when attempting to Create Commitments within the Receipt Plan supporting view.</p>
+        <table style="mc-table-style: url('../../Resources/TableStyles/standard.css');" class="TableStyle-standard" cellspacing="0">
+            <thead>
+                <tr class="TableStyle-standard-Head-Header1">
+                    <th class="TableStyle-standard-HeadE-Column1-Header1">Period</th>
+                    <th class="TableStyle-standard-HeadE-Column2-Header1">Wk 0</th>
+                    <th class="TableStyle-standard-HeadE-Column1-Header1">Wk 1</th>
+                    <th class="TableStyle-standard-HeadE-Column2-Header1">Wk 2</th>
+                    <th class="TableStyle-standard-HeadD-Column1-Header1">Wk 3</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">
+                        <p>A</p>
+                    </td>
+                    <td class="TableStyle-standard-BodyE-Column2-Body1">
+                        <p>200</p>
+                    </td>
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">
+                        <p>&#160;</p>
+                    </td>
+                    <td class="TableStyle-standard-BodyE-Column2-Body1">
+                        <p>&#160;</p>
+                    </td>
+                    <td class="TableStyle-standard-BodyD-Column1-Body1">
+                        <p>300</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">
+                        <p>B</p>
+                    </td>
+                    <td class="TableStyle-standard-BodyE-Column2-Body1">
+                        <p>300</p>
+                    </td>
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">
+                        <p>&#160;</p>
+                    </td>
+                    <td class="TableStyle-standard-BodyE-Column2-Body1">
+                        <p>&#160;</p>
+                    </td>
+                    <td class="TableStyle-standard-BodyD-Column1-Body1">
+                        <p>300</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyB-Column1-Body1">
+                        <p>C</p>
+                    </td>
+                    <td class="TableStyle-standard-BodyB-Column2-Body1">
+                        <p>400</p>
+                    </td>
+                    <td class="TableStyle-standard-BodyB-Column1-Body1">
+                        <p>&#160;</p>
+                    </td>
+                    <td class="TableStyle-standard-BodyB-Column2-Body1">
+                        <p>&#160;</p>
+                    </td>
+                    <td class="TableStyle-standard-BodyA-Column1-Body1">
+                        <p>400</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <p><span class="Emphasis">Var Order Multiple</span>: The number by which receipt quantities generated by the Recalculate Receipts functions in the main planning view and <span class="Emphasis">Receipt Plan</span> views will be evenly divisible by. This persists in orders generated from assortment plans within Order Manager. </p>
+        <p MadCap:conditions="General.ScreenOnly">For more information, see:</p>
+        <ul>
+            <li MadCap:conditions="General.ScreenOnly">
+                <MadCap:xref href="../Order Manager/Order Document Details Break By Size.htm">Order Document details – break by size </MadCap:xref>
+            </li>
+            <li MadCap:conditions="General.ScreenOnly">
+                <MadCap:xref href="../Order Manager/Order Document Details Prepack.htm">Order Document details – Prepack tab</MadCap:xref>
+            </li>
+        </ul>
+        <p MadCap:conditions="General.PrintOnly">For more information, refer to the Break by Size and Prepack sections of the Order Manager User Guide.</p>
+        <p class="BasicNote">This constraint can also be set in the Placeholder Constraints area of Receipt Plan view.</p>
+        <p class="Important">The system always rounds up to meet Order Multiple constraints. This ensures that the base sales plan on which the receipt plan is built will always be satisfied.</p>
+        <p>The following is a common scenario where very small parts are sold individually but it is not practical to ship them that way. For a sales plan of 241 units for weeks 1-4, and an Order Multiple of 50 set, the receipt quantity is 250 units or the lowest multiple of 50 that satisfies the entire sales plan.</p>
+        <p><span class="Emphasis">Size Curve</span>: The size curve assigned to placeholders generated within the specified level of the product hierarchy for the current plan. Works in conjunction with <span class="Emphasis">Rec Size Min</span> in the <span class="Emphasis">Receipt Plan</span> view and passed to Order Manager for use in the <span class="Emphasis">Break by Size</span> stage of the commitment process.</p>
+        <p class="BasicNote">All available size curves populate for selection in this field.</p>
+        <p><span class="Emphasis">Periods Before Phase In</span>: The default number of periods prior to Phase In date that initial receipt quantities for placeholder instances should be scheduled to be received. Used in the <span class="Emphasis">Receipt Plan</span> supporting view on the main planning view. For example, a placeholder with a Phase In date of wk 4 and a <span class="Emphasis">Periods Before Phase In</span> of 2 has a default calculated initial receipt for the placeholder of wk 2.</p>
+        <p><span class="Emphasis">Flow Cadence</span>: The default number of periods between receipt dates calculated by the receipt planning engine. Used in the <span class="Emphasis">Receipt Plan</span> supporting view on the main planning view.</p>
+        <p class="Example">A placeholder with a Phase In date of wk 3, a Periods Before Phase In of 2, and a Flow Cadence of 4.  3 receipts will occur in wk 1, wk 7, and wk 11. </p>
+        <p>This is because the purpose of <span class="Emphasis">Periods Before Phase In</span> is to ensure product can be in stores by the Phase In date. Thus, the first flow date is considered to be the Phase In date for the purposes of receipt engine calculation.<p><span class="Emphasis">Min Stk/Sales</span>: (Minimum Stock to Sales) Editable to 2 decimal places. The minimum stock to sales ratio for placeholder instances as a minimum stock constraint for receipt engine outputs within the <span class="Emphasis">Receipt Plan</span> supporting view on the main planning view. Actual by period constraint is defined as the sales planned for a given period multiplied by the constraint value (period sales of 10 * Min Stk/Sls of 4 = EOP stock requirement of 40).</p><p><span class="Emphasis">Shrink % of Sales</span>: Sets the anticipated shrink units per period as a percentage of planned period sales units for placeholder instances as a minimum stock constraint for receipt engine outputs within the <span class="Emphasis">Receipt Plan</span> supporting view on the main planning view. </p><p>For example, a period with planned sales of 500 units and a <span class="Emphasis">Shrink % of Sales</span> of 2.00% must have an EOP units of at least 10 for this constraint to be satisfied for the period.</p></p>
+        <p><span class="Emphasis">Maximum Pack % Total</span>: Defines the maximum % of units in a commitment order of the units within prepacks can represent as a constraint for the prepack optimization engine within Order Manager. When set to less than 100%, units not placed in prepacks are fulfilled as single units.</p>
+        <p class="Example">For two placeholder orders for wk 4 for 500 units each, prepacked together they have a <span class="Emphasis">Maximum Pack % Total</span> of 60.00%, the maximum number of units existing in prepacks for this order is 600. However, the prepack output could be less than 600 if the prepack configurations being used don’t evenly roll up to 600 units based on the need calculation by site.</p>
+        <p><span class="Emphasis">Pack Tolerance</span>: The number of units over the total order quantity the engine may suggest in an attempt to fulfill the <span class="Emphasis">Maximum Pack % Total</span>, expressed as a percentage of the total order quantity. Used as a constraint for the prepack optimization engine within Order Manager</p>
+        <p class="Example">For a total order quantity of 1,000 units to be prepacked, a <span class="Emphasis">Maximum Pack % Total</span> of 100%, and a <span class="Emphasis">Pack Tolerance</span> of 1.00%, the engine may suggest an adjustment of the total order quantity of up to 1010 units to allow for 100% of the original order quantity to be fulfilled by units in prepacks.</p>
+        <p class="BasicNote">When calculating prepack optimization against a Pack Tolerance, the engine will prioritize stores with greater need first</p>
+        <p><span class="Emphasis">Maximum Packs Per Location</span>: The maximum number of prepacks of any configuration that can be allocated to a single site within the prepack optimization calculation to fulfill the anticipated sales for that site. Used as a constraint for the prepack optimization engine within Order Manager</p>
+        <p class="Example">The prepack optimization engine determines that a site requires 50 units from an order being prepacked, <span class="Emphasis">Maximum Packs Per Location</span> is set to 5, and the selected prepack configurations all contain 9 units - ignoring site need by size for this example, the engine can only use 5 prepacks, containing 45 units total, as the prepack component of order fulfillment for the site and must assume the remaining 5 units will be fulfilled as single units.</p>
+        <p><span class="Emphasis">Underage Weight</span>: Sets the relative preference for underages when calculating optimal unit allocation by site. This is used as a constraint for the prepack optimization engine within Order Manager.</p>
+        <p class="BasicNote">Used in conjunction with <span class="Emphasis">Overage Weight</span> and <span class="Emphasis">Pack Weighting</span> and calculated as a % to total of the 3 parameters (i.e. all 3 are summed then divided by the number of constraints that were not NULL. Thus, if only 2 of the 3 are set, the sum of their values is divided by 2 rather than 3 to determine the % to total).</p>
+        <p><span class="Emphasis">Overage Weight</span>: Sets the relative preference for overages when calculating optimal unit allocation by site. Used as a constraint for the prepack optimization engine within Order Manager.</p>
+        <p class="BasicNote">Used in conjunction with Underage Weight and Pack Weighting and calculated as a % to total of the 3 parameters (i.e. all 3 are summed then divided by the number of constraints that were not NULL. Thus, if only 2 of the 3 are set, the sum of their values is divided by 2 rather than 3 to determine the % to total).</p>
+        <p><span class="Emphasis">Maximum Overage</span>: The number of units per site the prepack optimization engine may over allocate during calculation to reach an acceptable solution. This is used as a constraint for the prepack optimization engine within Order Manager.
+</p>
+        <p><span class="Emphasis">Maximum Overage %</span>: </p>
+        <MadCap:snippetBlock src="../../Resources/Snippets/Max Overage Percent.flsnp" />
+        <p><span class="Emphasis">Pack Weighting</span>: Sets the relative preference for using the fewest prepack configurations possible when calculating optimal unit allocation by site. Used as a constraint for the prepack optimization engine within Order Manager</p>
+        <p class="BasicNote">Used in conjunction with Underage Weight and Overage Weight and calculated as a % to total of the 3 parameters (i.e. all 3 are summed then divided by the number of constraints that were not NULL - thus, if only 2 of the 3 are set, the sum of their values is divided by 2 rather than 3 to determine the % to total).</p>
+        <p><span class="Emphasis">Minimum Units Per Pack</span>: The minimum number of units the prepack optimization engine may suggest in single prepack configurations. Used as a constraint for the prepack optimization engine within Order Manager. </p>
+        <p class="BasicNote">Only valid when Optimize Prepack is checked for a given prepack group, otherwise user selected prepack configurations are used.</p>
+        <p><span class="Emphasis">Maximum Units Per Pack</span>: Sets the maximum number of units the prepack optimization engine may suggest in single prepack configurations. This is used as a constraint for the prepack optimization engine within Order Manager.</p>
+        <p class="BasicNote">Only valid when Optimize Prepack is checked for a given prepack group, otherwise user selected prepack configurations are used.</p>
+        <p><span class="Emphasis">Num Pack Configs</span>: Sets the maximum number of configurations the prepack optimization engine may suggest when determining optimal fulfillment of need within an order. This is used as a constraint for the prepack optimization engine within Order Manager.</p>
+        <p class="BasicNote">Only valid when Optimize Prepack is checked for a given prepack group, otherwise user selected prepack configurations are used</p>
+        <p><span class="Emphasis">Pack Type Pick Cost</span>: Used in the <span class="Emphasis">Pack Instruction Parameters</span> section of the <span class="Emphasis">Packing Instructions</span> view and as part of the calculation of <span class="Emphasis">Picking Cost Ratio</span>.</p>
+        <p><span class="Emphasis">Pack Type Max Weeks Cover</span>: The number of Weeks cover that the Pack should be below.</p>
+        <p><span class="Emphasis">Pack Type Max Cost Ratio</span>: Used in the <span class="Emphasis">Pack Instruction Selector</span> section of the <span class="Emphasis">Packing Instructions</span> view. The <span class="Emphasis">Picking Cost Ratio</span> field is formatted red if the Picking Cost Ratio goes above this value.</p>
+        <p><span class="Emphasis">Pack Type Max Error Ratio</span>: Used in the <span class="Emphasis">Pack Instruction Selector</span> section. The <span class="Emphasis">Absolute Error Ratio</span> field is formatted red if the Absolute Error goes above this value.</p>
+        <p><span class="Emphasis">Pack Type Smallest Size Quantity</span>: On packing instruction calculation the smallest size ratio within the curve receives this amount. This acts as the starting point of the pack and the rest of the size quantities are extrapolated from this. </p>
+        <p MadCap:conditions="General.DoNotPublish"><span class="Emphasis">Calculation</span>
+        </p>
+        <p MadCap:conditions="General.DoNotPublish">The system retrieves all Sites associated with the selected placeholder and a size curve for each Site is calculated. The individual Site size curves are rolled up to the placeholder level and re-normalized to give an overall placeholder size curve. </p>
+        <p MadCap:conditions="General.DoNotPublish">The system assigns the smallest % a value that corresponds to the hierarchy default Pack Type Smallest Size Quantity. The rest of the size quantities are extrapolated from this. </p>
+        <p MadCap:conditions="General.DoNotPublish">The system multiplies the initial Pack Quantity by 2, 2.5, 3, and 3.5 to give a range of Pack options to be used. The system suggests a Pack that is below the Max Weeks of Cover, below the Max Cost Ratio, and has the lowest error rate. If no Pack fits these requirements, then the Pack with the Multiplier that corresponds to Pack Type Default Multiplier.</p>
+        <p>For example, for S M L where S = 20% M = 30% L = 50%. When calculating the pack, size S receives the Smallest Size Quantity and the other 2 sizes are calculated from that.</p>
+        <p><span class="Emphasis">Pack Type Default Multiplier</span>: This is used as a tie break, if the system cannot select a Pack then the pack with the Multiplier corresponding to this value is selected. Valid values are 1, 2, 2.5, 3, 3.5.</p>
+        <p><span class="Emphasis">Pack Type Default ROS</span>: A default ROS can be set against the hierarchy and users can choose to use this value instead of the placeholder ROS in the calculation. To use this, <span class="Emphasis">Apply Hierarchy ROS</span> must be checked in the <span class="Emphasis">Pack Instruction Parameters</span> section.</p>
+        <p><span class="Emphasis">Lower Stock to Sales Threshold</span>: Sets the lower threshold for Stock to Sales. If the STS ratio falls below the lower threshold, then the text is formatted so users can identify that it is out of threshold bounds.
+           </p>
+        <p><span class="Emphasis">Upper Stock to Sales Threshold</span>: Sets the higher threshold for Stock to Sales. If the STS ratio falls above the upper threshold, then the text is formatted so users can identify that it is out of threshold bounds.
+</p>
+        <p><span class="Emphasis">Min Presentation Multiplier</span>: Multiplies the minimum presentation units quantity passed into the receipt engine by the value entered in this field for the number of weeks specified in <span class="Emphasis">Min Pres Multiplier Number of Periods</span>.</p>
+        <p><span class="Emphasis">Min Presentation Multiplier</span> and <span class="Emphasis">Min Pres Multiplier Number of Periods</span> together have an effect on the receipt plan by weighting stock received toward the beginning of the receipt plan according to the values set.</p>
+        <p class="Example"><span class="Emphasis">Min Presentation Multiplier</span> is set at 2.5 and <span class="Emphasis">Min Pres Multiplier Number of Periods</span> is set to 5. If the minimum presentation is 15, then the minimum presentation is raised to 37.5 for the first 5 weeks.</p>
+        <p><span class="Emphasis">Min Pres Multiplier Number of Periods</span>: The number of periods that the multiplier is in effect from the phase-in date. A value of zero means effectively there is no multiplier. Once the number of periods has expired the minimum presentation values return to the original value.</p>
+        <p>As the item starts actualizing, the number of periods declines until it is zero. Therefore, if the multiplier is to be used over the first 3 periods of a receipt plan, then:</p>
+        <ul>
+            <li>Before phase in, wk1, wk2, and wk3 all use the multiplier.</li>
+            <li>When wk1 is actualized and the current week is wk2, then wk2 and wk3 will use the multiplier.</li>
+            <li>When wk2 is actualized and the current week is wk3, only wk3 will use the multiplier.</li>
+            <li>When it is wk4 or later, the multiplier is no longer used, even though 3 periods continues to be the <span class="Emphasis">Min Pres Multiplier Number of Periods</span> value set.</li>
+        </ul>
+        <p><span class="Emphasis">New Site Min Pres Multiplier</span>: This value is applied against the minimum presentation for only the site count with new store openings.
+</p>
+        <p><span class="Emphasis">
+New Site Min Pres Multiplier Number of Periods</span>: Applies only to the site count of new store openings.</p>
+        <p><span class="Emphasis">Use Cube for Flow Period Frequency?</span>: Specifies which levels use  item cube logic. </p>
+        <p class="BasicNote">Use the <span class="Emphasis">Assortment Cube Matrix</span> view to specify flow period frequency based on Item Cube (ROS &amp; Cube size). The <span class="Emphasis">Assortment Cube Matrix</span> view is located in the Views module. <MadCap:conditionalText MadCap:conditions="General.ScreenOnly">For more information, see <MadCap:xref href="../Views/Assortment Cube Matrix.htm">Setting flow period frequency based on Item Cube (ROS &amp; Cube size)</MadCap:xref>.</MadCap:conditionalText></p>
+        <p><span class="Emphasis">Out-of-Tier Sales Units Threshold</span>: If set, a threshold at the product hierarchy level for the number of units sold outside an assorted cluster. Setting a default at a higher product level applies that default to the lower product levels beneath it. Once the threshold is met or exceeded the checkbox in the <span class="Emphasis">OOT Sales</span> field in the <span class="Emphasis">Placeholder</span>, <span class="Emphasis">Collection</span>, and <span class="Emphasis">Hindsight</span> (both Current and Historical) views is checked. </p>
+        <p>When evaluating sales for an item, lifetime sales (both sales that occurred at regular price as well as at markdown) contribute to reaching  the threshold. Filters may be applied to view only regular or markdown sales as desired.</p>
+        <p>If not set or is set to zero, then there is no threshold and no action is taken regardless of how many sales occurred at sites that were not assorted to.</p>
+        <table style="width: 100%;margin-left: auto;margin-right: auto;mc-table-style: url('../../Resources/TableStyles/standard.css');" class="TableStyle-standard" cellspacing="0">
+            <col class="TableStyle-standard-Column-Column1" />
+            <col class="TableStyle-standard-Column-Column2" />
+            <thead>
+                <tr class="TableStyle-standard-Head-Header1">
+                    <th class="TableStyle-standard-HeadE-Column1-Header1">Metric</th>
+                    <th class="TableStyle-standard-HeadD-Column2-Header1">Definition</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyB-Column1-Body1">Sales</td>
+                    <td class="TableStyle-standard-BodyA-Column2-Body1"> Sales units for the entire life of the item - planned (with overrides included) + actuals.</td>
+                </tr>
+            </tbody>
+        </table>
+        <p><span class="Emphasis">Out-of-Tier Stock Units Threshold</span>: If set, a threshold at the product hierarchy level for the number of units in stock at sites that were not originally assorted to. Setting a default at a higher product level applies that default to the lower product levels beneath it. Once the threshold is met or exceeded the checkbox in the <span class="Emphasis">OOT Stock</span> field in the <span class="Emphasis">Placeholder</span>, <span class="Emphasis">Collection</span>, and <span class="Emphasis">Hindsight</span> (both Current and Historical) views is checked.</p>
+        <p>If current stock meets or exceeds the threshold, even if currently at markdown, then the <span class="Emphasis">OOT Stock</span> checkbox is marked. However, filters may be applied to view only regular or markdown stock as desired.</p>
+        <p>If not set or is set to zero, then there is no threshold and no action is taken regardless of how many units are in stock at sites that were not assorted to.</p>
+        <p class="BasicNote">To ensure a transfer or reallocation is worthwhile, the variant stock level must be greater than X for the threshold to apply.</p>
+        <table style="width: 100%;margin-left: auto;margin-right: auto;mc-table-style: url('../../Resources/TableStyles/standard.css');" class="TableStyle-standard" cellspacing="0">
+            <col class="TableStyle-standard-Column-Column1" />
+            <col class="TableStyle-standard-Column-Column2" />
+            <thead>
+                <tr class="TableStyle-standard-Head-Header1">
+                    <th class="TableStyle-standard-HeadE-Column1-Header1">Metric</th>
+                    <th class="TableStyle-standard-HeadD-Column2-Header1">Definition</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyB-Column1-Body1">Stock on Hand</td>
+                    <td class="TableStyle-standard-BodyA-Column2-Body1">Triggered by EOP Units for the last actualized period (cluster-specific EOP combined with its portion of DC-split EOP)</td>
+                </tr>
+            </tbody>
+        </table>
+        <h2>Toolbar buttons</h2>
+        <table style="width: 100%;margin-left: auto;margin-right: auto;mc-table-style: url('../../Resources/TableStyles/standard.css');" class="TableStyle-standard" cellspacing="0">
+            <col class="TableStyle-standard-Column-Column1" />
+            <col class="TableStyle-standard-Column-Column2" />
+            <thead>
+                <tr class="TableStyle-standard-Head-Header1">
+                    <th class="TableStyle-standard-HeadE-Column1-Header1">Button</th>
+                    <th class="TableStyle-standard-HeadD-Column2-Header1">Description</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1"><span class="Emphasis">Fields</span>
+                    </td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">
+                         Opens the <span class="Emphasis">Customization</span> dialog. Users can drag fields to or from the  column header area and this dialog to customize the view. 
+                        <p>Custom layouts can be saved or restored by right-clicking in the Snapshots area and selecting <span class="Emphasis">Save Layout</span> or <span class="Emphasis">Restore Layout</span>, respectively.</p></td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1"><span class="Emphasis">Save</span>
+                    </td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">Saves all default parameter changes made in the tab since the last save.</td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyB-Column1-Body1"><span class="Emphasis">Cancel</span>
+                    </td>
+                    <td class="TableStyle-standard-BodyA-Column2-Body1">Reverts all default parameters on the <span class="Emphasis">Assortment Plan Defaults</span> tab to the values stored in the database without saving any changes.</td>
+                </tr>
+            </tbody>
+        </table>
+    </body>
+</html>

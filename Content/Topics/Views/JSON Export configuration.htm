@@ -1,0 +1,34 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head>
+    </head>
+    <body>
+        <h1>Configuring standard export types and order document exports</h1>
+        <p>Standard export types and order document exports can be dynamically configured in the <span class="Emphasis">Views</span> module. This functionality creates flexibility in the order export process.</p>
+        <p>Two Maintenance views support these additional configurations:</p>
+        <ol>
+            <li>
+                <p>
+                    <span class="Emphasis">Standard Export Type Configuration</span>
+                </p>
+                <p>Expand the <span class="Emphasis">Payload Type</span> dropdown and select either XML or JSON as the payload type.</p>
+                <p class="BasicNote">Although the JSON payload type can be seen in the dropdown for other export types, this functionality is only available for <span class="Emphasis">Order</span> export types.</p>
+            </li>
+            <li>
+                <p>
+                    <span class="Emphasis">Inventory Order Document Export Configuration</span>
+                </p>
+                <p>Select which columns to include in the inventory order document and:</p>
+                <ul>
+                    <li>use the <span class="Emphasis">Output Name</span> field to configure the field name, if needed.</li>
+                    <li>include the <span class="Emphasis">Order Document Section Type ID</span> column to identify which section of the order document the metadata is taken from.</li>
+                    <li>
+                        <p>filter for specific metadata, whether that is inventory metadata or order header and order line metadata.</p>
+                        <p>Everything defined in filter metadata is selectable for inventories. This means that the metadata is dynamically read off whatever is configured within the system.</p>
+                    </li>
+                </ul>
+            </li>
+        </ol>
+        <p>In most if not all cases, users can configure the necessary metadata, fields, and column information needed to export their order document.</p>
+    </body>
+</html>

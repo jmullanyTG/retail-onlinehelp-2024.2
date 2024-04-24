@@ -1,0 +1,136 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" xml:lang="en-us">
+    <head>
+        <link href="../../Resources/TableStyles/standard.css" rel="stylesheet" MadCap:stylesheetType="table" /><title></title>
+    </head>
+    <body>
+        <h1>About audit configuration</h1>
+        <p>Audit configuration is used to control the audit task functions.  The settings for each table must be applied for the audit task. </p>
+        <p>The auditable tables are as follows:</p>
+        <table style="width: 100%;margin-left: 0;margin-right: auto;mc-table-style: url('../../Resources/TableStyles/standard.css');" class="TableStyle-standard" cellspacing="0">
+            <col class="TableStyle-standard-Column-Column1" />
+            <col class="TableStyle-standard-Column-Column2" />
+            <thead>
+                <tr class="TableStyle-standard-Head-Header1">
+                    <th class="TableStyle-standard-HeadE-Column1-Header1">Table</th>
+                    <th class="TableStyle-standard-HeadD-Column2-Header1">Description</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">Schema Name</td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">The database schema in which the table exists.</td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">Table Name</td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">The name of the database table to be audited. </td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">Insert Trigger Start Date/Time</td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">
+                   The audit start date/time for all INSERT statements related to the table.  
+                    </td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">Insert Trigger End Date/Time</td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">
+                       The audit end date/time for all INSERT statements related to the table. 
+                    </td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">Delete [Insert Trigger] (After End Date/Time)</td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">
+                      If selected, the trigger for all INSERT statements related to the table will be deleted after the specified end date has passed.   
+                    </td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">Insert Data Retention Days</td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">
+                      Number of days forward for which logged data is kept.   
+                    </td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">Update Trigger Start Date/Time</td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">The audit start date/time for all UPDATE statements related to the table. </td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">Update Trigger End Date/Time</td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">
+                  The audit end date/time for all UPDATE statements related to the table. 
+                    </td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">Delete [Update Trigger] (After End Date/Time)</td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">
+                      If selected, the trigger for all UPDATE statements related to the table will be deleted after the specified end date has passed. 
+                    </td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">Update Data Retention Days</td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">
+                      Number of days forward for which logged data is kept. 
+                    </td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">Delete Trigger Start Date/Time</td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">The audit start date/time for all DELETE statements related to the table.</td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">Delete Trigger End Date/Time</td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">
+                         The audit end date/time for all DELETE statements related to the table. 
+                    </td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">Delete [Delete Trigger] (After End Date/Time)</td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">
+                    If selected, the trigger for all DELETE statements related to the table will be deleted after the specified end date has passed. 
+                    </td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">Delete Data Retention Days</td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">Number of days forward for which logged data is kept.&#160; </td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">Last Updates Date/Time</td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">
+                       The date and time of the most recent update to the audit table configuration for this entry.  
+                    </td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyB-Column1-Body1">Last Updated User Name</td>
+                    <td class="TableStyle-standard-BodyA-Column2-Body1">The user account which made the most recent update to the audit table configuration for this entry.</td>
+                </tr>
+            </tbody>
+        </table>
+        <h3> Triggers configuration</h3>
+        <p>To set up audit triggers, edit the date ranges to  affect any dates which fall within the range. </p>
+        <p>Press <span class="Emphasis">Save</span>. Any active triggers display on the grid with a conditional format (green highlight) indicating that an audit trigger is active. </p>
+        <p>
+            <img src="../../Resources/Images/Administrator Panel/Audit_Table_Configuration_grid.png" class="LargeImages" />
+        </p>
+        <p>After configuration is completed, any INSERT, UPDATE, or DELETE made to the table creates an entry in the appropriate audit log table. </p>
+        <h3>Check audit logs</h3>
+        <p>Once audit triggers have been created, the audit log tables are created within a specific audit schema. These tables can then be queried through SSMS or built into a view within ToolsGroup JustEnough through a data grid widget and associated select procedure. </p>
+        <p>The audit log tables are name-spaced within a schema based on the following format: <span class="Emphasis">z_[schema].[table]</span></p>
+        <p>
+            <img src="../../Resources/Images/Administrator Panel/Z_Schema_table.png" class="LargeImages" />
+        </p>
+        <p>The audit task runs automatically. There is no additional work required beyond configuration of the triggers to begin table auditing. </p>
+        <h3>Blacklist</h3>
+        <p>The following blacklist tables  are excluded from the audit trigger creation due  to their size and the overall frequency with which they are updated or inserted into. </p>
+        <ul>
+            <li>Tbl_Forecast</li>
+            <li>Tbl_InventoryHistory</li>
+            <li>Tbl_SalesHistoryByType</li>
+            <li>Tbl_AssortmentPlan_ItemDetail</li>
+            <li>All import tables (includes API import tables)</li>
+        </ul>
+        <h3>Audit database</h3>
+        <p>If a database exists in the same SQL server environment that is specifically named <span class="Emphasis">z_[database name]</span> to match the existing database on which triggers are configured, the audit logs are written there instead of to the audit schema on the existing database. </p>
+        <p>In the following example, any audit triggers configured in the <span class="Emphasis">ProductSandbox</span> database are logged directly to the <span class="Emphasis">z_ProductSandbox</span> database. </p>
+        <p>
+            <img src="../../Resources/Images/Administrator Panel/ProductSandbox_database.png" class="LargeImages" />
+        </p>
+    </body>
+</html>

@@ -1,0 +1,390 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" xml:lang="en-us">
+    <head>
+        <link href="../../Resources/TableStyles/standard.css" rel="stylesheet" MadCap:stylesheetType="table" /><title></title>
+    </head>
+    <body>
+        <h1>Versioning issues</h1>
+        <h2>Geography and price cluster issues</h2>
+        <p>Mismatches may occur due to the complexity of matching sites across geographies and price clusters. The most common issues are:</p>
+        <ul>
+            <li>False versions</li>
+            <li>Conflicting versions</li>
+            <li>Price range versions</li>
+        </ul>
+        <h2>False versions</h2>
+        <p>A site in an event geography may be missing from the price cluster set of a linked promotion due to one of the following reasons:</p>
+        <ul>
+            <li>The site was removed from the promotion after it was added to the event</li>
+            <li>The site was added to the event’s geographies but not added to the promotion’s price clusters</li>
+        </ul>
+        <p>Either of these scenarios creates a gap or false version for the affected geography in which the promotion has no pricing data.</p>
+        <p> Until this is resolved the computed version is inaccurate and it will appear that the geography belongs to more than one plate version (one plate version for the geography with a price and another plate version for the same geography with a missing price). </p>
+        <h3>Example</h3>
+        <p>Store 104 belongs to <span class="Emphasis">Zone 1</span> but is missing from the promotion price clusters.</p>
+        <table style="mc-table-style: url('../../Resources/TableStyles/standard.css');" class="TableStyle-standard" cellspacing="0">
+            <col class="TableStyle-standard-Column-Column1" style="width: 20%;" />
+            <col class="TableStyle-standard-Column-Column2" style="width: 20%;" />
+            <col class="TableStyle-standard-Column-Column1" style="width: 20%;" />
+            <col class="TableStyle-standard-Column-Column2" style="width: 20%;" />
+            <col class="TableStyle-standard-Column-Column1" style="width: 20%;" />
+            <thead>
+                <tr class="TableStyle-standard-Head-Header1">
+                    <th colspan="5" class="TableStyle-standard-HeadD-Column1-Header1">Slot 1</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">
+                        <p>Event Geography</p>
+                    </td>
+                    <td class="TableStyle-standard-BodyE-Column2-Body1">
+                        <p>Geography Site</p>
+                    </td>
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">
+                        <p>Price Cluster</p>
+                    </td>
+                    <td class="TableStyle-standard-BodyE-Column2-Body1">
+                        <p>Price Cluster Site</p>
+                    </td>
+                    <td class="TableStyle-standard-BodyD-Column1-Body1">
+                        <p>Price Cluster Price</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">
+                        <p>Zone 1</p>
+                    </td>
+                    <td class="TableStyle-standard-BodyE-Column2-Body1">
+                        <p>Store 101</p>
+                    </td>
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">
+                        <p>Price Zone 1</p>
+                    </td>
+                    <td class="TableStyle-standard-BodyE-Column2-Body1">
+                        <p>Store 101</p>
+                    </td>
+                    <td class="TableStyle-standard-BodyD-Column1-Body1">
+                        <p>$9.99 </p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">
+                        <p>Zone 1</p>
+                    </td>
+                    <td class="TableStyle-standard-BodyE-Column2-Body1">
+                        <p>Store 102</p>
+                    </td>
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">
+                        <p>Price Zone 1</p>
+                    </td>
+                    <td class="TableStyle-standard-BodyE-Column2-Body1">
+                        <p>Store 102</p>
+                    </td>
+                    <td class="TableStyle-standard-BodyD-Column1-Body1">
+                        <p>$9.99 </p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">
+                        <p>Zone 1</p>
+                    </td>
+                    <td class="TableStyle-standard-BodyE-Column2-Body1">
+                        <p>Store 103</p>
+                    </td>
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">
+                        <p>Price Zone 1</p>
+                    </td>
+                    <td class="TableStyle-standard-BodyE-Column2-Body1">
+                        <p>Store 103</p>
+                    </td>
+                    <td class="TableStyle-standard-BodyD-Column1-Body1">
+                        <p>$9.99 </p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyB-Column1-Body1">
+                        <p>Zone 1</p>
+                    </td>
+                    <td class="TableStyle-standard-BodyB-Column2-Body1">
+                        <p>Store 104</p>
+                    </td>
+                    <td class="TableStyle-standard-BodyB-Column1-Body1">
+                        <p> None</p>
+                    </td>
+                    <td class="TableStyle-standard-BodyB-Column2-Body1">
+                        <p>&#160;Missing</p>
+                    </td>
+                    <td class="TableStyle-standard-BodyA-Column1-Body1">
+                        <p style="color: #FF0000;">No Price</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <h2>Conflicting versions </h2>
+        <p>Conflicting versions occur a Geography is linked to multiple versions. Unlike a false version, this condition is not the result of a site missing from a promotion, but rather an event geography with a list of sites that result in the geography being linked to more than one price cluster for the linked promotion. </p>
+        <p>While it is possible that the pricing data for all the linked Price Clusters may be the same and not affect the price, if any value returned is different it will be impossible for the versioning process to resolve a single price for the geography resulting in unreliable versions for the slot set. </p>
+        <p>There may be two plate versions for the geography, each showing a different price.</p>
+        <h3>Example</h3>
+        <p><span class="Emphasis">Store 104</span> belongs to event geography <span class="Emphasis">Zone 1</span> and price cluster <span class="Emphasis">Zone 2</span> that is different from the price cluster of the other sites that belong to Price Zone 1.</p>
+        <table style="mc-table-style: url('../../Resources/TableStyles/standard.css');" class="TableStyle-standard" cellspacing="0">
+            <col class="TableStyle-standard-Column-Column1" style="width: 20%;" />
+            <col class="TableStyle-standard-Column-Column2" style="width: 20%;" />
+            <col class="TableStyle-standard-Column-Column1" style="width: 20%;" />
+            <col class="TableStyle-standard-Column-Column2" style="width: 20%;" />
+            <col class="TableStyle-standard-Column-Column1" style="width: 20%;" />
+            <thead>
+                <tr class="TableStyle-standard-Head-Header1">
+                    <th colspan="5" class="TableStyle-standard-HeadD-Column1-Header1">
+                        Slot 1
+                    </th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">
+                        <p>Event Geography</p>
+                    </td>
+                    <td class="TableStyle-standard-BodyE-Column2-Body1">
+                        <p>Geography Site</p>
+                    </td>
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">
+                        <p>Price Cluster</p>
+                    </td>
+                    <td class="TableStyle-standard-BodyE-Column2-Body1">
+                        <p>Price Cluster Site</p>
+                    </td>
+                    <td class="TableStyle-standard-BodyD-Column1-Body1">
+                        <p>Price Cluster Price</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">
+                        <p>Zone 1</p>
+                    </td>
+                    <td class="TableStyle-standard-BodyE-Column2-Body1">
+                        <p>Store 101</p>
+                    </td>
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">
+                        <p>Price Zone 1</p>
+                    </td>
+                    <td class="TableStyle-standard-BodyE-Column2-Body1">
+                        <p>Store 101</p>
+                    </td>
+                    <td class="TableStyle-standard-BodyD-Column1-Body1">
+                        <p>$9.99 </p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">
+                        <p>Zone 1</p>
+                    </td>
+                    <td class="TableStyle-standard-BodyE-Column2-Body1">
+                        <p>Store 102</p>
+                    </td>
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">
+                        <p>Price Zone 1</p>
+                    </td>
+                    <td class="TableStyle-standard-BodyE-Column2-Body1">
+                        <p>Store 102</p>
+                    </td>
+                    <td class="TableStyle-standard-BodyD-Column1-Body1">
+                        <p>$9.99 </p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">
+                        <p>Zone 1</p>
+                    </td>
+                    <td class="TableStyle-standard-BodyE-Column2-Body1">
+                        <p>Store 103</p>
+                    </td>
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">
+                        <p>Price Zone 1</p>
+                    </td>
+                    <td class="TableStyle-standard-BodyE-Column2-Body1">
+                        <p>Store 103</p>
+                    </td>
+                    <td class="TableStyle-standard-BodyD-Column1-Body1">
+                        <p>$9.99 </p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyB-Column1-Body1">
+                        <p>Zone 1</p>
+                    </td>
+                    <td class="TableStyle-standard-BodyB-Column2-Body1">
+                        <p>Store 104</p>
+                    </td>
+                    <td class="TableStyle-standard-BodyB-Column1-Body1">
+                        <p style="color: #FF0000;">Price Zone 2</p>
+                    </td>
+                    <td class="TableStyle-standard-BodyB-Column2-Body1">
+                        <p style="color: #FF0000;">Store 104</p>
+                    </td>
+                    <td class="TableStyle-standard-BodyA-Column1-Body1">
+                        <p style="color: #FF0000;">$8.99 </p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <h2>Price range versions</h2>
+        <p>This issue is most likely to occur when a promotion made up of a price cluster set composed of a few relatively wide price clusters (many sites in each) is joined to an event configured with much narrower event geographies (just a few sites in each). </p>
+        <p>In addition, the price display format is configured to display a highest and/or lowest price cluster set price value. </p>
+        <p>It is important to understand that while the sites in the geography are joined on the sites of the price cluster, and price range (low to high) values returned to the event are aggregated based on all of the sites in the linked price cluster and may not accurately reflect the low and high ranges for the sites in the geography. </p>
+        <p>This should not be a problem for Promotions with products that do not vary much from store to store. For Promotions with a lot of price variance, a store's very low or very high price may result in an inaccurate pricing range for the Event. </p>
+        <h3>Example</h3>
+        <p>Zone 1 is missing Sites Store 105 and Store 106. However, the associated price cluster includes those sites. </p>
+        <p>If the Price Display Format were to display the lowest and highest prices as a range, it would display <span class="Emphasis">$7.99 to $11.99</span>. However, the sites actually associated with Zone 1 have a range from <span class="Emphasis">$8.99 to $9.99</span>.</p>
+        <table style="mc-table-style: url('../../Resources/TableStyles/standard.css');" class="TableStyle-standard" cellspacing="0">
+            <col class="TableStyle-standard-Column-Column1" style="width: 20%;" />
+            <col class="TableStyle-standard-Column-Column2" style="width: 20%;" />
+            <col class="TableStyle-standard-Column-Column1" style="width: 20%;" />
+            <col class="TableStyle-standard-Column-Column2" style="width: 20%;" />
+            <col class="TableStyle-standard-Column-Column1" style="width: 20%;" />
+            <thead>
+                <tr class="TableStyle-standard-Head-Header1">
+                    <th colspan="5" class="TableStyle-standard-HeadD-Column1-Header1">
+                        Slot 1
+                    </th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">
+                        <p>Event Geography</p>
+                    </td>
+                    <td class="TableStyle-standard-BodyE-Column2-Body1">
+                        <p>Geography Site</p>
+                    </td>
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">
+                        <p>Price Cluster</p>
+                    </td>
+                    <td class="TableStyle-standard-BodyE-Column2-Body1">
+                        <p>Price Cluster Site</p>
+                    </td>
+                    <td class="TableStyle-standard-BodyD-Column1-Body1">
+                        <p>Price Cluster Price</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">
+                        <p>Zone 1</p>
+                    </td>
+                    <td class="TableStyle-standard-BodyE-Column2-Body1">
+                        <p>Store 101</p>
+                    </td>
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">
+                        <p>Price Zone 1</p>
+                    </td>
+                    <td class="TableStyle-standard-BodyE-Column2-Body1">
+                        <p>Store 101</p>
+                    </td>
+                    <td class="TableStyle-standard-BodyD-Column1-Body1">
+                        <p>$9.99 </p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">
+                        <p>Zone 1</p>
+                    </td>
+                    <td class="TableStyle-standard-BodyE-Column2-Body1">
+                        <p>Store 102</p>
+                    </td>
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">
+                        <p>Price Zone 1</p>
+                    </td>
+                    <td class="TableStyle-standard-BodyE-Column2-Body1">
+                        <p>Store 102</p>
+                    </td>
+                    <td class="TableStyle-standard-BodyD-Column1-Body1">
+                        <p>$9.99 </p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">
+                        <p>Zone 1</p>
+                    </td>
+                    <td class="TableStyle-standard-BodyE-Column2-Body1">
+                        <p>Store 103</p>
+                    </td>
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">
+                        <p>Price Zone 1</p>
+                    </td>
+                    <td class="TableStyle-standard-BodyE-Column2-Body1">
+                        <p>Store 103</p>
+                    </td>
+                    <td class="TableStyle-standard-BodyD-Column1-Body1">
+                        <p>$9.99 </p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">
+                        <p>Zone 1</p>
+                    </td>
+                    <td class="TableStyle-standard-BodyE-Column2-Body1">
+                        <p>Store 104</p>
+                    </td>
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">
+                        <p>Price Zone 1</p>
+                    </td>
+                    <td class="TableStyle-standard-BodyE-Column2-Body1">
+                        <p>Store 104</p>
+                    </td>
+                    <td class="TableStyle-standard-BodyD-Column1-Body1">
+                        <p>$8.99 </p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">
+                        <p>None</p>
+                    </td>
+                    <td class="TableStyle-standard-BodyE-Column2-Body1">
+                        <p>Missing</p>
+                    </td>
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">
+                        <p style="color: #FF0000;">Price Zone 1</p>
+                    </td>
+                    <td class="TableStyle-standard-BodyE-Column2-Body1">
+                        <p style="color: #FF0000;">Store 105</p>
+                    </td>
+                    <td class="TableStyle-standard-BodyD-Column1-Body1">
+                        <p style="color: #FF0000;">$11.99 </p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyB-Column1-Body1">
+                        <p>None</p>
+                    </td>
+                    <td class="TableStyle-standard-BodyB-Column2-Body1">
+                        <p>Missing</p>
+                    </td>
+                    <td class="TableStyle-standard-BodyB-Column1-Body1">
+                        <p style="color: #FF0000;">Price Zone 1</p>
+                    </td>
+                    <td class="TableStyle-standard-BodyB-Column2-Body1">
+                        <p style="color: #FF0000;">Store 106</p>
+                    </td>
+                    <td class="TableStyle-standard-BodyA-Column1-Body1">
+                        <p style="color: #FF0000;">$7.99</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <h2>Special character issues</h2>
+        <p>Some special characters require configuration to translate properly. For more information, see <MadCap:xref href="Special Character Translations.htm">Special character translations</MadCap:xref>.</p>
+        <h2>Troubleshooting issues</h2>
+        <p>The following reports are available to identify possible causes and resolve versioning issues:</p>
+        <ul>
+            <li>
+                <MadCap:xref href="Event Distribution report.htm">Event distribution report</MadCap:xref>
+            </li>
+            <li>
+                <MadCap:xref href="Event Pricing report.htm">The Event Pricing Report</MadCap:xref>
+            </li>
+            <li>
+                <MadCap:xref href="Version report.htm">The Version Report</MadCap:xref>
+            </li>
+        </ul>
+    </body>
+</html>

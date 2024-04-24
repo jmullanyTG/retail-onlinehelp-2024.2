@@ -1,0 +1,132 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head>
+    </head>
+    <body>
+        <h1>Inventory Purge Progress/Activity Logging</h1>
+        <p>As previously noted, purge activity data are retained at the end-customer’s discretion.</p>
+        <h2>In-Execution Monitoring</h2>
+        <p>Monitoring of actual progress is only visible via SQL Query for version 1.0. The inquirer needs to have access to a query execution tool, with read-only permissions to a small set of tables. Sample queries are provided below, and are basic in nature. If the purge-volume will be high, set the <code>@ShowDetailLog</code> to 1, and monitor the Completed, Total, and InFlight results.</p>
+        <MadCap:codeSnippet>
+            <MadCap:codeSnippetCopyButton />
+            <MadCap:codeSnippetBody MadCap:useLineNumbers="False" MadCap:lineNumberStart="1" MadCap:continue="False" xml:space="preserve">DECLARE @UserID                  int          = 1
+      , @BatchLimit              tinyint      = 20   -- 5 for Initial Debug
+      , @RunDurationLimitMinutes smallint     = NULL
+      , @RunCessationDateTime    datetime2(0) = NULL
+      , @BatchSizeForDebug       tinyint      = NULL -- 5 for initial Debug
+      , @Now                     datetime     = '2024-03-19 11:00:53.320'
+      , @RC                      int
+      , @RunID                   int
+      , @ShowBatch               bit          = 1
+      , @ShowBatchStep           bit          = 1
+      , @ShowInFlight            bit          = 1
+      , @ShowOverall             bit          = 1
+      , @ShowDetailLog           bit          = 1;
+
+SELECT [@Now] = @Now;
+
+SELECT @RunID = MAX( pr.RunID )
+  FROM inventory.PurgeRun pr;
+/* -----------------------------------------------------------------------------
+** Overall Run Progress
+** -------------------------------------------------------------------------- */
+SELECT *
+  FROM inventory.PurgeRun                        pr
+       OUTER APPLY ( SELECT Completed = COUNT( prb.CompletionDate )
+                          , Total     = COUNT( * )
+                       FROM inventory.PurgeRun_Batch prb
+                      WHERE prb.RunID = @RunID ) p
+       OUTER APPLY ( SELECT InFlight = COUNT( prb.CoreStepsStartedAt )
+                       FROM inventory.PurgeRun_Batch prb
+                      WHERE prb.RunID = @RunID
+                        AND prb.CompletionDate IS NULL ) u
+ WHERE pr.RunID = @RunID;
+/* -----------------------------------------------------------------------------
+** Overall Batch Progress
+** -------------------------------------------------------------------------- */
+IF @ShowBatch = 1
+    SELECT et.Duration,prb.*
+      FROM inventory.PurgeRun_Batch                                                                     prb
+           OUTER APPLY utility.ElapsedTimeFormatted( prb.CoreStepsStartedAt, ISNULL(prb.CoreStepsCompletedAt,GETDATE()) ) et
+     WHERE prb.RunID = @RunID
+     ORDER BY prb.RunID
+            , prb.BatchID;
+/* -----------------------------------------------------------------------------
+** Detailed Batch Step Progress
+** -------------------------------------------------------------------------- */
+IF @ShowBatchStep = 1
+    BEGIN
+        SELECT et.Duration,prbs.*
+          FROM inventory.PurgeRun_Batch_Step                                                prbs
+               OUTER APPLY utility.ElapsedTimeFormatted( prbs.StartedAt, prbs.CompletedAt ) et
+         WHERE prbs.RunID = @RunID
+         ORDER BY prbs.RunID
+                , prbs.BatchID
+                , prbs.ExecutionSequenceNumber;
+    END;
+
+IF @ShowInFlight = 1
+    BEGIN
+        SELECT et.Duration,prbs.*
+          FROM inventory.PurgeRun_Batch_Step                                                prbs
+               OUTER APPLY utility.ElapsedTimeFormatted( prbs.StartedAt, GETDATE() ) et
+         WHERE prbs.RunID = @RunID
+           AND prbs.StartedAt IS NOT NULL
+           AND prbs.CompletedAt IS NULL
+         ORDER BY prbs.RunID
+                , prbs.BatchID
+                , prbs.ExecutionSequenceNumber;
+    END;
+
+IF @ShowOverall = 1
+    BEGIN
+        SELECT c.StepCount
+             , c.ToDo
+             , c.Completed
+             , PercentDone = ROUND((( c.Completed * 1.00 ) * 100 ) / c.StepCount, 2 )
+             , Duration    = et.Duration
+          FROM ( SELECT Completed = SUM( IIF(prbs.CompletedAt IS NOT NULL, 1, 0))
+                      , ToDo      = SUM( IIF(prbs.CompletedAt IS NOT NULL, 0, 1))
+                      , StepCount = SUM( 1 )
+                   FROM inventory.PurgeRun_Batch_Step prbs
+                  WHERE prbs.RunID = @RunID )                             c
+               CROSS APPLY utility.ElapsedTimeFormatted( @Now, GETDATE()) et;
+    END;
+/* -----------------------------------------------------------------------------
+** Overall Batch Progress - Time-sequenced
+** -------------------------------------------------------------------------- */
+IF @ShowDetailLog = 1
+    SELECT *
+      FROM inventory.PurgeLog pl
+     WHERE pl.RunID = @RunID
+     ORDER BY pl.RunID
+            , pl.CreatedWhen
+            , pl.SPID
+            , pl.ExplicitUniquifier;
+/* -----------------------------------------------------------------------------
+** DM Application Log entries since the batch started
+** -------------------------------------------------------------------------- */
+SELECT tal.LogDate
+     , tal.LogText
+  FROM dbo.tbl_ApplicationLog tal
+ WHERE tal.LogDate &gt;= @Now
+   AND tal.LogText LIKE N'%inventory.Purge%'
+ ORDER BY tal.ApplicationLogID;
+/* -----------------------------------------------------------------------------
+** Be CAREFUL RUNNING THIS!
+IF @Debug = 255
+    BEGIN
+        DELETE FROM inventory.PurgeRun_Batch_Step;
+        DELETE FROM inventory.PurgeRun_Batch;
+        DELETE FROM inventory.PurgeLog;
+        DELETE FROM inventory.PurgeRun;
+        IF NOT EXISTS ( SELECT 1
+                          FROM inventory.PurgeRun pr )
+            DBCC CHECKIDENT('inventory.PurgeRun', RESEED, 0);
+    END;
+** -------------------------------------------------------------------------- */</MadCap:codeSnippetBody>
+        </MadCap:codeSnippet>
+        <h2>Post-Execution Log Perusal</h2>
+        <p>With minor modifications to the queries above, any Batch and/or Inventory Purge information can be viewed by modifying the <code>BatchID</code> and/or adding <code>InventoryID</code> qualification.</p>
+    </body>
+</html>

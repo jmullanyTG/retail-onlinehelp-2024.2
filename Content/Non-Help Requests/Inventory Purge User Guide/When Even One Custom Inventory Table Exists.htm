@@ -1,0 +1,110 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head>
+    </head>
+    <body>
+        <h1>When Even One Custom Inventory Table Exists</h1>
+        <p>It is imperative that any explicit or implicit table dependencies, i.e., foreign-key relationships intra-custom tables only, are followed <span class="EmphasisItalic">bottom up</span>.  The furthest child-table must be purged-from first, followed by its parent, and so on <span class="EmphasisItalic">up</span> the table hierarchy.  To reiterate the Overarching Custom Restriction stated earlier:</p>
+        <p><i>If the utility should detect the absence of a targeted Custom table from the database's tables catalog, it will log a Fatal Error and immediately force the cessation of all activity.</i>
+        </p>
+        <h2>Foundation Code</h2>
+        <p>There are examples of every step-type commented-out in the <code>Inventory_C.INIT_PurgeTable_Prescription_STUB</code> procedure.  Each <code>INSERT INTO</code> the custom  <code>Inventory_C.PurgeStep</code> table targets only those columns relevant to the type.</p>
+        <p><span style="color: #ff0000;">Under no circumstances may these specifications be changed unless we change the core-code specification and communicate the change via a revised version of this document.</span>
+        </p>
+        <p>The STUB file is included for reference in Appendix 1, below.  It includes the <code>SET</code> options referenced in this sub-section.</p>
+        <p>When creating the (only) custom INIT script:</p>
+        <ul>
+            <li>
+                <p>Copy the STUB, then delete “_STUB”.</p>
+            </li>
+            <li>
+                <p>Commented-out code that clears any current rows from the <code>Inventory_C.PurgeStep</code> table must have the double-hyphen removed.  The SQL Comment block above the code states what the lines that follow it will do.  It is imperative that the code is ACTIVE.</p>
+                <MadCap:codeSnippet>
+                    <MadCap:codeSnippetCopyButton />
+                    <MadCap:codeSnippetBody MadCap:useLineNumbers="False" MadCap:lineNumberStart="1" MadCap:continue="False" xml:space="preserve">/* =============================================================================
+** Note that at the end of this INIT, ALL existing prescriptive rows will have
+** been REPLACED.
+** ========================================================================== */
+        BEGIN TRY
+            TRUNCATE TABLE Inventory_C.PurgeStep;
+        END TRY
+        BEGIN CATCH
+            EXEC utility.SQLErrorCapture @errmsg = @errmsg OUTPUT
+                                       , @severity = @severity OUTPUT
+                                       , @state = @state OUTPUT;
+
+            RAISERROR( @errmsg, @severity, @state ) WITH NOWAIT;
+        END CATCH;</MadCap:codeSnippetBody>
+                </MadCap:codeSnippet>
+                <p>
+                    <br />
+                </p>
+            </li>
+        </ul>
+        <p>The SET options statement MUST be present in SSMS or Azure Data Studio to conform to the session settings that solution-code requires.</p>
+        <MadCap:codeSnippet>
+            <MadCap:codeSnippetCopyButton />
+            <MadCap:codeSnippetBody MadCap:useLineNumbers="False" MadCap:lineNumberStart="1" MadCap:continue="False" xml:space="preserve">SET ANSI_NULLS, ANSI_PADDING, ANSI_WARNINGS, QUOTED_IDENTIFIER ON;
+GO</MadCap:codeSnippetBody>
+        </MadCap:codeSnippet>
+        <h2>Simplest Case</h2>
+        <p>For simplicity here, it is assumed that no FK CONSTRAINT(s) exist.</p>
+        <p>In order that the database is free of orphan rows, it is recommended that for every Custom table that bears <code>InventoryID</code> a type-1 Step be added to the Custom INIT script.</p>
+        <p>For type-1, this sample code exists:</p>
+        <MadCap:codeSnippet>
+            <MadCap:codeSnippetCopyButton />
+            <MadCap:codeSnippetBody MadCap:useLineNumbers="False" MadCap:lineNumberStart="1" MadCap:continue="False" xml:space="preserve">/* -----------------------------------------------------------------------------
+** Batches of InventoryIDs Hard-Deletes - start at step 3010.
+**
+** An alternate target-column can be supplied.
+** -------------------------------------------------------------------------- */
+--INSERT INTO inventory_C.PurgeStep
+--     ( SequenceNumber
+--     , RandomizationGroupID
+--     , TypeID
+--     , StepObjective
+--     , TargetSchema
+--     , TargetTable
+--     , TargetColumnName )
+--SELECT SequenceNumber = t.Tnum
+--     , 0
+--     , 1
+--     , sd.StepObjective
+--     , t.TheSchema
+--     , t.TheTable
+--     , ISNULL( t.TheColumn, N'InventoryID' )
+--  FROM ( VALUES ( 3010, N'dbo', N'ctbl_inventory_HD1', NULL )
+--              , ( 3020, N'inventory_C', N'inventory_HD2', N'ID' ))  t ( Tnum, TheSchema, TheTable, TheColumn )
+--       CROSS APPLY ( SELECT StepObjective = CONCAT( N'Hard-delete: ', ISNULL( t.TheColumn, N'InventoryID' ), N' driven - from ' --
+--                                                  , t.TheSchema, N'.' --
+--                                                  , t.TheTable )) sd;</MadCap:codeSnippetBody>
+        </MadCap:codeSnippet>
+        <p>Uncomment, and as needed duplicate, as many lines as needed – one per custom table.  The default column is <code>InventoryID</code> -- it need not be stated.  Only when, e.g., a different, meaningful to the customer, name has been used for the ID column, need that be explicitly coded.  Edit the un-commented lines -- this example is for 2 tables, with an alternative ID column name.</p>
+        <MadCap:codeSnippet>
+            <MadCap:codeSnippetCopyButton />
+            <MadCap:codeSnippetBody MadCap:useLineNumbers="False" MadCap:lineNumberStart="1" MadCap:continue="False" xml:space="preserve">INSERT INTO Inventory_C.PurgeStep
+     ( SequenceNumber
+     , TypeID
+     , StepObjective
+     , TargetSchema
+     , TargetTable
+     , TargetColumnName )
+SELECT SequenceNumber = t.Tnum
+     , 1
+     , sd.StepObjective
+     , t.TheSchema
+     , t.TheTable
+     , ISNULL( t.TheColumn, N'InventoryID' )
+  FROM ( VALUES ( 3010, N'dbo', N'ctbl_Inventory_HD1', NULL )
+              , ( 3020, N'Inventory_C', N'Inventory_HD2', N'ID' ))  t ( Tnum, TheSchema, TheTable, TheColumn )
+       CROSS APPLY ( SELECT StepObjective = N'Hard-delete: ' + ISNULL( t.TheColumn, N'InventoryID' ) + N' driven - from ' --
+                                            + t.TheSchema + N'.' --
+                                            + t.TheTable ) sd;</MadCap:codeSnippetBody>
+        </MadCap:codeSnippet>
+        <p>Apply the procedure and execute it.  The 2 Steps will be added to the next Batch’s set of steps to run.</p>
+        <h2>Remaining Step Types</h2>
+        <p>As already said, examples of all five step types are provided in the STUB.  Also noted are the explicit columns targeted.  The types have already been described.  The core <code>inventory.PurgeStep</code> content, viewed in sequence, shows how core tables are purged, and the column-content is intended to be informative/educational as well as being the prescription itself.</p>
+        <p>As such, there is no need to elaborate upon the list-builder, or hard-delete from ID List, types.</p>
+        <p>The Procedural Delete type is expanded upon in the next section.</p>
+    </body>
+</html>

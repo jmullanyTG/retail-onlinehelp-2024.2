@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" xml:lang="en-us">
+    <head><title></title>
+    </head>
+    <body>
+        <h1>Creating custom views</h1>
+        <p>Custom view are commonly built for one of two purposes:</p>
+        <ul>
+            <li><span class="Emphasis">Custom Reports</span> – Users require a report on data contained within the database but not presented in one of the standard modules. A custom report is built using the Views module. Like other views, custom reports can have user rights assigned where required. </li>
+            <li><span class="Emphasis">Custom Maintenance Screens</span> – There is a requirement to manipulate data outside of the standard modules, either to enhance the performance of the standard modules, or to otherwise adjust the inputs or results of the standard modules. Some common examples include:<ul><li>Site Supersession</li><li>Sales Forecasting</li><li>Supplier Lead Time Grading</li><li>Financial Plan Branching Matrices</li></ul></li>
+        </ul>
+        <p>To properly build a custom maintenance screen within the Views module, first define a workflow outline and then plan the requirements for the new view. The view should be thought of as a single screen so any information which would need to be accessed at the same time should be considered for inclusion. </p>
+        <p>Views with multiple widgets should not be cluttered or overly busy (this may be controlled via the view type). </p>
+        <h2>Docking new views in modules</h2>
+        <p>New views can be docked in modules using the Generic View Collection Set Module. <MadCap:conditionalText MadCap:conditions="General.ScreenOnly">For more information, see <MadCap:xref href="../GVCSM/Generic View Collection Set Manager.htm">Generic View Collection Set Module Overview</MadCap:xref>. </MadCap:conditionalText><MadCap:conditionalText MadCap:conditions="General.PrintOnly">For more information, refer to the online help.</MadCap:conditionalText></p>
+        <h2>To create a custom view:</h2>
+        <p>To build a new custom view:</p>
+        <ol>
+            <li>
+                <p>Within the <span class="Emphasis">Configure</span> section on the toolbar, click <span class="Emphasis">Views</span>.</p>
+                <p>The <span class="Emphasis">View Management</span> window displays.</p>
+                <p>
+                    <img src="../../Resources/Images/Views/View Management window.PNG" class="LargeImages" />
+                </p>
+            </li>
+            <li>
+                <p>In the <span class="Emphasis">View Management</span> window, click <span class="Emphasis">New</span>.</p>
+                <p>The <span class="Emphasis">Add View</span> window displays.</p>
+                <p>
+                    <img src="../../Resources/Images/Views/Add View Window.png" class="LargeImages" />
+                </p>
+            </li>
+            <li>Click <span class="Emphasis">Assign Roles or Users</span> to assign roles or users.</li>
+            <li>
+                <p>Complete the fields as required.</p>
+                <p>For more information on each field, see <MadCap:xref href="Custom View Field Definitions.htm">Field Definitions</MadCap:xref>.</p>
+            </li>
+            <li>Assign a view type in the <span class="Emphasis">View Type</span> field.</li>
+            <li>Use the checkboxes to define how the parameters are treated within the view.</li>
+            <li>
+                <p> Click the <span class="Emphasis">Add</span> button below the widget pane to add widgets and reorder the widgets if required. </p>
+                <p>Reordering widgets is especially important in a vertical widget layout. </p>
+                <p>
+                    <img src="../../Resources/Images/Views/Select Widget Window.png" class="LargeImages" />
+                </p>
+                <p class="BasicNote">After widgets have been added, their respective parameters appear in the <span class="Emphasis">Parameters</span> pane.</p>
+            </li>
+            <li>Select an action as required.</li>
+            <li>Click <span class="Emphasis">Ok</span>.</li>
+            <li>Optionally, dock the new view in a module.</li>
+        </ol>
+    </body>
+</html>

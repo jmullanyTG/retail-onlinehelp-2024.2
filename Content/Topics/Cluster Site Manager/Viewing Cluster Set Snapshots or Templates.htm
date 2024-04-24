@@ -1,0 +1,244 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" xml:lang="en-us">
+    <head>
+        <link href="../../Resources/TableStyles/standard.css" rel="stylesheet" MadCap:stylesheetType="table" /><title></title>
+    </head>
+    <body>
+        <h1>Viewing a cluster set snapshot or template</h1>
+        <p>The <span class="Emphasis">Cluster Set Management</span> window displays a list of all the cluster set templates, and their related cluster sets, to which they have access. Select templates or sets to view, edit, delete, and create cluster set snapshots, as well as initiate the creation of new templates and sets.</p>
+        <p>
+            <img src="../../Resources/Images/Cluster Site Manager/Manage Cluster Sets Screen.png" class="LargeImages" />
+        </p>
+        <h2>To view a cluster snapshot</h2>
+        <ol>
+            <li>
+                <p>From the Management tab, click <span class="Emphasis">Site Clustering</span>. </p>
+                <p>The <span class="Emphasis">Cluster Set Management</span> window displays.</p>
+            </li>
+            <li>
+                <p>To view a cluster set document for a given cluster set, select the cluster site in the grid. </p>
+                <p>The <span class="Emphasis">Snapshot</span> section displays below the Cluster Set section. </p>
+            </li>
+        </ol>
+        <h2>Cluster set toolbar</h2>
+        <table class="TableStyle-standard" cellspacing="0" style="mc-table-style: url('../../Resources/TableStyles/standard.css');">
+            <col class="TableStyle-standard-Column-Column1" />
+            <col class="TableStyle-standard-Column-Column2" />
+            <thead>
+                <tr class="TableStyle-standard-Head-Header1">
+                    <th class="TableStyle-standard-HeadE-Column1-Header1">Action</th>
+                    <th class="TableStyle-standard-HeadD-Column2-Header1">Description</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">New</td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">Displays the <span class="Emphasis">Add Cluster Set</span> window to create a new cluster set or template.</td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">Clone</td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">Displays the <span class="Emphasis">Update Cluster Set</span> window  with all parameters and criteria from the selected cluster set or template pre-populated and cloned (pre-pended to the beginning of the cluster set name).</td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">Edit</td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">Displays the <span class="Emphasis">Update Cluster Set</span> window for the selected cluster set or template.</td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">Delete</td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">
+                         Validation exists to prevent the deleting of cluster sets that are currently in use by assortment plans. 
+                        <p class="BasicNote">Cluster sets are not truly deleted until the garbage collection procedure runs on the database. The frequency and timing of this procedure is determined during software implementation.</p></td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">Allow Multiple</td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">
+                        Toggles displaying or hiding checkboxes in the grid. When enabled, select multiple cluster sets or cluster set partitions in the grid and then click <span class="Emphasis">Delete</span>, <span class="Emphasis">Snapshot</span>, or <span class="Emphasis">Calculate</span> to perform the action on all of the selected cluster sets. 
+                        <p>Notes:</p><ul><li>Selecting a cluster set partition automatically selects all of its cluster sets.</li><li>Multi-cluster set operations can be submitted as tasks to the workload queue. A notification is generated when the operations are finished. For more information, <MadCap:conditionalText MadCap:conditions="General.ScreenOnly">see <MadCap:xref href="../Workload Queue Manager/Workload Queue Overview.htm">Workload Queue overview</MadCap:xref>.</MadCap:conditionalText> <MadCap:conditionalText MadCap:conditions="General.PrintOnly">refer to the Workload &#160;Queue User Guide.</MadCap:conditionalText></li></ul></td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">Snapshot</td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">Creates snapshots of selected cluster sets.</td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">Calculate</td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">Calculates the cluster assignments for all stores included in a selected cluster set, based on the parameters and criteria specified during cluster set configuration.</td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">Report</td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">Displays the <a href="Cluster Set Site Comparison Reports.htm">Cluster Set Site Comparison Report</a>. 
+                    </td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">View Collection Set Configuration</td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">Displays the View Collection Set Configuration window.</td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyB-Column1-Body1">Refresh</td>
+                    <td class="TableStyle-standard-BodyA-Column2-Body1">Refreshes the list of cluster sets displayed in the grid below.</td>
+                </tr>
+            </tbody>
+        </table>
+        <h3>Cluster set grid fields</h3>
+        <table style="width: 100%;margin-left: 0;margin-right: auto;mc-table-style: url('../../Resources/TableStyles/standard.css');" class="TableStyle-standard" cellspacing="0">
+            <col class="TableStyle-standard-Column-Column1" />
+            <col class="TableStyle-standard-Column-Column2" />
+            <thead>
+                <tr class="TableStyle-standard-Head-Header1">
+                    <th class="TableStyle-standard-HeadE-Column1-Header1">Field</th>
+                    <th class="TableStyle-standard-HeadD-Column2-Header1">Description</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">Name</td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">The name of the cluster set.</td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">Description</td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">
+                        <p>
+                            <img src="../../Resources/Images/Cluster Site Manager/Description Present.png" class="IconInline" /> There is a description for the cluster set. Click the icon to display the description.</p>
+                        <p>
+                            <img src="../../Resources/Images/Cluster Site Manager/Description Absent.png" class="IconInline" /> There is no description for the cluster set.</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">Hierarchy</td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">The site hierarchy that the cluster set is based on. Blank if a site filter was used instead of a site hierarchy.</td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">Level</td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">The specific level of the site hierarchy that the cluster set is based on. Blank if a site filter was used instead of a site hierarchy level.</td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">Filter</td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">
+                         The site filter that the cluster set is based on. Blank if a site hierarchy was used instead of a site filter. 
+                    </td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">Last Modified</td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">The date that the cluster set was last changed.</td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">Last Computed</td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">The date that the cluster set was last calculated.</td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">
+                        <p>Allocation</p>
+                    </td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">
+                        Whether the cluster set is configured for use with the Allocation solution and allocation scenarios in the Rate of Sale solution. 
+                    </td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">
+                        <p>Assortment</p>
+                    </td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">
+                        Whether the cluster set is configured for use with the Assortment Planning solution and assortment planning scenarios in the Rate of Sale module. 
+                    </td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">
+                        <p>Events</p>
+                    </td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">
+                        Whether the cluster set is configured for use with the Events solution.  
+                    </td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">
+                        <p>Promotions</p>
+                    </td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">
+                        Whether the cluster set is configured for use with the Promotions solution. 
+                    </td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyB-Column1-Body1">
+                        <p>Price</p>
+                    </td>
+                    <td class="TableStyle-standard-BodyA-Column2-Body1">
+                         If the cluster set is configured for use with the Price Manager solution. 
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <p>For more information, see <MadCap:xref href="Viewing Collection Set Configuration.htm">Cluster set Configuration screen</MadCap:xref></p>
+        <h3>Snapshot section</h3>
+        <p>Select a cluster set in the grid to open the Snapshot pane.</p>
+        <table class="TableStyle-standard" cellspacing="0" style="mc-table-style: url('../../Resources/TableStyles/standard.css');">
+            <col class="TableStyle-standard-Column-Column1" />
+            <col class="TableStyle-standard-Column-Column2" />
+            <thead>
+                <tr class="TableStyle-standard-Head-Header1">
+                    <th class="TableStyle-standard-HeadE-Column1-Header1">Action</th>
+                    <th class="TableStyle-standard-HeadD-Column2-Header1">Description</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">New</td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">Creates a new snapshot of the selected cluster set.</td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">Edit</td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">Edits the snapshot selected in the snapshot grid.</td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">Delete</td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">Deletes the snapshot selected in the snapshot grid.</td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">Report</td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">Launches the <a href="Generating Cluster Set Snapshot Comparison Reports.htm">Cluster Set Snapshot Comparison Report</a>.</td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyB-Column1-Body1">Refresh</td>
+                    <td class="TableStyle-standard-BodyA-Column2-Body1">Refreshes the data in the snapshot grid.</td>
+                </tr>
+            </tbody>
+        </table>
+        <p>The snapshot grid displays the following read-only snapshot details. </p>
+        <table class="TableStyle-standard" cellspacing="0" style="mc-table-style: url('../../Resources/TableStyles/standard.css');">
+            <col class="TableStyle-standard-Column-Column1" />
+            <col class="TableStyle-standard-Column-Column2" />
+            <thead>
+                <tr class="TableStyle-standard-Head-Header1">
+                    <th class="TableStyle-standard-HeadE-Column1-Header1">Column</th>
+                    <th class="TableStyle-standard-HeadD-Column2-Header1">Description</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">Cluster Set Name</td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">The name of the cluster set for which the snapshot was taken.</td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">Cluster Set Description</td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">Click the icon to view any description.</td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">Snapshot Date Time</td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">The date that the snapshot was taken.</td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">Snapshot Note</td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">Click the icon to view any note.</td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">Classification columns</td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">For each classification column, the count of stores in each classification at the time the snapshot was taken.</td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyB-Column1-Body1">Effective Date Time</td>
+                    <td class="TableStyle-standard-BodyA-Column2-Body1">
+                        The date that the cluster set snapshot became or will become effective. 
+                        <p>Creating a new cluster set snapshot initiates recalculation of all assortment plans in which the snapshot cluster set is active. This recalculation occurs as a part of a regularly scheduled overnight processing. The frequency of overnight processing is determined during software implementation.</p></td>
+                </tr>
+            </tbody>
+        </table>
+    </body>
+</html>

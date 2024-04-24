@@ -1,0 +1,41 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head>
+    </head>
+    <body>
+        <h1>Distinguishing between actualized values and outstanding forecasts</h1>
+        <p>Planners can separate sales and receipt information for selected calendar levels into aggregated actualized and outstanding portions using the <span class="Emphasis">Remaining/Elapsed</span> metric within the <span class="Emphasis">Hybrid Financial Planning Grid</span>. Using this metric, trends relating to actual sales versus planned sales can be easily distinguished from the balance of a forecast. For receipts, it allows planners to see what has already been received against what is expected to be received in the future within a time period. </p>
+        <p>The  metric can be used in the <span class="Emphasis">Filter</span>, <span class="Emphasis">Row</span>, and <span class="Emphasis">Columns</span> in the pivot grid. In the <span class="Emphasis">Filter</span> area, users can choose either <span class="Emphasis">Elapsed</span> or <span class="Emphasis">Remaining</span> or both. This can be useful if deliberately planning only future periods or analyzing past periods,</p>
+        <p class="p">
+            <img src="../../Resources/Images/MFP/Elapsed Remaining Filter.PNG" class="LargeImages">
+            </img>
+        </p>
+        <p>The following is an example of the <span class="Emphasis">Remaining/Elapsed</span> metric in the <span class="Emphasis">Row</span> section.</p>
+        <p class="p">
+            <img src="../../Resources/Images/MFP/Elapsed Remaining Row.PNG" class="LargeImages" />
+        </p>
+        <p>However, the recommended and probably the most common usage for this field is in the <span class="Emphasis">Column</span> area (the same area as time periods), and before Week. This allows visibility to the portion of the period which has actualized, and the portion which is still outstanding or remaining, with subtotals. The metric position could be higher to allow for subtotals such as quarter-to-date or year-to-date.</p>
+        <p>Positioning of this metric within the <span class="Emphasis">Column</span> area is important as the split between Remaining and Elapsed happens within the period of time above or to the left of the <span class="Emphasis">Remaining/Elapsed</span> metric. </p>
+        <p>For example, if <span class="Emphasis">Remaining/Elapsed</span> is positioned after <span class="Emphasis">Year</span>, then elapsed periods of time within the year split into the next calendar level down (such as Quarter or Month). Elapsed periods of time subtotal as <span class="Emphasis">Elapsed Total</span> and periods of time remaining subtotal as <span class="Emphasis">Remaining Total</span>.</p>
+        <h2>Calendar Level Quarter</h2>
+        <p>
+            <img src="../../Resources/Images/MFP/Elapsed Remaining Column.PNG" class="LargeImages" style="width: 822px;height: 234px;" />
+        </p>
+        <h2>Calendar Level Week</h2>
+        <p>
+            <img src="../../Resources/Images/MFP/Elapsed Remaining After Year.PNG" class="LargeImages" />
+        </p>
+        <p>When the <span class="Emphasis">Remaining/Elapsed</span> metric is positioned after <span class="Emphasis">Quarter</span> or <span class="Emphasis">Month</span>, the <span class="Emphasis">Elapsed Total</span> and the <span class="Emphasis">Remaining Total</span> are constrained to each quarter or month.</p>
+        <p>
+            <img src="../../Resources/Images/MFP/Elapsed Remaining After Half or Month.PNG" class="LargeImages" />
+        </p>
+        <p> In the below example, M05 is entirely Elapsed, and the monthly total is seen in the <span class="Emphasis">Elapsed Total</span> field. M06 is partially Elapsed and partially Remaining. The two totals combine to equal the value in the <span class="Emphasis">M06 Total</span> field. M07 is entirely Remaining meaning all its values are aggregated to the value in its <span class="Emphasis">Remaining Total</span> field. </p>
+        <p>
+            <img src="../../Resources/Images/MFP/Elapsed Remaining After Month.PNG" class="LargeImages" />
+        </p>
+        <p>When the <span class="Emphasis">Remaining/Elapsed</span> metric is placed after the lowest calendar level (<span class="Emphasis">Week</span>), each period has a header indicating the status of that particular period. There are no subtotals at the lowest calendar level.</p>
+        <p>
+            <img src="../../Resources/Images/MFP/Elapsed Remaining After Week.PNG" class="LargeImages" />
+        </p>
+    </body>
+</html>

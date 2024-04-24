@@ -1,0 +1,139 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head>
+        <link href="../../Resources/TableStyles/standard.css" rel="stylesheet" MadCap:stylesheetType="table" />
+    </head>
+    <body>
+        <h1>Configuration Migration Utility Overview</h1>
+        <p>The <span class="Emphasis">Configuration Migration Utility</span> helps automate migration of selected objects from a source system (such as a QA system) to a destination system (such as a production system). Through the migration process, configuration objects are exported from the source system to a file.  That file can then be imported to the destination system, eliminating the opportunity for manual transcription errors.</p>
+        <h2>Configuration Migration user right</h2>
+        <p>Users require user right <span class="Emphasis"> Access to Configuration Migration</span>.</p>
+        <h2>Supported configuration objects</h2>
+        <p>The following configuration objects can be exported and imported through <span class="Emphasis">Configuration Migration Utility</span>:</p>
+        <ul>
+            <li>
+                <p>Promotion strategies, including:</p>
+                <ul>
+                    <li>User restrictions from specific strategies</li>
+                    <li>Rounding rules (standard)</li>
+                    <li>Rounding rules (price ending)</li>
+                    <li>Calculations</li>
+                    <li>Calculation sets</li>
+                    <li>Promotion pricing details</li>
+                    <li> Promotion validations</li>
+                    <li> Promotion validation sets</li>
+                </ul>
+            </li>
+        </ul>
+        <h2>Prerequisites</h2>
+        <ul>
+            <li>All customized database fields must be created in the target environment.</li>
+            <li>All stored procedures must be copied over manually to the target environment.</li>
+            <li>All view collection sets, views, and widgets must be copied over manually to the target environment.</li>
+            <li>The lower level environment must be a copy of the destination environment to ensure the configuration elements' UUID are aligned.</li>
+            <li>The lower level environment must be on the same version.</li>
+        </ul>
+        <h2>Toolbar functionality</h2>
+        <table class="TableStyle-standard" cellspacing="0" style="width: 100%;mc-table-style: url('../../Resources/TableStyles/standard.css');">
+            <col class="TableStyle-standard-Column-Column1" style="width: 259px;" />
+            <col class="TableStyle-standard-Column-Column2" />
+            <thead>
+                <tr class="TableStyle-standard-Head-Header1">
+                    <th class="TableStyle-standard-HeadE-Column1-Header1">Button</th>
+                    <th class="TableStyle-standard-HeadD-Column2-Header1">Description</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">Import</td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">Imports a configuration file.</td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">Export</td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">Exports selected objects to an export file.</td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyB-Column1-Body1">Log / Details</td>
+                    <td class="TableStyle-standard-BodyA-Column2-Body1">
+                        Toggles displaying log messages and configuration objects.
+                        <ul><li><p>When configuration objects are displayed, click <span class="Emphasis">Log</span> to view the log messages related to this system's imports and exports.</p><p class="BasicNote"><span class="Emphasis">Import</span> and <span class="Emphasis">Export</span> buttons are disabled when the log is displayed.</p></li><li>When the log is displayed, click <span class="Emphasis">Details</span> to return to the configuration objects screen.</li></ul></td>
+                </tr>
+            </tbody>
+        </table>
+        <h2>Exporting configuration objects from a source system</h2>
+        <ol>
+            <li>
+                <p>In the <span class="Emphasis">Configuration</span> screen, select the objects to be migrated to a destination system.</p>
+                <p>
+                    <img src="../../Resources/Images/Configuration Migration/Select objects.png" class="LargeImages" />
+                </p>
+            </li>
+            <li>Click <span class="Emphasis">Export</span> on the Configuration toolbar.</li>
+            <li>
+                <p>In the <span class="Emphasis">Save As</span> dialog box, enter a name and directory location for the configuration file. </p>
+            </li>
+            <li>
+                <p>Click <span class="Emphasis">Ok </span>to begin the export.</p>
+                <p class="BasicNote">View a log of the export by clicking <span class="Emphasis">Log</span> on the <span class="Emphasis">Configuration</span> toolbar.</p>
+            </li>
+        </ol>
+        <h2>Importing configuration objects into a destination system</h2>
+        <ol>
+            <li>In the <span class="Emphasis">Configuration</span> screen, click <span class="Emphasis">Import</span>.</li>
+            <li>
+                <p>In the <span class="Emphasis">Open</span> dialog box, select the configuration file to import.</p>
+            </li>
+            <li>
+                <p>Click <span class="Emphasis">Open</span>.</p>
+                <p>If the configuration file is valid, the <span class="Emphasis">Confirm Changes</span> dialog box opens displaying the list of objects that will be updated as a result of the import.</p>
+            </li>
+            <li>
+                <p>Click <span class="Emphasis">Import</span> to update the system with the changes or <span class="Emphasis">Cancel</span> to cancel the import.</p>
+            </li>
+        </ol>
+        <h2>Viewing the log</h2>
+        <p>The configuration migration log contains messages related to exports and imports of configuration files. </p>
+        <p>
+            <img src="../../Resources/Images/Configuration Migration/log.png" class="LargeImages" />
+        </p>
+        <p>The log includes the following columns which can be sorted and filtered for convenience. </p>
+        <table style="width: 100%;mc-table-style: url('../../Resources/TableStyles/standard.css');" class="TableStyle-standard" cellspacing="0">
+            <col class="TableStyle-standard-Column-Column1" style="width: 415px;" />
+            <col class="TableStyle-standard-Column-Column2" />
+            <thead>
+                <tr class="TableStyle-standard-Head-Header1">
+                    <th class="TableStyle-standard-HeadE-Column1-Header1">Column</th>
+                    <th class="TableStyle-standard-HeadD-Column2-Header1">Description</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">Message Type</td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">
+                        The icon represents the type of message contained in the log entry. Message types are: 
+                        <p><img src="../../Resources/Images/Configuration Migration/Start icon.png" class="IconInline" /> - Start of a task</p><p><img src="../../Resources/Images/Configuration Migration/End icon.png" style="width: 51px; height: 48px;" class="IconInline" /> - End of a task</p><p><img src="../../Resources/Images/Configuration Migration/Information icon.png" class="IconInline" />- Information</p><p><img src="../../Resources/Images/Configuration Migration/Warning icon.png" class="IconInline" /> - Warning</p><p><img src="../../Resources/Images/Configuration Migration/Error icon.png" class="IconInline" /> - Error</p></td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">Date/Time</td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">The date and time of the message.</td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">Task</td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">The type of task attempted (Import, Export, or Validating)</td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">Element</td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">Either the type of element (calculation, rounding rule, etc.) involved or <span class="Emphasis">Start</span>, which indicates the start of an import.</td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">User Name</td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">Who initiated the import or export.</td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyB-Column1-Body1">Message</td>
+                    <td class="TableStyle-standard-BodyA-Column2-Body1">The log message.</td>
+                </tr>
+            </tbody>
+        </table>
+    </body>
+</html>

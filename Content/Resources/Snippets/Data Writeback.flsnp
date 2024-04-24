@@ -1,0 +1,8 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head>
+    </head>
+    <body>
+        <p>The data writeback defines the method (database stored procedure) which runs when the <span class="Emphasis">Save</span> button is pressed. These are typically UPDATE statements. </p>
+    </body>
+</html>

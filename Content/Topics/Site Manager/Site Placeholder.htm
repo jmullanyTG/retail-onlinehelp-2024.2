@@ -1,0 +1,48 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head />
+    <body>
+        <h1>Creating a site placeholder </h1>
+        <p>Placeholder sites are created and managed using the <span class="Emphasis">Site Placeholder</span> blade in the Site Manager’s <span class="Emphasis">Details</span> pane. The Placeholder sites are accessible through site filters in Assortment Planning, Merchandise Financial Planning, Allocations, and Adaptive Allocations. These virtual sites can facilitate planning for stores that do not yet have master data in the ERP system.</p>
+        <p>For example, in Allocations, placeholder stores can be used to create initial orders for stores that will open soon and then  reserve stock for the new stores at the DC. In Assortment Planning and Merchandise Financial Planning, placeholder stores can be used to represent stores that will open soon.</p>
+        <p>Placeholder sites can only be created for stores, not distribution centers (DC) or DC/Stores.</p>
+        <p class="BasicNote"> When master data for a store is imported, the placeholder store maps itself to the real store’s site code and all data related to the placeholder site references the new permanent site.</p>
+        <p>
+            <img src="../../Resources/Images/Site Manager/Placeholder Sites tab.png" class="LargeImages" />
+        </p>
+        <h2>Placeholders and order management</h2>
+        <p>Orders for real and placeholder sites are treated in exactly the same way. The workflow for these are the same. Authorized orders to placeholder sites are sent to the ERP system. If required, set up a validation in the export process to block orders to placeholder sites from being sent to the ERP.</p>
+        <h2>Prerequisites</h2>
+        <p>The following user rights are required to add, modify, and delete placeholder sites.</p>
+        <p>Right Group: Site Manager</p>
+        <ul>
+            <li><span class="Emphasis">Allow Deletion of Placeholder Sites</span>
+            </li>
+            <li><span class="Emphasis">Allow Updating of Placeholder Sites</span>
+            </li>
+        </ul>
+        <p MadCap:conditions="General.ScreenOnly">For more information, see             <MadCap:xref href="../Users/Site Manager.htm">Right group: site manager</MadCap:xref>. 
+<MadCap:conditionalText MadCap:conditions="General.PrintOnly">For more information, refer to the Users User Guide.</MadCap:conditionalText></p>
+        <h2>To create a site placeholder</h2>
+        <ol>
+            <li>
+                <p>Display the Site Manager Document containing the desired site. </p>
+                <p>For details, see <MadCap:xref href="Creating a Site Manager Document.htm">Creating a site manager document</MadCap:xref>.</p>
+            </li>
+            <li>Select the site in the Site Manager Document. </li>
+            <li>
+                <p>With the <span class="Emphasis">Details</span> button selected, click the <span class="Emphasis">Site Placeholder</span> tab. </p>
+                <p>The details to the selected site display.</p>
+            </li>
+            <li>
+                <p>Click <span class="Emphasis">New</span> on the <span class="Emphasis">Entry</span> toolbar. </p>
+                <p>A new row displays in the Site Placeholder grid.</p>
+            </li>
+            <li>In the new row, enter details for the placeholder site.</li>
+            <li>
+                <p>Click <span class="Emphasis">Save</span>. </p>
+                <p>The new placeholder site is saved.</p>
+            </li>
+        </ol>
+    </body>
+</html>

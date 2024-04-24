@@ -1,0 +1,886 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head>
+    </head>
+    <body>
+        <p>Collection assignments are merged according to positions in the marginal return matrices. The result of collection assignments can be viewed in the <span class="Emphasis">Target New Choices</span> tab.</p>
+        <table style="width: 100%;border-left-style: solid;border-left-width: 0px;margin-left: auto;margin-right: auto;">
+            <col style="width: 5.8%;" />
+            <col style="width: 5.8%;" />
+            <col style="width: 5.8%;" />
+            <col style="width: 5.8%;" />
+            <col style="width: 5.8%;" />
+            <col style="width: 5.8%;" />
+            <col style="width: 5.8%;" />
+            <col style="width: 5.8%;" />
+            <col style="width: 5.8%;" />
+            <col style="width: 5.8%;" />
+            <col style="width: 5.8%;" />
+            <col style="width: 5.8%;" />
+            <col style="width: 5.8%;" />
+            <col style="width: 5.8%;" />
+            <col style="width: 5.8%;" />
+            <col style="width: 5.8%;" />
+            <col style="width: 5.8%;" />
+            <tbody>
+                <tr>
+                    <td style="background-color: #DDEBF7;border-left-style: none;border-left-width: 1px;border-right-style: none;border-right-width: 1px;border-right-color: #c0c0c0;" colspan="17">Start - Marginal Return Matrix Per Cluster</td>
+                </tr>
+                <tr>
+                    <td colspan="5" style="border-left-style: none;border-left-width: 1px;border-right-style: none;border-right-width: 1px;border-right-color: #c0c0c0;"><span class="Emphasis">Cluster A</span>
+                    </td>
+                    <td style="border-left-style: none;border-left-width: 1px;border-right-style: none;border-right-width: 1px;border-right-color: #c0c0c0;">&#160;</td>
+                    <td colspan="5" style="border-left-style: none;border-left-width: 1px;border-right-style: none;border-right-width: 1px;border-right-color: #c0c0c0;"><span class="Emphasis">Cluster B</span>
+                    </td>
+                    <td style="border-left-style: none;border-left-width: 1px;border-right-style: none;border-right-width: 1px;border-right-color: #c0c0c0;">&#160;</td>
+                    <td colspan="5" style="border-left-style: none;border-left-width: 1px;border-right-style: none;border-right-width: 1px;border-right-color: #c0c0c0;"><span class="Emphasis">Cluster C</span>
+                    </td>
+                </tr>
+                <tr>
+                    <td style="background-color: #EDEDED;border-left-style: none;border-left-width: 1px;border-right-style: none;border-right-width: 1px;border-right-color: #c0c0c0;" rowspan="2">Style</td>
+                    <td style="background-color: #E2EFDA;border-left-style: none;border-left-width: 1px;border-right-style: none;border-right-width: 1px;border-right-color: #c0c0c0;" colspan="4">Color</td>
+                    <td style="border-left-style: none;border-left-width: 1px;border-right-style: none;border-right-width: 1px;border-right-color: #c0c0c0;">&#160;</td>
+                    <td style="background-color: #EDEDED;border-left-style: none;border-left-width: 1px;border-right-style: none;border-right-width: 1px;border-right-color: #c0c0c0;" rowspan="2">Style</td>
+                    <td style="background-color: #E2EFDA;border-left-style: none;border-left-width: 1px;border-right-style: none;border-right-width: 1px;border-right-color: #c0c0c0;" colspan="4">Color</td>
+                    <td style="border-left-style: none;border-left-width: 1px;border-right-style: none;border-right-width: 1px;border-right-color: #c0c0c0;">&#160;</td>
+                    <td style="background-color: #EDEDED;border-left-style: none;border-left-width: 1px;border-right-style: none;border-right-width: 1px;border-right-color: #c0c0c0;" rowspan="2">Style</td>
+                    <td style="background-color: #E2EFDA;border-left-style: none;border-left-width: 1px;border-right-style: none;border-right-width: 1px;border-right-color: #c0c0c0;" colspan="4">Color</td>
+                </tr>
+                <tr>
+                    <td style="background-color: #C6E0B4;border-left-style: none;border-left-width: 1px;border-right-style: none;border-right-width: 1px;border-right-color: #c0c0c0;">1</td>
+                    <td style="background-color: #C6E0B4;border-left-style: none;border-left-width: 1px;border-right-style: none;border-right-width: 1px;border-right-color: #c0c0c0;">2</td>
+                    <td style="background-color: #C6E0B4;border-left-style: none;border-left-width: 1px;border-right-style: none;border-right-width: 1px;border-right-color: #c0c0c0;">3</td>
+                    <td style="background-color: #C6E0B4;border-left-style: none;border-left-width: 1px;border-right-style: none;border-right-width: 1px;border-right-color: #c0c0c0;">4</td>
+                    <td style="border-left-style: none;border-left-width: 1px;border-right-style: none;border-right-width: 1px;border-right-color: #c0c0c0;">&#160;</td>
+                    <td style="background-color: #C6E0B4;border-left-style: none;border-left-width: 1px;border-right-style: none;border-right-width: 1px;border-right-color: #c0c0c0;">1</td>
+                    <td style="background-color: #C6E0B4;border-left-style: none;border-left-width: 1px;border-right-style: none;border-right-width: 1px;border-right-color: #c0c0c0;">2</td>
+                    <td style="background-color: #C6E0B4;border-left-style: none;border-left-width: 1px;border-right-style: none;border-right-width: 1px;border-right-color: #c0c0c0;">3</td>
+                    <td style="background-color: #C6E0B4;border-left-style: none;border-left-width: 1px;border-right-style: none;border-right-width: 1px;border-right-color: #c0c0c0;">4</td>
+                    <td style="border-left-style: none;border-left-width: 1px;border-right-style: none;border-right-width: 1px;border-right-color: #c0c0c0;">&#160;</td>
+                    <td style="background-color: #C6E0B4;border-left-style: none;border-left-width: 1px;border-right-style: none;border-right-width: 1px;border-right-color: #c0c0c0;">1</td>
+                    <td style="background-color: #C6E0B4;border-left-style: none;border-left-width: 1px;border-right-style: none;border-right-width: 1px;border-right-color: #c0c0c0;">2</td>
+                    <td style="background-color: #C6E0B4;border-left-style: none;border-left-width: 1px;border-right-style: none;border-right-width: 1px;border-right-color: #c0c0c0;">3</td>
+                    <td style="background-color: #C6E0B4;border-left-style: none;border-left-width: 1px;border-right-style: none;border-right-width: 1px;border-right-color: #c0c0c0;">4</td>
+                </tr>
+                <tr>
+                    <td style="background-color: #DBDBDB;border-left-style: none;border-left-width: 1px;border-right-style: none;border-right-width: 1px;border-right-color: #c0c0c0;">1</td>
+                    <td style="border-left-style: none;border-left-width: 1px;border-right-style: none;border-right-width: 1px;border-right-color: #c0c0c0;">1.0</td>
+                    <td style="border-left-style: none;border-left-width: 1px;border-right-style: none;border-right-width: 1px;border-right-color: #c0c0c0;">0.8</td>
+                    <td style="border-left-style: none;border-left-width: 1px;border-right-style: none;border-right-width: 1px;border-right-color: #c0c0c0;">0.7</td>
+                    <td style="border-left-style: none;border-left-width: 1px;border-right-style: none;border-right-width: 1px;border-right-color: #c0c0c0;">0.5</td>
+                    <td style="border-left-style: none;border-left-width: 1px;border-right-style: none;border-right-width: 1px;border-right-color: #c0c0c0;">&#160;</td>
+                    <td style="background-color: #DBDBDB;border-left-style: none;border-left-width: 1px;border-right-style: none;border-right-width: 1px;border-right-color: #c0c0c0;">1</td>
+                    <td style="border-left-style: none;border-left-width: 1px;border-right-style: none;border-right-width: 1px;border-right-color: #c0c0c0;">1</td>
+                    <td style="border-left-style: none;border-left-width: 1px;border-right-style: none;border-right-width: 1px;border-right-color: #c0c0c0;">0.8</td>
+                    <td style="border-left-style: none;border-left-width: 1px;border-right-style: none;border-right-width: 1px;border-right-color: #c0c0c0;">&#160;</td>
+                    <td style="border-left-style: none;border-left-width: 1px;border-right-style: none;border-right-width: 1px;border-right-color: #c0c0c0;">&#160;</td>
+                    <td style="border-left-style: none;border-left-width: 1px;border-right-style: none;border-right-width: 1px;border-right-color: #c0c0c0;">&#160;</td>
+                    <td style="background-color: #DBDBDB;border-left-style: none;border-left-width: 1px;border-right-style: none;border-right-width: 1px;border-right-color: #c0c0c0;">1</td>
+                    <td style="border-left-style: none;border-left-width: 1px;border-right-style: none;border-right-width: 1px;border-right-color: #c0c0c0;">1</td>
+                    <td style="border-left-style: none;border-left-width: 1px;border-right-style: none;border-right-width: 1px;border-right-color: #c0c0c0;">&#160;</td>
+                    <td style="border-left-style: none;border-left-width: 1px;border-right-style: none;border-right-width: 1px;border-right-color: #c0c0c0;">&#160;</td>
+                    <td style="border-left-style: none;border-left-width: 1px;border-right-style: none;border-right-width: 1px;border-right-color: #c0c0c0;">&#160;</td>
+                </tr>
+                <tr>
+                    <td style="background-color: #DBDBDB;border-left-style: none;border-left-width: 1px;border-right-style: none;border-right-width: 1px;border-right-color: #c0c0c0;">2</td>
+                    <td style="border-left-style: none;border-left-width: 1px;border-right-style: none;border-right-width: 1px;border-right-color: #c0c0c0;">0.6</td>
+                    <td style="border-left-style: none;border-left-width: 1px;border-right-style: none;border-right-width: 1px;border-right-color: #c0c0c0;">&#160;</td>
+                    <td style="border-left-style: none;border-left-width: 1px;border-right-style: none;border-right-width: 1px;border-right-color: #c0c0c0;">&#160;</td>
+                    <td style="border-left-style: none;border-left-width: 1px;border-right-style: none;border-right-width: 1px;border-right-color: #c0c0c0;">&#160;</td>
+                    <td style="border-left-style: none;border-left-width: 1px;border-right-style: none;border-right-width: 1px;border-right-color: #c0c0c0;">&#160;</td>
+                    <td style="background-color: #DBDBDB;border-left-style: none;border-left-width: 1px;border-right-style: none;border-right-width: 1px;border-right-color: #c0c0c0;">2</td>
+                    <td style="border-left-style: none;border-left-width: 1px;border-right-style: none;border-right-width: 1px;border-right-color: #c0c0c0;">0.9</td>
+                    <td style="border-left-style: none;border-left-width: 1px;border-right-style: none;border-right-width: 1px;border-right-color: #c0c0c0;">0.7</td>
+                    <td style="border-left-style: none;border-left-width: 1px;border-right-style: none;border-right-width: 1px;border-right-color: #c0c0c0;">&#160;</td>
+                    <td style="border-left-style: none;border-left-width: 1px;border-right-style: none;border-right-width: 1px;border-right-color: #c0c0c0;">&#160;</td>
+                    <td style="border-left-style: none;border-left-width: 1px;border-right-style: none;border-right-width: 1px;border-right-color: #c0c0c0;">&#160;</td>
+                    <td style="background-color: #DBDBDB;border-left-style: none;border-left-width: 1px;border-right-style: none;border-right-width: 1px;border-right-color: #c0c0c0;">2</td>
+                    <td style="border-left-style: none;border-left-width: 1px;border-right-style: none;border-right-width: 1px;border-right-color: #c0c0c0;">0.5</td>
+                    <td style="border-left-style: none;border-left-width: 1px;border-right-style: none;border-right-width: 1px;border-right-color: #c0c0c0;">&#160;</td>
+                    <td style="border-left-style: none;border-left-width: 1px;border-right-style: none;border-right-width: 1px;border-right-color: #c0c0c0;">&#160;</td>
+                    <td style="border-left-style: none;border-left-width: 1px;border-right-style: none;border-right-width: 1px;border-right-color: #c0c0c0;">&#160;</td>
+                </tr>
+                <tr>
+                    <td style="background-color: #DBDBDB;border-left-style: none;border-left-width: 1px;border-right-style: none;border-right-width: 1px;border-right-color: #c0c0c0;">3</td>
+                    <td style="border-left-style: none;border-left-width: 1px;border-right-style: none;border-right-width: 1px;border-right-color: #c0c0c0;">&#160;</td>
+                    <td style="border-left-style: none;border-left-width: 1px;border-right-style: none;border-right-width: 1px;border-right-color: #c0c0c0;">&#160;</td>
+                    <td style="border-left-style: none;border-left-width: 1px;border-right-style: none;border-right-width: 1px;border-right-color: #c0c0c0;">&#160;</td>
+                    <td style="border-left-style: none;border-left-width: 1px;border-right-style: none;border-right-width: 1px;border-right-color: #c0c0c0;">&#160;</td>
+                    <td style="border-left-style: none;border-left-width: 1px;border-right-style: none;border-right-width: 1px;border-right-color: #c0c0c0;">&#160;</td>
+                    <td style="background-color: #DBDBDB;border-left-style: none;border-left-width: 1px;border-right-style: none;border-right-width: 1px;border-right-color: #c0c0c0;">3</td>
+                    <td style="border-left-style: none;border-left-width: 1px;border-right-style: none;border-right-width: 1px;border-right-color: #c0c0c0;">&#160;</td>
+                    <td style="border-left-style: none;border-left-width: 1px;border-right-style: none;border-right-width: 1px;border-right-color: #c0c0c0;">&#160;</td>
+                    <td style="border-left-style: none;border-left-width: 1px;border-right-style: none;border-right-width: 1px;border-right-color: #c0c0c0;">&#160;</td>
+                    <td style="border-left-style: none;border-left-width: 1px;border-right-style: none;border-right-width: 1px;border-right-color: #c0c0c0;">&#160;</td>
+                    <td style="border-left-style: none;border-left-width: 1px;border-right-style: none;border-right-width: 1px;border-right-color: #c0c0c0;">&#160;</td>
+                    <td style="background-color: #DBDBDB;border-left-style: none;border-left-width: 1px;border-right-style: none;border-right-width: 1px;border-right-color: #c0c0c0;">3</td>
+                    <td style="border-left-style: none;border-left-width: 1px;border-right-style: none;border-right-width: 1px;border-right-color: #c0c0c0;">0.3</td>
+                    <td style="border-left-style: none;border-left-width: 1px;border-right-style: none;border-right-width: 1px;border-right-color: #c0c0c0;">&#160;</td>
+                    <td style="border-left-style: none;border-left-width: 1px;border-right-style: none;border-right-width: 1px;border-right-color: #c0c0c0;">&#160;</td>
+                    <td style="border-left-style: none;border-left-width: 1px;border-right-style: none;border-right-width: 1px;border-right-color: #c0c0c0;">&#160;</td>
+                </tr>
+                <tr>
+                    <td style="background-color: #DBDBDB;border-left-style: none;border-left-width: 1px;border-right-style: none;border-right-width: 1px;border-right-color: #c0c0c0;">4</td>
+                    <td style="border-left-style: none;border-left-width: 1px;border-right-style: none;border-right-width: 1px;border-right-color: #c0c0c0;">&#160;</td>
+                    <td style="border-left-style: none;border-left-width: 1px;border-right-style: none;border-right-width: 1px;border-right-color: #c0c0c0;">&#160;</td>
+                    <td style="border-left-style: none;border-left-width: 1px;border-right-style: none;border-right-width: 1px;border-right-color: #c0c0c0;">&#160;</td>
+                    <td style="border-left-style: none;border-left-width: 1px;border-right-style: none;border-right-width: 1px;border-right-color: #c0c0c0;">&#160;</td>
+                    <td style="border-left-style: none;border-left-width: 1px;border-right-style: none;border-right-width: 1px;border-right-color: #c0c0c0;">&#160;</td>
+                    <td style="background-color: #DBDBDB;border-left-style: none;border-left-width: 1px;border-right-style: none;border-right-width: 1px;border-right-color: #c0c0c0;">4</td>
+                    <td style="border-left-style: none;border-left-width: 1px;border-right-style: none;border-right-width: 1px;border-right-color: #c0c0c0;">&#160;</td>
+                    <td style="border-left-style: none;border-left-width: 1px;border-right-style: none;border-right-width: 1px;border-right-color: #c0c0c0;">&#160;</td>
+                    <td style="border-left-style: none;border-left-width: 1px;border-right-style: none;border-right-width: 1px;border-right-color: #c0c0c0;">&#160;</td>
+                    <td style="border-left-style: none;border-left-width: 1px;border-right-style: none;border-right-width: 1px;border-right-color: #c0c0c0;">&#160;</td>
+                    <td style="border-left-style: none;border-left-width: 1px;border-right-style: none;border-right-width: 1px;border-right-color: #c0c0c0;">&#160;</td>
+                    <td style="background-color: #DBDBDB;border-left-style: none;border-left-width: 1px;border-right-style: none;border-right-width: 1px;border-right-color: #c0c0c0;">4</td>
+                    <td style="border-left-style: none;border-left-width: 1px;border-right-style: none;border-right-width: 1px;border-right-color: #c0c0c0;">&#160;</td>
+                    <td style="border-left-style: none;border-left-width: 1px;border-right-style: none;border-right-width: 1px;border-right-color: #c0c0c0;">&#160;</td>
+                    <td style="border-left-style: none;border-left-width: 1px;border-right-style: none;border-right-width: 1px;border-right-color: #c0c0c0;">&#160;</td>
+                    <td style="border-left-style: none;border-left-width: 1px;border-right-style: none;border-right-width: 1px;border-right-color: #c0c0c0;">&#160;</td>
+                </tr>
+                <tr>
+                    <td style="border-left-style: none;border-left-width: 1px;border-right-style: none;border-right-width: 1px;border-right-color: #c0c0c0;">&#160;</td>
+                    <td style="border-left-style: none;border-left-width: 1px;border-right-style: none;border-right-width: 1px;border-right-color: #c0c0c0;">&#160;</td>
+                    <td style="border-left-style: none;border-left-width: 1px;border-right-style: none;border-right-width: 1px;border-right-color: #c0c0c0;">&#160;</td>
+                    <td style="border-left-style: none;border-left-width: 1px;border-right-style: none;border-right-width: 1px;border-right-color: #c0c0c0;">&#160;</td>
+                    <td style="border-left-style: none;border-left-width: 1px;border-right-style: none;border-right-width: 1px;border-right-color: #c0c0c0;">&#160;</td>
+                    <td style="border-left-style: none;border-left-width: 1px;border-right-style: none;border-right-width: 1px;border-right-color: #c0c0c0;">&#160;</td>
+                    <td style="border-left-style: none;border-left-width: 1px;border-right-style: none;border-right-width: 1px;border-right-color: #c0c0c0;">&#160;</td>
+                    <td style="border-left-style: none;border-left-width: 1px;border-right-style: none;border-right-width: 1px;border-right-color: #c0c0c0;">&#160;</td>
+                    <td style="border-left-style: none;border-left-width: 1px;border-right-style: none;border-right-width: 1px;border-right-color: #c0c0c0;">&#160;</td>
+                    <td style="border-left-style: none;border-left-width: 1px;border-right-style: none;border-right-width: 1px;border-right-color: #c0c0c0;">&#160;</td>
+                    <td style="border-left-style: none;border-left-width: 1px;border-right-style: none;border-right-width: 1px;border-right-color: #c0c0c0;">&#160;</td>
+                    <td style="border-left-style: none;border-left-width: 1px;border-right-style: none;border-right-width: 1px;border-right-color: #c0c0c0;">&#160;</td>
+                    <td style="border-left-style: none;border-left-width: 1px;border-right-style: none;border-right-width: 1px;border-right-color: #c0c0c0;">&#160;</td>
+                    <td style="border-left-style: none;border-left-width: 1px;border-right-style: none;border-right-width: 1px;border-right-color: #c0c0c0;">&#160;</td>
+                    <td style="border-left-style: none;border-left-width: 1px;border-right-style: none;border-right-width: 1px;border-right-color: #c0c0c0;">&#160;</td>
+                    <td style="border-left-style: none;border-left-width: 1px;border-right-style: none;border-right-width: 1px;border-right-color: #c0c0c0;">&#160;</td>
+                    <td style="border-left-style: none;border-left-width: 1px;border-right-style: none;border-right-width: 1px;border-right-color: #c0c0c0;">&#160;</td>
+                </tr>
+                <tr>
+                    <td style="background-color: #DDEBF7;border-left-style: none;border-left-width: 1px;border-right-style: none;border-right-width: 1px;border-right-color: #c0c0c0;" colspan="17">Merge Matrices</td>
+                </tr>
+                <tr>
+                    <td colspan="17" style="border-left-style: none;border-left-width: 1px;border-right-style: none;border-right-width: 1px;border-right-color: #c0c0c0;"><cite>Merge matrices together based on style and color positions</cite>
+                    </td>
+                </tr>
+                <tr>
+                    <td style="background-color: #EDEDED;border-left-style: none;border-left-width: 1px;border-right-style: none;border-right-width: 1px;border-right-color: #c0c0c0;" rowspan="2">Style</td>
+                    <td style="background-color: #E2EFDA;border-left-style: none;border-left-width: 1px;border-right-style: none;border-right-width: 1px;border-right-color: #c0c0c0;" colspan="4">Color</td>
+                    <td style="border-left-style: none;border-left-width: 1px;border-right-style: none;border-right-width: 1px;border-right-color: #c0c0c0;">&#160;</td>
+                    <td style="border-left-style: none;border-left-width: 1px;border-right-style: none;border-right-width: 1px;border-right-color: #c0c0c0;">&#160;</td>
+                    <td style="border-left-style: none;border-left-width: 1px;border-right-style: none;border-right-width: 1px;border-right-color: #c0c0c0;">&#160;</td>
+                    <td style="border-left-style: none;border-left-width: 1px;border-right-style: none;border-right-width: 1px;border-right-color: #c0c0c0;">&#160;</td>
+                    <td style="border-left-style: none;border-left-width: 1px;border-right-style: none;border-right-width: 1px;border-right-color: #c0c0c0;">&#160;</td>
+                    <td style="border-left-style: none;border-left-width: 1px;border-right-style: none;border-right-width: 1px;border-right-color: #c0c0c0;">&#160;</td>
+                    <td style="border-left-style: none;border-left-width: 1px;border-right-style: none;border-right-width: 1px;border-right-color: #c0c0c0;">&#160;</td>
+                    <td style="border-left-style: none;border-left-width: 1px;border-right-style: none;border-right-width: 1px;border-right-color: #c0c0c0;">&#160;</td>
+                    <td style="border-left-style: none;border-left-width: 1px;border-right-style: none;border-right-width: 1px;border-right-color: #c0c0c0;">&#160;</td>
+                    <td style="border-left-style: none;border-left-width: 1px;border-right-style: none;border-right-width: 1px;border-right-color: #c0c0c0;">&#160;</td>
+                    <td style="border-left-style: none;border-left-width: 1px;border-right-style: none;border-right-width: 1px;border-right-color: #c0c0c0;">&#160;</td>
+                    <td style="border-left-style: none;border-left-width: 1px;border-right-style: none;border-right-width: 1px;border-right-color: #c0c0c0;">&#160;</td>
+                </tr>
+                <tr>
+                    <td style="background-color: #C6E0B4;border-left-style: none;border-left-width: 1px;border-right-style: none;border-right-width: 1px;border-right-color: #c0c0c0;">1</td>
+                    <td style="background-color: #C6E0B4;border-left-style: none;border-left-width: 1px;border-right-style: none;border-right-width: 1px;border-right-color: #c0c0c0;">2</td>
+                    <td style="background-color: #C6E0B4;border-left-style: none;border-left-width: 1px;border-right-style: none;border-right-width: 1px;border-right-color: #c0c0c0;">3</td>
+                    <td style="background-color: #C6E0B4;border-left-style: none;border-left-width: 1px;border-right-style: none;border-right-width: 1px;border-right-color: #c0c0c0;">4</td>
+                    <td style="border-left-style: none;border-left-width: 1px;border-right-style: none;border-right-width: 1px;border-right-color: #c0c0c0;">&#160;</td>
+                    <td style="border-left-style: none;border-left-width: 1px;border-right-style: none;border-right-width: 1px;border-right-color: #c0c0c0;">&#160;</td>
+                    <td style="border-left-style: none;border-left-width: 1px;border-right-style: none;border-right-width: 1px;border-right-color: #c0c0c0;">&#160;</td>
+                    <td style="border-left-style: none;border-left-width: 1px;border-right-style: none;border-right-width: 1px;border-right-color: #c0c0c0;">&#160;</td>
+                    <td style="border-left-style: none;border-left-width: 1px;border-right-style: none;border-right-width: 1px;border-right-color: #c0c0c0;">&#160;</td>
+                    <td style="border-left-style: none;border-left-width: 1px;border-right-style: none;border-right-width: 1px;border-right-color: #c0c0c0;">&#160;</td>
+                    <td style="border-left-style: none;border-left-width: 1px;border-right-style: none;border-right-width: 1px;border-right-color: #c0c0c0;">&#160;</td>
+                    <td style="border-left-style: none;border-left-width: 1px;border-right-style: none;border-right-width: 1px;border-right-color: #c0c0c0;">&#160;</td>
+                    <td style="border-left-style: none;border-left-width: 1px;border-right-style: none;border-right-width: 1px;border-right-color: #c0c0c0;">&#160;</td>
+                    <td style="border-left-style: none;border-left-width: 1px;border-right-style: none;border-right-width: 1px;border-right-color: #c0c0c0;">&#160;</td>
+                    <td style="border-left-style: none;border-left-width: 1px;border-right-style: none;border-right-width: 1px;border-right-color: #c0c0c0;">&#160;</td>
+                    <td style="border-left-style: none;border-left-width: 1px;border-right-style: none;border-right-width: 1px;border-right-color: #c0c0c0;">&#160;</td>
+                    <td>&#160;</td>
+                </tr>
+                <tr>
+                    <td style="background-color: #DBDBDB;border-left-style: none;border-left-width: 1px;border-right-style: none;border-right-width: 1px;border-right-color: #c0c0c0;">1</td>
+                    <td style="border-left-style: none;border-left-width: 1px;border-right-style: none;border-right-width: 1px;border-right-color: #c0c0c0;">ABC</td>
+                    <td style="border-left-style: none;border-left-width: 1px;border-right-style: none;border-right-width: 1px;border-right-color: #c0c0c0;">AB</td>
+                    <td style="border-left-style: none;border-left-width: 1px;border-right-style: none;border-right-width: 1px;border-right-color: #c0c0c0;">A</td>
+                    <td style="border-left-style: none;border-left-width: 1px;border-right-style: none;border-right-width: 1px;border-right-color: #c0c0c0;">A</td>
+                    <td style="border-left-style: none;border-left-width: 1px;border-right-style: none;border-right-width: 1px;border-right-color: #c0c0c0;">&#160;</td>
+                    <td style="border-left-style: none;border-left-width: 1px;border-right-style: none;border-right-width: 1px;border-right-color: #c0c0c0;">&#160;</td>
+                    <td style="border-left-style: none;border-left-width: 1px;border-right-style: none;border-right-width: 1px;border-right-color: #c0c0c0;">&#160;</td>
+                    <td style="border-left-style: none;border-left-width: 1px;border-right-style: none;border-right-width: 1px;border-right-color: #c0c0c0;">&#160;</td>
+                    <td style="border-left-style: none;border-left-width: 1px;border-right-style: none;border-right-width: 1px;border-right-color: #c0c0c0;">&#160;</td>
+                    <td style="border-left-style: none;border-left-width: 1px;border-right-style: none;border-right-width: 1px;border-right-color: #c0c0c0;">&#160;</td>
+                    <td style="border-left-style: none;border-left-width: 1px;border-right-style: none;border-right-width: 1px;border-right-color: #c0c0c0;">&#160;</td>
+                    <td style="border-left-style: none;border-left-width: 1px;border-right-style: none;border-right-width: 1px;border-right-color: #c0c0c0;">&#160;</td>
+                    <td style="border-left-style: none;border-left-width: 1px;border-right-style: none;border-right-width: 1px;border-right-color: #c0c0c0;">&#160;</td>
+                    <td style="border-left-style: none;border-left-width: 1px;border-right-style: none;border-right-width: 1px;border-right-color: #c0c0c0;">&#160;</td>
+                    <td style="border-left-style: none;border-left-width: 1px;border-right-style: none;border-right-width: 1px;border-right-color: #c0c0c0;">&#160;</td>
+                    <td style="border-left-style: none;border-left-width: 1px;border-right-style: none;border-right-width: 1px;border-right-color: #c0c0c0;">&#160;</td>
+                </tr>
+                <tr>
+                    <td style="background-color: #DBDBDB;border-left-style: none;border-left-width: 1px;border-right-style: none;border-right-width: 1px;border-right-color: #c0c0c0;">2</td>
+                    <td style="border-left-style: none;border-left-width: 1px;border-right-style: none;border-right-width: 1px;border-right-color: #c0c0c0;">ABC</td>
+                    <td style="border-left-style: none;border-left-width: 1px;border-right-style: none;border-right-width: 1px;border-right-color: #c0c0c0;">B</td>
+                    <td style="border-left-style: none;border-left-width: 1px;border-right-style: none;border-right-width: 1px;border-right-color: #c0c0c0;">&#160;</td>
+                    <td style="border-left-style: none;border-left-width: 1px;border-right-style: none;border-right-width: 1px;border-right-color: #c0c0c0;">&#160;</td>
+                    <td style="border-left-style: none;border-left-width: 1px;border-right-style: none;border-right-width: 1px;border-right-color: #c0c0c0;">&#160;</td>
+                    <td style="border-left-style: none;border-left-width: 1px;border-right-style: none;border-right-width: 1px;border-right-color: #c0c0c0;">&#160;</td>
+                    <td style="border-left-style: none;border-left-width: 1px;border-right-style: none;border-right-width: 1px;border-right-color: #c0c0c0;">&#160;</td>
+                    <td style="border-left-style: none;border-left-width: 1px;border-right-style: none;border-right-width: 1px;border-right-color: #c0c0c0;">&#160;</td>
+                    <td style="border-left-style: none;border-left-width: 1px;border-right-style: none;border-right-width: 1px;border-right-color: #c0c0c0;">&#160;</td>
+                    <td style="border-left-style: none;border-left-width: 1px;border-right-style: none;border-right-width: 1px;border-right-color: #c0c0c0;">&#160;</td>
+                    <td style="border-left-style: none;border-left-width: 1px;border-right-style: none;border-right-width: 1px;border-right-color: #c0c0c0;">&#160;</td>
+                    <td style="border-left-style: none;border-left-width: 1px;border-right-style: none;border-right-width: 1px;border-right-color: #c0c0c0;">&#160;</td>
+                    <td style="border-left-style: none;border-left-width: 1px;border-right-style: none;border-right-width: 1px;border-right-color: #c0c0c0;">&#160;</td>
+                    <td style="border-left-style: none;border-left-width: 1px;border-right-style: none;border-right-width: 1px;border-right-color: #c0c0c0;">&#160;</td>
+                    <td style="border-left-style: none;border-left-width: 1px;border-right-style: none;border-right-width: 1px;border-right-color: #c0c0c0;">&#160;</td>
+                    <td style="border-left-style: none;border-left-width: 1px;border-right-style: none;border-right-width: 1px;border-right-color: #c0c0c0;">&#160;</td>
+                </tr>
+                <tr>
+                    <td style="background-color: #DBDBDB;border-left-style: none;border-left-width: 1px;border-right-style: none;border-right-width: 1px;border-right-color: #c0c0c0;">3</td>
+                    <td style="border-left-style: none;border-left-width: 1px;border-right-style: none;border-right-width: 1px;border-right-color: #c0c0c0;">C</td>
+                    <td style="border-left-style: none;border-left-width: 1px;border-right-style: none;border-right-width: 1px;border-right-color: #c0c0c0;">&#160;</td>
+                    <td style="border-left-style: none;border-left-width: 1px;border-right-style: none;border-right-width: 1px;border-right-color: #c0c0c0;">&#160;</td>
+                    <td style="border-left-style: none;border-left-width: 1px;border-right-style: none;border-right-width: 1px;border-right-color: #c0c0c0;">&#160;</td>
+                    <td style="border-left-style: none;border-left-width: 1px;border-right-style: none;border-right-width: 1px;border-right-color: #c0c0c0;">&#160;</td>
+                    <td style="border-left-style: none;border-left-width: 1px;border-right-style: none;border-right-width: 1px;border-right-color: #c0c0c0;">&#160;</td>
+                    <td style="border-left-style: none;border-left-width: 1px;border-right-style: none;border-right-width: 1px;border-right-color: #c0c0c0;">&#160;</td>
+                    <td style="border-left-style: none;border-left-width: 1px;border-right-style: none;border-right-width: 1px;border-right-color: #c0c0c0;">&#160;</td>
+                    <td style="border-left-style: none;border-left-width: 1px;border-right-style: none;border-right-width: 1px;border-right-color: #c0c0c0;">&#160;</td>
+                    <td style="border-left-style: none;border-left-width: 1px;border-right-style: none;border-right-width: 1px;border-right-color: #c0c0c0;">&#160;</td>
+                    <td style="border-left-style: none;border-left-width: 1px;border-right-style: none;border-right-width: 1px;border-right-color: #c0c0c0;">&#160;</td>
+                    <td style="border-left-style: none;border-left-width: 1px;border-right-style: none;border-right-width: 1px;border-right-color: #c0c0c0;">&#160;</td>
+                    <td style="border-left-style: none;border-left-width: 1px;border-right-style: none;border-right-width: 1px;border-right-color: #c0c0c0;">&#160;</td>
+                    <td style="border-left-style: none;border-left-width: 1px;border-right-style: none;border-right-width: 1px;border-right-color: #c0c0c0;">&#160;</td>
+                    <td style="border-left-style: none;border-left-width: 1px;border-right-style: none;border-right-width: 1px;border-right-color: #c0c0c0;">&#160;</td>
+                    <td style="border-left-style: none;border-left-width: 1px;border-right-style: none;border-right-width: 1px;border-right-color: #c0c0c0;">&#160;</td>
+                </tr>
+                <tr>
+                    <td style="background-color: #DBDBDB;border-left-style: none;border-left-width: 1px;border-right-style: none;border-right-width: 1px;border-right-color: #c0c0c0;">4</td>
+                    <td style="border-left-style: none;border-left-width: 1px;border-right-style: none;border-right-width: 1px;border-right-color: #c0c0c0;">&#160;</td>
+                    <td style="border-left-style: none;border-left-width: 1px;border-right-style: none;border-right-width: 1px;border-right-color: #c0c0c0;">&#160;</td>
+                    <td style="border-left-style: none;border-left-width: 1px;border-right-style: none;border-right-width: 1px;border-right-color: #c0c0c0;">&#160;</td>
+                    <td style="border-left-style: none;border-left-width: 1px;border-right-style: none;border-right-width: 1px;border-right-color: #c0c0c0;">&#160;</td>
+                    <td style="border-left-style: none;border-left-width: 1px;border-right-style: none;border-right-width: 1px;border-right-color: #c0c0c0;">&#160;</td>
+                    <td style="border-left-style: none;border-left-width: 1px;border-right-style: none;border-right-width: 1px;border-right-color: #c0c0c0;">&#160;</td>
+                    <td style="border-left-style: none;border-left-width: 1px;border-right-style: none;border-right-width: 1px;border-right-color: #c0c0c0;">&#160;</td>
+                    <td style="border-left-style: none;border-left-width: 1px;border-right-style: none;border-right-width: 1px;border-right-color: #c0c0c0;">&#160;</td>
+                    <td style="border-left-style: none;border-left-width: 1px;border-right-style: none;border-right-width: 1px;border-right-color: #c0c0c0;">&#160;</td>
+                    <td style="border-left-style: none;border-left-width: 1px;border-right-style: none;border-right-width: 1px;border-right-color: #c0c0c0;">&#160;</td>
+                    <td style="border-left-style: none;border-left-width: 1px;border-right-style: none;border-right-width: 1px;border-right-color: #c0c0c0;">&#160;</td>
+                    <td style="border-left-style: none;border-left-width: 1px;border-right-style: none;border-right-width: 1px;border-right-color: #c0c0c0;">&#160;</td>
+                    <td style="border-left-style: none;border-left-width: 1px;border-right-style: none;border-right-width: 1px;border-right-color: #c0c0c0;">&#160;</td>
+                    <td style="border-left-style: none;border-left-width: 1px;border-right-style: none;border-right-width: 1px;border-right-color: #c0c0c0;">&#160;</td>
+                    <td style="border-left-style: none;border-left-width: 1px;border-right-style: none;border-right-width: 1px;border-right-color: #c0c0c0;">&#160;</td>
+                    <td style="border-left-style: none;border-left-width: 1px;border-right-style: none;border-right-width: 1px;border-right-color: #c0c0c0;">&#160;</td>
+                </tr>
+            </tbody>
+        </table>
+        <p>&#160;</p>
+        <h2>A positional merge placing new choices where there is no matrix</h2>
+        <table style="width: 100%;border-left-style: solid;border-left-width: 0px;margin-left: auto;margin-right: auto;">
+            <col style="width: 5.8%;" />
+            <col style="width: 5.8%;" />
+            <col style="width: 5.8%;" />
+            <col style="width: 5.8%;" />
+            <col style="width: 5.8%;" />
+            <col style="width: 5.8%;" />
+            <col style="width: 5.8%;" />
+            <col style="width: 5.8%;" />
+            <col style="width: 5.8%;" />
+            <col style="width: 5.8%;" />
+            <col style="width: 5.8%;" />
+            <col style="width: 5.8%;" />
+            <col style="width: 5.8%;" />
+            <col style="width: 5.8%;" />
+            <col style="width: 73px;" />
+            <col style="width: 5.8%;" />
+            <col style="width: 5.8%;" />
+            <tbody>
+                <tr>
+                    <td style="background-color: #DDEBF7;border-left-style: none;border-left-width: 1px;border-right-style: none;border-right-width: 1px;border-right-color: #c0c0c0;" colspan="17">Start - Marginal Return Matrix, Recommended Count, Target Count Per Cluster</td>
+                </tr>
+                <tr>
+                    <td colspan="5" style="border-left-style: none;border-left-width: 1px;border-right-style: none;border-right-width: 1px;border-right-color: #c0c0c0;"><span class="Emphasis">Cluster A</span>
+                    </td>
+                    <td style="border-left-style: none;border-left-width: 1px;border-right-style: none;border-right-width: 1px;border-right-color: #c0c0c0;">&#160;</td>
+                    <td colspan="5" style="border-left-style: none;border-left-width: 1px;border-right-style: none;border-right-width: 1px;border-right-color: #c0c0c0;"><span class="Emphasis">Cluster B</span>
+                    </td>
+                    <td style="border-left-style: none;border-left-width: 1px;border-right-style: none;border-right-width: 1px;border-right-color: #c0c0c0;">&#160;</td>
+                    <td colspan="5" style="border-left-style: none;border-left-width: 1px;border-right-style: none;border-right-width: 1px;border-right-color: #c0c0c0;"><span class="Emphasis">Cluster C</span>
+                    </td>
+                </tr>
+                <tr>
+                    <td style="border-left-style: none;border-left-width: 1px;border-right-style: none;border-right-width: 1px;border-right-color: #c0c0c0;" colspan="3">Choices in history:</td>
+                    <td>&#160;</td>
+                    <td style="text-align: center;">2</td>
+                    <td style="border-left-style: none;border-left-width: 1px;border-right-style: none;border-right-width: 1px;border-right-color: #c0c0c0;">&#160;</td>
+                    <td style="border-left-style: none;border-left-width: 1px;border-right-style: none;border-right-width: 1px;border-right-color: #c0c0c0;" colspan="3">Choices in history:</td>
+                    <td>&#160;</td>
+                    <td style="text-align: center;">2</td>
+                    <td style="border-left-style: none;border-left-width: 1px;border-right-style: none;border-right-width: 1px;border-right-color: #c0c0c0;">&#160;</td>
+                    <td style="border-left-style: none;border-left-width: 1px;border-right-style: none;border-right-width: 1px;border-right-color: #c0c0c0;" colspan="3">Choices in history:</td>
+                    <td>&#160;</td>
+                    <td style="text-align: center;">0</td>
+                </tr>
+                <tr>
+                    <td style="border-left-style: none;border-left-width: 1px;border-right-style: none;border-right-width: 1px;border-right-color: #c0c0c0;" colspan="3">Styles in history:</td>
+                    <td>&#160;</td>
+                    <td style="text-align: center;">2</td>
+                    <td style="border-left-style: none;border-left-width: 1px;border-right-style: none;border-right-width: 1px;border-right-color: #c0c0c0;">&#160;</td>
+                    <td style="border-left-style: none;border-left-width: 1px;border-right-style: none;border-right-width: 1px;border-right-color: #c0c0c0;" colspan="3">Styles in history:</td>
+                    <td>&#160;</td>
+                    <td style="text-align: center;">1</td>
+                    <td style="border-left-style: none;border-left-width: 1px;border-right-style: none;border-right-width: 1px;border-right-color: #c0c0c0;">&#160;</td>
+                    <td style="border-left-style: none;border-left-width: 1px;border-right-style: none;border-right-width: 1px;border-right-color: #c0c0c0;" colspan="3">Styles in history:</td>
+                    <td>&#160;</td>
+                    <td style="text-align: center;">0</td>
+                </tr>
+                <tr>
+                    <td style="border-left-style: none;border-left-width: 1px;border-right-style: none;border-right-width: 1px;border-right-color: #c0c0c0;" colspan="3">Recommended choices:</td>
+                    <td>&#160;</td>
+                    <td style="text-align: center;">5</td>
+                    <td style="border-left-style: none;border-left-width: 1px;border-right-style: none;border-right-width: 1px;border-right-color: #c0c0c0;">&#160;</td>
+                    <td style="border-left-style: none;border-left-width: 1px;border-right-style: none;border-right-width: 1px;border-right-color: #c0c0c0;" colspan="3">Recommended choices:</td>
+                    <td>&#160;</td>
+                    <td style="text-align: center;">2</td>
+                    <td style="border-left-style: none;border-left-width: 1px;border-right-style: none;border-right-width: 1px;border-right-color: #c0c0c0;">&#160;</td>
+                    <td style="border-left-style: none;border-left-width: 1px;border-right-style: none;border-right-width: 1px;border-right-color: #c0c0c0;" colspan="3">Recommended choices:</td>
+                    <td>&#160;</td>
+                    <td style="text-align: center;">0</td>
+                </tr>
+                <tr>
+                    <td style="border-left-style: none;border-left-width: 1px;border-right-style: none;border-right-width: 1px;border-right-color: #c0c0c0;" colspan="3">User Target choices:</td>
+                    <td>&#160;</td>
+                    <td style="text-align: center;">8</td>
+                    <td style="border-left-style: none;border-left-width: 1px;border-right-style: none;border-right-width: 1px;border-right-color: #c0c0c0;">&#160;</td>
+                    <td style="border-left-style: none;border-left-width: 1px;border-right-style: none;border-right-width: 1px;border-right-color: #c0c0c0;" colspan="3">User Target choices:</td>
+                    <td>&#160;</td>
+                    <td style="text-align: center;">8</td>
+                    <td style="border-left-style: none;border-left-width: 1px;border-right-style: none;border-right-width: 1px;border-right-color: #c0c0c0;">&#160;</td>
+                    <td style="border-left-style: none;border-left-width: 1px;border-right-style: none;border-right-width: 1px;border-right-color: #c0c0c0;" colspan="3">User Target choices:</td>
+                    <td>&#160;</td>
+                    <td style="text-align: center;">8</td>
+                </tr>
+                <tr>
+                    <td style="background-color: #EDEDED;border-left-style: none;border-left-width: 1px;border-right-style: none;border-right-width: 1px;border-right-color: #c0c0c0;" rowspan="2">Style</td>
+                    <td style="background-color: #FFE699;border-left-style: none;border-left-width: 1px;border-right-style: none;border-right-width: 1px;border-right-color: #c0c0c0;" colspan="4">Color</td>
+                    <td style="border-left-style: none;border-left-width: 1px;border-right-style: none;border-right-width: 1px;border-right-color: #c0c0c0;">&#160;</td>
+                    <td style="background-color: #EDEDED;border-left-style: none;border-left-width: 1px;border-right-style: none;border-right-width: 1px;border-right-color: #c0c0c0;" rowspan="2">Style</td>
+                    <td style="background-color: #E2EFDA;border-left-style: none;border-left-width: 1px;border-right-style: none;border-right-width: 1px;border-right-color: #c0c0c0;" colspan="4">Color</td>
+                    <td style="border-left-style: none;border-left-width: 1px;border-right-style: none;border-right-width: 1px;border-right-color: #c0c0c0;">&#160;</td>
+                    <td style="background-color: #EDEDED;border-left-style: none;border-left-width: 1px;border-right-style: none;border-right-width: 1px;border-right-color: #c0c0c0;" rowspan="2">Style</td>
+                    <td style="background-color: #E2EFDA;border-left-style: none;border-left-width: 1px;border-right-style: none;border-right-width: 1px;border-right-color: #c0c0c0;" colspan="4">Color</td>
+                </tr>
+                <tr>
+                    <td style="background-color: #FFD966;border-left-style: none;border-left-width: 1px;border-right-style: none;border-right-width: 1px;border-right-color: #c0c0c0;">1</td>
+                    <td style="background-color: #FFD966;border-left-style: none;border-left-width: 1px;border-right-style: none;border-right-width: 1px;border-right-color: #c0c0c0;">2</td>
+                    <td style="background-color: #FFD966;border-left-style: none;border-left-width: 1px;border-right-style: none;border-right-width: 1px;border-right-color: #c0c0c0;">3</td>
+                    <td style="background-color: #FFD966;border-left-style: none;border-left-width: 1px;border-right-style: none;border-right-width: 1px;border-right-color: #c0c0c0;">4</td>
+                    <td style="border-left-style: none;border-left-width: 1px;border-right-style: none;border-right-width: 1px;border-right-color: #c0c0c0;">&#160;</td>
+                    <td style="background-color: #FFD966;border-left-style: none;border-left-width: 1px;border-right-style: none;border-right-width: 1px;border-right-color: #c0c0c0;">1</td>
+                    <td style="background-color: #FFD966;border-left-style: none;border-left-width: 1px;border-right-style: none;border-right-width: 1px;border-right-color: #c0c0c0;">2</td>
+                    <td style="background-color: #FFD966;border-left-style: none;border-left-width: 1px;border-right-style: none;border-right-width: 1px;border-right-color: #c0c0c0;">3</td>
+                    <td style="background-color: #FFD966;border-left-style: none;border-left-width: 1px;border-right-style: none;border-right-width: 1px;border-right-color: #c0c0c0;">4</td>
+                    <td style="border-left-style: none;border-left-width: 1px;border-right-style: none;border-right-width: 1px;border-right-color: #c0c0c0;">&#160;</td>
+                    <td style="background-color: #FFD966;border-left-style: none;border-left-width: 1px;border-right-style: none;border-right-width: 1px;border-right-color: #c0c0c0;">1</td>
+                    <td style="background-color: #FFD966;border-left-style: none;border-left-width: 1px;border-right-style: none;border-right-width: 1px;border-right-color: #c0c0c0;">2</td>
+                    <td style="background-color: #FFD966;border-left-style: none;border-left-width: 1px;border-right-style: none;border-right-width: 1px;border-right-color: #c0c0c0;">3</td>
+                    <td style="background-color: #FFD966;border-left-style: none;border-left-width: 1px;border-right-style: none;border-right-width: 1px;border-right-color: #c0c0c0;">4</td>
+                </tr>
+                <tr>
+                    <td style="background-color: #DBDBDB;border-left-style: none;border-left-width: 1px;border-right-style: none;border-right-width: 1px;border-right-color: #c0c0c0;">1</td>
+                    <td style="background-color: #C6E0B4;border-left-style: none;border-left-width: 1px;border-right-style: none;border-right-width: 1px;border-right-color: #c0c0c0;">1.00</td>
+                    <td style="background-color: #C6E0B4;border-left-style: none;border-left-width: 1px;border-right-style: none;border-right-width: 1px;border-right-color: #c0c0c0;">0.92</td>
+                    <td style="background-color: #C6E0B4;border-left-style: none;border-left-width: 1px;border-right-style: none;border-right-width: 1px;border-right-color: #c0c0c0;">0.87</td>
+                    <td style="background-color: #BDD7EE;border-left-style: none;border-left-width: 1px;border-right-style: none;border-right-width: 1px;border-right-color: #c0c0c0;">0.69</td>
+                    <td style="border-left-style: none;border-left-width: 1px;border-right-style: none;border-right-width: 1px;border-right-color: #c0c0c0;">&#160;</td>
+                    <td style="background-color: #DBDBDB;border-left-style: none;border-left-width: 1px;border-right-style: none;border-right-width: 1px;border-right-color: #c0c0c0;">1</td>
+                    <td style="background-color: #C6E0B4;border-left-style: none;border-left-width: 1px;border-right-style: none;border-right-width: 1px;border-right-color: #c0c0c0;">1.00</td>
+                    <td style="border-left-style: none;border-left-width: 1px;border-right-style: none;border-right-width: 1px;border-right-color: #c0c0c0;">&#160;</td>
+                    <td style="border-left-style: none;border-left-width: 1px;border-right-style: none;border-right-width: 1px;border-right-color: #c0c0c0;">&#160;</td>
+                    <td style="border-left-style: none;border-left-width: 1px;border-right-style: none;border-right-width: 1px;border-right-color: #c0c0c0;">&#160;</td>
+                    <td style="border-left-style: none;border-left-width: 1px;border-right-style: none;border-right-width: 1px;border-right-color: #c0c0c0;">&#160;</td>
+                    <td style="background-color: #DBDBDB;border-left-style: none;border-left-width: 1px;border-right-style: none;border-right-width: 1px;border-right-color: #c0c0c0;">1</td>
+                    <td style="border-left-style: none;border-left-width: 1px;border-right-style: none;border-right-width: 1px;border-right-color: #c0c0c0;">&#160;</td>
+                    <td style="border-left-style: none;border-left-width: 1px;border-right-style: none;border-right-width: 1px;border-right-color: #c0c0c0;">&#160;</td>
+                    <td style="border-left-style: none;border-left-width: 1px;border-right-style: none;border-right-width: 1px;border-right-color: #c0c0c0;">&#160;</td>
+                    <td style="border-left-style: none;border-left-width: 1px;border-right-style: none;border-right-width: 1px;border-right-color: #c0c0c0;">&#160;</td>
+                </tr>
+                <tr>
+                    <td style="background-color: #DBDBDB;border-left-style: none;border-left-width: 1px;border-right-style: none;border-right-width: 1px;border-right-color: #c0c0c0;">2</td>
+                    <td style="background-color: #C6E0B4;border-left-style: none;border-left-width: 1px;border-right-style: none;border-right-width: 1px;border-right-color: #c0c0c0;">0.86</td>
+                    <td style="background-color: #C6E0B4;border-left-style: none;border-left-width: 1px;border-right-style: none;border-right-width: 1px;border-right-color: #c0c0c0;">0.76</td>
+                    <td style="background-color: #BDD7EE;border-left-style: none;border-left-width: 1px;border-right-style: none;border-right-width: 1px;border-right-color: #c0c0c0;">0.72</td>
+                    <td style="border-left-style: none;border-left-width: 1px;border-right-style: none;border-right-width: 1px;border-right-color: #c0c0c0;">0.60</td>
+                    <td style="border-left-style: none;border-left-width: 1px;border-right-style: none;border-right-width: 1px;border-right-color: #c0c0c0;">&#160;</td>
+                    <td style="background-color: #DBDBDB;border-left-style: none;border-left-width: 1px;border-right-style: none;border-right-width: 1px;border-right-color: #c0c0c0;">2</td>
+                    <td style="background-color: #C6E0B4;border-left-style: none;border-left-width: 1px;border-right-style: none;border-right-width: 1px;border-right-color: #c0c0c0;">0.89</td>
+                    <td style="border-left-style: none;border-left-width: 1px;border-right-style: none;border-right-width: 1px;border-right-color: #c0c0c0;">&#160;</td>
+                    <td style="border-left-style: none;border-left-width: 1px;border-right-style: none;border-right-width: 1px;border-right-color: #c0c0c0;">&#160;</td>
+                    <td style="border-left-style: none;border-left-width: 1px;border-right-style: none;border-right-width: 1px;border-right-color: #c0c0c0;">&#160;</td>
+                    <td style="border-left-style: none;border-left-width: 1px;border-right-style: none;border-right-width: 1px;border-right-color: #c0c0c0;">&#160;</td>
+                    <td style="background-color: #DBDBDB;border-left-style: none;border-left-width: 1px;border-right-style: none;border-right-width: 1px;border-right-color: #c0c0c0;">2</td>
+                    <td style="border-left-style: none;border-left-width: 1px;border-right-style: none;border-right-width: 1px;border-right-color: #c0c0c0;">&#160;</td>
+                    <td style="border-left-style: none;border-left-width: 1px;border-right-style: none;border-right-width: 1px;border-right-color: #c0c0c0;">&#160;</td>
+                    <td style="border-left-style: none;border-left-width: 1px;border-right-style: none;border-right-width: 1px;border-right-color: #c0c0c0;">&#160;</td>
+                    <td style="border-left-style: none;border-left-width: 1px;border-right-style: none;border-right-width: 1px;border-right-color: #c0c0c0;">&#160;</td>
+                </tr>
+                <tr>
+                    <td style="background-color: #DBDBDB;border-left-style: none;border-left-width: 1px;border-right-style: none;border-right-width: 1px;border-right-color: #c0c0c0;">3</td>
+                    <td style="background-color: #BDD7EE;border-left-style: none;border-left-width: 1px;border-right-style: none;border-right-width: 1px;border-right-color: #c0c0c0;">0.65</td>
+                    <td style="border-left-style: none;border-left-width: 1px;border-right-style: none;border-right-width: 1px;border-right-color: #c0c0c0;">0.62</td>
+                    <td style="border-left-style: none;border-left-width: 1px;border-right-style: none;border-right-width: 1px;border-right-color: #c0c0c0;">0.52</td>
+                    <td style="border-left-style: none;border-left-width: 1px;border-right-style: none;border-right-width: 1px;border-right-color: #c0c0c0;">0.48</td>
+                    <td style="border-left-style: none;border-left-width: 1px;border-right-style: none;border-right-width: 1px;border-right-color: #c0c0c0;">&#160;</td>
+                    <td style="background-color: #DBDBDB;border-left-style: none;border-left-width: 1px;border-right-style: none;border-right-width: 1px;border-right-color: #c0c0c0;">3</td>
+                    <td style="background-color: #BDD7EE;border-left-style: none;border-left-width: 1px;border-right-style: none;border-right-width: 1px;border-right-color: #c0c0c0;">0.82</td>
+                    <td style="border-left-style: none;border-left-width: 1px;border-right-style: none;border-right-width: 1px;border-right-color: #c0c0c0;">&#160;</td>
+                    <td style="border-left-style: none;border-left-width: 1px;border-right-style: none;border-right-width: 1px;border-right-color: #c0c0c0;">&#160;</td>
+                    <td style="border-left-style: none;border-left-width: 1px;border-right-style: none;border-right-width: 1px;border-right-color: #c0c0c0;">&#160;</td>
+                    <td style="border-left-style: none;border-left-width: 1px;border-right-style: none;border-right-width: 1px;border-right-color: #c0c0c0;">&#160;</td>
+                    <td style="background-color: #DBDBDB;border-left-style: none;border-left-width: 1px;border-right-style: none;border-right-width: 1px;border-right-color: #c0c0c0;">3</td>
+                    <td style="border-left-style: none;border-left-width: 1px;border-right-style: none;border-right-width: 1px;border-right-color: #c0c0c0;">&#160;</td>
+                    <td style="border-left-style: none;border-left-width: 1px;border-right-style: none;border-right-width: 1px;border-right-color: #c0c0c0;">&#160;</td>
+                    <td style="border-left-style: none;border-left-width: 1px;border-right-style: none;border-right-width: 1px;border-right-color: #c0c0c0;">&#160;</td>
+                    <td style="border-left-style: none;border-left-width: 1px;border-right-style: none;border-right-width: 1px;border-right-color: #c0c0c0;">&#160;</td>
+                </tr>
+                <tr>
+                    <td style="background-color: #DBDBDB;border-left-style: none;border-left-width: 1px;border-right-style: none;border-right-width: 1px;border-right-color: #c0c0c0;">4</td>
+                    <td style="border-left-style: none;border-left-width: 1px;border-right-style: none;border-right-width: 1px;border-right-color: #c0c0c0;">0.58</td>
+                    <td style="border-left-style: none;border-left-width: 1px;border-right-style: none;border-right-width: 1px;border-right-color: #c0c0c0;">0.47</td>
+                    <td style="border-left-style: none;border-left-width: 1px;border-right-style: none;border-right-width: 1px;border-right-color: #c0c0c0;">0.43</td>
+                    <td style="border-left-style: none;border-left-width: 1px;border-right-style: none;border-right-width: 1px;border-right-color: #c0c0c0;">0.39</td>
+                    <td style="border-left-style: none;border-left-width: 1px;border-right-style: none;border-right-width: 1px;border-right-color: #c0c0c0;">&#160;</td>
+                    <td style="background-color: #DBDBDB;border-left-style: none;border-left-width: 1px;border-right-style: none;border-right-width: 1px;border-right-color: #c0c0c0;">4</td>
+                    <td style="background-color: #BDD7EE;border-left-style: none;border-left-width: 1px;border-right-style: none;border-right-width: 1px;border-right-color: #c0c0c0;">0.75</td>
+                    <td style="border-left-style: none;border-left-width: 1px;border-right-style: none;border-right-width: 1px;border-right-color: #c0c0c0;">&#160;</td>
+                    <td style="border-left-style: none;border-left-width: 1px;border-right-style: none;border-right-width: 1px;border-right-color: #c0c0c0;">&#160;</td>
+                    <td style="border-left-style: none;border-left-width: 1px;border-right-style: none;border-right-width: 1px;border-right-color: #c0c0c0;">&#160;</td>
+                    <td style="border-left-style: none;border-left-width: 1px;border-right-style: none;border-right-width: 1px;border-right-color: #c0c0c0;">&#160;</td>
+                    <td style="background-color: #DBDBDB;border-left-style: none;border-left-width: 1px;border-right-style: none;border-right-width: 1px;border-right-color: #c0c0c0;">4</td>
+                    <td style="border-left-style: none;border-left-width: 1px;border-right-style: none;border-right-width: 1px;border-right-color: #c0c0c0;">&#160;</td>
+                    <td style="border-left-style: none;border-left-width: 1px;border-right-style: none;border-right-width: 1px;border-right-color: #c0c0c0;">&#160;</td>
+                    <td style="border-left-style: none;border-left-width: 1px;border-right-style: none;border-right-width: 1px;border-right-color: #c0c0c0;">&#160;</td>
+                    <td style="border-left-style: none;border-left-width: 1px;border-right-style: none;border-right-width: 1px;border-right-color: #c0c0c0;">&#160;</td>
+                </tr>
+                <tr>
+                    <td style="border-left-style: none;border-left-width: 1px;border-right-style: none;border-right-width: 1px;border-right-color: #c0c0c0;">&#160;</td>
+                    <td style="border-left-style: none;border-left-width: 1px;border-right-style: none;border-right-width: 1px;border-right-color: #c0c0c0;">&#160;</td>
+                    <td style="border-left-style: none;border-left-width: 1px;border-right-style: none;border-right-width: 1px;border-right-color: #c0c0c0;">&#160;</td>
+                    <td style="border-left-style: none;border-left-width: 1px;border-right-style: none;border-right-width: 1px;border-right-color: #c0c0c0;">&#160;</td>
+                    <td style="border-left-style: none;border-left-width: 1px;border-right-style: none;border-right-width: 1px;border-right-color: #c0c0c0;">&#160;</td>
+                    <td style="border-left-style: none;border-left-width: 1px;border-right-style: none;border-right-width: 1px;border-right-color: #c0c0c0;">&#160;</td>
+                    <td style="border-left-style: none;border-left-width: 1px;border-right-style: none;border-right-width: 1px;border-right-color: #c0c0c0;">&#160;</td>
+                    <td style="border-left-style: none;border-left-width: 1px;border-right-style: none;border-right-width: 1px;border-right-color: #c0c0c0;">&#160;</td>
+                    <td style="border-left-style: none;border-left-width: 1px;border-right-style: none;border-right-width: 1px;border-right-color: #c0c0c0;">&#160;</td>
+                    <td style="border-left-style: none;border-left-width: 1px;border-right-style: none;border-right-width: 1px;border-right-color: #c0c0c0;">&#160;</td>
+                    <td style="border-left-style: none;border-left-width: 1px;border-right-style: none;border-right-width: 1px;border-right-color: #c0c0c0;">&#160;</td>
+                    <td style="border-left-style: none;border-left-width: 1px;border-right-style: none;border-right-width: 1px;border-right-color: #c0c0c0;">&#160;</td>
+                    <td style="border-left-style: none;border-left-width: 1px;border-right-style: none;border-right-width: 1px;border-right-color: #c0c0c0;">&#160;</td>
+                    <td style="border-left-style: none;border-left-width: 1px;border-right-style: none;border-right-width: 1px;border-right-color: #c0c0c0;">&#160;</td>
+                    <td style="border-left-style: none;border-left-width: 1px;border-right-style: none;border-right-width: 1px;border-right-color: #c0c0c0;">&#160;</td>
+                    <td style="border-left-style: none;border-left-width: 1px;border-right-style: none;border-right-width: 1px;border-right-color: #c0c0c0;">&#160;</td>
+                    <td style="border-left-style: none;border-left-width: 1px;border-right-style: none;border-right-width: 1px;border-right-color: #c0c0c0;">&#160;</td>
+                </tr>
+                <tr>
+                    <td style="background-color: #DDEBF7;border-left-style: none;border-left-width: 1px;border-right-style: none;border-right-width: 1px;border-right-color: #c0c0c0;" colspan="17">1) Perform positional merge on existing matrices</td>
+                </tr>
+                <tr>
+                    <td colspan="17" style="border-left-style: none;border-left-width: 1px;border-right-style: none;border-right-width: 1px;border-right-color: #c0c0c0;"><cite>Merge matrices together based on style and color positions</cite>
+                    </td>
+                </tr>
+                <tr>
+                    <td style="background-color: #EDEDED;border-left-style: none;border-left-width: 1px;border-right-style: none;border-right-width: 1px;border-right-color: #c0c0c0;" rowspan="2">Style</td>
+                    <td style="background-color: #FFE699;border-left-style: none;border-left-width: 1px;border-right-style: none;border-right-width: 1px;border-right-color: #c0c0c0;" colspan="4">Color</td>
+                    <td style="border-left-style: none;border-left-width: 1px;border-right-style: none;border-right-width: 1px;border-right-color: #c0c0c0;">&#160;</td>
+                    <td style="border-left-style: none;border-left-width: 1px;border-right-style: none;border-right-width: 1px;border-right-color: #c0c0c0;">&#160;</td>
+                    <td style="border-left-style: none;border-left-width: 1px;border-right-style: none;border-right-width: 1px;border-right-color: #c0c0c0;">&#160;</td>
+                    <td style="border-left-style: none;border-left-width: 1px;border-right-style: none;border-right-width: 1px;border-right-color: #c0c0c0;">&#160;</td>
+                    <td style="border-left-style: none;border-left-width: 1px;border-right-style: none;border-right-width: 1px;border-right-color: #c0c0c0;">&#160;</td>
+                    <td style="border-left-style: none;border-left-width: 1px;border-right-style: none;border-right-width: 1px;border-right-color: #c0c0c0;">&#160;</td>
+                    <td style="border-left-style: none;border-left-width: 1px;border-right-style: none;border-right-width: 1px;border-right-color: #c0c0c0;">&#160;</td>
+                    <td style="border-left-style: none;border-left-width: 1px;border-right-style: none;border-right-width: 1px;border-right-color: #c0c0c0;">&#160;</td>
+                    <td style="border-left-style: none;border-left-width: 1px;border-right-style: none;border-right-width: 1px;border-right-color: #c0c0c0;">&#160;</td>
+                    <td style="border-left-style: none;border-left-width: 1px;border-right-style: none;border-right-width: 1px;border-right-color: #c0c0c0;">&#160;</td>
+                    <td style="border-left-style: none;border-left-width: 1px;border-right-style: none;border-right-width: 1px;border-right-color: #c0c0c0;">&#160;</td>
+                    <td style="border-left-style: none;border-left-width: 1px;border-right-style: none;border-right-width: 1px;border-right-color: #c0c0c0;">&#160;</td>
+                </tr>
+                <tr>
+                    <td style="background-color: #FFD966;border-left-style: none;border-left-width: 1px;border-right-style: none;border-right-width: 1px;border-right-color: #c0c0c0;">1</td>
+                    <td style="background-color: #FFD966;border-left-style: none;border-left-width: 1px;border-right-style: none;border-right-width: 1px;border-right-color: #c0c0c0;">2</td>
+                    <td style="background-color: #FFD966;border-left-style: none;border-left-width: 1px;border-right-style: none;border-right-width: 1px;border-right-color: #c0c0c0;">3</td>
+                    <td style="background-color: #FFD966;border-left-style: none;border-left-width: 1px;border-right-style: none;border-right-width: 1px;border-right-color: #c0c0c0;">4</td>
+                    <td style="border-left-style: none;border-left-width: 1px;border-right-style: none;border-right-width: 1px;border-right-color: #c0c0c0;">&#160;</td>
+                    <td style="border-left-style: none;border-left-width: 1px;border-right-style: none;border-right-width: 1px;border-right-color: #c0c0c0;">&#160;</td>
+                    <td style="border-left-style: none;border-left-width: 1px;border-right-style: none;border-right-width: 1px;border-right-color: #c0c0c0;">&#160;</td>
+                    <td style="border-left-style: none;border-left-width: 1px;border-right-style: none;border-right-width: 1px;border-right-color: #c0c0c0;">&#160;</td>
+                    <td style="border-left-style: none;border-left-width: 1px;border-right-style: none;border-right-width: 1px;border-right-color: #c0c0c0;">&#160;</td>
+                    <td style="border-left-style: none;border-left-width: 1px;border-right-style: none;border-right-width: 1px;border-right-color: #c0c0c0;">&#160;</td>
+                    <td style="border-left-style: none;border-left-width: 1px;border-right-style: none;border-right-width: 1px;border-right-color: #c0c0c0;">&#160;</td>
+                    <td style="border-left-style: none;border-left-width: 1px;border-right-style: none;border-right-width: 1px;border-right-color: #c0c0c0;">&#160;</td>
+                    <td style="border-left-style: none;border-left-width: 1px;border-right-style: none;border-right-width: 1px;border-right-color: #c0c0c0;">&#160;</td>
+                    <td style="border-left-style: none;border-left-width: 1px;border-right-style: none;border-right-width: 1px;border-right-color: #c0c0c0;">&#160;</td>
+                    <td style="border-left-style: none;border-left-width: 1px;border-right-style: none;border-right-width: 1px;border-right-color: #c0c0c0;">&#160;</td>
+                    <td style="border-left-style: none;border-left-width: 1px;border-right-style: none;border-right-width: 1px;border-right-color: #c0c0c0;">&#160;</td>
+                    <td>&#160;</td>
+                </tr>
+                <tr>
+                    <td style="background-color: #DBDBDB;border-left-style: none;border-left-width: 1px;border-right-style: none;border-right-width: 1px;border-right-color: #c0c0c0;">1</td>
+                    <td style="border-left-style: none;border-left-width: 1px;border-right-style: none;border-right-width: 1px;border-right-color: #c0c0c0;">AB</td>
+                    <td style="border-left-style: none;border-left-width: 1px;border-right-style: none;border-right-width: 1px;border-right-color: #c0c0c0;">A</td>
+                    <td style="border-left-style: none;border-left-width: 1px;border-right-style: none;border-right-width: 1px;border-right-color: #c0c0c0;">A</td>
+                    <td style="border-left-style: none;border-left-width: 1px;border-right-style: none;border-right-width: 1px;border-right-color: #c0c0c0;">A</td>
+                    <td style="border-left-style: none;border-left-width: 1px;border-right-style: none;border-right-width: 1px;border-right-color: #c0c0c0;">&#160;</td>
+                    <td style="border-left-style: none;border-left-width: 1px;border-right-style: none;border-right-width: 1px;border-right-color: #c0c0c0;">&#160;</td>
+                    <td style="border-left-style: none;border-left-width: 1px;border-right-style: none;border-right-width: 1px;border-right-color: #c0c0c0;">&#160;</td>
+                    <td style="border-left-style: none;border-left-width: 1px;border-right-style: none;border-right-width: 1px;border-right-color: #c0c0c0;">&#160;</td>
+                    <td style="border-left-style: none;border-left-width: 1px;border-right-style: none;border-right-width: 1px;border-right-color: #c0c0c0;">&#160;</td>
+                    <td style="border-left-style: none;border-left-width: 1px;border-right-style: none;border-right-width: 1px;border-right-color: #c0c0c0;">&#160;</td>
+                    <td style="border-left-style: none;border-left-width: 1px;border-right-style: none;border-right-width: 1px;border-right-color: #c0c0c0;">&#160;</td>
+                    <td style="border-left-style: none;border-left-width: 1px;border-right-style: none;border-right-width: 1px;border-right-color: #c0c0c0;">&#160;</td>
+                    <td style="border-left-style: none;border-left-width: 1px;border-right-style: none;border-right-width: 1px;border-right-color: #c0c0c0;">&#160;</td>
+                    <td style="border-left-style: none;border-left-width: 1px;border-right-style: none;border-right-width: 1px;border-right-color: #c0c0c0;">&#160;</td>
+                    <td style="border-left-style: none;border-left-width: 1px;border-right-style: none;border-right-width: 1px;border-right-color: #c0c0c0;">&#160;</td>
+                    <td style="border-left-style: none;border-left-width: 1px;border-right-style: none;border-right-width: 1px;border-right-color: #c0c0c0;">&#160;</td>
+                </tr>
+                <tr>
+                    <td style="background-color: #DBDBDB;border-left-style: none;border-left-width: 1px;border-right-style: none;border-right-width: 1px;border-right-color: #c0c0c0;">2</td>
+                    <td style="border-left-style: none;border-left-width: 1px;border-right-style: none;border-right-width: 1px;border-right-color: #c0c0c0;">AB</td>
+                    <td style="border-left-style: none;border-left-width: 1px;border-right-style: none;border-right-width: 1px;border-right-color: #c0c0c0;">A</td>
+                    <td style="border-left-style: none;border-left-width: 1px;border-right-style: none;border-right-width: 1px;border-right-color: #c0c0c0;">A</td>
+                    <td style="border-left-style: none;border-left-width: 1px;border-right-style: none;border-right-width: 1px;border-right-color: #c0c0c0;">&#160;</td>
+                    <td style="border-left-style: none;border-left-width: 1px;border-right-style: none;border-right-width: 1px;border-right-color: #c0c0c0;">&#160;</td>
+                    <td style="border-left-style: none;border-left-width: 1px;border-right-style: none;border-right-width: 1px;border-right-color: #c0c0c0;">&#160;</td>
+                    <td style="border-left-style: none;border-left-width: 1px;border-right-style: none;border-right-width: 1px;border-right-color: #c0c0c0;">&#160;</td>
+                    <td style="border-left-style: none;border-left-width: 1px;border-right-style: none;border-right-width: 1px;border-right-color: #c0c0c0;">&#160;</td>
+                    <td style="border-left-style: none;border-left-width: 1px;border-right-style: none;border-right-width: 1px;border-right-color: #c0c0c0;">&#160;</td>
+                    <td style="border-left-style: none;border-left-width: 1px;border-right-style: none;border-right-width: 1px;border-right-color: #c0c0c0;">&#160;</td>
+                    <td style="border-left-style: none;border-left-width: 1px;border-right-style: none;border-right-width: 1px;border-right-color: #c0c0c0;">&#160;</td>
+                    <td style="border-left-style: none;border-left-width: 1px;border-right-style: none;border-right-width: 1px;border-right-color: #c0c0c0;">&#160;</td>
+                    <td style="border-left-style: none;border-left-width: 1px;border-right-style: none;border-right-width: 1px;border-right-color: #c0c0c0;">&#160;</td>
+                    <td style="border-left-style: none;border-left-width: 1px;border-right-style: none;border-right-width: 1px;border-right-color: #c0c0c0;">&#160;</td>
+                    <td style="border-left-style: none;border-left-width: 1px;border-right-style: none;border-right-width: 1px;border-right-color: #c0c0c0;">&#160;</td>
+                    <td style="border-left-style: none;border-left-width: 1px;border-right-style: none;border-right-width: 1px;border-right-color: #c0c0c0;">&#160;</td>
+                </tr>
+                <tr>
+                    <td style="background-color: #DBDBDB;border-left-style: none;border-left-width: 1px;border-right-style: none;border-right-width: 1px;border-right-color: #c0c0c0;">3</td>
+                    <td style="border-left-style: none;border-left-width: 1px;border-right-style: none;border-right-width: 1px;border-right-color: #c0c0c0;">AB</td>
+                    <td style="border-left-style: none;border-left-width: 1px;border-right-style: none;border-right-width: 1px;border-right-color: #c0c0c0;">&#160;</td>
+                    <td style="border-left-style: none;border-left-width: 1px;border-right-style: none;border-right-width: 1px;border-right-color: #c0c0c0;">&#160;</td>
+                    <td style="border-left-style: none;border-left-width: 1px;border-right-style: none;border-right-width: 1px;border-right-color: #c0c0c0;">&#160;</td>
+                    <td style="border-left-style: none;border-left-width: 1px;border-right-style: none;border-right-width: 1px;border-right-color: #c0c0c0;">&#160;</td>
+                    <td style="border-left-style: none;border-left-width: 1px;border-right-style: none;border-right-width: 1px;border-right-color: #c0c0c0;">&#160;</td>
+                    <td style="border-left-style: none;border-left-width: 1px;border-right-style: none;border-right-width: 1px;border-right-color: #c0c0c0;">&#160;</td>
+                    <td style="border-left-style: none;border-left-width: 1px;border-right-style: none;border-right-width: 1px;border-right-color: #c0c0c0;">&#160;</td>
+                    <td style="border-left-style: none;border-left-width: 1px;border-right-style: none;border-right-width: 1px;border-right-color: #c0c0c0;">&#160;</td>
+                    <td style="border-left-style: none;border-left-width: 1px;border-right-style: none;border-right-width: 1px;border-right-color: #c0c0c0;">&#160;</td>
+                    <td style="border-left-style: none;border-left-width: 1px;border-right-style: none;border-right-width: 1px;border-right-color: #c0c0c0;">&#160;</td>
+                    <td style="border-left-style: none;border-left-width: 1px;border-right-style: none;border-right-width: 1px;border-right-color: #c0c0c0;">&#160;</td>
+                    <td style="border-left-style: none;border-left-width: 1px;border-right-style: none;border-right-width: 1px;border-right-color: #c0c0c0;">&#160;</td>
+                    <td style="border-left-style: none;border-left-width: 1px;border-right-style: none;border-right-width: 1px;border-right-color: #c0c0c0;">&#160;</td>
+                    <td style="border-left-style: none;border-left-width: 1px;border-right-style: none;border-right-width: 1px;border-right-color: #c0c0c0;">&#160;</td>
+                    <td style="border-left-style: none;border-left-width: 1px;border-right-style: none;border-right-width: 1px;border-right-color: #c0c0c0;">&#160;</td>
+                </tr>
+                <tr>
+                    <td style="background-color: #DBDBDB;border-left-style: none;border-left-width: 1px;border-right-style: none;border-right-width: 1px;border-right-color: #c0c0c0;">4</td>
+                    <td style="border-left-style: none;border-left-width: 1px;border-right-style: none;border-right-width: 1px;border-right-color: #c0c0c0;">B</td>
+                    <td style="border-left-style: none;border-left-width: 1px;border-right-style: none;border-right-width: 1px;border-right-color: #c0c0c0;">&#160;</td>
+                    <td style="border-left-style: none;border-left-width: 1px;border-right-style: none;border-right-width: 1px;border-right-color: #c0c0c0;">&#160;</td>
+                    <td style="border-left-style: none;border-left-width: 1px;border-right-style: none;border-right-width: 1px;border-right-color: #c0c0c0;">&#160;</td>
+                    <td style="border-left-style: none;border-left-width: 1px;border-right-style: none;border-right-width: 1px;border-right-color: #c0c0c0;">&#160;</td>
+                    <td style="border-left-style: none;border-left-width: 1px;border-right-style: none;border-right-width: 1px;border-right-color: #c0c0c0;">&#160;</td>
+                    <td style="border-left-style: none;border-left-width: 1px;border-right-style: none;border-right-width: 1px;border-right-color: #c0c0c0;">&#160;</td>
+                    <td style="border-left-style: none;border-left-width: 1px;border-right-style: none;border-right-width: 1px;border-right-color: #c0c0c0;">&#160;</td>
+                    <td style="border-left-style: none;border-left-width: 1px;border-right-style: none;border-right-width: 1px;border-right-color: #c0c0c0;">&#160;</td>
+                    <td style="border-left-style: none;border-left-width: 1px;border-right-style: none;border-right-width: 1px;border-right-color: #c0c0c0;">&#160;</td>
+                    <td style="border-left-style: none;border-left-width: 1px;border-right-style: none;border-right-width: 1px;border-right-color: #c0c0c0;">&#160;</td>
+                    <td style="border-left-style: none;border-left-width: 1px;border-right-style: none;border-right-width: 1px;border-right-color: #c0c0c0;">&#160;</td>
+                    <td style="border-left-style: none;border-left-width: 1px;border-right-style: none;border-right-width: 1px;border-right-color: #c0c0c0;">&#160;</td>
+                    <td style="border-left-style: none;border-left-width: 1px;border-right-style: none;border-right-width: 1px;border-right-color: #c0c0c0;">&#160;</td>
+                    <td style="border-left-style: none;border-left-width: 1px;border-right-style: none;border-right-width: 1px;border-right-color: #c0c0c0;">&#160;</td>
+                    <td style="border-left-style: none;border-left-width: 1px;border-right-style: none;border-right-width: 1px;border-right-color: #c0c0c0;">&#160;</td>
+                </tr>
+                <tr>
+                    <td style="border-left-style: none;border-left-width: 1px;border-right-style: none;border-right-width: 1px;border-right-color: #c0c0c0;">&#160;</td>
+                    <td style="border-left-style: none;border-left-width: 1px;border-right-style: none;border-right-width: 1px;border-right-color: #c0c0c0;">&#160;</td>
+                    <td style="border-left-style: none;border-left-width: 1px;border-right-style: none;border-right-width: 1px;border-right-color: #c0c0c0;">&#160;</td>
+                    <td style="border-left-style: none;border-left-width: 1px;border-right-style: none;border-right-width: 1px;border-right-color: #c0c0c0;">&#160;</td>
+                    <td style="border-left-style: none;border-left-width: 1px;border-right-style: none;border-right-width: 1px;border-right-color: #c0c0c0;">&#160;</td>
+                    <td style="border-left-style: none;border-left-width: 1px;border-right-style: none;border-right-width: 1px;border-right-color: #c0c0c0;">&#160;</td>
+                    <td style="border-left-style: none;border-left-width: 1px;border-right-style: none;border-right-width: 1px;border-right-color: #c0c0c0;">&#160;</td>
+                    <td style="border-left-style: none;border-left-width: 1px;border-right-style: none;border-right-width: 1px;border-right-color: #c0c0c0;">&#160;</td>
+                    <td style="border-left-style: none;border-left-width: 1px;border-right-style: none;border-right-width: 1px;border-right-color: #c0c0c0;">&#160;</td>
+                    <td style="border-left-style: none;border-left-width: 1px;border-right-style: none;border-right-width: 1px;border-right-color: #c0c0c0;">&#160;</td>
+                    <td style="border-left-style: none;border-left-width: 1px;border-right-style: none;border-right-width: 1px;border-right-color: #c0c0c0;">&#160;</td>
+                    <td style="border-left-style: none;border-left-width: 1px;border-right-style: none;border-right-width: 1px;border-right-color: #c0c0c0;">&#160;</td>
+                    <td style="border-left-style: none;border-left-width: 1px;border-right-style: none;border-right-width: 1px;border-right-color: #c0c0c0;">&#160;</td>
+                    <td style="border-left-style: none;border-left-width: 1px;border-right-style: none;border-right-width: 1px;border-right-color: #c0c0c0;">&#160;</td>
+                    <td style="border-left-style: none;border-left-width: 1px;border-right-style: none;border-right-width: 1px;border-right-color: #c0c0c0;">&#160;</td>
+                    <td style="border-left-style: none;border-left-width: 1px;border-right-style: none;border-right-width: 1px;border-right-color: #c0c0c0;">&#160;</td>
+                    <td style="border-left-style: none;border-left-width: 1px;border-right-style: none;border-right-width: 1px;border-right-color: #c0c0c0;">&#160;</td>
+                </tr>
+                <tr>
+                    <td style="background-color: #DDEBF7;border-left-style: none;border-left-width: 1px;border-right-style: none;border-right-width: 1px;border-right-color: #c0c0c0;" colspan="17">2) Put new choices in positions defined by the combined matrix</td>
+                </tr>
+                <tr>
+                    <td colspan="17" style="border-left-style: none;border-left-width: 1px;border-right-style: none;border-right-width: 1px;border-right-color: #c0c0c0;"><cite>First fill in new styles, then fill in new colors</cite>
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="5" style="border-left-style: none;border-left-width: 1px;border-right-style: none;border-right-width: 1px;border-right-color: #c0c0c0;"><span class="Emphasis">Cluster A</span>
+                    </td>
+                    <td style="border-left-style: none;border-left-width: 1px;border-right-style: none;border-right-width: 1px;border-right-color: #c0c0c0;">&#160;</td>
+                    <td colspan="5" style="border-left-style: none;border-left-width: 1px;border-right-style: none;border-right-width: 1px;border-right-color: #c0c0c0;"><span class="Emphasis">Cluster B</span>
+                    </td>
+                    <td style="border-left-style: none;border-left-width: 1px;border-right-style: none;border-right-width: 1px;border-right-color: #c0c0c0;">&#160;</td>
+                    <td colspan="5" style="border-left-style: none;border-left-width: 1px;border-right-style: none;border-right-width: 1px;border-right-color: #c0c0c0;"><span class="Emphasis">Cluster C</span>
+                    </td>
+                </tr>
+                <tr>
+                    <td style="background-color: #EDEDED;border-left-style: none;border-left-width: 1px;border-right-style: none;border-right-width: 1px;border-right-color: #c0c0c0;" rowspan="2">Style</td>
+                    <td style="background-color: #FFE699;border-left-style: none;border-left-width: 1px;border-right-style: none;border-right-width: 1px;border-right-color: #c0c0c0;" colspan="4">Color</td>
+                    <td style="border-left-style: none;border-left-width: 1px;border-right-style: none;border-right-width: 1px;border-right-color: #c0c0c0;">&#160;</td>
+                    <td style="background-color: #EDEDED;border-left-style: none;border-left-width: 1px;border-right-style: none;border-right-width: 1px;border-right-color: #c0c0c0;" rowspan="2">Style</td>
+                    <td style="background-color: #E2EFDA;border-left-style: none;border-left-width: 1px;border-right-style: none;border-right-width: 1px;border-right-color: #c0c0c0;" colspan="4">Color</td>
+                    <td style="border-left-style: none;border-left-width: 1px;border-right-style: none;border-right-width: 1px;border-right-color: #c0c0c0;">&#160;</td>
+                    <td style="background-color: #EDEDED;border-left-style: none;border-left-width: 1px;border-right-style: none;border-right-width: 1px;border-right-color: #c0c0c0;" rowspan="2">Style</td>
+                    <td style="background-color: #E2EFDA;border-left-style: none;border-left-width: 1px;border-right-style: none;border-right-width: 1px;border-right-color: #c0c0c0;" colspan="4">Color</td>
+                </tr>
+                <tr>
+                    <td style="background-color: #FFD966;border-left-style: none;border-left-width: 1px;border-right-style: none;border-right-width: 1px;border-right-color: #c0c0c0;">1</td>
+                    <td style="background-color: #FFD966;border-left-style: none;border-left-width: 1px;border-right-style: none;border-right-width: 1px;border-right-color: #c0c0c0;">2</td>
+                    <td style="background-color: #FFD966;border-left-style: none;border-left-width: 1px;border-right-style: none;border-right-width: 1px;border-right-color: #c0c0c0;">3</td>
+                    <td style="background-color: #FFD966;border-left-style: none;border-left-width: 1px;border-right-style: none;border-right-width: 1px;border-right-color: #c0c0c0;">4</td>
+                    <td style="border-left-style: none;border-left-width: 1px;border-right-style: none;border-right-width: 1px;border-right-color: #c0c0c0;">&#160;</td>
+                    <td style="background-color: #FFD966;border-left-style: none;border-left-width: 1px;border-right-style: none;border-right-width: 1px;border-right-color: #c0c0c0;">1</td>
+                    <td style="background-color: #FFD966;border-left-style: none;border-left-width: 1px;border-right-style: none;border-right-width: 1px;border-right-color: #c0c0c0;">2</td>
+                    <td style="background-color: #FFD966;border-left-style: none;border-left-width: 1px;border-right-style: none;border-right-width: 1px;border-right-color: #c0c0c0;">3</td>
+                    <td style="background-color: #FFD966;border-left-style: none;border-left-width: 1px;border-right-style: none;border-right-width: 1px;border-right-color: #c0c0c0;">4</td>
+                    <td style="border-left-style: none;border-left-width: 1px;border-right-style: none;border-right-width: 1px;border-right-color: #c0c0c0;">&#160;</td>
+                    <td style="background-color: #FFD966;border-left-style: none;border-left-width: 1px;border-right-style: none;border-right-width: 1px;border-right-color: #c0c0c0;">1</td>
+                    <td style="background-color: #FFD966;border-left-style: none;border-left-width: 1px;border-right-style: none;border-right-width: 1px;border-right-color: #c0c0c0;">2</td>
+                    <td style="background-color: #FFD966;border-left-style: none;border-left-width: 1px;border-right-style: none;border-right-width: 1px;border-right-color: #c0c0c0;">3</td>
+                    <td style="background-color: #FFD966;border-left-style: none;border-left-width: 1px;border-right-style: none;border-right-width: 1px;border-right-color: #c0c0c0;">4</td>
+                </tr>
+                <tr>
+                    <td style="background-color: #DBDBDB;border-left-style: none;border-left-width: 1px;border-right-style: none;border-right-width: 1px;border-right-color: #c0c0c0;">1</td>
+                    <td style="background-color: #C6E0B4;border-left-style: none;border-left-width: 1px;border-right-style: none;border-right-width: 1px;border-right-color: #c0c0c0;">1.00</td>
+                    <td style="background-color: #C6E0B4;border-left-style: none;border-left-width: 1px;border-right-style: none;border-right-width: 1px;border-right-color: #c0c0c0;">0.92</td>
+                    <td style="background-color: #C6E0B4;border-left-style: none;border-left-width: 1px;border-right-style: none;border-right-width: 1px;border-right-color: #c0c0c0;">0.87</td>
+                    <td style="background-color: #BDD7EE;border-left-style: none;border-left-width: 1px;border-right-style: none;border-right-width: 1px;border-right-color: #c0c0c0;">0.69</td>
+                    <td style="border-left-style: none;border-left-width: 1px;border-right-style: none;border-right-width: 1px;border-right-color: #c0c0c0;">&#160;</td>
+                    <td style="background-color: #DBDBDB;border-left-style: none;border-left-width: 1px;border-right-style: none;border-right-width: 1px;border-right-color: #c0c0c0;">1</td>
+                    <td style="background-color: #C6E0B4;border-left-style: none;border-left-width: 1px;border-right-style: none;border-right-width: 1px;border-right-color: #c0c0c0;">1.00</td>
+                    <td style="background-color: #F4B084;border-left-style: none;border-left-width: 1px;border-right-style: none;border-right-width: 1px;border-right-color: #c0c0c0;">0.60</td>
+                    <td style="background-color: #F4B084;border-left-style: none;border-left-width: 1px;border-right-style: none;border-right-width: 1px;border-right-color: #c0c0c0;">0.30</td>
+                    <td style="border-left-style: none;border-left-width: 1px;border-right-style: none;border-right-width: 1px;border-right-color: #c0c0c0;">&#160;</td>
+                    <td style="border-left-style: none;border-left-width: 1px;border-right-style: none;border-right-width: 1px;border-right-color: #c0c0c0;">&#160;</td>
+                    <td style="background-color: #DBDBDB;border-left-style: none;border-left-width: 1px;border-right-style: none;border-right-width: 1px;border-right-color: #c0c0c0;">1</td>
+                    <td style="background-color: #F4B084;border-left-style: none;border-left-width: 1px;border-right-style: none;border-right-width: 1px;border-right-color: #c0c0c0;">1.00</td>
+                    <td style="background-color: #F4B084;border-left-style: none;border-left-width: 1px;border-right-style: none;border-right-width: 1px;border-right-color: #c0c0c0;">0.44</td>
+                    <td style="background-color: #F4B084;border-left-style: none;border-left-width: 1px;border-right-style: none;border-right-width: 1px;border-right-color: #c0c0c0;">0.22</td>
+                    <td style="border-left-style: none;border-left-width: 1px;border-right-style: none;border-right-width: 1px;border-right-color: #c0c0c0;">&#160;</td>
+                </tr>
+                <tr>
+                    <td style="background-color: #DBDBDB;border-left-style: none;border-left-width: 1px;border-right-style: none;border-right-width: 1px;border-right-color: #c0c0c0;">2</td>
+                    <td style="background-color: #C6E0B4;border-left-style: none;border-left-width: 1px;border-right-style: none;border-right-width: 1px;border-right-color: #c0c0c0;">0.86</td>
+                    <td style="background-color: #C6E0B4;border-left-style: none;border-left-width: 1px;border-right-style: none;border-right-width: 1px;border-right-color: #c0c0c0;">0.76</td>
+                    <td style="background-color: #BDD7EE;border-left-style: none;border-left-width: 1px;border-right-style: none;border-right-width: 1px;border-right-color: #c0c0c0;">0.72</td>
+                    <td style="border-left-style: none;border-left-width: 1px;border-right-style: none;border-right-width: 1px;border-right-color: #c0c0c0;">0.60</td>
+                    <td style="border-left-style: none;border-left-width: 1px;border-right-style: none;border-right-width: 1px;border-right-color: #c0c0c0;">&#160;</td>
+                    <td style="background-color: #DBDBDB;border-left-style: none;border-left-width: 1px;border-right-style: none;border-right-width: 1px;border-right-color: #c0c0c0;">2</td>
+                    <td style="background-color: #C6E0B4;border-left-style: none;border-left-width: 1px;border-right-style: none;border-right-width: 1px;border-right-color: #c0c0c0;">0.89</td>
+                    <td style="background-color: #F4B084;border-left-style: none;border-left-width: 1px;border-right-style: none;border-right-width: 1px;border-right-color: #c0c0c0;">0.45</td>
+                    <td style="background-color: #F4B084;border-left-style: none;border-left-width: 1px;border-right-style: none;border-right-width: 1px;border-right-color: #c0c0c0;">0.15</td>
+                    <td style="border-left-style: none;border-left-width: 1px;border-right-style: none;border-right-width: 1px;border-right-color: #c0c0c0;">&#160;</td>
+                    <td style="border-left-style: none;border-left-width: 1px;border-right-style: none;border-right-width: 1px;border-right-color: #c0c0c0;">&#160;</td>
+                    <td style="background-color: #DBDBDB;border-left-style: none;border-left-width: 1px;border-right-style: none;border-right-width: 1px;border-right-color: #c0c0c0;">2</td>
+                    <td style="background-color: #F4B084;border-left-style: none;border-left-width: 1px;border-right-style: none;border-right-width: 1px;border-right-color: #c0c0c0;">0.78</td>
+                    <td style="background-color: #F4B084;border-left-style: none;border-left-width: 1px;border-right-style: none;border-right-width: 1px;border-right-color: #c0c0c0;">0.33</td>
+                    <td style="background-color: #F4B084;border-left-style: none;border-left-width: 1px;border-right-style: none;border-right-width: 1px;border-right-color: #c0c0c0;">0.11</td>
+                    <td style="border-left-style: none;border-left-width: 1px;border-right-style: none;border-right-width: 1px;border-right-color: #c0c0c0;">&#160;</td>
+                </tr>
+                <tr>
+                    <td style="background-color: #DBDBDB;border-left-style: none;border-left-width: 1px;border-right-style: none;border-right-width: 1px;border-right-color: #c0c0c0;">3</td>
+                    <td style="background-color: #BDD7EE;border-left-style: none;border-left-width: 1px;border-right-style: none;border-right-width: 1px;border-right-color: #c0c0c0;">0.65</td>
+                    <td style="border-left-style: none;border-left-width: 1px;border-right-style: none;border-right-width: 1px;border-right-color: #c0c0c0;">0.62</td>
+                    <td style="border-left-style: none;border-left-width: 1px;border-right-style: none;border-right-width: 1px;border-right-color: #c0c0c0;">0.52</td>
+                    <td style="border-left-style: none;border-left-width: 1px;border-right-style: none;border-right-width: 1px;border-right-color: #c0c0c0;">0.48</td>
+                    <td style="border-left-style: none;border-left-width: 1px;border-right-style: none;border-right-width: 1px;border-right-color: #c0c0c0;">&#160;</td>
+                    <td style="background-color: #DBDBDB;border-left-style: none;border-left-width: 1px;border-right-style: none;border-right-width: 1px;border-right-color: #c0c0c0;">3</td>
+                    <td style="background-color: #BDD7EE;border-left-style: none;border-left-width: 1px;border-right-style: none;border-right-width: 1px;border-right-color: #c0c0c0;">0.82</td>
+                    <td style="border-left-style: none;border-left-width: 1px;border-right-style: none;border-right-width: 1px;border-right-color: #c0c0c0;">&#160;</td>
+                    <td style="border-left-style: none;border-left-width: 1px;border-right-style: none;border-right-width: 1px;border-right-color: #c0c0c0;">&#160;</td>
+                    <td style="border-left-style: none;border-left-width: 1px;border-right-style: none;border-right-width: 1px;border-right-color: #c0c0c0;">&#160;</td>
+                    <td style="border-left-style: none;border-left-width: 1px;border-right-style: none;border-right-width: 1px;border-right-color: #c0c0c0;">&#160;</td>
+                    <td style="background-color: #DBDBDB;border-left-style: none;border-left-width: 1px;border-right-style: none;border-right-width: 1px;border-right-color: #c0c0c0;">3</td>
+                    <td style="background-color: #F4B084;border-left-style: none;border-left-width: 1px;border-right-style: none;border-right-width: 1px;border-right-color: #c0c0c0;">0.67</td>
+                    <td style="border-left-style: none;border-left-width: 1px;border-right-style: none;border-right-width: 1px;border-right-color: #c0c0c0;">&#160;</td>
+                    <td style="border-left-style: none;border-left-width: 1px;border-right-style: none;border-right-width: 1px;border-right-color: #c0c0c0;">&#160;</td>
+                    <td style="border-left-style: none;border-left-width: 1px;border-right-style: none;border-right-width: 1px;border-right-color: #c0c0c0;">&#160;</td>
+                </tr>
+                <tr>
+                    <td style="background-color: #DBDBDB;border-left-style: none;border-left-width: 1px;border-right-style: none;border-right-width: 1px;border-right-color: #c0c0c0;">4</td>
+                    <td style="border-left-style: none;border-left-width: 1px;border-right-style: none;border-right-width: 1px;border-right-color: #c0c0c0;">0.58</td>
+                    <td style="border-left-style: none;border-left-width: 1px;border-right-style: none;border-right-width: 1px;border-right-color: #c0c0c0;">0.47</td>
+                    <td style="border-left-style: none;border-left-width: 1px;border-right-style: none;border-right-width: 1px;border-right-color: #c0c0c0;">0.43</td>
+                    <td style="border-left-style: none;border-left-width: 1px;border-right-style: none;border-right-width: 1px;border-right-color: #c0c0c0;">0.39</td>
+                    <td style="border-left-style: none;border-left-width: 1px;border-right-style: none;border-right-width: 1px;border-right-color: #c0c0c0;">&#160;</td>
+                    <td style="background-color: #DBDBDB;border-left-style: none;border-left-width: 1px;border-right-style: none;border-right-width: 1px;border-right-color: #c0c0c0;">4</td>
+                    <td style="background-color: #BDD7EE;border-left-style: none;border-left-width: 1px;border-right-style: none;border-right-width: 1px;border-right-color: #c0c0c0;">0.75</td>
+                    <td style="border-left-style: none;border-left-width: 1px;border-right-style: none;border-right-width: 1px;border-right-color: #c0c0c0;">&#160;</td>
+                    <td style="border-left-style: none;border-left-width: 1px;border-right-style: none;border-right-width: 1px;border-right-color: #c0c0c0;">&#160;</td>
+                    <td style="border-left-style: none;border-left-width: 1px;border-right-style: none;border-right-width: 1px;border-right-color: #c0c0c0;">&#160;</td>
+                    <td style="border-left-style: none;border-left-width: 1px;border-right-style: none;border-right-width: 1px;border-right-color: #c0c0c0;">&#160;</td>
+                    <td style="background-color: #DBDBDB;border-left-style: none;border-left-width: 1px;border-right-style: none;border-right-width: 1px;border-right-color: #c0c0c0;">4</td>
+                    <td style="background-color: #F4B084;border-left-style: none;border-left-width: 1px;border-right-style: none;border-right-width: 1px;border-right-color: #c0c0c0;">0.56</td>
+                    <td style="border-left-style: none;border-left-width: 1px;border-right-style: none;border-right-width: 1px;border-right-color: #c0c0c0;">&#160;</td>
+                    <td style="border-left-style: none;border-left-width: 1px;border-right-style: none;border-right-width: 1px;border-right-color: #c0c0c0;">&#160;</td>
+                    <td style="border-left-style: none;border-left-width: 1px;border-right-style: none;border-right-width: 1px;border-right-color: #c0c0c0;">&#160;</td>
+                </tr>
+                <tr>
+                    <td style="border-left-style: none;border-left-width: 1px;border-right-style: none;border-right-width: 1px;border-right-color: #c0c0c0;" colspan="5">Cluster A has no change; the matrix is large enough.</td>
+                    <td style="border-left-style: none;border-left-width: 1px;border-right-style: none;border-right-width: 1px;border-right-color: #c0c0c0;">&#160;</td>
+                    <td style="border-left-style: none;border-left-width: 1px;border-right-style: none;border-right-width: 1px;border-right-color: #c0c0c0;" colspan="5">Cluster B's 4 additional choices fill in colors 2 and 3.</td>
+                    <td style="border-left-style: none;border-left-width: 1px;border-right-style: none;border-right-width: 1px;border-right-color: #c0c0c0;">&#160;</td>
+                    <td style="border-left-style: none;border-left-width: 1px;border-right-style: none;border-right-width: 1px;border-right-color: #c0c0c0;" colspan="5" rowspan="2">Cluster C's 8 new choices fill in all styles and colors 1, 2, and 3.</td>
+                </tr>
+                <tr>
+                    <td style="border-left-style: none;border-left-width: 1px;border-right-style: none;border-right-width: 1px;border-right-color: #c0c0c0;">&#160;</td>
+                    <td style="border-left-style: none;border-left-width: 1px;border-right-style: none;border-right-width: 1px;border-right-color: #c0c0c0;">&#160;</td>
+                    <td style="border-left-style: none;border-left-width: 1px;border-right-style: none;border-right-width: 1px;border-right-color: #c0c0c0;">&#160;</td>
+                    <td style="border-left-style: none;border-left-width: 1px;border-right-style: none;border-right-width: 1px;border-right-color: #c0c0c0;">&#160;</td>
+                    <td style="border-left-style: none;border-left-width: 1px;border-right-style: none;border-right-width: 1px;border-right-color: #c0c0c0;">&#160;</td>
+                    <td style="border-left-style: none;border-left-width: 1px;border-right-style: none;border-right-width: 1px;border-right-color: #c0c0c0;">&#160;</td>
+                    <td style="border-left-style: none;border-left-width: 1px;border-right-style: none;border-right-width: 1px;border-right-color: #c0c0c0;">&#160;</td>
+                    <td style="border-left-style: none;border-left-width: 1px;border-right-style: none;border-right-width: 1px;border-right-color: #c0c0c0;">&#160;</td>
+                    <td style="border-left-style: none;border-left-width: 1px;border-right-style: none;border-right-width: 1px;border-right-color: #c0c0c0;">&#160;</td>
+                    <td style="border-left-style: none;border-left-width: 1px;border-right-style: none;border-right-width: 1px;border-right-color: #c0c0c0;">&#160;</td>
+                    <td style="border-left-style: none;border-left-width: 1px;border-right-style: none;border-right-width: 1px;border-right-color: #c0c0c0;">&#160;</td>
+                    <td style="border-left-style: none;border-left-width: 1px;border-right-style: none;border-right-width: 1px;border-right-color: #c0c0c0;">&#160;</td>
+                </tr>
+                <tr>
+                    <td style="background-color: #DDEBF7;border-left-style: none;border-left-width: 1px;border-right-style: none;border-right-width: 1px;border-right-color: #c0c0c0;" colspan="17">3) Finalize positional merge</td>
+                </tr>
+                <tr>
+                    <td colspan="17" style="border-left-style: none;border-left-width: 1px;border-right-style: none;border-right-width: 1px;border-right-color: #c0c0c0;"><cite>Merge matrices together based on style and color positions</cite>
+                    </td>
+                </tr>
+                <tr>
+                    <td style="background-color: #EDEDED;border-left-style: none;border-left-width: 1px;border-right-style: none;border-right-width: 1px;border-right-color: #c0c0c0;" rowspan="2">Style</td>
+                    <td style="background-color: #FFE699;border-left-style: none;border-left-width: 1px;border-right-style: none;border-right-width: 1px;border-right-color: #c0c0c0;" colspan="4">Color</td>
+                    <td style="border-left-style: none;border-left-width: 1px;border-right-style: none;border-right-width: 1px;border-right-color: #c0c0c0;">&#160;</td>
+                    <td style="border-left-style: none;border-left-width: 1px;border-right-style: none;border-right-width: 1px;border-right-color: #c0c0c0;">&#160;</td>
+                    <td style="border-left-style: none;border-left-width: 1px;border-right-style: none;border-right-width: 1px;border-right-color: #c0c0c0;">&#160;</td>
+                    <td style="border-left-style: none;border-left-width: 1px;border-right-style: none;border-right-width: 1px;border-right-color: #c0c0c0;">&#160;</td>
+                    <td style="border-left-style: none;border-left-width: 1px;border-right-style: none;border-right-width: 1px;border-right-color: #c0c0c0;">&#160;</td>
+                    <td style="border-left-style: none;border-left-width: 1px;border-right-style: none;border-right-width: 1px;border-right-color: #c0c0c0;">&#160;</td>
+                    <td style="border-left-style: none;border-left-width: 1px;border-right-style: none;border-right-width: 1px;border-right-color: #c0c0c0;">&#160;</td>
+                    <td style="border-left-style: none;border-left-width: 1px;border-right-style: none;border-right-width: 1px;border-right-color: #c0c0c0;">&#160;</td>
+                    <td style="border-left-style: none;border-left-width: 1px;border-right-style: none;border-right-width: 1px;border-right-color: #c0c0c0;">&#160;</td>
+                    <td style="border-left-style: none;border-left-width: 1px;border-right-style: none;border-right-width: 1px;border-right-color: #c0c0c0;">&#160;</td>
+                    <td style="border-left-style: none;border-left-width: 1px;border-right-style: none;border-right-width: 1px;border-right-color: #c0c0c0;">&#160;</td>
+                    <td style="border-left-style: none;border-left-width: 1px;border-right-style: none;border-right-width: 1px;border-right-color: #c0c0c0;">&#160;</td>
+                </tr>
+                <tr>
+                    <td style="background-color: #FFD966;border-left-style: none;border-left-width: 1px;border-right-style: none;border-right-width: 1px;border-right-color: #c0c0c0;">1</td>
+                    <td style="background-color: #FFD966;border-left-style: none;border-left-width: 1px;border-right-style: none;border-right-width: 1px;border-right-color: #c0c0c0;">2</td>
+                    <td style="background-color: #FFD966;border-left-style: none;border-left-width: 1px;border-right-style: none;border-right-width: 1px;border-right-color: #c0c0c0;">3</td>
+                    <td style="background-color: #FFD966;border-left-style: none;border-left-width: 1px;border-right-style: none;border-right-width: 1px;border-right-color: #c0c0c0;">4</td>
+                    <td style="border-left-style: none;border-left-width: 1px;border-right-style: none;border-right-width: 1px;border-right-color: #c0c0c0;">&#160;</td>
+                    <td style="border-left-style: none;border-left-width: 1px;border-right-style: none;border-right-width: 1px;border-right-color: #c0c0c0;">&#160;</td>
+                    <td style="border-left-style: none;border-left-width: 1px;border-right-style: none;border-right-width: 1px;border-right-color: #c0c0c0;">&#160;</td>
+                    <td style="border-left-style: none;border-left-width: 1px;border-right-style: none;border-right-width: 1px;border-right-color: #c0c0c0;">&#160;</td>
+                    <td style="border-left-style: none;border-left-width: 1px;border-right-style: none;border-right-width: 1px;border-right-color: #c0c0c0;">&#160;</td>
+                    <td style="border-left-style: none;border-left-width: 1px;border-right-style: none;border-right-width: 1px;border-right-color: #c0c0c0;">&#160;</td>
+                    <td style="border-left-style: none;border-left-width: 1px;border-right-style: none;border-right-width: 1px;border-right-color: #c0c0c0;">&#160;</td>
+                    <td style="border-left-style: none;border-left-width: 1px;border-right-style: none;border-right-width: 1px;border-right-color: #c0c0c0;">&#160;</td>
+                    <td style="border-left-style: none;border-left-width: 1px;border-right-style: none;border-right-width: 1px;border-right-color: #c0c0c0;">&#160;</td>
+                    <td style="border-left-style: none;border-left-width: 1px;border-right-style: none;border-right-width: 1px;border-right-color: #c0c0c0;">&#160;</td>
+                    <td style="border-left-style: none;border-left-width: 1px;border-right-style: none;border-right-width: 1px;border-right-color: #c0c0c0;">&#160;</td>
+                    <td style="border-left-style: none;border-left-width: 1px;border-right-style: none;border-right-width: 1px;border-right-color: #c0c0c0;">&#160;</td>
+                    <td>&#160;</td>
+                </tr>
+                <tr>
+                    <td style="background-color: #DBDBDB;border-left-style: none;border-left-width: 1px;border-right-style: none;border-right-width: 1px;border-right-color: #c0c0c0;">1</td>
+                    <td style="border-left-style: none;border-left-width: 1px;border-right-style: none;border-right-width: 1px;border-right-color: #c0c0c0;">ABC</td>
+                    <td style="border-left-style: none;border-left-width: 1px;border-right-style: none;border-right-width: 1px;border-right-color: #c0c0c0;">ABC</td>
+                    <td style="border-left-style: none;border-left-width: 1px;border-right-style: none;border-right-width: 1px;border-right-color: #c0c0c0;">ABC</td>
+                    <td style="border-left-style: none;border-left-width: 1px;border-right-style: none;border-right-width: 1px;border-right-color: #c0c0c0;">A</td>
+                    <td style="border-left-style: none;border-left-width: 1px;border-right-style: none;border-right-width: 1px;border-right-color: #c0c0c0;">&#160;</td>
+                    <td style="border-left-style: none;border-left-width: 1px;border-right-style: none;border-right-width: 1px;border-right-color: #c0c0c0;">&#160;</td>
+                    <td style="border-left-style: none;border-left-width: 1px;border-right-style: none;border-right-width: 1px;border-right-color: #c0c0c0;">&#160;</td>
+                    <td style="border-left-style: none;border-left-width: 1px;border-right-style: none;border-right-width: 1px;border-right-color: #c0c0c0;">&#160;</td>
+                    <td style="border-left-style: none;border-left-width: 1px;border-right-style: none;border-right-width: 1px;border-right-color: #c0c0c0;">&#160;</td>
+                    <td style="border-left-style: none;border-left-width: 1px;border-right-style: none;border-right-width: 1px;border-right-color: #c0c0c0;">&#160;</td>
+                    <td style="border-left-style: none;border-left-width: 1px;border-right-style: none;border-right-width: 1px;border-right-color: #c0c0c0;">&#160;</td>
+                    <td style="border-left-style: none;border-left-width: 1px;border-right-style: none;border-right-width: 1px;border-right-color: #c0c0c0;">&#160;</td>
+                    <td style="border-left-style: none;border-left-width: 1px;border-right-style: none;border-right-width: 1px;border-right-color: #c0c0c0;">&#160;</td>
+                    <td style="border-left-style: none;border-left-width: 1px;border-right-style: none;border-right-width: 1px;border-right-color: #c0c0c0;">&#160;</td>
+                    <td style="border-left-style: none;border-left-width: 1px;border-right-style: none;border-right-width: 1px;border-right-color: #c0c0c0;">&#160;</td>
+                    <td style="border-left-style: none;border-left-width: 1px;border-right-style: none;border-right-width: 1px;border-right-color: #c0c0c0;">&#160;</td>
+                </tr>
+                <tr>
+                    <td style="background-color: #DBDBDB;border-left-style: none;border-left-width: 1px;border-right-style: none;border-right-width: 1px;border-right-color: #c0c0c0;">2</td>
+                    <td style="border-left-style: none;border-left-width: 1px;border-right-style: none;border-right-width: 1px;border-right-color: #c0c0c0;">ABC</td>
+                    <td style="border-left-style: none;border-left-width: 1px;border-right-style: none;border-right-width: 1px;border-right-color: #c0c0c0;">ABC</td>
+                    <td style="border-left-style: none;border-left-width: 1px;border-right-style: none;border-right-width: 1px;border-right-color: #c0c0c0;">ABC</td>
+                    <td style="border-left-style: none;border-left-width: 1px;border-right-style: none;border-right-width: 1px;border-right-color: #c0c0c0;">&#160;</td>
+                    <td style="border-left-style: none;border-left-width: 1px;border-right-style: none;border-right-width: 1px;border-right-color: #c0c0c0;">&#160;</td>
+                    <td style="border-left-style: none;border-left-width: 1px;border-right-style: none;border-right-width: 1px;border-right-color: #c0c0c0;">&#160;</td>
+                    <td style="border-left-style: none;border-left-width: 1px;border-right-style: none;border-right-width: 1px;border-right-color: #c0c0c0;">&#160;</td>
+                    <td style="border-left-style: none;border-left-width: 1px;border-right-style: none;border-right-width: 1px;border-right-color: #c0c0c0;">&#160;</td>
+                    <td style="border-left-style: none;border-left-width: 1px;border-right-style: none;border-right-width: 1px;border-right-color: #c0c0c0;">&#160;</td>
+                    <td style="border-left-style: none;border-left-width: 1px;border-right-style: none;border-right-width: 1px;border-right-color: #c0c0c0;">&#160;</td>
+                    <td style="border-left-style: none;border-left-width: 1px;border-right-style: none;border-right-width: 1px;border-right-color: #c0c0c0;">&#160;</td>
+                    <td style="border-left-style: none;border-left-width: 1px;border-right-style: none;border-right-width: 1px;border-right-color: #c0c0c0;">&#160;</td>
+                    <td style="border-left-style: none;border-left-width: 1px;border-right-style: none;border-right-width: 1px;border-right-color: #c0c0c0;">&#160;</td>
+                    <td style="border-left-style: none;border-left-width: 1px;border-right-style: none;border-right-width: 1px;border-right-color: #c0c0c0;">&#160;</td>
+                    <td style="border-left-style: none;border-left-width: 1px;border-right-style: none;border-right-width: 1px;border-right-color: #c0c0c0;">&#160;</td>
+                    <td style="border-left-style: none;border-left-width: 1px;border-right-style: none;border-right-width: 1px;border-right-color: #c0c0c0;">&#160;</td>
+                </tr>
+                <tr>
+                    <td style="background-color: #DBDBDB;border-left-style: none;border-left-width: 1px;border-right-style: none;border-right-width: 1px;border-right-color: #c0c0c0;">3</td>
+                    <td style="border-left-style: none;border-left-width: 1px;border-right-style: none;border-right-width: 1px;border-right-color: #c0c0c0;">ABC</td>
+                    <td style="border-left-style: none;border-left-width: 1px;border-right-style: none;border-right-width: 1px;border-right-color: #c0c0c0;">&#160;</td>
+                    <td style="border-left-style: none;border-left-width: 1px;border-right-style: none;border-right-width: 1px;border-right-color: #c0c0c0;">&#160;</td>
+                    <td style="border-left-style: none;border-left-width: 1px;border-right-style: none;border-right-width: 1px;border-right-color: #c0c0c0;">&#160;</td>
+                    <td style="border-left-style: none;border-left-width: 1px;border-right-style: none;border-right-width: 1px;border-right-color: #c0c0c0;">&#160;</td>
+                    <td style="border-left-style: none;border-left-width: 1px;border-right-style: none;border-right-width: 1px;border-right-color: #c0c0c0;">&#160;</td>
+                    <td style="border-left-style: none;border-left-width: 1px;border-right-style: none;border-right-width: 1px;border-right-color: #c0c0c0;">&#160;</td>
+                    <td style="border-left-style: none;border-left-width: 1px;border-right-style: none;border-right-width: 1px;border-right-color: #c0c0c0;">&#160;</td>
+                    <td style="border-left-style: none;border-left-width: 1px;border-right-style: none;border-right-width: 1px;border-right-color: #c0c0c0;">&#160;</td>
+                    <td style="border-left-style: none;border-left-width: 1px;border-right-style: none;border-right-width: 1px;border-right-color: #c0c0c0;">&#160;</td>
+                    <td style="border-left-style: none;border-left-width: 1px;border-right-style: none;border-right-width: 1px;border-right-color: #c0c0c0;">&#160;</td>
+                    <td style="border-left-style: none;border-left-width: 1px;border-right-style: none;border-right-width: 1px;border-right-color: #c0c0c0;">&#160;</td>
+                    <td style="border-left-style: none;border-left-width: 1px;border-right-style: none;border-right-width: 1px;border-right-color: #c0c0c0;">&#160;</td>
+                    <td style="border-left-style: none;border-left-width: 1px;border-right-style: none;border-right-width: 1px;border-right-color: #c0c0c0;">&#160;</td>
+                    <td style="border-left-style: none;border-left-width: 1px;border-right-style: none;border-right-width: 1px;border-right-color: #c0c0c0;">&#160;</td>
+                    <td style="border-left-style: none;border-left-width: 1px;border-right-style: none;border-right-width: 1px;border-right-color: #c0c0c0;">&#160;</td>
+                </tr>
+                <tr>
+                    <td style="background-color: #DBDBDB;border-left-style: none;border-left-width: 1px;border-right-style: none;border-right-width: 1px;border-right-color: #c0c0c0;">4</td>
+                    <td style="border-left-style: none;border-left-width: 1px;border-right-style: none;border-right-width: 1px;border-right-color: #c0c0c0;">BC</td>
+                    <td style="border-left-style: none;border-left-width: 1px;border-right-style: none;border-right-width: 1px;border-right-color: #c0c0c0;">&#160;</td>
+                    <td style="border-left-style: none;border-left-width: 1px;border-right-style: none;border-right-width: 1px;border-right-color: #c0c0c0;">&#160;</td>
+                    <td style="border-left-style: none;border-left-width: 1px;border-right-style: none;border-right-width: 1px;border-right-color: #c0c0c0;">&#160;</td>
+                    <td style="border-left-style: none;border-left-width: 1px;border-right-style: none;border-right-width: 1px;border-right-color: #c0c0c0;">&#160;</td>
+                    <td style="border-left-style: none;border-left-width: 1px;border-right-style: none;border-right-width: 1px;border-right-color: #c0c0c0;">&#160;</td>
+                    <td style="border-left-style: none;border-left-width: 1px;border-right-style: none;border-right-width: 1px;border-right-color: #c0c0c0;">&#160;</td>
+                    <td style="border-left-style: none;border-left-width: 1px;border-right-style: none;border-right-width: 1px;border-right-color: #c0c0c0;">&#160;</td>
+                    <td style="border-left-style: none;border-left-width: 1px;border-right-style: none;border-right-width: 1px;border-right-color: #c0c0c0;">&#160;</td>
+                    <td style="border-left-style: none;border-left-width: 1px;border-right-style: none;border-right-width: 1px;border-right-color: #c0c0c0;">&#160;</td>
+                    <td style="border-left-style: none;border-left-width: 1px;border-right-style: none;border-right-width: 1px;border-right-color: #c0c0c0;">&#160;</td>
+                    <td style="border-left-style: none;border-left-width: 1px;border-right-style: none;border-right-width: 1px;border-right-color: #c0c0c0;">&#160;</td>
+                    <td style="border-left-style: none;border-left-width: 1px;border-right-style: none;border-right-width: 1px;border-right-color: #c0c0c0;">&#160;</td>
+                    <td style="border-left-style: none;border-left-width: 1px;border-right-style: none;border-right-width: 1px;border-right-color: #c0c0c0;">&#160;</td>
+                    <td style="border-left-style: none;border-left-width: 1px;border-right-style: none;border-right-width: 1px;border-right-color: #c0c0c0;">&#160;</td>
+                    <td style="border-left-style: none;border-left-width: 1px;border-right-style: none;border-right-width: 1px;border-right-color: #c0c0c0;">&#160;</td>
+                </tr>
+            </tbody>
+        </table>
+        <p>&#160;</p>
+    </body>
+</html>

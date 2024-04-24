@@ -1,0 +1,64 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head />
+    <body>
+        <h1>Maintaining hierarchies</h1>
+        <p>Hierarchies are maintained through the <span class="Emphasis">Edit Hierarchy</span> function located on the <span class="Emphasis">Add / Update Group Forecast Model</span> window. This function is used to select the available levels for the model. These levels have targeted accuracy levels and a tolerance threshold value. Each level included is a forecasted series, based on the supplied filter.</p>
+        <h2>Editing a hierarchy</h2>
+        <ol>
+            <li>
+                <p>Navigate to the <span class="Emphasis">Execute</span> tab, click <span class="Emphasis">Group Forecast</span> and then <span class="Emphasis">Manage</span>. </p>
+                <p>The <span class="Emphasis">Forecast Group Model Management</span> window displays.</p>
+            </li>
+            <li>
+                <p>Select the model to change, and click <span class="Emphasis">Edit</span>. </p>
+                <p>The <span class="Emphasis">Add / Update Group Forecast Model</span> window displays.</p>
+            </li>
+            <li>
+                <p>Click the <span class="Emphasis">Edit Hierarchy</span> button to display the <span class="Emphasis">Maintain Hierarchy</span> window.</p>
+                <p>
+                    <img src="../../Resources/Images/Group Forecasts/Maintain Hierarchy Dialog.png" class="LargeImages" />
+                </p>
+            </li>
+            <li>
+                <p>From the <span class="Emphasis">Available Levels</span> dropdown menu, select the available levels as follows:</p>
+                <ul>
+                    <li>
+                        <span class="Emphasis">All Aggregated Together</span>:  establishes a single rooted node. If included, this level must always be the highest level of the group. </li>
+                    <li>
+                        <span class="Emphasis">Inventory Level</span>: the item/site combination. </li>
+                    <li>
+                        <span class="Emphasis">Site Level</span>:&#160;the lowest level of site hierarchy. <ul><li><span class="Emphasis">Site Region</span>:&#160;optional named site hierarchy level.</li><li><span class="Emphasis">Site Division</span>: optional named site hierarchy level. </li></ul></li>
+                    <li>
+                        <span class="Emphasis">Item Level</span>: the lowest level of product hierarchy (independent of site).</li>
+                    <li>
+                        <span class="Emphasis">Site Groups</span>:&#160;configured site groups. Can be hierarchical, if desired. </li>
+                    <li>
+                        <span class="Emphasis">Item Groups</span>:&#160;configured inventory groups. These are distinctly different from item master groups. </li>
+                </ul>
+            </li>
+            <li>
+                <p>Click <span class="Emphasis">Ok</span>. </p>
+                <p>The available levels display. </p>
+            </li>
+            <li>
+                <p>Enter the individual target percentages and target threshold tolerances  as follows: </p>
+                <ul>
+                    <li>
+                        <span class="Emphasis">Description</span>: the name of the level.</li>
+                    <li>
+                        <span class="Emphasis">Period Over Period Target Percentage</span>:&#160;used to grade the forecast based on MAPE. In the report, any value over the period-over-period target displays in green, indicating an acceptable forecast. </li>
+                    <li>
+                        <span class="Emphasis">Period Over Period Target Threshold Percentage</span>: the tolerance for the grading system as relates to the period-over-period target (e.g. a 5% tolerance on a target value of 70% must be at least 65% in MAPE accuracy). Any value between the period-over-period target and the low end of the threshold displays in yellow, indicating a mildly acceptable forecast. Any value below the threshold will appear red, indicating a poor forecast.</li>
+                    <li>
+                        <span class="Emphasis">Year Over Year Target Percentage</span>:&#160;the year-over-year target aggregates the values and is expected to have a much higher tolerance percentage (as the forecast is expected to be more accurate, but less precise).</li>
+                    <li>
+                        <span class="Emphasis">Year Over Year Target Threshold Percentage</span>:&#160;the tolerance for the grading system as relates to the year-over-year target (e.g. a 5% tolerance on a target value of 70% must be at least 65% in MAPE accuracy). Any value between the year-over-year target and the low end of the threshold displays in yellow, indicating a mildly acceptable forecast. Any value below the threshold displays in red, indicating a poor forecast.</li>
+                    <li>
+                        <span class="Emphasis">Level Order</span>: the order in which the levels are applied. </li>
+                </ul>
+            </li>
+            <li>Click <span class="Emphasis">Ok</span>.</li>
+        </ol>
+    </body>
+</html>

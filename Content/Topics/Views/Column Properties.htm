@@ -1,0 +1,101 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" xml:lang="en-us">
+    <head><title></title>
+    </head>
+    <body>
+        <h1>Column properties</h1>
+        <p>The Column Properties section lets users add, modify, and delete columns as needed within the grid. </p>
+        <ul>
+            <li><span class="Emphasis">Column</span> – The column name.</li>
+            <li><span class="Emphasis">Column Friendly Name</span> – An optional user readable name.</li>
+            <li><span class="Emphasis">Tool Tip Text</span> – Supplies text for a mouse-over tool tip on the column. </li>
+            <li><span class="Emphasis">Visible</span> – If checked, the column is visible within the widget. </li>
+            <li><span class="Emphasis">Order</span> – The stacked numerical order for the columns in the widget. Any column without the <span class="Emphasis">Visible</span> flag checked will have an order of <span class="Emphasis">0</span>.</li>
+            <li>
+                <p><span class="Emphasis">Format String</span> – The format string settings affect how data displays. Format string entries vary depending on the data type. Examples include:</p>
+                <ul>
+                    <li><span class="Emphasis">P2</span> – A percentage with two decimal places.</li>
+                    <li><span class="Emphasis">F3</span> – A fixed point decimal with three decimal places.</li>
+                    <li><span class="Emphasis">C</span> – A currency.</li>
+                    <li><span class="Emphasis">D6</span> – A decimal with six decimal places.</li>
+                </ul>
+            </li>
+            <li><span class="Emphasis">Pivot Area</span> – The default area of the pivot grid for the column (can be moved). </li>
+            <li><span class="Emphasis">Allowed Pivot Areas</span> – If the column is allowed to be moved from its default pivot area, the available areas are listed, or a value of <span class="Emphasis">All</span> is present. </li>
+            <li><span class="Emphasis">Show Column Totals</span> – If checked, shows a total for the column. </li>
+            <li><span class="Emphasis">Show Column Grand Totals</span> – If checked, shows a grand total for the column. </li>
+            <li><span class="Emphasis">Fore Color</span> – The text color for the column. </li>
+            <li><span class="Emphasis">Back Color</span> – The background color for the column. </li>
+            <li><span class="Emphasis">Aggregate Type</span> – Determines how the data within the column aggregates. </li>
+            <p>
+                <img src="../../Resources/Images/Views/Aggregate Type.png" class="LargeImages" />
+            </p>
+            <li><span class="Emphasis">Aggregate Display Type</span> – Determines how the aggregated data displays. </li>
+            <p>
+                <img src="../../Resources/Images/Views/Aggregate Display Type.png" class="LargeImages" />
+            </p>
+            <li>
+                <p><span class="Emphasis">Total Aggregate Type</span> – Total aggregate refers to the level above the lowest level. The aggregate type selected determines how that data is aggregated. For example, week level data would be aggregate type and month level data would be the total aggregate type.</p>
+                <p>
+                    <img src="../../Resources/Images/Views/Total Aggregate Type.png" class="LargeImages" />
+                </p>
+            </li>
+            <li><span class="Emphasis">Show in Customization Form</span> – Display the fields button within the user interface. </li>
+            <li><span class="Emphasis">Show Values</span> – Display the value to users. This is different from the Visible field in that the data is still available for calculations, but not displayed to the end users.</li>
+            <li><span class="Emphasis">Allow Drag</span> – Allows the column to be moved to another pivot area.</li>
+            <li><span class="Emphasis">Allow Drag in Customization Form</span> – Allows the column to be moved to another pivot area within the customization form (fields view).</li>
+            <li><span class="Emphasis">Running Total</span> – If selected, certain aggregation types (SUM, COUNT, etc.) display the running total, which is calculated for values in the&#160;<a href="https://documentation.devexpress.com/WindowsForms/CustomDocument1693.aspx">data area</a>&#160;and corresponds to the current&#160;<a href="https://documentation.devexpress.com/WindowsForms/CustomDocument1710.aspx">column</a>&#160;or&#160;<a href="https://documentation.devexpress.com/WindowsForms/CustomDocument1709.aspx">row field</a>. </li>
+            <li><span class="Emphasis">Min Width</span> – The minimum number of pixels for width on the column. </li>
+            <li><span class="Emphasis">Width</span> – The standard number of pixels for width on the column.</li>
+            <li><span class="Emphasis">Write Enabled</span> – Allows the field to be edited within the user interface.</li>
+            <li>
+                <p><span class="Emphasis">Writeback Split Type</span> – Determines how the value is split when written back.</p>
+                <ul>
+                    <li><span class="Emphasis">Direct</span> – Writes the value exactly as defined by the user.</li>
+                    <li><span class="Emphasis">Equal Split</span> – Equally divides the value by the number of dependents at the lower level (i.e. a month value splits into four weeks equally).</li>
+                    <li><span class="Emphasis">Weighted Split</span> – Requires users to specify how splits are distributed. If selected, requires users to set the writeback weight based on column. </li>
+                </ul>
+            </li>
+            <li><span class="Emphasis">Writeback Weight Based on Column</span> – Defines the weighted split value.</li>
+            <li><span class="Emphasis">Writeback to Column Name</span> – If selected, allows a data writeback within the column to affect the value of another column.</li>
+            <li><span class="Emphasis">Row Level Write Enabled Check Field</span> – At row level, determines if the value is write enabled.  </li>
+            <li><span class="Emphasis">Pivot Level Write Enabled Check Field</span> – At the pivot level, determines if the value is write enabled. If enabled at pivot level, the row level write back is also enabled.  </li>
+            <li><span class="Emphasis">Row Level Locked Check Field</span> – If selected, locks the data at the row level.  </li>
+            <li><span class="Emphasis">Aux Write Enabled</span> – If selected, allows a data writeback within the column to affect the value of multiple columns, (which must be specified).  </li>
+            <li>
+                <p><span class="Emphasis">Aux Writeback Value Calculation</span> – Allows for an expression to calculate the value which is written back. Any column within the pivot grid can be referenced by using the true column name within square brackets (case sensitive). Available parameters include:</p>
+                <ul>
+                    <li><span class="Emphasis">@Value</span> – Whatever the user supplied value is becomes the <span class="Emphasis">@Value</span> (e.g. @Value/SalesUnits would be used to derive AUR).</li>
+                    <li><span class="Emphasis">@OldValue</span> – Use the value before the user changed it to make the calculation (i.e. for holding calculations).</li>
+                </ul>
+            </li>
+            <li>
+                <p><span class="Emphasis">Aux Writeback Split Type</span> – Determines how the value splits when written back.</p>
+                <ul>
+                    <li><span class="Emphasis">Direct</span> – Writes the value exactly as defined by the user.</li>
+                    <li><span class="Emphasis">Equal Split</span> – Equally divides the value by the number of dependents at the lower level (i.e. month value splits into four weeks equally).</li>
+                    <li><span class="Emphasis">Weighted Split</span> – Requires user to specify how the split is distributed. If selected, requires users to set the writeback weight based on column. </li>
+                </ul>
+            </li>
+            <li><span class="Emphasis">Aux Writeback Weight Based on Column</span> – Defines the weighted split value for the aux writeback.</li>
+            <li><span class="Emphasis">Aux Writeback to Column Name</span> – If selected, allows a data writeback within the column to affect the value of another column.</li>
+            <li><span class="Emphasis">Aux Row Level Write Enabled Check Field</span> – At row level, determines if the value is write enabled.&#160; </li>
+            <li><span class="Emphasis">Aux Pivot Level Write Enabled Check Field</span> – At the pivot level, determines if the value is write enabled. If enabled at pivot level, the row level write back is also enabled.</li>
+            <li><span class="Emphasis">Sort Order</span> – Determines the sort order for the data within the column.  </li>
+            <li><span class="Emphasis">Sort by Column</span> – Enables the reference column used for sorting. </li>
+            <li><span class="Emphasis">Column Used to Sort</span> – Specifies the reference column used for sorting. </li>
+            <li><span class="Emphasis">Expression Column</span> – If checked, the column is an expression column used to make a calculation. </li>
+            <li><span class="Emphasis">Expression</span> – If the column is an expression column, this will display the value of the expression. </li>
+            <li>
+                <p><span class="Emphasis">Expression Column Type</span> – Will describe the level at which the expression calculation is done.</p>
+                <p>
+                    <img src="../../Resources/Images/Views/Expression Column Type.png" class="LargeImages" />
+                </p>
+            </li>
+            <li><span class="Emphasis">Data Type</span> – Defines the output data type of the expression.  </li>
+            <li><span class="Emphasis">Derived Column Type</span> – Derived columns are legacy functionality and all features have been replaced by functionality in expression columns.  </li>
+            <li><span class="Emphasis">Derived From Column</span> – Derived columns are legacy functionality and all features have been replaced by functionality in expression columns.&#160; </li>
+            <li><span class="Emphasis">Lookup Column</span> – Checked if column is a lookup column. </li>
+        </ul>
+    </body>
+</html>

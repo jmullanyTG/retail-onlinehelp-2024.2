@@ -1,0 +1,49 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" xml:lang="en-us">
+    <head><title></title>
+    </head>
+    <body>
+        <h1>Promotion Application section </h1>
+        <p>Promotions are primarily defined in the <span class="Emphasis">Promotion Application</span> section. This section displays information for promotion applications already created for the promotion selected in the <span class="Emphasis">Defined Promotions</span> section. Users can create new applications and delete or change existing applications.</p>
+        <p>
+            <img src="../../Resources/Images/Assortment Planning/Promotion Application Section.png" class="LargeImages" />
+        </p>
+        <h2>Creating empty placeholders</h2>
+        <p>Users can create completely empty placeholders and add promotion items in the <span class="Emphasis">Promotion Detail View</span> tab one at a time.</p>
+        <h2>Grid fields</h2>
+        <p><span class="Emphasis">Product Filter</span>: Clicking in this field displays the Items dialog allowing users to select a product filter of placeholders to include in the promotion application. </p>
+        <p>
+            <img src="../../Resources/Images/Assortment Planning/AP Items filter dialog.png" class="LargeImages" />
+        </p>
+        <p>Selecting the dropdown arrow in the <span class="Emphasis">Filter</span> field displays a list of filters. </p>
+        <p>The <img src="../../Resources/Images/Assortment Planning/Hammer Filter Icon.png" class="IconInline" /> icon launches the <span class="Emphasis">Maintain Filters</span> dialog where users can create new product filters, edit, delete, or export existing product filters, and import product filter files.</p>
+        <p>Choosing a product filter with products that are not included in Product selection of the Parameters area may cause promotion applications to disappear from the view when the screen is refreshed. To view them again, adjust the Product selection to include the Product Filter chosen for the application.</p>
+        <p><span class="Emphasis">Cluster Sets</span>: The cluster sets for the promotion application. </p>
+        <p>Any cluster sets related to the <span class="Emphasis">Site Hierarchy</span> parameter are available for selection here. However, if the cluster sets chosen are not included in the <span class="Emphasis">Cluster Sets</span> parameter, then the promotion application may disappear from the view when the screen is refreshed.</p>
+        <p><span class="Emphasis">Additional Cluster Sets Added?</span>: If a placeholder is defined with a filter and cluster sets up front and then placeholders or cluster sets are added later, then this field shows as checked.</p>
+        <p><span class="Emphasis">Start Date</span>: The start date (as a period) for promotion application. Defaults to the Eligibility Start Date for the promotion or the nearest non-actualized period. This date cannot be set prior to the Eligibility Start Date for the promotion. Start dates at the Promotion Application Details level cannot be set prior to this date.</p>
+        <p><span class="Emphasis">End Date</span>: The end date (as a period) for promotion application. Defaults to the Eligibility End Date for the promotion. This date cannot be set after the Eligibility End Date for the promotion. End dates at the Promotion Application Details level cannot be set after this date.</p>
+        <p><span class="Emphasis">Intermittent Over Time?</span>: If checked, then indicates that the promotion is not continuous. (Promotions can be active on and off between the dates selected.)</p>
+        <p><span class="Emphasis">Final Index</span>: The Promotional Index for this specific application of the promotion. Defaults to the Final Index of the selected promotion. Changing the Final Index at this level pushes down and overwrites all placeholder/cluster Final Indices when <span class="Emphasis">Save</span> is clicked for the promotion application in the <span class="Emphasis">Promotion Application Details</span> section.</p>
+        <p><span class="Emphasis">Apply to Markdown Periods?</span>: When checked, prevents promotions from being applied to any markdown periods.</p>
+        <p><span class="Emphasis">Hold Sales</span>: Whether the promotion application has the ability to increase total sales of the placeholder/clusters it affects. If:<ul><li><p><span class="Emphasis">Checked</span>: (Enabled) the total sales of affected placeholder/clusters remains the same as before the promotion was applied and only magnitude of sales in each period is adjusted.</p><MadCap:snippetBlock src="../../Resources/Snippets/AP Hold Sales Enabled.flsnp" /></li><li><span class="Emphasis">Unchecked</span>: The total sales of the affected placeholder/clusters can increase above the magnitude prior to promotion application. This is effected through recalculation of the placeholder/cluster rates of sale.</li></ul><p><img src="../../Resources/Images/Assortment Planning/Promotion Application Section Hold Sales Indicator.png" class="IconInline" />: Indicates that only some of the placeholder/clusters included in the promotion application have the Hold Sales option checked.</p><p class="BasicNote">Checking or unchecking this option at the Promotion Application level pushes the change down to all placeholder/clusters included in the application.</p></p>
+        <p><span class="Emphasis"># Placeholders</span>: The number of placeholders to which the application is actually being applied per the <span class="Emphasis">Promotion Application Details</span> section.</p>
+        <p><span class="Emphasis">Location Exceptions</span>: Whether site level exclusions have been made to the promotion application</p>
+        <p><span class="Emphasis">Location Exceptions</span> Clicking in this field launches the <span class="Emphasis">Assortment Promotion Locations</span> dialog. For more information, see <MadCap:xref href="Assortment Promotions Locations dialog.htm">Assortment Promotions Locations dialog</MadCap:xref>.</p>
+        <p><span class="Emphasis">Approximation</span>: Launches the <span class="Emphasis">Assortment Promotion Approximation</span> dialog. For more information, see <MadCap:xref href="Assortment Promotion Approximation Window.htm">Assortment Promotion Approximation dialog</MadCap:xref>.</p>
+        <p><span class="Emphasis">Status</span>: The status of the promotion application. Options are:<ul><li><span class="Emphasis">Active</span>: The application is applied to the placeholder/clusters as per the <span class="Emphasis">Promotion Application Details</span> section with all related sales plans being effected accordingly.</li><li><span class="Emphasis">Inactive</span>: Default setting. The application is still saved and ready for application but has not yet been applied. It is visible in the <span class="Emphasis">Promotions</span> supporting view of the main planning view but does not have an effect on the sales plans of the placeholder/clusters shown in the <span class="Emphasis">Promotion Application Details</span> section.</li></ul></p>
+        <h2>Toolbar buttons</h2>
+        <ul>
+            <li><span class="Emphasis">New</span>: Creates a new promotion application line for the promotion selected in the <span class="Emphasis">Defined Promotions</span> section.</li>
+            <li>
+                <p><span class="Emphasis">Delete</span>: Removes the selected item from the list of promotion applications.</p>
+                <p class="Caution">
+
+    Users are not asked to confirm deletion of promotion applications.</p>
+            </li>
+            <li><span class="Emphasis">Fields</span>: Opens the <span class="Emphasis">Customization</span> dialog. Users can drag fields to or from the tab’s header area and this dialog to customize the view. Custom layouts can be saved or restored by right-clicking in the grid and selecting <span class="Emphasis">Save Layout</span> or <span class="Emphasis">Restore Layout</span>, respectively.</li>
+            <li><span class="Emphasis">Save</span>: Saves all newly created promotion applications and changes or deletions of existing promotion applications made since the last save. For promotions marked as <span class="Emphasis">Active</span>, this applies the promotion as per the specifics in the <span class="Emphasis">Promotion Application Detail</span> section.</li>
+            <li><span class="Emphasis">Cancel</span>: Removes all newly created promotion applications and undoes deletions or change of existing promotion applications made since the last save.</li>
+        </ul>
+    </body>
+</html>

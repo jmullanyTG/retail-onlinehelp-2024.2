@@ -1,0 +1,103 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" xml:lang="en-us">
+    <head>
+        <link href="../../Resources/TableStyles/standard.css" rel="stylesheet" MadCap:stylesheetType="table" /><title></title>
+    </head>
+    <body>
+        <h1>Multi-Currency Price View</h1>
+        <p>The <span class="Emphasis">Multi-Currency Price View</span> view is used to both manage price exceptions by placeholder for all of the currencies used in the clusters to which that placeholder is assorted and view the specific usage of a price matrix.  The two read-only Price Matrix columns, <span class="Emphasis">Price Matrix Local AUT</span> and <span class="Emphasis">Price Matrix Home AUT</span>, let users see how, for each period, the <span class="Emphasis">Home AUT</span> value converts into each specific currency's value.</p>
+        <p class="BasicNote">System policy <span class="Emphasis">Line Visualization Allow Price Exceptions</span> sets whether this view is read-only or editable. If set to <span class="Emphasis">False</span>, the view displays but is read-only. To affect a change in this policy on an already open plan, the plan must be reopened through the <span class="Emphasis">Manage Assortment Plans</span> dialog.</p>
+        <h2>Conditional formatting</h2>
+        <p>Orange shaded cells indicates a change in AUT from the prior period for the currency indicated by the column section header.</p>
+        <h2>Resetting default factors</h2>
+        <p>Default translation factors for all non-actualized periods for the product level of the selected placeholder (as defined in the <span class="Emphasis">Price Translation Management</span>, and <span class="Emphasis">Price Translation Hierarchy Assignment</span> views) can be restored by selecting <span class="Emphasis">Reset Default Factors</span> on the toolbar. Restoring default factors causes the <span class="Emphasis">Local AUT</span> and <span class="Emphasis">Home AUT Equivalent</span> fields to recalculate accordingly.</p>
+        <h2>Price Exception conversion method enabled</h2>
+        <p>
+            <img src="../../Resources/Images/Assortment Planning/Multi-Currency Price View Price Translation.PNG" class="LargeImages" />
+        </p>
+        <table style="width: 100%;margin-left: auto;margin-right: auto;mc-table-style: url('../../Resources/TableStyles/standard.css');" class="TableStyle-standard" cellspacing="0">
+            <col class="TableStyle-standard-Column-Column1" />
+            <col class="TableStyle-standard-Column-Column2" />
+            <thead>
+                <tr class="TableStyle-standard-Head-Header1">
+                    <th class="TableStyle-standard-HeadE-Column1-Header1">Field</th>
+                    <th class="TableStyle-standard-HeadD-Column2-Header1">Description</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1"><span class="Emphasis">Period</span>
+                    </td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">The period being changed. This aligns with the period type for the current assortment plan.</td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1"><i>currency</i>
+                    </td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">
+                     The selected placeholder AUT in default currency (defined when creating the plan) for the active assortment plan. 
+                        <p class="BasicNote">This field shows a weighted average AUT for all clusters for the period in question. If differences exist by cluster and/or from period to period, values shown may not align with those shown in the main planning view or the <span class="Emphasis">Sales Plan</span> view.</p></td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1"><i>currency</i> <span class="Emphasis">(Ex VAT)</span></td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">Hidden by default) The selected placeholder AUT excluding VAT in the default currency for the active assortment plan.<![CDATA[ 
+                        ]]><p><span class="Emphasis">Calculation</span>: Home AUT / (1 + VAT %)</p></td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1"><span class="Emphasis">Local AUT</span>
+                    </td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1"> The blended ticket price in local currency (as indicated in the column section header) for the selected placeholder for the period.<![CDATA[
+                        ]]><p><span class="Emphasis">Calculation</span>: Local AUT ex VAT + (Local AUT ex VAT * VAT %)</p></td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1"><span class="Emphasis">Local AUT (ex VAT)</span>
+                    </td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">The blended ticket price excluding VAT in local currency for the selected placeholder for the period.<![CDATA[
+                        ]]><p><span class="Emphasis">Calculation</span>: Home AUT ex VAT Equivalent * Exchange Rate</p></td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1"><span class="Emphasis">Home AUT (Ex VAT) Equivalent</span>
+                    </td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">
+                         The blended ticket price as a local equivalent price excluding VAT in the home currency after a translation factor has been applied for the selected placeholder for the period.<![CDATA[ 
+                        ]]><p><span class="Emphasis">Calculation</span>: Home AUT ex VAT * Translation Factor</p></td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyB-Column1-Body1"><span class="Emphasis">Translation Factor</span>
+                    </td>
+                    <td class="TableStyle-standard-BodyA-Column2-Body1">
+                        <p>The translation factor to apply to determine the final blended ticket price in home and local currencies for the selected placeholder for the period.</p>
+                        <p><span class="Emphasis">Calculation</span>: Home AUT ex VAT Equivalent / Home AUT ex VAT</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <h2>Price Matrix conversion method enabled</h2>
+        <p>If Price Matrix conversions are enabled via system policy <span class="Emphasis">Price Conversion Method</span> and a Price Matrix has been set on a given placeholder, then the configured Price Matrix is used to convert the provided Home AUT value to Blended AUT.</p>
+        <p>
+            <img src="../../Resources/Images/Assortment Planning/Multi-Currency Price View.png" class="LargeImages" />
+        </p>
+        <MadCap:snippetBlock src="../../Resources/Snippets/Home AUT and Blended AUT.flsnp" MadCap:conditions="General.DoNotPublish" />
+        <h3>Price Matrix functionality example</h3>
+        <p>First, a Price Matrix is created.  Each row in the matrix indicates a series of prices that are equivalent to each other across countries and currencies. </p>
+        <p>
+            <img src="../../Resources/Images/Assortment Planning/Multi-Currency Price Point Matrix Example.png" class="LargeImages" />
+        </p>
+        <p>In the example, this indicates that USD $67.99 is equivalent to PLN zł270.  The matrix is meant to encapsulate both currency conversions and elegant rounding, or the standard price endings based on currency and locale, like ending prices in 99 cents in USD.
+
+</p>
+        <p>The Price Matrix should be specified as a hierarchy default so that newly created placeholders can automatically inherit this property.  Then, when new placeholders are created with a given Home AUT, a Blended AUT value can automatically be created.</p>
+        <p>
+            <img src="../../Resources/Images/Assortment Planning/Multi-Currency Matrix Specified as Default.png" class="LargeImages" />
+        </p>
+        <p class="BasicNote">It is not necessary to set a Price Matrix Rounding rule.  If a Price Matrix is specified, but no Rounding rule is specified, then <span class="Emphasis">Nearest</span> is used.
+</p>
+        <p>The <span class="Emphasis">Multi-Currency Price View</span> also indicates whether any value was missing from the indicated Price Matrix value, for example, if a site in the cluster had currency GBP but this currency was not included in the Price Matrix.
+
+</p>
+        <p>After the AUT values are converted from Home AUT values to currency-specific values using the Price Matrix, all AUT values are then converted back to Home currency using currency conversion rates, and a weighted average is used to calculate the cluster's combined Blended AUT value. </p>
+        <p>Each period and cluster's Home AUT values can be modified in the Sales Plan view, and Blended AUT for each period and cluster can be viewed there as well.</p>
+        <p>
+            <img src="../../Resources/Images/Assortment Planning/Multi-Currency Sales Plan View Edit.png" class="LargeImages" />
+        </p>
+    </body>
+</html>

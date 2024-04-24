@@ -1,0 +1,32 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" xml:lang="en-us">
+    <head><title></title>
+    </head>
+    <body>
+        <h1>Rate of Sale by Percentile</h1>
+        <p>After scenarios have been calculated, the results are grouped into the following performance percentiles (configurable during implementation):  </p>
+        <ul>
+            <li>Minimum</li>
+            <li>25th percentile</li>
+            <li>Median (50th percentile)</li>
+            <li>75th percentile</li>
+            <li>Maximum</li>
+            <li>Average (default selection)</li>
+        </ul>
+        <p class="BasicNote">Average shows the true average rate of sale per variant/period for the selected data, not the average from the configured percentile bands</p>
+        <p>
+            <img src="../../Resources/Images/Rate of Sale Calculator/Rate of Sale Percentile.png" class="LargeImages" />
+        </p>
+        <p>
+            <img src="../../Resources/Images/Rate of Sale Calculator/ROS Scenario Results section.png" class="LargeImages" />
+        </p>
+        <p>The sales history for the selected items is distributed across a performance percentile (Worst, 30%, 50%, 70%, Best).</p>
+        <h2>Column definitions</h2>
+        <ul>
+            <li>Raw ROS: No data cleansing or filtering</li>
+            <li>Adjusted ROS: Sales history that has been cleansed by the data cleansing steps outlined previously in this document</li>
+            <li>Record Count: The number of data points (style/color sales periods) used in the calculation of the displayed rates of sale – to serve as an indication of relative data strength</li>
+            <li>Effective ROS: The ROS to be applied to the list of placeholders/variants in the third and bottom view of the ROS calculator screen.&#160; The Effective ROS can be adjusted by checking the ROS from the Scenario results or by manually entering a value.&#160; ROS selection is cluster specific and the distribution selection can vary by cluster</li>
+        </ul>
+    </body>
+</html>

@@ -1,0 +1,93 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" xml:lang="en-us">
+    <head>
+        <link href="../../Resources/TableStyles/standard.css" rel="stylesheet" MadCap:stylesheetType="table" />
+        <title>
+        </title>
+    </head>
+    <body>
+        <h1>Price calculations</h1>
+        <p>The <span class="Emphasis">Price Calculations</span> view provides the ability to configure calculations via formula expressions as well as the rounding set and destination fields. The grid on the right can be used to copy and paste values to the <span class="Emphasis">Formula</span> field to reduce manual entry error. The variable grid also provides insight into which variables are being used in the formula.</p>
+        <p>
+            <img src="../../Resources/Images/Price Planning/Strategy Calculation Rules.png" class="LargeImages" />
+        </p>
+        <h2>Creating and maintaining calculations</h2>
+        <p>Within the <span class="Emphasis">Price Calculations</span> screen, click <span class="Emphasis">New</span> to create a new Calculation or Calculation Rule, enter the required fields and click <span class="Emphasis">Save</span>. Modifications are made directly to the Calculation grid. </p>
+        <p class="BasicNote">Calculations cannot be deleted if associated to a Price Strategy and once deleted cannot be restored. </p>
+        <h2>Calculation fields and descriptions</h2>
+        <table class="TableStyle-standard" cellspacing="0" style="mc-table-style: url('../../Resources/TableStyles/standard.css');">
+            <col style="width: 168px;" class="TableStyle-standard-Column-Column1" />
+            <col class="TableStyle-standard-Column-Column2" />
+            <thead>
+                <tr class="TableStyle-standard-Head-Header1">
+                    <th class="TableStyle-standard-HeadE-Column1-Header1">Field</th>
+                    <th class="TableStyle-standard-HeadD-Column2-Header1">Description</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">
+                          Calculation 
+                    </td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">
+                         A descriptive label summarizing the purpose of the Calculation or Rule. 
+                    </td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">Description 
+                    </td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">An optional summary of the Calculation or Rule. 
+                    </td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">Method (Optional) 
+                    </td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">A list of pre-configured database stored procedures for more complex mathematical formulas or validations. 
+                        <p class="BasicNote">A selection in the <span class="Emphasis">Method</span> field overrides any entry in the <span class="Emphasis">Formula</span> field.</p></td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">Formula (Required/Optional) 
+                    </td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">
+                       The mathematical expression to be evaluated. Configured variables are found in the right panel. 
+                        <h3>Example</h3><pre>Retail Sales Price is % Above Cost1</pre><pre>Variable1 = (1+Variable2)* Variable3</pre><pre>Variable1= [RSP]</pre><pre>Variable2 = [PercentAbove]</pre><pre>Variable3 = [Cost1]</pre><pre>[RSP] = (1+[PercentAbove])*[Cost1]</pre><pre>$5.988 = (1+.20)*$4.99</pre><p>[RSP] populates to the <span class="Emphasis">Targeted Output Field</span>. Validation and calculation of the Price Action Strategy continues.</p></td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">
+                        Targeted Output Field (Required) 
+                    </td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">
+                         A list of configured variables (i.e. user input only) that the configured mathematical formula populates. Output fields cannot be specified for ‘validation’ types. 
+                    </td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">
+                        Rounding Set(Optional) 
+                    </td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">
+                        The Rounding Rules to be applied to the calculation. Rounding Rules cannot be applied to ‘validation’ types. 
+                    </td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">Active (Optional) 
+                    </td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">
+                         Unchecking the checkbox removes the ability to configure the Calculation in any new Price Strategies. 
+                    </td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">Active</td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">If checked, the Calculation process executes that Calculation or Validation. Users can deactivate or uncheck for testing and so on. If unchecked, the Calculation process ignores the Calculation or Validation.</td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">Validated</td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">If checked, a Validation is run against the Formula. Only Calculations that have been validated are executed during the Calculation process.</td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyB-Column1-Body1">Use Matrix</td>
+                    <td class="TableStyle-standard-BodyA-Column2-Body1">Allows for a Method based Calculation to designate that its method is a Matrix Calculation. Then that method can be configured using the <span class="Emphasis">Price Strategy Matrix Config</span> tab in the <span class="Emphasis">Price Matrix</span> configuration view. For a method designated as a matrix calculation, the price action calculation checks the configuration for that method.</td>
+                </tr>
+            </tbody>
+        </table>
+    </body>
+</html>

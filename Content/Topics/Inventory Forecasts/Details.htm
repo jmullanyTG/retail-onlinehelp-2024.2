@@ -1,0 +1,191 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" xml:lang="en-us">
+    <head>
+        <link href="../../Resources/TableStyles/standard.css" rel="stylesheet" MadCap:stylesheetType="table" />
+        <title>
+        </title>
+    </head>
+    <body>
+        <h1>Viewing detailed forecast information </h1>
+        <p>To scrutinize the forecast beyond the method fit, click the <span class="Emphasis">Details</span> button to display detailed forecast information.</p>
+        <p>
+            <img src="../../Resources/Images/Demand Forecasting/Detail section.PNG" class="LargeImages" />
+        </p>
+        <h2>Forecast section</h2>
+        <p>The forecast information displays information only related to the forecast method currently applied.</p>
+        <ul>
+            <li>
+                <span class="Emphasis">History Start Date</span> – The first (oldest) time period of demand history data for the inventory item used by the forecasting engine. Default is approximately two years previous to the forecast start date. </li>
+            <li>
+                <span class="Emphasis">Forecast Start Date</span> – The date that the forecast tournament was last run on the item or the date of the last saved forecast.</li>
+            <li>
+                <span class="Emphasis">Accuracy</span> – This field is a placeholder for configurable accuracy measurement displays. It does not populate by default.</li>
+            <li>
+                <span class="Emphasis">Lock Expiration</span> – The expiration date for a lock if the forecast methods have been locked. </li>
+            <li>
+                <span class="Emphasis">Forecast Message</span> – The reason a forecast method was disqualified from a tournament in addition to the forecast method dropdown list. </li>
+        </ul>
+        <h3>Forecast Parameters </h3>
+        <p>The forecast parameters that display varies depending on the method applied:</p>
+        <table class="TableStyle-standard" cellspacing="0" style="mc-table-style: url('../../Resources/TableStyles/standard.css');">
+            <thead>
+                <tr class="TableStyle-standard-Head-Header1">
+                    <th class="TableStyle-standard-HeadE-Column1-Header1">Parameter</th>
+                    <th class="TableStyle-standard-HeadE-Column2-Header1">Description</th>
+                    <th class="TableStyle-standard-HeadD-Column1-Header1">Associated Methods</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">
+                         Period 
+                    </td>
+                    <td class="TableStyle-standard-BodyE-Column2-Body1">
+                        Number of previous periods to use. 
+                    </td>
+                    <td class="TableStyle-standard-BodyD-Column1-Body1">
+                         Simple Linear Regression with a Trend and Seasonality, Weighted Moving Average with a Trend, Moving Average with a Trend, Seasonal Moving Average with a Trend, Weighted Moving Average, Moving Average 
+                    </td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">
+                         Weightings 
+                    </td>
+                    <td class="TableStyle-standard-BodyE-Column2-Body1">
+                         Weightings of previous periods. 
+                    </td>
+                    <td class="TableStyle-standard-BodyD-Column1-Body1">
+                         Weighted Moving Average with a Trend, Seasonal Moving Average, Weighted Moving Average 
+                    </td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">
+                         SeasonalPeriod 
+                    </td>
+                    <td class="TableStyle-standard-BodyE-Column2-Body1">
+                         Number of previous seasonal periods to use. 
+                    </td>
+                    <td class="TableStyle-standard-BodyD-Column1-Body1">
+                         Seasonal Moving Average with a Trend, Seasonal Moving Average 
+                    </td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">
+                         Alpha 
+                    </td>
+                    <td class="TableStyle-standard-BodyE-Column2-Body1">
+                         Level smoothing. 
+                    </td>
+                    <td class="TableStyle-standard-BodyD-Column1-Body1">
+                         Croston Intermittent Demand, Holt-Winters Additive Trend Additive Seasonality, Holt-Winters Multiplicative Seasonality, Holt-Winters Linear Method, Exponential Smoothing with a Trend and Seasonality, Exponential Smoothing with a Trend, Exponential Smoothing 
+                    </td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">
+                         Beta &gt;
+                    </td>
+                    <td class="TableStyle-standard-BodyE-Column2-Body1">
+                         Trend smoothing. 
+                    </td>
+                    <td class="TableStyle-standard-BodyD-Column1-Body1">
+                         Holt-Winters Additive Trend Additive Seasonality, Holt-Winters Multiplicative Seasonality, Holt-Winters Linear Method, Exponential Smoothing with a Trend and Seasonality, Exponential Smoothing with a Trend 
+                    </td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">
+                        Gamma  
+                    </td>
+                    <td class="TableStyle-standard-BodyE-Column2-Body1">
+                         Seasonality smoothing. 
+                    </td>
+                    <td class="TableStyle-standard-BodyD-Column1-Body1">
+                         Holt-Winters Additive Trend Additive Seasonality, Holt-Winters Multiplicative Seasonality 
+                    </td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">
+                         Parsimony 
+                    </td>
+                    <td class="TableStyle-standard-BodyE-Column2-Body1">
+                         Parsimony refers to the number of points used to determine the quality of the forecast fit. 
+                    </td>
+                    <td class="TableStyle-standard-BodyD-Column1-Body1">
+                        All 
+                    </td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">
+                         SeriesMin 
+                    </td>
+                    <td class="TableStyle-standard-BodyE-Column2-Body1">
+                         Minimum value allowed for forecast periods. 
+                    </td>
+                    <td class="TableStyle-standard-BodyD-Column1-Body1">
+                         All 
+                    </td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">
+                         Slope 
+                    </td>
+                    <td class="TableStyle-standard-BodyE-Column2-Body1">
+                    
+                         The rate of growth/decline trend of a forecast model, typically related to the (m) in the mathematical equation of a straight line: 
+                        <p>Y=mX + b</p><p>where (b) is the Y-intercept, and (m) is the slope of the line. 
+                    </p></td>
+                    <td class="TableStyle-standard-BodyD-Column1-Body1">
+                         All 
+                    </td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">
+                        Seasonality 
+                    </td>
+                    <td class="TableStyle-standard-BodyE-Column2-Body1">
+              
+                        Seasonality (different from Seasonality Constant) is a value assigned to each item to specify the number of consecutive buckets to consider when determining seasonality trends. 
+                        <p>If it is set to 12, a seasonal trend will only qualify if it repeats itself in two sets of consecutive 12-bucket periods. 
+                    </p></td>
+                    <td class="TableStyle-standard-BodyD-Column1-Body1">
+                         All seasonal methods 
+                    </td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyB-Column1-Body1">
+                        Normalized Slope 
+                    </td>
+                    <td class="TableStyle-standard-BodyB-Column2-Body1">
+                        The normalized slope value shows the percent change per period of the regression (best fit) line. 
+                    </td>
+                    <td class="TableStyle-standard-BodyA-Column1-Body1">
+                         All 
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <h2>Details section</h2>
+        <p>The details section lists information related to the inventory item.</p>
+        <ul>
+            <li>
+                <span class="Emphasis">Seasonality</span> – Seasonality (different from Seasonality Constant) is a value assigned to each item to specify the number of consecutive buckets to consider when determining seasonality trends.&#160; If it is set to 12, a seasonal trend only qualifies if it repeats itself in two sets of consecutive 12-bucket periods.</li>
+            <li>
+                <span class="Emphasis">Creation Date</span> – The date on which the inventory item was added to the database.</li>
+            <li>
+                <p>
+                    <span class="Emphasis">Supersession</span> – Displays the details of any supersessions linked to the item. </p>
+                <p class="BasicNote" MadCap:conditions="General.ScreenOnly">For more information, see <MadCap:xref href="../Supersessions/Supersessions Overview.htm">Supersession overview</MadCap:xref>.</p>
+                <p class="p" MadCap:conditions="General.PrintOnly">For more information, refer to the Supersessions User Guide.</p>
+            </li>
+        </ul>
+        <h2>Settings section</h2>
+        <p>This section displays some of the information from the System Policy module which will affect the forecasts. </p>
+        <ul>
+            <li>
+                <span class="Emphasis">Backtrack/Simulation Ratio</span> – The ratio for weighting the optimistic backtrack to the pessimistic simulation during the forecast engine run. It is set to 0.5 by default (50%) and is considered best practice to keep it there. <ul><li>0 = Only consider simulation</li><li>0.5 = Equal split</li><li>1 = Only consider backtrack</li></ul></li>
+            <li>
+                <span class="Emphasis">Prevent Negative Forecast</span> – A system policy (<span class="Emphasis">Disallow Negative Forecast Data</span>) parameter setting  which prevents or allows Negative Forecast values to be calculated and displayed. It is set by default to <span class="Emphasis">True</span> and it is considered best practice to keep it that way. </li>
+            <li>
+                <span class="Emphasis">Error Method</span> – The method by which the forecast engine grades the tournament winners. It is set by default to <span class="Emphasis">Uniform MAPE</span> and it is considered best practice to keep it that way.</li>
+        </ul>
+    </body>
+</html>

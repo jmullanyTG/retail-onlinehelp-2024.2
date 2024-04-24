@@ -1,0 +1,26 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" xml:lang="en-us">
+    <head><title></title>
+    </head>
+    <body>
+        <h1>Files Utility</h1>
+        <p>The <span class="Emphasis">Files</span> utility is a system operations utility and is the main import mechanism for dynamic link library (.dll) files and plugins which the application needs to function. It is an important utility which may be used to check file versions and update the application.</p>
+        <p>The <span class="Emphasis">Files</span> utility is most commonly used by consultants, support engineers, developers, or customer IT and power users. The files listing is a data grid. Users can type in the top bar to filter the entries for ease of navigation. </p>
+        <p>The only screen within this utility lists the currently loaded files and their pertinent information. The files listed in the files utility are typically .dll and program database (.pdb) files. Other file types (.txt, .chm, etc.) may be included as well.</p>
+        <ul>
+            <li><span class="Emphasis">FileName</span> – The full name of the file including the file extension.</li>
+            <li><span class="Emphasis">FileDescription</span> – An optional description of the file.</li>
+            <li><span class="Emphasis">FilePath</span> – Most file paths will represent the root folder of an appdata folder for ToolsGroup JustEnough. This is represented by \ (backslash). File action types will determine the actual root location for the file path. <ul><li><span class="Emphasis">\ToolsGroup JustEnough.UIL.SHELL\2022.1.0.0</span> – Any file action types of <span class="Emphasis">Copy File To Local User App Data Path</span> exist in this root. This changes with the version number.</li><li><span class="Emphasis">\ToolsGroup JustEnough.UIL.SHELL.STUB\2022.1.0.0</span> – Any file action types of <span class="Emphasis">Copy File to Executable Path</span> exist in this root. This changes with the version number. </li></ul></li>
+            <li>
+                <p><span class="Emphasis">FileVersion</span> – The version number for the specific file. All .dll files in the namespace follow the naming convention for ToolsGroup JustEnough releases. Other namespaced files follow their respective release version numbers as drawn from their file metadata properties. </p>
+                <p class="BasicNote">Files without version metadata are given a version number of <span class="Emphasis">1</span>.</p>
+            </li>
+            <li><span class="Emphasis">FileCheckSum</span> – This is an informational field displaying the check sum on the file version. This ensures that the correct file is the one that has been loaded.</li>
+            <li><span class="Emphasis">FileActionType</span> – There are three file action types. They are determined by the type of file and their respective location in the file structure. These are important as setting the wrong file action type may cause the application to crash. <ul><li><span class="Emphasis">Copy File To Local User App Data Path</span> – This is the file action type for plugins. When adding a file, to determine if a file is a plugin, check the filepath as any plugins will exist in the <span class="Emphasis">Plugins</span> folder. Files of this action type can be reloaded without closing and reopening the ToolsGroup JustEnough shell.</li><li><span class="Emphasis">Copy File To Executable Path</span> – This is the file action type for all other .dll files. All files which exist within the root “SHELL.STUB\version” folder will need to be of this action type. Any files which exist in both the plugins folder and the root folder (such as ToolsGroup JustEnough.Common.dll) will need to be of this file action type.</li><li><span class="Emphasis">No Action</span> – Marking a file as no action results in the deletion of the file. It is intended to be a mechanism to recall deprecated files.</li></ul></li>
+            <li><span class="Emphasis">FileDateTime</span> – The date of upload to the application.</li>
+            <li><span class="Emphasis">FileAuditName</span> – The name of the file as it exists in the file audit path (original source). This is for audit purposes.</li>
+            <li><span class="Emphasis">FileAuditSourcePath</span> – The original source from which the file was uploaded. This will ensure that the file may be traced to a certain point of origin. This is for audit purposes.</li>
+        </ul>
+        <p class="BasicNote">Fully understanding the distinction between plugin files, which can be updated without fully exiting the shell, and executable path .dll files is the most critical element when dealing with the files located in the Files module. To maintain the integrity of files, do not move the files from one location (plugin folders) to the other.</p>
+    </body>
+</html>

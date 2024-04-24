@@ -1,0 +1,92 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" xml:lang="en-us">
+    <head>
+        <link href="../../Resources/TableStyles/standard.css" rel="stylesheet" MadCap:stylesheetType="table" /><title></title>
+    </head>
+    <body>
+        <h1>Creating promotions</h1>
+        <p>New promotions are created using the <span class="Emphasis">Create New Promotion</span> wizard. The wizard is comprised of fields to enter values at the top, a display grid on the left that is dynamically generated based on the selected promotion strategy, and a products grid on the right that is available after a promotion strategy is selected. </p>
+        <p class="BasicNote">A second customized tab displays in the products grid area if global policy <span class="Emphasis">New Promotion View Collection Set</span> is set.</p>
+        <p>
+            <img src="../../Resources/Images/Promotion Management/Create a Promotion Wizard.png" class="LargeImages" />
+        </p>
+        <h2>Promotion strategies available for selection</h2>
+        <p>Roles and users only see those Promotion Strategies for which they have access. This is to ensure compliance with corporate promotional pricing for all advertising channels.</p>
+        <h2>Creating a new promotion</h2>
+        <ol>
+            <li>Click <span class="Emphasis">New</span> to display the <span class="Emphasis">Create New Promotion</span> wizard.</li>
+            <li>Complete the required fields.</li>
+            <li>
+                <p> Selected the desired privacy option (Private, Public, Shared).</p>
+                <p class="BasicNote"> For shared promotions, click the horizontal ellipse button to select the users and roles to share the promotion with.</p>
+            </li>
+            <li>Click <span class="Emphasis">Ok</span>.</li>
+        </ol>
+        <table class="TableStyle-standard" cellspacing="0" style="mc-table-style: url('../../Resources/TableStyles/standard.css');">
+            <thead>
+                <tr class="TableStyle-standard-Head-Header1">
+                    <th class="TableStyle-standard-HeadE-Column1-Header1">Field</th>
+                    <th class="TableStyle-standard-HeadD-Column2-Header1">Description</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">
+                        Promotion Name 
+                    </td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">The name of the promotion.
+                    </td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">
+                       Start Date
+                    </td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">
+                      Modify the default date/time to the promotion start date/time. If the promotion is being created from an Event, the Event Ad Start Date is used and the field is restricted from modification.
+                    </td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">
+                       End Date
+                    </td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">
+                        Modify the default date/time to the promotion end date/time. If the promotion is being created from an Event, the Event Ad End Date and the field is restricted from modification.
+                    </td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">
+                        Workflow 
+                    </td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">
+                       Modify the default Workflow if desired for the promotion.
+                    </td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">
+                        Price Cluster Set
+                    </td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">
+                       Select the appropriate Site Cluster Set for the promotion. The Site Cluster Set loaded to the promotion is determined based on the Site Cluster Set start date and promotion Start Date. The promotion can be customized for each Site Cluster in the Promotion Detail screen.
+                    </td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">
+                      Promotion Strategy (Optional)
+                    </td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">
+                     Select a default promotion strategy for the promotion from the dropdown list. Populated with available promotion strategies defined in the Promotion Configuration Promotion Strategy area. When modifying the promotion, the promotion strategy can be changed for one or more Site Clusters.
+                    </td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyB-Column1-Body1">Private, Public, Shared </td>
+                    <td class="TableStyle-standard-BodyA-Column2-Body1">The default is <span class="Emphasis">Public</span>. Change the default to designate certain promotions as sensitive and restrict the ability for other users to view the promotion. Selecting <span class="Emphasis">Shared</span> restricts viewing the promotion to certain users and roles.</td>
+                </tr>
+            </tbody>
+        </table>
+        <h2>Display grid fields</h2>
+        <p>The display grid on the left pane shows fields that have been configured for the selected promotion strategy. If an editable field is available, this allows for a promotion level value to apply across all site clusters. This can be customized at the site cluster level in the Promotion Detail screen.</p>
+        <h2>Products (optional)</h2>
+        <p>If a promotion strategy has been specified, products may be added to the promotion. These products apply to all site clusters in the promotion. They may be customized per site cluster in the Promotion Detail screen. How products are added differs depending on the type of strategy selected.</p>
+        <p>Once all of the required information has been entered in the promotion, click <span class="Emphasis">Ok</span>. The Promotional Detail screen displays allowing further detailed modification of the promotion.</p>
+    </body>
+</html>

@@ -1,0 +1,56 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head />
+    <body>
+        <h1>Assortment Upcoming Commitments Dashboard Report</h1>
+        <p>The <span class="Emphasis">Assortment Upcoming Commitments Dashboard Report</span> is an easy way to track key milestones in the commitment process for orders created from assortment plans and then quickly navigate to those orders to complete the next required steps.&#160; </p>
+        <p class="BasicNote"> Planned receipts that have not yet had commitments created for them will still appear in this report. However, certain fields may be blank and the Due Date calculates based on the intended receipt date and the Default Lead Time Days assigned to the corresponding product.</p>
+        <p>
+            <img src="../../Resources/Images/Assortment Planning/Assortment Upcoming Commitments Report.png" class="LargeImages" />
+        </p>
+        <h2>Tracking created commitment orders</h2>
+        <p>This report is essential to keeping track of created commitment orders and ensuring that the activities required to provide sufficient information to suppliers are completed on-time, thus ensuring on-time delivery of products. </p>
+        <p>Efficient use of this report involves setting the <span class="Emphasis">Window of Time</span> parameter to include a period from the current week to a number of weeks out based on how long ordering activities such as Break By Size and Prepack analysis normally take. </p>
+        <p>If managerial approvals are required in an organization prior to submitting orders, then the <span class="Emphasis">Window of Time</span> parameter selected should be increased to include the amount of time anticipated for review and any required changes.</p>
+        <h2>Parameters</h2>
+        <p>The report is controlled by four parameters:</p>
+        <p>
+            <img src="../../Resources/Images/Assortment Planning/Assortment Upcoming Commitments Report Parameters.png" class="LargeImages" />
+        </p>
+        <ul>
+            <li><span class="Emphasis">Product Hierarchy</span>: The levels of current plan’s Product Hierarchy levels to include in the current view.</li>
+            <li><span class="Emphasis">Site Hierarchy</span>: The levels of the current plan’s Site Hierarchy to include in the current view.</li>
+            <li>
+                <p><span class="Emphasis">Window of Time</span>: The window of time to display in the current view.</p>
+            </li>
+        </ul>
+        <p>Order documents are returned based on associated milestone due dates that fall within the selected window. Multiple future due dates can exist for an order but if any of them fall within the selection then the due date displayed is the one nearest to the current date.</p>
+        <ul>
+            <li><span class="Emphasis">Display Currency</span>: Sets the currency to display for all revenue based fields in the view. Defaults to the Home Currency for the active Assortment Plan.</li>
+        </ul>
+        <h2>Fields</h2>
+        <p>Clicking <span class="Emphasis">Execute</span> returns the following read-only columns once the parameters have been set:</p>
+        <ul>
+            <li><span class="Emphasis">Order Header Name</span>: The name of the order document associated with the listed due date. Blank for receipts that have not yet had commitment orders created for them.</li>
+            <li><span class="Emphasis">Product Code</span>: The variant or placeholder codes associated with the corresponding order document.</li>
+            <li><span class="Emphasis">Product Description</span>: The description for the variant or placeholder associated with the corresponding order document.</li>
+            <li><span class="Emphasis">Receipt Units</span>: The total receipt units for the corresponding products.</li>
+            <li><span class="Emphasis">Receipt AUC</span>: Currency such as $5.00. The average unit cost of the receipt units for the corresponding products.</li>
+            <li><span class="Emphasis">Receipt Cost</span>: Currency such as $5,000.00. The total cost of receipt units for the corresponding products calculated as Receipt AUC * Receipt Units.</li>
+            <li><span class="Emphasis">Order Created</span>: Whether a commitment order has been created for the corresponding receipt.</li>
+            <li><span class="Emphasis">Order Date</span>: The date the corresponding order document was created. Set to the Due Date if no order has been created.</li>
+            <li><span class="Emphasis">Delivery Date</span>: The date the corresponding order is due for delivery.</li>
+            <li><span class="Emphasis">Required Action</span>: The nearest milestone based on the assigned workflow that is due within the selected Window of Time for the corresponding order.</li>
+            <li>
+                <p><span class="Emphasis">Due Date</span>: The date the corresponding Required Action is due based on the workflow assigned to the order document. For receipts without created commitments, based on the Default Lead Time Days of the corresponding product.</p>
+                <p class="BasicNote">Due dates that are in the past are conditionally formatted for easy identification. This does not mean the listed Required Action can no longer be completed. However, failure to meet milestones may adversely effect on-time delivery of orders.</p>
+            </li>
+            <p>
+                <img src="../../Resources/Images/Assortment Planning/Assortment Upcoming Commitments Report Due Date column.png" class="LargeImages" />
+            </p>
+            <li>
+                <p><span class="Emphasis">View Order</span>: Launches Order Manager and displays the corresponding order document for review and action.</p>
+            </li>
+        </ul>
+    </body>
+</html>

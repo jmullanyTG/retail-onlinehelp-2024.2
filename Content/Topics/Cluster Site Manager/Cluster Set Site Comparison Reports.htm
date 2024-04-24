@@ -1,0 +1,92 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head>
+        <link href="../../Resources/TableStyles/standard.css" rel="stylesheet" MadCap:stylesheetType="table" />
+    </head>
+    <body>
+        <h1>Cluster Set Site Comparison report</h1>
+        <p style="text-align: left;">The <span class="Emphasis">Cluster Set Site Comparison</span> report compares multiple cluster sets against each other and displays how sites rank across them. This is most useful when comparing cluster sets that contain the same sites, classification structure, and clustering attributes.</p>
+        <p style="text-align: left;">For example,  strengths and weaknesses of each site across a product spectrum can be identified by comparing cluster sets created by product category with the classification A, B, and C that were calculated based on the same historical sales time frame.</p>
+        <p>The conditional formatting in this report is determined by the <span class="Emphasis">Most Frequent</span> field in the <span class="Emphasis">Cluster Set Site Classification</span> report. Any cluster set classification rankings that deviate from the Most Frequent classifications are highlighted in orange.</p>
+        <p>The report is read-only.</p>
+        <p>
+            <img src="../../Resources/Images/Cluster Site Manager/Cluster Set Site Comparison Report.png" class="LargeImages" />
+        </p>
+        <p class="BasicNote">For details on displaying cluster sets  see <MadCap:xref href="Viewing Cluster Sets.htm">Viewing cluster sets</MadCap:xref>.</p>
+        <p>Display a cluster set</p>
+        <h2>To generate the Cluster Site Comparison report</h2>
+        <ol>
+            <li>
+                <p>Click <span class="Emphasis">Manage</span> on the Cluster Set toolbar. </p>
+            </li>
+            <li>
+                <p>Select a cluster set in the <span class="Emphasis">Cluster Set Management</span> window. </p>
+            </li>
+            <li>
+                <p>Click the <span class="Emphasis">Report </span>button.</p>
+                <p>A blank report displays as a separate tab.</p>
+            </li>
+            <li>Select a cluster set from the <span class="Emphasis">Cluster Set List</span> dropdown menu. <p><img src="../../Resources/Images/Cluster Site Manager/Cluster Set Selection.png" class="LargeImages" /></p><p>The blue icons below the <span class="Emphasis">Cluster Set List</span> field can be used to manage the selections.</p></li>
+            <li>
+                <p>Click <span class="Emphasis">Execute</span>. </p>
+                <p>The <span class="Emphasis">Cluster Set Site Comparison Report</span> and <span class="Emphasis">Cluster Set Site Classification Comparison Report</span> display.</p>
+            </li>
+        </ol>
+        <h2>Toolbar functionality</h2>
+        <table class="TableStyle-standard" cellspacing="0" style="mc-table-style: url('../../Resources/TableStyles/standard.css');">
+            <col class="TableStyle-standard-Column-Column1" />
+            <col class="TableStyle-standard-Column-Column2" />
+            <thead>
+                <tr class="TableStyle-standard-Head-Header1">
+                    <th class="TableStyle-standard-HeadE-Column1-Header1">Object</th>
+                    <th class="TableStyle-standard-HeadD-Column2-Header1">Description</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">Cluster Set List</td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">The cluster sets to compare in the report.</td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">Parameters</td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">Toggles displaying or hiding the Parameters area of the report.</td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyB-Column1-Body1">Execute </td>
+                    <td class="TableStyle-standard-BodyA-Column2-Body1">Generates the report and compares the cluster sets selected in the Cluster Set List.</td>
+                </tr>
+            </tbody>
+        </table>
+        <h2>Field descriptions</h2>
+        <table class="TableStyle-standard" cellspacing="0" style="mc-table-style: url('../../Resources/TableStyles/standard.css');">
+            <col class="TableStyle-standard-Column-Column1" />
+            <col class="TableStyle-standard-Column-Column2" />
+            <thead>
+                <tr class="TableStyle-standard-Head-Header1">
+                    <th class="TableStyle-standard-HeadE-Column1-Header1">Column</th>
+                    <th class="TableStyle-standard-HeadD-Column2-Header1">Description</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">Site Code</td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">The unique code for the site in the system.</td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">Site Description</td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">The description for the site.</td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">Classification/ Cluster Set Count</td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">The number of times the site was ranked in the corresponding classification across all cluster sets being compared.</td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyB-Column1-Body1">Most Frequent</td>
+                    <td class="TableStyle-standard-BodyA-Column2-Body1">
+                       The most frequently occurring classifications for the site based on the data in the Classification/ Cluster Set Count columns. If there is a tie for most frequent classification, all tying classifications are listed.
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </body>
+</html>

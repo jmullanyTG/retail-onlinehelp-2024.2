@@ -1,0 +1,85 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" xml:lang="en-us">
+    <head>
+        <link href="../../Resources/TableStyles/standard.css" rel="stylesheet" MadCap:stylesheetType="table" /><title></title>
+    </head>
+    <body>
+        <h1>Plan parameters</h1>
+        <p> Selections made in the parameters area define the data that is returned.  Select the <span class="Emphasis">Parameters</span> button to show or hide parameters. Clicking <span class="Emphasis"> Execute</span> displays data based on the parameters selected.</p>
+        <p>
+            <img src="../../Resources/Images/MFP/Parameters - Hybrid.png" class="LargeImages" />
+        </p>
+        <h2>Viewing assortment plan data within the Merchandise Financial Planning module </h2>
+        <p>Two comparison types can be used to review Assortment Plan data within the Merchandise Financial Planning module. This means Assortment Plan data can be referenced while working on Financial Plans without having to go back and forth between screens. This helps ensure that Financial Plans and Assortment Plans align for accurate forecasting and buying. The comparison types are:</p>
+        <ul>
+            <li><span class="Emphasis">vs. Assortment Plan</span>
+            </li>
+            <li><span class="Emphasis">vs. Assortment Plan Snapshot</span>
+            </li>
+        </ul>
+        <h2>Parameters</h2>
+        <p>The following parameters filter the plan data displayed in a financial plan document. </p>
+        <table style="width: 100%;margin-left: 0;margin-right: auto;mc-table-style: url('../../Resources/TableStyles/standard.css');" class="TableStyle-standard" cellspacing="0">
+            <col class="TableStyle-standard-Column-Column1" style="width: 156px;" />
+            <col class="TableStyle-standard-Column-Column2" />
+            <thead>
+                <tr class="TableStyle-standard-Head-Header1">
+                    <th class="TableStyle-standard-HeadE-Column1-Header1">Parameter</th>
+                    <th class="TableStyle-standard-HeadD-Column2-Header1">Description</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">Product</td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">
+                         The levels of the product hierarchy to display in the document. (Only active product levels are listed.)  
+                        <p class="BasicNote">System policy <span class="Emphasis">Product Parameter Sort</span> determines whether the list is sorted by Code or Description. The default is Description.</p></td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">Product Agg Level</td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">The lowest level of the product hierarchy at which data is pre-aggregated to optimize performance. This parameter should be set at the lowest level of the product hierarchy to view in the document. For more information, see <MadCap:xref href="Aggregation levels and top down planning.htm">Aggregation levels and top down planning</MadCap:xref>.</td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">Channel</td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">The levels of the site hierarchy to display in the document. (Only active site levels are listed.) </td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">Channel Agg Level</td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">The lowest level of the site hierarchy at which data is pre-aggregated to optimize performance. This parameter should be set at the lowest level of the site hierarchy to view in the document. </td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">Time</td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">
+                        The time periods for which data displays in the document. Options include all time periods  including and after the Start Period defined for the plan. The duration of each period is determined by the Calendar Level setting defined for the plan.
+                        <p class="BasicNote"> If non-contiguous time periods are selected, the gaps are automatically filled and display data from all periods between the earliest period selected and the latest period selected.</p></td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">Comparison Plan 1</td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">
+                        
+                        Any plan type that is NOT TY&#160;(working plan) or LY (hard-coded to only return LY data). The two <span class="Emphasis">Comparison Plan</span> parameters lets users simultaneously compare a TY, LY, and 2 additional Comparison plans. <p><img src="../../Resources/Images/MFP/Comparison Plan Selections.PNG" class="LargeImages" /> </p><p>Plan types are the first level in the selection. Click the arrow to see a list of relevant plans.                        </p><p>Options are:
+                        </p><ul><li><span class="Emphasis">None</span> - do not show comparison data in this document.</li><li><span class="Emphasis">vs. Master</span> - compare this plan's metrics against the  master plan selected in the Comparison Plan 2 parameter.</li><li><span class="Emphasis">vs. Branch</span> - compare this plan's metrics against the branch plan selected in the Comparison Plan 2 parameter.</li><li><span class="Emphasis">vs. Snapshot</span> - compare this plan's metrics against the  snapshot selected in the Comparison Plan 2 parameter.</li><li><span class="Emphasis">vs. LLY</span> - compare this plan's metrics against the metric values from two years ago . </li><li><p><span class="Emphasis">vs. Assortment Plan</span> - compare this plan's metrics against a particular Assortment Plan. </p><h3>How AP data matches to MFP fields when Assortment Plan is used as a Comparison type</h3><table style="width: 100%; mc-table-style: url('../../Resources/TableStyles/standard.css'); margin-left: auto; margin-right: auto;" class="TableStyle-standard" cellspacing="0"><col class="TableStyle-standard-Column-Column1" style="width: 60%;" /><col class="TableStyle-standard-Column-Column2" /><thead><tr class="TableStyle-standard-Head-Header1"><th class="TableStyle-standard-HeadE-Column1-Header1">AP</th><th class="TableStyle-standard-HeadD-Column2-Header1">MFP</th></tr></thead><tbody><tr class="TableStyle-standard-Body-Body1"><td class="TableStyle-standard-BodyE-Column1-Body1">Receipt Units</td><td class="TableStyle-standard-BodyD-Column2-Body1">Target Receipts</td></tr><tr class="TableStyle-standard-Body-Body1"><td class="TableStyle-standard-BodyE-Column1-Body1">Confirmed On Order + Committed On Order + On Order (Unknown)</td><td class="TableStyle-standard-BodyD-Column2-Body1">On Order</td></tr><tr class="TableStyle-standard-Body-Body1"><td class="TableStyle-standard-BodyE-Column1-Body1">Confirmed On Order Past Due + Committed On Order Past Due + On Order Past Due (Unknown)</td><td class="TableStyle-standard-BodyD-Column2-Body1">On Order Past Due</td></tr><tr class="TableStyle-standard-Body-Body1"><td class="TableStyle-standard-BodyB-Column1-Body1">Stock In Transit</td><td class="TableStyle-standard-BodyA-Column2-Body1">Stock In Transit </td></tr></tbody></table></li><li><span class="Emphasis">vs. Assortment Plan Snapshot</span> - compare this plan's metrics against a particular snapshot of an Assortment Plan.</li></ul><p>
+                        When <span class="Emphasis">vs. Master</span>, <span class="Emphasis">vs. Branch</span>,  or <span class="Emphasis">vs. Snapshot</span> is selected in the <span class="Emphasis">Comparison Plan 1</span> parameter, this parameter sets the specific plan to use for comparison. </p><p class="BasicNote">All comparison metrics are populated directly from the source plan specified rather than calculated. A value of zero displays if no data exists in the selected plan for a given site/product level and period.</p></td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">Comparison Plan 2</td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">The <span class="Emphasis">Comparison Plan 2</span> parameter returns a core subset of 86 metrics compared to the metrics returned by the <span class="Emphasis">Comparison Plan 1</span> parameter. Therefore, it is important to remember that <span class="Emphasis">Comparison Plan 1</span> returns the full metric set while <span class="Emphasis">Comparison Plan 2</span> returns the abbreviated metric set. With this difference in mind, users could consider scenarios such as whether the full metrics are required for a Snapshot consideration and the subset of metrics for LLY, or vice versa.</td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">Currency</td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">The currency in which all revenue-based metrics display. (Only currencies assigned to active sites are listed.)</td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">Currency Neutralization</td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">The currency conversion rate to be used.  The parameters are:
+                        <ul><li><span class="Emphasis">Standard</span> - Use the period’s currency conversion rate for each data period.</li><li><p><span class="Emphasis">LY Neutralized</span> - Use TY&#160;currency conversion rates for future-dated LY and LLY, and LY&#160;currency conversion rates for past-dated LY and LLY.</p></li></ul><p>For more information on currency neutralization, see <MadCap:xref href="FX Neutralization functionality Considerations.htm">FX Neutralization</MadCap:xref>.</p></td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyB-Column1-Body1">View Mode</td>
+                    <td class="TableStyle-standard-BodyA-Column2-Body1">
+                       Whether data displayed in the plan document represents <MadCap:xref href="Total Company and Average Store Modes.htm">Total company and average store modes</MadCap:xref>.                       <ul><li><span class="Emphasis">Total Company</span> - data values represent the total value aggregated from all active sites in the given time period.</li><li><span class="Emphasis">Average Store</span> - data values represent the average store value, calculated by dividing the total company value by the number of active sites in the given time period.</li></ul></td>
+                </tr>
+            </tbody>
+        </table>
+    </body>
+</html>

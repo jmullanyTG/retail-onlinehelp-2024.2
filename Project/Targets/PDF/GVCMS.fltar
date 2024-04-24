@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<CatapultTarget
+  Version="2"
+  Comment="New Target"
+  Type="PDF"
+  Destinations=""
+  GlossaryTermConversion="marked"
+  MasterToc="/Project/TOCs/GVCMS.fltoc"
+  EmbedImages="true"
+  DisableAutoSync="true">
+  <PrintedOutput
+    CollapseMargins="true"
+    GenerateTOCProxy="false"
+    GenerateIndexProxy="false"
+    GenerateGlossaryProxy="false"
+    OutputFormat="docx" />
+  <Variables>
+    <Variable
+      Name="Variables/BookTitle">Generic View Collection Set Module</Variable>
+    <Variable
+      Name="Variables/BookSubTitle">User Guide</Variable>
+    <Variable
+      Name="Variables/BookVersion">2024.2</Variable>
+  </Variables>
+  <Destinations>
+    <Destination
+      Link="/Project/Destinations/PDF Output.fldes"
+      Publish="true" />
+  </Destinations>
+  <DocumentProperties
+    Author="" />
+  <PDF
+    PageMode="UseNone" />
+</CatapultTarget>

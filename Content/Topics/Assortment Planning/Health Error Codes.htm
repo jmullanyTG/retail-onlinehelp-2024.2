@@ -1,0 +1,97 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head>
+        <link href="../../Resources/TableStyles/standard.css" rel="stylesheet" MadCap:stylesheetType="table" />
+    </head>
+    <body>
+        <h1>Health Error Codes</h1>
+        <table style="mc-table-style: url('../../Resources/TableStyles/standard.css');" class="TableStyle-standard" cellspacing="0">
+            <col class="TableStyle-standard-Column-Column1" style="width: 20%;" />
+            <col class="TableStyle-standard-Column-Column2" style="width: 40%;" />
+            <col class="TableStyle-standard-Column-Column1" style="width: 40%;" />
+            <thead>
+                <tr class="TableStyle-standard-Head-Header1">
+                    <th class="TableStyle-standard-HeadE-Column1-Header1">Error</th>
+                    <th class="TableStyle-standard-HeadE-Column2-Header1">Meaning</th>
+                    <th class="TableStyle-standard-HeadD-Column1-Header1">Action</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">Actualization Has Not Run</td>
+                    <td class="TableStyle-standard-BodyE-Column2-Body1">AP has a process called Actualization that is meant to run weekly after new core data is imported into the system (sales history, stock on hand, etc). This process incorporates actualized data into sales plans and makes any necessary adjustments. It is important that actual data is up-to-date in AP before making any subsequent changes to sales plans.</td>
+                    <td class="TableStyle-standard-BodyD-Column1-Body1">Run actualization from the Job Manager. Contact Support if there are errors.</td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">Actualized Sales Greater than Total</td>
+                    <td class="TableStyle-standard-BodyE-Column2-Body1">The Total Sales metric is less than the Actualized Sales metric. Since Total Sales represents the lifetime of the item, adding Actualized Sales and Future Sales together, Total Sales should always be the greater number. This circumstance would only occur if there were some unexpected data condition (like extremely negative sales values in actualized data); there are many defenses in the application to prevent this from happening.</td>
+                    <td class="TableStyle-standard-BodyD-Column1-Body1">Modify Total Sales to be greater than Actualized Sales, and Save. The Actualized Sales and Total Sales values can exactly match (and these values should match after the item has phased out), but there can be conflicts if entering in the exact Actualized Sales value into Total Sales and there are unrounded decimals not visible in the screen, so the value should be increased by 1.</td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">Cluster Zero Site Count</td>
+                    <td class="TableStyle-standard-BodyE-Column2-Body1">There are periods in the sales plan where there are no sites for the cluster set / cluster. This occurred because the cluster set snapshot active for the period contains no sites, or all of the sites in the cluster have been marked as closed. A sales, receipt, and inventory plan cannot exist where there are no sites.</td>
+                    <td class="TableStyle-standard-BodyD-Column1-Body1">There are multiple actions to take to resolve this error. Reevaluate the cluster set snapshots over time, ensuring that all clusters have the right membership of sites. Reevaluate site status information, ensuring at least one site is open for each period of time during the life of the placeholder. If the cluster is truly meant to have no sites for some time (because, for example, a cluster has been removed or added), then change the AP plan to exclude the time where the cluster doesn't exist. This can be done by changing phase dates of the placeholder to not include the periods where the cluster is empty, or un-assorting from the cluster altogether using the Cluster Details pane.</td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">Data Expiration Has Not Run</td>
+                    <td class="TableStyle-standard-BodyE-Column2-Body1">AP has a process called Data Expiration that is meant to run weekly after Actualization. This process prunes old data out of data tables in order to reclaim space in the database. How far out the data is pruned is governed by a system policy (which can also disable this feature altogether). It is important that expiration run weekly so that the expected amount of data is present in the sales plan.</td>
+                    <td class="TableStyle-standard-BodyD-Column1-Body1">Run data expiration from the Job Manager. Contact Support if there are errors.</td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">Markdown Period Longer Than Expiration Period</td>
+                    <td class="TableStyle-standard-BodyE-Column2-Body1">This error would occur if a very long markdown period was configured. In particular, there is an error if there is a Markdown set on an item with no Phase Out date, or if the Markdown period is longer than the Data Expiration period (a system policy). A Markdown phase this long is unexpected in AP data.</td>
+                    <td class="TableStyle-standard-BodyD-Column1-Body1">Remove the Markdown date, or set the Markdown date closer to phase out. Note that Markdown Dates should not be set for placeholders with no phase out date; in other words, the placeholder cannot be on markdown indefinitely.</td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">Missing Receipt AUC</td>
+                    <td class="TableStyle-standard-BodyE-Column2-Body1">A receipt period with planned receipt units does not have a corresponding Receipt AUC value. This can impact cost calculations throughout the sales plan.</td>
+                    <td class="TableStyle-standard-BodyD-Column1-Body1">Add a Receipt AUC value. This can be done for all periods by modifying the value in main planning view, or by period in the Receipt Plan View.</td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">Negative Sales Plan</td>
+                    <td class="TableStyle-standard-BodyE-Column2-Body1">There are negative values in at least one period of the sales plan for this placeholder.</td>
+                    <td class="TableStyle-standard-BodyD-Column1-Body1">Change sales values to a zero-valued or positive-valued number either at the aggregate level in Main Planning View or by period in Sales Plan View.</td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">No Selling Periods</td>
+                    <td class="TableStyle-standard-BodyE-Column2-Body1">The sales plan for this placeholder has no active selling periods. This would occur if the user manually toggled Selling Period to "off" for all periods, or the system set Selling Period to "off" for all periods if there are no sites in the cluster.</td>
+                    <td class="TableStyle-standard-BodyD-Column1-Body1">Depending on the desired outcome for the user, several actions could be taken. If all periods were opted out in error, then the user should opt some periods back in as selling. If the periods are marked as non-selling due to having no sites in the cluster, then actions should be taken to correct cluster definitions (see the Cluster Zero Site Count error). If the item is meant to not be in phase yet, set the phase dates accordingly. If the placeholder should never be sold for the cluster, rather than opting out each period individually, the assortment should be removed using the Cluster Details pane.</td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">Period Horizon Past Calendar</td>
+                    <td class="TableStyle-standard-BodyE-Column2-Body1">In order for AP to function properly, a calendar extending into the future must be defined. This error will be surfaced if the defined calendar does not extend far enough into the future for placeholders with no phase out date. Placeholders with no phase out date have sales plans extended to the Period Horizon configured for the plan. If the calendar does not have periods defined at least that far out, then there is a conflict.</td>
+                    <td class="TableStyle-standard-BodyD-Column1-Body1">The best thing to do is to run maintenance or imports to add more future periods into the calendar. In the short term, the placeholders with no phase out can have phase out set temporarily to the last defined period in the calendar until the calendar is extended.</td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">Insufficient Sales Plan</td>
+                    <td class="TableStyle-standard-BodyE-Column2-Body1">There are values in the Sales Units plan that are too small. The threshold for this limit is defined by the system policy <span class="Emphasis">Lower Limit for Unit-Based Metrics</span>. If the policy is set, any Sales Units value between 0 and this threshold (e.g. 0.0001) is meant to be zeroed out. We cannot allow very-near-zero numbers in Sales Units, because Sales Units is often a divisor, e.g. AUR = Sales / Sales Units. If a very small number is used as a divisor, the resulting quotient will be extremely large, breaking the numeric limits of the application.</td>
+                    <td class="TableStyle-standard-BodyD-Column1-Body1">
+                         Verify the Total Sales Units metrics against the Actualized Sales Units metric. For example, if the Actualized Sales Units is 1000 but Total Sales Units is 1001, then the system will attempt to spread the remaining 1 unit across the planned future weeks, potentially splitting into very small fractions.  
+                        <p>Ensure that the Total Sales Units value moderately exceeds Actual Sales Units (if this is already the case, enter in a slightly different Total Sales Units value to ensure the system reprocesses the sales plan and zeroes out too-small units values). If it is desired to have no sales in future sales plans, then either: </p><ul><li><p>set Total Sales Units to exactly match Actual Sales Units </p></li><li><p>phase out the item, or </p></li><li><p>set periods to Non-Selling in Sales Plan view.</p></li></ul></td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">Overstated Ticket Price</td>
+                    <td class="TableStyle-standard-BodyE-Column2-Body1">There are values in <span class="Emphasis">Home AUT</span> or <span class="Emphasis">Blended AUT</span> that are too large. The threshold for this limit is defined by the system policy <span class="Emphasis">Upper Limit for Value-Based Metrics</span>. If the policy is set, any AUT value exceeding the threshold (e.g. $1,000,000,000) is meant to be cleared. We cannot allow extremely large numbers in the system, as this will break the numeric limits of the application.</td>
+                    <td class="TableStyle-standard-BodyD-Column1-Body1">Reset any too-large <span class="Emphasis">Home AUT</span> values through main planning view, Cluster Sets view, or Sales Plan view.</td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">Too May Sites Excluded</td>
+                    <td class="TableStyle-standard-BodyE-Column2-Body1">The user has excluded all sites from selling through the Location Exceptions screen. The screen will not allow a user to deselect all sites from a cluster (if there is a desire to not sell to any sites in a cluster, the entire cluster should be de-selected in the Cluster Details screen). However, if the cluster definitions changed over time to move the non-excluded sites out of a cluster, and the cluster then has all sites excluded, this error will be shown.</td>
+                    <td class="TableStyle-standard-BodyD-Column1-Body1">Re-include selling sites in the cluster, or close selling in the cluster, either by setting Phase Out Date or by un-assorting to the cluster altogether in Cluster Details.</td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">Stock On Hand Negative</td>
+                    <td class="TableStyle-standard-BodyE-Column2-Body1">In a future period of the sales plan, the EOP Units value has become negative. This means that the receipt plan is not sufficient to support the sales plan.</td>
+                    <td class="TableStyle-standard-BodyD-Column1-Body1">Increase receipts or move receipts forward in time, or decrease the sales plan.</td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyB-Column1-Body1">Missing Data In Price Matrix</td>
+                    <td class="TableStyle-standard-BodyB-Column2-Body1">
+                         If a Price Matrix is set for a placeholder, then the system will attempt to use the Price Matrix data to convert AUT values. If any of the following components are missing, the error displays: 
+                        <ul><li><p>an entry in the matrix for the home site's country / currency</p></li><li><p>an entry in the matrix for the selling sites' country / currencies</p></li><li><p>a row in the matrix for the starting <span class="Emphasis">Home AUT</span> value</p></li><li><p>currency conversion data for converting non-Home currency values back to the home currency</p></li></ul></td>
+                    <td class="TableStyle-standard-BodyA-Column1-Body1">Assign a different price matrix, or ensure the price matrix is defined for all countries, currencies, and AUT values.</td>
+                </tr>
+            </tbody>
+        </table>
+    </body>
+</html>

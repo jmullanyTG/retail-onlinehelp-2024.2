@@ -1,0 +1,87 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" xml:lang="en-us">
+    <head>
+        <title>
+        </title>
+    </head>
+    <body>
+        <h1>Seasonality Curve view</h1>
+        <p>Using the <span class="Emphasis">Seasonality Curve</span> view, select and apply seasonality curves to the entire selected placeholder or collection or only to selected cluster sets/clusters the placeholder or collection is assorted to.</p>
+        <p class="BasicNote">The <span class="Emphasis">Seasonality Curve</span> view in Assortment Planning is a scaled down version of the full Curves module (<span class="Emphasis">Execute &gt; Curves</span>). Creation of new curves is still done within the full <span class="Emphasis">Curves</span> module.</p>
+        <p>
+            <img src="../../Resources/Images/Assortment Planning/Seasonality Curve Generator.png" class="LargeImages" />
+        </p>
+        <h2>Seasonality Curve screen fields</h2>
+        <ul>
+            <li>
+                <span class="Emphasis">Filter Tags</span>: Selects tags to be used in filtering the curves available for selection in Saved Curves. Tags can be attached to curves within the <span class="Emphasis">Curves</span> module. The list of tags can be filtered by typing in the blank field above the list. <![CDATA[				]]><p><img src="../../Resources/Images/Assortment Planning/Seasonality Curve Screen Fields.png" class="LargeImages" /></p></li>
+            <li>
+                <span class="Emphasis">Saved Curves</span>: A curve generated within the <span class="Emphasis">Curves</span> module to apply to the selected placeholder or collection. Only curves of the <span class="Emphasis">Manual</span> or <span class="Emphasis">Specified Conditions Using Enhanced Filtering</span> types are available for selection within Assortment Planning.</li>
+            <li>
+                <span class="Emphasis">Curve Mode</span>: The mode of the selected curve:</li>
+            <ul>
+                <li>
+                    <span class="Emphasis">Static</span>: The selected curve is applied exactly as it exists at the time of application and the placeholder or collection’s curve will not change if changes are made to the curve, whether manually in the Curves module or through dynamic recalculation. Think of this as making a copy of the applied curve.</li>
+                <li>
+                    <span class="Emphasis">Dynamic</span>: Changes made to the curve are pushed down to the placeholder or collection via automated processes and the dependent sales plans recalculate when those changes are pushed.</li>
+            </ul>
+            <li>
+                <span class="Emphasis">Apply To Cluster</span>: The cluster sets/clusters to apply the selected curve to from those assorted to the selected placeholder/collection</li>
+            <li>
+                <span class="Emphasis">Apply Lowest Level Curve</span>: The level of curve to be applied:</li>
+            <ul>
+                <li>
+                    <span class="Emphasis">Unchecked</span>: Applies the curve exactly as shown to all selected cluster sets/clusters.</li>
+                <li>
+                    <span class="Emphasis">Checked</span>: Looks for related lower level curves to apply at the cluster set/cluster level and applies them instead of applying the higher level curve as shown.
+					<ul><li>During implementation, a process is configured to automatically generate curves at levels of the product/site hierarchies on a specified schedule. If desired, this process can be configured to generate these curves at multiple levels.</li><li>“Related lower level curves” refers to these automatically generated curves – created using the same criteria</li></ul></li>
+            </ul>
+        </ul>
+        <p class="Example">An automatically generated channel level curve is selected from the <span class="Emphasis">Saved Curves</span> dropdown and the <span class="Emphasis">Apply Lowest Level Curve</span> option is checked. The selected placeholder has 2 cluster sets, each with 3 clusters assorted to it, and curves were also automatically generated using the same criteria for each of those 6 clusters. The lower level curves do not have to be applied individually as the  cluster-level curves are automatically applied to each cluster in a single action.</p>
+        <h2>Curve Details section</h2>
+        <ul>
+            <li>
+                <span class="Emphasis">Generation Type</span>: The generation type for the selected curve. Only curves of the <span class="Emphasis">Manual</span> or <span class="Emphasis">Specified Conditions Using Enhanced Filtering</span> types are available for selection within Assortment Planning.</li>
+            <li>
+                <span class="Emphasis">Bucket Type</span>: The bucket type for the selected curve. For the purposes of Assortment Planning, bucket type is the same as period type. </li>
+            <li>
+                <span class="Emphasis">Time Range</span>: The time range used to generate the selected curve.</li>
+            <li>
+                <span class="Emphasis">Forecasted Demand</span>: If configured, generates curves based on projected future demand from the Forecasts module.</li>
+            <li>
+                <span class="Emphasis">Curve Source</span>: The curve source for the selected curve. <span class="Emphasis">Historical Demand By Sales Type Using Sales History</span> generates curves based on historical sales by type</li>
+            <li>
+                <span class="Emphasis">Generate By</span>: The generation type for the selected curve. This is essentially the metric used to calculate the seasonal indices. <ul><li><span class="Emphasis">Volume Contribution (Units)</span> – sales units</li></ul><ul><li><span class="Emphasis">Cost of Sales Contribution</span> – COGS (cost of goods sold)</li></ul><ul><li><span class="Emphasis">Revenue Contribution</span> – sales $</li></ul><ul><li><span class="Emphasis">Profit Contribution</span> – gross margin $ (sales $ - COGS)</li></ul></li>
+            <li>
+                <span class="Emphasis">Sales Types</span>: The sales types used in generation of the selected curve. Not applicable for Forecasted Demand Curve Source.</li>
+            <li>
+                <span class="Emphasis">Includes Returns</span>: Whether returns (negative sales) were included in the calculation of the selected curve.</li>
+            <li>
+                <span class="Emphasis">Inactive Items</span>: Whether inactive items were considered in the calculation of the selected curve.</li>
+        </ul>
+        <h2>Product Filtering section</h2>
+        <p>The fields shown depends on the options used to generate the selected curve.</p>
+        <ul>
+            <li>
+                <span class="Emphasis">Hierarchy</span>: The product hierarchy.</li>
+            <li>
+                <span class="Emphasis">Hierarchy Items</span>: The product hierarchy levels.</li>
+            <li>
+                <span class="Emphasis">Filter</span>: The product filter.</li>
+        </ul>
+        <h2>Site Filtering section</h2>
+        <p>The fields shown depends on the options used to generate the selected curve.</p>
+        <ul>
+            <li>
+                <span class="Emphasis">Hierarchy</span>: The site hierarchy.</li>
+            <li>
+                <span class="Emphasis">Hierarchy Site</span>: The product hierarchy levels.</li>
+            <li>
+                <span class="Emphasis">Filter</span>: The site filter.</li>
+            <li>
+                <span class="Emphasis">Cluster Sets</span>:The cluster sets.</li>
+            <li>
+                <span class="Emphasis">Cluster</span>: The clusters.</li>
+        </ul>
+    </body>
+</html>

@@ -1,0 +1,91 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head>
+    </head>
+    <body>
+        <p>The <span class="Emphasis">Prepack tab</span> allows users to further more order line details by allocating the units by size determined in Break By Size into pre-pack configurations defined in the <span class="Emphasis">Variant Manager</span> module. In the <span class="Emphasis">Prepack</span> tab, users can define a number of constraints to help guide the optimization process, including the percentage split between prepacks and singles.</p>
+        <p>
+            <img src="../../Resources/Images/Order Manager/Order Document Details Prepack.png" class="LargeImages" />
+        </p>
+        <h2>Pre-configured pack sizes</h2>
+        <p>Pack sizes can be configured in advance using the <span class="Emphasis">Packing Instruction</span> supporting view available in the Assortment Planning module.</p>
+        <p>
+            <MadCap:conditionalText MadCap:conditions="General.ScreenOnly">For more information, see <MadCap:xref href="../Assortment Planning/Packing Instruction View.htm">Packing Instruction view</MadCap:xref>.</MadCap:conditionalText> <MadCap:conditionalText MadCap:conditions="General.PrintOnly">For more information, refer to the Assortment Planning User Guide.</MadCap:conditionalText></p>
+        <h2>Prepack optimization and the workload queue</h2>
+        <p>Whenever a user clicks <span class="Emphasis">Calculate</span> or <span class="Emphasis">Calculate All</span> (described below), the calculation job is sent to the Workload Queue for prioritization. Before this happens, the system estimates the amount of time required to complete the calculations for each prepack group submitted. If any of those prepack groups are found to require a more significant amount of work than the system can complete immediately, the calculations for those groups are deferred to a later time: either later that day, overnight, or during weekend processing.</p>
+        <p>If this occurs, a warning message displays to the user before proceeding:</p>
+        <ul>
+            <li>For single prepack group submissions or multiple submissions with the same level of deference, a message displays stating the exact nature of the deference:<ul><li>clicking <span class="Emphasis">Ok</span> proceeds for all</li></ul><ul><li>clicking <span class="Emphasis">Cancel</span> cancels all</li></ul></li>
+            <li>When multiple groups are submitted and only some are deferred, or if all are deferred but by different lengths of time, a message displays stating that one or more of the groups submitted is deferred to whatever the maximum deference is for all groups
+			<p class="Example">If 3 groups are submitted for calculation and one is deferred to later that day, one to overnight, and one to the weekend then the system warns that one or more prepack groups submitted will be deferred to weekend processing</p><ul><li>clicking <span class="Emphasis">Ok</span> proceeds for all</li></ul><ul><li>clicking <span class="Emphasis">Cancel</span> cancels only those groups that would be deferred but still proceed for any non-deferred groups</li></ul></li>
+        </ul>
+        <h2>Toolbar options</h2>
+        <ul>
+            <li><span class="Emphasis">Save</span>: Saves all changes made to the Prepack settings for the selected prepack group.</li>
+            <li><span class="Emphasis">Undo</span>: Undoes all unsaved changes made to the Prepack settings for the selected prepack group.</li>
+            <li><span class="Emphasis">Calculate</span>: Calculates prepack allocation for variants in the selected prepack group.</li>
+            <li><span class="Emphasis">Approve</span>: Approves the prepack allocation for the selected prepack group.</li>
+            <li><span class="Emphasis">Revert</span>: For a prepack group which was previously calculated and approved but on which a subsequent calculation has been done, reverts the calculated values back to their previously approved values for the selected prepack group only.</li>
+            <li><span class="Emphasis">Calculate All</span>: Calculates prepack allocations for all prepack groups for the order document.</li>
+            <li><span class="Emphasis">Approve All</span>: Approves the prepack allocations of all prepack groups for the order document and transitions the Workflow Status of the order document to Prepack.</li>
+            <li>
+                <p><span class="Emphasis">Approve All &amp; Route</span>: Approves the prepack allocations of all prepack groups for the order document and launches the <span class="Emphasis">Commitment Status</span> dialog. Users can select the Workflow Status the document transitions to from available states, based on the active workflow.</p>
+            </li>
+        </ul>
+        <ul>
+            <li><span class="Emphasis">Optimize Prepack</span>: When checked, enables the <span class="Emphasis">Num Pack Configs</span> and<span class="Emphasis"> Min/Max Units Per Pack</span> fields in the settings area and allows the engine to determine the most optimal prepack configurations, given the settings and data underlying each prepack group, rather than using those selected by users.</li>
+            <li><span class="Emphasis">Cancel Queued</span>: For any calculation jobs that have been submitted to the queue and the prepack group hasn’t already been completed, click this button to cancel the jobs.</li>
+            <li><span class="Emphasis">New Pack Config</span>: Opens the <span class="Emphasis">New Prepack</span> window. If <span class="Emphasis">Optimize Prepack</span> is selected, then this option is greyed out and not available.</li>
+        </ul>
+        <h2>Prepack Groups section</h2>
+        <p>The <span class="Emphasis">Prepack Groups</span> section is read-only.</p>
+        <ul>
+            <li><span class="Emphasis">Group</span>: The prepack group names for the order document:<ul><li>if no Grouping Identifiers are used, group names default to the variant code for the associated order lines, with all lines containing that variant being included in a single group</li></ul><ul><li>If Grouping Identifiers are used, order lines are grouped by those with the same identifiers first, then any remaining order lines are grouped by variant code</li></ul></li>
+            <li><span class="Emphasis">Calculated</span>: Checked if the corresponding prepack group has been calculated</li>
+            <li><span class="Emphasis">Approved</span>: Checked if the corresponding prepack group has been approved</li>
+        </ul>
+        <h2>Prepacks section</h2>
+        <ul>
+            <li>Prepacks<ul><li><span class="Emphasis">Calculate</span>: Selects a prepack configuration for use the in calculation of prepack allocations.
+			<p class="BasicNote">Available prepack configurations are based on those defined for the variants in the prepack group in Variant Manager.</p></li><li><span class="Emphasis">Prepack</span>:The prepack configuration name.</li><li><span class="Emphasis">Variant</span>: The variant codes contained in the corresponding prepack configuration.</li><li><span class="Emphasis">Size</span>: The sizes contained in the corresponding prepack configuration.</li><li><span class="Emphasis">Unit Count</span>: The number of units per size contained in the corresponding prepack configuration.</li></ul></li>
+        </ul>
+        <h2>Settings section</h2>
+        <ul>
+            <li>
+                <p><span class="Emphasis">Max Overage Percent</span>: </p>
+                <MadCap:snippetBlock src="Max Overage Percent.flsnp" />
+            </li>
+            <li><span class="Emphasis">Max Overage</span>: Positive integer. Sets the number of units per site the prepack optimization engine may over-allocate during calculation to reach an acceptable solution. Used as a constraint for the prepack optimization engine within Order Manager.</li>
+            <li><span class="Emphasis">Max Pack Percent Total</span>: Positive percentage to 2 decimal places (60.00%). Defines the maximum % of units in a commitment order of the units within prepacks can represent as a constraint for the prepack optimization engine within Order Manager. When set to less than 100%, units not placed in prepacks are fulfilled as single units.
+			<p class="Example">A user has 2 placeholder instance orders for wk 4 for 500 units each. The user chooses to prepack them together with a Maximum Pack % Total of 60.00%. The maximum number of units existing in prepacks for this order is 600. However, the prepack output could be less than 600 if the prepack configurations being used do not evenly roll up to 600 units based on the need calculation by site.</p></li>
+            <li><span class="Emphasis">Max Packs Per Location</span>: The maximum number of prepacks of any configuration that can be allocated to a single site within the prepack optimization calculation to fulfill the anticipated sales for that site. Used as a constraint for the prepack optimization engine within Order Manager.
+
+			<p class="Example">The prepack optimization engine determines that a site requires 50 units from an order being prepacked, Maximum Packs Per Location is set to 5, and the selected prepack configurations all contain 9 units. Ignoring site need by size for this example, the engine can only use 5 prepacks containing 45 units total, as the prepack component of order fulfillment for the site and must assume the remaining 5 units will be fulfilled as single units.</p></li>
+            <li><span class="Emphasis">Maximum Units Per Pack</span>: Positive integer. Sets the maximum number of units the prepack optimization engine may suggest in single prepack configurations. Used as a constraint for the prepack optimization engine within Order Manager.
+
+			<p class="BasicNote">Only valid when Optimize Prepack is checked for a given prepack group, otherwise user selected prepack configurations are used</p></li>
+            <li><span class="Emphasis">Minimum Units Per Pack</span>: Positive integer. Sets the minimum number of units the prepack optimization engine may suggest in single prepack configurations. Used as a constraint for the prepack optimization engine within Order Manager.</li>
+            <li><span class="Emphasis">Num Pack Configs</span>: Positive integer. Sets the number of configurations the prepack optimization engine creates when determining optimal fulfillment of need within an order. Used as a constraint for the prepack optimization engine within Order Manager.
+
+			<p class="BasicNote">Only valid when Optimize Prepack is checked for a given prepack group, otherwise user selected prepack configurations are used.</p><p class="BasicNote">For true optimization, this setting can be set to NULL to allow the system to create configurations as needed. Only valid when Optimize Prepack is checked for a given prepack group, otherwise user selected prepack configurations are used. Some created configurations may not be utilized in the final optimized allocation of inventory to packs.</p></li>
+            <li><span class="Emphasis">Overage Weight</span>: Positive decimal to 2 places (1.25). Sets the relative preference for overages when calculating optimal unit allocation by site. Used as a constraint for the prepack optimization engine within Order Manager.
+			<p class="BasicNote">Used in conjunction with Underage Weight and Pack Weighting and calculated as a % to total of the 3 parameters (all 3 are summed then divided by the number of constraints that were not NULL. Thus, if only 2 of the 3 are set, the sum of their values is divided by 2 rather than 3 to determine the % to total).</p></li>
+            <li><span class="Emphasis">Pack Tolerance</span>: Positive percentage to 2 decimal places (5.00%). Defines the number of units over the total order quantity the engine may suggest in an attempt to fulfill the Maximum Pack % Total, expressed as a percentage of the total order quantity. Used as a constraint for the prepack optimization engine within Order Manager.
+		
+			<p class="Example">For a total order quantity of 1,000 units to be prepacked, a Maximum Pack % Total of 100%, and a Pack Tolerance of 1.00%. The engine may suggest an adjustment of the total order quantity of up to 1010 units to allow for 100% of the original order quantity to be fulfilled by units in prepacks.</p><p>When calculating prepack optimization against a Pack Tolerance, the engine prioritizes stores with greater need first.</p></li>
+            <li><span class="Emphasis">Pack Weighting</span>: Positive decimal to 2 places (1.25). Sets the relative preference for using the fewest prepack configurations possible when calculating optimal unit allocation by site. Used as a constraint for the prepack optimization engine within Order Manager.
+			<p class="BasicNote">Used in conjunction with Underage Weight and Overage Weight and calculated as a % to total of the 3 parameters (all 3 are summed then divided by the number of constraints that were not NULL. Thus, if only 2 of the 3 are set, the sum of their values is divided by 2 rather than 3 to determine the % to total).</p></li>
+            <li><span class="Emphasis">Underage Weight</span>: Positive decimal to 2 places (1.25). Sets the relative preference for underages when calculating optimal unit allocation by site. Used as a constraint for the prepack optimization engine within Order Manager.
+
+			<p class="BasicNote">Used in conjunction with Overage Weight and Pack Weighting and calculated as a % to total of the 3 parameters (all 3 are summed then divided by the number of constraints that were not NULL. Thus, if only 2 of the 3 are set, the sum of their values is divided by 2 rather than 3 to determine the % to total).</p></li>
+        </ul>
+        <h2>Output</h2>
+        <ul>
+            <li><span class="Emphasis">Prepack</span>: The names of the prepack configurations used in the most recent calculation for the selected prepack group.
+			<p class="BasicNote">There is a -(Singles)- line to display units not contained in prepacks.</p></li>
+            <li><span class="Emphasis">Count</span>: The number of the corresponding prepack configurations allocated to the prepack group. Blank for the -(Singles)- line</li>
+            <li><span class="Emphasis">Variant</span>:The variant codes contained within the corresponding prepack configuration</li>
+            <li><span class="Emphasis">Size Columns</span>: The allocated number of units per size for the corresponding prepack configuration, or in singles.<p class="BasicNote">The size columns displayed coincide with all sizes available in all of the prepack configurations with the Calculate box checked in the Prepacks area.</p></li>
+        </ul>
+    </body>
+</html>

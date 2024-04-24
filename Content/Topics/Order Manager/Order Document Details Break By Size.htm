@@ -1,0 +1,89 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" xml:lang="en-us">
+    <head>
+        <link href="../../Resources/TableStyles/standard.css" rel="stylesheet" MadCap:stylesheetType="table" /><title></title>
+    </head>
+    <body>
+        <h1>Order Document details – break by size </h1>
+        <p>The <span class="Emphasis">Break By Size</span> tab allows users to split order line quantities across assigned size curves, or specific sizes selected from curves, based on planned sales and anticipated size inventory across clusters. Sizing analysis is done for all order lines on a document simultaneously.</p>
+        <p>
+            <img src="../../Resources/Images/Order Manager/Order Document Details Break By Size.png" class="LargeImages" />
+        </p>
+        <h2>Break By Size functionality</h2>
+        <p>In addition to the standard functionality, this blade has the following:</p>
+        <table style="width: 100%;margin-left: auto;margin-right: auto;mc-table-style: url('../../Resources/TableStyles/standard.css');" class="TableStyle-standard" cellspacing="0">
+            <col class="TableStyle-standard-Column-Column1" />
+            <col class="TableStyle-standard-Column-Column2" />
+            <thead>
+                <tr class="TableStyle-standard-Head-Header1">
+                    <th class="TableStyle-standard-HeadE-Column1-Header1">Functionality</th>
+                    <th class="TableStyle-standard-HeadD-Column2-Header1">Description</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1"><span class="Emphasis">Calculate</span>
+                    </td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">Calculates the ideal units per size to order by variant and cluster, based on the <span class="Emphasis">Size Curve</span> and <span class="Emphasis">Selected Sizes</span> for each order line on the order document. See below for examples.</td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1"><span class="Emphasis">Approve</span>
+                    </td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">Approves the <span class="Emphasis">Break By Size</span> information for the order document and transitions the Workflow Status of the document to <span class="Emphasis">Break By Size</span>.</td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1"><span class="Emphasis">Approve &amp; Route</span>
+                    </td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">
+                         Approves the <span class="Emphasis">Break By Size</span> information for the order and launches the <span class="Emphasis">Commitment Status</span> dialog. Select the Workflow Status the document will transition to from available states, based on the active workflow. 
+                    </td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1"><span class="Emphasis">Enforce Size Minimum</span>
+                    </td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">(related to Receipt Size Min set in Receipt Plan view of Assortment Planning) When checked, enforces the total minimum quantity per size defined by that constraint and increases the order quantity to meet it, if necessary.</td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyB-Column1-Body1"><span class="Emphasis">Partition Option</span>
+                    </td>
+                    <td class="TableStyle-standard-BodyA-Column2-Body1">
+                 Provides additional partitioning metadata by which break by size can be further broken down. 
+                        <p class="BasicNote">This field is controlled by system policy <span class="Emphasis">Default Size Break Partition Table</span>. </p></td>
+                </tr>
+            </tbody>
+        </table>
+        <h2>Calculations that display the ideal units per size to order by variant and cluster</h2>
+        <p>
+            <img src="../../Resources/Images/Order Manager/Calc Ideal Units Per Size.png" class="LargeImages">
+            </img>
+        </p>
+        <p>
+            <img src="../../Resources/Images/Order Manager/Calc Ideal Units By Size Steps 3 &amp; 4.png" class="LargeImages" />
+        </p>
+        <p>&#160;</p>
+        <p>
+            <img src="../../Resources/Images/Order Manager/Calc Ideal Units By Size Steps 5 &amp; 6.png" class="LargeImages" />
+        </p>
+        <p>
+            <img src="../../Resources/Images/Order Manager/Calc Ideal Units By Size Step 7.png" class="LargeImages" />
+        </p>
+        <h2>Variant grid (left pane)</h2>
+        <ul>
+            <li><span class="Emphasis">Variant</span>: The variant code for the corresponding order line.</li>
+            <li><span class="Emphasis">Cluster Set</span>:  If applicable, displays the cluster set for the corresponding order line.</li>
+            <li><span class="Emphasis">Cluster</span>: If applicable, displays the cluster for the corresponding order line.</li>
+            <li><span class="Emphasis">Receipt Date</span>: The effective delivery date for the corresponding order line.</li>
+            <li><span class="Emphasis">Size Curve</span>: Displays/sets the size curve to be applied to the corresponding order line. Defaults to the size curve set for the variant in the assortment plan from which the order line was created.</li>
+            <li><span class="Emphasis">Selected Sizes</span>: Displays/sets the sizes to include in the corresponding order line. Defaults to all sizes included in the selected Size Curve.</li>
+            <li><span class="Emphasis">Site Count</span>: The number of sites the corresponding order line is for.</li>
+        </ul>
+        <h2>Pivot grid (right pane)</h2>
+        <ul>
+            <li><span class="Emphasis">Avg U/Site</span>: Sets the desired average units per site for the corresponding size as a constraint for calculation of sizing needs.<br /><p>Entering Avg U/Site can cause an increase in the original order quantity for the order line</p></li>
+            <li><span class="Emphasis">Act Avg U/Site</span>: The calculated average units per site for the corresponding size by dividing the corresponding Order Units by the Site Count for the cluster</li>
+            <li><span class="Emphasis">Quantity</span>: The raw system suggested units to be ordered for the corresponding variant/cluster/size<br /><p>This quantity does not include changes for the corresponding user specified Avg U/Site constraint, if any.</p></li>
+            <li><span class="Emphasis">Constrained Qty</span>: Displays the constrained system suggested units to be ordered for the corresponding variant/cluster/size<p class="BasicNote">This quantity includes changes for the corresponding user specified Avg U/Site constraint, if any.</p></li>
+            <li><span class="Emphasis">Final Qty</span>: Displays/sets the units to be ordered for the corresponding variant/cluster/size. Defaults to Constrained Qty value, but can be overridden by the user. User overrides are formatted in orange.<p class="BasicNote">Final Qty can also be entered in the subtotal and total rows of the Pivot Grid. Doing so proportionally splits the number entered down to the lower levels based on their current values</p></li>
+        </ul>
+    </body>
+</html>

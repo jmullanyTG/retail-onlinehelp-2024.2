@@ -1,0 +1,124 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" xml:lang="en-us">
+    <head>
+        <link href="../../Resources/TableStyles/standard.css" rel="stylesheet" MadCap:stylesheetType="table" />
+        <title>
+        </title>
+    </head>
+    <body>
+        <h1>Creating promotions based on existing promotions</h1>
+        <p>There are two ways to create a promotion based on an existing promotion. To create a new promotion based on an existing promotion, click either the <span class="Emphasis">Save As</span> button or the <span class="Emphasis">Clone</span> button located on the toolbar.</p>
+        <p>
+            <img src="../../Resources/Images/Promotion Management/Creating promotions based on existing promotions.png" class="LargeImages" />
+        </p>
+        <h2>Save As versus Clone</h2>
+        <p>Selecting <span class="Emphasis">Save As</span> is almost the same as selecting <span class="Emphasis">Clone</span>. Both functions default to the same price cluster set and other details. </p>
+        <p>The <span class="Emphasis">Save As</span> dialog is used to make changes to the promotion header, dates, workflows, and so on. Also, the cluster set can be changed and a promotion generated with the same items but different clusters and site assignments. If the current cluster set is not changed, then the sites and clusters based on the latest snapshot for the cluster set are retrieved. </p>
+        <p>
+            <img src="../../Resources/Images/Promotion Management/Save as Promotion.PNG" class="LargeImages" />
+        </p>
+        <p>The <span class="Emphasis">Clone Promotion</span> dialog can be used to make changes to the promotion header, dates, workflows, and so on. However, the <span class="Emphasis">Price Cluster Set</span> field is read-only preventing the cluster set from being changed. The new promotion will have the same clusters, sites, and items as the original promotion.</p>
+        <p>
+            <img src="../../Resources/Images/Promotion Management/Clone a Promotion.png" class="LargeImages" />
+        </p>
+        <p>Click <span class="Emphasis">Ok</span> to save and load the new Promotion. This Promotion can be modified as needed.</p>
+        <h2>Privacy options from the original promotion</h2>
+        <p>If the <span class="Emphasis">Include Promotion</span> checkbox is selected when cloning an Event with associated Promotions, then the privacy options are carried over from the original Promotions. Also, the last Promotion Owner is retained in the new Promotion being created by the cloned Event.</p>
+        <h2>Field descriptions</h2>
+        <table class="TableStyle-standard" cellspacing="0" style="mc-table-style: url('../../Resources/TableStyles/standard.css');">
+            <thead>
+                <tr class="TableStyle-standard-Head-Header1">
+                    <th class="TableStyle-standard-HeadE-Column1-Header1">Action</th>
+                    <th class="TableStyle-standard-HeadD-Column2-Header1">Description</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">
+                      Promotion Name</td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">
+                       Modify the default name of the new Promotion. 
+                    </td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">
+                        Date Range </td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">
+                         Start and end dates of the new Promotion can be modified by clicking on the <span class="Emphasis">…</span> button. 
+                    </td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">
+                        Description (Optional) 
+                    </td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">
+                     Enter a summary of the new Promotion. 
+                    </td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">
+                     Priority (Optional) 
+                    </td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">
+                         Select a Priority value from the configurable dropdown list. 
+                    </td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">
+                        Effect (Optional) 
+                    </td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">
+                        Select an Effect value from the configurable dropdown list. 
+                    </td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">
+                       Tags (Optional) 
+                    </td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">
+                        Click <span class="Emphasis">Tags</span> to associate Tags with the Promotion. New Tags can be created with the appropriate rights.
+                    </td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">
+                        Requirements (Optional) 
+                    </td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">
+                        Click on <span class="Emphasis">…</span> and select one or more Requirement in the window. 
+                    </td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">
+                         Price Cluster Set </td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">
+                     (read-only for <span class="Emphasis">Save As</span>) Update the Promotion Site Cluster Set if needed. The version of the Site Cluster Set loaded to the Promotion is  determined based on the Site Cluster Set start date and Promotion Start Date. 
+                    </td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">
+                         Workflow  
+                    </td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">
+                         Update the Promotion Workflow from the dropdown list if needed. 
+                    </td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">Private, Public, Shared </td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">The default privacy option is based on the original promotion being cloned. The default privacy option for cloned promotions can be changed.</td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">
+                         Created By </td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">(read-only) The name of the user that cloned the Promotion and the creation date and time. 
+                    </td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyB-Column1-Body1">
+                       Last Changed By</td>
+                    <td class="TableStyle-standard-BodyA-Column2-Body1">(read-only) The name of the user that last modified the Promotion and the date and time when that change was made. 
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </body>
+</html>

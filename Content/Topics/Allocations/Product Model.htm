@@ -1,0 +1,59 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" xml:lang="en-us">
+    <head><title></title>
+    </head>
+    <body>
+        <h1>Product models</h1>
+        <p>Product models are built using historical data from groups or levels of similar products over a specified time period and support the ability to create indexing of stores to support allocations. When specific products for modeling are selected, the index is created not as an indication of overall store performance, but as a representation of how a product or set of products will perform across the stores. </p>
+        <p>
+            <img src="../../Resources/Images/Allocations/Allocations Product Model screen.PNG" class="LargeImages" />
+        </p>
+        <h2>Building product models based on hierarchy product levels 
+
+</h2>
+        <p>Allocators can build product models based on desired hierarchy levels. This allows product models to be optimized for desired business distributions. When new items begin allocation, a product model can first be built off higher-level hierarchies such as seasons and departments. As more sales history becomes available to the new items, the hierarchy can be lowered to variant levels to really reflect the item’s individual sales history. </p>
+        <p>This is vastly powerful as which hierarchy level to use for each product model can be chosen based on availability of data and desired accuracy. 
+
+</p>
+        <p>We do not recommend setting the product model hierarchy lower than the allocation strategy hierarchy. For example, if allocations are at variant level, don’t set the product model hierarchy to item master level.  </p>
+        <p class="BasicNote">The item master level hierarchies that display in the <span class="Emphasis">Hierarchy</span> column are defined using the <span class="Emphasis">Hierarchy Filtering</span> view.</p>
+        <h2>Model rule selection</h2>
+        <p>There are two methods for model rule selection: fixed and set period rolling. A fixed period supplies start and end date which creates the fixed period. The set and rolling period rule  specifies a set distance in the past (365 days in the past from today) plus a defined rolling period (+90 days). This creates the period as the next 90 days from exactly one year ago. </p>
+        <h2>Product model calculation</h2>
+        <p>By default, the product model calculation uses the MEDIAN to produce the average values. </p>
+        <p class="BasicNote"> System policy <span class="Emphasis">Product Model - Use Advanced Calculation</span> is set to <span class="Emphasis">False</span> by default. If set to <span class="Emphasis">True</span>, then the calculation uses the MEAN.</p>
+        <h3>Product model recalculations</h3>
+        <p>Product models are prevented from recalculating if they meet one of the following criteria, the product model:</p>
+        <ul>
+            <li>
+                <p>is in a deleted state</p>
+            </li>
+            <li>
+                <p>is NOT linked to an allocation strategy</p>
+            </li>
+            <li>
+                <p>was calculated in the last 36 hours</p>
+                <p class="BasicNote">The time duration is governed by system policy <span class="Emphasis">Product Model: Time Interval To Skip a Product Model Calculation</span> (Module: Product Model).</p>
+            </li>
+        </ul>
+        <h2>Defining a product model</h2>
+        <ol>
+            <li>On the <span class="Emphasis">Product Model</span> screen, click <span class="Emphasis">New</span>.</li>
+            <li>Enter a unique product model name in the <span class="Emphasis">Product Model</span> field.</li>
+            <li>Provide a description in the <span class="Emphasis">Product Model Description</span> field.</li>
+            <li>Click the <span class="Emphasis">Model Time Frame Selection</span> field and choose a <span class="Emphasis">Time Frame</span>.</li>
+            <li>Select the appropriate field and choose the model metric and model type.</li>
+            <li>Optionally, select the appropriate checkbox to include inner zeros and lost sales.</li>
+            <li>Click on the <span class="Emphasis">Sales Type</span> field to select sales types.</li>
+            <li>Click on the <span class="Emphasis">Product Selection</span> field to choose the <span class="Emphasis">Item Master</span> filter that specifies the items to use during the calculation.</li>
+            <li>Optionally, click on the <span class="Emphasis">Default Product Selection</span> field to choose an <span class="Emphasis">Item Master Filter</span> to be used if the first item master filter does not produce values.</li>
+            <li>If a location plan related model metric was selected, then select a location plan in the <span class="Emphasis">Location Plan</span> field.</li>
+            <li>
+                <p>Click <span class="Emphasis">Save</span>.</p>
+                <p>The contributions are automatically calculated and display in the bottom detail grid.</p>
+            </li>
+        </ol>
+        <h3>Additional information</h3>
+        <p>For more information on the individual fields, see <MadCap:xref href="Product Model Grid Reference.htm">Product Model Grid Reference</MadCap:xref>.</p>
+    </body>
+</html>

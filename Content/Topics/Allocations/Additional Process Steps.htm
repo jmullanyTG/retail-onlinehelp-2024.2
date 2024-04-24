@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" xml:lang="en-us">
+    <head><title></title>
+    </head>
+    <body>
+        <h1>Supporting functionality that affects how Allocations functions</h1>
+        <p>Certain ancillary features that affect how Allocations functions are found in other modules, including Site Clustering, Supply Chain, Policy, Site Manager, and Inventory Manager.</p>
+        <h2>Order Manager</h2>
+        <p>After allocation strategies have been fully formulated, the orders must be executed in Order Manager (replenishment and allocations) as <span class="Emphasis">From Strategy</span> allocation orders. Here, orders are organized and processed for approval and export.</p>
+        <h2>Inventory Policy</h2>
+        <p>Order multiple values are updated and maintained through the Policy module or at an inventory (item-site) level in Inventory Manager. Order multiple values are applied at the time of order calculation and are reflected in the <span class="Emphasis">Constrained Demand</span> metric within the <span class="Emphasis">Allocation Rollup</span> view.</p>
+        <h2>Site Manager</h2>
+        <p>Store and DC ordering and receiving schedules are set and maintained in Site Manager. </p>
+        <ul>
+            <li><span class="Emphasis">Receiving Schedule</span> – the days on which a store or DC may receive delivered stock. Orders are not generated for any day on which stock is not received into the location. Typically applied to stores. </li>
+            <li><span class="Emphasis">Shipping Schedule</span> – the days on which a store or DC may ship stock out of the location. Orders will not be recommended for shipment on any day on which stock may not be shipped from a source location. Typically applied to DCs. </li>
+        </ul>
+        <p>Schedule sets must be configured in the Schedules module. Shipping and receiving schedules can also be applied at the inventory (item-location) level in the Inventory Manager. Inventory level schedules  override site level schedule values as they are considered an override. </p>
+    </body>
+</html>

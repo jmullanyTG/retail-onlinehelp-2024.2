@@ -1,0 +1,274 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head>
+        <link href="../TableStyles/standard.css" rel="stylesheet" MadCap:stylesheetType="table" />
+    </head>
+    <body>
+        <p>To work with scenarios, click <span class="Emphasis">Copy</span> or <span class="Emphasis">Edit</span> on the <span class="Emphasis">Target Creation</span> screen toolbar  to displays the following screen.</p>
+        <p class="BasicNote">The Target Worksheet and Target New Choices blades display for editing and copying only.</p>
+        <p class="p">
+            <img src="../Images/Target Choice Count/Creating and Managing Target Scenarios.PNG" class="LargeImages">
+            </img>
+        </p>
+        <MadCap:snippetBlock src="Calculate and Rationalize Processes.flsnp" />
+        <h2>Functionality</h2>
+        <h3>Auto-Create Segments</h3>
+        <p style="margin-bottom: 0pt;">Creates one target segment for each lowest level leaf of the selected product hierarchy for the scenario, defines temporary Target Filters for each based on the items belonging to the corresponding hierarchy levels, and assigns any default cluster sets users have defined. For more information on setting defaults, see <MadCap:xref href="../../Topics/Assortment Planning/Managing Plans and Set Defaults.htm">Managing assortment plans and setting plan defaults</MadCap:xref>.</p>
+        <p class="Example">The selected product hierarchy level for the scenario is the department Mens Tops. Beneath Mens Tops, there are 4 sub-departments: Mens Tees, Mens Wovens, Mens Knits, and Mens Sweaters. Clicking <span class="Emphasis">Segment by Hierarchy</span> creates one segment for each in the <span class="Emphasis">Target Segment Definitions</span> area.</p>
+        <p>If additional hierarchy levels exist between the product hierarchy level selected for the scenario and the lowest level in the product hierarchy set for the plan, the system still generates segments for the leaves of the lowest level. To use this functionality to create segments at a higher level, a different hierarchy to the plan that only goes down to the level desired must be assigned.</p>
+        <p class="Caution">We strongly advise against defining product hierarchies that extend to the style level or below, as this greatly diminishes system performance and over complicates the assortment planning process.</p>
+        <h3>Calculate</h3>
+        <p>Calculates the segment cluster details in the <span class="Emphasis">Target Worksheet</span> section based on the <span class="BodyWord">Target Data Selection</span> parameters and selections in the <span class="Emphasis">Target Segment Definitions</span> section. After the calculation process completes, the scenario status shows as <span class="Emphasis">Calculated</span> in the <span class="Emphasis">Target Data Selection</span> section, and full Comparison and Carryover data is shown in the <span class="Emphasis">Target Worksheet</span> section. The <span class="Emphasis">TY&#160;Act New</span> fields are set as defaults.</p>
+        <p class="BasicNote">Generally, this process takes only a few seconds to complete. However, depending on the volume of data being queried and the complexity of the specified criteria, it could take up to a minute or more.</p>
+        <p class="BasicNote">If <span class="Emphasis">Calculate</span> is clicked before segments have been defined for the scenario, the <span class="Emphasis">Target Worksheet</span> section refreshes but return no data.</p>
+        <h3>Rationalize</h3>
+        <p>Calculates the recommended new choice counts by segment cluster based on the <span class="Emphasis">Target Data Selection</span> parameters and the selections in the <span class="Emphasis">Target Segment Definitions</span> section set for the scenario. For more information, see <MadCap:xref href="../../Topics/Assortment Planning/Rationalization.htm">Rationalization calculation</MadCap:xref>.</p>
+        <p class="BasicNote">Generally, this process takes only a few seconds to complete. However, depending on the volume of data being queried and the complexity of the specified criteria, it could take up to a minute or more.</p>
+        <p class="BasicNote">If Rationalize is clicked before segments have been defined for the scenario, the Segment Cluster Details section will refresh but return no recommended choice counts.</p>
+        <h3>Smart Start</h3>
+        <p>If Target Choice Counts is used within AP, scenarios can be used to create a foundation for assortment plans through a process called Smart Start.
+</p>
+        <p>Selecting Smart Start in Target Choice Count generates the following:</p>
+        <p>
+            <img src="../Images/Target Choice Count/Smart Start Not Enabled.PNG" class="LargeImages" />
+        </p>
+        <p>For more information on Smart Start,<MadCap:conditionalText MadCap:conditions="General.ScreenOnly"> see <MadCap:xref href="../../Topics/Assortment Planning/Smart Start.htm">Smart Start </MadCap:xref>.</MadCap:conditionalText><MadCap:conditionalText MadCap:conditions="General.PrintOnly"> refer to the Assortment Planning User Guide.</MadCap:conditionalText></p>
+        <h3>Refresh</h3>
+        <p style="margin-bottom: 0pt;"> If a Plan Basis is set for the scenario, refreshes the Scenario Target based on the current plan data.</p>
+        <h3>Clear Overrides</h3>
+        <p>Reverts any edits made to Target Percent Contribution, TY Act New Sales, TY Act New Sales U, TY Act New AUR, and TY Act New Choices in the Segment Cluster Details section back to their system generated values</p>
+        <h3>View Segment Membership</h3>
+        <p style="margin-bottom: 0pt;">Launches a view which displays the attributes and hierarchy levels assigned to each placeholder / variant. Users can manually change the placeholder assignments.</p>
+        <p>The fields displayed are based on the levels present in the product hierarchy for the current assortment plan:</p>
+        <ul>
+            <li><span class="Emphasis">Collection Code</span>: user or system defined code for the collection containing the placeholder item</li>
+            <li><span class="Emphasis">Collection Description</span>: user or system defined description for the collection containing the placeholder item</li>
+            <li><span class="Emphasis">Placeholder Code</span>: user or system defined code for the placeholder item</li>
+            <li><span class="Emphasis">Placeholder Description</span>: user or system defined description for the placeholder item</li>
+            <li><span class="Emphasis">Color Code</span>: system color code for the placeholder item</li>
+            <li><span class="Emphasis">Color Description</span>: system color description for the placeholder item</li>
+            <li>
+                <p><span class="Emphasis">Image</span>: image assigned to the corresponding variant item in the system</p>
+                <p class="BasicNote">Images can be assigned to variant items through Management &gt; Variant Manager &gt; Image Maintenance.</p>
+            </li>
+            <li>
+                <p><span class="Emphasis">Assigned Attributes</span>: Delimited list of imported and/or user defined product attributes assigned to the placeholder item.</p>
+                <p class="BasicNote">If working within the Assortment Plan module, product attributes can be assigned directly to placeholders via the Attributes pane in the Collection and Placeholder views or via the Variant Manager module<MadCap:conditionalText MadCap:conditions="General.ScreenOnly"> (for more information, see <MadCap:xref href="../../Topics/Attribute Management/Assigning Attributes to Variants.htm">Assigning attributes to variants</MadCap:xref>)</MadCap:conditionalText>.</p>
+            </li>
+            <li><span class="Emphasis">AUT</span>: Average ticket price per unit for the placeholder item during the selected Comparison Time Frame. AUT is assumed to be VAT inclusive for the purposes of all dependent calculations.</li>
+            <li><span class="Emphasis">AUC</span>: Average cost per unit for the placeholder item during the selected Comparison Time Frame.</li>
+            <li><span class="Emphasis">Gross Margin</span>: Gross margin percentage for the placeholder item during the selected Comparison Time Frame. The calculation is: (AUR – AUC) / AUR. </li>
+            <li><span class="Emphasis">Sales</span>: Sales revenue for the placeholder item during the selected Comparison Time Frame.</li>
+            <li><span class="Emphasis">Sales Units</span>: Sales units for the placeholder item during the selected Comparison Time Frame.</li>
+            <li><span class="Emphasis">AUR</span>: Average retail (selling) price per unit for the placeholder item during the selected Comparison Time Frame. The calculation is Sales / Sales Units.</li>
+            <li><span class="Emphasis">Segment</span>:  Optional user editable dropdown (formatted blue to indicate editable). The listed segments to which each placeholder is assigned. When users change an assignment the <span class="Emphasis">Manual Change?</span> column displays a check mark once <span class="Emphasis">Save</span> is clicked.</li>
+            <li><span class="Emphasis">Manual Change?</span>: A check mark indicates that the placeholder's assignment was manually changed.</li>
+        </ul>
+        <p>Clicking <span class="Emphasis">Save</span> assigns all placeholder items with the <span class="Emphasis">Segment</span> field specified to those segments for the current scenario.  This does not update the filters specified in Target Filter for any segment. It makes only temporary assignments used within the scenario. Click <span class="Emphasis">Cancel</span> to revert any changes.</p>
+        <h3>View Data Cleansing </h3>
+        <p>Launches the <span class="Emphasis">Target Data Cleansing</span> screen.</p>
+        <p>
+            <img src="../Images/Assortment Planning/View Data Cleansing Report.PNG" class="LargeImages">
+            </img>
+        </p>
+        <ul>
+            <li><span class="Emphasis">Segments:</span> The segments from the active scenario to include in the report.</li>
+            <li><span class="Emphasis">Cluster Sets</span>: The cluster sets from those assigned to segments within the active scenario to include in the report.</li>
+            <li><span class="Emphasis">Clusters</span>: The clusters from those cluster sets assigned to segments within the active scenario to include in the report.</li>
+        </ul>
+        <h4>Target Data Cleansing Settings section</h4>
+        <p>This section displays the data cleansing parameters or thresholds used for each segment for reference purposes. The background color of the threshold fields corresponds to data points that were cleansed or altered as a result of each.</p>
+        <p>
+            <img src="../Images/Assortment Planning/Target Data Cleansing Settings.png" class="LargeImages">
+            </img>
+        </p>
+        <ul>
+            <li><span class="Emphasis">Segment</span>: The segment name.</li>
+            <li>
+                <p><span class="Emphasis">Average Inclusion Threshold</span>: Corresponds to the system policy of the same name. Displays the percentage of average applied in the data cleansing process  to remove data points with extreme low sales. For more information, see <MadCap:xref href="../../Topics/Assortment Planning/Rationalization.htm">Rationalization </MadCap:xref>.</p>
+                <p>
+                    <img src="../Images/Assortment Planning/Average Inclusion Threshold.png" class="LargeImages">
+                    </img>
+                </p>
+            </li>
+            <li>
+                <p><span class="Emphasis">Active Variant Threshold Factor</span>: Corresponds to the system policy of the same name. Displays the percentage of max applied in the data cleansing process  to remove outlier data points.</p>
+            </li>
+            <li>
+                <p><span class="Emphasis">Active Variant Time On Offer Minimum</span>: Corresponds to the system policy of the same name. Displays the percentage of the scenario window of time applied in the data cleansing process to remove variants without a sufficient number of data points remaining.</p>
+            </li>
+            <li>
+                <p><span class="Emphasis">Median Period Total Threshold</span>: Corresponds to the system policy of the same name. Displays the percentage of median applied in the data cleansing process to raise periods falling below to more consistent levels prior to deseasonalization.</p>
+                <p>
+                    <img src="../Images/Assortment Planning/Median Period Total Threshold.png" class="LargeImages" />
+                </p>
+            </li>
+            <li><span class="Emphasis">Active Variant Total Minimum</span>: Corresponds to the system policy of the same name.
+Displays the rows removed from the cleansing process.				 <p><img src="../Images/Assortment Planning/Active Variant Total Minimum.PNG" class="LargeImages" /></p></li>
+        </ul>
+        <h4>Target Data Cleansing – Pre-Deseasonalization section</h4>
+        <p>This section displays raw sales data for all variants included in the segment, cluster set and cluster Parameters selections and shows those data points removed or altered during the data cleansing process prior to deseasonalization.</p>
+        <ul>
+            <li><span class="Emphasis">Segment</span>: The segment name</li>
+            <li><span class="Emphasis">Cluster Set</span>: The name of the cluster set assigned to the segment</li>
+            <li><span class="Emphasis">Cluster</span>: The name of the cluster within the indicated cluster set</li>
+            <li><span class="Emphasis">Variant</span>: The variant code</li>
+            <li><span class="Emphasis">Variant Description</span>: The variant description</li>
+            <li><span class="Emphasis">Total</span>: Integer or currency (depending on Sales Basis of units or revenue). The total raw sales that occurred in the corresponding cluster across the scenario window of time for the variant.</li>
+            <li><span class="Emphasis">Maximum</span>: Integer or currency (depending on Sales Basis of units or revenue). The maximum period raw sales that occurred in the corresponding cluster across the scenario window of time for the variant).</li>
+            <li><span class="Emphasis">Carryover</span>: A checkbox that allows users to decide whether to include or exclude given placeholders from processing. If an item is to be carried over, but is near the end of its life and thus has a minimal sales plan in the current time period, then users can include the item so that Rationalization is informed by the item’s performance and recommends new placeholders to take its place. If the item is a carryover but it is expected to continue to sell with the same volume as last year, then the item can be excluded because its plan is already created and accounted for.
+			<p>The method for population depends on whether Target Creation is accessed through AP or standalone Target Choice Count:</p><ul><li><p>In AP, Carryover is based on whether the placeholder’s phase dates intersect both the scenario Window of Time and the Comparison time period. For example, if the Comparison time period is over 2022 week 1 - week 10, and the scenario is over 2023 week 1 - week 10, an item selling from 2022 week 5 to 2023 week 15 will be considered carryover, but an item that phases out in 2022 week 30 is not.</p></li><li><p>In standalone Target Choice Count, Carryover is calculated with the same logic as in AP, but uses Inventory level phase dates instead of placeholder phase dates. If at least one of the variant’s inventories' phase dates intersect both Window of Time and Comparison time frames, then the variant is considered carryover.</p></li></ul></li>
+            <li><span class="Emphasis">Inclusion Type</span>: Editable. Defaults to <span class="Emphasis">Full Process</span>. Even after data cleansing, gives users the ability to manually exclude some placeholders from consideration in the rationalization process. For example, a placeholder was a very unique item whose trends are not expected to be repeated in the future.			<table style="mc-table-style: url('../TableStyles/standard.css');margin-left: 0;margin-right: auto;" class="TableStyle-standard" cellspacing="0"><col class="TableStyle-standard-Column-Column1" style="width: 10%;" /><col class="TableStyle-standard-Column-Column2" style="width: 45%;" /><col class="TableStyle-standard-Column-Column1" style="width: 55%;" /><thead><tr class="TableStyle-standard-Head-Header1"><th class="TableStyle-standard-HeadE-Column1-Header1">Setting</th><th class="TableStyle-standard-HeadE-Column2-Header1">Definition</th><th class="TableStyle-standard-HeadD-Column1-Header1">Possible Use Case</th></tr></thead><tbody><tr class="TableStyle-standard-Body-Body1"><td rowspan="1" colspan="1" class="TableStyle-standard-BodyE-Column1-Body1">
+								Full Process
+</td><td rowspan="1" colspan="1" class="TableStyle-standard-BodyE-Column2-Body1">
+		
+		The variant will be included in full Rationalization processing, including in Data Cleansing.
+</td><td rowspan="1" colspan="1" class="TableStyle-standard-BodyD-Column1-Body1">
+				This is what the majority of items will fall into: non-carryover items that are a solid representation of the expected productivity and relationship between best to worst selling items.
+</td></tr><tr class="TableStyle-standard-Body-Body1"><td rowspan="1" colspan="1" class="TableStyle-standard-BodyE-Column1-Body1">
+				Target Set Only
+</td><td rowspan="1" colspan="1" class="TableStyle-standard-BodyE-Column2-Body1">
+				The variant will be included in Data Cleansing to set Target values, but will be excluded from the Rationalization process.
+</td><td rowspan="1" colspan="1" class="TableStyle-standard-BodyD-Column1-Body1">The item is a carryover item which should be included in Comparison Active data and target setting, but since it is already included in carryover, it should not be used for rationalization. The item was a strong seller last year due to intense societal trends, but it is not a repeatable scenario this year, so rationalization should not be informed by such a productive item.</td></tr><tr class="TableStyle-standard-Body-Body1"><td rowspan="1" colspan="1" class="TableStyle-standard-BodyB-Column1-Body1">
+				Exclude
+</td><td rowspan="1" colspan="1" class="TableStyle-standard-BodyB-Column2-Body1">
+				The variant will not be included in any scenario processing. It will not influence Target or Recommended values.
+</td><td rowspan="1" colspan="1" class="TableStyle-standard-BodyA-Column1-Body1">
+				An item that should not have been selling in the cluster, so there is no desire to model it in the future.
+</td></tr></tbody></table></li>
+            <li>Period Data Fields: Integer or currency (depending on Sales Basis of units or revenue). The raw sales per period that occurred in the corresponding cluster for the variant.</li>
+        </ul>
+        <h4>Target Data Cleansing – Post-Deseasonalization section</h4>
+        <p>This section displays deseasonalized sales data for all variants included in the segment, cluster set and cluster Parameters selections and shows those data points removed by the data cleansing process prior to deseasonalization. The conditional formatting for data points removed also shows in this view to provide enhanced context when viewing the additional edits.</p>
+        <p>
+            <img src="../Images/Assortment Planning/Target Data Cleansing Post Deseasonalization section.png" class="LargeImages">
+            </img>
+        </p>
+        <ul>
+            <li><span class="Emphasis">Total</span>: Integer or currency (depending on Sales Basis of units or revenue). The remaining deseasonalized sales that occurred in the corresponding cluster across the scenario window of time for the variant.</li>
+            <li><span class="Emphasis">Average</span>: Integer or currency (depending on Sales Basis of units or revenue). The average period deseasonalized sales that occurred in the corresponding cluster across the scenario window of time for the variant.</li>
+            <li>Period Data Fields: Integer or currency (depending on Sales Basis of units or revenue). The deseasonalized sales per period that occurred in the corresponding cluster for the variant.</li>
+        </ul>
+        <h3>View Choices By Update</h3>
+        <p>Displays the <span class="Emphasis">Target Choices By Update</span> view allowing users to select which segments and locations to view.  Clicking <span class="Emphasis">Sum Locations</span> lets users sum locations.  When checked, the data shown is collapsed to show choices across all selected locations. When unchecked, specific values are broken out for the selected locations.</p>
+        <p>
+            <img src="../Images/Target Choice Count/Target Choice By Update.png" class="LargeImages" />
+        </p>
+        <p>The toolbar has the following functionality:</p>
+        <ul>
+            <li>
+                <p><span class="Emphasis">Merge Choices</span>: Attempts to merge a choice from one update to a choice from another update, so that the two (or more) choices become a single, long-living choice entity.</p>
+                <ul>
+                    <li>
+                        <p>Choices from multiple updates can be selected at the same time.</p>
+                    </li>
+                    <li>
+                        <p>Only one choice (per segment) can be chosen per update, e.g. Choice A and Choice B from the same update cannot be merged together.</p>
+                    </li>
+                    <li>
+                        <p>Choices must span a continuous range of time, e.g. a choice from Update 1 and Update 3 cannot be merged unless a choice from Update 2 is also included.</p>
+                    </li>
+                    <li>
+                        <p>When choices are merged, the collection / choice in collection assignment of the first update is retained.</p>
+                    </li>
+                </ul>
+            </li>
+            <li>
+                <p><span class="Emphasis">Split Choice</span>: Splits any merges done on a choice back into separate results.  This operation can be done over several selected rows at once.</p>
+            </li>
+            <li>
+                <p><span class="Emphasis">Auto-Merge</span>: Attempts to automatically merge all choices for the selected rows' Collections and Choice In Collections.  e.g. if Collection 1, Choice 2 is chosen, then the system searches for any unmerged Collection 1 / Choice 2 choices across all updates and merge them together.  This operation can be done over several selected rows at once (e.g. select Collection 1 / Choice 1 - 5 and Collection 2 / Choice 1 - 4).</p>
+            </li>
+            <li>
+                <p><span class="Emphasis">Undo All</span>: Returns the screen to its original state. In other words, it splits all merges.</p>
+            </li>
+        </ul>
+        <p>The <span class="Emphasis">Scenario Summary</span> section shows aggregate metrics for all updates across the segments. </p>
+        <p>
+            <img src="../Images/Target Choice Count/Scenario Summary.png" class="LargeImages" />
+        </p>
+        <p> The metrics included are:</p>
+        <ul>
+            <li>
+                <p><span class="Emphasis">Pareto Choices</span>: A Pareto % of Comparison Active choices.  It is meant to be used as a guidepost for the scenario’s TY New choices. Ideally, the choice count for comparison and the current scenario should be aligned.</p>
+            </li>
+            <li>
+                <p><span class="Emphasis">TY Act New Choices</span>: The sum of all choices across all updates for the segment and location.</p>
+            </li>
+            <li>
+                <p><span class="Emphasis">Comparison Avg Periods in Phase</span>: The average span of time for which choices were active in comparison data.  It can be thought of as the average lifespan of historical items.  It can be used as a guidepost against the Avg Periods in Phase for the current scenario. In most cases, the two values should be similar.</p>
+            </li>
+            <li>
+                <p><span class="Emphasis">TY Act New Avg Periods in Phase</span>: The average span of time for which choices will be active in the current scenario.</p>
+            </li>
+        </ul>
+        <p>The Pareto % to use can be set in two place, via: </p>
+        <ul>
+            <li>
+                <p>system policy <span class="Emphasis">Rationalize: Pareto Threshold</span> which is the default value when set, or </p>
+            </li>
+            <li>
+                <p>the <span class="Emphasis">Segment Definitions</span> view.</p>
+                <p>
+                    <img src="../Images/Target Choice Count/Segment Definitions Pareto.png" class="LargeImages" />
+                </p>This threshold answers the question, “In history, what number of variants were required to achieve x% of the total target productivity?”  This is meant to be an estimate against which scenario results can be compared.  If the scenario were to achieve 95% of the target, how many total choices are necessary?</li>
+        </ul>
+        <p>The <span class="Emphasis">Update Refresh Rate</span> section shows aggregate metrics for each update.</p>
+        <p>
+            <img src="../Images/Target Choice Count/Update Refresh Rate.png" class="LargeImages" />
+        </p>
+        <p>This section displays:</p>
+        <ul>
+            <li>
+                <p><span class="Emphasis">TY Act New Choices</span>: the recommended and/or the user’s specified choices counts for the update</p>
+            </li>
+            <li>
+                <p><span class="Emphasis">New Choices In Update</span>, <span class="Emphasis">Update % New Choices</span>: of the TY Act New Choices count, how many are phasing in during this Update’s period of time</p>
+                <p class="BasicNote">This value is always 100% in the first update because all choices are first phasing in during this update.</p>
+            </li>
+            <li>
+                <p><span class="Emphasis">Ongoing Choices In Update</span>, <span class="Emphasis">Update % Ongoing Choices</span>: of the TY Act New Choices count, how many are continuing to be in phase from a previous Update</p>
+            </li>
+        </ul>
+        <p>The <span class="Emphasis">Sales By Update</span> provides the primary mechanism for joining results from separate updates together.  The action is done by clicking on rows.  Separate results for different updates can be clicked and then the view actions can be selected:</p>
+        <p>
+            <img src="../Images/Target Choice Count/Sales By Update.png" class="LargeImages" />
+        </p>
+        <ul>
+            <li>
+                <p><span class="Emphasis">Collection Num</span>: the Collection Number as defined by the rationalization Marginal Return Matrix.  This number series restarts for each Update (e.g. Update 1 has Collections 1 - 5, Update 2 has Collections 1 - 4)</p>
+            </li>
+            <li>
+                <p><span class="Emphasis">Unique Coll In Segment</span>: (hidden by default) the Collection Number made unique across the whole segment, continuing incrementing across Updates (e.g. Update 1 has Collections 1 - 5, Update 2 has Collections 6 - 9)</p>
+            </li>
+            <li>
+                <p><span class="Emphasis">Choice In Collection</span>: the numeric choice per collection</p>
+            </li>
+            <li>
+                <p><span class="Emphasis">Unique ID In Segment</span>: (hidden by default) the number counter for all choices across the whole segment</p>
+            </li>
+            <li>
+                <p><span class="Emphasis">Unique ID In Update</span>: (hidden by default) the number counter for all choices in an update, restarting from 1 for each update</p>
+            </li>
+            <li>
+                <p><span class="Emphasis">Locations</span>: comma-separated list of all locations to which the choice will be assorted</p>
+            </li>
+            <li>
+                <p><span class="Emphasis">Phase Periods</span>: the periods in which the choice will be in phase after Smart Start</p>
+            </li>
+            <li>
+                <p><span class="Emphasis">Update Rank</span>: the numerical order of results in each update, from strongest performer to least</p>
+            </li>
+            <li>
+                <p>Sales U / Sales $: the Target sales value for the choice</p>
+            </li>
+            <li>
+                <p>ROS U / ROS $ (hidden by default): the ROS values for the choice</p>
+            </li>
+        </ul>
+        <p>The <span class="Emphasis">Choice Phase Calendar</span> section has many of the same organizational fields as the <span class="Emphasis">Sales By Update</span> section.  This section shows a calendar representation of the phase dates for each choice.  To filter on “what choices are in phase during this week,” the text “In Phase” is provided.</p>
+        <p>
+            <img src="../Images/Target Choice Count/Choice Phase Calendar.png" class="LargeImages" />
+        </p>
+    </body>
+</html>

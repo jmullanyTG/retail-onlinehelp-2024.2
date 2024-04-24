@@ -1,0 +1,237 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" xml:lang="en-us">
+    <head><title></title>
+    </head>
+    <body>
+        <h1>Inventory status</h1>
+        <table class="TableStyle-standard" cellspacing="0" style="margin-left: auto;margin-right: auto;mc-table-style: url('../../Resources/TableStyles/standard.css');">
+            <col class="TableStyle-standard-Column-Column1" style="width: 25%;" />
+            <col class="TableStyle-standard-Column-Column2" />
+            <thead>
+                <tr class="TableStyle-standard-Head-Header1">
+                    <th class="TableStyle-standard-HeadE-Column1-Header1">
+                        Field
+                    </th>
+                    <th class="TableStyle-standard-HeadD-Column2-Header1">
+                        Description
+                    </th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">
+                        Availability
+                    </td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">The ability, in percentage terms, to meet current demand with currently available stock.&#160; Calculation at an item level takes on Boolean logic i.e. either stock is available or it is not, with no in-between indications.
+                    </td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">
+                        Days From Most Overdue Supplier Order
+                    </td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">
+                        Today’s date – open order estimated receipt date.
+                    </td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">
+                        Days On Hand
+                    </td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">Number of days Stock on Hand quantity will last based on unconstrained demand.</td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">
+                        Excess Stock For Redistribution Quantity
+                    </td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">
+                        SONH Qty &gt; LT + SS + RC + Factor as a function of the forecast.
+                    </td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">
+                        Excess Stock For Redistribution Value
+                    </td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">
+                        SONH value &gt; LT + SS + RC + Factor as a function of the forecast.
+                    </td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">
+                        Excess Stock Quantity
+                    </td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">
+                        Stock deemed to be in excess. 
+                    </td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">
+                        Excess Stock Value
+                    </td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">
+                        Excess Stock Quantity at cost. 
+                    </td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">
+                        Expedite Order Quantity
+                    </td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">
+                        Stock quantity contained in expedited orders.
+                    </td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">
+                        Expedite Order Value
+                    </td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">
+                        Value of stock quantity contained in expedited order at cost. 
+                    </td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">
+                        First Expedite Order Date
+                    </td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">
+                        Suggested Date Expedite order needs to be expedited.
+                    </td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">
+                        First Stock Out Date
+                    </td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">
+                        Estimated first date item will stock out
+                    </td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">
+                        First Surplus Order Date
+                    </td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">
+                        Date of first surplus order
+                    </td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">
+                        Late Orders Quantity
+                    </td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">
+                        Quantity of orders where estimated receipt date is older than today
+                    </td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">
+                        Leftover Stock Quantity
+                    </td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">
+                        Quantity of stock left over after a store closure or end of season
+                    </td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">
+                        Model Stock Quantity
+                    </td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">
+                        Quantity of model stock.
+                    </td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">
+                        Model Stock Value
+                    </td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">
+                        Value of model stock at cost. 
+                    </td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">
+                        Most Overdue Supplier Order Date
+                    </td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">
+                        Today’s date – the estimated receipt date of late orders
+                    </td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">
+                        Number Of Days To First Expedite Order
+                    </td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">
+                        Days to First Expedite Order.
+                    </td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">
+                        Number Of Days To First Surplus Order
+                    </td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">
+                        Days to first Surplus Order
+                    </td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">
+                        Number Of Days To Stock Out
+                    </td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">
+                        Days to first stock out date
+                    </td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">
+                        Potential Stock Out Quantity
+                    </td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">
+                        Quantity of stock at risk of stocking out. 
+                    </td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">
+                        Potential Stock Out Value
+                    </td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">
+                        Value of potential stock out quantity at cost. 
+                    </td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">
+                        Projected Leftover Stock Quantity
+                    </td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">
+                        Quantity of projected leftover stock (such as at end of season or after a store closure) 
+                    </td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">
+                        Shortfall Stock Quantity
+                    </td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">
+                        Quantity of stock which is at risk of falling below safety stock levels. 
+                    </td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">
+                        Shortfall Stock Value
+                    </td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">
+                        Value of shortfall stock out quantity at cost. 
+                    </td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">
+                        Surplus Order Quantity
+                    </td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">
+                        Quantity of stock contained in surplus order.
+                    </td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyB-Column1-Body1">
+                        Surplus Order Value
+                    </td>
+                    <td class="TableStyle-standard-BodyA-Column2-Body1">
+                        Value of surplus order stock quantity at cost. 
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </body>
+</html>

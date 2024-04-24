@@ -1,0 +1,29 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" xml:lang="en-us">
+    <head><title></title>
+    </head>
+    <body>
+        <h1>Order line priority and locking</h1>
+        <p>Select <span class="Emphasis">Locked for Constraints</span> to prevent the constraint logic from over-aggressively constraining a single order line to meet the goals of a constraint set. During the constraint process, order lines are prioritized.</p>
+        <h2>Constraining up</h2>
+        <ol>
+            <li>The order line is not locked</li>
+            <li>The replenish order quantity (user order quantity) is a positive number</li>
+            <li>The order line was not constrained within the previous loop or iteration </li>
+            <li>Ordered by replenish order quantity, descending</li>
+            <li>If replenish order quantity is identical, ordered by default priority, ascending</li>
+            <li>If default priority is identical, ordered by OrderLineID</li>
+        </ol>
+        <p>This allows for the constraining up of items with a higher volume of future orders, whereas the current period order is relatively small. </p>
+        <h2>Constraining down</h2>
+        <ol>
+            <li>The order line is not locked</li>
+            <li>The replenish order quantity (user order quantity) is a positive number</li>
+            <li>The order line was not constrained within the previous loop/iteration </li>
+            <li>Ordered by replenish order quantity, ascending</li>
+            <li>If replenish order quantity is identical, ordered by default priority, descending</li>
+            <li>If default priority is identical, ordered by OrderLineID</li>
+        </ol>
+        <p>This allows for the constraining up of items with a higher volume stock contained in the current period order, whereas the future period order is relatively small.</p>
+    </body>
+</html>

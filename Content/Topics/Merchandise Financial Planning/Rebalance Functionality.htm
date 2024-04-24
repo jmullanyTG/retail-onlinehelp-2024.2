@@ -1,0 +1,103 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" xml:lang="en-us">
+    <head>
+        <link href="../../Resources/TableStyles/standard.css" rel="stylesheet" MadCap:stylesheetType="table" /><title></title>
+    </head>
+    <body>
+        <h1>Homogenizing plans using the rebalance functionality</h1>
+        <p>It is a common occurrence within companies to have multiple versions of a plan for the same product/channel levels and window of time for the purpose of exploring different possible outcomes and/or analyzing the business from different perspectives. Sometimes there is a version built from the location level up and another from the top site level down. Other times there are multiple scenarios built at the same level or even versions built using different hierarchies altogether. </p>
+        <p>Eventually, a reconciliation occurs where those within the planning organization decide which version to move forward with. The version to be moved forward with is the Source Plan version. The goal is to take the desired values from the Source Plan version and homogenize other versions to them. </p>
+        <p>If a particular Source Plan metric (Sales, Sales Units, COGS) is not selected, then the Source plan does not cause a change in the corresponding metric in the Destination Plan.</p>
+        <p>Rather than overwrite the values in the Destination Plan, a rebalanced plan is generated with the word <span class="Emphasis">Rebalance</span> prepended to the Destination Plan name. If the Destination Plan is titled <span class="Emphasis">Branch of Hybrid Cost Plan</span> then the rebalanced plan would be <span class="Emphasis">Rebalance Branch: Branch of Hybrid Cost Plan</span>.</p>
+        <p class="Example">A very common scenario in the retail industry is where there are two sets of planners: Tops-down financial planners and store planners. These individuals create their ideal versions of the larger plan from their perspectives then meet to discuss which total volume outcome is most feasible given all the available data. Once complete, one version is rebalanced to the other.</p>
+        <p>Before initiating a rebalance, it is necessary to have two plans that share at least one common site level, one common product level, and a common window of time.  It is not necessary for the common levels of the plans being rebalanced to exist in the same positions (the same number of levels deep). The system adjusts data as needed to ensure the proper values are transferred.</p>
+        <p>Once a rebalance is initiated, the system performs the rebalance from the Source to the Destination Plan at the lowest levels of commonality in the product and site hierarchies between plans. </p>
+        <h2>To rebalance plans</h2>
+        <ul>
+            <li>Click <span class="Emphasis">Rebalance</span> to launch the <span class="Emphasis">Rebalance Plan</span> dialog.</li>
+        </ul>
+        <p>
+            <img src="../../Resources/Images/MFP/Rebalance Functionality.png" class="LargeImages" />
+        </p>
+        <p>The Rebalance Plan dialog displays:</p>
+        <p>
+            <img src="../../Resources/Images/MFP/Rebalance Plan Dialog Sales Only.PNG" class="LargeImages" />
+        </p>
+        <h2>Copying COGS between plans</h2>
+        <p>COGS cannot be copied over between cost based plans and retail based plans during a rebalance. They are calculated and used differently in the different plan types. COGS is a ratio of BOP and Sales in the Retail method, but not in the Cost method. Inventory metrics are not copied during a rebalance.</p>
+        <h3>All other dependent metrics</h3>
+        <p>All other dependent metrics in the Destination Plan recalculate per the normal calculations defined  for the appropriate plan type, Cost or Retail. For more information regarding the calculations, see <MadCap:xref href="Merchandise Financial Planning Metrics List.htm">Merchandise financial planning metrics list</MadCap:xref>.</p>
+        <h2>Rebalancing metrics based on configured measure sets</h2>
+        <p>Users can rebalance metrics based on configured measure sets that display in the <span class="Emphasis">Measure Set</span> dropdown. It is important to note that the <span class="Emphasis">Measure Set</span> dropdown only displays measure sets relevant to the selected plan type and rebalancing should only occur between plans of the same plan type.  Only the metrics selected for rebalance are affected within the destination plan. Any metrics unselected retain the values of the destination plan, therefore, it's important to select all related metrics within a metric set for rebalance. </p>
+        <p>&#160;</p>
+        <p>For example, when rebalancing Receipts, a user should check all of the Target Receipt metric checkboxes for the full set of data to rebalance. Selecting only <span class="Emphasis">Receipt Retail</span> and <span class="Emphasis">Receipt Units</span> without <span class="Emphasis">Receipt Cost</span> applies the <span class="Emphasis">Receipt Cost</span> of the destination plan to the newly copied <span class="Emphasis">Receipt Retail</span> and <span class="Emphasis">Receipt Units</span> values from the source plan, resulting in a newly calculated Receipt margin. Similarly, by not selecting <span class="Emphasis">Receipt Units</span>, the <span class="Emphasis">Receipt AUR</span> and <span class="Emphasis">Receipt AUC</span> values will not be direct copies as the <span class="Emphasis">Receipt Units</span> values in the destination plan become the divisor.</p>
+        <h3>Notes:</h3>
+        <ul>
+            <li>
+                <p>If a measure set is picked along with any of the <span class="Emphasis">Sales</span> / <span class="Emphasis">Sales Units</span> / <span class="Emphasis">COGS</span> / <span class="Emphasis">Receipt Retail</span> / <span class="Emphasis">Receipt Units</span> / <span class="Emphasis">Receipt Cost</span> checkboxes, it is the measure set that is copied and not the Sales and Receipt specific metrics even if the Sales and Receipt checkboxes are selected.</p>
+            </li>
+            <li>
+                <p>When the Sales within the Source and Destination plan are not equal, the ratio of Source Plan Sales and Destination Plan Sales is applied against other values being copied.</p>
+            </li>
+            <li>
+                <p>Rebalance plans are only created with the time periods specified in the <span class="Emphasis">Rebalance Plan</span> screen.</p>
+            </li>
+            <li>
+                <p>Within the <span class="Emphasis">Hybrid Retail Dual Markdown</span> plan type, there are metrics with rolling calculations using the designated (checked) Season Begin period. If the source and destination plans do not have the same Season Begin period, there will be some drift in these rolling metrics, two of note include, <span class="Emphasis">BOP Retail</span> and <span class="Emphasis">COGS</span>.</p>
+            </li>
+        </ul>
+        <h2>Rebalance Plan dialog field descriptions</h2>
+        <table style="width: 100%;margin-left: 0;margin-right: auto;mc-table-style: url('../../Resources/TableStyles/standard.css');" class="TableStyle-standard" cellspacing="0">
+            <col class="TableStyle-standard-Column-Column1" />
+            <col class="TableStyle-standard-Column-Column2" />
+            <thead>
+                <tr class="TableStyle-standard-Head-Header1">
+                    <th class="TableStyle-standard-HeadE-Column1-Header1">Field</th>
+                    <th class="TableStyle-standard-HeadD-Column2-Header1">Description</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1"><span class="Emphasis">Source Plan</span>
+                    </td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1"> The plan to which the Destination Plan is homogenized</td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1"><span class="Emphasis">Destination Plan</span>
+                    </td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1"> The plan that is homogenized with the Source Plan </td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1"><span class="Emphasis">Destination Product Hierarchy</span>
+                    </td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1"> The levels of the Destination Plan product hierarchy to be homogenized with the Source Plan</td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1"><span class="Emphasis">Destination Site Hierarchy</span>
+                    </td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1"> The levels of the Destination Plan site hierarchy to be homogenized with the Source Plan</td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1"><span class="Emphasis">Destination Time Hierarchy</span>
+                    </td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1"> The time periods of the Destination Plan to be homogenized with the Source Plan</td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1"><span class="Emphasis">Measure Set</span>
+                    </td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">
+                        A collection of metrics saved as a set to be applied during future rebalances. 
+                        <p class="BasicNote">Measure sets are configured in the <span class="Emphasis">Manage</span> &gt; <span class="Emphasis">Configuration</span> &gt; <span class="Emphasis">Merge Measure Sets</span> screen.</p></td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1"><span class="Emphasis">Sales</span>, <span class="Emphasis">Sales Units</span>, <span class="Emphasis">COGS</span></td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1"> Whether Sales revenue in the Destination Plan is homogenized with the Source Plan for the selected product/site levels and window of time</td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyB-Column1-Body1"><span class="Emphasis">Receipt Retail</span>, <span class="Emphasis">Receipt Units</span>, <span class="Emphasis">Receipt Cost</span></td>
+                    <td class="TableStyle-standard-BodyA-Column2-Body1"> Whether the metric in the Destination Plan is homogenized with the Source Plan for the selected product/site levels and window of time</td>
+                </tr>
+            </tbody>
+        </table>
+    </body>
+</html>
