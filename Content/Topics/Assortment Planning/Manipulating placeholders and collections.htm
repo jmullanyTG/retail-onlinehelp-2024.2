@@ -106,34 +106,33 @@
         <h2>Supersessions in AP: Using an existing variant's EOP as the BOP for a subsequent variant</h2>
         <p>
             Supersessions let users forecast demand for new items with no sales history by using an existing variant's EOP as the BOP for the new item. </p>
-        <p>Supersession relationships are defined in the Supersession solution at the Item Master level (style-color-size) and best practice is to map all sizes to create a 1-to-1 relationship. </p>
-        <p>If all sizes are not mapped, then the defined size curve for the PH is used to approximate the anticipated remaining units by size, for use by the supersession stock metrics. </p>
-        <p>For multi-size variants, Supersessions are defined by size, for each size. New Supersessions defined in the Supersession solution and changes to existing Supersessions are automatically pushed into AP.</p>
-        <p>Typically, outside of the Supersession functionality AP is at the variant level (style-color) and does not consider size. </p>
+        <p>Supersession relationships are defined in the Supersession module at the Item Master level (style-color-size) and best practice is to map all sizes to create a 1-to-1 relationship. If all sizes are not mapped, then the defined size curve for the placeholder is used to approximate the anticipated remaining units by size, for use by the supersession stock metrics. </p>
+        <p>For multi-size variants, supersessions are defined by size, for each size. New supersessions and changes to existing supersessions are automatically pushed into AP.</p>
+        <p>Typically, outside of the supersession functionality, AP is at the variant level (style-color) and does not consider size. </p>
         <h3>When not all sizes are mapped</h3>
-        <p>For example, if a style is projected to end phase-out with 2,000 units left on hand, and only 3 of the 4 sizes are mapped with a Supersession (S,M,L were mapped to a Supersession style, but XL was not) and the size curve for that PH was defined as 30-40-20-10:</p>
+        <p>For example, if a style is projected to end phase-out with 2,000 units left on hand, and only 3 of the 4 sizes are mapped with a supersession (S,M,L were mapped to a supersession style, but XL was not) and the size curve for that placeholder was defined as 30-40-20-10:</p>
         <p>The curve is applied against the remaining 2,000 units:</p>
         <ul>
             <li>2,000*0.3 = 600 S</li>
             <li>2,000*0.4 = 800 M</li>
             <li>2,000*0.2 = 400 L</li>
         </ul>
-        <p>meaning 600+800+400 = 1,800 units would be displayed under <span class="Emphasis">Supersession Stock Units</span> for the upcoming Supersession style.</p>
-        <p>The remaining 200 XL units (2,000*0.1) do not transfer to the new Supersession style, as XL was not mapped.</p>
-        <p>Similarly, if all Sites are not mapped, historical site contribution is used to exclude the stock projected to be on-hand at unmapped sites.</p>
-        <h3>Example of a Supersession scenario</h3>
+        <p>meaning 600+800+400 = 1,800 units would be displayed under <span class="Emphasis">Supersession Stock Units</span> for the upcoming supersession style.</p>
+        <p>The remaining 200 XL units (2,000*0.1) do not transfer to the new supersession style, as XL was not mapped.</p>
+        <p>Similarly, if all sites are not mapped, historical site contribution is used to exclude the stock projected to be on-hand at unmapped sites.</p>
+        <h3>Example of a supersession scenario</h3>
         <p>There are times when a new variant is close enough to an existing variant that the two variants are seen by customers as interchangeable. (For example, variant A = red socks with black squares, variant B = red socks with black circles.)</p>
         <p>In such a scenario, the stock on-hand position of the first can be considered when planning stock needs for the second variant. This is very useful when:</p>
         <ul>
             <li>both items look very similar</li>
             <li>
-                <p>variant B’s lifecycle is after variant A’s lifecycle and the user would like to use variant A’s EOP as variant B’s BOP</p>
+                <p>variant B’s life cycle is after variant A’s life cycle and the user would like to use variant A’s EOP as variant B’s BOP</p>
                 <p class="BasicNote">Phase dates need to be considered when utilizing supersessions.</p>
             </li>
             <li>the supplier of an existing variant produces the same style each year, but changes the style-code/SKU in subsequent years</li>
             <li>when stock from one item should be considered towards stock for a subsequent item.</li>
         </ul>
-        <h3>Viewing Supersession details</h3>
+        <h3>Viewing supersession details</h3>
         <p>Within AP, two metrics provide information at the placeholder level:</p>
         <table style="width: 100%;margin-left: auto;margin-right: auto;mc-table-style: url('../../Resources/TableStyles/standard.css');" class="TableStyle-standard" cellspacing="0">
             <col class="TableStyle-standard-Column-Column1">
@@ -155,7 +154,7 @@
                     <td class="TableStyle-standard-BodyB-Column1-Body1">Supersession Desc</td>
                     <td class="TableStyle-standard-BodyA-Column2-Body1">
                         Displays the details of which items inherit which and how the supersessions are defined in the Supersession module. 
-                        <p>Users can also note the sequential relationship of the Supersession Phase In and Phase Out dates in their respective fields.</p></td>
+                        <p>Users can also note the sequential relationship of the supersession Phase In and Phase Out dates in their respective fields.</p></td>
                 </tr>
             </tbody>
         </table>
@@ -164,10 +163,10 @@
         <h2>Metrics</h2>
         <ul>
             <li>
-                <p><span class="Emphasis">% Locked</span>: Indicates a change has been made to the corresponding % contribution that has not yet been saved (not present in Collection view).</p>
+                <p><span class="Emphasis">% Locked</span>: Indicates a change has been made to the corresponding percentage contribution that has not yet been saved (not present in Collection view).</p>
             </li>
             <li>
-                <p><span class="Emphasis">Active</span>: Whether the current placeholder or collection is active in the assortment plan or not. Defaults to checked. If unchecked, the line is formatted with a strike-through and zeros out its Collection % Cont.</p>
+                <p><span class="Emphasis">Active</span>: Whether the current placeholder or collection is active in the assortment plan or not. Defaults to checked. If unchecked, the line is formatted with a strike-through and zeros out its <span class="Emphasis">Collection % Cont</span>.</p>
                 <p>
                     <img src="../../Resources/Images/Assortment Planning/Active and Inactive PH.png" class="LargeImages" />
                 </p>
@@ -207,7 +206,7 @@
                 <p>Calculation: AUR / (1 + VAT %)</p>
             </li>
             <li>
-                <p><span class="Emphasis">AUR</span>: The average unit retail price for the placeholder/collection. Because of the potential for multiple currencies, VAT (value added tax) rates, and promotional participation to vary by site within a single cluster, AUR is not directly editable and is only changed as a result of changes to Home AUT, Phase In, Phase Out, and promotion applications.</p>
+                <p><span class="Emphasis">AUR</span>: The average unit retail price for the placeholder/collection. Because of the potential for multiple currencies, VAT (value added tax) rates, and promotional participation to vary by site within a single cluster, AUR is not directly editable and is only changed as a result of changes to <span class="Emphasis">Home AUT</span>, Phase In, Phase Out, and promotion applications.</p>
                 <p>Calculation: (Ttl Sls $ / Ttl Sls U)</p>
             </li>
             <li>
@@ -219,7 +218,7 @@
                         <p><span class="Emphasis">Blended AUT</span> (Blended Average Unit Ticket) and AUR (average unit retail), being an outcome of the calculation mentioned above, is not directly editable.</p>
                     </li>
                 </ul>
-                <p class="BasicNote">If <span class="Emphasis">Import Config</span> setting <span class="Emphasis"> AUT for planned periods</span> is set to 2 (AUT is only managed through imports), then Home AUT is read-only for Placeholders with a status of Assigned, Committed, Replen, and Allocate. For placeholders with a status of Open and Created, <span class="Emphasis">Home AUT</span>&#160;is editable. </p>
+                <p class="BasicNote">If <span class="Emphasis">Import Config</span> setting <span class="Emphasis"> AUT for planned periods</span> is set to 2 (AUT is only managed through imports), then <span class="Emphasis">Home AUT</span> is read-only for placeholders with a status of Assigned, Committed, Replen, and Allocate. For placeholders with a status of Open and Created, <span class="Emphasis">Home AUT</span>&#160;is editable. </p>
                 <p>Regarding scenarios where <span class="Emphasis">Import Config</span> settings <span class="Emphasis">AUT for planned periods</span> and <span class="Emphasis">Receipt AUC for Planned Periods</span> are set to 3 (<span class="Emphasis">Home AUT</span> is managed through both imports and the UI, with a "last in wins" principle), data is only imported if the Last Modified Date on the variant cost/price data is later that the date logged against the placeholder. </p>
                 <p class="Example">If an import sets Home AUT to 12, and then the user changes the value to 13, the next run will not reset the value back to 12. If price data is updated via imports to 14, then the next maintenance window will set <span class="Emphasis">Home AUT</span> to 14.</p>
                 <p>Additionally, periods will only have an imported <span class="Emphasis">Home AUT</span> or <span class="Emphasis">Receipt AUC</span> value set if that value actually exists in price/cost data. It will not set all missing periods to zero.</p>
@@ -345,7 +344,7 @@
             <li>
                 <p><span class="Emphasis">Locked</span>: Locks or unlocks the collection the placeholder belongs to (or the collection in Collection view) for editing. When checked, all placeholders attached to the collection are locked and read-only in the view and highlighted in pink or red depending on the row band. </p>
                 <p>
-                    <img src="../../Resources/Images/Assortment Planning/Locking Placeholders.png" />
+                    <img src="../../Resources/Images/Assortment Planning/Locking Placeholders.png" class="LargeImages" />
                 </p>
                 <p>Actualization of sales in a period can still affect locked placeholders/collections. Creation of new cluster set snapshots for cluster sets to which locked collections are assorted can also change locked placeholders/collections. This is done to maintain synchronicity with ROS metrics and the site count associated with clusters to which locked placeholders/collections are assorted.</p>
                 <p>Notes:</p>
@@ -357,7 +356,7 @@
                 </ul>
             </li>
             <li>
-                <p><span class="Emphasis">Margin %:</span> The gross margin percentage for the placeholder or collection. An editable value that adjusts the Receipt AUC metric to allow this margin to be achieved. This allows Planners to hand over Assortment Plans to their Buyers together with the information about a desired or target AUC they should be aiming for when negotiating prices with suppliers. Coloring rules follow the Receipt AUC pattern. </p>
+                <p><span class="Emphasis">Margin %:</span> The gross margin percentage for the placeholder or collection. An editable value that adjusts the <span class="Emphasis">Receipt AUC</span> metric to allow this margin to be achieved. This allows Planners to hand over assortment plans to their Buyers together with the information about a desired or target AUC they should be aiming for when negotiating prices with suppliers. Coloring rules follow the <span class="Emphasis">Receipt AUC</span> pattern. </p>
                 <p>Calculation: ((AUR ex VAT / (1 + VAT %)) – AUC) / (AUR ex VAT/ 1 + VAT %)</p>
             </li>
             <li>

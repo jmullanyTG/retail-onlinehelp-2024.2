@@ -41,12 +41,12 @@ ul.navigation > li > a.selected	/*Sets the top border for hover on nav items and
 	margin-top: -3px;
 }
 
-ul.navigation ul > li > a	/*adds bottom border to top nav drop-down items*/
+ul.navigation ul > li > a	/*adds bottom border to top nav dropdown items*/
 {
 	border-bottom: 1px solid rgb(60,60,60);
 }
 
-ul.navigation ul > li:nth-last-child(1) > a	/*removes the bottom border from the last item in the top nav drop downs*/
+ul.navigation ul > li:nth-last-child(1) > a	/*removes the bottom border from the last item in the top nav dropdowns*/
 {
 	border-bottom: none;
 }

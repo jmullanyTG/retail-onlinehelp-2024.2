@@ -165,7 +165,7 @@
             </li>
             <li>
                 <p><span class="Emphasis">Segment Split Type</span>: (Optional) Interacts with the Segment By Hierarchy functionality meaning the Segment By Hierarchy function can apply down to an additional attribute/group level. This can be very helpful when creating targets which align to key strategies, such as: by brand, fashion, marketing program, or any product attribute as defined.</p>
-                <p>This field is available as a drop-down when creating or modifying target scenarios with the drop-down comprised of:</p>
+                <p>This field is available as a dropdown when creating or modifying target scenarios with the dropdown comprised of:</p>
                 <ul>
                     <li>
                         <p>Variant Hierarchy fields (but only those not a part of the configured Product Hierarchy)</p>
