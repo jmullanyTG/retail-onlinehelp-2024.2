@@ -10,7 +10,7 @@
             <col class="TableStyle-standard-Column-Column1" style="width: 111px;" MadCap:autosortPriority="0" MadCap:autosortDirection="ascending" />
             <col class="TableStyle-standard-Column-Column2" style="width: 731px;" />
             <col class="TableStyle-standard-Column-Column1" style="width: 137px;" MadCap:autosortPriority="1" MadCap:autosortDirection="ascending" MadCap:conditions="General.DoNotPublish" />
-            <col class="TableStyle-standard-Column-Column2" style="width: 15%;" />
+            <col class="TableStyle-standard-Column-Column2" style="width: 15%;" MadCap:conditions="General.DoNotPublish" />
             <thead>
                 <tr class="TableStyle-standard-Head-Header1">
                     <th class="TableStyle-standard-HeadE-Column1-Header1">Components</th>
@@ -20,6 +20,18 @@
                 </tr>
             </thead>
             <tbody>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">&#160;</td>
+                    <td class="TableStyle-standard-BodyE-Column2-Body1">&#160;</td>
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">&#160;</td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">&#160;</td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">Assortment</td>
+                    <td class="TableStyle-standard-BodyE-Column2-Body1">Round-out Improved Price Translation Process</td>
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">Epic</td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">&#160;</td>
+                </tr>
                 <tr class="TableStyle-standard-Body-Body1">
                     <td class="TableStyle-standard-BodyB-Column1-Body1">&#160;</td>
                     <td class="TableStyle-standard-BodyB-Column2-Body1">&#160;</td>
@@ -44,6 +56,56 @@
             </thead>
             <tbody>
                 <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">Assortment</td>
+                    <td class="TableStyle-standard-BodyE-Column2-Body1">MPV Monetary Sales Values Are Not Recalculated When Making Periods Active Selling Periods</td>
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">External Bug</td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">2024.1.1.0</td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyA-Column1-Body1" colspan="4"><span class="Emphasis">Reported Behavior</span>
+                        <p>In the main planning view, monetary sales values were not being correctly re-calculated when the <span class="Emphasis">Selling Period</span> checkbox for a period is ticked having been previously unticked.
+
+</p>
+                        <p><span class="Emphasis">Steps to Verify</span><![CDATA[
+
+]]></p>
+                        <ol>
+                            <li>
+                                <p>Start with a fully populated future plan with selling periods ticked and both sales units and sales monetary values correctly populated.
+
+</p>
+                            </li>
+                            <li>
+                                <p>Untick <span class="Emphasis">Selling Period</span>, and save, and sales values are cleared (units and monetary values) as expected.
+</p>
+                            </li>
+                            <li>
+                                <p>
+Re-tick <span class="Emphasis">Selling Period</span>, and save, and sales units are re-calculated, however sales values are not re-calculated.
+
+</p>
+                            </li>
+                        </ol>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <p>&#160;</p>
+        <table style="width: 100%; mc-table-style: url('../../Resources/TableStyles/standard.css'); margin-left: 0; margin-right: auto;" class="TableStyle-standard" cellspacing="0">
+            <col class="TableStyle-standard-Column-Column1" />
+            <col class="TableStyle-standard-Column-Column2" />
+            <col class="TableStyle-standard-Column-Column1" />
+            <col class="TableStyle-standard-Column-Column2" />
+            <thead>
+                <tr class="TableStyle-standard-Head-Header1">
+                    <th class="TableStyle-standard-HeadE-Column1-Header1">Components</th>
+                    <th class="TableStyle-standard-HeadE-Column2-Header1">Summary</th>
+                    <th class="TableStyle-standard-HeadE-Column1-Header1">Issue Type</th>
+                    <th class="TableStyle-standard-HeadD-Column2-Header1">Merged to Other Releases</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="TableStyle-standard-Body-Body1">
                     <td class="TableStyle-standard-BodyE-Column1-Body1">&#160;</td>
                     <td class="TableStyle-standard-BodyE-Column2-Body1">&#160;</td>
                     <td class="TableStyle-standard-BodyE-Column1-Body1">&#160;</td>
@@ -51,6 +113,120 @@
                 </tr>
                 <tr class="TableStyle-standard-Body-Body1">
                     <td class="TableStyle-standard-BodyA-Column1-Body1" colspan="4">&#160;</td>
+                </tr>
+            </tbody>
+        </table>
+        <p>&#160;</p>
+        <table style="width: 100%; mc-table-style: url('../../Resources/TableStyles/standard.css'); margin-left: 0; margin-right: auto;" class="TableStyle-standard" cellspacing="0">
+            <col class="TableStyle-standard-Column-Column1" />
+            <col class="TableStyle-standard-Column-Column2" />
+            <col class="TableStyle-standard-Column-Column1" />
+            <col class="TableStyle-standard-Column-Column2" />
+            <thead>
+                <tr class="TableStyle-standard-Head-Header1">
+                    <th class="TableStyle-standard-HeadE-Column1-Header1">Components</th>
+                    <th class="TableStyle-standard-HeadE-Column2-Header1">Summary</th>
+                    <th class="TableStyle-standard-HeadE-Column1-Header1">Issue Type</th>
+                    <th class="TableStyle-standard-HeadD-Column2-Header1">Merged to Other Releases</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">Target Choice Counts</td>
+                    <td class="TableStyle-standard-BodyE-Column2-Body1">PK Error in Edit Target Scenario creating new Segment Definitions</td>
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">External Bug</td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">2024.1.1.0</td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyA-Column1-Body1" colspan="4"><span class="Emphasis">Reported Behavior</span>
+                        <p>Users reported getting a primary key error when attempting to select multiple New Segment Definitions in TCC.
+
+</p>
+                        <p><span class="Emphasis">Steps to Verify</span>
+                        </p>
+                        <p>Edit a Target Scenario, create multiple Segment Definitions.  
+
+</p>
+                        <p>This process will no longer throw a primary key error. </p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <p>&#160;</p>
+        <table style="width: 100%; mc-table-style: url('../../Resources/TableStyles/standard.css'); margin-left: 0; margin-right: auto;" class="TableStyle-standard" cellspacing="0">
+            <col class="TableStyle-standard-Column-Column1" />
+            <col class="TableStyle-standard-Column-Column2" />
+            <col class="TableStyle-standard-Column-Column1" />
+            <col class="TableStyle-standard-Column-Column2" />
+            <thead>
+                <tr class="TableStyle-standard-Head-Header1">
+                    <th class="TableStyle-standard-HeadE-Column1-Header1">Components</th>
+                    <th class="TableStyle-standard-HeadE-Column2-Header1">Summary</th>
+                    <th class="TableStyle-standard-HeadE-Column1-Header1">Issue Type</th>
+                    <th class="TableStyle-standard-HeadD-Column2-Header1">Merged to Other Releases</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">Target Choice Counts</td>
+                    <td class="TableStyle-standard-BodyE-Column2-Body1">New Choice Count Rec incorrect when using <span class="Emphasis">Use Collection for Intra-Style Curve?</span></td>
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">External Bug</td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">
+                       2023.4.3.0
+                        <p>2024.1.1.0</p></td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyA-Column1-Body1" colspan="4"><span class="Emphasis">Reported Behavior</span>
+                        <p>The new choice count recommendation when using <span class="Emphasis">Use Collection for Intra-Style Curve?</span> was recommending choices that are 60% less than the choices recommended when using “style” for the intra-style curves despite the fact that the variance in the intra-style curve is minimal.
+
+</p>
+                        <p><span class="Emphasis">Steps to Verify</span>
+                        </p>
+                        <ol>
+                            <li>
+                                <p>Create a target creation scenario.
+
+</p>
+                            </li>
+                            <li>
+                                <p>Leave the checkbox for <span class="Emphasis">Use Collection for Intra-Style Curve? unchecked?</span>.
+
+</p>
+                            </li>
+                            <li>
+                                <p>Calculate the scenario.
+
+</p>
+                            </li>
+                            <li>
+                                <p>Rationalize the scenario.
+
+</p>
+                            </li>
+                            <li>
+                                <p>Review the recommended choices.
+
+</p>
+                            </li>
+                            <li>
+                                <p>Go back and check the checkbox in order to use <span class="Emphasis">Use Collection for Intra-Style Curve?</span>.
+</p>
+                            </li>
+                            <li>
+                                <p>Rationalize the scenario.
+</p>
+                            </li>
+                            <li>
+                                <p>Compare the recommended choices with the choices recommended when leaving the box unchecked.
+
+</p>
+                            </li>
+                        </ol>
+                        <p><span class="Emphasis">Modified Behavior
+</span><![CDATA[
+]]></p>
+                        <p>The total new recommended choices will now be nearly the same with the variance in the scenario coming from the distribution of the recommended choices across the styles</p>
+                    </td>
                 </tr>
             </tbody>
         </table>
