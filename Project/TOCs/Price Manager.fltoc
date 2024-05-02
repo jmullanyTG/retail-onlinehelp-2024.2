@@ -109,22 +109,22 @@
         Link="/Content/Topics/Price Planning/Create a Pricing Plan.htm" />
       <TocEntry
         Title="[%=System.LinkedTitle%]"
-        Link="/Content/Topics/Price Planning/Auto Pricing.htm" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" />
-      <TocEntry
-        Title="[%=System.LinkedTitle%]"
         Link="/Content/Topics/Price Planning/Add Products to the Pricing Plan.htm" />
       <TocEntry
         Title="[%=System.LinkedTitle%]"
         Link="/Content/Topics/Price Planning/Including or Excluding Sites.htm" />
       <TocEntry
         Title="[%=System.LinkedTitle%]"
-        Link="/Content/Topics/Price Planning/Adding new site clusters to a Pricing Plan.htm" />
-      <TocEntry
-        Title="[%=System.LinkedTitle%]"
         Link="/Content/Topics/Price Planning/Adding sites to a Pricing Plan.htm" />
       <TocEntry
         Title="[%=System.LinkedTitle%]"
+        Link="/Content/Topics/Price Planning/Adding new site clusters to a Pricing Plan.htm" />
+      <TocEntry
+        Title="[%=System.LinkedTitle%]"
         Link="/Content/Topics/Price Planning/Delete a Pricing Plan.htm" />
+      <TocEntry
+        Title="[%=System.LinkedTitle%]"
+        Link="/Content/Topics/Price Planning/Configuring Auto Pricing.htm" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" />
     </TocEntry>
     <TocEntry
       Title="[%=System.LinkedTitle%]"

@@ -86,15 +86,19 @@
                     <td class="TableStyle-standard-BodyB-Column1-Body1">Allow Auto Price</td>
                     <td class="TableStyle-standard-BodyA-Column2-Body1">
                         Sets the plan to allow auto pricing. When checked, users with the appropriate rights can view and edit the plan’s auto pricing parameters. 
-                        <p>The user rights (Right Group: Price Manager) are:</p><ul><li>Allow Access to Plan Auto Price Configuration</li><li>Allow Access to Plan Price Reversion</li></ul><p class="BasicNote">If <span class="Emphasis">Allow Auto Price</span> is unchecked, then the <span class="Emphasis">Auto Price Settings</span> section does not display.</p></td>
+                        </td>
                 </tr>
             </tbody>
         </table>
-        <h2>Auto Price Settings section: fields and descriptions</h2>
-        <p>A Plan can be set at anytime to allow or not allow Auto Pricing. </p>
-        <p>User Right <span class="Emphasis">Allow Access to Plan Auto Price Configuration</span> is required to edit this section.</p>
-        <div class="Note_BasicNote">The available price types for Base Price and Target Price in the Auto Price parameter field is limited by the following system policies:
-			<ul><li>Allowed Auto Price Base Price Types</li><li>Allowed Auto Price Target Price Types</li></ul></div>
+        <h2>Auto Price Settings section</h2>
+        <p class="BasicNote">If <span class="Emphasis">Allow Auto Price</span> is unchecked, then the <span class="Emphasis">Auto Price Settings</span> section does not display.</p>
+        <p class="p">Pricing plans can be configured to allow for the automatic creation of price actions using prices imported through standard import. For plans where the <span class="Emphasis">Allow Auto Price</span> checkbox has been selected, price items in those plans can be scanned, identified, and priced automatically at regular intervals. </p>
+        <p>
+            <img src="../../Resources/Images/Price Planning/Create Pricing Plans.png" class="LargeImages" />
+        </p>
+        <p>To configure a pricing plan to allow automatic pricing, select the <span class="Emphasis">Allow Auto Price</span> checkbox when creating the plan. However, plans can be set at any time to allow or not allow auto pricing. </p>
+        <h2>Editing auto pricing parameters</h2>
+        <p>When the <span class="Emphasis">Allow Auto Price</span> checkbox is selected, the <span class="Emphasis">Information</span> tab displays an <span class="Emphasis">Auto Price Settings</span> section for reviewing and editing the automatic pricing parameters.</p>
         <table style="width: 100%;margin-left: 0;margin-right: auto;mc-table-style: url('../../Resources/TableStyles/standard.css');" class="TableStyle-standard" cellspacing="0">
             <col class="TableStyle-standard-Column-Column1" style="width: 100px;" />
             <col class="TableStyle-standard-Column-Column2" />
@@ -115,5 +119,6 @@
                 </tr>
             </tbody>
         </table>
+        <p>For information on configuration requirements for auto pricing, see <MadCap:xref href="Configuring Auto Pricing.htm">Configuring auto pricing to automatically create price actions</MadCap:xref>.</p>
     </body>
 </html>

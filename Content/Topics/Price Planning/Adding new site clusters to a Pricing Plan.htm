@@ -10,10 +10,10 @@
         <p>For new site clusters:</p>
         <ul>
             <li>the currency is derived from the sites selected in the filter.</li>
-            <li>if multiple currencies exist, the site cluster name is reused by currency (for example, EMEA(GBP) and EMEA(EUR)).</li>
+            <li>if multiple currencies exist, the site cluster name is reused by currency, e.g. EMEA(GBP) or EMEA(EUR).</li>
             <li>only sites not already associated to the plan’s clusters are added to the new site cluster.</li>
         </ul>
-        <p>In the Sites grid on a pricing plan’s <span class="Emphasis">Information</span> tab, sites are broken out by currency and country. Added sites are assigned to an existing cluster with the same country and currency. If no matching clusters exist, a new one is created. The defined country displays in the <span class="Emphasis">Country Name</span> column.</p>
+        <p>In the <span class="Emphasis">Sites</span> grid on a pricing plan’s <span class="Emphasis">Information</span> tab, sites are broken out by currency and country. Added sites are assigned to an existing cluster with the same country and currency. If no matching clusters exist, a new one is created. The defined country displays in the <span class="Emphasis">Country Name</span> column.</p>
         <h2>To add a new cluster:</h2>
         <ol>
             <li>Select <span class="Emphasis">New Cluster</span> in the toolbar of the <span class="Emphasis">Sites</span> grid.</li>
@@ -31,20 +31,13 @@
             </li>
             <li>
                 <p>If the <span class="Emphasis">Activate the New Site Cluster(s) to Existing Action(s)</span> window displays, then select the price actions, not already exported, to include the new site cluster.</p>
-                <p> The <span class="Emphasis">Activate the New Site Cluster(s) to Existing Action(s)</span> window does not display if:</p>
+                <p> This window does not display if there are no future price actions, or all future price actions are in a core status (a core status is not user configurable and does not display in Workflow).The following are core statuses:</p>
                 <ul>
-                    <li>there are no future price actions</li>
-                    <li>
-                        <p>all future price actions are in a core status</p>
-                        <p>A core status is one that is owned by the system and is not user configurable. Core statuses do not display in Workflow. The following are core statuses:</p>
-                        <ul>
-                            <li>Preparing Data for Export</li>
-                            <li>Ready For Export</li>
-                            <li>Exported</li>
-                            <li>Export Confirmed</li>
-                            <li>Exported With Errors</li>
-                        </ul>
-                    </li>
+                    <li>Preparing Data for Export</li>
+                    <li>Ready For Export</li>
+                    <li>Exported</li>
+                    <li>Export Confirmed</li>
+                    <li>Exported With Errors</li>
                 </ul>
             </li>
             <li>
@@ -65,7 +58,7 @@
                     </li>
                     <li>Price Action's Plan</li>
                 </ul>
-                <p>If a price action has gone into a calculating state, the site cluster and associated sites are added as Excluded and display a dialog indicating that not all price actions were updated.</p>
+                <p>If a price action has gone into a calculating state, the site cluster and associated sites are added as <span class="Emphasis">Excluded</span> and display a dialog indicating that not all price actions were updated.</p>
                 <p>For price actions that were not selected, the site cluster and associated sites are excluded. Also, any default values are not applied nor any associated plan, price action, product, or site objects marked as Calculation Required.</p>
             </li>
         </ol>
