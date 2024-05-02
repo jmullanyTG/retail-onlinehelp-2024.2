@@ -21,6 +21,6 @@
                 </p>
             </li>
         </ul>
-        <p>The <span class="Emphasis">Expression editor</span> allows users to write custom expressions with which to populate new calculated columns.  For more information on using the <span class="Emphasis">Expression Editor</span>, visit the following URL: <a href="https://documentation.devexpress.com/%23WindowsForms/CustomDocument6212">https://documentation.devexpress.com/#WindowsForms/CustomDocument6212.</a> </p>
+        <p>The <span class="Emphasis">Expression editor</span> allows users to write custom expressions with which to populate new calculated columns.  For more information on using the <span class="Emphasis">Expression Editor</span>, visit the following URL:  <a href="https://docs.devexpress.com/WindowsForms/6212/common-features/expressions/expression-editor">https://docs.devexpress.com/WindowsForms/6212/common-features/expressions/expression-editor</a></p>
     </body>
 </html>
