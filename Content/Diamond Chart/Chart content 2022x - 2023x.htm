@@ -10,7 +10,7 @@
         <p>As the presence of online marketplaces expands, traditional retailers are identifying a need to create plans for these non-traditional sites. This problem statement could begin with a retailer allocating stock (and sales expectations) to be fulfilled by Amazon, or Walmart, or the like; or it could expand into a broader "wholesale" strategy. In order to support this growing need for retailers to plan in the wholesale space, the traditional TG JE retail functionality has been enhanced to better support wholesale functions.
 
 </p>
-        <p>While wholesale is often treated as a separate business entity, there is often a need to roll-up retail and wholesale plans into a singular total company view. As such, Wholesale functionality within TG JE is embedded beside Retail functionality. Rather than creating separate plans for Wholesale and Retail, the TG JE structure supports wholesale as a channel within the total company plan. This allows for easier movement of planned stock, sales, and other metrics as demand may shift from one channel to another, as early as the planning process. By composing the TG JE solution to treat Retail and Wholesale as parts of a Total, revisions during the execution phase are also easier to implement.
+        <p>While wholesale is often treated as a separate business entity, there is often a need to roll-up retail and wholesale plans into a singular total company view. As such, Wholesale functionality within TG JE is embedded beside Retail functionality. Rather than creating separate plans for Wholesale and Retail, the TG JE structure supports wholesale as a channel within the total company plan. This allows for easier movement of planned stock, sales, and other metrics as demand may shift from one channel to another, as early as the planning process. By composing the TG JE module to treat Retail and Wholesale as parts of a Total, revisions during the execution phase are also easier to implement.
 
 </p>
         <p>These Release Notes are crafted to keep Wholesale-related functionality grouped together; structured as a logical progression through the planning and execution processes. It is important to keep in mind that the enhancements noted in this section, are also visible in the standard retail modules, as applicable.</p>
@@ -836,7 +836,7 @@ production capacity or orders for a particular vendor have been particularly low
             <thead>
                 <tr class="TableStyle-standard-Head-Header1">
                     <th class="TableStyle-standard-HeadE-Column1-Header1">Top level menu item</th>
-                    <th class="TableStyle-standard-HeadE-Column2-Header1">Solution</th>
+                    <th class="TableStyle-standard-HeadE-Column2-Header1">module</th>
                     <th class="TableStyle-standard-HeadD-Column1-Header1">Option</th>
                 </tr>
             </thead>
@@ -881,14 +881,14 @@ Manager					<p>Media Manager</p></td>
         </table>
         <h3><a name="2022.3SHELL"></a>2022.3</h3>
         <h3>Secure Single Sign On (SSO) with Auth0</h3>
-        <p>For ToolsGroup JustEnough v2022.3 onwards, ToolsGroup&#160;JustEnough has selected Auth0 as its Single Sign On (SSO) solution. Auth0 is an authentication and authorization platform that provides a highly secure environment in which users sign-in with their email address and password or choose to continue if they have already signed in to another application such as Gmail or Microsoft Office 365. This eliminates the need for repeated system sign-ins for an improved user experience and simplifies the management of user names and passwords for organizations.</p>
+        <p>For ToolsGroup JustEnough v2022.3 onwards, ToolsGroup&#160;JustEnough has selected Auth0 as its Single Sign On (SSO) module. Auth0 is an authentication and authorization platform that provides a highly secure environment in which users sign-in with their email address and password or choose to continue if they have already signed in to another application such as Gmail or Microsoft Office 365. This eliminates the need for repeated system sign-ins for an improved user experience and simplifies the management of user names and passwords for organizations.</p>
         <p>Auth0 verifies whether users are authorized to access ToolsGroup JustEnough using credentials provided by third-party Identity Providers such as Google, Okta, or Microsoft. All user management including the configuration and authentication of email addresses is handled by Auth0  while passwords are managed by either Auth0 or the third-party Identity Provider.</p>
         <p>Users are presented with Auth0's Universal Login when signing-in.</p>
         <p>
             <img src="../Resources/Images/Product Wide/Auth0 Login.png" class="LargeImages">
             </img>
         </p>
-        <p>Auth0's Universal Login is customizable allowing organizations to display their own logo and colors as well as any desired wording along with the ability to offer one or more integrated SSO solutions. </p>
+        <p>Auth0's Universal Login is customizable allowing organizations to display their own logo and colors as well as any desired wording along with the ability to offer one or more integrated SSO modules. </p>
         <p class="BasicNote">The full capabilities and benefits of Auth0's Universal Login and SSO functionality can be reviewed by following this link: <a href="https://auth0.com/single-sign-on">Single Sign On</a>.</p>
         <h4>Deprecation of Identity API and NameServer</h4>
         <p>With the adoption of Auth0, Identity API and NameServer are deprecated from v2022.3 as all the relevant functionality is now integrated into Auth0. This deprecation involves a Breaking Change. </p>
@@ -1127,7 +1127,7 @@ When the URL is changed for the document ID, the cache of the image is cleared a
         <p><span class="Emphasis">Allocation</span> - The main Allocation Strategy widget has been updated to resolve an issue where an extremely large number of Variants caused Variant lookup to be very slow and where the widget was not properly optimized for large loads. This is a Breaking Change. For more information, see <cite>Addition of columns to Allocation Strategy widget</cite> in the Breaking Changes section. </p>
         <p><span class="Emphasis">API</span> - There is a large SQLClient Async process improvement. </p>
         <p><span class="Emphasis">Job Manager</span> - Already deleted filters are no longer passed to the maintenance procedure used in the Rebuild Filters: Used in Order Creation task significantly reducing the time it takes the task to complete.</p>
-        <p><span class="Emphasis">Replenish Engine</span> - We have made performance improvements for distribution's and redistribution's supply chain resolution.</p>
+        <p><span class="Emphasis">Replenish Engine</span> - We have made performance improvements for distribution's and redistribution's supply chain resolution</p>
         <h3><a name="2022.1PI"></a>2022.1</h3>
         <p><span class="Emphasis">Allocation</span> - The impact on performance of applying a large set of item exclusions on sites has been greatly reduced. </p>
         <p><span class="Emphasis">API</span> - To prevent large JSON payloads from being truncated after a certain size, a UTF-8 octet stream has been implemented which serializes the payload and performs a compression before sending, decompressing and deserializes the payload. </p>
@@ -2928,7 +2928,7 @@ calculation is Receipt Units * Receipt AUC.</td>
             </tbody>
         </table>
         <h3><a name="Metric"></a>Comparing TY&#160;metrics with comparison periods</h3>
-        <p class="p">While there have been no changes to the way the Target is calculated, some metrics within Target Creation and the Target Choice Count solution were added or modified to make it easier for users to compare TY&#160;metrics with comparison periods. To this end:</p>
+        <p class="p">While there have been no changes to the way the Target is calculated, some metrics within Target Creation and the Target Choice Count module were added or modified to make it easier for users to compare TY&#160;metrics with comparison periods. To this end:</p>
         <ul>
             <li>
                 <p class="p">the following metrics have been added to the Target Worksheet:</p>
@@ -6355,7 +6355,7 @@ For more information regarding the system policy, see <cite>System Policies</cit
         <p>Once the import is complete, the <span class="Emphasis">User Cluster</span> column is populated with the list from MS&#160;Excel.</p>
         <h3><a name="2022.2SC"></a>2022.2</h3>
         <h4>Configuring and using Sub-Clusters</h4>
-        <p>New functionality allows for the configuring of Sub-Clusters in the Site Clustering solution which are then assigned Placeholders and Collections in the Assortment Planning solution. Sub-Clusters allow users to make adjustments to phase periods by a site attribute such as climate.</p>
+        <p>New functionality allows for the configuring of Sub-Clusters in the Site Clustering module which are then assigned Placeholders and Collections in the Assortment Planning module. Sub-Clusters allow users to make adjustments to phase periods by a site attribute such as climate.</p>
         <p>Sub-Clustering is especially useful in scenarios where there is a seasonal product that does not begin selling in certain climates until a different phase date.  For example, cold weather stores will not have a strong demand for swimsuits until 6-8 weeks later than hot weather stores.</p>
         <p class="BasicNote">For more information on Sub-Clusters, refer to <cite>Using sub-clusters to adjust phase periods based on site attributes</cite> in the Assortment Planning section.</p>
         <h2><a name="Site"></a>Site Manager</h2>

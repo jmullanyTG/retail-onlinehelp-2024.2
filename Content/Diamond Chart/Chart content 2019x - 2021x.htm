@@ -30,7 +30,7 @@ the column is a calculated column the popup will show the expression using the f
         <p>The login timeout message has been revamped to be more informational and understandable by end users.</p>
         <h3><a name="2019.1UIN"></a>2019.1</h3>
         <h4>Menu reorganization </h4>
-        <p>For v2019.1, the navigation menus have been reorganized to be more intuitive and easy to use. The new groupings below the top level menu items better associate solutions within the suite for a more consistent user experience.</p>
+        <p>For v2019.1, the navigation menus have been reorganized to be more intuitive and easy to use. The new groupings below the top level menu items better associate modules within the suite for a more consistent user experience.</p>
         <p>The new menu structure is:</p>
         <table style="mc-table-style: url('../Resources/TableStyles/standard.css');margin-left: auto;margin-right: auto;width: 80%;" class="TableStyle-standard" cellspacing="0">
             <col class="TableStyle-standard-Column-Column1">
@@ -42,7 +42,7 @@ the column is a calculated column the popup will show the expression using the f
             <thead>
                 <tr class="TableStyle-standard-Head-Header1">
                     <th class="TableStyle-standard-HeadE-Column1-Header1">Top level menu item</th>
-                    <th class="TableStyle-standard-HeadE-Column2-Header1">Solution</th>
+                    <th class="TableStyle-standard-HeadE-Column2-Header1">module</th>
                     <th class="TableStyle-standard-HeadD-Column1-Header1">Option</th>
                 </tr>
             </thead>
@@ -176,7 +176,7 @@ the column is a calculated column the popup will show the expression using the f
             </col>
             <thead>
                 <tr class="TableStyle-standard-Head-Header1">
-                    <th class="TableStyle-standard-HeadE-Column1-Header1">Solution</th>
+                    <th class="TableStyle-standard-HeadE-Column1-Header1">module</th>
                     <th class="TableStyle-standard-HeadD-Column2-Header1">User Right</th>
                 </tr>
             </thead>
@@ -224,7 +224,7 @@ the column is a calculated column the popup will show the expression using the f
             </tbody>
         </table>
         <h4>New workflows associated with moving data to and from Allocations and Assortment Planning </h4>
-        <p>The Allocations solution can now use the plans created in the Assortment Planning solution. When an assortment plan is finalized and approved it can now be executed in the Allocations solution where a new column lets you allocate based on the assortment plan.</p>
+        <p>The Allocations module can now use the plans created in the Assortment Planning module. When an assortment plan is finalized and approved it can now be executed in the Allocations module where a new column lets you allocate based on the assortment plan.</p>
         <h4>Revised Error Messaging</h4>
         <p>Error messages in the following have been revised to comply with security best practices:</p>
         <ul>
@@ -403,7 +403,7 @@ the column is a calculated column the popup will show the expression using the f
             <li><span class="BodyWord">Assortment</span> - Sales Plan performance improvements</li>
             <li><span class="BodyWord">Database</span> - Performance improved by using a persisted table and index in the database</li>
             <li><span class="BodyWord">Database</span> - Performance improved when inserting, updating, and deleting inventory pricing by modifying the data compression</li>
-            <li><span class="BodyWord">Events</span> - Performance improvements when generating Event output for third party page layout solutions</li>
+            <li><span class="BodyWord">Events</span> - Performance improvements when generating Event output for third party page layout modules</li>
             <li><span class="BodyWord">Events</span> - Resolved memory leak in the Event Slot Set (aka. Page) layout control</li>
             <li><span class="BodyWord">Events</span> - Performance improvements when loading Event Pages</li>
             <li><span class="BodyWord">Events</span> - Performance improvement loading the Event Available Promotion panels</li>
@@ -525,7 +525,7 @@ the column is a calculated column the popup will show the expression using the f
         <h4>Channels</h4>
         <p>With the introduction of Channels, it is imperative clients update their Strategy Process if they do not use omni channel strategy lines.</p>
         <h4>Coordinating channel relationships through the engine</h4>
-        <p>The solution does not coordinate channel relationships through the engine. It is imperative that this is resolved with the CLIENT’S PROCESS.</p>
+        <p>The module does not coordinate channel relationships through the engine. It is imperative that this is resolved with the CLIENT’S PROCESS.</p>
         <p>For example, Strategy One - Retail, Strategy Two - Outlet has shared DCs and/or SDCs. The last strategy to run the engine will remove any OVERLAP inventory from the related strategies. So if Retail ran first and had 200 units on order for a related DC, but then Outlet ran second it would remove the 200 units from that related DC which can cause the entire order for Retail to not be realistic.</p>
         <p>The client’s process must be that they run their highest priority channel first through the engine, then set them to a state that sets Pending Stock (i.e. pre-authorized). Then they can run the next priority channel, then set the Order Manager State. This process will be repeated until their channel priority list is exhausted.</p>
         <h4>Update to the RPV base widget type</h4>
@@ -1799,7 +1799,7 @@ Additionally, users require new User Right <span class="Emphasis">Allow Access N
         <h2>Assortment Planning</h2>
         <h3><a name="2021.4AP"></a>2021.4</h3>
         <h4>Creating target scenarios </h4>
-        <p>Target Creation is a powerful tool within the <span class="Emphasis">Assortment Planning</span> module. While Target Creation remains an important part of the <span class="Emphasis">Assortment Planning</span> module, v2021.4 introduces the Target Creation functionality as a stand-alone module labeled <span class="Emphasis">Target Choice Counts</span>. While this capability is included within the standard Assortment Planning solution, Target Choice Count can now be licensed separately. This gives customers the ability to take advantage of intelligent recommendations when creating assortments even if they do not use the <span class="Emphasis">Assortment Planning</span> module.</p>
+        <p>Target Creation is a powerful tool within the <span class="Emphasis">Assortment Planning</span> module. While Target Creation remains an important part of the <span class="Emphasis">Assortment Planning</span> module, v2021.4 introduces the Target Creation functionality as a stand-alone module labeled <span class="Emphasis">Target Choice Counts</span>. While this capability is included within the standard Assortment Planning module, Target Choice Count can now be licensed separately. This gives customers the ability to take advantage of intelligent recommendations when creating assortments even if they do not use the <span class="Emphasis">Assortment Planning</span> module.</p>
         <p>For more information, see the <span class="Emphasis">Target Choice Count</span> section.</p>
         <h4>Improved hierarchy integration with MFP</h4>
         <p>AP may be planned at a lower hierarchy than the related MFP plan. Under prior functionality, the MFP plan would be split evenly by the number of sub-hierarchy items. Improved functionality uses LY hierarchy contributions as a basis for splitting the MFP plan, rather than an even split. This split behavior is consistent with the current cluster set/cluster split behavior.</p>
@@ -2568,7 +2568,7 @@ Additionally, users require new User Right <span class="Emphasis">Allow Access N
         <p>In Target Creation, the columns for Choices, Choices Maximum, and Choices Minimum in each column group set (Comparison, Comparison Regular, Comparison Promo, etc)  have been reduced to one Choices column. This Choices column has improved aggregation.</p>
         <h4>Supersessions in AP: Using an existing variant's EOP as the BOP for a subsequent variant</h4>
         <p> v2021.1 introduces existing Supersession functionality into AP. Supersessions let users forecast demand for new items with no sales history by using an existing variant's EOP as the BOP for the new item. </p>
-        <p>Supersession relationships are defined in the Supersession solution at the Item Master level (style-color-size) and best practice is to map all sizes to create a 1-to-1 relationship. For multi-size variants, Supersessions are defined by size, for each size. New Supersessions defined in the Supersession solution and changes to existing Supersessions are automatically pushed into AP.</p>
+        <p>Supersession relationships are defined in the Supersession module at the Item Master level (style-color-size) and best practice is to map all sizes to create a 1-to-1 relationship. For multi-size variants, Supersessions are defined by size, for each size. New Supersessions defined in the Supersession module and changes to existing Supersessions are automatically pushed into AP.</p>
         <p>Typically, outside of the new Supersession functionality AP is at the Variant level (style-color) and does not consider size. </p>
         <p class="BasicNote">Supersession functionality in AP is enabled by setting new system policy <span class="Emphasis">Enable Supersessions</span> to <span class="Emphasis">True</span>. For more information, see System Policies.</p>
         <h5>Example scenario</h5>
@@ -3840,7 +3840,7 @@ Additionally, users require new User Right <span class="Emphasis">Allow Access N
         <p>A new column on the Allocation Strategy screen labeled Create Save Point gives users the ability to create a Save Point. If a user selects Create Save Point for a particular strategy and then clicks Save, the system takes all the information relating to the strategy including location exceptions and saves the settings for the strategy. Users can then go to the Allocation Strategy Save Point screen and mass apply a Save Point to all the variants in the Item Filter.</p>
         <p>The Create Save Point Before Restore function creates another Save Point saving variant settings before a restore.</p>
         <h4>Demand Transference</h4>
-        <p>Users can now consider Demand Transference within the Allocations solution. To include or exclude this logic, navigate to Management &gt; Inventory Manager and select the Consider Demand Transference checkbox for one or more items.</p>
+        <p>Users can now consider Demand Transference within the Allocations module. To include or exclude this logic, navigate to Management &gt; Inventory Manager and select the Consider Demand Transference checkbox for one or more items.</p>
         <h4>Product Model Calculation</h4>
         <p>By default (system policy Allocate.ProductModel.UseAdvanced is set to False), the product model calculation uses the MEDIAN to produce the average values. If the new system policy Allocate.ProductModel.UseAdvanced is set to True, then the calculation will use the MEAN.</p>
         <h4>Two new columns have been added to the Product Model grid</h4>
@@ -3898,7 +3898,7 @@ Additionally, users require new User Right <span class="Emphasis">Allow Access N
             </col>
             <thead>
                 <tr class="TableStyle-standard-Head-Header1">
-                    <th class="TableStyle-standard-HeadE-Column1-Header1" MadCap:conditions="General.DoNotPublish">Solution</th>
+                    <th class="TableStyle-standard-HeadE-Column1-Header1" MadCap:conditions="General.DoNotPublish">module</th>
                     <th class="TableStyle-standard-HeadD-Column2-Header1" MadCap:conditions="General.DoNotPublish">Available fields</th>
                 </tr>
             </thead>
@@ -4214,7 +4214,7 @@ Last 3 Weeks Average Returns Revenue
             <li>A&#160;new button labeled <span class="BodyWord">Advanced Calculate</span> has been added to the Stock Holding Projection screen. Clicking the <span class="BodyWord">Advanced Calculate</span> button opens up the <span class="BodyWord">Replenish Task</span> dialog. The new <span class="BodyWord">Advanced Calculate</span> button is controlled by the following new user right:<ul><li><span class="BodyWord">Allow Stock Projection Calculation Using Advanced Calc button</span></li></ul></li>
         </ul>
         <h4>Forecast Fulfillment Split Factors view </h4>
-        <p>A new tab labeled <span class="BodyWord">Forecast Fulfillment Split Factors</span> has been added to the to the Inventory Manager solution. This tab shows the calculated fulfillment split factors. The split factors are displayed based on Item Master and are read-only. If fulfillment data exists, then checking the <span class="BodyWord">Show Zero Values</span> parameter displays any destination sites that have that Item Master but don't have a split factor. If fulfillment data doesn't exist, then the pivot grid only shows the Product Description column while Site, Destination, and Split Factors are all null.</p>
+        <p>A new tab labeled <span class="BodyWord">Forecast Fulfillment Split Factors</span> has been added to the to the Inventory Manager module. This tab shows the calculated fulfillment split factors. The split factors are displayed based on Item Master and are read-only. If fulfillment data exists, then checking the <span class="BodyWord">Show Zero Values</span> parameter displays any destination sites that have that Item Master but don't have a split factor. If fulfillment data doesn't exist, then the pivot grid only shows the Product Description column while Site, Destination, and Split Factors are all null.</p>
         <h2>Import/Export</h2>
         <h3><a name="2021.4IMEX"></a>2021.4</h3>
         <h4>Preserving existing Bin Min and Bin Max values if Bin Min and Bin Max are imported as NULL</h4>
@@ -4325,7 +4325,7 @@ Last 3 Weeks Average Returns Revenue
         <p>The Campaign List has been modified to improve performance.</p>
         <h3><a name="2019.26"></a>2019.2</h3>
         <h4>Events with a Promotion marked as Private</h4>
-        <p>Promotions can now be marked as Private, Shared, or Public. This gives Promotion owners the ability to hide and protect sensitive content by marking particular promotions as Private or Shared (with only particular users). A logged in user will be able to view Promotions, in the Event solution, that are marked Public or are shared with the logged in user.</p>
+        <p>Promotions can now be marked as Private, Shared, or Public. This gives Promotion owners the ability to hide and protect sensitive content by marking particular promotions as Private or Shared (with only particular users). A logged in user will be able to view Promotions, in the Event module, that are marked Public or are shared with the logged in user.</p>
         <p>A private or unshared Promotion will not be seen in the Available Promotion panes and is masked if used in an Event to hide its specific details as well as to make clear that a Slot is assigned to a Promotion. This masking applies to the Event List, Layout and Version screens but will not affect the Version Report. </p>
         <p>Promotions that are not shared with the logged in user are masked as follows: </p>
         <p>
@@ -4577,7 +4577,7 @@ Last 3 Weeks Average Returns Revenue
         <h4>Defining Sites by currency and country </h4>
         <p>In the Sites grid on a Pricing Plan’s <span class="Emphasis">Information</span> tab, Sites are now broken out by currency and country. Added Sites are assigned to an existing Cluster with the same Country and Currency. If no matching Clusters exist, a new one is created. A new column labeled <span class="Emphasis">Country Name</span> has been added to the <span class="Emphasis">Sites</span> grid.</p>
         <h4>Using approved Price Points across multiple currency and country combinations</h4>
-        <p>The Pricing solution has been enhanced to allow for using approved Price Points across multiple currency and country combinations for both Item\Site and Variant\Site Price Actions.</p>
+        <p>The Pricing module has been enhanced to allow for using approved Price Points across multiple currency and country combinations for both Item\Site and Variant\Site Price Actions.</p>
         <p>As part of this enhancement:</p>
         <ul>
             <li>A new system policy labeled <span class="BodyWord">Default Pricing Plan Price Matrix Usage</span> lets users set the default for whether new Price Manager Plans will default to allow or not allow Price Actions to use a Price Matrix for rounding.</li>
@@ -4686,7 +4686,7 @@ Last 3 Weeks Average Returns Revenue
         <p>A new right-click option labeled <b>Copy Column Cell(s)</b> lets users copy Variant Codes from the Product Grid Control. This allows for the creation of a new Price Action for only the copied variants. </p>
         <h2>Price Matrix</h2>
         <h3><a name="2020.4PMA"></a>2020.4</h3>
-        <p>A new Price Matrix solution has been added under the <span class="Emphasis">Influence</span> tab. The <span class="Emphasis">Price Point Matrix</span> view displays a set of pre-approved Price Points across multiple currency and country combinations. </p>
+        <p>A new Price Matrix module has been added under the <span class="Emphasis">Influence</span> tab. The <span class="Emphasis">Price Point Matrix</span> view displays a set of pre-approved Price Points across multiple currency and country combinations. </p>
         <p>
             <img src="../Resources/Images/Price Matrix/Price Matrix screen.PNG" class="LargeImages">
             </img>
@@ -4863,7 +4863,7 @@ Last 3 Weeks Average Returns Revenue
         <h4>Marking a Promotion as Private, Public, or Shared </h4>
         <p> v2019.2 introduces new functionality to allow a Promotion owner to now designate a Promotion as Private or Shared thereby restricting visibility and access to that Promotion to particular roles and users. </p>
         <p>The restricted Promotion’s privacy setting can later be changed to Public allowing all users visibility and access once the need for privacy has passed. Additionally, when cloning a Promotion the original privacy setting can be retained or changed on the Clone Promotion dialog. All historic Promotions within the system will be marked as Public with the upgrade.</p>
-        <p>This functionality is extended within the Event solution restricting the ability to view the Promotions in the Event List and Layout screens as well as within the "Available Promotions" pane. </p>
+        <p>This functionality is extended within the Event module restricting the ability to view the Promotions in the Event List and Layout screens as well as within the "Available Promotions" pane. </p>
         <h3><a name="2019.110"></a>2019.1</h3>
         <h4>Validation logs</h4>
         <p>New advanced filtering has been added to the Validation Log to let users review and mark as reviewed validation failure records allowing Promotions to continue to downstream systems. Additionally, the Validation log now returns large record sets. The new filters are:</p>
@@ -4906,7 +4906,7 @@ Last 3 Weeks Average Returns Revenue
         <p>As of 2019.1, the system will only update modified Content fields when saving changes. This is implemented at all levels (Master, Event, and Content) as well as updating the modifications to the other levels. This modification prevents unchanged fields from overwriting modified content.</p>
         <h2>Engine Template</h2>
         <h3><a name="2019.314"></a>2019.3</h3>
-        <p>version 2019.3 introduces a new solution called <span class="BodyWord">Engine Template</span> that provides a central source of managing engine templates so that users can easily create and update templates in a single place. There are two default task detail templates that can be used by the Engine to run items requested by the user without requiring any input from the user about the configuration. These templates are configured by editing a <span class="BodyWord">Replenish Task</span> dialog or a <span class="BodyWord">Forecast Task</span> dialog and saving the updated configuration into the template.</p>
+        <p>version 2019.3 introduces a new module called <span class="BodyWord">Engine Template</span> that provides a central source of managing engine templates so that users can easily create and update templates in a single place. There are two default task detail templates that can be used by the Engine to run items requested by the user without requiring any input from the user about the configuration. These templates are configured by editing a <span class="BodyWord">Replenish Task</span> dialog or a <span class="BodyWord">Forecast Task</span> dialog and saving the updated configuration into the template.</p>
         <p>The purpose of these templates is to allow processes that should not require user input to be able to create engine tasks with appropriate predefined settings.</p>
         <p><span class="BodyWord">Engine Template</span> is located under the <span class="BodyWord">Management</span> tab.</p>
         <h2>Engine</h2>
@@ -5023,8 +5023,8 @@ Last 3 Weeks Average Returns Revenue
         <p>The <span class="BodyWord">Variant Attribute Management</span> blade has been enhanced to include support for multiple attribute types including boolean, numeric, dates, and strings.</p>
         <h2>Variant Site Manager</h2>
         <h3><a name="Variant"></a>2019.4</h3>
-        <p>The new Variant Site Manager solution is now available from the Management tab. This new solution provides the functionality to select, view, and manage data specific to site variants. The site variant specific data can then be used extensively in the planning functions of ToolsGroup JustEnough.</p>
-        <p>Before you manage your site variants, you must assign product attributes to variants through the Variant Manager solution.</p>
+        <p>The new Variant Site Manager module is now available from the Management tab. This new module provides the functionality to select, view, and manage data specific to site variants. The site variant specific data can then be used extensively in the planning functions of ToolsGroup JustEnough.</p>
+        <p>Before you manage your site variants, you must assign product attributes to variants through the Variant Manager module.</p>
         <h4>New Variant Site Metadata  </h4>
         <p>Allocators and Demand Planners are now able to filter for new metadata at the variant-site level, which allows them to report on their performance at a more granular level. Having this metadata handy will allow them to actively mitigate potential shortfall situations and reduce lost sales. For details, see <b>Metadata in Variant Site Manager</b> in the online help.</p>
         <p>The following metadata is now available in Filter Groups in the Variant Site Manager Document:</p>
@@ -5268,8 +5268,8 @@ If  sales are reduced significantly due to a large scale event such as a disaste
         <h2 MadCap:conditions="General.DoNotPublish">Site Clustering</h2>
         <h2>Workflow Manager</h2>
         <h3><a name="2019.112"></a>2019.1</h3>
-        <p>The system now takes into account the User Blacklist Rights that is used for the nightly Workflow Heartbeat job to determine if a Price Action, Promotion, or Event should be automatically advanced to the next Workflow Status based on the appropriate solution object's current Status State:</p>
-        <p>The system will evaluate the user's User Right to 'Modify Status' based on the solution object's current Status’ State:</p>
+        <p>The system now takes into account the User Blacklist Rights that is used for the nightly Workflow Heartbeat job to determine if a Price Action, Promotion, or Event should be automatically advanced to the next Workflow Status based on the appropriate module object's current Status State:</p>
+        <p>The system will evaluate the user's User Right to 'Modify Status' based on the module object's current Status’ State:</p>
         <ul>
             <li>If the Job User does not have User Rights to 'Modify Status' based on the current Status State nor permission to the Transition, the system <span class="BodyWord">will not</span> change to the next Workflow Status.</li>
             <li>If the Job User has User Rights to 'Modify Status' based on the current Status State AND permission to the Transition, the system <span class="BodyWord">will</span> change to the next Workflow Status.</li>

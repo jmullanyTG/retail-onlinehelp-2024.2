@@ -8,7 +8,7 @@
         <ul>
             <li>@bIncludeStockOnHand BIT = 1 --Should the StockOnHand column be included? Read from tbl_InventoryLevel</li>
             <li>@bIncludeOnOrder BIT = 1 --Should entries from SupplierOrderLine be included? </li>
-            <li>@bIncludePrepacks BIT = 1 --Should stock in prepacks be included? If there are prepacks defined, it goes to the prepacks, then go to the inventory line of the prepacks</li>
+            <li>@bIncludePrepacks BIT = 1 --Should stock in prepacks be included? If there are prepacks defined, it goes to the prepacks, then goes to the inventory line of the prepacks</li>
             <li>@bIncludeReserved BIT = 0 --Should the Reserved column be accounted for? Stock reserved is currently subtracted from StockOnHand in tbl_InventoryLevel</li>
             <li>@bIncludePending BIT = 1 --Should the Pending column be accounted for?--subtracted if included</li>
             <li>@bIncludeSuperceded BIT = 1 --Should the Superseded column be accounted for? – added if included</li>

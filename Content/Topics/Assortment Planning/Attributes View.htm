@@ -1,9 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" xml:lang="en-us">
     <head>
-        <link href="../../Resources/TableStyles/standard.css" rel="stylesheet" MadCap:stylesheetType="table" />
-        <title>
-        </title>
+        <link href="../../Resources/TableStyles/standard.css" rel="stylesheet" MadCap:stylesheetType="table" /><title></title>
     </head>
     <body>
         <h1>Attributes view</h1>
@@ -22,9 +20,7 @@
         <p>Whether multiple lines are selected in the main planning view, changes are being applied in Collection view, or both the system automatically resolves any conflicts that exist between the applied values and the attribute value eligibility of the items the change is being applied to.</p>
         <p>Single-select attribute value changes are applied to all placeholders and collections that are eligible for them. Ineligible placeholders and collections remain unchanged.</p>
         <p>Multi-select attribute value changes are applied additively to placeholders and collections that are eligible for them. If only some of the applied values are eligible, then those are applied. Ineligible placeholders and collections remain unchanged.</p>
-        <h2>
-            <a name="Dual-dir">
-            </a>Dual-directional attribute flow</h2>
+        <h2><a name="Dual-dir"></a>Dual-directional attribute flow</h2>
         <p>Depending on where attributes are assigned – to placeholders in Assortment Planning or to variants in Variant Manager – attributes are transferred when a variant is assigned to a placeholder</p>
         <p class="BasicNote">System policy <span class="Emphasis">Multi Value Attribute Inheritance</span> governs the inheritance of multi-value attribute families when variants are assigned. When set to <span class="Emphasis">FALSE</span>, multi-value families are applied additively to existing values when variants are assigned.</p>
         <p class="Example">A placeholder has the multi-value family Embellishments and the values Flocked and Sequinned currently set. If a user assigns a variant with the Embellishments values Flocked and Embroidered to that placeholder, then the resulting values for the Embellishments family are: Flocked, Sequinned, and Embroidered.</p>
@@ -35,7 +31,7 @@
         <h2>Attribute changes in Assortment Planning</h2>
         <p> System policy <span class="Emphasis">Update Variant Attributes In Assortment Planning</span> (Module: Assortment) governs whether changes are allowed to attribute families attached to variants. When set to <span class="Emphasis">FALSE</span>, all attribute families attached to the assigned variant appear grayed out and are locked for editing.</p>
         <p>Creating attribute families that only have the entity type Variant Placeholder assigned allows additional attribute families that cannot be attached to variants and will only be used inside of Assortment Planning for placeholders. </p>
-        <p>When set to <span class="Emphasis">TRUE</span>, attribute families can be locked or unlocked individually within the Attribute Management solution. Families assigned to the variant entity type and having the AP Updates Variants setting checked are editable in Assortment Planning even when variants are assigned. Changes made to these families in Assortment Planning are transferred to the assigned variant for the product hierarchy assigned to the active assortment plan but are not transferred to other placeholders that variant is assigned to. </p>
+        <p>When set to <span class="Emphasis">TRUE</span>, attribute families can be locked or unlocked individually within the Attribute Management module. Families assigned to the variant entity type and having the AP Updates Variants setting checked are editable in Assortment Planning even when variants are assigned. Changes made to these families in Assortment Planning are transferred to the assigned variant for the product hierarchy assigned to the active assortment plan but are not transferred to other placeholders that variant is assigned to. </p>
         <p MadCap:conditions="General.ScreenOnly">For more information on the <span class="Emphasis">AP Updates Variants</span> setting, see <MadCap:xref href="../Attribute Management/Creating and maintaining attribute families.htm">Creating and maintaining attribute families</MadCap:xref>.</p>
         <h2>Attribute changes in Variant Manager</h2>
         <p> Changes made to variant attributes in <span class="Emphasis">Variant Manager</span> are transferred to all placeholders that variant is currently assigned to across all existing assortment plans that have the selected Variant Hierarchy assigned.</p>
@@ -51,20 +47,17 @@
             </thead>
             <tbody>
                 <tr class="TableStyle-standard-Body-Body1">
-                    <td class="TableStyle-standard-BodyE-Column1-Body1">
-                        <span class="Emphasis">Family Name</span>
+                    <td class="TableStyle-standard-BodyE-Column1-Body1"><span class="Emphasis">Family Name</span>
                     </td>
                     <td class="TableStyle-standard-BodyD-Column2-Body1">The name of the attribute family.</td>
                 </tr>
                 <tr class="TableStyle-standard-Body-Body1">
-                    <td class="TableStyle-standard-BodyE-Column1-Body1">
-                        <span class="Emphasis">Family Description</span>
+                    <td class="TableStyle-standard-BodyE-Column1-Body1"><span class="Emphasis">Family Description</span>
                     </td>
                     <td class="TableStyle-standard-BodyD-Column2-Body1">The description for the attribute family.</td>
                 </tr>
                 <tr class="TableStyle-standard-Body-Body1">
-                    <td class="TableStyle-standard-BodyB-Column1-Body1">
-                        <span class="Emphasis">Value</span>
+                    <td class="TableStyle-standard-BodyB-Column1-Body1"><span class="Emphasis">Value</span>
                     </td>
                     <td class="TableStyle-standard-BodyA-Column2-Body1">                    
                         The attribute value of the attribute family for the selected placeholder or collection. Supported attribute types include boolean, numeric, dates, and strings.  
@@ -73,9 +66,7 @@
             </tbody>
         </table>
         <h2>Buttons</h2>
-        <p>
-            <span class="Emphasis">Save</span>: Saves all changes made to attribute values for the selected placeholder/collection.</p>
-        <p>
-            <span class="Emphasis">Cancel</span>: Cancels all changes made to attribute values for the selected placeholder/collection and reverts them to previously saved values.</p>
+        <p><span class="Emphasis">Save</span>: Saves all changes made to attribute values for the selected placeholder/collection.</p>
+        <p><span class="Emphasis">Cancel</span>: Cancels all changes made to attribute values for the selected placeholder/collection and reverts them to previously saved values.</p>
     </body>
 </html>

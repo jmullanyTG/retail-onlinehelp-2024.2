@@ -43,7 +43,7 @@
         <p> The metrics included are:</p>
         <ul>
             <li>
-                <p><span class="Emphasis">Pareto Choices</span>: A Pareto % of Comparison Active choices.  It is meant to be used as a guidepost for the scenario’s TY New choices. Ideally, the choice count for comparison and the current scenario should be aligned.</p>
+                <p><span class="Emphasis">Pareto Choices</span>: A Pareto percentage of Comparison Active choices.  It is meant to be used as a guidepost for the scenario’s TY New choices. Ideally, the choice count for comparison and the current scenario should be aligned.</p>
             </li>
             <li>
                 <p><span class="Emphasis">TY Act New Choices</span>: The sum of all choices across all updates for the segment and location.</p>
@@ -55,7 +55,7 @@
                 <p><span class="Emphasis">TY Act New Avg Periods in Phase</span>: The average span of time for which choices will be active in the current scenario.</p>
             </li>
         </ul>
-        <p>The Pareto % to use can be set in two place, via: </p>
+        <p>The Pareto percent to use can be set in two place, via: </p>
         <ul>
             <li>
                 <p>system policy <span class="Emphasis">Rationalize: Pareto Threshold</span> which is the default value when set, or </p>

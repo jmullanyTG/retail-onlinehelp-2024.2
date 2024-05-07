@@ -14,13 +14,13 @@
         <h2>Functionality</h2>
         <h3>Auto-Create Segments</h3>
         <p style="margin-bottom: 0pt;">Creates one target segment for each lowest level leaf of the selected product hierarchy for the scenario, defines temporary Target Filters for each based on the items belonging to the corresponding hierarchy levels, and assigns any default cluster sets users have defined. For more information on setting defaults, see <MadCap:xref href="../../Topics/Assortment Planning/Managing Plans and Set Defaults.htm">Managing assortment plans and setting plan defaults</MadCap:xref>.</p>
-        <p class="Example">The selected product hierarchy level for the scenario is the department Mens Tops. Beneath Mens Tops, there are 4 sub-departments: Mens Tees, Mens Wovens, Mens Knits, and Mens Sweaters. Clicking <span class="Emphasis">Segment by Hierarchy</span> creates one segment for each in the <span class="Emphasis">Target Segment Definitions</span> area.</p>
+        <p class="Example">The selected product hierarchy level for the scenario is the department Mens Tops. Beneath Mens Tops, there are 4 sub-departments: Mens Tees, Mens Wovens, Mens Knits, and Mens Sweaters. Clicking <span class="Emphasis">Segment by Hierarchy</span> creates one segment for each in the <span class="Emphasis">Target Segment Definitions</span> section.</p>
         <p>If additional hierarchy levels exist between the product hierarchy level selected for the scenario and the lowest level in the product hierarchy set for the plan, the system still generates segments for the leaves of the lowest level. To use this functionality to create segments at a higher level, a different hierarchy to the plan that only goes down to the level desired must be assigned.</p>
         <p class="Caution">We strongly advise against defining product hierarchies that extend to the style level or below, as this greatly diminishes system performance and over complicates the assortment planning process.</p>
         <h3>Calculate</h3>
         <p>Calculates the segment cluster details in the <span class="Emphasis">Target Worksheet</span> section based on the <span class="BodyWord">Target Data Selection</span> parameters and selections in the <span class="Emphasis">Target Segment Definitions</span> section. After the calculation process completes, the scenario status shows as <span class="Emphasis">Calculated</span> in the <span class="Emphasis">Target Data Selection</span> section, and full Comparison and Carryover data is shown in the <span class="Emphasis">Target Worksheet</span> section. The <span class="Emphasis">TY&#160;Act New</span> fields are set as defaults.</p>
         <p class="BasicNote">Generally, this process takes only a few seconds to complete. However, depending on the volume of data being queried and the complexity of the specified criteria, it could take up to a minute or more.</p>
-        <p class="BasicNote">If <span class="Emphasis">Calculate</span> is clicked before segments have been defined for the scenario, the <span class="Emphasis">Target Worksheet</span> section refreshes but return no data.</p>
+        <p class="BasicNote">If <span class="Emphasis">Calculate</span> is clicked before segments have been defined for the scenario, the <span class="Emphasis">Target Worksheet</span> section refreshes but returns no data.</p>
         <h3>Rationalize</h3>
         <p>Calculates the recommended new choice counts by segment cluster based on the <span class="Emphasis">Target Data Selection</span> parameters and the selections in the <span class="Emphasis">Target Segment Definitions</span> section set for the scenario. For more information, see <MadCap:xref href="../../Topics/Assortment Planning/Rationalization.htm">Rationalization calculation</MadCap:xref>.</p>
         <p class="BasicNote">Generally, this process takes only a few seconds to complete. However, depending on the volume of data being queried and the complexity of the specified criteria, it could take up to a minute or more.</p>
@@ -190,7 +190,7 @@ Displays the rows removed from the cleansing process.				 <p><img src="../Images
         <p> The metrics included are:</p>
         <ul>
             <li>
-                <p><span class="Emphasis">Pareto Choices</span>: A Pareto % of Comparison Active choices.  It is meant to be used as a guidepost for the scenario’s TY New choices. Ideally, the choice count for comparison and the current scenario should be aligned.</p>
+                <p><span class="Emphasis">Pareto Choices</span>: A Pareto percentage of Comparison Active choices.  It is meant to be used as a guidepost for the scenario’s TY New choices. Ideally, the choice count for comparison and the current scenario should be aligned.</p>
             </li>
             <li>
                 <p><span class="Emphasis">TY Act New Choices</span>: The sum of all choices across all updates for the segment and location.</p>
@@ -202,7 +202,7 @@ Displays the rows removed from the cleansing process.				 <p><img src="../Images
                 <p><span class="Emphasis">TY Act New Avg Periods in Phase</span>: The average span of time for which choices will be active in the current scenario.</p>
             </li>
         </ul>
-        <p>The Pareto % to use can be set in two place, via: </p>
+        <p>The Pareto percent to use can be set in two place, via: </p>
         <ul>
             <li>
                 <p>system policy <span class="Emphasis">Rationalize: Pareto Threshold</span> which is the default value when set, or </p>
