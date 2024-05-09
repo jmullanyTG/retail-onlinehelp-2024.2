@@ -106,13 +106,42 @@ Re-tick <span class="Emphasis">Selling Period</span>, and save, and sales units 
             </thead>
             <tbody>
                 <tr class="TableStyle-standard-Body-Body1">
-                    <td class="TableStyle-standard-BodyE-Column1-Body1">&#160;</td>
-                    <td class="TableStyle-standard-BodyE-Column2-Body1">&#160;</td>
-                    <td class="TableStyle-standard-BodyE-Column1-Body1">&#160;</td>
-                    <td class="TableStyle-standard-BodyD-Column2-Body1">&#160;</td>
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">
+                        Import/Export SQL
+                        <p>Site Clustering</p></td>
+                    <td class="TableStyle-standard-BodyE-Column2-Body1">Imports - Cluster Set Import Bug Caused by Duplicate / Inactive Cluster Set Entities</td>
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">External Bug</td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">2024.1.1.0</td>
                 </tr>
                 <tr class="TableStyle-standard-Body-Body1">
-                    <td class="TableStyle-standard-BodyA-Column1-Body1" colspan="4">&#160;</td>
+                    <td class="TableStyle-standard-BodyA-Column1-Body1" colspan="4"><span class="Emphasis">Reported Behavior</span>
+                        <p>During the Cluster Set import, the logic to determine an existing <span class="EmphasisItalic">ClusterSetID</span> was joining onto the cluster set tables without considering the <span class="EmphasisItalic">RowStatusID</span>. This presented a problem when trying to map the imported cluster sites to an existing cluster set.
+</p>
+                        <p>
+It was discovered that duplicate <span class="EmphasisItalic">ClusterSetName</span>s could be created  in the cluster set manager. In one specific scenario, one of the duplicate cluster sets had been marked deleted but not yet purged from the system. This resulted in an incorrect site list to be imported because the data was being spread across multiple cluster sets.
+
+</p>
+                        <p><span class="Emphasis">Steps to Verify</span>
+                        </p>
+                        <ol>
+                            <li>
+                                <p>Create two cluster sets with the same cluster set name
+
+</p>
+                            </li>
+                            <li>
+                                <p>Delete one cluster set
+</p>
+                            </li>
+                            <li>
+                                <p>
+Import data for cluster set
+
+</p>
+                            </li>
+                        </ol>
+                        <p>Observe that the right site counts are now posted only to the active cluster set</p>
+                    </td>
                 </tr>
             </tbody>
         </table>
