@@ -8,23 +8,33 @@
         <ul>
             <li>data cannot be pasted onto a non-editable cell (non-editable cells are skipped)</li>
             <li>the focused cell or top-left cell of the selection on the pivot grid (in the case of a multi-select) must be editable. If the focused cell is not editable, then the Paste option is not shown.</li>
-            <li>if pasting onto a normal cell and then a total cell (e.g. paste into Week 2021_wk34 and 2021_m08 total at the same time) then the lower level value is overwritten by the total cell.</li>
+            <li>if pasting onto a normal cell and then a total cell (e.g. paste into Week 2024_wk34 and 2024_m08 total at the same time) then the lower level value is overwritten by the total cell.</li>
         </ul>
         <h2>Copying and pasting data</h2>
         <p>To copy and paste data from a spreadsheet into a plan:</p>
         <ol>
-            <li>Select and copy the desired cells in the spreadsheet.</li>
+            <li>
+                <p>Select and copy the desired cells in the spreadsheet.</p>
+                <p>
+                    <img src="../../Resources/Images/MFP/Excel Copy Cells.png" class="LargeImages" />
+                </p>
+            </li>
             <li>
                 <p>Optionally, if a header row is copied, right-click and select <span class="Emphasis">Paste Options &gt; Remove Headers</span>.</p>
-                <p class="BasicNote">Remove Headers removes the first row of values that have been copied as they are considered to be headers.</p>
+                <p class="BasicNote"><span class="Emphasis">Remove Headers</span> discards the first row as it is not value based.</p>
             </li>
             <li>
                 <p>Within a target cell in a plan, right-click and select <span class="Emphasis">Paste From Clipboard</span> from the dropdown menu.</p>
                 <p>
                     <img src="../../Resources/Images/MFP/Paste From Clipboard.png" class="LargeImages" />
                 </p>
+                <p class="BasicNote">The same effect can be achieved via CTRL+ V.</p>
             </li>
         </ol>
+        <p>The cells are updated.</p>
+        <p>
+            <img src="../../Resources/Images/MFP/Excel Cells Updated.png" /><![CDATA[
+        ]]></p>
         <p>To copy rows or sections of data from one part of a pivot to another:</p>
         <ol>
             <li>
@@ -41,7 +51,7 @@
                 <p>Ensure that <span class="Emphasis">Remove Headers</span> is not checked otherwise a row is lost.</p>
             </li>
             <li>
-                <p>Either press CTRL +&#160;V or Ctrl-V or right-click and select <span class="Emphasis">Paste from Clipboard</span>.</p>
+                <p>Either press CTRL +&#160;V or right-click and select <span class="Emphasis">Paste from Clipboard</span>.</p>
                 <p class="BasicNote">The values are pasted using each selected cell as a starting point.</p>
             </li>
         </ol>

@@ -223,10 +223,7 @@
               Link="/Content/Topics/Merchandise Financial Planning/Copying and pasting data from spreadsheets into plans.htm" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" />
             <TocEntry
               Title="[%=System.LinkedTitle%]"
-              Link="/Content/Topics/Merchandise Financial Planning/Designing and saving layouts.htm" />
-            <TocEntry
-              Title="[%=System.LinkedTitle%]"
-              Link="/Content/Topics/Merchandise Financial Planning/Restoring  previously saved layouts.htm" />
+              Link="/Content/Topics/Merchandise Financial Planning/Working With Layouts.htm" />
             <TocEntry
               Title="[%=System.LinkedTitle%]"
               Link="/Content/Topics/Merchandise Financial Planning/Using keystroke shortcuts.htm" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" />

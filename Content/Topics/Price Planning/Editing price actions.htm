@@ -19,9 +19,9 @@
         <p>
             <img src="../../Resources/Images/Price Planning/Price Action Details grid.PNG" class="LargeImages" />
         </p>
-        <p>Within the <span class="Emphasis">Details</span> section, the data that displays in the <span class="Emphasis">Variants</span> grid is at the Variant-Site level (the Filter Entity Type is Variant-Site). <MadCap:conditionalText MadCap:conditions="General.ScreenOnly">For more information on Filters, see <MadCap:xref href="../Filters/Creating a New Filter.htm">Creating a new filter</MadCap:xref>.</MadCap:conditionalText><MadCap:conditionalText MadCap:conditions="General.PrintOnly"> For more information, refer to the Filters User Guide.</MadCap:conditionalText></p>
+        <p>Within the <span class="Emphasis">Details</span> section, the data that displays in the <span class="Emphasis">Variants</span> grid is at the variant-site level (the Filter Entity Type is Variant-Site). <MadCap:conditionalText MadCap:conditions="General.ScreenOnly">For more information on Filters, see <MadCap:xref href="../Filters/Creating a New Filter.htm">Creating a new filter</MadCap:xref>.</MadCap:conditionalText><MadCap:conditionalText MadCap:conditions="General.PrintOnly"> For more information, refer to the Filters User Guide.</MadCap:conditionalText></p>
         <h3>Modifying pricing in the Variants grid</h3>
-        <p>New values for applicable Variant variables can be applied within the <span class="Emphasis">Variants</span> grid. The modified value is applied to all lower levels (i.e. Item and Item Location Detail). </p>
+        <p>New values for applicable variant variables can be applied within the <span class="Emphasis">Variants</span> grid. The modified value is applied to all lower levels (i.e. Item and Item Location Detail). </p>
         <p>
             <img src="../../Resources/Images/Price Planning/Modify Values in the Details Grid.PNG" class="LargeImages" />
         </p>
@@ -36,16 +36,16 @@
         <p class="BasicNote">For more extensive editing, click <span class="Emphasis">Open</span> to open selected price actions in a separate tab.</p>
         <p>Within the Price Manager screen:</p>
         <ol>
-            <li>Double-click a Pricing Plan in the <span class="Emphasis">Home</span> screen to open the Plan in a new tab.</li>
+            <li>Double-click a plan in the <span class="Emphasis">Home</span> screen to open the plan in a new tab.</li>
             <li>Select the <span class="Emphasis">Actions</span> tab.</li>
-            <li>Select a Price Action in the <span class="Emphasis">Price Actions</span> grid.</li>
+            <li>Select a price action in the <span class="Emphasis">Price Actions</span> grid.</li>
             <li>
                 <p>Click <span class="Emphasis">Edit</span> in the toolbar to display the <span class="Emphasis">Edit Price Action</span> dialog.</p>
                 <p>
                     <img src="../../Resources/Images/Price Planning/Edit a Price Action dialog.png" class="LargeImages" />
                 </p>
-                <p class="BasicNote">The Price Strategies available to be selected are filtered based on the Price Action Strategy’s restricted User and Role access. If a Price Action Strategy was selected in the past that is no longer valid, the system retains the invalid Price Action Strategy. The invalid Price Action Strategy is no longer available once a different Price Action Strategy is selected.</p>
-                <p>The Price Action screen refreshes. If a new Strategy or Start Date is selected, then the system ensures that the Price and Cost values are still valid.</p>
+                <p class="BasicNote">The strategies available to be selected are filtered based on the Price Action Strategy’s restricted user and role access. If a Price Action Strategy was selected in the past that is no longer valid, the system retains the invalid Price Action Strategy. The invalid Price Action Strategy is no longer available once a different Price Action Strategy is selected.</p>
+                <p>The Price Action screen refreshes. If a new strategy or start date is selected, then the system ensures that the price and cost values are still valid.</p>
             </li>
             <li>Revise the field values as required.</li>
             <li>
@@ -58,7 +58,7 @@
         <p>The <span class="Emphasis">Calculate</span> button on the <span class="Emphasis">Clusters</span> toolbar runs calculations on the selected cluster only.</p>
         <p>Once a price action has been configured, click <span class="Emphasis">Calculate</span> to execute the Price Strategy’s configured prioritized calculations and validations, which are run at the lowest level, and displayed as a minimum and maximum in the Price Action Summary grid. </p>
         <p>If there are any differences in entered variable information the <span class="Emphasis">Exception</span> checkbox is marked for easy identification. To view lower level calculated pricing information, click <span class="Emphasis">Detail</span> for the appropriate Variant details.</p>
-        <p class="BasicNote"> You cannot edit a Price Action while it is being calculated and validated by the system.</p>
+        <p class="BasicNote"> A price action cannot be edited while it is being calculated and validated by the system.</p>
         <h2>Applying Price Matrixes to Clusters in a Price Action</h2>
         <p>A Price Matrix can be applied to all the Clusters in a Price Action. To apply a Price Matrix, select the checkbox in the <span class="Emphasis">Apply Matrix To All</span> field in the <span class="Emphasis">Clusters</span> grid.</p>
         <p>If a Price Matrix is applied to all the Clusters in a Price Action, then values that are not percents in all the other&#160;Clusters within the Price Action use the foreign currency equivalent from the exchange matrix that was imported into <span class="Emphasis">Price Point Matrix</span> module. For example, if the chosen Cluster is priced in Belgium/EUR at 4.99, then a second Cluster priced in Canada/USD updates to 6.00. (See following screenshot.)</p>
