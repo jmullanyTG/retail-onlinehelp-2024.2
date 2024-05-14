@@ -56,5 +56,6 @@
     <Word Comment="">SKUs</Word>
     <Word Comment="">supersession</Word>
     <Word Comment="">Supersessions</Word>
-    <Word>severities</Word>
+    <Word Comment="">severities</Word>
+    <Word>versioned</Word>
 </SpellingDictionary>
