@@ -63,8 +63,10 @@
                 <tr class="TableStyle-standard-Body-Body1">
                     <td class="TableStyle-standard-BodyE-Column1-Body1">Cluster Type</td>
                     <td class="TableStyle-standard-BodyD-Column2-Body1">
-                       The cluster set/template type.
-                        <div class="Note_BasicNote"><p>For the <span class="Emphasis">Wholesale Account Cluster</span> cluster type, sites are selected the same way as with the other cluster types. Users do not select or create this cluster type within the UI as these are automatically created within the import process. However, users need to open new <span class="Emphasis">Wholesale Account Cluster</span> sets and click <span class="Emphasis">Calculate</span> to assign the correct Clusters. The result is Cluster Sets that have the correct Clusters assignments with a 1:1 Cluster to Site relationship. Snapshots continue as normal.</p><p>Editing a Cluster Set will show the Classifications created.</p></div></td>
+                        Determine the clustering method used to build the cluster sets. The options are: 
+                        <ul><li><p><span class="Emphasis">K-Means</span> – Groups data points into logical clusters based on the nearest mean. The centroid is a point in the center of the cluster, regardless of where the data points are.</p></li><li><p><span class="Emphasis">K-Medoid</span> – Groups data points into logical clusters while restricting the centroid to a data point. K-Medoid still uses the minimum mean distance to group the logical clusters. This is a more computationally intensive process than K-Means.</p></li><li><p><span class="Emphasis">K-Means Collection</span> – A template used to create similar K-Means sets in which a single parameter (partition filter by value) will change and therefore create new K-Means cluster sets.</p></li><li><p><span class="Emphasis">K-Medoid Collection</span> – A template used to create similar K-Medoid sets in which a single parameter (partition filter by value) will change and therefore create new K-Medoid cluster sets.</p></li><li><p><span class="Emphasis">Wholesale Account Cluster</span> - Sites are selected the same way as with the other cluster types. Users do not select or create this cluster type within the UI as these are automatically created within the import process. However, users need to open new <span class="Emphasis">Wholesale Account Cluster</span> sets and click <span class="Emphasis">Calculate</span> to assign the correct Clusters. The result is Cluster Sets that have the correct Clusters assignments with a 1:1 Cluster to Site relationship. Snapshots continue as normal.</p></li></ul><p class="BasicNote">
+                           Editing a Cluster Set will show the Classifications created.
+                        </p></td>
                 </tr>
                 <tr class="TableStyle-standard-Body-Body1">
                     <td class="TableStyle-standard-BodyE-Column1-Body1">Cluster Partition Site Filter By Field</td>
@@ -118,7 +120,7 @@
                     <td class="TableStyle-standard-BodyE-Column1-Body1">Distance Function</td>
                     <td class="TableStyle-standard-BodyD-Column2-Body1">
                          The distance function to use when calculating cluster sets.  
-                        <ul><li><span class="Emphasis">Euclidean Distance</span> calculates distance in a straight line (as the crow files).</li><li><span class="Emphasis">Manhattan Distance</span> calculates distance between two points as a sum of horizontal and vertical lines on a grid (no diagonals).</li></ul></td>
+                        <ul><li><span class="Emphasis">Euclidean Distance</span> calculates distance as drawn on the Euclidean plane (straight lines).</li><li><span class="Emphasis">Manhattan Distance</span> calculates distance as drawn on a plane while restricted to 90 degree right and left turns.</li></ul></td>
                 </tr>
                 <tr class="TableStyle-standard-Body-Body1">
                     <td class="TableStyle-standard-BodyB-Column1-Body1">Allow Cluster Count to be Resized</td>
