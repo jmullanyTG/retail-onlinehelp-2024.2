@@ -109,7 +109,7 @@ Re-tick <span class="Emphasis">Selling Period</span>, and save, and sales units 
                     <td class="TableStyle-standard-BodyE-Column1-Body1">
                         Import/Export SQL
                         <p>Site Clustering</p></td>
-                    <td class="TableStyle-standard-BodyE-Column2-Body1">Imports - Cluster Set Import Bug Caused by Duplicate / Inactive Cluster Set Entities</td>
+                    <td class="TableStyle-standard-BodyE-Column2-Body1">Cluster Set Import Bug Caused by Duplicate / Inactive Cluster Set Entities</td>
                     <td class="TableStyle-standard-BodyE-Column1-Body1">External Bug</td>
                     <td class="TableStyle-standard-BodyD-Column2-Body1">2024.1.1.0</td>
                 </tr>
@@ -141,6 +141,54 @@ Import data for cluster set
                             </li>
                         </ol>
                         <p>Observe that the right site counts are now posted only to the active cluster set</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <p>&#160;</p>
+        <table style="width: 100%; mc-table-style: url('../../Resources/TableStyles/standard.css'); margin-left: 0; margin-right: auto;" class="TableStyle-standard" cellspacing="0">
+            <col class="TableStyle-standard-Column-Column1" />
+            <col class="TableStyle-standard-Column-Column2" />
+            <col class="TableStyle-standard-Column-Column1" />
+            <col class="TableStyle-standard-Column-Column2" />
+            <thead>
+                <tr class="TableStyle-standard-Head-Header1">
+                    <th class="TableStyle-standard-HeadE-Column1-Header1">Components</th>
+                    <th class="TableStyle-standard-HeadE-Column2-Header1">Summary</th>
+                    <th class="TableStyle-standard-HeadE-Column1-Header1">Issue Type</th>
+                    <th class="TableStyle-standard-HeadD-Column2-Header1">Merged to Other Releases</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">Order Manager<![CDATA[                        ]]></td>
+                    <td class="TableStyle-standard-BodyE-Column2-Body1">Cannot insert duplicate key in object error</td>
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">Support</td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">&#160;</td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyA-Column1-Body1" colspan="4"><span class="Emphasis">Reported Behavior</span>
+                        <p>After creating an order, add more items through the same item filter which created the order.  Select the item to add into the order an error message pops up.</p>
+                        <p><![CDATA[
+]]></p>
+                        <p><span class="Emphasis">Steps to Verify</span>
+                        </p>
+                        <ol>
+                            <li>
+                                <p>Create a Distribution order
+</p>
+                            </li>
+                            <li>
+                                <p>Use the same Items filter to add more order lines</p>
+                            </li>
+                            <li>
+                                <p>Pick an item that is already in the order</p>
+                            </li>
+                            <li>
+                                <p>Select to add the item from filter</p>
+                            </li>
+                        </ol>
+                        <p>An error message displays.</p>
                     </td>
                 </tr>
             </tbody>
