@@ -8,11 +8,9 @@
         <ul>
             <li><span class="Emphasis">Group Name</span> – The user defined name for the product group. </li>
             <li><span class="Emphasis">Group Description</span> – Optional description for the product group. </li>
-            <li><span class="Emphasis">Group Allocation Priority</span> – Determines how the variants within the group are prioritized for allocations. <ul><li><span class="Emphasis">Lowest SOH</span> – Products with the lowest stock on hand will be granted higher priority. </li><li><span class="Emphasis">Highest SOH</span> – Products with the highest stock on hand will be granted higher priority. </li><li><span class="Emphasis">Sellthrough</span> – Products with the highest sellthrough % will be granted higher priority.</li><li><span class="Emphasis">Margin Rate</span> – Products with the highest margin rate will be granted higher priority. </li><li><span class="Emphasis">Aged Inventory</span> – Products will be prioritized based on last receipt date. This is meant to grant higher priority to stagnant items. </li><li><span class="Emphasis">High ROS</span> – Products with the highest rate of sale will be granted higher priority. </li><li><span class="Emphasis">Low ROS</span> – Products with the lowest rate of sale will be granted higher priority. </li></ul></li>
-        </ul>
-        <ul>
-            <li><span class="Emphasis">Max SOH per Variant</span> – Allows users to define a maximum quantity per variant. This will allow users to maintain color maximums when variant level is set to style-color. </li>
-            <li><span class="Emphasis">Product Eligibility</span> – The Item Master filter used to determine the Variants available for inclusion in a group. Check or uncheck the <span class="Emphasis">Include</span> checkbox to include or exclude Variants. </li>
+            <li><span class="Emphasis">Group Allocation Priority</span> – Determines how the variants within the group are prioritized for allocations. </li>
+            <li><span class="Emphasis">Max SOH per Variant</span> – Users can define a maximum quantity per variant. This maintains color maximums when variant level is set to style-color. </li>
+            <li><span class="Emphasis">Product Eligibility</span> – The Item Master filter used to determine the variants available for inclusion in a group. Check or uncheck the <span class="Emphasis">Include</span> checkbox to include or exclude variants. </li>
             <li>
                 <p><span class="Emphasis">Allowed Channels</span> - Displays the channels that are or were previously included. Channels associated with a strategy continue to display even if the strategy is later removed.</p>
                 <p>When users create Product Groups, the allowable channels is dependent on their assigned Rights. Therefore, if they are only allowed to work with Retail, then <span class="Emphasis">Allowed Channels</span> defaults to Retail.  If there are no restrictions to channels or sites, then the user has access to all of them. </p>
@@ -39,7 +37,7 @@
             <li><span class="Emphasis">Location Strategy</span> - The location strategy associated with a particular strategy within a Product Group.</li>
             <li><span class="Emphasis">Available SOH</span> – Total stock on hand quantity across all DCs (will use the available to allocate calculation). Does not include placeholder stock.</li>
             <li><span class="Emphasis">Total Inbound</span> – Sum of inbound orders to all DCs. </li>
-            <li><span class="Emphasis">Actual ROS</span> – Actualized rate of sale. Will display as “0” if item has not begun selling. Must be attached to an allocation strategy to populate values.</li>
+            <li><span class="Emphasis">Actual ROS</span> – Actualized rate of sale. Displays as <span class="Emphasis">0</span> if an item has not begun selling. Must be attached to an allocation strategy to populate values.</li>
             <li><span class="Emphasis">Sizes with SOH</span> – Total count of sizes with a company-wide stock on hand greater than zero.</li>
             <li><span class="Emphasis">Max Size SOH</span> – The maximum of stock on hand across all sizes with a stock on hand greater than zero.</li>
         </ul>
