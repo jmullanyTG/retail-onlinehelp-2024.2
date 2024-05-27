@@ -6,7 +6,8 @@
         <h1>Target Choice Count</h1>
         <p>&#160;</p>
         <p>&#160;</p>
-        <p>The following existing metrics were added to the <span class="Emphasis">Segment Definitions</span> section: <span class="Emphasis">Seasonality Curve</span>, <span class="Emphasis">Lifecycle Curve</span>, <span class="Emphasis">Markdown Curve</span>, and <span class="Emphasis">Seasonality Curve Weight Factor</span>.</p>
+        <p>The following existing metrics were added to the <span class="Emphasis">Segment Definitions</span> section: <span class="Emphasis">Seasonality Curve</span>, <span class="Emphasis">Lifecycle Curve</span>, <span class="Emphasis">Markdown Curve</span>, and <span class="Emphasis">Seasonality Curve Weight Factor</span>. The curves can be automatically assigned from hierarchy defaults.</p>
+        <p>Hierarchy defaults, but not Cluster defaults, are automatically assigned if  they have been set  (for placeholders created both manually within the main planning view and through the Smart Start function). </p>
         <p>&#160;</p>
         <p>The following fields were added to the existing <span class="Emphasis">Segment Floor Set Updates</span> section on the <span class="Emphasis">Edit Target Scenario</span> view:</p>
         <table style="width: 100%;">
@@ -26,18 +27,18 @@
                                 <p>Recommended New Choices </p>
                             </li>
                             <li>
-                                <p>Active New Choices </p>
+                                <p>Active New Choices (To modify, only one segment can be selected.)</p>
                             </li>
                             <li>
                                 <p>% New Choices </p>
-                            </li>
-                            <li>
-                                <p>Carryover Choices</p>
                             </li>
                         </ul>
                     </td>
                     <td>
                         <ul>
+                            <li>
+                                <p>Carryover Choices</p>
+                            </li>
                             <li>
                                 <p>% Carryover Choices </p>
                             </li>
@@ -59,9 +60,25 @@
             </tbody>
         </table>
         <p class="BasicNote">The same fields appear on the <span class="Emphasis">Target Choices By Update</span> view which is launched by selecting the <span class="Emphasis">View Choices By Update</span> option on the toolbar. Some fields are hidden by default.</p>
+        <p>&#160;</p>
+        <p>When <span class="Emphasis">End Date Definition</span> is set to <span class="Emphasis">Phase Out Date</span>, the <span class="Emphasis">Default Markdown Period</span> and <span class="Emphasis">Default End Period</span> fields automatically populate as shown in the example below.</p>
+        <p>
+            <img src="../../Resources/Images/Assortment Planning/End Date Definition Set To Phase Out Date.png" class="LargeImages" />
+        </p>
+        <p>When <span class="Emphasis">End Date Definition</span> is set to <span class="Emphasis">Last Regular Date</span>, the <span class="Emphasis">Default Markdown Period</span> and <span class="Emphasis">Default End Period</span> fields automatically populate as shown in the example below.</p>
+        <p>
+            <img src="../../Resources/Images/Assortment Planning/End Date Definition Set To Last Regular Date.png" class="LargeImages" />
+        </p>
+        <h2>Number of periods in a scenario</h2>
         <p>The number of periods in a scenario that contain updates is limited to 53 weeks.  If users try to add updates on a scenario with a larger window of time, the following message displays and updates are not created.</p>
         <p>
             <img src="../../Resources/Images/Target Choice Count/Updates 53 Period Limit.png" class="LargeImages" />
+        </p>
+        <p>If a user tries to change Window of Time after updates are created, the updates are cleared anyway.</p>
+        <h2>Date validations</h2>
+        <p>The following message displays for date validations:</p>
+        <p>
+            <img src="../../Resources/Images/Assortment Planning/Date Validations.png" class="LargeImages" />
         </p>
     </body>
 </html>
