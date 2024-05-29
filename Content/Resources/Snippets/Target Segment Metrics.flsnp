@@ -56,11 +56,11 @@ If multiple scenarios are selected, segment data for each are stacked in the vie
             <li><span class="Emphasis">Refresh Filters</span>: Refreshes the items associated with the Target and Supplemental Filters based on their criteria.</li>
             <li><span class="Emphasis">Last Filter Process Date</span>: Displays the date of the last filter Refresh for the segment. Using <span class="Emphasis">Segment By Hierarchy</span> or when clicking <span class="Emphasis">Save</span> of newly created segments, defaults to the current date.</li>
             <li>
-                <p><span class="Emphasis">New Variants</span>: Sum of the Max Act TY New Choices for all segments within the scenario. Defaults to blank. Updates after scenario has been Rationalized or TY Act New Choices has been updated, Applied, and the scenario has been refreshed. </p>
+                <p><span class="Emphasis">New Variants</span>: Sum of the maximum <span class="Emphasis">TY Act New Choices</span> for all segments within the scenario. Defaults to blank. Updates after a scenario has been Rationalized or <span class="Emphasis">TY Act New Choices</span> has been updated, saved, and the scenario has been refreshed. </p>
                 <p class="BasicNote">All new choices within a single segment are assumed to be shared among all assigned clusters. </p>
-                <p>For example, for a scenario with 2 segments, both with a single cluster set with 3 clusters assigned, the first segment has TY Act New Choice counts of 5, 3, and 2, and the second segment has TY Act New Choice counts of 4, 2, and 1, New Variants will equal 9 (max of 5 from segment one and 4 from segment two). This means that the clusters receiving fewer choices will still share from the max new choices by segment, they just won’t receive all of them.</p>
+                <p>For example, for a scenario with 2 segments, both with a single cluster set with 3 clusters assigned, the first segment has <span class="Emphasis">TY Act New Choice</span> counts of 5, 3, and 2, and the second segment has <span class="Emphasis">TY Act New Choice</span> counts of 4, 2, and 1, <span class="Emphasis">New Variants</span> will equal 9 (maximum of 5 from segment 1 and 4 from segment 2). This means that the clusters receiving fewer choices will still share from the maximum new choices by segment, they just won’t receive all of them.</p>
             </li>
-            <li><span class="Emphasis">Total Variants</span>: Sum of the Max Act TY New Choices and the Max TY C/O Choices for all segments within the scenario. Defaults to blank; updates after scenario has been Rationalized or TY Act New Choices has been updated, Applied, and the scenario has been refreshed.</li>
+            <li><span class="Emphasis">Total Variants</span>: Sum of the maximum <span class="Emphasis">TY Act New Choices</span> and the maximum <span class="Emphasis">TY C/O Choices</span> for all segments within the scenario. Defaults to blank; updates after a scenario has been Rationalized or <span class="Emphasis">TY Act New Choices</span> has been updated, saved, and the scenario has been refreshed.</li>
             <li>
                 <p><span class="Emphasis">Active Variant Threshold</span>:  Sets the percent of deseasonalized average to be used in step 3 of the data cleansing process for the segment. Changes to this value are valid within the active scenario only and will not alter the system policy value.</p>
                 <p class="BasicNote">Defaults to the value of the <span class="Emphasis">Active Variant Threshold Factor</span> system policy.</p>
@@ -71,7 +71,7 @@ If multiple scenarios are selected, segment data for each are stacked in the vie
             </li>
             <li>
                 <p><span class="Emphasis">Min Pres</span>: The initial value is seeded from Hierarchy Defaults in AP mode. In standalone mode, the values do not seed. Only the hierarchy default is used and not the one by cluster or time.</p>
-                <p>The editability of Min Pres within the Target Worksheet supports setting various targets by Cluster Set/Cluster. For example, Min Pres for Retail A should be 12, and Retail B should be 10.</p>
+                <p>The editability of <span class="Emphasis">Min Pres</span> within the Target Worksheet supports setting various targets by Cluster Set/Cluster. For example, minimum presentation for Retail A should be 12 and Retail B should be 10.</p>
             </li>
             <li>
                 <p><span class="Emphasis">Clear Supplemental Filter?</span>: If checked, then when the user clicks <span class="Emphasis">Save</span> this clears the Supplemental Filter set for the segment.</p>
