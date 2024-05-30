@@ -4,22 +4,34 @@
     </head>
     <body>
         <h1>Assortment Planning</h1>
-        <h2>Extended multiple currency planning</h2>
-        <p>TG JE Assortment Planning v2024.1 separated out AUT into <span class="Emphasis">Home AUT</span> and <span class="Emphasis">Blended AUT</span> as part of an effort to better support planning in multiple currencies. </p>
+        <h2>Using the JE Price Matrix to Smart Start within AP</h2>
+        <p>TG JE Assortment Planning v2024.1 introduced the TG JE Price Matrix to better support planning in multiple currencies. TG JE v2024.2 extends this functionality into Assortment Planning Smart Start. (Smart Start is not enabled for the standalone Target Choice Count module.)</p>
         <p class="BasicNote">Please refer to the TG JE v2024.1 release notes for an extensive description of TG JE's ability to plan in multiple currencies via a Price Matrix.</p>
-        <p>TG JE v2024.2 extends this functionality, the <span class="Emphasis">Blended AUT</span> metric has been added to the:</p>
+        <p>With the introduction of TG JE Price Matrix, the AP Smart Start process was updated as follows:</p>
+        <ul>
+            <li>
+                <p>The <span class="Emphasis">AUT Discount %</span> step has been changed to occur earlier in the process</p>
+            </li>
+            <li>
+                <p>Derived values are not seeded</p>
+            </li>
+            <li>
+                <p>The <span class="Emphasis">Apply</span> procedure runs instead of <span class="Emphasis">Reconcile</span> to derive <span class="Emphasis">Blended AUT</span> and <span class="Emphasis">AUR</span></p>
+            </li>
+            <li>
+                <p>VAT conversions will not be used if Price Matrix enabled</p>
+            </li>
+        </ul>
+        <p><span class="Emphasis">Blended AUT</span> and <span class="Emphasis">AUR</span> are derived from a <span class="Emphasis">Home AUT</span>. 
+
+This means that the Smart Started <span class="Emphasis">AUR</span> value is not guaranteed to match the planned scenario <span class="Emphasis">AUR</span>.</p>
+        <p>Additionally, the <span class="Emphasis">Blended AUT</span> metric has been added to the following:</p>
         <ul>
             <li>
                 <p> <span class="Emphasis">Historical</span> section on the <span class="Emphasis">Hindsight Management</span> screen.</p>
             </li>
             <li>
                 <p><span class="Emphasis">Image view</span> (<span class="Emphasis">View Options</span> &gt; <span class="Emphasis">Quick Text</span> drop-down menu).</p>
-            </li>
-            <li>
-                <p>Assortment Planning <span class="Emphasis">Smart Start</span> functionality. (<span class="Emphasis">Smart Start</span> functionality is not enabled within the standalone Target Choice Count functionality.) </p>
-                <p class="BasicNote"><span class="Emphasis">Blended AUT</span> and <span class="Emphasis">AUR</span> are derived from a Home AUT. 
-
-This means that the Smart Started <span class="Emphasis">AUR</span> value is not guaranteed to match the planned scenario <span class="Emphasis">AUR</span>.</p>
             </li>
         </ul>
     </body>
