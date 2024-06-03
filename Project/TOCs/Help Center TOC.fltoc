@@ -38,6 +38,9 @@
       Link="/Content/Topics/Release Notes/New Features and Enhancements.htm" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
       <TocEntry
         Title="[%=System.LinkedTitle%]"
+        Link="/Content/Topics/Release Notes/Allocation.htm" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" />
+      <TocEntry
+        Title="[%=System.LinkedTitle%]"
         Link="/Content/Topics/Release Notes/Assortment Planning.htm" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" />
       <TocEntry
         Title="[%=System.LinkedTitle%]"
@@ -672,11 +675,10 @@
             Link="/Content/Topics/Target Choice Count/TCC Configuring Target Segments.htm" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd"></TocEntry>
           <TocEntry
             Title="[%=System.LinkedTitle%]"
-            Link="/Content/Topics/Target Choice Count/Target Floor Set Updates TCC.htm" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
-            <TocEntry
-              Title="[%=System.LinkedTitle%]"
-              Link="/Content/Topics/Target Choice Count/Target Merging PH Choices TCC.htm" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" />
-          </TocEntry>
+            Link="/Content/Topics/Target Choice Count/Target Floor Set Updates TCC.htm" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd"></TocEntry>
+          <TocEntry
+            Title="[%=System.LinkedTitle%]"
+            Link="/Content/Topics/Target Choice Count/Target Merging PH Choices TCC.htm" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" />
           <TocEntry
             Title="[%=System.LinkedTitle%]"
             Link="/Content/Topics/Target Choice Count/TCC Target Worksheet.htm" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" />

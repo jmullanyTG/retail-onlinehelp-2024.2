@@ -1,8 +1,56 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
     <head>
+        <link href="../../Resources/TableStyles/standard.css" rel="stylesheet" MadCap:stylesheetType="table" />
     </head>
     <body>
         <h1>Allocations</h1>
+        <h2>Gaining insight as to why an order didn't happen</h2>
+        <p>TG JE v2024.2 introduces a way for users to investigate health check data from a selected Allocation Strategy to gain insight as to why an order didn't happen. With this insight, users are empowered to manage their configurations and resolve issues independently, reducing the need to escalate support tickets. Navigate to the <span class="Emphasis">Health Check</span> tab on the Allocation Strategy view to take advantage of this new functionality.</p>
+        <p>
+            <img src="../../Resources/Images/Allocations/Health Check Tab.png" class="LargeImages" />
+        </p>
+        <h3>Steps and conditions</h3>
+        <table style="width: 100%; mc-table-style: url('../../Resources/TableStyles/standard.css'); margin-left: 0; margin-right: auto;" class="TableStyle-standard" cellspacing="0">
+            <col class="TableStyle-standard-Column-Column1" />
+            <col class="TableStyle-standard-Column-Column2" style="width: 188px;" />
+            <col class="TableStyle-standard-Column-Column1" style="width: 80%;" />
+            <thead>
+                <tr class="TableStyle-standard-Head-Header1">
+                    <th class="TableStyle-standard-HeadE-Column1-Header1">Step Name</th>
+                    <th class="TableStyle-standard-HeadE-Column2-Header1">Possible Condition</th>
+                    <th class="TableStyle-standard-HeadD-Column1-Header1">Reason</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">Gathering Data</td>
+                    <td class="TableStyle-standard-BodyE-Column2-Body1">Good, Bad</td>
+                    <td class="TableStyle-standard-BodyD-Column1-Body1">Please check Allocation Strategies exception status to resolve any exceptions.</td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">Forecast</td>
+                    <td class="TableStyle-standard-BodyE-Column2-Body1">Good, Bad</td>
+                    <td class="TableStyle-standard-BodyD-Column1-Body1">
+No forecast generated. Could be strategy is phased out, improper product model used or no demand based on demand type.</td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">Forecast Retrend</td>
+                    <td class="TableStyle-standard-BodyE-Column2-Body1">Good, Caution, Bad</td>
+                    <td class="TableStyle-standard-BodyD-Column1-Body1">
+No forecast retrend generated. Could be not enough data points to generate a retrend or system policy is misconfigured.</td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">Calculation</td>
+                    <td class="TableStyle-standard-BodyE-Column2-Body1">Good, Caution, Bad</td>
+                    <td class="TableStyle-standard-BodyD-Column1-Body1">No calculation was done. Contact support to check the status of system configurations.</td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyB-Column1-Body1">Finalizing Orders</td>
+                    <td class="TableStyle-standard-BodyB-Column2-Body1">Good, Bad</td>
+                    <td class="TableStyle-standard-BodyA-Column1-Body1">Check site priorities or prepack overage %.</td>
+                </tr>
+            </tbody>
+        </table>
     </body>
 </html>
