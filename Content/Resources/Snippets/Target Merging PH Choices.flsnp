@@ -1,12 +1,91 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
     <head>
+        <link href="../TableStyles/standard.css" rel="stylesheet" MadCap:stylesheetType="table" />
     </head>
     <body>
         <p>The <span class="Emphasis">Target Choices By Update</span> view lets users select which segments and locations to view.  </p>
         <p>
-            <img src="../Images/Target Choice Count/Target Choice By Update.png" class="LargeImages" />
+            <img src="../Images/Target Choice Count/Target Choices By Update.png" class="LargeImages" />
         </p>
+        <p>The lower grid displays parameter selections for included locations and for exclusivity of locations.</p>
+        <table style="margin-left: 0;margin-right: auto;mc-table-style: url('../TableStyles/standard.css');" class="TableStyle-standard" cellspacing="0">
+            <col class="TableStyle-standard-Column-Column1" />
+            <col class="TableStyle-standard-Column-Column2" />
+            <thead>
+                <tr class="TableStyle-standard-Head-Header1">
+                    <th class="TableStyle-standard-HeadE-Column1-Header1">Field</th>
+                    <th class="TableStyle-standard-HeadD-Column2-Header1">Description</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">Collection </td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">The Collection identifier.</td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">Choice Num In Collection</td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1"> The Choice identifier.</td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">Choice Num In Update</td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">A unique ID for each choice.</td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">Choice Num In Segment</td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1"> A unique ID for all new choices in the segment.</td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">Added?</td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">Whether the given Choice is a user-added choice (checked) or recommended by the system (unchecked).</td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">New?</td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">Whether the given Choice is new to the update being viewed.</td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">Phase In</td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">The Phase In period (formatted with bold text if changed from the default).</td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">Phase Out</td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">The Phase Out period (formatted with bold text if changed from the default).</td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">Markdown</td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1"> The Markdown period (formatted with Bold text if changed from the default).</td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">Approx ROS Units</td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1"> The approximate rate of sale for the choice over its life.</td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">Total Sales Units</td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">The  total sales for the choice over its life.</td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">Approx Stock Units (Min Pres)</td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1"> Total Sales Units + Min Pres * Site Count</td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">Locations</td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1"> A list of locations to which the choice will be assorted.</td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">Description</td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">An  optional description for the choice which carries over into Smart Started items.</td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">Note</td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1"> An optional note for the choice which carries over into Smart Started items.</td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyB-Column1-Body1"><i>Periods</i>
+                    </td>
+                    <td class="TableStyle-standard-BodyA-Column2-Body1">Labeled with the period name and showing a system planned sales value for each period and each choice. The fields are formatted green for system sales and yellow for markdown sales.</td>
+                </tr>
+            </tbody>
+        </table>
         <p>The toolbar has the following functionality:</p>
         <ul>
             <li>

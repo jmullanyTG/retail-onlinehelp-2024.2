@@ -4,12 +4,30 @@
     </head>
     <body>
         <h1>Target Choice Count</h1>
+        <h2>Choices by Sequential Update</h2>
+        <p>How users identify multiple updates (floor sets) within a Target Scenario window of time.  The work flow has been revamped with the intention of providing a more user work flow-centric experience. This work flow allows users to define update periods and will generate choice recommendations beginning with the first update period. The user can then define the phase out date for choices recommended, including phase out dates with correspond to a future “update end” period. This allows the second update period to be aware of defined choices that are already accounted for within that update period.</p>
         <p>&#160;</p>
         <p>&#160;</p>
         <p>The following existing metrics were added to the <span class="Emphasis">Segment Definitions</span> section: <span class="Emphasis">Seasonality Curve</span>, <span class="Emphasis">Lifecycle Curve</span>, <span class="Emphasis">Markdown Curve</span>, and <span class="Emphasis">Seasonality Curve Weight Factor</span>. The curves can be automatically assigned from hierarchy defaults.</p>
         <p>Hierarchy defaults, but not Cluster defaults, are automatically assigned if  they have been set  (for placeholders created both manually within the main planning view and through the Smart Start function). </p>
         <p>&#160;</p>
-        <p>The following fields were added to the existing <span class="Emphasis">Segment Floor Set Updates</span> section on the <span class="Emphasis">Edit Target Scenario</span> view:</p>
+        <h2>Target Choices By Update view</h2>
+        <p>The <span class="Emphasis">Target Choices By Update</span> view has been reconfigured as follows. Users can:</p>
+        <ul>
+            <li>
+                <p>click between updates in the top view to display the to-date complete set of recommended choices in the bottom view</p>
+            </li>
+            <li>
+                <p>modify collection values and dates and view the resulting changes to the sales plan</p>
+            </li>
+            <li>
+                <p> change which locations each choice is assorted to</p>
+            </li>
+        </ul>
+        <p>
+            <img src="../../Resources/Images/Target Choice Count/Target Choices By Update.png" class="LargeImages" />
+        </p>
+        <p>The following new and existing metrics are available in the top grid:</p>
         <table style="width: 100%;">
             <col style="width: 499px;" />
             <col />
@@ -59,17 +77,19 @@
                 </tr>
             </tbody>
         </table>
-        <p class="BasicNote">The same fields appear on the <span class="Emphasis">Target Choices By Update</span> view which is launched by selecting the <span class="Emphasis">View Choices By Update</span> option on the toolbar. Some fields are hidden by default.</p>
-        <p>&#160;</p>
-        <p>When <span class="Emphasis">End Date Definition</span> is set to <span class="Emphasis">Phase Out Date</span>, the <span class="Emphasis">Default Markdown Period</span> and <span class="Emphasis">Default End Period</span> fields automatically populate as shown in the example below.</p>
+        <p class="BasicNote">The same fields have been added to the <span class="Emphasis">Segment Floor Set Updates</span> grid and the <span class="Emphasis">Edit Target Scenario</span> view which launches when copying or editing Target Scenarios. Some fields are hidden by default.</p>
+        <h2>Segment Floor Set Updates widget DMDEV-91523</h2>
+        <p>In addition to the fields mentioned above, </p>
+        <p>The markdown date is a user-enterable default markdown period for items in an update.   The selection available in the dropdown depends on the configuration of <span class="Emphasis">End Date Definition</span> for the scenario.  If <span class="Emphasis">Phase Out Date</span> is selected, it  show periods between Phase In and Phase Out.  If <span class="Emphasis">Last Regular Date</span> is selected, it shows any period between Phase In and the scenario's last regular period.</p>
+        <p>Setting  <span class="Emphasis">End Date Definition</span> to <span class="Emphasis">Phase Out Date</span> automatically updates the <span class="Emphasis">Default Markdown Period</span> and <span class="Emphasis">Default End Period</span> fields depending on the subsequent update's start period:</p>
         <p>
             <img src="../../Resources/Images/Assortment Planning/End Date Definition Set To Phase Out Date.png" class="LargeImages" />
         </p>
-        <p>When <span class="Emphasis">End Date Definition</span> is set to <span class="Emphasis">Last Regular Date</span>, the <span class="Emphasis">Default Markdown Period</span> and <span class="Emphasis">Default End Period</span> fields automatically populate as shown in the example below.</p>
+        <p>Setting <span class="Emphasis">End Date Definition</span> to <span class="Emphasis">Last Regular Date</span> automatically updates the <span class="Emphasis">Default Markdown Period</span> and <span class="Emphasis">Default End Period</span> fields depending on the subsequent update's markdown period:</p>
         <p>
             <img src="../../Resources/Images/Assortment Planning/End Date Definition Set To Last Regular Date.png" class="LargeImages" />
         </p>
-        <h2>Number of periods in a scenario</h2>
+        <h2>Maximum number of periods in a scenario</h2>
         <p>The number of periods in a scenario that contain updates is limited to 53 weeks.  If users try to add updates on a scenario with a larger window of time, the following message displays and updates are not created.</p>
         <p>
             <img src="../../Resources/Images/Target Choice Count/Updates 53 Period Limit.png" class="LargeImages" />

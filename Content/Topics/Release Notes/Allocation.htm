@@ -6,11 +6,42 @@
     <body>
         <h1>Allocations</h1>
         <h2>Gaining insight as to why an order didn't happen</h2>
-        <p>TG JE v2024.2 introduces a way for users to investigate health check data from a selected Allocation Strategy to gain insight as to why an order didn't happen. With this insight, users are empowered to manage their configurations and resolve issues independently, reducing the need to escalate support tickets. Navigate to the <span class="Emphasis">Health Check</span> tab on the Allocation Strategy view to take advantage of this new functionality.</p>
+        <p>TG JE v2024.2 introduces a way for users to investigate why an order from a selected Allocation Strategy didn't happen using health check data. With the insight the new <span class="Emphasis">Health Check</span> tab provides, users are empowered to manage their configurations and resolve issues independently and quickly, reducing the need to escalate support tickets. </p>
         <p>
             <img src="../../Resources/Images/Allocations/Health Check Tab.png" class="LargeImages" />
         </p>
+        <p>The new <span class="Emphasis">Health Check</span> tab can be found on the Allocation Strategy view.</p>
         <h3>Steps and conditions</h3>
+        <p>There are four possible conditions:</p>
+        <table style="margin-left: 0;margin-right: auto;mc-table-style: url('../../Resources/TableStyles/standard.css');" class="TableStyle-standard" cellspacing="0">
+            <col class="TableStyle-standard-Column-Column1" style="width: 20%;" />
+            <col class="TableStyle-standard-Column-Column2" />
+            <thead>
+                <tr class="TableStyle-standard-Head-Header1">
+                    <th class="TableStyle-standard-HeadE-Column1-Header1">Condition color</th>
+                    <th class="TableStyle-standard-HeadD-Column2-Header1">Description</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">Green</td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">Good</td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">Yellow</td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">Caution</td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">Red</td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">Bad (the report provides manual check suggestions)</td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyB-Column1-Body1">Grey</td>
+                    <td class="TableStyle-standard-BodyA-Column2-Body1">Blocked (check was skipped)</td>
+                </tr>
+            </tbody>
+        </table>
+        <p>Each step has possible conditions:</p>
         <table style="width: 100%; mc-table-style: url('../../Resources/TableStyles/standard.css'); margin-left: 0; margin-right: auto;" class="TableStyle-standard" cellspacing="0">
             <col class="TableStyle-standard-Column-Column1" />
             <col class="TableStyle-standard-Column-Column2" style="width: 188px;" />
@@ -47,7 +78,7 @@ No forecast retrend generated. Could be not enough data points to generate a ret
                 </tr>
                 <tr class="TableStyle-standard-Body-Body1">
                     <td class="TableStyle-standard-BodyB-Column1-Body1">Finalizing Orders</td>
-                    <td class="TableStyle-standard-BodyB-Column2-Body1">Good, Bad</td>
+                    <td class="TableStyle-standard-BodyB-Column2-Body1">Good, Bad, Blocked</td>
                     <td class="TableStyle-standard-BodyA-Column1-Body1">Check site priorities or prepack overage %.</td>
                 </tr>
             </tbody>
