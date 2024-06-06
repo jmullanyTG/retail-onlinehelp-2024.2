@@ -86,6 +86,20 @@
                 </tr>
             </tbody>
         </table>
+        <p class="BasicNote">Sales Plan fields are frozen left and the cell color formatted if the item is in phase.</p>
+        <h2>Maximum number of periods in a scenario</h2>
+        <p>The number of periods in a scenario that contain updates is limited to 53 weeks.  If users try to add updates on a scenario with a larger window of time, the following message displays and updates are not created.</p>
+        <p>
+            <img src="../Images/Target Choice Count/Updates 53 Period Limit.png" class="LargeImages">
+            </img>
+        </p>
+        <p>If a user tries to change Window of Time after updates are created, the updates are cleared anyway.</p>
+        <h2>Date validations</h2>
+        <p>The following message displays for date validations:</p>
+        <p>
+            <img src="../Images/Assortment Planning/Date Validations.png" class="LargeImages" />
+        </p>
+        <p>====================================================================================================================</p>
         <p>The toolbar has the following functionality:</p>
         <ul>
             <li>
