@@ -488,6 +488,9 @@
               <TocEntry
                 Title="[%=System.LinkedTitle%]"
                 Link="/Content/Topics/Assortment Planning/Lifespan Side Pane.htm" />
+              <TocEntry
+                Title="[%=System.LinkedTitle%]"
+                Link="/Content/Topics/Assortment Planning/Assortment Planning Monte Carlo Retrend.htm" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" />
             </TocEntry>
             <TocEntry
               Title="[%=System.LinkedTitle%]"

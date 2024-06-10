@@ -1207,7 +1207,7 @@ When the URL is changed for the document ID, the cache of the image is cleared a
             </li>
         </ul>
         <h3>Target Choice Counts </h3>
-        <h4>ROS extrapolation updated to avoid crossing zero</h4>
+        <h4><a name="ROS"></a>ROS extrapolation updated to avoid crossing zero</h4>
         <p>Within Target Choice Count/Creation, previous functionality was to rationalize the comparison ROS values and make placeholder ROS recommendations to the point where additional recommendations are not mathematically justified. Beyond that point, if a user wished to add additional placeholders, the logic was to create a decreasing ROS slope to be applied against additional, user-requested recommendations. A function of the previous slope method was that the slope could reach or cross a zero (or negative) ROS.</p>
         <p>The logic used to create the extended slope for ROS values to be applied against additional placeholders has been updated in such a way that it will never reach or cross zero. This allows users to create additional placeholders and receive suggested ROS values for each placeholder, regardless of the number of additional placeholders being requested.</p>
         <p class="BasicNote">Creating a large amount of additional placeholders could result in very small ROS values for some placeholders. This is a function of a decreasing ROS slope.</p>
@@ -6314,7 +6314,7 @@ By default, the matrix shows the <span class="Emphasis">Ranking</span> field wit
         <p>Users can click within the <span class="Emphasis">Segment</span> field (formatted blue to indicate editable) to manually change the listed segments to which each placeholder is assigned. Select the right-click <span class="Emphasis">Multiple Changes</span> menu option to update multiple rows simultaneously.</p>
         <h3>Creating additional placeholders and receiving suggested ROS values for each placeholder </h3>
         <p>For TG JE v2023.2, the logic used to create the extended slope for ROS values to be applied against additional placeholders has been updated . There is a breaking change related to this update. </p>
-        <p>For more information, information, navigate to the <cite>Breaking Change</cite> section and see <MadCap:xref href="../Topics/Release Notes/Breaking Changes.htm#ROS">ROS extrapolation updated to avoid crossing zero</MadCap:xref>.</p>
+        <p>For more information, information, navigate to the <cite>Breaking Change</cite> section and see <MadCap:xref href="#ROS">ROS extrapolation updated to avoid crossing zero</MadCap:xref>.</p>
         <h3>Saving target scenarios with product hierarchy names greater than 256 characters </h3>
         <p>The usability of the Target Scenario creation functionality has been extended to allow for scenarios containing product hierarchy names greater than 256 characters.</p>
         <h3><a name="2023.1TCC"></a>2023.1</h3>
