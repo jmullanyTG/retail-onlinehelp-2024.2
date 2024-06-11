@@ -8,6 +8,70 @@
         <p>
             <img src="../Images/Target Choice Count/Target Choices By Update.png" class="LargeImages" />
         </p>
+        <p>The upper grid includes the following fields:</p>
+        <h3>Segment Floor Set Updates widget <MadCap:conditionalText MadCap:conditions="General.DoNotPublish">DMDEV-91523</MadCap:conditionalText></h3>
+        <p>The following fields were added to the Segment Floor Set Updates grid:</p>
+        <table style="width: 100%;margin-left: 0;margin-right: auto;mc-table-style: url('../TableStyles/standard.css');" class="TableStyle-standard" cellspacing="0">
+            <col class="TableStyle-standard-Column-Column1" />
+            <col class="TableStyle-standard-Column-Column2" />
+            <thead>
+                <tr class="TableStyle-standard-Head-Header1">
+                    <th class="TableStyle-standard-HeadE-Column1-Header1">Field</th>
+                    <th class="TableStyle-standard-HeadD-Column2-Header1">Description</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">Default End Period</td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">The Phase Out Period of the update.  If <span class="Emphasis">End Date Definition</span> is set to <span class="Emphasis">Phase Out Date</span>, It automatically updates depending on the subsequent update's start period.  If using <span class="Emphasis">Last Regular Date</span>, then this date would be set after the markdown date.</td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">Default Markdown Period</td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">The user defined default markdown period for items in the update.   The selection available in the dropdown depends on how <span class="Emphasis">End Date Definition</span> is defined for the scenario.  If <span class="Emphasis">Phase Out Date</span> is selected, periods between Phase In and Phase Out display.  If <span class="Emphasis">Last Regular Date</span> is selected, any period between Phase In and the scenario's last regular period displays.</td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">Recommended New Choices</td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">The output from Rationalization by segment cluster based on the Target Data Selection
+parameters and selections in the Target Segment Definitions section. For more information, see <MadCap:xref href="../../Topics/Assortment Planning/Rationalization.htm">Rationalization calculation</MadCap:xref>.</td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">Active New Choices </td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">
+                        <p>(To modify, only one segment can be selected.) The sum of all choices across all updates for the segment and location. When users update the value in this field, then the new items are added automatically assigned to all clusters in the segment.</p>
+                        <p>
+                            <img src="../Images/Target Choice Count/Update Active New Choices.png" class="LargeImages" />
+                        </p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">% New Choices</td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">&#160;</td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">Carryover Choices, % Carryover Choice</td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">Of the <span class="Emphasis">Active New Choices</span>  count, how many are continuing to be in phase from a previous update.</td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">Total Choices</td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">&#160;</td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">Rationalized Choices</td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">&#160;</td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">Comparison Choices </td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">&#160;</td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyB-Column1-Body1">Pareto Choices</td>
+                    <td class="TableStyle-standard-BodyA-Column2-Body1">
+                         A Pareto percentage of Comparison Active choices.  It is meant to be used as a guidepost for the scenario’s TY New choices. Ideally, the choice count for comparison and the current scenario should be aligned. 
+                        <p>The Pareto percent to use can be set in two place, via: </p><ul><li><p>system policy <span class="Emphasis">Rationalize: Pareto Threshold</span> which is the default value when set, or </p></li><li><p>the <span class="Emphasis">Segment Definitions</span> view.</p><p><img src="../Images/Target Choice Count/Segment Definitions Pareto.png" class="LargeImages" /></p>This threshold answers the question, “In history, what number of variants were required to achieve x% of the total target productivity?”  This is meant to be an estimate against which scenario results can be compared.  If the scenario were to achieve 95% of the target, how many total choices are necessary?</li></ul></td>
+                </tr>
+            </tbody>
+        </table>
+        <p class="BasicNote">The same fields appear when the <span class="Emphasis">Target Choices By Update view</span> view is launched (with some  fields hidden by default)  and the <span class="Emphasis">Edit Target Scenario</span> view which launches when copying or editing Target Scenarios. All the configurable fields are visible and editable in the main planning view.</p>
         <p>The lower grid displays parameter selections for included locations and for exclusivity of locations.</p>
         <table style="margin-left: 0;margin-right: auto;mc-table-style: url('../TableStyles/standard.css');" class="TableStyle-standard" cellspacing="0">
             <col class="TableStyle-standard-Column-Column1" />
@@ -136,7 +200,7 @@
         <p> The metrics included are:</p>
         <ul>
             <li>
-                <p><span class="Emphasis">Pareto Choices</span>: A Pareto percentage of Comparison Active choices.  It is meant to be used as a guidepost for the scenario’s TY New choices. Ideally, the choice count for comparison and the current scenario should be aligned.</p>
+                <p>&#160;</p>
             </li>
             <li>
                 <p><span class="Emphasis">TY Act New Choices</span>: The sum of all choices across all updates for the segment and location.</p>
@@ -147,17 +211,6 @@
             <li>
                 <p><span class="Emphasis">TY Act New Avg Periods in Phase</span>: The average span of time for which choices will be active in the current scenario.</p>
             </li>
-        </ul>
-        <p>The Pareto percent to use can be set in two place, via: </p>
-        <ul>
-            <li>
-                <p>system policy <span class="Emphasis">Rationalize: Pareto Threshold</span> which is the default value when set, or </p>
-            </li>
-            <li>
-                <p>the <span class="Emphasis">Segment Definitions</span> view.</p>
-                <p>
-                    <img src="../Images/Target Choice Count/Segment Definitions Pareto.png" class="LargeImages" />
-                </p>This threshold answers the question, “In history, what number of variants were required to achieve x% of the total target productivity?”  This is meant to be an estimate against which scenario results can be compared.  If the scenario were to achieve 95% of the target, how many total choices are necessary?</li>
         </ul>
         <p>The <span class="Emphasis">Update Refresh Rate</span> section shows aggregate metrics for each update.</p>
         <p>
