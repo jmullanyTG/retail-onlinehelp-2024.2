@@ -37,11 +37,8 @@ parameters and selections in the Target Segment Definitions section. For more in
                 <tr class="TableStyle-standard-Body-Body1">
                     <td class="TableStyle-standard-BodyE-Column1-Body1">Active New Choices </td>
                     <td class="TableStyle-standard-BodyD-Column2-Body1">
-                        <p>(To modify, only one segment can be selected.) The sum of all choices across all updates for the segment and location. When users update the value in this field, then the new items are added automatically assigned to all clusters in the segment.</p>
-                        <p>
-                            <img src="../Images/Target Choice Count/Update Active New Choices.png" class="LargeImages" />
-                        </p>
-                    </td>
+                        (To modify, only one segment can be selected.) The sum of all choices across all updates for the segment and location. When users update the value in this field, then the new items are added automatically assigned to all clusters in the segment.
+                        <p><img src="../Images/Target Choice Count/Update Active New Choices.png" class="LargeImages" /></p></td>
                 </tr>
                 <tr class="TableStyle-standard-Body-Body1">
                     <td class="TableStyle-standard-BodyE-Column1-Body1">% New Choices</td>

@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
     <head>
         <link href="../TableStyles/standard.css" rel="stylesheet" MadCap:stylesheetType="table" />
@@ -12,10 +12,10 @@
             <col class="TableStyle-standard-Column-Column2" style="width: 282px;" />
             <thead>
                 <tr class="TableStyle-standard-Head-Header1">
-                    <th class="TableStyle-standard-HeadE-Column1-Header1">If a Scenario is in Status…</th>
+                    <th class="TableStyle-standard-HeadE-Column1-Header1">If a scenario is in status…</th>
                     <th class="TableStyle-standard-HeadE-Column2-Header1">and I…</th>
-                    <th class="TableStyle-standard-HeadE-Column1-Header1">the system should…</th>
-                    <th class="TableStyle-standard-HeadD-Column2-Header1">and the Scenario Status will…</th>
+                    <th class="TableStyle-standard-HeadE-Column1-Header1">the system…</th>
+                    <th class="TableStyle-standard-HeadD-Column2-Header1">and the status…</th>
                 </tr>
             </thead>
             <tbody>
@@ -27,10 +27,10 @@
                         <p>apply a change to Scenario Name</p>
                     </td>
                     <td class="TableStyle-standard-BodyE-Column1-Body1">
-                        <p>do nothing</p>
+                        <p>makes no changes</p>
                     </td>
                     <td class="TableStyle-standard-BodyD-Column2-Body1">
-                        <p>Remain as Created</p>
+                        <p>remains as Created.</p>
                     </td>
                 </tr>
                 <tr class="TableStyle-standard-Body-Body1">
@@ -41,10 +41,10 @@
                         <p>apply a change to Plan Basis</p>
                     </td>
                     <td class="TableStyle-standard-BodyE-Column1-Body1">
-                        <p>refresh the Scenario Target based on the selected plan and other Target Data Selection parameters</p>
+                        <p>refreshes the Scenario Target based on the selected plan and other Target Data Selection parameters</p>
                     </td>
                     <td class="TableStyle-standard-BodyD-Column2-Body1">
-                        <p>Remain as Created</p>
+                        <p>remains as Created.</p>
                     </td>
                 </tr>
                 <tr class="TableStyle-standard-Body-Body1">
@@ -55,10 +55,10 @@
                         <p>apply a change to Product Hierarchy</p>
                     </td>
                     <td class="TableStyle-standard-BodyE-Column1-Body1">
-                        <p>warn the user that proceeding will delete all existing segments; on Ok, delete segments</p>
+                        <p>warns that proceeding deletes all existing segments. On save, deletes segments</p>
                     </td>
                     <td class="TableStyle-standard-BodyD-Column2-Body1">
-                        <p>Remain as Created</p>
+                        <p>remains as Created.</p>
                     </td>
                 </tr>
                 <tr class="TableStyle-standard-Body-Body1">
@@ -69,10 +69,10 @@
                         <p>apply a change to Site Hierarchy</p>
                     </td>
                     <td class="TableStyle-standard-BodyE-Column1-Body1">
-                        <p>warn the user that proceeding may change existing segment/cluster set assignments; on Ok, if necessary, change cluster set assignments to defaults for new Site Hierarchy</p>
+                        <p>warns that proceeding may change existing segment/cluster set assignments. On Ok, if necessary, changes cluster set assignments to defaults for new Site Hierarchy</p>
                     </td>
                     <td class="TableStyle-standard-BodyD-Column2-Body1">
-                        <p>Remain as Created</p>
+                        <p>remains as Created.</p>
                     </td>
                 </tr>
                 <tr class="TableStyle-standard-Body-Body1">
@@ -83,10 +83,10 @@
                         <p>apply a change to Window of Time</p>
                     </td>
                     <td class="TableStyle-standard-BodyE-Column1-Body1">
-                        <p>refresh the Scenario Target if a Plan Basis is set</p>
+                        <p>refreshes the Scenario Target if a Plan Basis is set</p>
                     </td>
                     <td class="TableStyle-standard-BodyD-Column2-Body1">
-                        <p>Remain as Created</p>
+                        <p>remains as Created.</p>
                     </td>
                 </tr>
                 <tr class="TableStyle-standard-Body-Body1">
@@ -97,10 +97,10 @@
                         <p>apply a change to Sales Basis</p>
                     </td>
                     <td class="TableStyle-standard-BodyE-Column1-Body1">
-                        <p>refresh the Scenario Target if a Plan Basis is set</p>
+                        <p>refreshes the Scenario Target if a Plan Basis is set</p>
                     </td>
                     <td class="TableStyle-standard-BodyD-Column2-Body1">
-                        <p>Remain as Created</p>
+                        <p>remains as Created.</p>
                     </td>
                 </tr>
                 <tr class="TableStyle-standard-Body-Body1">
@@ -111,10 +111,10 @@
                         <p>apply a change to Sales By Type</p>
                     </td>
                     <td class="TableStyle-standard-BodyE-Column1-Body1">
-                        <p>do nothing</p>
+                        <p>makes no changes</p>
                     </td>
                     <td class="TableStyle-standard-BodyD-Column2-Body1">
-                        <p>Remain as Created</p>
+                        <p>remains as Created.</p>
                     </td>
                 </tr>
                 <tr class="TableStyle-standard-Body-Body1">
@@ -125,10 +125,10 @@
                         <p>apply a change to Scenario Target</p>
                     </td>
                     <td class="TableStyle-standard-BodyE-Column1-Body1">
-                        <p>do nothing</p>
+                        <p>makes no changes</p>
                     </td>
                     <td class="TableStyle-standard-BodyD-Column2-Body1">
-                        <p>Remain as Created</p>
+                        <p>remains as Created.</p>
                     </td>
                 </tr>
                 <tr class="TableStyle-standard-Body-Body1">
@@ -139,10 +139,10 @@
                         <p>apply a change to Privacy or Sharing Settings</p>
                     </td>
                     <td class="TableStyle-standard-BodyE-Column1-Body1">
-                        <p>do nothing</p>
+                        <p>makes no changes</p>
                     </td>
                     <td class="TableStyle-standard-BodyD-Column2-Body1">
-                        <p>Remain as Created</p>
+                        <p>remains as Created.</p>
                     </td>
                 </tr>
                 <tr class="TableStyle-standard-Body-Body1">
@@ -153,10 +153,10 @@
                         <p>click Refresh</p>
                     </td>
                     <td class="TableStyle-standard-BodyE-Column1-Body1">
-                        <p>If a Plan Basis is set, refresh the Scenario Target, if not, do nothing</p>
+                        <p>if a Plan Basis is set, refreshes the Scenario Target, if not, makes no changes</p>
                     </td>
                     <td class="TableStyle-standard-BodyD-Column2-Body1">
-                        <p>Remain as Created</p>
+                        <p>remains as Created.</p>
                     </td>
                 </tr>
                 <tr class="TableStyle-standard-Body-Body1">
@@ -167,10 +167,10 @@
                         <p>click Calculate</p>
                     </td>
                     <td class="TableStyle-standard-BodyE-Column1-Body1">
-                        <p>return historical data based on defined Target Segments; recalculate Scenario Target if no Plan Basis is set and user has not entered an override</p>
+                        <p>returns historical data based on defined Target Segments. Recalculates Scenario Target if no Plan Basis is set and there is no override</p>
                     </td>
                     <td class="TableStyle-standard-BodyD-Column2-Body1">
-                        <p>Update to Calculated</p>
+                        <p>update to calculated.</p>
                     </td>
                 </tr>
                 <tr class="TableStyle-standard-Body-Body1">
@@ -181,10 +181,10 @@
                         <p>click Rationalize</p>
                     </td>
                     <td class="TableStyle-standard-BodyE-Column1-Body1">
-                        <p>return an error stating the scenario must be calculated before being rationalized</p>
+                        <p>returns an error stating the scenario must be calculated before being rationalized</p>
                     </td>
                     <td class="TableStyle-standard-BodyD-Column2-Body1">
-                        <p>Remain as Created</p>
+                        <p>remains as Created.</p>
                     </td>
                 </tr>
                 <tr class="TableStyle-standard-Body-Body1">
@@ -195,10 +195,10 @@
                         <p>change a segment target filter, cluster set, or comparison time frame</p>
                     </td>
                     <td class="TableStyle-standard-BodyE-Column1-Body1">
-                        <p>delete Segment Cluster Details, if present</p>
+                        <p>deletes Segment Cluster Details, if present</p>
                     </td>
                     <td class="TableStyle-standard-BodyD-Column2-Body1">
-                        <p>Remain as Created</p>
+                        <p>remains as Created.</p>
                     </td>
                 </tr>
                 <tr class="TableStyle-standard-Body-Body1">
@@ -209,10 +209,10 @@
                         <p>change a segment supplemental filter</p>
                     </td>
                     <td class="TableStyle-standard-BodyE-Column1-Body1">
-                        <p>do nothing</p>
+                        <p>makes no changes</p>
                     </td>
                     <td class="TableStyle-standard-BodyD-Column2-Body1">
-                        <p>Remain as Created</p>
+                        <p>remains as Created.</p>
                     </td>
                 </tr>
                 <tr class="TableStyle-standard-Body-Body1">
@@ -223,10 +223,10 @@
                         <p>change a segment name, product hierarchy, or collection option</p>
                     </td>
                     <td class="TableStyle-standard-BodyE-Column1-Body1">
-                        <p>do nothing</p>
+                        <p>makes no changes</p>
                     </td>
                     <td class="TableStyle-standard-BodyD-Column2-Body1">
-                        <p>Remain as Created</p>
+                        <p>remains as Created.</p>
                     </td>
                 </tr>
                 <tr class="TableStyle-standard-Body-Body1">
@@ -237,10 +237,10 @@
                         <p>apply a change to Scenario Name</p>
                     </td>
                     <td class="TableStyle-standard-BodyE-Column1-Body1">
-                        <p>do nothing</p>
+                        <p>makes no changes</p>
                     </td>
                     <td class="TableStyle-standard-BodyD-Column2-Body1">
-                        <p>Remain as Calculated</p>
+                        <p>remains as Calculated.</p>
                     </td>
                 </tr>
                 <tr class="TableStyle-standard-Body-Body1">
@@ -251,10 +251,10 @@
                         <p>apply a change to Plan Basis</p>
                     </td>
                     <td class="TableStyle-standard-BodyE-Column1-Body1">
-                        <p>warn user that segment revision, recalculation, and re-rationalization may be necessary due to the change in Plan Basis; refresh the Scenario Target based on the selected plan and other Target Data Selection parameters and spread new target down across segment/clusters by % contribution</p>
+                        <p>warns that segment revision, recalculation, and re-rationalization may be necessary due to the change in Plan Basis. Refreshes the Scenario Target based on the selected plan and other Target Data Selection parameters and spreads new target down across segment/clusters by percent contribution</p>
                     </td>
                     <td class="TableStyle-standard-BodyD-Column2-Body1">
-                        <p>Remain as Calculated</p>
+                        <p>remains as Calculated.</p>
                     </td>
                 </tr>
                 <tr class="TableStyle-standard-Body-Body1">
@@ -265,10 +265,10 @@
                         <p>apply a change to Product Hierarchy</p>
                     </td>
                     <td class="TableStyle-standard-BodyE-Column1-Body1">
-                        <p>warn the user that proceeding will delete all existing segments and cluster detail data; on Ok, delete segments and cluster detail data</p>
+                        <p>warns that proceeding deletes all existing segments and cluster detail data. On Ok, deletes segments and cluster detail data</p>
                     </td>
                     <td class="TableStyle-standard-BodyD-Column2-Body1">
-                        <p>Change to Created</p>
+                        <p>changes to Created.</p>
                     </td>
                 </tr>
                 <tr class="TableStyle-standard-Body-Body1">
@@ -279,10 +279,10 @@
                         <p>apply a change to Site Hierarchy</p>
                     </td>
                     <td class="TableStyle-standard-BodyE-Column1-Body1">
-                        <p>warn the user that proceeding will delete all existing cluster detail data; on Ok, if necessary, change cluster set assignments to defaults for new Site Hierarchy and delete cluster detail data</p>
+                        <p>warns that proceeding deletes all existing cluster detail data. On Ok, if necessary, changes cluster set assignments to defaults for new Site Hierarchy and deletes cluster detail data</p>
                     </td>
                     <td class="TableStyle-standard-BodyD-Column2-Body1">
-                        <p>Change to Created</p>
+                        <p>changes to Created.</p>
                     </td>
                 </tr>
                 <tr class="TableStyle-standard-Body-Body1">
@@ -293,10 +293,10 @@
                         <p>apply a change to Window of Time</p>
                     </td>
                     <td class="TableStyle-standard-BodyE-Column1-Body1">
-                        <p>warn the user that proceeding will delete all existing cluster detail data; on Ok, refresh the Scenario Target if a Plan Basis is set and delete cluster detail data</p>
+                        <p>warns that proceeding deletes all existing cluster detail data. On Ok, refreshes the Scenario Target if a Plan Basis is set and deletes cluster detail data</p>
                     </td>
                     <td class="TableStyle-standard-BodyD-Column2-Body1">
-                        <p>Change to Created</p>
+                        <p>changes to Created.</p>
                     </td>
                 </tr>
                 <tr class="TableStyle-standard-Body-Body1">
@@ -307,10 +307,10 @@
                         <p>apply a change to Sales Basis</p>
                     </td>
                     <td class="TableStyle-standard-BodyE-Column1-Body1">
-                        <p>warn the user that recalculation and/or re-rationalization may be necessary to update the Scenario Target and Recommended Choice Counts; on Ok, refresh the Scenario Target if a Plan Basis is set</p>
+                        <p>warns that recalculation and/or re-rationalization may be necessary to update the Scenario Target and Recommended Choice Counts. On Ok, refreshes the Scenario Target if a Plan Basis is set</p>
                     </td>
                     <td class="TableStyle-standard-BodyD-Column2-Body1">
-                        <p>Remain as Calculated</p>
+                        <p>remains as Calculated.</p>
                     </td>
                 </tr>
                 <tr class="TableStyle-standard-Body-Body1">
@@ -321,10 +321,10 @@
                         <p>apply a change to Sales By Type</p>
                     </td>
                     <td class="TableStyle-standard-BodyE-Column1-Body1">
-                        <p>warn the user that proceeding will delete all existing cluster detail data; on Ok, delete cluster detail data</p>
+                        <p>warns that proceeding deletes all existing cluster detail data. On Ok, deletes cluster detail data</p>
                     </td>
                     <td class="TableStyle-standard-BodyD-Column2-Body1">
-                        <p>Change to Created</p>
+                        <p>changes to Created.</p>
                     </td>
                 </tr>
                 <tr class="TableStyle-standard-Body-Body1">
@@ -335,10 +335,10 @@
                         <p>apply a change to Scenario Target</p>
                     </td>
                     <td class="TableStyle-standard-BodyE-Column1-Body1">
-                        <p>warn the user that proceeding will require re-rationalization to update recommended choice counts; spread new target down across segment/clusters by % contribution</p>
+                        <p>warns that proceeding requires re-rationalization to update recommended choice counts, spreads new target down across segment/clusters by percent contribution</p>
                     </td>
                     <td class="TableStyle-standard-BodyD-Column2-Body1">
-                        <p>Remain as Calculated</p>
+                        <p>remains as Calculated.</p>
                     </td>
                 </tr>
                 <tr class="TableStyle-standard-Body-Body1">
@@ -349,10 +349,10 @@
                         <p>apply a change to Privacy or Sharing Settings</p>
                     </td>
                     <td class="TableStyle-standard-BodyE-Column1-Body1">
-                        <p>do nothing</p>
+                        <p>makes no changes</p>
                     </td>
                     <td class="TableStyle-standard-BodyD-Column2-Body1">
-                        <p>Remain as Calculated</p>
+                        <p>remains as Calculated.</p>
                     </td>
                 </tr>
                 <tr class="TableStyle-standard-Body-Body1">
@@ -363,10 +363,10 @@
                         <p>click Refresh</p>
                     </td>
                     <td class="TableStyle-standard-BodyE-Column1-Body1">
-                        <p>If a Plan Basis is set, warn the user that proceeding will require re-rationalization to update recommended choice counts and refresh the Scenario Target and spread new target down across segment/clusters by % contribution, if not, do nothing</p>
+                        <p>if a Plan Basis is set, warns that proceeding requires re-rationalization to update recommended choice counts, refreshes the Scenario Target and spreads new target down across segment/clusters by percent contribution, if not, makes no changes</p>
                     </td>
                     <td class="TableStyle-standard-BodyD-Column2-Body1">
-                        <p>Remain as Calculated</p>
+                        <p>remains as Calculated.</p>
                     </td>
                 </tr>
                 <tr class="TableStyle-standard-Body-Body1">
@@ -377,10 +377,10 @@
                         <p>click Calculate</p>
                     </td>
                     <td class="TableStyle-standard-BodyE-Column1-Body1">
-                        <p>Update segment cluster details based on defined Target Segments; recalculate Scenario Target if no Plan Basis is set and user has not entered an override</p>
+                        <p>updates segment cluster details based on defined Target Segments. Recalculates Scenario Target if no Plan Basis is set and user has not entered an override</p>
                     </td>
                     <td class="TableStyle-standard-BodyD-Column2-Body1">
-                        <p>Remain as Calculated</p>
+                        <p>remains as Calculated.</p>
                     </td>
                 </tr>
                 <tr class="TableStyle-standard-Body-Body1">
@@ -391,10 +391,10 @@
                         <p>click Rationalize</p>
                     </td>
                     <td class="TableStyle-standard-BodyE-Column1-Body1">
-                        <p>Run rationalization based on defined target or supplemental filters by segment/cluster and populate results in TY Recommended New Choices; update TY Recommended New Productivity and Average Active Periods Per Variant; default any TY Act New Choices fields without user overrides to the TY Recommended New Choices values and update TY Act New Productivity as needed</p>
+                        <p>runs rationalization based on defined target or supplemental filters by segment/cluster and populate results in TY Recommended New Choices, updates TY Recommended New Productivity and Average Active Periods Per Variant, defaults any TY Act New Choices fields without user overrides to the TY Recommended New Choices values, and updates TY Act New Productivity as needed</p>
                     </td>
                     <td class="TableStyle-standard-BodyD-Column2-Body1">
-                        <p>Update to Rationalized</p>
+                        <p>updates to Rationalized.</p>
                     </td>
                 </tr>
                 <tr class="TableStyle-standard-Body-Body1">
@@ -405,10 +405,10 @@
                         <p>change a segment target filter, cluster set, or comparison time frame</p>
                     </td>
                     <td class="TableStyle-standard-BodyE-Column1-Body1">
-                        <p>delete segment cluster details</p>
+                        <p>deletes segment cluster details</p>
                     </td>
                     <td class="TableStyle-standard-BodyD-Column2-Body1">
-                        <p>Change to Created</p>
+                        <p>changes to Created.</p>
                     </td>
                 </tr>
                 <tr class="TableStyle-standard-Body-Body1">
@@ -419,10 +419,10 @@
                         <p>change a segment supplemental filter</p>
                     </td>
                     <td class="TableStyle-standard-BodyE-Column1-Body1">
-                        <p>do nothing</p>
+                        <p>makes no changes</p>
                     </td>
                     <td class="TableStyle-standard-BodyD-Column2-Body1">
-                        <p>Remain as Calculated</p>
+                        <p>remains as Calculated.</p>
                     </td>
                 </tr>
                 <tr class="TableStyle-standard-Body-Body1">
@@ -433,10 +433,10 @@
                         <p>change a segment name, product hierarchy, or collection option</p>
                     </td>
                     <td class="TableStyle-standard-BodyE-Column1-Body1">
-                        <p>do nothing</p>
+                        <p>makes no changes</p>
                     </td>
                     <td class="TableStyle-standard-BodyD-Column2-Body1">
-                        <p>Remain as Calculated</p>
+                        <p>remains as Calculated.</p>
                     </td>
                 </tr>
                 <tr class="TableStyle-standard-Body-Body1">
@@ -447,10 +447,10 @@
                         <p>apply a change to segment/cluster % contribution</p>
                     </td>
                     <td class="TableStyle-standard-BodyE-Column1-Body1">
-                        <p>update TY Sales Plan and TY New Item values; update TY Act New values that don't have user overrides</p>
+                        <p>updates TY Sales Plan and TY New Item values and updates TY Act New values that don't have user overrides</p>
                     </td>
                     <td class="TableStyle-standard-BodyD-Column2-Body1">
-                        <p>Remain as Calculated</p>
+                        <p>remains as Calculated.</p>
                     </td>
                 </tr>
                 <tr class="TableStyle-standard-Body-Body1">
@@ -464,7 +464,7 @@
                         <p>update affected TY Act New values</p>
                     </td>
                     <td class="TableStyle-standard-BodyD-Column2-Body1">
-                        <p>Remain as Calculated</p>
+                        <p>remains as Calculated.</p>
                     </td>
                 </tr>
                 <tr class="TableStyle-standard-Body-Body1">
@@ -475,10 +475,10 @@
                         <p>apply a change to Scenario Name</p>
                     </td>
                     <td class="TableStyle-standard-BodyE-Column1-Body1">
-                        <p>do nothing</p>
+                        <p>makes no changes</p>
                     </td>
                     <td class="TableStyle-standard-BodyD-Column2-Body1">
-                        <p>Remain as Rationalized</p>
+                        <p>remains as Rationalized.</p>
                     </td>
                 </tr>
                 <tr class="TableStyle-standard-Body-Body1">
@@ -489,10 +489,10 @@
                         <p>apply a change to Plan Basis</p>
                     </td>
                     <td class="TableStyle-standard-BodyE-Column1-Body1">
-                        <p>warn user that segment revision, recalculation, and re-rationalization may be necessary due to the change in Plan Basis; refresh the Scenario Target based on the selected plan and other Target Data Selection parameters and spread new target down across segment/clusters by % contribution</p>
+                        <p>warns that segment revision, recalculation, and re-rationalization may be necessary due to the change in Plan Basis, refreshes the Scenario Target based on the selected plan and other Target Data Selection parameters, and spreads new target down across segment/clusters by percent contribution</p>
                     </td>
                     <td class="TableStyle-standard-BodyD-Column2-Body1">
-                        <p>Change to Calculated</p>
+                        <p>changes to Calculated.</p>
                     </td>
                 </tr>
                 <tr class="TableStyle-standard-Body-Body1">
@@ -503,10 +503,10 @@
                         <p>apply a change to Product Hierarchy</p>
                     </td>
                     <td class="TableStyle-standard-BodyE-Column1-Body1">
-                        <p>warn the user that proceeding will delete all existing segments and cluster detail data; on Ok, delete segments and cluster detail data</p>
+                        <p>warns that proceeding deletes all existing segments and cluster detail data. On Ok, deletes segments and cluster detail data</p>
                     </td>
                     <td class="TableStyle-standard-BodyD-Column2-Body1">
-                        <p>Change to Created</p>
+                        <p>changes to Created.</p>
                     </td>
                 </tr>
                 <tr class="TableStyle-standard-Body-Body1">
@@ -517,10 +517,10 @@
                         <p>apply a change to Site Hierarchy</p>
                     </td>
                     <td class="TableStyle-standard-BodyE-Column1-Body1">
-                        <p>warn the user that proceeding will delete all existing cluster detail data; on Ok, if necessary, change cluster set assignments to defaults for new Site Hierarchy and delete cluster detail data</p>
+                        <p>warns that proceeding deletes all existing cluster detail data. On Ok, if necessary, changes cluster set assignments to defaults for new Site Hierarchy and deletes cluster detail data</p>
                     </td>
                     <td class="TableStyle-standard-BodyD-Column2-Body1">
-                        <p>Change to Created</p>
+                        <p>changes to Created.</p>
                     </td>
                 </tr>
                 <tr class="TableStyle-standard-Body-Body1">
@@ -531,10 +531,10 @@
                         <p>apply a change to Window of Time</p>
                     </td>
                     <td class="TableStyle-standard-BodyE-Column1-Body1">
-                        <p>warn the user that proceeding will delete all existing cluster detail data; on Ok, refresh the Scenario Target if a Plan Basis is set and delete cluster detail data</p>
+                        <p>warns that proceeding deletes all existing cluster detail data. On Ok, refreshes the Scenario Target if a Plan Basis is set and deletes cluster detail data</p>
                     </td>
                     <td class="TableStyle-standard-BodyD-Column2-Body1">
-                        <p>Change to Created</p>
+                        <p>changes to Created.</p>
                     </td>
                 </tr>
                 <tr class="TableStyle-standard-Body-Body1">
@@ -545,10 +545,10 @@
                         <p>apply a change to Sales Basis</p>
                     </td>
                     <td class="TableStyle-standard-BodyE-Column1-Body1">
-                        <p>warn the user that recalculation and/or re-rationalization may be necessary to update the Scenario Target and Recommended Choice Counts; on Ok, refresh the Scenario Target if a Plan Basis is set</p>
+                        <p>warns that recalculation and/or re-rationalization may be necessary to update the Scenario Target and Recommended Choice Counts. On Ok, refreshes the Scenario Target if a Plan Basis is set</p>
                     </td>
                     <td class="TableStyle-standard-BodyD-Column2-Body1">
-                        <p>Change to Calculated</p>
+                        <p>changes to Calculated.</p>
                     </td>
                 </tr>
                 <tr class="TableStyle-standard-Body-Body1">
@@ -559,10 +559,10 @@
                         <p>apply a change to Sales By Type</p>
                     </td>
                     <td class="TableStyle-standard-BodyE-Column1-Body1">
-                        <p>warn the user that proceeding will delete all existing cluster detail data; on Ok, delete cluster detail data</p>
+                        <p>warns that proceeding deletes all existing cluster detail data. On Ok, deletes cluster detail data</p>
                     </td>
                     <td class="TableStyle-standard-BodyD-Column2-Body1">
-                        <p>Change to Created</p>
+                        <p>changes to Created.</p>
                     </td>
                 </tr>
                 <tr class="TableStyle-standard-Body-Body1">
@@ -573,10 +573,10 @@
                         <p>apply a change to Scenario Target</p>
                     </td>
                     <td class="TableStyle-standard-BodyE-Column1-Body1">
-                        <p>warn the user that proceeding will require re-rationalization to update recommended choice counts; spread new target down across segment/clusters by % contribution</p>
+                        <p>warns that proceeding requires re-rationalization to update recommended choice counts and spreads new target down across segment/clusters by percent contribution</p>
                     </td>
                     <td class="TableStyle-standard-BodyD-Column2-Body1">
-                        <p>Change to Calculated</p>
+                        <p>changes to Calculated.</p>
                     </td>
                 </tr>
                 <tr class="TableStyle-standard-Body-Body1">
@@ -587,10 +587,10 @@
                         <p>apply a change to Privacy or Sharing Settings</p>
                     </td>
                     <td class="TableStyle-standard-BodyE-Column1-Body1">
-                        <p>do nothing</p>
+                        <p>makes no changes</p>
                     </td>
                     <td class="TableStyle-standard-BodyD-Column2-Body1">
-                        <p>Remain as Rationalized</p>
+                        <p>remains as Rationalized.</p>
                     </td>
                 </tr>
                 <tr class="TableStyle-standard-Body-Body1">
@@ -601,10 +601,10 @@
                         <p>click Refresh</p>
                     </td>
                     <td class="TableStyle-standard-BodyE-Column1-Body1">
-                        <p>If a Plan Basis is set, warn the user that proceeding will require re-rationalization to update recommended choice counts and refresh the Scenario Target and spread new target down across segment/clusters by % contribution, if not, do nothing</p>
+                        <p>if a Plan Basis is set, warns that proceeding requires re-rationalization to update recommended choice counts, refreshes the Scenario Target and spreads new target down across segment/clusters by percent contribution, if not, makes no changes</p>
                     </td>
                     <td class="TableStyle-standard-BodyD-Column2-Body1">
-                        <p>Change to Calculated</p>
+                        <p>changes to Calculated.</p>
                     </td>
                 </tr>
                 <tr class="TableStyle-standard-Body-Body1">
@@ -615,10 +615,10 @@
                         <p>click Calculate</p>
                     </td>
                     <td class="TableStyle-standard-BodyE-Column1-Body1">
-                        <p>Update segment cluster details based on defined Target Segments; recalculate Scenario Target if no Plan Basis is set and user has not entered an override</p>
+                        <p>updates segment cluster details based on defined Target Segments and recalculates Scenario Target if no Plan Basis is set and there is no override</p>
                     </td>
                     <td class="TableStyle-standard-BodyD-Column2-Body1">
-                        <p>Change to Calculated</p>
+                        <p>changes to Calculated.</p>
                     </td>
                 </tr>
                 <tr class="TableStyle-standard-Body-Body1">
@@ -629,10 +629,10 @@
                         <p>click Rationalize</p>
                     </td>
                     <td class="TableStyle-standard-BodyE-Column1-Body1">
-                        <p>Run rationalization based on defined target or supplemental filters by segment/cluster and populate results in TY Recommended New Choices; update TY Recommended New Productivity and Average Active Periods Per Variant; default any TY Act New Choices fields without user overrides to the TY Recommended New Choices values and update TY Act New Productivity as needed</p>
+                        <p>runs rationalization based on defined target or supplemental filters by segment/cluster and populate results in TY Recommended New Choices, updates TY Recommended New Productivity and Average Active Periods Per Variant, defaults any TY Act New Choices fields without overrides to the TY Recommended New Choices values, and updates TY Act New Productivity as needed</p>
                     </td>
                     <td class="TableStyle-standard-BodyD-Column2-Body1">
-                        <p>Remain as Rationalized</p>
+                        <p>remains as Rationalized.</p>
                     </td>
                 </tr>
                 <tr class="TableStyle-standard-Body-Body1">
@@ -643,10 +643,10 @@
                         <p>change a segment target filter, cluster set, or comparison time frame</p>
                     </td>
                     <td class="TableStyle-standard-BodyE-Column1-Body1">
-                        <p>delete segment cluster details</p>
+                        <p>deletes segment cluster details</p>
                     </td>
                     <td class="TableStyle-standard-BodyD-Column2-Body1">
-                        <p>Change to Created</p>
+                        <p>changes to Created.</p>
                     </td>
                 </tr>
                 <tr class="TableStyle-standard-Body-Body1">
@@ -657,10 +657,10 @@
                         <p>change a segment supplemental filter</p>
                     </td>
                     <td class="TableStyle-standard-BodyE-Column1-Body1">
-                        <p>do nothing</p>
+                        <p>makes no changes</p>
                     </td>
                     <td class="TableStyle-standard-BodyD-Column2-Body1">
-                        <p>Change to Calculated</p>
+                        <p>changes to Calculated.</p>
                     </td>
                 </tr>
                 <tr class="TableStyle-standard-Body-Body1">
@@ -671,10 +671,10 @@
                         <p>change a segment name, product hierarchy, or collection option</p>
                     </td>
                     <td class="TableStyle-standard-BodyE-Column1-Body1">
-                        <p>do nothing</p>
+                        <p>makes no changes</p>
                     </td>
                     <td class="TableStyle-standard-BodyD-Column2-Body1">
-                        <p>Remain as Rationalized</p>
+                        <p>remains as Rationalized.</p>
                     </td>
                 </tr>
                 <tr class="TableStyle-standard-Body-Body1">
@@ -685,10 +685,10 @@
                         <p>apply a change to segment/cluster % contribution</p>
                     </td>
                     <td class="TableStyle-standard-BodyE-Column1-Body1">
-                        <p>update TY Sales Plan and TY New Item values; update TY Act New values that don't have user overrides</p>
+                        <p>updates TY Sales Plan and TY New Item values and updates TY Act New values that don't have overrides</p>
                     </td>
                     <td class="TableStyle-standard-BodyD-Column2-Body1">
-                        <p>Change to Calculated</p>
+                        <p>changes to Calculated.</p>
                     </td>
                 </tr>
                 <tr class="TableStyle-standard-Body-Body1">
@@ -699,10 +699,10 @@
                         <p>apply a change to TY Act New $, U, or AUR values</p>
                     </td>
                     <td class="TableStyle-standard-BodyE-Column1-Body1">
-                        <p>update affected TY Act New values</p>
+                        <p>updates affected TY Act New values</p>
                     </td>
                     <td class="TableStyle-standard-BodyD-Column2-Body1">
-                        <p>Change to Calculated</p>
+                        <p>changes to Calculated.</p>
                     </td>
                 </tr>
                 <tr class="TableStyle-standard-Body-Body1">
@@ -713,10 +713,10 @@
                         <p>apply a change to TY Act New Choices</p>
                     </td>
                     <td class="TableStyle-standard-BodyB-Column1-Body1">
-                        <p>update TY Act New Productivity</p>
+                        <p>updates TY Act New Productivity</p>
                     </td>
                     <td class="TableStyle-standard-BodyA-Column2-Body1">
-                        <p>Remain as Rationalized</p>
+                        <p>remains as Rationalized.</p>
                     </td>
                 </tr>
             </tbody>
@@ -732,8 +732,8 @@
                 <tr class="TableStyle-standard-Head-Header1">
                     <th class="TableStyle-standard-HeadE-Column1-Header1">If a Scenario is in Status…</th>
                     <th class="TableStyle-standard-HeadE-Column2-Header1">and I…</th>
-                    <th class="TableStyle-standard-HeadE-Column1-Header1">the system should…</th>
-                    <th class="TableStyle-standard-HeadD-Column2-Header1">and the Scenario Status will…</th>
+                    <th class="TableStyle-standard-HeadE-Column1-Header1">the system…</th>
+                    <th class="TableStyle-standard-HeadD-Column2-Header1">and the Scenario Status…</th>
                 </tr>
             </thead>
             <tbody>
@@ -745,10 +745,10 @@
                         <p>apply a change to Scenario Name</p>
                     </td>
                     <td class="TableStyle-standard-BodyE-Column1-Body1">
-                        <p>do nothing</p>
+                        <p>makes no changes</p>
                     </td>
                     <td class="TableStyle-standard-BodyD-Column2-Body1">
-                        <p>Remain as Smart Started</p>
+                        <p>remains as Smart Started.</p>
                     </td>
                 </tr>
                 <tr class="TableStyle-standard-Body-Body1">
@@ -759,10 +759,10 @@
                         <p>apply a change to Plan Basis</p>
                     </td>
                     <td class="TableStyle-standard-BodyE-Column1-Body1">
-                        <p>cannot be changed for scenarios in Smart Started Status</p>
+                        <p>cannot change scenarios in Smart Started Status</p>
                     </td>
                     <td class="TableStyle-standard-BodyD-Column2-Body1">
-                        <p>Remain as Smart Started</p>
+                        <p>remains as Smart Started.</p>
                     </td>
                 </tr>
                 <tr class="TableStyle-standard-Body-Body1">
@@ -773,10 +773,10 @@
                         <p>apply a change to Product Hierarchy</p>
                     </td>
                     <td class="TableStyle-standard-BodyE-Column1-Body1">
-                        <p>cannot be changed for scenarios in Smart Started Status</p>
+                        <p>cannot change scenarios in Smart Started Status</p>
                     </td>
                     <td class="TableStyle-standard-BodyD-Column2-Body1">
-                        <p>Remain as Smart Started</p>
+                        <p>remains as Smart Started.</p>
                     </td>
                 </tr>
                 <tr class="TableStyle-standard-Body-Body1">
@@ -787,10 +787,10 @@
                         <p>apply a change to Site Hierarchy</p>
                     </td>
                     <td class="TableStyle-standard-BodyE-Column1-Body1">
-                        <p>cannot be changed for scenarios in Smart Started Status</p>
+                        <p>cannot change scenarios in Smart Started Status</p>
                     </td>
                     <td class="TableStyle-standard-BodyD-Column2-Body1">
-                        <p>Remain as Smart Started</p>
+                        <p>remains as Smart Started.</p>
                     </td>
                 </tr>
                 <tr class="TableStyle-standard-Body-Body1">
@@ -801,10 +801,10 @@
                         <p>apply a change to Window of Time</p>
                     </td>
                     <td class="TableStyle-standard-BodyE-Column1-Body1">
-                        <p>cannot be changed for scenarios in Smart Started Status</p>
+                        <p>cannot change scenarios in Smart Started Status</p>
                     </td>
                     <td class="TableStyle-standard-BodyD-Column2-Body1">
-                        <p>Remain as Smart Started</p>
+                        <p>remains as Smart Started.</p>
                     </td>
                 </tr>
                 <tr class="TableStyle-standard-Body-Body1">
@@ -815,10 +815,10 @@
                         <p>apply a change to Sales Basis</p>
                     </td>
                     <td class="TableStyle-standard-BodyE-Column1-Body1">
-                        <p>cannot be changed for scenarios in Smart Started Status</p>
+                        <p>cannot change scenarios in Smart Started Status</p>
                     </td>
                     <td class="TableStyle-standard-BodyD-Column2-Body1">
-                        <p>Remain as Smart Started</p>
+                        <p>remains as Smart Started.</p>
                     </td>
                 </tr>
                 <tr class="TableStyle-standard-Body-Body1">
@@ -829,10 +829,10 @@
                         <p>apply a change to Sales By Type</p>
                     </td>
                     <td class="TableStyle-standard-BodyE-Column1-Body1">
-                        <p>cannot be changed for scenarios in Smart Started Status</p>
+                        <p>cannot change scenarios in Smart Started Status</p>
                     </td>
                     <td class="TableStyle-standard-BodyD-Column2-Body1">
-                        <p>Remain as Smart Started</p>
+                        <p>remains as Smart Started.</p>
                     </td>
                 </tr>
                 <tr class="TableStyle-standard-Body-Body1">
@@ -843,10 +843,10 @@
                         <p>apply a change to Scenario Target</p>
                     </td>
                     <td class="TableStyle-standard-BodyE-Column1-Body1">
-                        <p>warn the user that proceeding will require re-rationalization to update recommended choice counts; spread new target down across segment/clusters by % contribution</p>
+                        <p>warns that proceeding requires re-rationalization to update recommended choice counts and spreads new target down across segment/clusters by percent contribution</p>
                     </td>
                     <td class="TableStyle-standard-BodyD-Column2-Body1">
-                        <p>Change to Calculated</p>
+                        <p>changes to Calculated.</p>
                     </td>
                 </tr>
                 <tr class="TableStyle-standard-Body-Body1">
@@ -857,10 +857,10 @@
                         <p>apply a change to Privacy or Sharing Settings</p>
                     </td>
                     <td class="TableStyle-standard-BodyE-Column1-Body1">
-                        <p>do nothing</p>
+                        <p>makes no changes</p>
                     </td>
                     <td class="TableStyle-standard-BodyD-Column2-Body1">
-                        <p>Remain as Smart Started</p>
+                        <p>remains as Smart Started.</p>
                     </td>
                 </tr>
                 <tr class="TableStyle-standard-Body-Body1">
@@ -871,10 +871,10 @@
                         <p>click Refresh</p>
                     </td>
                     <td class="TableStyle-standard-BodyE-Column1-Body1">
-                        <p>If a Plan Basis is set, warn the user that proceeding will require re-rationalization to update recommended choice counts and refresh the Scenario Target and spread new target down across segment/clusters by % contribution, if not, do nothing</p>
+                        <p>if a Plan Basis is set, warns that proceeding requires re-rationalization to update recommended choice counts, refreshes the Scenario Target, and spreads new target down across segment/clusters by percent contribution, if not, makes no changes</p>
                     </td>
                     <td class="TableStyle-standard-BodyD-Column2-Body1">
-                        <p>Change to Calculated</p>
+                        <p>changes to Calculated.</p>
                     </td>
                 </tr>
                 <tr class="TableStyle-standard-Body-Body1">
@@ -885,10 +885,10 @@
                         <p>click Calculate</p>
                     </td>
                     <td class="TableStyle-standard-BodyE-Column1-Body1">
-                        <p>Update segment cluster details based on defined Target Segments; recalculate Scenario Target if no Plan Basis is set and user has not entered an override</p>
+                        <p>updates segment cluster details based on defined Target Segments. Recalculates Scenario Target if no Plan Basis is set and there is no override</p>
                     </td>
                     <td class="TableStyle-standard-BodyD-Column2-Body1">
-                        <p>Change to Calculated</p>
+                        <p>changes to Calculated.</p>
                     </td>
                 </tr>
                 <tr class="TableStyle-standard-Body-Body1">
@@ -899,10 +899,10 @@
                         <p>click Rationalize</p>
                     </td>
                     <td class="TableStyle-standard-BodyE-Column1-Body1">
-                        <p>Run rationalization based on defined target or supplemental filters by segment/cluster and populate results in TY Recommended New Choices; update TY Recommended New Productivity and Average Active Periods Per Variant; default any TY Act New Choices fields without user overrides to the TY Recommended New Choices values and update TY Act New Productivity as needed</p>
+                        <p>runs rationalization based on defined target or supplemental filters by segment/cluster and populates results in TY Recommended New Choices. Updates TY Recommended New Productivity and Average Active Periods Per Variant, defaults any TY Act New Choices fields without user overrides to the TY Recommended New Choices values and updates TY Act New Productivity as needed</p>
                     </td>
                     <td class="TableStyle-standard-BodyD-Column2-Body1">
-                        <p>Change to Rationalized</p>
+                        <p>change to Rationalized.</p>
                     </td>
                 </tr>
                 <tr class="TableStyle-standard-Body-Body1">
@@ -913,10 +913,10 @@
                         <p>change a segment target filter, cluster set, or comparison time frame</p>
                     </td>
                     <td class="TableStyle-standard-BodyE-Column1-Body1">
-                        <p>delete segment cluster details</p>
+                        <p>deletes segment cluster details</p>
                     </td>
                     <td class="TableStyle-standard-BodyD-Column2-Body1">
-                        <p>Change to Created</p>
+                        <p>changes to Created.</p>
                     </td>
                 </tr>
                 <tr class="TableStyle-standard-Body-Body1">
@@ -927,10 +927,10 @@
                         <p>change a segment supplemental filter</p>
                     </td>
                     <td class="TableStyle-standard-BodyE-Column1-Body1">
-                        <p>do nothing</p>
+                        <p>makes no changes</p>
                     </td>
                     <td class="TableStyle-standard-BodyD-Column2-Body1">
-                        <p>Change to Calculated</p>
+                        <p>changes to Calculated.</p>
                     </td>
                 </tr>
                 <tr class="TableStyle-standard-Body-Body1">
@@ -941,10 +941,10 @@
                         <p>change a segment name, product hierarchy, or collection option</p>
                     </td>
                     <td class="TableStyle-standard-BodyE-Column1-Body1">
-                        <p>do nothing</p>
+                        <p>makes no changes</p>
                     </td>
                     <td class="TableStyle-standard-BodyD-Column2-Body1">
-                        <p>Remain as Smart Started</p>
+                        <p>remains as Smart Started.</p>
                     </td>
                 </tr>
                 <tr class="TableStyle-standard-Body-Body1">
@@ -952,13 +952,13 @@
                         <p>Smart Started</p>
                     </td>
                     <td class="TableStyle-standard-BodyE-Column2-Body1">
-                        <p>apply a change to segment/cluster % contribution</p>
+                        <p>apply a change to segment/cluster percent contribution</p>
                     </td>
                     <td class="TableStyle-standard-BodyE-Column1-Body1">
-                        <p>update TY Sales Plan and TY New Item values; update TY Act New values that don't have user overrides</p>
+                        <p>updates TY Sales Plan and TY New Item values and updates TY Act New values that don't have overrides</p>
                     </td>
                     <td class="TableStyle-standard-BodyD-Column2-Body1">
-                        <p>Change to Calculated</p>
+                        <p>changes to Calculated.</p>
                     </td>
                 </tr>
                 <tr class="TableStyle-standard-Body-Body1">
@@ -969,10 +969,10 @@
                         <p>apply a change to TY Act New $, U, or AUR values</p>
                     </td>
                     <td class="TableStyle-standard-BodyE-Column1-Body1">
-                        <p>update affected TY Act New values</p>
+                        <p>updates affected TY Act New values</p>
                     </td>
                     <td class="TableStyle-standard-BodyD-Column2-Body1">
-                        <p>Change to Calculated</p>
+                        <p>changes to Calculated.</p>
                     </td>
                 </tr>
                 <tr class="TableStyle-standard-Body-Body1">
@@ -983,10 +983,10 @@
                         <p>apply a change to TY Act New Choices</p>
                     </td>
                     <td class="TableStyle-standard-BodyB-Column1-Body1">
-                        <p>update TY Act New Productivity</p>
+                        <p>updates TY Act New Productivity</p>
                     </td>
                     <td class="TableStyle-standard-BodyA-Column2-Body1">
-                        <p>Change to Rationalized</p>
+                        <p>changes to Rationalized.</p>
                     </td>
                 </tr>
             </tbody>

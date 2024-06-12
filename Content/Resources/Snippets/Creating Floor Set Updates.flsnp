@@ -50,10 +50,55 @@
                         <p>The dropdown allows for selecting any LY period for the scenario’s Window of Time, as well as any periods included in segments' Comparison Period selections.</p></td>
                 </tr>
                 <tr class="TableStyle-standard-Body-Body1">
-                    <td class="TableStyle-standard-BodyB-Column1-Body1">Period Count, Comparison Period Count</td>
-                    <td class="TableStyle-standard-BodyA-Column2-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">Period Count, Comparison Period Count</td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">
                         Automatically populates on save. The logic is that an update continues on until the next configured update. The last update goes to the end of the scenario’s Window of Time. 
                         <p>Therefore, if the Window of Time is wk1 through wk10, and 2 updates are configured for wk1 and wk5, then:</p><ul><li><p> the first update goes from wk1 to wk4 for 4 periods, and </p></li><li><p>the second update goes from wk5 to wk10 for 6 periods.</p></li></ul></td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">Default End Period</td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">The Phase Out Period of the update.  If <span class="Emphasis">End Date Definition</span> is set to <span class="Emphasis">Phase Out Date</span>, It automatically updates depending on the subsequent update's start period.  If using <span class="Emphasis">Last Regular Date</span>, then this date would be set after the markdown date.</td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">Default Markdown Period</td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">The user defined default markdown period for items in the update.   The selection available in the dropdown depends on how <span class="Emphasis">End Date Definition</span> is defined for the scenario.  If <span class="Emphasis">Phase Out Date</span> is selected, periods between Phase In and Phase Out display.  If <span class="Emphasis">Last Regular Date</span> is selected, any period between Phase In and the scenario's last regular period displays.</td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">Recommended New Choices</td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">The output from Rationalization by segment cluster based on the Target Data Selection
+					parameters and selections in the Target Segment Definitions section. For more information, see <MadCap:xref href="../../Topics/Assortment Planning/Rationalization.htm">Rationalization calculation</MadCap:xref>.</td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">Active New Choices </td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">
+						(To modify, only one segment can be selected.) The sum of all choices across all updates for the segment and location. When users update the value in this field, then the new items are added automatically assigned to all clusters in the segment.
+					<p><img src="../Images/Target Choice Count/Update Active New Choices.png" class="LargeImages" /></p></td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">% New Choices</td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">&#160;</td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">Carryover Choices, % Carryover Choice</td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">Of the <span class="Emphasis">Active New Choices</span>  count, how many are continuing to be in phase from a previous update.</td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">Total Choices</td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">&#160;</td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">Rationalized Choices</td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">&#160;</td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyE-Column1-Body1">Comparison Choices </td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">&#160;</td>
+                </tr>
+                <tr class="TableStyle-standard-Body-Body1">
+                    <td class="TableStyle-standard-BodyB-Column1-Body1">Pareto Choices</td>
+                    <td class="TableStyle-standard-BodyA-Column2-Body1">
+						A Pareto percentage of Comparison Active choices.  It is meant to be used as a guidepost for the scenario’s TY New choices. Ideally, the choice count for comparison and the current scenario should be aligned. 
+					<p>The Pareto percent to use can be set in two place, via: </p><ul><li><p>system policy <span class="Emphasis">Rationalize: Pareto Threshold</span> which is the default value when set, or </p></li><li><p>the <span class="Emphasis">Segment Definitions</span> view.</p><p><img src="../Images/Target Choice Count/Segment Definitions Pareto.png" class="LargeImages" /></p>This threshold answers the question, “In history, what number of variants were required to achieve x% of the total target productivity?”  This is meant to be an estimate against which scenario results can be compared.  If the scenario were to achieve 95% of the target, how many total choices are necessary?</li></ul></td>
                 </tr>
             </tbody>
         </table>
@@ -61,6 +106,16 @@
         <p>
             <img src="../Images/Target Choice Count/Floor Set Update Segment Count.png" class="LargeImages">
             </img>
+        </p>
+        <h3>Setting the default markdown period for items in an update</h3>
+        <p>The markdown date is a user enterable default markdown period for items in an update.   The selection available in the dropdown depends on the configuration of <span class="Emphasis">End Date Definition</span> for the scenario.  If <span class="Emphasis">Phase Out Date</span> is selected, it  show periods between Phase In and Phase Out.  If <span class="Emphasis">Last Regular Date</span> is selected, it shows any period between Phase In and the scenario's last regular period.</p>
+        <p>Setting  <span class="Emphasis">End Date Definition</span> to <span class="Emphasis">Phase Out Date</span> automatically updates the <span class="Emphasis">Default Markdown Period</span> and <span class="Emphasis">Default End Period</span> fields depending on the subsequent update's start period:</p>
+        <p>
+            <img src="../Images/Assortment Planning/End Date Definition Set To Phase Out Date.png" class="LargeImages" />
+        </p>
+        <p>Setting <span class="Emphasis">End Date Definition</span> to <span class="Emphasis">Last Regular Date</span> automatically updates the <span class="Emphasis">Default Markdown Period</span> and <span class="Emphasis">Default End Period</span> fields depending on the subsequent update's markdown period:</p>
+        <p>
+            <img src="../Images/Assortment Planning/End Date Definition Set To Last Regular Date.png" class="LargeImages" />
         </p>
         <h3>Modifying updates or the Window of Time parameter</h3>
         <ul>
@@ -75,7 +130,7 @@
         </ul>
         <h3>Viewing floor set update results
 </h3>
-        <p>The <span class="Emphasis">Update</span> field in each of the lower tabs in the <span class="Emphasis">Edit Target Scenario</span> view (Target Worksheet, Target New Choices, and Results Matrix) provides details for scenarios with updates created . For example,</p>
+        <p>The <span class="Emphasis">Update</span> field in each of the lower tabs in the <span class="Emphasis">Edit Target Scenario</span> view (Target Worksheet, Target New Choices, and Results Matrix) provides details for scenarios with updates created. For example,</p>
         <p>
             <img src="../Images/Target Choice Count/Target Worksheet Update Field.png" class="LargeImages">
             </img>
