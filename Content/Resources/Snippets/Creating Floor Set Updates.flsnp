@@ -4,7 +4,7 @@
         <link href="../TableStyles/standard.css" rel="stylesheet" MadCap:stylesheetType="table" />
     </head>
     <body>
-        <p>Users can use a  widget labeled <span class="Emphasis">Segment Floor Set Updates</span> on the right of the <span class="Emphasis">Edit Target Scenario</span> view (whether creating a new or copying an existing scenario) to define multiple floor set updates with their own windows of time within the selected overall  period of time of a Target Scenario. 
+        <p>Users can use the <span class="Emphasis">Segment Floor Set Updates</span> section on the right of the <span class="Emphasis">Edit Target Scenario</span> view (whether creating a new or copying an existing scenario) to define multiple floor set updates with their own windows of time within the selected overall  period of time of a Target Scenario. 
 
 </p>
         <p>
@@ -40,7 +40,7 @@
                 <tr class="TableStyle-standard-Body-Body1">
                     <td class="TableStyle-standard-BodyE-Column1-Body1">Update Period</td>
                     <td class="TableStyle-standard-BodyD-Column2-Body1">
-                        (Required) Users can select any period within a scenario’s Window of Time.  If the first update does NOT start at the beginning of the Window of Time, an update labeled <span class="Emphasis">Initial Set</span> is automatically created.  If that update is deleted, the following warning displays: 
+                        (Required) Users can select any period within a scenario’s Window of Time.  If the first update does NOT start at the beginning of the Window of Time, update <span class="Emphasis">Initial Set</span> is automatically created.  If that update is deleted, the following warning displays: 
                         <p><span class="Emphasis">The first Floor Set Update does not include the first period(s) in the scenario Window of Time.  These periods will not be represented in target setting</span>.</p></td>
                 </tr>
                 <tr class="TableStyle-standard-Body-Body1">
@@ -135,6 +135,6 @@
             <img src="../Images/Target Choice Count/Target Worksheet Update Field.png" class="LargeImages">
             </img>
         </p>
-        <p>Additionally, the <span class="Emphasis">Target Scenario List</span> grid has a field labeled <span class="Emphasis">Updates</span> which lists any configured update periods. </p>
+        <p>Additionally, the <span class="Emphasis">Target Scenario List</span> grid has the <span class="Emphasis">Updates</span> field which lists any configured update periods. </p>
     </body>
 </html>

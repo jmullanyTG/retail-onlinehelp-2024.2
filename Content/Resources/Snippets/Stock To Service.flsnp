@@ -15,7 +15,7 @@
         <h3>Constraint example</h3>
         <p>For inventory with no sales history or forecast, regardless of the values input in the UI, the system would automatically set demand parameters at 0 for the inventory and the calculated Target Service Level at 0% since there is nothing to satisfy.</p>
         <h3>Enabling Stock to Service</h3>
-        <p>Enabling the Stock to Service functionality requires an API key and URL from ToolsGroup Professional Services. Once configured, users must configure system policy labeled <span class="Emphasis">Safety Stock Calculation Type</span>.</p>
+        <p>Enabling the Stock to Service functionality requires an API key and URL from ToolsGroup Professional Services. Once configured, users must configure system policy <span class="Emphasis">Safety Stock Calculation Type</span>.</p>
         <p>The configuration options for system policy <span class="Emphasis">Safety Stock Calculation Type</span> are: </p>
         <table style="width: 100%;margin-left: auto;margin-right: auto;mc-table-style: url('../../Resources/TableStyles/standard.css');" class="TableStyle-standard" cellspacing="0">
             <col class="TableStyle-standard-Column-Column1" />

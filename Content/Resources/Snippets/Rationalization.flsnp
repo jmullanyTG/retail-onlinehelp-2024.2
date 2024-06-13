@@ -21,10 +21,10 @@ If Supplemental Filter is set for a segment, the system uses this in place of th
         <h2>Data cleansing and deseasonalization</h2>
         <p>Before calculating, several steps are taken to remove anomalies from the data that would skew subsequent calculations. The most common causes of inaccuracies when using historical sales to calculate future projections via a simple average are:</p>
         <ul>
-            <li>The item wasn’t available for sale during part or all of the window of time</li>
-            <li>If averaging the entire window of time, zeros may be included</li>
-            <li>If averaging non-zero periods only, those values may not be representative of a true average period during the window of time</li>
-            <li>The item had inventory levels low enough to negatively impact sales</li>
+            <li>the item wasn’t available for sale during part or all of the window of time</li>
+            <li>if averaging the entire window of time, zeros may be included</li>
+            <li>if averaging non-zero periods only, those values may not be representative of a true average period during the window of time</li>
+            <li>the item had inventory levels low enough to negatively impact sales</li>
         </ul>
         <p>During this phase, the system determines which variants in the data set were considered “active” during the specified comparison time frames for each segment.</p>
         <h3>Fine tuning the output of the cleansing and deseasonalization phase</h3>
@@ -33,7 +33,7 @@ If Supplemental Filter is set for a segment, the system uses this in place of th
 			 <p>For AP, the relevant system policies are located in <span class="Emphasis">Maintenance &gt; Policies &gt; Module: Assortment</span>.</p></div>
         <p><span class="Emphasis">Remove Outliers</span>
         </p>
-        <p>Prior to deseasonalizing the data, any extreme outliers on the low end of the data set are removed as these artificially deflate the deseasonalized average used in subsequent steps. To do this, a % of each variant’s maximum sales is removed.</p>
+        <p>Prior to deseasonalizing the data, any extreme outliers on the low end of the data set are removed as these artificially deflate the deseasonalized average used in subsequent steps. To do this, a percentage of each variant’s maximum sales is removed.</p>
         <ul>
             <li><span class="Emphasis">Average Inclusion Threshold</span> Default set at 3%</li>
         </ul>
@@ -42,7 +42,7 @@ If Supplemental Filter is set for a segment, the system uses this in place of th
         <p>Data is then adjusted by period, flattening the sales trend across the life cycle of each variant to allow for better comparison across time. This is de-seasonalization. To achieve this, the system:</p>
         <ol>
             <li>Sums variant sales by period</li>
-            <li>Calculates the median total sales across all periods and replaces any period totals which fall below a system policy defined % of the median, calculating a period to mean for each period based on the revised values, then</li>
+            <li>Calculates the median total sales across all periods and replaces any period totals which fall below a system policy defined percentage of the median, calculating a period to mean for each period based on the revised values, then</li>
             <li>Divides each period’s revised sales by the period to mean.</li>
         </ol>
         <ul>

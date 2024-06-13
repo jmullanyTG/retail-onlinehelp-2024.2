@@ -61,30 +61,28 @@
             </tbody>
         </table>
         <h2>Combining order lines to consolidate duplicate lines and reduce processing effort</h2>
-        <p>A macro labeled <span class="Emphasis">Combine Order Lines</span> is available when users select the option of <span class="Emphasis">This Weeks Orders</span> or <span class="Emphasis">Future Recommended Orders</span> (From Strategy, Redistribution). This macro consolidates duplicate lines into the earliest delivery dates per source site and reduces processing effort needed for both DC and stores. </p>
+        <p>Macro <span class="Emphasis">Combine Order Lines</span> is available when users select the option of <span class="Emphasis">This Weeks Orders</span> or <span class="Emphasis">Future Recommended Orders</span> (From Strategy, Redistribution). This macro consolidates duplicate lines into the earliest delivery dates per source site and reduces processing effort needed for both DC and stores. </p>
         <p>The system is prevented from retrieving multiple order lines by delivery date for the same style/color/size/site/source site. Often the duplicate lines have very small recommended order units and processing such multiple small orders results in increased effort for both DC and stores. </p>
         <p>Whether zero order lines should be preserved is determined by system policy <span class="Emphasis">Macro:CombineOrderLines - Preserve Zero Lines</span>.</p>
         <p class="BasicNote">External supplier orders and prepack orders will not be combined.</p>
         <h2>Ensuring changes to Order Quantity do not exceed quantity of units available for distribution in the DC</h2>
         <p>The Over Consumption alert eliminates the risk of an order being rejected due to the quantity exceeding available units for distribution in the DC. Order quantities are summed up at a SKU-size-source level and the sum is checked against the available quantity (SOH-stock pending) to see if it exceeds the quantity in the DC. This ensures changes made to User Order Quantity do not exceed quantity of units available for distribution in the DC. </p>
-        <p>To take advantage of this functionality, select the checkbox labeled <span class="Emphasis">Enable Overconsumption Check</span> in the Add Order wizard. The totals can be reviewed in two Order Document fields: <span class="Emphasis">Source Rec Order Qty</span> and <span class="Emphasis">Source Remaining Inc Rec Order Qty</span>. </p>
-        <p class="BasicNote">If system policy labeled <span class="Emphasis">Overconsumption Check</span> is set to <span class="Emphasis">Yes</span>, then the checkbox is selected by default. If assigned User Right <span class="Emphasis">Allows override of Overconsumption check</span>, users can enable or disable the <span class="Emphasis">Over Consumption</span> check at the Order Document Level.</p>
+        <p>To take advantage of this functionality, select the <span class="Emphasis">Enable Overconsumption Check</span> checkbox in the Add Order wizard. The totals can be reviewed in two Order Document fields: <span class="Emphasis">Source Rec Order Qty</span> and <span class="Emphasis">Source Remaining Inc Rec Order Qty</span>. </p>
+        <p class="BasicNote">If system policy <span class="Emphasis">Overconsumption Check</span> is set to <span class="Emphasis">Yes</span>, then the checkbox is selected by default. If assigned User Right <span class="Emphasis">Allows override of Overconsumption check</span>, users can enable or disable the <span class="Emphasis">Over Consumption</span> check at the Order Document Level.</p>
         <h3>Order Types Not Supported by this feature:</h3>
-        <p>
-            <span class="Emphasis">Allocate</span>: From Stock, From Order, From Scenario</p>
-        <p>
-            <span class="Emphasis">Assortment</span>: Commitment</p>
+        <p><span class="Emphasis">Allocate</span>: From Stock, From Order, From Scenario</p>
+        <p><span class="Emphasis">Assortment</span>: Commitment</p>
         <h2>Automatically checking for valid orders</h2>
-        <p>Within the Policy module’s <span class="Emphasis">Policy</span> tab, a checkbox labeled <span class="Emphasis">Enable Auto Authorized Order Check</span> in the <span class="Emphasis">Auto Authorization</span> section  allows for automatic checks to be done on the inventory.</p>
+        <p>Within the Policy module’s <span class="Emphasis">Policy</span> tab, the <span class="Emphasis">Enable Auto Authorized Order Check</span> checkbox in the <span class="Emphasis">Auto Authorization</span> section  allows for automatic checks to be done on the inventory.</p>
         <p class="BasicNote">The default for new inventory can also be set using system policy <span class="Emphasis">Inventory Policy Default: Enable Auto Authorized Order Check</span>.</p>
         <h3>Performing a data validation check</h3>
-        <p>If selected, a checkbox labeled <span class="Emphasis">Enable Data Validation Check</span> at the Order Manager header level performs a data validation check when an Order is Pre-Authorized or Authorized. If a single Inventory fails the check, then the order does not proceed to the next state.</p>
+        <p>If selected, checkbox <span class="Emphasis">Enable Data Validation Check</span> at the Order Manager header level performs a data validation check when an order is Pre-Authorized or Authorized. If a single inventory fails the check, then the order does not proceed to the next state.</p>
         <p>
             <img src="../../Resources/Images/Order Manager/Add Reconsolidation Order Window.png" class="LargeImages" />
         </p>
-        <p class="p">A field labeled <span class="Emphasis">Data Validation Check Passed</span> has a checkbox that indicates whether a row passed the check.</p>
+        <p class="p">The <span class="Emphasis">Data Validation Check Passed</span> field has a checkbox that indicates whether a row passed the check.</p>
         <h2>Authorizing orders that failed the data validation check</h2>
-        <p>A macro labeled <span class="Emphasis">Auto Authorize Order</span> automatically authorizes orders when lines fail the data validation check. These failed lines move to a new order header named<span class="Emphasis"> [Existing Order Header Name]-Failed Data Validation</span>.</p>
+        <p>Macro <span class="Emphasis">Auto Authorize Order</span> automatically authorizes orders when lines fail the data validation check. These failed lines move to a new order header named<span class="Emphasis"> [Existing Order Header Name]-Failed Data Validation</span>.</p>
         <h3>Related system policies</h3>
         <p>This functionality is controlled by the following system policies:
 </p>

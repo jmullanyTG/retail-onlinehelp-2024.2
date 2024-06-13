@@ -7,13 +7,13 @@
         <p>The Percent Covered threshold is used to specify a percentage of sizes that must have been in-stock at a site on a given period for a variant for the corresponding sales from that period to be included in the size model calculation for that site. The threshold is applied as follows:</p>
         <ol>
             <li>
-                <p>As not all sizes carry equal importance at a given site, the system determines the relative importance of each size present in the selected Size Range for each site by summing the uncleansed sales by size for all items in the selected Filter and date range then dividing by the sum of sales for all sizes.</p>
+                <p>As not all sizes carry equal importance at a given site, the relative importance of each size present in the selected size range is determined for each site by summing the uncleansed sales by size for all items in the selected filter and date range then dividing by the sum of sales for all sizes.</p>
                 <p>
                     <img src="../../Resources/Images/Allocation Size/Data Cleansing Thresholds.png" class="LargeImages" />
                 </p>
             </li>
             <li>
-                <p>Next, each period in the selected date range is evaluated against the set Percent Covered threshold. The % contribution of all sizes in stock for each variant at that site are summed and compared to the Percent Covered threshold. If the sum value is equal or greater, the sales for that variant/period are included in the size model calculation for that site. If not, they are removed.</p>
+                <p>Next, each period in the selected date range is evaluated against the set Percent Covered threshold. The percentage contribution of all sizes in stock for each variant at that site are summed and compared to the Percent Covered threshold. If the sum value is equal or greater, the sales for that variant/period are included in the size model calculation for that site. If not, they are removed.</p>
                 <p>
                     <img src="../../Resources/Images/Allocation Size/Data Cleansing Thresholds_1.png" class="LargeImages" />
                 </p>
@@ -23,7 +23,7 @@
         <p>The Weeks Covered threshold is used to specify a minimum number of periods that a variant must have been in-stock at a given site for its sales to be included in the size model calculation for that site. When paired with a Percent Covered threshold, this threshold is applied after any periods that did not pass the Percent Covered threshold are removed. The threshold is applied as follows:</p>
         <ol>
             <li>
-                <p>The system evaluates each period for each variant to see if it was acceptably in-stock at the site. If no Percent Covered threshold is specified, the system checks if there was stock on-hand in any size for each period.</p>
+                <p>Each period for each variant is evaluated to see if it was acceptably in-stock at the site. If no Percent Covered threshold is specified, the stock on-hand in any size is checked for each period.</p>
                 <p>
                     <img src="../../Resources/Images/Allocation Size/Data Cleansing Thresholds_2.png" class="LargeImages" />
                 </p>
@@ -36,7 +36,7 @@
             </li>
         </ol>
         <h2>Size model calculations without cleansing thresholds</h2>
-        <p>Building on the examples displayed above, the following is the outcome based on the data displayed and then compared to how the system  calculated the size model without the application of the cleansing thresholds:</p>
+        <p>Building on the examples displayed above, the following is the outcome based on the data displayed and then compared to how the size model was calculated without the application of the cleansing thresholds:</p>
         <p>
             <img src="../../Resources/Images/Allocation Size/Practical Application.png" class="LargeImages">
             </img>

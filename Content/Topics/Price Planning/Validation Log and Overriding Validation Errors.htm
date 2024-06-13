@@ -5,15 +5,15 @@
     </head>
     <body>
         <h1>Validation icons, the validation log, and overriding validation errors</h1>
-        <p>The system returns messages indicating if a Price Action has successfully complied with Validation rules. Validation Severity failure icons on the <span class="Emphasis">Price Actions</span> grid provide convenient indicators of whether a Price Action is validated or not while. </p>
+        <p>A message displays indicating if a Price Action has successfully complied with Validation rules. Validation Severity failure icons on the <span class="Emphasis">Price Actions</span> grid provide convenient indicators of whether a Price Action is validated or not while. </p>
         <p>To display the <span class="Emphasis">Validation Log</span>, double-click the Validation Severity failure icon in the <span class="Emphasis">Validation</span> field on the <span class="Emphasis">Price Actions</span>, Variant Summary, Items, or Item Location grids.</p>
         <h2>Overriding a validation failure</h2>
-        <p>The ability to override Validation failures reduces the amount of time Merchant Managers spend reviewing Validation failures.  To override a Validation failure, select the <span class="Emphasis">Override</span> checkbox and click <span class="Emphasis">Ok</span>.</p>
-        <p>&#160;Overriding a Validation failure causes the system to update any higher level affected by the Price Action’s worst case Validation Severity up to the Site Cluster, Price Action and Plan levels (these levels will still display worst case aggregation, meaning that while an override might be made, if there is another ‘worst’ case (error) the higher levels will not be updated):</p>
+        <p>Overriding Validation failures reduces the amount of time spent reviewing failures.  To override a Validation failure, select the <span class="Emphasis">Override</span> checkbox and click <span class="Emphasis">Ok</span>.</p>
+        <p>&#160;The override of a Validation failure causes an update to any higher level affected by the Price Action’s worst case Validation Severity up to the Site Cluster, Price Action and Plan levels. These levels still display worst case aggregation when an override is made. If there is another worst case (error) the higher levels do not  update. If the override is at the:</p>
         <ul>
-            <li>If the override is at the Inventory level, then the system will update the Inventory Manager, Variant, Site Cluster, Plan, and Action Header level, if appropriate.</li>
-            <li>If the override is at the Item Master level, then the system will update the Variant, Site Cluster, Plan, and Action&#160;Header level, if appropriate.</li>
-            <li>If the override is at the Variant level, then the system will update the Site Cluster, Plan, and Action Header level, if appropriate.</li>
+            <li> Inventory level, then there are updates to the Inventory Manager, Variant, Site Cluster, Plan, and Action Header level, if appropriate.</li>
+            <li>Item Master level, then there are updates to the Variant, Site Cluster, Plan, and Action&#160;Header level, if appropriate.</li>
+            <li>Variant level, then there are updates to the Site Cluster, Plan, and Action Header level, if appropriate.</li>
         </ul>
         <h2>Order of validation severity levels</h2>
         <p>The order of the Validation Severity levels (from best to worst) is as follows:</p>
@@ -31,15 +31,15 @@
             <li>Warning Found</li>
             <li>Error Encountered</li>
         </ul>
-        <h2>Rules governing the recalculation and revalidation of a price action</h2>
-        <p>When recalculating and revalidating a Price Action, the system will:</p>
+        <h2>The recalculation and revalidation of a price action</h2>
+        <p>When recalculating and revalidating a price action, the validation process:</p>
         <ul>
-            <li>keep the Validation severity state when the Validation failure matches the previous failure (an Error remains an Error, a Warning remains a Warning, and so on).</li>
-            <li>update the Validation severity state if the Validation failure does not match the previous failure (an Error becomes a Warning, A Warning becomes an Error, and so on).</li>
-            <li>discard the Validation severity state if the Validation no longer fails (an Error is now Validated, a Warning is now Validated, and so on).</li>
+            <li>keeps the current severity state when the failure matches the previous failure (e.g. an Error remains an Error).</li>
+            <li>updates the current severity state if the failure does not match the previous failure (e.g. an Error becomes a Warning).</li>
+            <li>discards the current severity state if the validation process no longer fails (the price action is now validated).</li>
         </ul>
         <h2>Validation severity icons</h2>
-        <p>The following are the Validation Severity icons for failures not yet reviewed:</p>
+        <p>The following are the icons for failures not yet reviewed:</p>
         <table style="mc-table-style: url('../../Resources/TableStyles/standard.css');" class="TableStyle-standard" cellspacing="0">
             <col class="TableStyle-standard-Column-Column1" />
             <col class="TableStyle-standard-Column-Column2" />
@@ -70,7 +70,7 @@
                 </tr>
             </tbody>
         </table>
-        <p>The following are the Validation Severity icons for failures that have been reviewed:</p>
+        <p>The following are the icons for failures that have been reviewed:</p>
         <table style="mc-table-style: url('../../Resources/TableStyles/standard.css');" class="TableStyle-standard" cellspacing="0">
             <col class="TableStyle-standard-Column-Column1" />
             <col class="TableStyle-standard-Column-Column2" />
@@ -111,8 +111,8 @@
         <p>
             <img src="../../Resources/Images/Price Planning/Validation Log Hover Message Reviewed.png" class="LargeImages" />
         </p>
-        <p>The Validation Log provides messages based on failed validations configured in the <span class="Emphasis">Price Strategy</span> screen. Depending on where the Validation Log is displayed, the results are filtered as appropriate. The Validation Log can viewed from any <span class="Emphasis">Price Actions</span> grid (Price Action Header, Summary, Item and Item Location). Double-click on the icon in the <span class="Emphasis">Validation</span> column in the <span class="Emphasis">Price Actions</span> grid. </p>
-        <p class="BasicNote"> A failed validation that has been reviewed is now considered no longer failed and will be considered for export. Also, not all Validations can be overridden. The ability to override is based on system configuration which in turn is based on a review of the customer’s business process.</p>
+        <p>The Validation Log provides messages based on failed validations configured in the <span class="Emphasis">Price Strategy</span> screen. Depending on where the Validation Log displays, the results are filtered as appropriate. The Validation Log can viewed from any <span class="Emphasis">Price Actions</span> grid (Price Action Header, Summary, Item and Item Location). Double-click on the icon in the <span class="Emphasis">Validation</span> column in the <span class="Emphasis">Price Actions</span> grid. </p>
+        <p class="BasicNote"> A failed validation that has been reviewed is now considered no longer failed and is considered for export. Also, not all Validations can be overridden. The ability to override is based on system configuration which in turn is based on a review of the customer’s business process.</p>
         <h2>Validation log </h2>
         <p>The Validation Log has advanced filtering that lets users review and mark as reviewed validation failure records allowing Promotions to continue to downstream systems. The Validation Log does not limit the number of records to be returned.</p>
         <p>Product Validation failures are filtered based on where the Validation log originated:</p>
@@ -148,11 +148,11 @@
                 </tr>
             </tbody>
         </table>
-        <p> Additionally, Validation Severity failure icons indicate the current State of the Price Action:</p>
+        <p> Additionally, Validation Severity failure icons indicate the current state of the Price Action:</p>
         <p>
             <img src="../../Resources/Images/Price Planning/Validation Log.png" class="LargeImages" />
         </p>
-        <p>If a user with the appropriate User Right overrides a Validation failure, then the Validation Severity failure icon refreshes to indicate the failure has been reviewed.</p>
+        <p>If a user overrides a Validation failure, then the Validation Severity failure icon refreshes to indicate the failure has been reviewed.</p>
         <p class="BasicNote"> Overrides can only happen during configuration for certain Price Action Statuses and specified Validation States.</p>
         <h3>Field descriptions</h3>
         <table style="width: 100%;margin-left: auto;margin-right: auto;mc-table-style: url('../../Resources/TableStyles/standard.css');" class="TableStyle-standard" cellspacing="0">
@@ -175,22 +175,22 @@
                 </tr>
                 <tr class="TableStyle-standard-Body-Body1">
                     <td class="TableStyle-standard-BodyE-Column1-Body1">Override Date</td>
-                    <td class="TableStyle-standard-BodyD-Column2-Body1">This field is populated with the current DateTime stamp if and when the override is saved.</td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">The current DateTime stamp if and when the override is saved.</td>
                 </tr>
                 <tr class="TableStyle-standard-Body-Body1">
                     <td class="TableStyle-standard-BodyE-Column1-Body1">Override User</td>
-                    <td class="TableStyle-standard-BodyD-Column2-Body1">This field is populated with the ID&#160;of the user performing the override if and when the override is saved.</td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">The ID&#160;of the user performing the override if and when the override is saved.</td>
                 </tr>
                 <tr class="TableStyle-standard-Body-Body1">
                     <td class="TableStyle-standard-BodyB-Column1-Body1">Override</td>
-                    <td class="TableStyle-standard-BodyA-Column2-Body1"> By default, the <span class="Emphasis">Override</span> checkbox is unchecked.<p> Only users with User Right <span class="Emphasis">Override Validation Failures</span> are able to select the <span class="Emphasis">Override</span> checkbox:<ul><li>during the Price Action’s Status and specified State (Information, Warning, Error), if controlled by Workflow, or</li><li>if not controlled by Workflow the user has the User Right globally.</li></ul></p></td>
+                    <td class="TableStyle-standard-BodyA-Column2-Body1"> By default, the <span class="Emphasis">Override</span> checkbox is unchecked.<p> Only users with right <span class="Emphasis">Override Validation Failures</span> are able to select the <span class="Emphasis">Override</span> checkbox:<ul><li>during the Price Action’s Status and specified State (Information, Warning, Error), if controlled by Workflow, or</li><li>if not controlled by Workflow the user has the user right globally.</li></ul></p></td>
                 </tr>
             </tbody>
         </table>
         <h2>Advanced Validation Log</h2>
-        <p>Reduce the number of records that need evaluating by evaluating Pricing Validation failures at a Variant and Site level. To enable this functionality, system policy <span class="Emphasis">Advanced Validation Log</span> needs to be set to True.</p>
+        <p>Reduce the number of records that need evaluating by evaluating Pricing Validation failures at a Variant and Site level. To enable this functionality, system policy <span class="Emphasis">Advanced Validation Log</span> needs to be set to <span class="Emphasis">True</span>.</p>
         <p class="BasicNote">If a plan’s Product Pricing Level is set to <span class="Emphasis">Variant Site Plan</span>, then system policy <span class="Emphasis">Advanced Validation Log</span> is ignored and the Advanced Validation log displays regardless.</p>
-        <p>If a plan’s Product Pricing Level is set to <span class="Emphasis">Item Site Plan</span>, then system policy <span class="Emphasis">Advanced Validation Log</span> is evaluated and the system displays either the default or advanced validation log.</p>
+        <p>If a plan’s Product Pricing Level is set to <span class="Emphasis">Item Site Plan</span>, then system policy <span class="Emphasis">Advanced Validation Log</span> is evaluated and either the default or advanced validation log displays.</p>
         <table style="width: 100%;margin-left: auto;margin-right: auto;mc-table-style: url('../../Resources/TableStyles/standard.css');" class="TableStyle-standard" cellspacing="0">
             <col class="TableStyle-standard-Column-Column1" />
             <col class="TableStyle-standard-Column-Column2" />
@@ -205,16 +205,16 @@
                     <td class="TableStyle-standard-BodyE-Column1-Body1">Validation Status icon </td>
                     <td class="TableStyle-standard-BodyD-Column2-Body1">
                         <ul>
-                            <li>Variant level - Displays aggregated worst validation failure severity of an associated Inventory</li>
-                            <li>Site level - Displays validation level failure severity</li>
+                            <li>Variant level - displays aggregated worst validation failure severity of an associated Inventory</li>
+                            <li>Site level - displays validation level failure severity</li>
                         </ul>
                     </td>
                 </tr>
                 <tr class="TableStyle-standard-Body-Body1">
                     <td class="TableStyle-standard-BodyE-Column1-Body1">Override Checkbox</td>
                     <td class="TableStyle-standard-BodyD-Column2-Body1">
-                        Displays for both Variant and Inventory records when configured for Override:
-                        <ul><li>If an override is set at the Variant level, the system will override for all associated Sites</li><li>If an override is set to all Sites, the system will apply at the Variant level</li></ul></td>
+                        Displays for both Variant and Inventory records when configured for override. If an override is set:
+                        <ul><li> at the Variant level, the override is for all associated sites</li><li>to all sites, the override applies at the Variant level</li></ul></td>
                 </tr>
                 <tr class="TableStyle-standard-Body-Body1">
                     <td class="TableStyle-standard-BodyE-Column1-Body1">Variant </td>
@@ -226,7 +226,7 @@
                 </tr>
                 <tr class="TableStyle-standard-Body-Body1">
                     <td class="TableStyle-standard-BodyE-Column1-Body1">Location Code\Name</td>
-                    <td class="TableStyle-standard-BodyD-Column2-Body1">Displays for any Inventory level Validation failure. The system will only display a Site once, per Variant, if multiple Item Masters exist within the Variant that fails.</td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">Displays for any Inventory level Validation failure. A site only displays once, per Variant, if multiple Item Masters exist within the Variant that fails.</td>
                 </tr>
                 <tr class="TableStyle-standard-Body-Body1">
                     <td class="TableStyle-standard-BodyE-Column1-Body1">Validation Message</td>
@@ -237,7 +237,7 @@
                     <td class="TableStyle-standard-BodyD-Column2-Body1">
                         <ul>
                             <li>Populated at the Variant level if overridden at the Variant level</li>
-                            <li>Populated at the individual Inventory (Site) level if overridden at the Inventory level<ul><li>If all Sites are overridden explicitly, the system will not populate at the Variant level</li></ul></li>
+                            <li>Populated at the individual Inventory (Site) level if overridden at the Inventory level<ul><li>If all sites are overridden explicitly, the Variant level is not populated</li></ul></li>
                         </ul>
                     </td>
                 </tr>
@@ -246,14 +246,14 @@
                     <td class="TableStyle-standard-BodyA-Column2-Body1">
                         <ul>
                             <li>Populated at the Variant level if overridden at the Variant level</li>
-                            <li>Populated at the individual Inventory (Site) level if overridden at the Inventory level<ul><li>If all Sites are overridden explicitly, system will not populate at the Variant level</li></ul></li>
+                            <li>Populated at the individual Inventory (site) level if overridden at the Inventory level<ul><li>If all sites are overridden explicitly, the Variant level is not populated</li></ul></li>
                         </ul>
                     </td>
                 </tr>
             </tbody>
         </table>
-        <h2> Exporting price actions that have a validation severity type of error</h2>
-        <p>The system does not allow Price Actions with a failed Validation Severity type of Error to be exported. Price Actions with Validation failures of severity type Error are exportable to downstream systems (such as reporting, ERP, POS) when all Validation failures of severity type Error have been overridden.</p>
+        <h2> Exporting price actions with a validation severity type of error</h2>
+        <p>Price actions with a failed validation severity type of Error cannot be exported to downstream systems (such as reporting, ERP, POS) until all such validation failures  have been overridden.</p>
         <p>The following validation states can be exported:</p>
         <table style="mc-table-style: url('../../Resources/TableStyles/standard.css');" class="TableStyle-standard" cellspacing="0">
             <col class="TableStyle-standard-Column-Column1" />

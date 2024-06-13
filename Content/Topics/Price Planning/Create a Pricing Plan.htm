@@ -46,7 +46,7 @@
                     <td class="TableStyle-standard-BodyD-Column2-Body1">
                       
                          Select a future date that associated pricing actions default to. The start date is defaulted and selection of an earlier date is restricted, by a globally configured number of days forward from today. Special permissions such as <span class="Emphasis">Emergency Pricing Action</span> allow for overriding this restriction and selecting tomorrow at the earliest. 
-                        <p>When modifying the start date, the system restricts moving the date forward any further than by any price action start date.</p><p class="Example"> Original Plan Start Date = 01/01/2024<br />Earliest Price Action Start Date (already exported) = 02/01/2024<br />Result: System will not allow a new Plan Start Date greater than 02/01/2024</p></td>
+                        <p>When modifying the start date, the date forward cannot be any further than by any price action start date.</p><p class="Example"> Original Plan Start Date = 01/01/2025<br />Earliest Price Action Start Date (already exported) = 02/01/2025<br />Result: A new Plan Start Date greater than 02/01/2025 is blocked.</p></td>
                 </tr>
                 <tr class="TableStyle-standard-Body-Body1">
                     <td class="TableStyle-standard-BodyE-Column1-Body1">
@@ -111,7 +111,7 @@
             <tbody>
                 <tr class="TableStyle-standard-Body-Body1">
                     <td class="TableStyle-standard-BodyE-Column1-Body1">Strategy</td>
-                    <td class="TableStyle-standard-BodyD-Column2-Body1">A dropdown list filtered to only include strategies configured with the System Input variable.</td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">A dropdown list filtered to only include strategies configured with the system input variable.</td>
                 </tr>
                 <tr class="TableStyle-standard-Body-Body1">
                     <td class="TableStyle-standard-BodyB-Column1-Body1">Auto Price Filter</td>

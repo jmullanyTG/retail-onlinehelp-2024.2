@@ -18,18 +18,12 @@
         <p>Changes made in the <span class="Emphasis">Top Down Core Plan</span> view are seen as overrides in the main planning view and <span class="Emphasis">Sales Plan</span> view.</p>
         <h2>Making changes to sales plans in the Top Down Core Plan view</h2>
         <MadCap:snippetBlock src="../../Resources/Snippets/Read Write Access To Sales Plans Overrides.flsnp" />
-        <h2>Recalculating modified placeholders</h2>
-        <p>There are editable Receipt metrics in the TDCP view. Any placeholders that have been modified have a status of <span class="Emphasis">Dirty</span> and are flagged for Recalculation.</p>
-        <p>To recalculate modified placeholders, click the <span class="Emphasis">Recalculate Receipts</span> button. Clicking this button initiates the same logic as the <span class="Emphasis">Recalculate Receipts</span> button in the main planning view. This button uses the parameters defined within TDCP to calculate which placeholders to recalculate.</p>
-        <p>It is possible that multiple users might be affecting the same placeholders through different views (Receipt Plan view and TDCP), and also possible that these users might recalculate at similar times. To efficiently address this possibility, queue logic skips placeholders which are no longer dirty though the first recalculation. The recalculation does not auto-run the parameters as users could be working at the time.</p>
-        <p>Notifications are sent to users to indicate the status of the run. Clicking on the Notification takes users back to the TDCP. </p>
-        <p class="BasicNote">Receipt Constraints are still managed exclusively through the Receipt Plan view, which supports multi-editing.</p>
         <h2>Recalculating receipt plans</h2>
-        <p>Placeholders that have been modified have a receipt status of <span class="Emphasis">Dirty</span> and are flagged for recalculation. To recalculate modified placeholders, click the <span class="Emphasis">Recalculate Receipts</span> button.  <span class="Emphasis">Recalculate Receipts</span> uses the parameters defined within TDCP to determine which placeholders to recalculate.</p>
+        <p>There are editable Receipt metrics in the TDCP view. Placeholders that have been modified have a receipt status of <span class="Emphasis">Dirty</span> and are flagged for recalculation. To recalculate modified placeholders, click the <span class="Emphasis">Recalculate Receipts</span> button.  <span class="Emphasis">Recalculate Receipts</span> uses the parameters defined within TDCP to determine which placeholders to recalculate.</p>
         <p class="BasicNote">The <span class="Emphasis">Recalculate Receipts</span> functionality initiates the same logic as the <span class="Emphasis">Recalculate Receipts</span> button in the main planning view.</p>
         <p>It is possible that multiple users might be affecting the same placeholders through different views (Receipt Plan view and TDCP), and also possible that these users might recalculate at similar times. To efficiently address this possibility, queue logic skips placeholders which are no longer dirty though the first recalculation. The recalculation does not auto-run the parameters as users could be working at the time.</p>
         <p>Notifications are sent to users to indicate the status of the run. Clicking on the Notification takes users back to the TDCP. </p>
-        <p class="BasicNote">Receipt Constraints are managed exclusively through the Receipt Plan view, which supports multi-editing.</p>
+        <p class="BasicNote">Receipt Constraints are managed exclusively through the Receipt Plan view which supports multi-editing.</p>
         <h2>Snapshot data in the Comparison View</h2>
         <p>All snapshot data, including actualized and on order data, is included in the comparison. If a snapshot is compared to the plan immediately after creation, results are identical. If a snapshot is used for comparison some time after it has been taken, then the actualized periods as of the snapshot date are shown, and the future-planned periods as of the snapshot date are shown.</p>
         <h2>Cell locking</h2>
