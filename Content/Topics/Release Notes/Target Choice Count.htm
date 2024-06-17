@@ -4,13 +4,12 @@
     </head>
     <body>
         <h1>Target Choice Count</h1>
-        <h2>Choices by Sequential Update</h2>
-        <p>How users identify multiple updates (floor sets) within a Target Scenario window of time.  The workflow has been revamped with the intention of providing a more user workflow-centric experience. This workflow allows users to define update periods and will generate choice recommendations beginning with the first update period. The user can then define the phase out date for choices recommended, including phase out dates with correspond to a future “update end” period. This allows the second update period to be aware of defined choices that are already accounted for within that update period.</p>
-        <h2>Edit Target Scenarios view</h2>
-        <h3>Curves added to Segment Definitions on Edit Target Scenario view</h3>
+        <h2>Generating choice recommendations that factor in defined choices</h2>
+        <p>Existing functionality rationalized update periods as self-contained buckets. This resulted in a choice count output by update that didn't consider the choice recommendations within the other periods. Users were required to merge styles across periods using a merging process that was not fully optimal from a user experience point of view. As a result of a significant overhaul TG JE v2024.2 introduces a new user workflow-centric enhancement.</p>
+        <p>With this workflow, users define update periods and then generate choice recommendations beginning with the first update period. The user can then define the phase out date for choices recommended, including phase out dates that correspond to a future update end period. This allows the second update period to factor in defined choices that are already accounted for within that first update period.</p>
+        <h2>Curves added to Segment Definitions on Edit Target Scenario view</h2>
         <p>The following existing metrics were added to the <span class="Emphasis">Segment Definitions</span> section: <span class="Emphasis">Seasonality Curve</span>, <span class="Emphasis">Lifecycle Curve</span>, <span class="Emphasis">Markdown Curve</span>, and <span class="Emphasis">Seasonality Curve Weight Factor</span>. The curves can be automatically assigned from hierarchy defaults.</p>
         <p>Hierarchy defaults, but not Cluster defaults, are automatically assigned if  they have been set  (for placeholders created both manually within the main planning view and through the Smart Start function). </p>
-        <p>&#160;</p>
         <h3>Segment Floor Set Updates widget DMDEV-91523</h3>
         <p>The following fields were added to the Segment Floor Set Updates grid:</p>
         <table style="width: 100%;">
