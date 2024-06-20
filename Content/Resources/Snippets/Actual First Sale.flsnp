@@ -1,0 +1,10 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head>
+    </head>
+    <body>
+        <p><span class="Emphasis">Actual First Sale</span>: Read-only and displays in date format. This field only populates after the actualization of an initial sale.&#160;If the number of days to actualize does not reach as far back as the Phase In date, then this value may not be accurate.</p>
+        <p>This field does not populate if the placeholder is no longer being updated with actualized values. </p>
+        <p class="BasicNote">The value depends on the value set for system policy <span class="Emphasis">Assortment days history to actualize</span>.</p>
+    </body>
+</html>

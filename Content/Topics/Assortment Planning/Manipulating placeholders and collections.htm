@@ -177,9 +177,9 @@
                 <p><span class="Emphasis">Actual First Sale Period</span>: The period where the first sale actualized.</p>
             </li>
             <li>
-                <p><span class="Emphasis">Actual First Sale</span>: Read-only and displays in date format. This field only populates after the actualization of an initial sale.&#160;If the number of days to actualize does not reach as far back as the Phase In date, then the value displayed in this field may not be accurate.</p>
-                <p>This field will not populate if the placeholder is no longer being updated with actualized values. </p>
-                <p class="BasicNote">The value in this field depends on the value set for existing system policy <span class="Emphasis">Assortment days history to actualize</span>.</p>
+                <MadCap:snippetBlock src="../../Resources/Snippets/Actual First Sale.flsnp" />
+            </li>
+            <li>
                 <p><span class="Emphasis">Actual Sales U</span>: The sum of all actualized sales units (from historical periods) for the placeholder/collection. </p>
                 <p>Actualization occurs as part of overnight processing (exact frequency can vary by implementation) in which the sales units that were realized for a given period are fed to the ToolsGroup JustEnough database and read into Assortment Planning. Planned sales values are overwritten by these actual sales values.</p>
             </li>
@@ -191,9 +191,7 @@
                 <p><span class="Emphasis">Actualized</span>: Indicates the presence of any actualized periods during the placeholder/collection’s life.</p>
             </li>
             <li>
-                <p><span class="Emphasis">Additional Buy</span>: The quantity of additional non-sales and non-min pres units to buy for the placeholder or collection. The primary function of this field is to show discrepancies between the sum of Ttl Sls U and (Min Pres * Site Count) and Ttl Buy U that can occur because of the ability to directly edit S/T %. </p>
-                <p class="BasicNote">To remove unwanted excess units and rebalance a placeholder or collection’s sales plan, zero this field out and save.</p>
-                <p>Calculation: (Ttl Buy U – Ttl Sls U – (Min Pres * Site Count))</p>
+                <MadCap:snippetBlock src="../../Resources/Snippets/Additional Buy Units.flsnp" />
             </li>
             <li>
                 <p><span class="Emphasis">Alloc Status</span>: Average retail (selling) price excluding VAT per unit for the placeholder item </p>
@@ -362,9 +360,9 @@
             <li>
                 <p><span class="Emphasis">Markdown Curve</span>: The curve applied to the placeholder or collection. Used to break down Ttl Sls $ and Ttl Sls U by period in Sales Plan View. For more information, see <MadCap:xref href="Sales Plan View.htm">Sales Plan View</MadCap:xref>.</p>
                 <p>Displays <span class="Emphasis">(External)</span> to indicate the Curve in use is from External data. <span class="Emphasis">(External)</span> will only show if the Sales Units metric is set to non-editable in the <span class="Emphasis">Manage Import Config</span> view (the <span class="Emphasis">External Editability</span> field is set to <span class="Emphasis">No</span>).</p>
-                <p class="BasicNote">Only curves of the Manual or Specified Conditions Using Enhanced Filtering types are available for selection within Assortment Planning.</p>
+                <MadCap:snippetBlock src="../../Resources/Snippets/Curves Available for Selection in AP.flsnp" />
                 <p>Click the ellipsis (<img src="../../Resources/Images/Assortment Planning/Ellipsis Launch Curve Selection Screen.png" class="IconInline" />) to launch the <span class="Emphasis">Curve Selection</span> screen. For more information, see <MadCap:xref href="Curve Selection Screen.htm">Curve Selection Screen</MadCap:xref>.</p>
-                <p>Within the Assortment Planning module, multiple curves can be selected to calculate a Sales Plan. These curves trend toward zero when a markdown is later added to a placeholder or variant. An individual markdown curve can be specified to be applied separately after the markdown date. </p>
+                <p>Within the Assortment Planning module, multiple curves can be selected to calculate a sales plan. These curves trend toward zero when a markdown is later added to a placeholder or variant. An individual markdown curve can be specified to be applied separately after the markdown date. </p>
                 <p class="BasicNote">Whether <span class="Emphasis">Period Match</span> or <span class="Emphasis">Scale To Fit</span> is used to match the markdown curve to the sales plan is determined by system policy <span class="Emphasis">Algorithm To Match Markdown Curve to Sales Plan</span>. Though not required, it is recommended to choose a curve that trends downward over time. System policy <span class="Emphasis">Markdown Curve Default Behavior</span> controls what happens to a markdown sales plan if no markdown curve is selected. Depending on how <span class="Emphasis">Markdown Curve Default Behavior</span> is configured, either a line trending to zero is used to decrease the sales plan to zero at phase out or the sales plan does not slope to zero and the markdown sales plan is left unchanged.</p>
             </li>
             <li>
@@ -373,13 +371,13 @@
             </li>
             <li>
                 <p><span class="Emphasis">Mkdn Date</span>: Selects the markdown date for the placeholder/collection. Selections are limited to periods from Phase In through Phase Out. <span class="Emphasis">Mkdn Date</span> sets which period to stop respecting the various constraints utilized in the Receipt Plan supporting view including <span class="Emphasis">Min Pres</span>. </p>
-                <p>When viewing the by-period plan for the placeholder in Sales Plan or Receipt Plan view, <span class="Emphasis">Min Pres</span> drops to zero in the period specified by <span class="Emphasis">Mkdn Date</span>. An existing markdown date splits the plan into pre- and post-markdown data. Promotions can be applied to markdown periods.</p>
+                <p>When viewing the by-period plan for the placeholder in Sales Plan or Receipt Plan view, <span class="Emphasis">Min Pres</span> drops to zero in the period specified by <span class="Emphasis">Mkdn Date</span>. An existing markdown date splits the plan into pre- and post-markdown data. Promotions can be applied to markdown periods. If:</p>
                 <ul>
-                    <li>If no markdown date has been specified, then the plan exists as standard. </li>
+                    <li>no markdown date has been specified, then the plan exists as standard. </li>
                     <li>
-						If a markdown date is added at time of the placeholder creation, then indexes for both halves of the plan are normalized together, and total sales is spread across.
+						a markdown date is added at time of the placeholder creation, then indexes for both halves of the plan are normalized together, and total sales is spread across.
 					</li>
-                    <li>If  a markdown date is added after the total sales has been entered, then sales plan pre-markdown is locked in as it already exists, and the markdown plan is re-angled to head to zero.</li>
+                    <li> a markdown date is added after the total sales has been entered, then sales plan pre-markdown is locked in as it already exists, and the markdown plan is re-angled to head to zero.</li>
                 </ul>
                 <p class="BasicNote">A markdown date can be pushed by changing Phase In or Phase Out. If Phase Out changes, the zero-trend point moves with the phase out and the slope of the markdown curve changes accordingly.</p>
                 <p>For information regarding extending markdown dates, see <MadCap:xref href="Extending markdown date in Placeholders.htm">Extending the markdown date in Placeholders</MadCap:xref>.</p>
@@ -396,7 +394,7 @@
             <li>
                 <p><span class="Emphasis">Notes</span>: An informational field that supports greater than 256 characters.</p>
             </li>
-            <li> <p class="p"><span class="Emphasis">OOT Sales</span>: Whether the item meets or exceeds the  product hierarchy level default threshold for sales units outside an assorted cluster. A mark indicates the threshold has been met or exceeded.</p><p>The <span class="Emphasis">OOT Sales</span> field indicates that there have been noteworthy sales of units at non-assorted sites. This helps provide a total picture of sales including those sales outside of the assorted cluster for a placeholder or variant.  All decisions regarding what to do once the threshold is reached or exceeded are user driven and not system driven. </p><p class="BasicNote">For example, users may or may not decide to include the site in a cluster set moving forward. If a site was excluded from a cluster definition last week but is included in this week’s snapshot, then last week’s sales and stock are considered as being to a non-assorted site, but this week’s would be to an assorted site.</p><p class="p">Use the <span class="Emphasis">Assortment Out-of-Tier Report</span> supporting view to drill down further into the data. For more information, <MadCap:xref href="Assortment Out-of-Tier Report View.htm">Assortment Out-of-Tier Report View</MadCap:xref>.</p></li>
+            <li> <p class="p"><span class="Emphasis">OOT Sales</span>: Whether the item meets or exceeds the  product hierarchy level default threshold for sales units outside an assorted cluster. A mark indicates the threshold has been met or exceeded due to noteworthy sales of units at non-assorted sites. This helps provide a total picture of sales including those sales outside of the assorted cluster for a placeholder or variant.  All decisions regarding what to do once the threshold is reached or exceeded are user driven and not system driven. </p><p class="BasicNote">For example, users may or may not decide to include the site in a cluster set moving forward. If a site was excluded from a cluster definition last week but is included in this week’s snapshot, then last week’s sales and stock are considered as being to a non-assorted site, but this week’s would be to an assorted site.</p><p class="p">Use the <span class="Emphasis">Assortment Out-of-Tier Report</span> supporting view to drill down further into the data. For more information, <MadCap:xref href="Assortment Out-of-Tier Report View.htm">Assortment Out-of-Tier Report View</MadCap:xref>.</p></li>
             <li> <p class="p"><span class="Emphasis">OOT Stock</span>: Whether the item  meets or exceeds the threshold at the product hierarchy level for the number of units in stock at sites that were not originally assorted to. A mark indicates the threshold has been met or exceeded.</p><p>The threshold is at the placeholder level, dependent on selected cluster filters. Therefore, if the stock on hand product hierarchy threshold for a placeholder is set to 500 units, and there are two cluster sets, A and B, each of which had 250 units stock on hand, then:</p><ul><li>The checkbox is marked if only cluster A or only cluster B are selected.</li><li>If both clusters are selected, the checkbox is marked as the combined selected cluster sets meet the threshold.</li></ul></li>
             <li>
                 <p><span class="Emphasis">Origin Date</span>: When the origin was created.</p>
@@ -412,9 +410,9 @@
                 <p><span class="Emphasis">Origin User</span>: Who created the origin.</p>
             </li>
             <li>
-                <p><span class="Emphasis">Pack Size</span>: (not present in Collection view) The total number of pieces in a pack for every size curve  that is assigned to a placeholder. This field is only populated for Placeholders with a defined Packing Instruction. </p>
-                <p>For example, for a size curve for younger boys outerwear tank tops, if there are 6 different sizes and there is 1 piece of each size in a pack, then the value that displays is 6.</p>
-                <p>The actual value is the Pack Size selected in the  in the <span class="Emphasis">Pack Instruction Selector</span> in the <span class="Emphasis">Packing Instruction</span> supporting view. Changing the selected Pack Size updates the metric in the main planning view after <span class="Emphasis">Execute</span> is clicked and the change confirmed.</p>
+                <p><span class="Emphasis">Pack Size</span>: (not present in Collection view) The total number of pieces in a pack for every size curve  that is assigned to a placeholder. This field only populates for placeholders with a defined packing instruction. </p>
+                <p>For example, for a size curve for outerwear tank tops, if there are 6 different sizes and there is 1 piece of each size in a pack, then the value that displays is 6.</p>
+                <p>The actual value is the pack size selected in the <span class="Emphasis">Pack Instruction Selector</span> in the <span class="Emphasis">Packing Instruction</span> supporting view. Changing the selected pack size updates the metric in the main planning view after <span class="Emphasis">Execute</span> is clicked and the change confirmed.</p>
                 <p class="BasicNote">For more information on the <span class="Emphasis">Packing Instruction</span> supporting view, see <MadCap:xref href="Packing Instruction View.htm">Packing Instruction view</MadCap:xref>.</p>
             </li>
             <li>
@@ -436,7 +434,10 @@
                 <p><span class="Emphasis">Phase In</span>: The phase in date for the placeholder or collection. If set, selections are limited to periods prior to Phase Out.</p>
                 <p class="BasicNote">Defaults to the earliest non-actualized period within the Window of Time in the data selection parameters</p>
             </li>
-            <li> <p><span class="Emphasis">Phase Out</span>: The phase out date for the placeholder or collection. If set, selections are limited to periods after Phase In. Defaults to the last period within the Window of Time in the data selection parameters.</p><p class="BasicNote">For placeholders/collections of Replen Status, Phase Out dates are derived from the maximum Phase Out date set in the Forecasting module for all relevant inventories. </p></li>
+            <li>
+                <p><span class="Emphasis">Phase Out</span>: The phase out date for the placeholder or collection. If set, selections are limited to periods after Phase In. Defaults to the last period within the Window of Time in the data selection parameters.</p>
+                <p class="BasicNote">For placeholders/collections of Replen Status, Phase Out dates are derived from the maximum Phase Out date set in the Forecasting module for all relevant inventories. </p>
+            </li>
             <li>
                 <p><span class="Emphasis">Planned Phase In</span>: Editable with the date chosen by clicking in the field and selecting a date from a calendar. </p>
             </li>
@@ -445,12 +446,15 @@
                 <p class="BasicNote">If the View Option <span class="Emphasis">Active Style Bank</span> has been selected, then the <span class="Emphasis">PLM Code</span> field acts as a dropdown and shows the same Variants as the <span class="Emphasis">Style Bank</span> view. For more information, see <MadCap:xref href="Placeholder and collection view toolbar functionality.htm#AdvancedStyleBank">Advanced Style Bank</MadCap:xref>.</p>
             </li>
             <li>
-                <p><span class="Emphasis">PLM Desc</span>: If integrated with a product life cycle management (PLM) system, then this displays the PLM description associated with the assigned variant (not present in Collection view).</p>
+                <p><span class="Emphasis">PLM Desc</span>: If integrated with a PLM system, then this displays the PLM description associated with the assigned variant (not present in Collection view).</p>
             </li>
             <li>
                 <p><span class="Emphasis">Product Level</span>: The level of the product hierarchy to which the placeholder/collection is assigned. Recalculation of linked Seasonality Curves does not affect locked placeholders/collections. This selection does not have to be made at the lowest level of the product hierarchy, though it is recommended users do so to avoid ambiguity in reporting.</p>
             </li>
-            <li> <p><span class="Emphasis">Promo</span>: Indicates whether there are any active promotions applied to the placeholder/collection. Checked means at least one promotion is applied to the placeholder/collection. Unchecked means no promotions are applied. Inactive promotions will not cause the box to be checked. </p><p>Specific promotions applied can be viewed in the Promotions bottom pane view. For more information, see <MadCap:xref href="Promotions View.htm">Promotions view (not available in Collection view)</MadCap:xref>.</p></li>
+            <li>
+                <p><span class="Emphasis">Promo</span>: Indicates whether there are any active promotions applied to the placeholder/collection. Checked means at least one promotion is applied to the placeholder/collection. Unchecked means no promotions are applied. Inactive promotions do not cause the box to be checked. </p>
+                <p>Specific promotions applied can be viewed in the Promotions bottom pane view. For more information, see <MadCap:xref href="Promotions View.htm">Promotions view (not available in Collection view)</MadCap:xref>.</p>
+            </li>
             <li>
                 <p><span class="Emphasis">Receipt AUC</span>: The average unit cost price for the placeholder/collection. Displays the weighted average of AUC values for all periods, both actualized and future, beneath.</p>
                 <p class="BasicNote">Once a placeholder or collection has begun to actualize (current date is greater than Phase In&#160;date), AUC is read-only.</p>
@@ -470,7 +474,7 @@
                 <p><span class="Emphasis">Replen Status</span>: The Replen Status (<span class="Emphasis">Clean</span> or <span class="Emphasis">Dirty</span>) indicating whether the placeholder or collection has been updated with the most recent Replenishment forecast data (valid for placeholders/collections of <span class="Emphasis">Replen</span> status only).</p>
             </li>
             <li>
-                <p><span class="Emphasis">Retrend</span> The fields for Retrend metrics populate only after a user selects the <span class="Emphasis">Retrend</span> option in the <span class="Emphasis">Process Queue</span> section of the main planning view toolbar. The following display the results and status of the Retrend operation:</p>
+                <p><span class="Emphasis">Retrend</span> The fields for Retrend metrics populate only after users select the <span class="Emphasis">Retrend</span> option in the <span class="Emphasis">Process Queue</span> section of the main planning view toolbar. The following display the results and status of the Retrend operation:</p>
                 <ul>
                     <li>
                         <p>Retrend ROS ($)</p>
@@ -500,8 +504,8 @@
                 <p class="BasicNote">There are Notifications for Retrend submission status in the Inbox/process queue.</p>
             </li>
             <li>
-                <p><span class="Emphasis">Reviewed?</span>: Allows users to mark that a placeholder has been reviewed and that commitments are ready to be generated.</p>
-                <p>If the field is checked, then all underlying Cluster Sets have been reviewed. Unchecked indicates that none have been reviewed and multi-select indicates a mix of reviewed and non-reviewed at the Cluster Set level.</p>
+                <p><span class="Emphasis">Reviewed?</span>: Users can mark that a placeholder has been reviewed and that commitments are ready to be generated.</p>
+                <p>If checked, then all underlying Cluster Sets have been reviewed. Unchecked indicates that none have been reviewed and multi-select indicates a mix of reviewed and non-reviewed at the Cluster Set level.</p>
                 <p>To edit, users require the User Right <span class="Emphasis">Allow the ability to mark Placeholder as Reviewed</span>.</p>
                 <p class="BasicNote">This field is visible only when system policy <span class="Emphasis">Require Placeholder Review before Commitment Generation</span> is set to <span class="Emphasis">True</span>. </p>
             </li>
@@ -514,7 +518,7 @@
                 <p>Calculation: (Ttl Sls U / No. Periods / Site Count)</p>
             </li>
             <li>
-                <p><span class="Emphasis">S/T % Delta</span>: Compares the targeted sell through rate against the actual.  The calculation is (Target S/T % - S/T %) / (S/T %).</p>
+                <p><span class="Emphasis">S/T % Delta</span>: Compares the targeted sell-through rate against the actual.  The calculation is (Target S/T % - S/T %) / (S/T %).</p>
             </li>
             <li>
                 <p><span class="Emphasis">S/T %</span>: read-only. Percentage (10.1%). Compares the lifetime sales for the item against the lifetime orders.</p>
@@ -526,7 +530,7 @@
 			</p>
             </li>
             <li>
-                <p><span class="Emphasis">Seasonality Curve Weight Factor</span>: When an Item has both a Seasonality Curve and a Lifecycle Curve, the Seasonality Curve Factor determines how the two curves influence the Sales Plan. A value of .5 means that the two curves each influence the Sales Plan 50% each. A value of .7 would mean that the Seasonality Curve is weighted at 70% and the Lifecycle Curve at 30%. The values for the two curves always add up to 100%. The Seasonality Curve Factor is only relevant if there is both a Seasonality Curve and a Lifecycle Curve. If only one curve is set, then any value in the Seasonality Curve Factor field does nothing.</p>
+                <p><span class="Emphasis">Seasonality Curve Weight Factor</span>: When an Item has both a Seasonality Curve and a Lifecycle Curve, the Seasonality Curve Factor determines how the two curves influence the Sales Plan. A value of .5 means that the two curves each influence the Sales Plan 50% each. A value of .7 means that the Seasonality Curve is weighted at 70% and the Lifecycle Curve at 30%. The values for the two curves always add up to 100%. The Seasonality Curve Factor is only relevant if there is both a Seasonality Curve and a Lifecycle Curve. If only one curve is set, then any value in the Seasonality Curve Factor field does nothing.</p>
             </li>
             <li>
                 <p><span class="Emphasis">Site Count (Active)</span>: The average total site count and the average active site count (in parenthesis) of all clusters a placeholder/collection is assorted to between Phase In and Phase Out.</p>
@@ -557,7 +561,7 @@
                         <p><span class="Emphasis">Replen</span>: A selectable for placeholders that are either in <span class="Emphasis">Assigned</span> or <span class="Emphasis">Committed</span> Status. This shifts control of the placeholder/collection sales plan to replenishment forecasts in the Forecasts module making the plan read-only within Assortment Planning.</p>
                     </li>
                     <li><span class="Emphasis">Allocation</span>: A single directional push to Allocations with the variant data being pushed by the allocation strategy status. Plan editability in AP is the same as committed items.
-						<p><table style="width: 100%;margin-left: auto;margin-right: auto;mc-table-style: url('../../Resources/TableStyles/standard.css');" class="TableStyle-standard" cellspacing="0"><col class="TableStyle-standard-Column-Column1" /><col class="TableStyle-standard-Column-Column2" /><thead><tr class="TableStyle-standard-Head-Header1"><th class="TableStyle-standard-HeadE-Column1-Header1">Allocation Strategy Status</th><th class="TableStyle-standard-HeadD-Column2-Header1">Data that pushes from AP to allocation strategies</th></tr></thead><tbody><tr class="TableStyle-standard-Body-Body1"><td class="TableStyle-standard-BodyE-Column1-Body1">New Item</td><td class="TableStyle-standard-BodyD-Column2-Body1">Variant cluster rate of sales units, phase in &amp; out, markdown date, min pres, size curve, cluster assignments, and location exceptions.</td></tr><tr class="TableStyle-standard-Body-Body1"><td class="TableStyle-standard-BodyE-Column1-Body1">Ongoing Item</td><td class="TableStyle-standard-BodyD-Column2-Body1">Only Phase Out and Markdown Date are pushed, with all other aspects of the sales plan being managed within Allocations.</td></tr><tr class="TableStyle-standard-Body-Body1"><td class="TableStyle-standard-BodyB-Column1-Body1">Replenishment</td><td class="TableStyle-standard-BodyA-Column2-Body1">No data pushes.</td></tr></tbody></table></p></li>
+						<p><table style="width: 100%;margin-left: auto;margin-right: auto;mc-table-style: url('../../Resources/TableStyles/standard.css');" class="TableStyle-standard" cellspacing="0"><col class="TableStyle-standard-Column-Column1" /><col class="TableStyle-standard-Column-Column2" /><thead><tr class="TableStyle-standard-Head-Header1"><th class="TableStyle-standard-HeadE-Column1-Header1">Allocation Strategy Status</th><th class="TableStyle-standard-HeadD-Column2-Header1">Data that pushes from AP to allocation strategies</th></tr></thead><tbody><tr class="TableStyle-standard-Body-Body1"><td class="TableStyle-standard-BodyE-Column1-Body1">New Item</td><td class="TableStyle-standard-BodyD-Column2-Body1">Variant cluster rate of sales units, phase in, phase out, markdown date, min pres, size curve, cluster assignments, and location exceptions.</td></tr><tr class="TableStyle-standard-Body-Body1"><td class="TableStyle-standard-BodyE-Column1-Body1">Ongoing Item</td><td class="TableStyle-standard-BodyD-Column2-Body1">Only Phase Out and Markdown Date are pushed, with all other aspects of the sales plan being managed within Allocations.</td></tr><tr class="TableStyle-standard-Body-Body1"><td class="TableStyle-standard-BodyB-Column1-Body1">Replenishment</td><td class="TableStyle-standard-BodyA-Column2-Body1">No data pushes.</td></tr></tbody></table></p></li>
                     <li>
                         <p><span class="Emphasis">Committed</span>: Auto-assigned upon confirmation of units on-order for the placeholder.</p>
                         <p class="BasicNote"> As actual units on-order is always against a variant (real style-color), once a placeholder enters <span class="Emphasis">Committed</span> status, the assigned variant cannot be removed nor can the status be changed unless the on-order units are canceled.</p>
@@ -569,20 +573,20 @@
                     <li><span class="Emphasis">Created</span>: Denotes placeholders that cannot be deleted by Smart Starting and overlapping Target Creation scenario.</li>
                     <li><span class="Emphasis">Open</span>: Default for all new placeholders. Denotes placeholders that can be deleted by Smart Starting an overlapping Target Creation scenario. For more information, see <MadCap:xref href="Target Creation Overview.htm">Target Creation.</MadCap:xref></li>
                     <li>
-                        <p><span class="Emphasis">External</span>: (Does not display for placeholders in Open or Created status.) Not part of the workflow, this is a status that certain Variants can be assigned to mark them as different from regular Placeholders.</p>
+                        <p><span class="Emphasis">External</span>: (Does not display for placeholders in <span class="Emphasis">Open</span> or <span class="Emphasis">Created</span> status.) Not part of the workflow, this is a status that certain variants can be assigned to mark them as different from regular placeholders.</p>
                         <p>A <span class="Emphasis">Confirmation</span> warning message displays if changing to External status and the placeholder contains no external data. In this case, selecting <span class="Emphasis">Yes</span> to proceed irreversibly zeros out the sales plan.</p>
                     </li>
                 </ul>
             </li>
             <li>
-                <p><span class="Emphasis">Supplier</span>: A variant's default supplier. The field shows a combination of Supplier Code and Supplier name. While the placeholder has not been assigned to a variant, this field is editable letting users define a Supplier for a placeholder before the placeholder is assigned to a variant. The dropdown  includes Supplier Code and Supplier Name as searchable columns.</p>
+                <p><span class="Emphasis">Supplier</span>: A variant's default supplier. The field shows a combination of supplier code and supplier name. While the placeholder has not been assigned to a variant, this field is editable letting users define a supplier for a placeholder before the placeholder is assigned to a variant. The dropdown  includes Supplier Code and Supplier Name as searchable columns.</p>
                 <p>This field updates to the variant's default Supplier on assignment. The <span class="Emphasis">Style Bank</span> view also has a <span class="Emphasis">Supplier</span> field which represents the variant's default Supplier. </p>
                 <p class="BasicNote">If system policy <span class="Emphasis">Enforce Supplier matching before Variant Assignment</span> is set to <span class="Emphasis">True</span>, then the assignment of a variant to a placeholder can only occur if the Suppliers chosen are the same. If View Option <span class="Emphasis">Active Style Bank</span> is selected, then only records with matching supplier records are shown.</p>
             </li>
             <li>
                 <p><span class="Emphasis">Tags</span>: Allows the ad-hoc creation and assignment of informational descriptors for a given item.</p>
                 <p>Multiple tags can be entered for a single line with inputs being confirmed by the use of the comma ( , ) key. As users begin to type, any tags already present in the current view that begin with the entered characters appear in an auto-complete selector below the field. These entries can be selected via click or by using the arrow keys to navigate to the desired item and the comma key to select. </p>
-                <p><span class="Emphasis">Target S/T %</span>: Editable, has no calculation effect or relationship.  The user can enter their target sell through value to compare against the calculated S/T %.</p>
+                <p><span class="Emphasis">Target S/T %</span>: Editable, has no calculation effect or relationship.  Users can enter a target sell-through value to compare against a calculated sell-through percentage.</p>
             </li>
             <li>
                 <p><span class="Emphasis">Total Orders ($)</span>: The sum of Total Orders Cost from Receipt Plan view for the placeholder/collection. This is included as a comparison of the actual receipt plan to the estimated Ttl Buy $ in the main planning view.</p>

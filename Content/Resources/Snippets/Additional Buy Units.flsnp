@@ -1,0 +1,6 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head>
+    </head>
+    <body><span class="Emphasis">Addl Buy (U)</span>: The quantity of additional non-sales and non-min pres units to buy for the cluster set/cluster. The primary function of this field is to show discrepancies between the sum of Ttl Sls U and (Min Pres * Site Count) and Ttl Buy U that can occur because of the ability to directly edit S/T %. <p>To remove unwanted excess units and rebalance a cluster set/cluster’s sales plan, zero this field out and click <span class="Emphasis">Save</span>.</p><p><ul><li><span class="Emphasis">Calculation</span>: (Ttl Buy U – Ttl Sls U – (Min Pres * Site Count))</li></ul></p></body>
+</html>
