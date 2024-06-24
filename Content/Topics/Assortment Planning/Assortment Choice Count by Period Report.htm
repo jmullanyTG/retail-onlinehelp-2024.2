@@ -18,35 +18,7 @@
         <p>
             <img src="../../Resources/Images/Assortment Planning/Assortment Choice Count by Period Report Parameters.png" class="LargeImages" />
         </p>
-        <ul>
-            <li>
-                <p><span class="Emphasis">Product</span>: Selects a product filter for the current view.</p>
-                <ul>
-                    <li>
-                        <img src="../../Resources/Images/Assortment Planning/View Parameters.png" class="IconInline" />&#160; Launches the <span class="Emphasis">Filter Conditions</span> dialog allowing the user to edit the criteria for the selected filter prior to executing it. Users can also create a new filter from the adjusted criteria.</li>
-                    <li>
-                        <img src="../../Resources/Images/Assortment Planning/View Parameters_1.png" class="IconInline" />&#160; Launches the <span class="Emphasis">Maintain Filter</span> dialog allowing the user to create, import, and work with filters.</li>
-                </ul>
-            </li>
-            <li><span class="Emphasis">Site Hierarchy</span>: Selects the levels of the current plan’s Site Hierarchy to include in the current view.</li>
-            <li>
-                <p><span class="Emphasis">Cluster Sets</span>:&#160;Selects the cluster sets to include in the current view. The cluster sets listed include all default and additionally available cluster sets for the product level selected in the Product parameter.</p>
-                <p>While cluster sets are not explicitly part of the Site Hierarchy, they are directly related in that cluster sets in a given assortment plan must be contained within a single lowest level of that hierarchy. Therefore, the <span class="Emphasis">Cluster Set</span> dropdown populates with the cluster sets contained beneath the selected Site Hierarchy levels.</p>
-            </li>
-            <li>
-                <p><span class="Emphasis">Window of Time</span>: Selects the window of time to display in the current view.</p>
-                <p>The selected time frame must be a contiguous range of periods otherwise the system still uses the window of time defined by the first and last selected periods.</p>
-            </li>
-            <li>
-                <p><span class="Emphasis">Attribute Family</span>:&#160;Each attribute family contains attributes that pertain to that family and can be imported from host systems if available.&#160; </p>
-                <p class="Example"> Attribute Family = Fabric Type, and a value belonging to this family could be cotton.&#160; This selection defines the values within a family or group of families that will be available for selection and viewing in the sixth parameter.</p>
-            </li>
-            <li>
-                <p><span class="Emphasis">Attribute Values</span>:&#160;This selection returns the values associated with the attribute families selected in the fifth parameter.</p>
-                <p> It is not necessary to select <span class="Emphasis">Attribute Family</span> or <span class="Emphasis">Attribute Values</span> in the parameters selections as it is possible to review choice counts and productivity through the utilization of a product filter, Site Hierarchy, Cluster Sets for a defined window of time.</p>
-                <li><span class="Emphasis">Display Currency</span>: Sets the currency to display for all revenue based fields in the view. This field defaults to the Home currency for the active plan.</li>
-            </li>
-        </ul>
+        <MadCap:snippetBlock src="../../Resources/Snippets/AP Report Parameter Definitions.flsnp" />
         <h2>Fields</h2>
         <p>This report is a Pivot Grid and elements contained within the grid may be pivoted. Clicking <span class="Emphasis">Execute</span> returns the following rows once the parameters are set:</p>
         <table style="width: 100%;margin-left: auto;margin-right: auto;mc-table-style: url('../../Resources/TableStyles/standard.css');" class="TableStyle-standard" cellspacing="0">

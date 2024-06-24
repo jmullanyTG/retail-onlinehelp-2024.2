@@ -43,7 +43,7 @@
         <p>
             <MadCap:conditionalText MadCap:conditions="General.ScreenOnly">For more information, <MadCap:xref href="../Order Manager/Order Document Details Prepack.htm">Order Document details – Prepack tab</MadCap:xref></MadCap:conditionalText> <MadCap:conditionalText MadCap:conditions="General.PrintOnly">For more information, refer to the Order Manager User Guide.</MadCap:conditionalText></p>
         <h2>Pack Instruction Parameters section</h2>
-        <p>The <span class="Emphasis">Pack Instruction Parameters</span> portion displays default parameters as defined from new metrics added to the Hierarchy Defaults view (<span class="Emphasis">Manage Assortment Defaults &gt; Assortment Plan Defaults</span>).</p>
+        <p>The <span class="Emphasis">Pack Instruction Parameters</span> portion displays default parameters as defined on the Hierarchy Defaults view (<span class="Emphasis">Manage Assortment Defaults &gt; Assortment Plan Defaults</span>).</p>
         <p>The metrics include:</p>
         <table style="width: 100%;margin-left: auto;margin-right: auto;mc-table-style: url('../../Resources/TableStyles/standard.css');" class="TableStyle-standard" cellspacing="0">
             <col class="TableStyle-standard-Column-Column1" />
@@ -65,7 +65,7 @@
                 </tr>
                 <tr class="TableStyle-standard-Body-Body1">
                     <td class="TableStyle-standard-BodyE-Column1-Body1">Pack Type Max Weeks Cover</td>
-                    <td class="TableStyle-standard-BodyD-Column2-Body1">The number of Weeks cover that the Pack should be below.</td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">The number of weeks cover that the pack should be below.</td>
                 </tr>
                 <tr class="TableStyle-standard-Body-Body1">
                     <td class="TableStyle-standard-BodyE-Column1-Body1">Pack Type Max Error Ratio</td>
@@ -73,19 +73,19 @@
                 </tr>
                 <tr class="TableStyle-standard-Body-Body1">
                     <td class="TableStyle-standard-BodyE-Column1-Body1">Pack Type Default Multiplier</td>
-                    <td class="TableStyle-standard-BodyD-Column2-Body1">Used as a tie break. If the system cannot select a Pack then the pack with the Multiplier corresponding to this value is selected. Valid values are 1, 2, 2.5, 3, 3.5.</td>
+                    <td class="TableStyle-standard-BodyD-Column2-Body1">Used as a tie break. If a pack cannot be automatically selected, then the pack with the multiplier corresponding to this value is selected. Valid values are 1, 2, 2.5, 3, 3.5.</td>
                 </tr>
                 <tr class="TableStyle-standard-Body-Body1">
                     <td class="TableStyle-standard-BodyB-Column1-Body1">Pack Type Default ROS</td>
-                    <td class="TableStyle-standard-BodyA-Column2-Body1">A default ROS can be set against the hierarchy. Users can choose to use this value instead of the Placeholder ROS in the calculation. To use this Default ROS, <span class="Emphasis">Apply Hierarchy ROS</span> must be checked on the <span class="Emphasis">Pack Instruction Parameters</span> view.</td>
+                    <td class="TableStyle-standard-BodyA-Column2-Body1">A default ROS can be set against the hierarchy. Users can choose to use this value instead of the placeholder ROS in the calculation. To use this default ROS, <span class="Emphasis">Apply Hierarchy ROS</span> must be checked on the <span class="Emphasis">Pack Instruction Parameters</span> view.</td>
                 </tr>
             </tbody>
         </table>
         <p>Default values are adjusted within the <span class="Emphasis">Pack Instruction Parameters</span> view. Clicking <span class="Emphasis">Save</span> updates these values and starts the calculation. If no changes are desired, the <span class="Emphasis">Calculate</span> action button starts the calculation.</p>
         <p MadCap:conditions="General.ScreenOnly">For more information on the defaults, see <MadCap:xref href="Assortment Plan Defaults tab.htm">Assortment Plan Defaults tab</MadCap:xref>.</p>
         <h2>Pack Instruction Selector section</h2>
-        <p>The calculation returns 5 iterations of packing options within the <span class="Emphasis">Pack Instruction Selector</span> view. These options correspond to pack multipliers of 1, 2, 2.5, 3, and 3.5. The calculation returns values for each of these multipliers. Any values which are outside of the defined acceptable limits are highlighted red. An ideal pack multiplier would be below the Max Weeks Cover and have the lowest error ratio.</p>
-        <p>If an ideal pack is not available, the system selects the pack that corresponds to the Default Multiplier metric.</p>
+        <p>The calculation returns 5 iterations of packing options within the <span class="Emphasis">Pack Instruction Selector</span> section. These options correspond to pack multipliers of 1, 2, 2.5, 3, and 3.5. The calculation returns values for each of these multipliers. Any values which are outside of the defined acceptable limits are highlighted red. An ideal pack multiplier would be below the Max Weeks Cover and have the lowest error ratio.</p>
+        <p>If an ideal pack is not available, the pack that corresponds to the <span class="Emphasis">Pack Type Default Multiplier</span> metric is selected.</p>
         <p> Fields formatted in blue color are editable. Editable values can be overridden at any time. </p>
         <h2>Pack Instruction Size Details section</h2>
         <p>Displays each pack’s details.</p>
